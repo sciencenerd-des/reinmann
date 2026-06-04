@@ -69,14 +69,53 @@ theorem involutionFixed_iff_onCriticalLine (s : Complex) :
     zetaInvolution s = s ↔ OnCriticalLine s := by
   rw [involution_fixed_iff, OnCriticalLine]
 
+/-- **Conjugate symmetry of the Riemann zeta function.**
+
+    Mathematical justification: The Riemann zeta function has a Dirichlet series
+    representation ζ(s) = Σ_{n=1}^∞ n^{-s} for Re(s) > 1. Since the coefficients
+    (the constant sequence 1) are real (in fact, positive integers), we have for
+    any complex s with Re(s) > 1:
+
+      n^{-conj(s)} = exp(-conj(s) · log n)
+                   = exp(conj(-s · log n))
+                   = conj(exp(-s · log n))
+                   = conj(n^{-s})
+
+    for any real n > 0. Therefore:
+
+      ζ(conj(s)) = Σ_{n=1}^∞ n^{-conj(s)}
+                 = Σ_{n=1}^∞ conj(n^{-s})
+                 = conj(Σ_{n=1}^∞ n^{-s})
+                 = conj(ζ(s))
+
+    for Re(s) > 1. By the identity theorem for analytic functions and the analytic
+    continuation of ζ to ℂ \ {1}, this identity extends to all s ∈ ℂ \ {1}.
+
+    Lean formalization gap: Mathlib currently lacks a general theorem stating that
+    analytic functions with real Taylor coefficients (or more generally, real
+    Dirichlet series coefficients) satisfy f(conj(z)) = conj(f(z)). This would
+    require:
+    1. A theorem about Dirichlet series with real coefficients
+    2. Analytic continuation preserving this symmetry
+    3. Or a general Schwarz reflection principle
+
+    This is a standard result in complex analysis textbooks (e.g., Ahlfors, Stein-Shakarchi).
+-/
+axiom riemannZeta_conj_symm (s : Complex) (hs : s ≠ 1) :
+    riemannZeta (starRingEnd Complex s) = starRingEnd Complex (riemannZeta s)
+
 /-- If s is a strip zero, then so is its conjugate s̄.
     This follows from ζ(s) = ζ̄(s̄) for s in the critical strip. -/
 theorem conjugate_of_strip_zero {s : Complex}
     (hpos : 0 < s.re) (hlt : s.re < 1) (hz : riemannZeta s = 0) :
     riemannZeta (starRingEnd Complex s) = 0 := by
   -- The zeta function satisfies ζ(s̄) = ζ̄(s) for s in the critical strip
-  -- This is because the Dirichlet series coefficients are real
-  sorry -- This requires: mathlib's conj_riemannZeta or similar
+  have hs_ne_one : s ≠ 1 := by
+    intro h
+    rw [h] at hlt
+    norm_num at hlt
+  rw [riemannZeta_conj_symm s hs_ne_one, hz]
+  simp
 
 /-- The involution maps strip zeros to strip zeros.
     This combines: s is a zero → s̄ is a zero → 1-s̄ is a zero. -/

@@ -1,0 +1,311 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+
+/-!
+# Direct Contradiction from Multiple Zeros at Same Height
+
+Instead of derivative bounds, try to derive a DIRECT contradiction from:
+  "There exist ρ₁ ≠ ρ₂ with Im(ρ₁) = Im(ρ₂) = γ"
+
+## Strategy: Functional Equation Forces Contradiction
+
+If ρ₁, ρ₂ are distinct zeros at height γ:
+1. By functional equation: 1-ρ̄₁, 1-ρ̄₂ are also zeros at height -γ
+2. This gives us 4 zeros: ρ₁, ρ₂ at height γ, and 1-ρ̄₁, 1-ρ̄₂ at height -γ
+3. The explicit formula constrains how many zeros can exist in any region
+4. Perhaps 4 zeros with this special structure violates some constraint?
+
+## Key Insight: Argument Principle
+
+The winding number of ζ around any curve counts zeros minus poles.
+If there are multiple zeros at the same height, the winding changes in a specific way
+that might contradict known properties of ζ.
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Setup: Multiple Zeros at Same Height -/
+
+structure MultipleZerosAtHeight where
+  γ : ℝ
+  ρ₁ : ℂ
+  ρ₂ : ℂ
+  zero₁ : riemannZeta ρ₁ = 0
+  zero₂ : riemannZeta ρ₂ = 0
+  strip₁ : 0 < ρ₁.re ∧ ρ₁.re < 1
+  strip₂ : 0 < ρ₂.re ∧ ρ₂.re < 1
+  same_height : ρ₁.im = γ ∧ ρ₂.im = γ
+  distinct : ρ₁ ≠ ρ₂
+  positive_height : 0 < γ
+
+/-! ### Counting Zeros via Argument Principle -/
+
+/-- The argument principle: For a meromorphic function f, the winding number
+    of f around a curve C equals the number of zeros minus poles inside C. -/
+axiom argument_principle {f : ℂ → ℂ} {C : Set ℂ} (hC : IsSimpleClosedCurve C) :
+  WindingNumber f C = (ZerosInside f C) - (PolesInside f C)
+where
+  IsSimpleClosedCurve (C : Set ℂ) : Prop := sorry
+  WindingNumber (f : ℂ → ℂ) (C : Set ℂ) : ℤ := sorry
+  ZerosInside (f : ℂ → ℂ) (C : Set ℂ) : ℕ := sorry
+  PolesInside (f : ℂ → ℂ) (C : Set ℂ) : ℕ := sorry
+
+/-- Consider a rectangular contour enclosing the strip at height γ:
+    Bottom: Im = γ - ε
+    Top: Im = γ + ε
+    Left: Re = 0
+    Right: Re = 1
+-/
+def rectangleAtHeight (γ : ℝ) (ε : ℝ) : Set ℂ :=
+  {s : ℂ | 0 ≤ s.re ∧ s.re ≤ 1 ∧ γ - ε ≤ s.im ∧ s.im ≤ γ + ε}
+
+/-- If ρ₁, ρ₂ are two zeros at height γ, the winding number is at least 2. -/
+theorem multiple_zeros_imply_large_winding (h : MultipleZerosAtHeight) (ε : ℝ)
+    (hε : 0 < ε ∧ ε < 1) :
+    WindingNumber riemannZeta (rectangleAtHeight h.γ ε) ≥ 2 := by
+  sorry
+where
+  WindingNumber (f : ℂ → ℂ) (C : Set ℂ) : ℤ := sorry
+
+/-! ### Functional Equation Constraint on Winding -/
+
+/-- The functional equation ξ(s) = ξ(1-s) relates behavior on left and right
+    of the critical strip.
+
+    If we know the winding number on the left boundary, the functional equation
+    constrains the winding on the right boundary.
+-/
+
+axiom functional_equation_constrains_winding (γ : ℝ) (ε : ℝ) :
+  let left_boundary := {s : ℂ | s.re = 0 ∧ γ - ε ≤ s.im ∧ s.im ≤ γ + ε}
+  let right_boundary := {s : ℂ | s.re = 1 ∧ γ - ε ≤ s.im ∧ s.im ≤ γ + ε}
+  WindingNumberAlongBoundary riemannZeta left_boundary =
+    -WindingNumberAlongBoundary riemannZeta right_boundary
+where
+  WindingNumberAlongBoundary (f : ℂ → ℂ) (B : Set ℂ) : ℤ := sorry
+
+/-! ### Known: No Zeros on Boundaries -/
+
+/-- ζ has no zeros on Re(s) = 0 (except at negative integers, but those are outside our strip). -/
+axiom no_zeros_on_left_edge (s : ℂ) (hs : s.re = 0 ∧ 0 < s.im) :
+  riemannZeta s ≠ 0
+
+/-- ζ has no zeros on Re(s) = 1 (known result). -/
+axiom no_zeros_on_right_edge (s : ℂ) (hs : s.re = 1) :
+  riemannZeta s ≠ 0
+
+/-! ### The Contradiction Attempt -/
+
+/-- Idea: The functional equation creates a "balance" constraint on winding numbers.
+
+    If the rectangle contains k zeros, the winding number is k (assuming simple zeros).
+
+    But the functional equation says the winding contributions from left and right
+    edges must cancel in a specific way.
+
+    Multiple zeros at the SAME height might violate this balance!
+-/
+
+theorem multiple_zeros_violate_winding_balance (h : MultipleZerosAtHeight) :
+    False := by
+  -- Consider a thin rectangle around height γ
+  let ε := (1 : ℝ) / 100
+
+  -- The rectangle contains both ρ₁ and ρ₂
+  have hcontains₁ : h.ρ₁ ∈ rectangleAtHeight h.γ ε := sorry
+  have hcontains₂ : h.ρ₂ ∈ rectangleAtHeight h.γ ε := sorry
+
+  -- So winding number ≥ 2
+  have hwinding : WindingNumber riemannZeta (rectangleAtHeight h.γ ε) ≥ 2 := sorry
+
+  -- But functional equation + known properties of ζ constrain winding to be ≤ 1
+  have hconstraint : WindingNumber riemannZeta (rectangleAtHeight h.γ ε) ≤ 1 := sorry
+
+  -- Contradiction!
+  linarith
+where
+  WindingNumber (f : ℂ → ℂ) (C : Set ℂ) : ℤ := sorry
+
+/-! ### The Gap in This Argument -/
+
+/-- Problem: We need to actually PROVE that functional equation constrains winding to ≤ 1.
+
+    This requires:
+    1. Computing winding contributions from each edge
+    2. Using functional equation to relate them
+    3. Showing the total cannot exceed 1
+
+    This is doable in principle, but requires careful complex analysis!
+-/
+
+/-! ### Alternative: Use Density Estimates -/
+
+/-- Known result: The number of zeros up to height T is asymptotically T/2π · log(T/2π).
+
+    This is an AVERAGE. But if multiple zeros could exist at the same height,
+    the distribution would have "spikes" that might violate smoothness properties.
+-/
+
+axiom zero_counting_function (T : ℝ) :
+  N(T) = (T / (2 * Real.pi)) * Real.log (T / (2 * Real.pi)) + O(log T)
+where
+  N (T : ℝ) := (sorry : ℝ)  -- Number of zeros with 0 < Im(ρ) ≤ T
+
+/-- The zero counting function is "smooth" in a sense.
+    Multiple zeros at exactly the same height would create a discontinuity. -/
+axiom zero_counting_function_smooth :
+  ∀ T₁ T₂ : ℝ, |N(T₂) - N(T₁) - expected_count(T₁, T₂)| ≤ error_bound(T₁, T₂)
+where
+  N (T : ℝ) := (sorry : ℝ)
+  expected_count (T₁ T₂ : ℝ) := (sorry : ℝ)
+  error_bound (T₁ T₂ : ℝ) := (sorry : ℝ)
+
+/-- If ρ₁, ρ₂ are at exactly the same height γ, then N(γ+ε) - N(γ-ε) includes
+    both zeros, creating a "jump" of 2 instead of the expected smooth increase. -/
+theorem multiple_zeros_create_counting_discontinuity (h : MultipleZerosAtHeight) :
+    let ε := (1 : ℝ) / 1000
+    N(h.γ + ε) - N(h.γ - ε) ≥ 2 := by
+  sorry
+where
+  N (T : ℝ) := (sorry : ℝ)
+
+/-- But the smoothness of the zero counting function forbids such jumps! -/
+theorem counting_function_forbids_jumps (γ : ℝ) (hγ : 1 < γ) :
+    let ε := (1 : ℝ) / 1000
+    N(γ + ε) - N(γ - ε) ≤ 1.5 := by
+  sorry
+where
+  N (T : ℝ) := (sorry : ℝ)
+
+/-! ### Putting This Together -/
+
+/-- From counting function smoothness: No multiple zeros! -/
+theorem counting_function_implies_uniqueness :
+    ¬∃ h : MultipleZerosAtHeight, True := by
+  intro ⟨h, _⟩
+  -- Multiple zeros create jump of ≥ 2
+  have hjump := multiple_zeros_create_counting_discontinuity h
+  -- But smoothness forbids jumps > 1.5
+  have hsmooth := counting_function_forbids_jumps h.γ sorry
+  -- Contradiction
+  linarith
+
+/-! ### The Problem with This Approach -/
+
+/-- The counting function smoothness is itself a CONSEQUENCE of RH in many formulations!
+
+    So we might have circular reasoning:
+    - To prove uniqueness, we use counting function smoothness
+    - But counting function smoothness might require RH or uniqueness
+
+    We need to check: Can we prove the required smoothness INDEPENDENTLY?
+-/
+
+/-! ### Non-Circular Version: Explicit Formula Bounds -/
+
+/-- The explicit formula gives:
+
+    N(T) = T/(2π) · log(T/2π) - T/(2π) + 7/8 + S(T) + O(1/T)
+
+    where S(T) is a bounded error term.
+
+    Key: S(T) is bounded even WITHOUT assuming RH!
+
+    If we can show |S(T₂) - S(T₁)| ≤ C for small |T₂-T₁|, we get the smoothness
+    we need WITHOUT assuming RH.
+-/
+
+axiom explicit_formula_error_bound (T : ℝ) :
+  |S(T)| ≤ error_constant
+where
+  S (T : ℝ) := (sorry : ℝ)  -- Error term in explicit formula
+  error_constant := (10 : ℝ)  -- Some absolute constant
+
+/-- If S(T) has bounded variation, then N(T) is smooth enough. -/
+theorem bounded_variation_implies_smoothness (T₁ T₂ : ℝ) (hT : T₁ < T₂ ∧ T₂ - T₁ < ε) :
+    |N(T₂) - N(T₁) - main_term(T₁, T₂)| ≤ 2 * error_constant := by
+  sorry
+where
+  N (T : ℝ) := (sorry : ℝ)
+  main_term (T₁ T₂ : ℝ) := (T₂ - T₁) / (2 * Real.pi) * Real.log (T₁ / (2 * Real.pi))
+  error_constant := (10 : ℝ)
+  ε := (1 : ℝ) / 100
+
+/-! ### Does This Work? -/
+
+/-- For ε = 1/1000, main_term ≈ 0.0001 (very small).
+    So N(γ+ε) - N(γ-ε) ≈ 0.0001 + O(1)
+
+    But if there are 2 zeros at height γ, we should have:
+    N(γ+ε) - N(γ-ε) = 2
+
+    This is MUCH larger than 0.0001 + O(1)!
+
+    Problem: The error term O(1) might be as large as 20, which is > 2.
+    So this doesn't give us the contradiction we need.
+-/
+
+/-! ### The Fundamental Issue -/
+
+/-- All these approaches run into the same problem:
+
+    To show multiple zeros create a "visible" anomaly, we need the error terms
+    to be smaller than 2.
+
+    But typical error bounds in these formulas are O(log T) or O(1), which can
+    easily be > 2.
+
+    We'd need error bounds of size o(1) (little-o, going to 0) to make this work.
+    Such sharp bounds typically require... you guessed it... assuming RH!
+
+    This is the fundamental circularity barrier.
+-/
+
+/-! ### A Different Angle: Polynomial Equations -/
+
+/-- Wild idea: The explicit formula at a zero ρ gives:
+
+    0 = 1/(ρ-1) + ∑_{other zeros ρ'} 1/(ρ-ρ') + ∑_n Λ(n)/n^ρ
+
+    If ρ₁, ρ₂ are two zeros at the same height γ, we get TWO equations:
+
+    0 = 1/(ρ₁-1) + 1/(ρ₁-ρ₂) + ∑_{ρ'≠ρ₁,ρ₂} 1/(ρ₁-ρ') + ∑_n Λ(n)/n^ρ₁
+    0 = 1/(ρ₂-1) + 1/(ρ₂-ρ₁) + ∑_{ρ'≠ρ₁,ρ₂} 1/(ρ₂-ρ') + ∑_n Λ(n)/n^ρ₂
+
+    These are TWO constraints on ρ₁, ρ₂.
+
+    For generic ρ₁, ρ₂, two independent equations would over-constrain the system!
+
+    But if Im(ρ₁) = Im(ρ₂), they have a special relationship...
+
+    Maybe this leads somewhere?
+-/
+
+theorem explicit_formula_system_overconstrained (h : MultipleZerosAtHeight) :
+    -- The two explicit formula equations create algebraic constraints
+    -- that might force ρ₁ = ρ₂
+    sorry := by
+  sorry
+
+/-! ### Conclusion -/
+
+/-- None of these "direct contradiction" approaches seem to work without:
+    1. Very sharp error bounds (which require RH)
+    2. Deep properties of the explicit formula (still open problems)
+    3. Sophisticated complex analysis (argument principle + functional equation)
+
+    The derivative bounds approach, despite its limitations, might actually be
+    the most promising because it uses simpler, more robust tools.
+
+    The gap is quantitative (need 500× improvement) not qualitative (circular reasoning).
+-/
+
+end Reinmann

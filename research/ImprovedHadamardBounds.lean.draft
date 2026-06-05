@@ -1,0 +1,318 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.Analysis.Complex.Basic
+
+/-!
+# Improved Hadamard Constant via Careful Analysis
+
+Goal: Improve C_hadamard from crude estimate 0.1 to something ≥ 50
+
+Strategy: Exploit specific properties of Riemann zeta that generic Hadamard
+product analysis misses.
+
+## Key Insights to Exploit
+
+1. **Functional Equation Symmetry**: Zeros come in pairs ρ, 1-ρ̄
+   → Hadamard product has special structure
+
+2. **Known Zero-Free Regions**: No zeros for Re(s) ≥ 1
+   → Series converges better, residues bounded
+
+3. **Explicit Formula Connection**: ζ'/ζ connects to primes
+   → Additional constraints from prime distribution
+
+4. **Small Imaginary Part**: For zeros near Re = 1/2
+   → Special cancellation in Hadamard series
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Standard Hadamard Product -/
+
+/-- The Hadamard product for ζ(s) gives:
+    ζ(s) = e^(A+Bs) · ∏_ρ (1 - s/ρ) · e^(s/ρ)
+
+    Taking log and differentiating:
+    ζ'/ζ = B + ∑_ρ [1/(s-ρ) + 1/ρ]
+-/
+
+axiom hadamard_log_derivative (s : ℂ) (hz : riemannZeta s ≠ 0) :
+  deriv riemannZeta s / riemannZeta s =
+    hadamard_B + (∑' ρ : ZeroSet, (1/(s - ρ.val) + 1/ρ.val))
+where
+  hadamard_B : ℂ := sorry
+  ZeroSet : Type := {z : ℂ // riemannZeta z = 0 ∧ 0 < z.re ∧ z.re < 1}
+
+/-! ### Key Observation: Near a Zero, One Term Dominates -/
+
+/-- At a zero ρ₁, the logarithmic derivative formula becomes:
+
+    ζ'(ρ₁)/ζ(ρ₁) is indeterminate (0/0)
+
+    But near ρ₁, for ζ(s) ≈ (s-ρ₁)·ζ'(ρ₁):
+    ζ'/ζ ≈ 1/(s-ρ₁) + ζ''(ρ₁)/ζ'(ρ₁)
+
+    From Hadamard: ζ'/ζ = B + ∑_ρ [1/(s-ρ) + 1/ρ]
+
+    As s → ρ₁, the term 1/(s-ρ₁) dominates on the right.
+    So: ζ'(ρ₁) ≈ [B + ∑_{ρ≠ρ₁} [1/(ρ₁-ρ) + 1/ρ]]^(-1)
+-/
+
+/-- The key formula: At a zero ρ₁, the derivative is determined by
+    all OTHER zeros via:
+
+    1/ζ'(ρ₁) = 1/[B + ∑_{ρ≠ρ₁} [1/(ρ₁-ρ) + 1/ρ]]
+-/
+axiom derivative_at_zero_via_other_zeros (ρ₁ : ℂ) (hz : riemannZeta ρ₁ = 0)
+    (hsimple : deriv riemannZeta ρ₁ ≠ 0) :
+  1 / deriv riemannZeta ρ₁ =
+    1 / (hadamard_B + ∑' ρ : {z : ℂ // riemannZeta z = 0 ∧ z ≠ ρ₁},
+           (1/(ρ₁ - ρ.val) + 1/ρ.val))
+where
+  hadamard_B : ℂ := sorry
+
+/-! ### If ρ₂ is Close, That Term Dominates -/
+
+/-- If ρ₂ is very close to ρ₁, then 1/(ρ₁-ρ₂) is huge compared to other terms. -/
+theorem nearby_zero_dominates (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hdiff : ρ₁ ≠ ρ₂)
+    (hclose : ‖ρ₁ - ρ₂‖ < min_spacing) :
+    -- The term 1/(ρ₁-ρ₂) dominates the sum
+    ‖1/(ρ₁ - ρ₂)‖ ≥ 10 * ‖sum_of_other_terms ρ₁ ρ₂‖ := by
+  sorry
+where
+  min_spacing := (1 : ℝ) / 100
+  sum_of_other_terms (ρ₁ ρ₂ : ℂ) :=
+    hadamard_B + ∑' ρ : {z : ℂ // riemannZeta z = 0 ∧ z ≠ ρ₁ ∧ z ≠ ρ₂},
+      (1/(ρ₁ - ρ.val) + 1/ρ.val)
+  hadamard_B : ℂ := sorry
+
+/-! ### Improving the Constant via Functional Equation -/
+
+/-- Key insight: Zeros come in symmetric pairs ρ, 1-ρ̄.
+
+    If ρ₂ is close to ρ₁, then 1-ρ̄₂ is close to 1-ρ̄₁.
+
+    The Hadamard sum includes BOTH:
+    - 1/(ρ₁-ρ₂) from the ρ₂ term
+    - 1/(ρ₁-(1-ρ̄₂)) from the 1-ρ̄₂ term
+
+    These add constructively if ρ₁ ≈ ρ₂!
+-/
+
+theorem functional_equation_amplifies_nearby_contribution (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hsame_im : ρ₁.im = ρ₂.im)
+    (hdiff : ρ₁ ≠ ρ₂) :
+    -- Both ρ₂ and 1-ρ̄₂ contribute to the sum at ρ₁
+    ∃ (contrib_direct contrib_reflected : ℂ),
+    ‖contrib_direct‖ ≈ 1/‖ρ₁ - ρ₂‖ ∧
+    ‖contrib_reflected‖ ≈ 1/‖ρ₁ - (1 - conj ρ₂)‖ := by
+  sorry
+
+/-- Calculate the distance from ρ₁ to the reflection 1-ρ̄₂. -/
+def distance_to_reflection (ρ₁ ρ₂ : ℂ) : ℝ :=
+  ‖ρ₁ - (1 - starRingEnd ℂ ρ₂)‖
+
+/-- If ρ₁, ρ₂ are at same height near the critical line, the reflection distance
+    is comparable to the direct distance! -/
+theorem reflection_distance_comparable (ρ₁ ρ₂ : ℂ)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hsame_im : ρ₁.im = ρ₂.im)
+    (hnear_line1 : |ρ₁.re - 1/2| < 1/4)
+    (hnear_line2 : |ρ₂.re - 1/2| < 1/4) :
+    -- The two distances are comparable
+    distance_to_reflection ρ₁ ρ₂ ≤ 2 * ‖ρ₁ - ρ₂‖ ∧
+    ‖ρ₁ - ρ₂‖ ≤ 2 * distance_to_reflection ρ₁ ρ₂ := by
+  sorry
+
+/-! ### The Improved Bound -/
+
+/-- With functional equation symmetry, we get TWICE the contribution from a nearby zero! -/
+theorem improved_lower_bound_from_symmetry (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hsame_im : ρ₁.im = ρ₂.im)
+    (hnear_line1 : |ρ₁.re - 1/2| < 1/4)
+    (hnear_line2 : |ρ₂.re - 1/2| < 1/4)
+    (hdiff : ρ₁ ≠ ρ₂)
+    (hclose : ‖ρ₁ - ρ₂‖ < 1/10) :
+    -- The derivative receives contributions from ρ₂ AND 1-ρ̄₂
+    ‖deriv riemannZeta ρ₁‖ ≥ C_improved / ‖ρ₁ - ρ₂‖ := by
+  sorry
+where
+  C_improved := (2 : ℝ) / 10  -- Factor of 2 improvement from symmetry!
+
+/-! ### Additional Leverage: Zero-Free Regions -/
+
+/-- The fact that there are no zeros for Re(s) ≥ 1 means the Hadamard sum
+    is truncated to the critical strip 0 < Re(s) < 1.
+
+    This gives better convergence properties.
+-/
+
+axiom zero_free_region_improves_convergence :
+  ∀ ρ : ℂ, riemannZeta ρ = 0 → 0 < ρ.re ∧ ρ.re < 1
+
+/-- With the sum restricted to the critical strip, we can bound the "other terms" better. -/
+theorem other_terms_bounded_by_strip (ρ₁ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1) :
+    ‖sum_of_distant_zeros ρ₁‖ ≤ bound_from_strip_width * log_height ρ₁.im := by
+  sorry
+where
+  sum_of_distant_zeros (ρ₁ : ℂ) :=
+    ∑' ρ : {z : ℂ // riemannZeta z = 0 ∧ ‖z - ρ₁‖ > 1/10},
+      (1/(ρ₁ - ρ.val) + 1/ρ.val)
+  bound_from_strip_width := (10 : ℝ)
+  log_height (T : ℝ) := Real.log (2 + |T|)
+
+/-! ### Explicit Formula Connection -/
+
+/-- The explicit formula connects ζ'/ζ to primes:
+
+    -ζ'/ζ = 1/(s-1) + ∑_ρ 1/(s-ρ) + ∑_n Λ(n)/n^s
+
+    where Λ is the von Mangoldt function.
+
+    This gives an ALTERNATIVE formula for the derivative that might be sharper!
+-/
+
+axiom explicit_formula_for_log_derivative (s : ℂ) (hs : s ≠ 1) :
+  -deriv riemannZeta s / riemannZeta s =
+    1/(s-1) + (∑' ρ : {z : ℂ // riemannZeta z = 0}, 1/(s - ρ.val)) +
+    (∑' n : ℕ+, vonMangoldt n / (n : ℂ)^s)
+where
+  vonMangoldt (n : ℕ+) : ℝ := sorry  -- log p if n = p^k, 0 otherwise
+
+/-- At a zero ρ₁, the explicit formula gives:
+
+    0 = 1/(ρ₁-1) + ∑_{ρ≠ρ₁} 1/(ρ₁-ρ) + ∑_n Λ(n)/n^ρ₁
+
+    This is a constraint that all zeros must satisfy!
+-/
+theorem explicit_formula_constraint_at_zero (ρ₁ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hstrip : 0 < ρ₁.re ∧ ρ₁.re < 1) :
+    0 = 1/(ρ₁ - 1) +
+        (∑' ρ : {z : ℂ // riemannZeta z = 0 ∧ z ≠ ρ₁}, 1/(ρ₁ - ρ.val)) +
+        (∑' n : ℕ+, vonMangoldt n / (n : ℂ)^ρ₁) := by
+  sorry
+where
+  vonMangoldt (n : ℕ+) : ℝ := sorry
+
+/-- If ρ₂ is close to ρ₁, the explicit formula constraint becomes:
+
+    1/(ρ₁-ρ₂) ≈ -[1/(ρ₁-1) + other zeros + primes]
+
+    The right side is bounded, so 1/(ρ₁-ρ₂) is bounded!
+-/
+theorem explicit_formula_bounds_nearby_zero_contribution (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hdiff : ρ₁ ≠ ρ₂) :
+    ‖1/(ρ₁ - ρ₂)‖ ≤
+      ‖1/(ρ₁ - 1)‖ +
+      ‖sum_of_other_zeros ρ₁ ρ₂‖ +
+      ‖sum_of_primes ρ₁‖ := by
+  sorry
+where
+  sum_of_other_zeros (ρ₁ ρ₂ : ℂ) :=
+    ∑' ρ : {z : ℂ // riemannZeta z = 0 ∧ z ≠ ρ₁ ∧ z ≠ ρ₂}, 1/(ρ₁ - ρ.val)
+  sum_of_primes (ρ₁ : ℂ) := ∑' n : ℕ+, vonMangoldt n / (n : ℂ)^ρ₁
+  vonMangoldt (n : ℕ+) : ℝ := sorry
+
+/-! ### Putting It Together: The Improved Constant -/
+
+/-- Combining all improvements:
+    1. Functional equation symmetry: factor of 2
+    2. Strip restriction: better convergence (factor ~2)
+    3. Explicit formula: additional constraints (factor ~2)
+
+    Total improvement: ~8× from crude estimate
+-/
+
+def C_hadamard_improved : ℝ :=
+  C_hadamard_crude * symmetry_factor * convergence_factor * explicit_formula_factor
+where
+  C_hadamard_crude := (1 : ℝ) / 10
+  symmetry_factor := (2 : ℝ)
+  convergence_factor := (2 : ℝ)
+  explicit_formula_factor := (2 : ℝ)
+
+#eval C_hadamard_improved  -- Should be 0.1 * 2 * 2 * 2 = 0.8
+
+/-- With careful analysis, we might get C ≈ 0.8 instead of 0.1.
+
+    This is 8× improvement, but still far from the 50 we need!
+-/
+
+/-! ### The Remaining Gap -/
+
+/-- Even with all these improvements, we get:
+    C ≈ 0.8 (instead of 0.1)
+
+    Need: C ≥ 50
+    Gap: 50/0.8 ≈ 62×
+
+    This is still a huge gap!
+
+    Options:
+    1. Find additional structure we're missing (unlikely to give 60×)
+    2. Improve derivative upper bound (might give factor of 2-5)
+    3. Add completely different constraint (third layer in synthesis)
+-/
+
+theorem improved_constant_still_insufficient :
+    C_hadamard_improved < 50 := by
+  norm_num
+  sorry
+
+/-! ### Alternative: Improve Upper Bound -/
+
+/-- Current upper bound: |ζ'(s)| ≤ C_poly · (1+T)²
+
+    Can we do better? Literature suggests this is close to optimal in general.
+
+    But maybe for s NEAR the critical line, we can use special properties?
+-/
+
+/-- Conjecture: For s very close to the critical line Re(s) = 1/2,
+    the derivative might grow more slowly. -/
+axiom derivative_slower_near_critical_line (s : ℂ)
+    (hnear : |s.re - 1/2| < ε)
+    (hstrip : 0 < s.re ∧ s.re < 1) :
+    ‖deriv riemannZeta s‖ ≤ C_reduced * (1 + |s.im|)^exponent_reduced
+where
+  ε := (1 : ℝ) / 10
+  C_reduced := (50 : ℝ)  -- Half of generic constant
+  exponent_reduced := (3 : ℝ) / 2  -- Exponent 1.5 instead of 2
+
+/-- If this holds, the separation bound becomes:
+
+    ‖ρ₁-ρ₂‖ ≥ C_improved / (C_reduced * T^1.5)
+              = 0.8 / (50 * T^1.5)
+              = 1 / (62.5 * T^1.5)
+
+    For T = 1: separation ≥ 1/62.5 ≈ 0.016
+    Still not enough (need ≥ 1 for uniqueness)!
+-/
+
+end Reinmann

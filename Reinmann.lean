@@ -22,6 +22,7 @@ import Reinmann.CriticalLineCounting
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates
+import Reinmann.CertificateBarrier
 import Reinmann.EulerFactorPositivity
 import Reinmann.Zeta341GlobalBridge
 import Reinmann.HilbertPolyaExperiment

@@ -1,4 +1,3 @@
 import Reinmann.RiemannSpine
 import Reinmann.InvolutionSymmetry
 import Reinmann.TwoBranchArchitecture
-import Reinmann.LiCriterion

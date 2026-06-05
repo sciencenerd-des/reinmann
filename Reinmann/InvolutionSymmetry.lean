@@ -25,49 +25,15 @@ For RH, the bridge is:
 - Critical line: s.re = 1/2
 - Connection: Fixed point of s ↦ 1-s̄ ↔ on critical line
 
-This file proves as much as possible about the involution WITHOUT sorry.
+## Note
+
+`RiemannSpine.lean` already defines `zetaInvolution` and proves basic properties.
+This file adds the conjugate symmetry property and proves the involution maps zeros to zeros.
 -/
 
 noncomputable section
 
 namespace Reinmann
-
-/-- The functional equation involution: the analogue of complex conjugation c
-    in the CM field paper. This is the reflection that preserves zeros. -/
-def zetaInvolution (s : Complex) : Complex := 1 - starRingEnd Complex s
-
-/-- The involution is indeed an involution (order 2). -/
-theorem involution_is_involution (s : Complex) :
-    zetaInvolution (zetaInvolution s) = s := by
-  simp only [zetaInvolution, map_sub, map_one, Complex.star_def]
-  rw [Complex.conj_conj]
-  ring
-
-/-- The involution preserves the open critical strip. -/
-theorem involution_preserves_strip (s : Complex) (h : 0 < s.re ∧ s.re < 1) :
-    0 < (zetaInvolution s).re ∧ (zetaInvolution s).re < 1 := by
-  simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
-  exact ⟨by linarith [h.2], by linarith [h.1]⟩
-
-/-- A point is fixed by the involution iff it lies on the critical line. -/
-theorem involution_fixed_iff (s : Complex) :
-    zetaInvolution s = s ↔ s.re = 1/2 := by
-  constructor
-  · intro h
-    have hre : (zetaInvolution s).re = s.re := by rw [h]
-    simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re] at hre
-    linarith
-  · intro h
-    apply Complex.ext
-    · simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
-      linarith
-    · simp only [zetaInvolution, Complex.sub_im, Complex.one_im, Complex.conj_im,
-        zero_sub, neg_neg]
-
-/-- Involution-fixed is equivalent to being on the critical line. -/
-theorem involutionFixed_iff_onCriticalLine (s : Complex) :
-    zetaInvolution s = s ↔ OnCriticalLine s := by
-  rw [involution_fixed_iff, OnCriticalLine]
 
 /-- **Conjugate symmetry of the Riemann zeta function.**
 
@@ -100,16 +66,18 @@ theorem involutionFixed_iff_onCriticalLine (s : Complex) :
     3. Or a general Schwarz reflection principle
 
     This is a standard result in complex analysis textbooks (e.g., Ahlfors, Stein-Shakarchi).
+
+    See GAPS.md for tracking this formalization gap.
 -/
-axiom riemannZeta_conj_symm (s : Complex) (hs : s ≠ 1) :
-    riemannZeta (starRingEnd Complex s) = starRingEnd Complex (riemannZeta s)
+theorem riemannZeta_conj_symm (s : Complex) (hs : s ≠ 1) :
+    riemannZeta (starRingEnd Complex s) = starRingEnd Complex (riemannZeta s) := by
+  sorry
 
 /-- If s is a strip zero, then so is its conjugate s̄.
     This follows from ζ(s) = ζ̄(s̄) for s in the critical strip. -/
 theorem conjugate_of_strip_zero {s : Complex}
     (hpos : 0 < s.re) (hlt : s.re < 1) (hz : riemannZeta s = 0) :
     riemannZeta (starRingEnd Complex s) = 0 := by
-  -- The zeta function satisfies ζ(s̄) = ζ̄(s) for s in the critical strip
   have hs_ne_one : s ≠ 1 := by
     intro h
     rw [h] at hlt
@@ -132,37 +100,5 @@ theorem involution_maps_strip_zeros {s : Complex}
     exact hstrip
   -- Now apply the functional equation reflection: s̄ ↦ 1 - s̄
   exact strip_zero_reflects hstrip_conj.1 hstrip_conj.2 hz_conj
-
-/-- Points that are NOT on the critical line are NOT fixed by the involution. -/
-theorem not_fixed_if_not_onLine {s : Complex} (h : s.re ≠ 1/2) :
-    zetaInvolution s ≠ s := by
-  intro hcontra
-  rw [involution_fixed_iff] at hcontra
-  exact h hcontra
-
-/-- In the RIGHT half of the critical strip, no point is fixed by the involution. -/
-theorem not_fixed_in_right_half {s : Complex} (hhalf : 1 / 2 < s.re) :
-    zetaInvolution s ≠ s := by
-  apply not_fixed_if_not_onLine
-  linarith
-
-/-- A zero in the right half of the strip cannot be mapped to itself by the involution. -/
-theorem rightHalf_zero_not_involution_fixed {s : Complex}
-    (hhalf : 1 / 2 < s.re) (hlt : s.re < 1) (hz : riemannZeta s = 0) :
-    zetaInvolution s ≠ s :=
-  not_fixed_in_right_half hhalf
-
-/-- The involution swaps the left and right halves of the critical strip. -/
-theorem involution_swaps_halves {s : Complex} (hstrip : 0 < s.re ∧ s.re < 1) :
-    s.re < 1 / 2 ↔ 1 / 2 < (zetaInvolution s).re := by
-  simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
-  constructor <;> intro h <;> linarith
-
-/-- If a zero exists in the right half, its involution image is in the left half. -/
-theorem involution_image_in_left_half {s : Complex}
-    (hhalf : 1 / 2 < s.re) (hlt : s.re < 1) :
-    (zetaInvolution s).re < 1 / 2 := by
-  simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
-  linarith
 
 end Reinmann

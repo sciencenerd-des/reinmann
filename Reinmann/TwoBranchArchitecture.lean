@@ -63,6 +63,9 @@ structure HilbertPolyaWitness where
   /-- They come from nontrivial zeros in the critical strip -/
   from_zeros : ∀ γ ∈ zeroImagParts, ∃ s : Complex,
     riemannZeta s = 0 ∧ s.im = γ ∧ 0 < s.re ∧ s.re < 1
+  /-- Completeness: every strip zero's imaginary part is in the spectrum -/
+  complete : ∀ s : Complex,
+    riemannZeta s = 0 → 0 < s.re → s.re < 1 → s.im ∈ zeroImagParts
   /-- Self-adjointness forces all these zeros to lie on the critical line.
       This is the key content: if the zeros come from a self-adjoint operator,
       they must satisfy Re(s) = 1/2. -/
@@ -79,7 +82,7 @@ theorem criticalStrip_involutionFixed_onLine {ρ : Complex}
     (hstrip : 0 < ρ.re ∧ ρ.re < 1)
     (hzero : riemannZeta ρ = 0)
     (hfixed : zetaInvolution ρ = ρ) : OnCriticalLine ρ := by
-  rw [← involutionFixed_iff_onCriticalLine]
+  rw [← zetaInvolution_fixed_iff_onCriticalLine]
   exact hfixed
 
 /-- Contrapositive: a zero in the RIGHT half cannot be involution-fixed. -/
@@ -118,22 +121,14 @@ theorem rightHalfStripZeroFree_of_hilbertPolya
   intro s hhalf hlt hz
   -- s is a zero with Re(s) > 1/2 in the critical strip
   have hstrip : 0 < s.re ∧ s.re < 1 := ⟨by linarith [hhalf], hlt⟩
-
-  -- By the functional equation (Branch 2), zetaInvolution s is also a zero
-  have hz_inv : riemannZeta (zetaInvolution s) = 0 :=
-    zero_involution_also_zero hstrip hz
-
-  -- The involution image has the same imaginary part (by definition of zetaInvolution)
-  have him_same : (zetaInvolution s).im = s.im := by
-    simp only [zetaInvolution, Complex.sub_im, Complex.one_im, Complex.conj_im,
-      zero_sub, neg_neg]
-
-  -- The imaginary part is in the spectrum
-  -- This is the key gap: we need to show that zeroImagParts contains ALL imaginary parts
-  -- of critical strip zeros. The HilbertPolyaWitness structure currently only asserts
-  -- that elements OF zeroImagParts come from zeros, not that ALL zeros are included.
-  -- This would need to be strengthened in the structure definition for a complete proof.
-  sorry
+  -- s.im is in the spectrum (by completeness)
+  have him_in : s.im ∈ hp.zeroImagParts :=
+    hp.complete s hz hstrip.1 hstrip.2
+  -- By selfAdjoint_forces_criticalLine, s.re = 1/2
+  have hline : s.re = 1/2 :=
+    hp.selfAdjoint_forces_criticalLine s.im him_in s hz rfl hstrip.1 hstrip.2
+  -- But Re(s) > 1/2, contradiction
+  linarith
 
 /-! ### Branch 1 Gap Documentation -/
 
@@ -178,12 +173,12 @@ Summary of what is PROVED vs what is AXIOMATIZED:
 - involution_fixed_iff: fixed points ↔ Re(s) = 1/2
 - rightHalf_zero_contradicts_involution: no right-half zero can be fixed
 - criticalStrip_involutionFixed_onLine: fixed zeros are on the line
-- The architectural reduction: HilbertPolya → RightHalfStripZeroFree → RH
+- rightHalfStripZeroFree_of_hilbertPolya: the architectural reduction is complete
+- The full chain: HilbertPolya → RightHalfStripZeroFree → RH
 
 ✗ AXIOMATIZED (with sorry or axiom):
-- hilbertPolyaAxiom: the self-adjoint operator exists (Branch 1)
-- conjugate_of_strip_zero: ζ(s̄) = ζ̄(s) (requires mathlib extension)
-- One verification step in rightHalfStripZeroFree_of_hilbertPolya
+- hilbertPolyaAxiom: the self-adjoint operator exists (Branch 1) — open problem
+- riemannZeta_conj_symm: ζ(s̄) = ζ̄(s) (requires mathlib extension) — in InvolutionSymmetry.lean
 
 The structure is complete. The only missing piece is the operator construction,
 which is a decades-old open problem in mathematical physics.

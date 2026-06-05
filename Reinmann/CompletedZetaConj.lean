@@ -156,4 +156,24 @@ theorem re_deriv_completedZeta₀_eq_zero_on_critical_line {s : ℂ}
   rw [Complex.conj_re, Complex.neg_re] at hre
   linarith
 
+/-! ### Z-function realness of Λ₀ on the critical line -/
+
+/-- **The completed zeta Λ₀ is real on the critical line.** For `Re s = 1/2`,
+`(Λ₀ s).im = 0`. This is the structural source of the Hardy `Z`-function's
+realness: on the line `1 - s = s̄`, so the functional equation `Λ₀(1-s) = Λ₀(s)`
+and conjugation `Λ₀(s̄) = Λ̄₀(s)` together give `Λ₀(s) = Λ̄₀(s)`. -/
+theorem completedZeta₀_real_on_critical_line {s : ℂ} (hs : s.re = 1 / 2) :
+    (completedRiemannZeta₀ s).im = 0 := by
+  have hline : (1 : ℂ) - s = conj s := by
+    apply Complex.ext
+    · rw [Complex.sub_re, Complex.one_re, Complex.conj_re, hs]; norm_num
+    · rw [Complex.sub_im, Complex.one_im, Complex.conj_im]; ring
+  have hfe : completedRiemannZeta₀ (conj s) = completedRiemannZeta₀ s := by
+    rw [← hline]; exact completedRiemannZeta₀_one_sub s
+  have hconj : completedRiemannZeta₀ (conj s) = conj (completedRiemannZeta₀ s) :=
+    completedZeta₀_conj s
+  have hself : conj (completedRiemannZeta₀ s) = completedRiemannZeta₀ s := by
+    rw [← hconj, hfe]
+  exact Complex.conj_eq_iff_im.mp hself
+
 end Reinmann

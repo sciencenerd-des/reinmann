@@ -1,0 +1,321 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+
+/-!
+# Computational-Asymptotic Hybrid Approach
+
+A pragmatic strategy: Split the problem into two regimes:
+1. **Computational:** Verify uniqueness for T ≤ T_max by brute force
+2. **Asymptotic:** Prove uniqueness for T > T_max using limiting behavior
+
+Then combine them for complete proof.
+
+## Key Insight
+
+The "hard part" of RH is at finite heights where oscillations matter.
+For T → ∞, the problem becomes "easier" in some senses because:
+- Average spacing grows as log T
+- Statistical regularities dominate
+- Individual zeros become "negligible" relative to total count
+
+Maybe we can prove uniqueness asymptotically, then use computation for small T!
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Regime 1: Computational Verification -/
+
+/-- Computational verification: For T ≤ T_max, uniqueness has been verified. -/
+axiom computational_verification (T_max : ℝ) (hT : T_max = 10^13) :
+  ∀ γ₁ γ₂ : ℝ, 0 < γ₁ ∧ γ₁ ≤ T_max → 0 < γ₂ ∧ γ₂ ≤ T_max →
+  (∃ ρ₁ ρ₂ : ℂ, riemannZeta ρ₁ = 0 ∧ riemannZeta ρ₂ = 0 ∧
+               ρ₁.im = γ₁ ∧ ρ₂.im = γ₂) →
+  γ₁ ≠ γ₂
+
+/-- This has actually been done: first 10^13 zeros verified to be simple. -/
+theorem computational_regime_verified :
+    ∀ γ : ℝ, 0 < γ ∧ γ ≤ 10^13 →
+    ∀ ρ₁ ρ₂ : ℂ,
+    riemannZeta ρ₁ = 0 → riemannZeta ρ₂ = 0 →
+    ρ₁.im = γ → ρ₂.im = γ →
+    0 < ρ₁.re → ρ₁.re < 1 →
+    0 < ρ₂.re → ρ₂.re < 1 →
+    ρ₁ = ρ₂ := by
+  sorry  -- This is an empirical fact from computational verification
+
+/-! ### Regime 2: Asymptotic Behavior -/
+
+/-- For very large T, the average zero spacing is approximately 2π/log T. -/
+axiom average_spacing_asymptotic (T : ℝ) (hT : T > 100) :
+  average_spacing T = 2 * Real.pi / Real.log T + O(1 / Real.log T)
+where
+  average_spacing (T : ℝ) := (2 * Real.pi) / Real.log (T / (2 * Real.pi))
+
+/-- Key insight: As T → ∞, the spacing goes to 0, but so does 1/T.
+    The ratio spacing/T goes to 0 as well: (2π/log T)/T = 2π/(T·log T) → 0.
+
+    This means zeros become denser but still "spread out" relative to scale.
+-/
+
+/-! ### Asymptotic Uniqueness via Density Growth -/
+
+/-- For large T, suppose there are two zeros at height γ ≈ T.
+    Then locally near γ, the density is 2/(2ε) = 1/ε (if ε is small).
+
+    But the average density at height T is ~log T/(2π).
+
+    For this to be consistent, we need: 1/ε ~ log T/(2π)
+    So: ε ~ 2π/log T
+
+    This is exactly the average spacing!
+
+    So two zeros at same height means they're separated by ~0 (same height)
+    but the "expected" separation is ~2π/log T.
+
+    The question: can the actual spacing be 0 when average is 2π/log T?
+-/
+
+/-- Central Limit Theorem for zero spacing? -/
+axiom zero_spacing_distribution (T : ℝ) (hT : T > 1000) :
+  spacing_distribution T ≈ gaussian_distribution (mean := 2*Real.pi/Real.log T)
+                                                 (variance := σ²(T))
+where
+  spacing_distribution (T : ℝ) : sorry := sorry
+  gaussian_distribution : sorry := sorry
+  σ² (T : ℝ) := (2 * Real.pi / Real.log T)^2  -- Variance also scales
+
+/-- If spacing follows Gaussian with mean μ and variance σ²,
+    then P(spacing = 0) = 0 (continuous distribution).
+
+    Therefore: probability of two zeros at exactly same height is 0.
+
+    But "probability 0" doesn't mean impossible!
+    Need to be more careful...
+-/
+
+/-! ### Refined Asymptotic Argument -/
+
+/-- Montgomery's pair correlation: For zeros at heights γ₁, γ₂ near T,
+    the rescaled spacing s = (γ₁ - γ₂)·log T/(2π) follows:
+
+    R₂(s) = 1 - (sin(πs)/(πs))² + O(1/log T)
+
+    Key: R₂(0) = 0!
+
+    This means: two zeros at rescaled spacing 0 (i.e., same height)
+    has probability density 0.
+-/
+
+axiom pair_correlation_montgomery (T : ℝ) (s : ℝ) (hT : T > 100) :
+  R₂(s, T) = 1 - (Real.sin (Real.pi * s) / (Real.pi * s))^2 + error(s, T)
+where
+  R₂ (s T : ℝ) : ℝ := sorry  -- Pair correlation function
+  error (s T : ℝ) : ℝ := sorry  -- O(1/log T)
+
+/-- At s = 0: R₂(0) = 0 (using L'Hôpital or series expansion of sin). -/
+theorem pair_correlation_at_zero (T : ℝ) (hT : T > 100) :
+    R₂(0, T) = 0 + error(0, T) := by
+  sorry
+where
+  R₂ (s T : ℝ) : ℝ := sorry
+  error (s T : ℝ) : ℝ := sorry
+
+/-- This means: the probability density for two zeros at exactly same height
+    (rescaled spacing = 0) is zero!
+
+    For T → ∞: this becomes arbitrarily strong.
+
+    Therefore: asymptotically, no two zeros at same height.
+-/
+
+theorem asymptotic_uniqueness (T : ℝ) (hT : T > T_large) :
+    ∀ γ : ℝ, γ ≥ T →
+    ∀ ρ₁ ρ₂ : ℂ,
+    riemannZeta ρ₁ = 0 → riemannZeta ρ₂ = 0 →
+    ρ₁.im = γ → ρ₂.im = γ →
+    0 < ρ₁.re → ρ₁.re < 1 →
+    0 < ρ₂.re → ρ₂.re < 1 →
+    ρ₁ = ρ₂ := by
+  sorry  -- Follows from R₂(0) = 0 + further analysis
+where
+  T_large := (10 : ℝ)^20  -- Some large enough threshold
+
+/-! ### The Gap in This Argument -/
+
+/-- Problem 1: Montgomery's pair correlation ASSUMES RH!
+
+    The formula R₂(s) = 1 - (sin(πs)/(πs))² is conjectural and
+    derived assuming all zeros are on the critical line.
+
+    So we have circular reasoning again!
+-/
+
+/-- Problem 2: Even if R₂(0) = 0, that's a probability density,
+    not a proof that spacing = 0 is impossible.
+
+    For continuous distributions, individual outcomes have probability 0
+    but can still occur!
+
+    We'd need: P(spacing < ε) → 0 as ε → 0 faster than any power.
+    But typical distributions give P(spacing < ε) ~ ε (linear).
+-/
+
+/-- Problem 3: We're applying probabilistic thinking to a deterministic problem.
+
+    The zeros aren't random - they're determined by ζ(s) = 0!
+    Statistical analogies don't constitute proof.
+-/
+
+/-! ### Non-Circular Version? -/
+
+/-- Can we prove R₂(0) = 0 WITHOUT assuming RH?
+
+    Approach: Use explicit formula to derive pair correlation directly.
+
+    Known: N(T) = T/(2π)·log(T/(2π)) + ... (doesn't require RH)
+
+    From this: average spacing = 2π/log T (unconditional)
+
+    Question: Can we prove the pair correlation function has R₂(0) = 0
+    using only the explicit formula and NOT assuming RH?
+
+    This would require showing that the explicit formula structure itself
+    prevents multiple zeros at same height.
+-/
+
+axiom explicit_formula_implies_repulsion :
+    ∃ f : ℝ → ℝ, (∀ T : ℝ, T > 1 → 0 ≤ f T) ∧
+                 (∀ T : ℝ, T > 1 → R₂(0, T) ≤ f T) ∧
+                 (f T → 0 as T → ∞)
+where
+  R₂ (s T : ℝ) : ℝ := sorry
+
+/-- If we could prove this WITHOUT assuming RH, we'd have:
+
+    For T > T_large: R₂(0, T) < ε (very small)
+    This means: two zeros at same height is "almost impossible"
+    Combined with computational verification for T ≤ T_max
+    → No zeros at same height for all T
+-/
+
+theorem hybrid_approach_assuming_repulsion
+    (h_comp : computational_regime_verified)
+    (h_repel : explicit_formula_implies_repulsion) :
+    ZeroImUniqueness := by
+  intro s t hs ht hs_pos hs_lt ht_pos ht_lt hsame
+  -- Split cases: T ≤ T_max or T > T_max
+  sorry
+
+/-! ### Quantitative Analysis -/
+
+/-- Let's compute what "repulsion strength" we'd need.
+
+    Suppose R₂(0, T) ≤ C / log T for some constant C.
+
+    Integrating over all heights up to T:
+    ∫₁^T R₂(0, t) · density(t) dt ≤ ∫₁^T (C/log t) · (log t)/(2π) dt
+                                    = C/(2π) · T
+
+    This gives "expected number of zero pairs at same height" ≤ C·T/(2π).
+
+    For T = 10^13: this is ~10^12 pairs even if C = 0.001!
+
+    So R₂(0, T) ≤ 1/log T is NOT strong enough.
+
+    We'd need: R₂(0, T) ≤ C / T^α for some α > 1
+    Or: R₂(0, T) = 0 exactly (not just small)
+-/
+
+/-! ### The Fundamental Barrier Returns -/
+
+/-- Even the computational-asymptotic hybrid hits the same barrier:
+
+    1. Computational verification: Done for T ≤ 10^13 ✓
+    2. Asymptotic uniqueness: Needs R₂(0) = 0
+    3. Proving R₂(0) = 0: Requires RH (circular!) or new methods
+
+    To prove R₂(0) = 0 without assuming RH would essentially require
+    understanding the zero distribution perfectly, which is... the RH!
+
+    Conclusion: Even combining computation with asymptotics, we still
+    need to prove something about zero distribution that's equivalent
+    to what we're trying to prove.
+-/
+
+/-! ### Weakest Sufficient Condition -/
+
+/-- What's the WEAKEST asymptotic statement that would suffice?
+
+    We don't need R₂(s) exactly.
+    We just need: "For large T, probability of two zeros within ε of each other
+                  goes to 0 faster than 1/T"
+
+    If P(spacing < ε | height ≈ T) < C·ε^α/T for some α, C, then:
+    Expected number of pairs = ∫ P · density dt
+                             = ∫ (C·ε^α/T) · (log T)/(2π) dT
+                             = (C·ε^α)/(2π) · ∫ log(T)/T dT
+                             = (C·ε^α)/(2π) · (log T)²/2 |₁^∞
+
+    This diverges unless α > 0 and we take ε → 0 carefully.
+
+    For ε = 0 (exactly same height), need: P(spacing = 0) = 0 EXACTLY.
+
+    This brings us back to: prove continuous distribution or R₂(0) = 0.
+-/
+
+/-! ### Assessment -/
+
+/-- The computational-asymptotic hybrid:
+
+    Advantages:
+    ✓ Reduces infinite problem to finite computation + limit argument
+    ✓ Computational part is actually done (10^13 zeros verified)
+    ✓ Asymptotic statistics are well-understood
+
+    Disadvantages:
+    ✗ Asymptotic statistics assume RH (Montgomery's conjecture)
+    ✗ Non-circular proofs require understanding zero distribution
+    ✗ "Probability 0" ≠ "impossible" for continuous distributions
+    ✗ Even weakest sufficient condition seems to require RH-level results
+
+    Verdict: This approach clarifies the structure but doesn't bypass
+    the fundamental difficulty. The "asymptotic uniqueness" part
+    requires proving something about zero distribution that's
+    essentially equivalent to RH itself.
+-/
+
+/-! ### What WOULD Work -/
+
+/-- If we had ANY of these, the hybrid would succeed:
+
+    1. Unconditional proof that R₂(0, T) → 0 as T → ∞
+    2. Explicit formula showing spacing ≥ δ(T) with δ(T) → 0 slowly
+    3. Proof that "exceptional set" (heights with k≥2) has density 0
+    4. Direct computation extended to T = 10^100 (infeasible)
+    5. Some other characterization of zero distribution
+
+    But all of these require new mathematical insights we don't have.
+-/
+
+theorem hybrid_works_if_have_repulsion :
+    (∀ ε > 0, ∃ T_large : ℝ, ∀ T > T_large, R₂(0, T) < ε) →
+    computational_regime_verified →
+    ZeroImUniqueness := by
+  intro h_repel h_comp
+  intro s t hs ht hs_pos hs_lt ht_pos ht_lt hsame
+  -- Case 1: |s.im| ≤ 10^13 → use computational verification
+  -- Case 2: |s.im| > 10^13 → use asymptotic repulsion
+  -- But proving asymptotic repulsion... that's the hard part!
+  sorry
+where
+  R₂ (s T : ℝ) : ℝ := sorry
+
+end Reinmann

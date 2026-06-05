@@ -1,0 +1,342 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+
+/-!
+# Statistical Approach to Zero Uniqueness
+
+A completely different angle: What if we think about zero distribution as a
+statistical process and use concentration inequalities?
+
+## Key Insight
+
+The average zero spacing is ~2π/log T. If zeros follow "reasonable" statistics,
+deviations from this average should be controlled. Multiple zeros at exactly
+the same height represents an infinite deviation from average spacing!
+
+## Strategy
+
+1. Define "local zero density" around height γ
+2. Show it has bounded variance (from known results)
+3. Prove concentration inequality: P(|density - average| > k·σ) ≤ f(k)
+4. Multiple zeros at same height → infinite local density → probability 0
+5. Therefore: at most one zero per height
+
+This avoids needing sharp derivative bounds!
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Local Zero Density -/
+
+/-- The number of zeros in a small interval around height γ. -/
+def LocalZeroCount (γ : ℝ) (ε : ℝ) : ℕ :=
+  sorry  -- Count zeros with |Im(ρ) - γ| < ε
+
+/-- Local zero density: zeros per unit height. -/
+def LocalZeroDensity (γ : ℝ) (ε : ℝ) : ℝ :=
+  (LocalZeroCount γ ε : ℝ) / (2 * ε)
+
+/-- Average zero density at height T. -/
+def AverageZeroDensity (T : ℝ) : ℝ :=
+  1 / (2 * Real.pi) * Real.log (T / (2 * Real.pi))
+
+/-! ### Key Observation: Functional Equation Creates Pairing -/
+
+/-- If ρ is a zero at height γ, then 1-ρ̄ is a zero at height -γ.
+    This creates a natural pairing between positive and negative heights. -/
+
+theorem zeros_paired_by_functional_equation (ρ : ℂ)
+    (hz : riemannZeta ρ = 0)
+    (hstrip : 0 < ρ.re ∧ ρ.re < 1) :
+    riemannZeta (1 - starRingEnd ℂ ρ) = 0 := by
+  sorry
+
+/-- The pairing is bijective: each zero at +γ pairs with exactly one at -γ. -/
+theorem pairing_bijective (γ : ℝ) (hγ : 0 < γ) :
+    LocalZeroCount γ ε = LocalZeroCount (-γ) ε := by
+  sorry
+
+/-! ### Statistical Constraint from Pairing -/
+
+/-- Here's the key insight: If there are k zeros at height γ,
+    there must be exactly k zeros at height -γ (by pairing).
+
+    But the explicit formula gives us an ASYMMETRIC constraint!
+    The contribution to ψ(x) from zeros at +γ differs from zeros at -γ.
+-/
+
+/-- The explicit formula: ψ(x) = x - Σ_ρ x^ρ/ρ - log(2π) - ... -/
+axiom explicit_formula_chebyshev (x : ℝ) (hx : 1 < x) :
+  chebyshev_psi x = x - (∑' ρ : {z : ℂ // riemannZeta z = 0}, x^ρ.val / ρ.val) - log_2pi
+where
+  chebyshev_psi (x : ℝ) : ℝ := sorry  -- Σ_{n≤x} Λ(n)
+  log_2pi := Real.log (2 * Real.pi)
+
+/-- Zeros at +γ contribute: x^(σ+iγ)/(σ+iγ) = x^σ · e^(iγ·log x)/(σ+iγ)
+    Zeros at -γ contribute: x^(σ-iγ)/(σ-iγ) = x^σ · e^(-iγ·log x)/(σ-iγ)
+
+    These are complex conjugates IF σ = 1/2!
+    But if σ ≠ 1/2, they differ!
+-/
+
+theorem contribution_asymmetric_off_line (ρ : ℂ) (x : ℝ)
+    (hstrip : 0 < ρ.re ∧ ρ.re < 1)
+    (hoffline : ρ.re ≠ 1/2)
+    (hx : 1 < x) :
+    x^ρ / ρ ≠ x^(1 - starRingEnd ℂ ρ) / (1 - starRingEnd ℂ ρ) := by
+  sorry
+
+/-! ### The Contradiction Setup -/
+
+/-- Suppose there are k ≥ 2 zeros at height γ, all with real part σ ≠ 1/2.
+
+    By pairing: there are k zeros at height -γ.
+
+    Total contribution to ψ(x):
+    k · [x^(σ+iγ)/(σ+iγ) + x^(σ-iγ)/(σ-iγ)]
+
+    For large x, this oscillates with amplitude ~ k·x^σ.
+
+    But ψ(x) = x + O(x^θ) for some θ < 1.
+
+    If k ≥ 2 and σ > 1/2, then k·x^σ grows faster than x!
+    Contradiction!
+-/
+
+theorem multiple_zeros_offline_contradicts_growth (γ : ℝ) (σ : ℝ)
+    (hγ : 0 < γ)
+    (hσstrip : 1/2 < σ ∧ σ < 1)
+    (hmult : 2 ≤ LocalZeroCount γ 0.01)
+    (hallsame : ∀ ρ : ℂ, riemannZeta ρ = 0 → |ρ.im - γ| < 0.01 → ρ.re = σ) :
+    False := by
+  -- The k zeros at ±γ contribute amplitude k·x^σ to oscillations
+  -- But ψ(x) = x + O(x^θ) with θ < 1
+  -- For σ > 1/2, this is impossible if k ≥ 2
+  sorry
+
+/-! ### On the Critical Line -/
+
+/-- On the critical line σ = 1/2, contributions from +γ and -γ are conjugates,
+    so they contribute real-valued oscillations to ψ(x).
+
+    Can multiple zeros at same height on critical line exist?
+
+    The oscillations would be: k · 2·Re[x^(1/2+iγ)/(1/2+iγ)]
+                             = k · 2·x^(1/2)·Re[e^(iγ·log x)/(1/2+iγ)]
+                             = k · 2·x^(1/2)·[cos(γ·log x)·σ + sin(γ·log x)·γ]/|1/2+iγ|²
+
+    For k ≥ 2, this is 2× the amplitude of a single zero.
+
+    But what constrains the amplitude?
+-/
+
+/-- The variance of ψ(x) - x is bounded. -/
+axiom chebyshev_variance_bounded (X : ℝ) (hX : 1 < X) :
+  (∫ x in (1)..X, (chebyshev_psi x - x)^2) ≤ variance_bound X
+where
+  chebyshev_psi (x : ℝ) : ℝ := sorry
+  variance_bound (X : ℝ) : ℝ := X^2 * Real.log X  -- Known bound
+
+/-- If there are k zeros at height γ on the critical line,
+    they contribute oscillations of amplitude ~ k·X^(1/2)/γ.
+
+    Integrating (oscillation)² over [1, X] gives ~ k²·X/γ².
+
+    But the total variance is bounded by X²·log X.
+
+    For this to hold for all γ, we need:
+    Σ_γ k(γ)² / γ² ≤ X·log X
+
+    If any k(γ) ≥ 2, this sum might diverge!
+-/
+
+theorem variance_bound_constrains_multiplicity :
+    (∀ γ : ℝ, 0 < γ → LocalZeroCount γ 0.01 ≤ 1) ∨
+    (∃ γ : ℝ, 0 < γ ∧ variance_diverges γ) := by
+  sorry
+where
+  variance_diverges (γ : ℝ) : Prop :=
+    ∀ X : ℝ, X > 1 → (∫ x in (1)..X, (chebyshev_psi x - x)^2) > variance_bound X
+  variance_bound (X : ℝ) : ℝ := X^2 * Real.log X
+  chebyshev_psi (x : ℝ) : ℝ := sorry
+
+/-! ### Parseval-Type Identity -/
+
+/-- The L² norm of ψ(x) - x relates to the zeros via a Parseval-type identity.
+
+    Roughly: ∫ |ψ(x) - x|² dx ~ Σ_ρ 1/|ρ|²
+
+    If multiple zeros exist at the same γ, they contribute k² instead of k·1
+    to this sum (by constructive interference).
+
+    This might create a mismatch with known bounds!
+-/
+
+axiom parseval_identity (X : ℝ) (hX : 1 < X) :
+  (∫ x in (1)..X, (chebyshev_psi x - x)^2) ≈
+    (∑' ρ : {z : ℂ // riemannZeta z = 0}, contribution_squared ρ X)
+where
+  chebyshev_psi (x : ℝ) : ℝ := sorry
+  contribution_squared (ρ : ℂ) (X : ℝ) : ℝ := (X^(2*ρ.re)) / |ρ|^2
+
+/-- Multiple zeros at same height create coherent interference:
+    k zeros contribute ~ k² · (1/|ρ|²) instead of k · (1/|ρ|²)
+-/
+theorem interference_amplification (γ : ℝ) (k : ℕ) (hk : 2 ≤ k) :
+    coherent_contribution γ k ≥ k^2 * incoherent_contribution γ k := by
+  sorry
+where
+  coherent_contribution (γ : ℝ) (k : ℕ) : ℝ := sorry
+  incoherent_contribution (γ : ℝ) (k : ℕ) : ℝ := sorry
+
+/-! ### The Statistical Argument -/
+
+/-- Combining all pieces:
+
+    1. Functional equation: zeros at ±γ are paired
+    2. Explicit formula: they contribute to ψ(x) oscillations
+    3. Parseval identity: L² norm relates to sum over zeros
+    4. Known bound: L² norm ≤ X²·log X
+
+    If k ≥ 2 zeros at γ:
+    - Contribution to Parseval sum: ~ k²/γ²
+    - Summing over all γ with k(γ) ≥ 2: Σ k(γ)²/γ²
+    - This must satisfy: Σ k(γ)²/γ² ≤ constant · log X
+    - But if k(γ) = 2 for infinitely many γ, this diverges!
+    - Contradiction!
+
+    Therefore: k(γ) = 1 for all but finitely many γ.
+
+    For finite exceptions: can argue separately that they create
+    measurable anomalies in ψ(x) that would contradict known properties.
+-/
+
+theorem statistical_uniqueness :
+    (∀ γ : ℝ, γ > T_threshold → LocalZeroCount γ ε ≤ 1) ∧
+    (Finite {γ : ℝ | γ > 0 ∧ LocalZeroCount γ ε ≥ 2}) := by
+  sorry
+where
+  ε := (1 : ℝ) / 100
+  T_threshold := (100 : ℝ)
+
+/-! ### From "Almost Everywhere" to "Everywhere" -/
+
+/-- The hard part: going from "finitely many exceptions" to "no exceptions".
+
+    Need to show: if even ONE zero has multiplicity ≥ 2,
+    it creates a detectable anomaly.
+
+    Possible angles:
+    1. Density estimates near that exceptional γ
+    2. Derivative bounds at that specific zero
+    3. Functional equation creating contradiction with the pair
+    4. Explicit computation showing no such exceptions exist for small T
+-/
+
+theorem no_exceptional_zeros :
+    ∀ γ : ℝ, 0 < γ → LocalZeroCount γ ε ≤ 1 := by
+  intro γ hγ
+  -- Proof by contradiction: suppose k ≥ 2
+  by_contra h
+  push_neg at h
+
+  -- This creates specific measurable anomalies
+  sorry
+where
+  ε := (1 : ℝ) / 100
+
+/-! ### Connection to ZeroImUniqueness -/
+
+theorem statistical_approach_implies_uniqueness :
+    (∀ γ : ℝ, 0 < γ → LocalZeroCount γ ε ≤ 1) →
+    ZeroImUniqueness := by
+  intro hunique
+  intro s t hs ht hs_pos hs_lt ht_pos ht_lt hsame
+  -- If s ≠ t with same imaginary part, that contradicts LocalZeroCount ≤ 1
+  sorry
+where
+  ε := (1 : ℝ) / 100
+
+/-! ### Assessment of This Approach -/
+
+/-- Advantages:
+    ✓ Uses L² methods (Parseval) instead of pointwise bounds
+    ✓ Functional equation pairing is rigorous
+    ✓ Variance bounds are known (don't require RH)
+    ✓ Statistical concentration is well-developed theory
+
+    Disadvantages:
+    ✗ Going from "finitely many" to "zero" exceptions is hard
+    ✗ Parseval identity for ψ might not be sharp enough
+    ✗ L² bounds might allow k=2 for sparse set of γ
+    ✗ Still requires careful analysis of interference terms
+
+    Verdict: More promising than derivative bounds alone, but still has gaps.
+
+    The key question: Can we prove the Parseval sum diverges if ANY k(γ) ≥ 2?
+-/
+
+/-! ### A Specific Calculation -/
+
+/-- Let's try to make the Parseval argument concrete.
+
+    Known: ∫₁^X (ψ(x) - x)² dx = O(X²·log X)
+
+    From zeros: ∫₁^X (ψ(x) - x)² dx = ∫₁^X |Σ_ρ x^ρ/ρ|² dx
+
+    For zeros on critical line Re(ρ) = 1/2:
+    |Σ_ρ x^ρ/ρ| = |Σ_ρ x^(1/2+iγ_ρ)/(1/2+iγ_ρ)|
+                 = x^(1/2) · |Σ_ρ e^(iγ_ρ·log x)/(1/2+iγ_ρ)|
+
+    If k zeros at height γ:
+    contribution ~ k·e^(iγ·log x)/(1/2+iγ)
+
+    |k·e^(iγ·log x)/(1/2+iγ)|² = k²/|1/2+iγ|²
+
+    Integrating: k²/|1/2+iγ|² · X
+
+    Summing over all γ: Σ_γ k(γ)²/|1/2+iγ|² · X
+
+    For this to be O(X²·log X), we need:
+    Σ_γ k(γ)²/|γ|² = O(X·log X)
+
+    But the number of zeros up to height T is ~ T·log T/(2π).
+
+    If k(γ) = 1 for all γ:
+    Σ_γ 1/γ² ~ ∫₁^T 1/γ² · (log γ)/(2π) dγ ~ log T / (2π)
+
+    This is O(log T) ✓
+
+    If k(γ) = 2 for even a positive density of γ:
+    Σ_γ 4/γ² ~ 4·log T / (2π)
+
+    This is still O(log T) ✗ (doesn't diverge!)
+
+    So this approach doesn't immediately work either...
+-/
+
+/-! ### The Remaining Gap -/
+
+/-- The statistical approach is elegant but still doesn't quite close the gap:
+
+    - It shows k(γ) must be "controlled on average"
+    - But doesn't force k(γ) = 1 for each γ
+    - Even k(γ) = 2 for sparse set might be compatible with L² bounds
+
+    What's needed: sharper analysis showing even ONE instance of k≥2 creates
+    a detectable anomaly. This requires understanding the oscillation patterns
+    more precisely, which brings us back to derivative bounds or similar!
+
+    Conclusion: Statistical methods add useful constraints but don't
+    avoid the fundamental difficulty.
+-/
+
+end Reinmann

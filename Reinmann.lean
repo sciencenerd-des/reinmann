@@ -14,6 +14,7 @@ import Reinmann.MirrorHeightEnergy
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates
+import Reinmann.EulerFactorPositivity
 import Reinmann.HilbertPolyaExperiment
 import Reinmann.HilbertPolyaConstruction
 import Reinmann.ProofArchitecture

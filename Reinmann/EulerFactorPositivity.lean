@@ -83,4 +83,41 @@ theorem re_neg_log_one_sub (z : ℂ) :
     (-Complex.log (1 - z)).re = -Real.log ‖1 - z‖ := by
   rw [Complex.neg_re, Complex.log_re]
 
+/-! ### The full per-Euler-factor 3-4-1 inequality (E1.2 complete) -/
+
+private theorem term_re (z : ℂ) (n : ℕ) : (z / (n : ℂ)).re = z.re / (n : ℝ) := by
+  rw [← Complex.ofReal_natCast, Complex.div_ofReal_re]
+
+/-- **Per-Euler-factor 3-4-1 inequality.** For `0 ≤ r < 1` and `‖u‖ = 1`,
+`3·(-log‖1-r‖) + 4·(-log‖1-r u‖) + (-log‖1-r u²‖) ≥ 0`.
+With `r = p^{-σ}`, `u = p^{-it}`, this is the local factor of the global modulus
+inequality `‖ζ(σ)‖³‖ζ(σ+it)‖⁴‖ζ(σ+2it)‖ ≥ 1`; summing over primes yields it. -/
+theorem euler_factor_341_log (r : ℝ) (hr : 0 ≤ r) (hr1 : r < 1) (u : ℂ) (hu : ‖u‖ = 1) :
+    0 ≤ 3 * (-Real.log ‖1 - (r : ℂ)‖) + 4 * (-Real.log ‖1 - (r : ℂ) * u‖)
+        + (-Real.log ‖1 - (r : ℂ) * u ^ 2‖) := by
+  have hr' : ‖(r : ℂ)‖ = r := Complex.norm_of_nonneg hr
+  have hw0 : ‖(r : ℂ)‖ < 1 := by rw [hr']; exact hr1
+  have hw1 : ‖(r : ℂ) * u‖ < 1 := by rw [norm_mul, hr', hu, mul_one]; exact hr1
+  have hw2 : ‖(r : ℂ) * u ^ 2‖ < 1 := by
+    rw [norm_mul, hr', norm_pow, hu, one_pow, mul_one]; exact hr1
+  have h0 := hasSum_re_neg_log hw0
+  have h1 := hasSum_re_neg_log hw1
+  have h2 := hasSum_re_neg_log hw2
+  have hcomb := ((h0.mul_left 3).add (h1.mul_left 4)).add h2
+  have hg : ∀ n : ℕ, 0 ≤ 3 * (((r : ℂ)) ^ n / (n : ℂ)).re
+      + 4 * (((r : ℂ) * u) ^ n / (n : ℂ)).re + (((r : ℂ) * u ^ 2) ^ n / (n : ℂ)).re := by
+    intro n
+    rw [term_re, term_re, term_re]
+    rcases Nat.eq_zero_or_pos n with hn | hn
+    · subst hn; simp
+    · have hnpos : 0 < (n : ℝ) := by exact_mod_cast hn
+      have hN := euler_triple_re_nonneg r hr u hu n
+      rw [← mul_div_assoc, ← mul_div_assoc, ← add_div, ← add_div]
+      exact div_nonneg hN hnpos.le
+  have key : 0 ≤ 3 * (-Complex.log (1 - (r : ℂ))).re
+      + 4 * (-Complex.log (1 - (r : ℂ) * u)).re
+      + (-Complex.log (1 - (r : ℂ) * u ^ 2)).re :=
+    hcomb.tsum_eq ▸ tsum_nonneg hg
+  rwa [re_neg_log_one_sub, re_neg_log_one_sub, re_neg_log_one_sub] at key
+
 end Reinmann

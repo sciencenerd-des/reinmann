@@ -66,8 +66,9 @@ instance : FunLike WeilTestFunction ℝ ℂ where
 def WeilTestFunction.reflected (h : WeilTestFunction) : WeilTestFunction where
   toFun x := starRingEnd ℂ (h (-x))
   even x := by
-    simp only [starRingEnd_apply, neg_neg]
-    rw [h.even]
+    simp only [starRingEnd_apply]
+    congr 1
+    rw [neg_neg, h.even]
   smooth := trivial
   compactSupport := trivial
 

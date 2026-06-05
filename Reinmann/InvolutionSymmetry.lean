@@ -35,64 +35,38 @@ noncomputable section
 
 namespace Reinmann
 
-/-- **Conjugate symmetry of the Riemann zeta function.**
+/-- **Conjugate symmetry assumption for Riemann zeta function.**
+
+    This encapsulates the standard result that ζ(s̄) = ζ̄(s) for s ≠ 1.
 
     Mathematical justification: The Riemann zeta function has a Dirichlet series
     representation ζ(s) = Σ_{n=1}^∞ n^{-s} for Re(s) > 1. Since the coefficients
-    (the constant sequence 1) are real (in fact, positive integers), we have for
-    any complex s with Re(s) > 1:
+    are real, this implies ζ(s̄) = ζ̄(s) throughout the domain of analytic continuation.
 
-      n^{-conj(s)} = exp(-conj(s) · log n)
-                   = exp(conj(-s · log n))
-                   = conj(exp(-s · log n))
-                   = conj(n^{-s})
-
-    for any real n > 0. Therefore:
-
-      ζ(conj(s)) = Σ_{n=1}^∞ n^{-conj(s)}
-                 = Σ_{n=1}^∞ conj(n^{-s})
-                 = conj(Σ_{n=1}^∞ n^{-s})
-                 = conj(ζ(s))
-
-    for Re(s) > 1. By the identity theorem for analytic functions and the analytic
-    continuation of ζ to ℂ \ {1}, this identity extends to all s ∈ ℂ \ {1}.
-
-    Lean formalization gap: Mathlib currently lacks a general theorem stating that
-    analytic functions with real Taylor coefficients (or more generally, real
-    Dirichlet series coefficients) satisfy f(conj(z)) = conj(f(z)). This would
-    require:
-    1. A theorem about Dirichlet series with real coefficients
-    2. Analytic continuation preserving this symmetry
-    3. Or a general Schwarz reflection principle
-
-    This is a standard result in complex analysis textbooks (e.g., Ahlfors, Stein-Shakarchi).
-
-    See GAPS.md for tracking this formalization gap.
+    Lean formalization gap: Mathlib currently lacks this theorem. See GAPS.md.
 -/
-theorem riemannZeta_conj_symm (s : Complex) (hs : s ≠ 1) :
-    riemannZeta (starRingEnd Complex s) = starRingEnd Complex (riemannZeta s) := by
-  sorry
+def ConjugateSymmetry : Prop :=
+  ∀ s : Complex, s ≠ 1 → riemannZeta (starRingEnd Complex s) = starRingEnd Complex (riemannZeta s)
 
-/-- If s is a strip zero, then so is its conjugate s̄.
-    This follows from ζ(s) = ζ̄(s̄) for s in the critical strip. -/
-theorem conjugate_of_strip_zero {s : Complex}
+/-- If s is a strip zero, then so is its conjugate s̄ (assuming conjugate symmetry). -/
+theorem conjugate_of_strip_zero (hconj : ConjugateSymmetry) {s : Complex}
     (hpos : 0 < s.re) (hlt : s.re < 1) (hz : riemannZeta s = 0) :
     riemannZeta (starRingEnd Complex s) = 0 := by
   have hs_ne_one : s ≠ 1 := by
     intro h
     rw [h] at hlt
     norm_num at hlt
-  rw [riemannZeta_conj_symm s hs_ne_one, hz]
+  rw [hconj s hs_ne_one, hz]
   simp
 
-/-- The involution maps strip zeros to strip zeros.
+/-- The involution maps strip zeros to strip zeros (assuming conjugate symmetry).
     This combines: s is a zero → s̄ is a zero → 1-s̄ is a zero. -/
-theorem involution_maps_strip_zeros {s : Complex}
+theorem involution_maps_strip_zeros (hconj : ConjugateSymmetry) {s : Complex}
     (hstrip : 0 < s.re ∧ s.re < 1) (hz : riemannZeta s = 0) :
     riemannZeta (zetaInvolution s) = 0 := by
   -- First: s is a zero → s̄ is a zero (by conjugate symmetry)
   have hz_conj : riemannZeta (starRingEnd Complex s) = 0 :=
-    conjugate_of_strip_zero hstrip.1 hstrip.2 hz
+    conjugate_of_strip_zero hconj hstrip.1 hstrip.2 hz
   -- The conjugate s̄ is in the strip with reflected real part
   have hstrip_conj : 0 < (starRingEnd Complex s).re ∧
       (starRingEnd Complex s).re < 1 := by

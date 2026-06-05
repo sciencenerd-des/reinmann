@@ -47,6 +47,117 @@ def RightHalfStripZeroFree : Prop :=
   ∀ s : Complex, 1 / 2 < s.re -> s.re < 1 -> riemannZeta s ≠ 0
 
 /--
+A concrete counterexample target for the one-sided zero-free formulation.
+-/
+def RightHalfStripCounterexample (s : Complex) : Prop :=
+  1 / 2 < s.re ∧ s.re < 1 ∧ riemannZeta s = 0
+
+/--
+The reflected companion shape of a right-half strip counterexample.
+-/
+def LeftHalfStripCounterexample (s : Complex) : Prop :=
+  0 < s.re ∧ s.re < 1 / 2 ∧ riemannZeta s = 0
+
+/--
+The left-half counterpart of `RightHalfStripZeroFree`.
+-/
+def LeftHalfStripZeroFree : Prop :=
+  ∀ s : Complex, 0 < s.re -> s.re < 1 / 2 -> riemannZeta s ≠ 0
+
+/--
+A zero in the open critical strip but not on the critical line.
+-/
+def CriticalStripOffLineZero (s : Complex) : Prop :=
+  0 < s.re ∧ s.re < 1 ∧ riemannZeta s = 0 ∧ s.re ≠ 1 / 2
+
+/--
+The geometric involution `s ↦ 1 - conjugate s`. Its fixed points are exactly
+the critical line. Mapping zeta zeros through this involution would additionally
+require conjugation symmetry of `riemannZeta`, which is not asserted here.
+-/
+def zetaInvolution (s : Complex) : Complex :=
+  1 - starRingEnd Complex s
+
+/--
+The geometric involution has order two.
+-/
+theorem zetaInvolution_involutive (s : Complex) :
+    zetaInvolution (zetaInvolution s) = s := by
+  simp only [zetaInvolution, map_sub, map_one]
+  rw [Complex.conj_conj]
+  ring
+
+/--
+The geometric involution preserves the open critical strip.
+-/
+theorem zetaInvolution_preserves_strip {s : Complex}
+    (h : 0 < s.re ∧ s.re < 1) :
+    0 < (zetaInvolution s).re ∧ (zetaInvolution s).re < 1 := by
+  simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
+  exact ⟨by linarith [h.2], by linarith [h.1]⟩
+
+/--
+Fixed points of the geometric involution have real part `1 / 2`.
+-/
+theorem zetaInvolution_fixed_iff_re_eq_half (s : Complex) :
+    zetaInvolution s = s ↔ s.re = 1 / 2 := by
+  constructor
+  · intro h
+    have hre : (zetaInvolution s).re = s.re := by rw [h]
+    simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re] at hre
+    linarith
+  · intro h
+    apply Complex.ext
+    · simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
+      linarith
+    · simp only [zetaInvolution, Complex.sub_im, Complex.one_im, Complex.conj_im,
+        zero_sub, neg_neg]
+
+/--
+Fixed points of the geometric involution are exactly points on the critical
+line.
+-/
+theorem zetaInvolution_fixed_iff_onCriticalLine (s : Complex) :
+    zetaInvolution s = s ↔ OnCriticalLine s := by
+  rw [zetaInvolution_fixed_iff_re_eq_half, OnCriticalLine]
+
+/--
+A point away from the critical line is not fixed by the geometric involution.
+-/
+theorem zetaInvolution_not_fixed_if_not_onCriticalLine {s : Complex}
+    (h : ¬ OnCriticalLine s) : zetaInvolution s ≠ s := by
+  intro hfixed
+  exact h ((zetaInvolution_fixed_iff_onCriticalLine s).mp hfixed)
+
+/--
+Points in the right half of the critical strip are not fixed by the geometric
+involution.
+-/
+theorem zetaInvolution_not_fixed_in_right_half {s : Complex}
+    (hhalf : 1 / 2 < s.re) : zetaInvolution s ≠ s := by
+  apply zetaInvolution_not_fixed_if_not_onCriticalLine
+  intro hline
+  simp only [OnCriticalLine] at hline
+  linarith
+
+/--
+The geometric involution swaps the left and right open half-strips.
+-/
+theorem zetaInvolution_left_half_iff_image_right_half {s : Complex} :
+    s.re < 1 / 2 ↔ 1 / 2 < (zetaInvolution s).re := by
+  simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
+  constructor <;> intro h <;> linarith
+
+/--
+The image of a point in the right half lies in the left half.
+-/
+theorem zetaInvolution_image_right_half_in_left {s : Complex}
+    (hhalf : 1 / 2 < s.re) :
+    (zetaInvolution s).re < 1 / 2 := by
+  simp only [zetaInvolution, Complex.sub_re, Complex.one_re, Complex.conj_re]
+  linarith
+
+/--
 Mathlib already proves that the Riemann zeta function has no zeros on
 `re s >= 1`.
 -/
@@ -363,6 +474,204 @@ theorem rightHalfStripZeroFree_iff_riemannHypothesis :
   · exact rightHalfStripZeroFree_of_riemannHypothesis
 
 /--
+The right-half zero-free target is an RH-equivalent target.
+-/
+theorem riemannHypothesis_iff_rightHalfStripZeroFree :
+    RiemannHypothesis ↔ RightHalfStripZeroFree :=
+  rightHalfStripZeroFree_iff_riemannHypothesis.symm
+
+/--
+Mathlib's formal Riemann Hypothesis supplies the central critical-strip
+obligation.
+-/
+theorem criticalStripObligations_of_riemannHypothesis
+    (h : RiemannHypothesis) : CriticalStripObligations :=
+  criticalStripObligations_of_rightHalfStripZeroFree
+    (rightHalfStripZeroFree_of_riemannHypothesis h)
+
+/--
+Mathlib's formal Riemann Hypothesis supplies exactly the central critical-strip
+obligation, and that obligation is enough to prove RH.
+-/
+theorem criticalStripObligations_iff_riemannHypothesis :
+    CriticalStripObligations ↔ RiemannHypothesis := by
+  constructor
+  · exact riemannHypothesis_from_obligations
+  · exact criticalStripObligations_of_riemannHypothesis
+
+/--
+The native critical-strip obligation is an RH-equivalent target.
+-/
+theorem riemannHypothesis_iff_criticalStripObligations :
+    RiemannHypothesis ↔ CriticalStripObligations :=
+  criticalStripObligations_iff_riemannHypothesis.symm
+
+/--
+The one-sided zero-free target is equivalent to the nonexistence of a concrete
+right-half strip counterexample.
+-/
+theorem rightHalfStripZeroFree_iff_no_rightHalfStripCounterexample :
+    RightHalfStripZeroFree ↔ ¬ ∃ s : Complex, RightHalfStripCounterexample s := by
+  constructor
+  · intro hfree hcounter
+    rcases hcounter with ⟨s, hhalf, hlt, hz⟩
+    exact (hfree s hhalf hlt) hz
+  · intro hno s hhalf hlt hzero
+    exact hno ⟨s, hhalf, hlt, hzero⟩
+
+/--
+Every right-half strip counterexample reflects to a left-half strip
+counterexample.
+-/
+theorem rightHalfCounterexample_reflects_left {s : Complex}
+    (h : RightHalfStripCounterexample s) :
+    LeftHalfStripCounterexample (1 - s) := by
+  rcases h with ⟨hhalf, hlt, hz⟩
+  have hpos : 0 < s.re := by linarith
+  have hz_reflect : riemannZeta (1 - s) = 0 :=
+    strip_zero_reflects hpos hlt hz
+  refine ⟨?_, ?_, hz_reflect⟩
+  · rw [Complex.sub_re, Complex.one_re]
+    linarith
+  · rw [Complex.sub_re, Complex.one_re]
+    linarith
+
+/--
+Every left-half strip counterexample reflects to a right-half strip
+counterexample.
+-/
+theorem leftHalfCounterexample_reflects_right {s : Complex}
+    (h : LeftHalfStripCounterexample s) :
+    RightHalfStripCounterexample (1 - s) := by
+  rcases h with ⟨hpos, hleft, hz⟩
+  have hlt : s.re < 1 := by linarith
+  have hz_reflect : riemannZeta (1 - s) = 0 :=
+    strip_zero_reflects hpos hlt hz
+  refine ⟨?_, ?_, hz_reflect⟩
+  · rw [Complex.sub_re, Complex.one_re]
+    linarith
+  · rw [Complex.sub_re, Complex.one_re]
+    linarith
+
+/--
+Pointwise reflection equivalence for right-half counterexamples.
+-/
+theorem rightHalfCounterexample_reflection_iff {s : Complex} :
+    RightHalfStripCounterexample s ↔ LeftHalfStripCounterexample (1 - s) := by
+  constructor
+  · exact rightHalfCounterexample_reflects_left
+  · intro hleft_reflect
+    have hright_reflect : RightHalfStripCounterexample (1 - (1 - s)) :=
+      leftHalfCounterexample_reflects_right hleft_reflect
+    simpa using hright_reflect
+
+/--
+Pointwise reflection equivalence for left-half counterexamples.
+-/
+theorem leftHalfCounterexample_reflection_iff {s : Complex} :
+    LeftHalfStripCounterexample s ↔ RightHalfStripCounterexample (1 - s) := by
+  constructor
+  · exact leftHalfCounterexample_reflects_right
+  · intro hright_reflect
+    have hleft_reflect : LeftHalfStripCounterexample (1 - (1 - s)) :=
+      rightHalfCounterexample_reflects_left hright_reflect
+    simpa using hleft_reflect
+
+/--
+Counterexamples must occur in reflected pairs across the critical line.
+-/
+theorem exists_rightHalfCounterexample_iff_exists_leftHalfCounterexample :
+    (∃ s : Complex, RightHalfStripCounterexample s) ↔
+      ∃ s : Complex, LeftHalfStripCounterexample s := by
+  constructor
+  · intro h
+    rcases h with ⟨s, hs⟩
+    exact ⟨1 - s, rightHalfCounterexample_reflects_left hs⟩
+  · intro h
+    rcases h with ⟨s, hs⟩
+    exact ⟨1 - s, leftHalfCounterexample_reflects_right hs⟩
+
+/--
+Zero-freeness on the left half of the critical strip is equivalent to
+zero-freeness on the right half.
+-/
+theorem leftHalfStripZeroFree_iff_rightHalfStripZeroFree :
+    LeftHalfStripZeroFree ↔ RightHalfStripZeroFree := by
+  constructor
+  · intro hleft s hhalf hlt hzero
+    have hleftCounter : LeftHalfStripCounterexample (1 - s) :=
+      rightHalfCounterexample_reflects_left ⟨hhalf, hlt, hzero⟩
+    exact (hleft (1 - s) hleftCounter.1 hleftCounter.2.1) hleftCounter.2.2
+  · intro hright s hpos hleft hzero
+    have hrightCounter : RightHalfStripCounterexample (1 - s) :=
+      leftHalfCounterexample_reflects_right ⟨hpos, hleft, hzero⟩
+    exact (hright (1 - s) hrightCounter.1 hrightCounter.2.1) hrightCounter.2.2
+
+/--
+The left-half zero-free target is also equivalent to mathlib's formal Riemann
+Hypothesis statement.
+-/
+theorem leftHalfStripZeroFree_iff_riemannHypothesis :
+    LeftHalfStripZeroFree ↔ RiemannHypothesis := by
+  exact leftHalfStripZeroFree_iff_rightHalfStripZeroFree.trans
+    rightHalfStripZeroFree_iff_riemannHypothesis
+
+/--
+The left-half zero-free target is an RH-equivalent target.
+-/
+theorem riemannHypothesis_iff_leftHalfStripZeroFree :
+    RiemannHypothesis ↔ LeftHalfStripZeroFree :=
+  leftHalfStripZeroFree_iff_riemannHypothesis.symm
+
+/--
+A right-half counterexample is an off-line zero in the critical strip.
+-/
+theorem criticalStripOffLineZero_of_rightHalfCounterexample {s : Complex}
+    (h : RightHalfStripCounterexample s) : CriticalStripOffLineZero s := by
+  rcases h with ⟨hhalf, hlt, hz⟩
+  refine ⟨by linarith, hlt, hz, ?_⟩
+  linarith
+
+/--
+A left-half counterexample is an off-line zero in the critical strip.
+-/
+theorem criticalStripOffLineZero_of_leftHalfCounterexample {s : Complex}
+    (h : LeftHalfStripCounterexample s) : CriticalStripOffLineZero s := by
+  rcases h with ⟨hpos, hleft, hz⟩
+  refine ⟨hpos, by linarith, hz, ?_⟩
+  linarith
+
+/--
+An off-line zero in the critical strip lies either to the right or to the left
+of the critical line.
+-/
+theorem criticalStripOffLineZero_cases {s : Complex}
+    (h : CriticalStripOffLineZero s) :
+    RightHalfStripCounterexample s ∨ LeftHalfStripCounterexample s := by
+  rcases h with ⟨hpos, hlt, hz, hoff⟩
+  rcases lt_trichotomy s.re (1 / 2 : Real) with hleft | hline | hright
+  · exact Or.inr ⟨hpos, hleft, hz⟩
+  · exact False.elim (hoff hline)
+  · exact Or.inl ⟨hright, hlt, hz⟩
+
+/--
+The existence of an off-line zero in the critical strip is equivalent to the
+existence of a right-half strip counterexample.
+-/
+theorem exists_criticalStripOffLineZero_iff_exists_rightHalfCounterexample :
+    (∃ s : Complex, CriticalStripOffLineZero s) ↔
+      ∃ s : Complex, RightHalfStripCounterexample s := by
+  constructor
+  · intro h
+    rcases h with ⟨s, hs⟩
+    rcases criticalStripOffLineZero_cases hs with hright | hleft
+    · exact ⟨s, hright⟩
+    · exact exists_rightHalfCounterexample_iff_exists_leftHalfCounterexample.mpr ⟨s, hleft⟩
+  · intro h
+    rcases h with ⟨s, hs⟩
+    exact ⟨s, criticalStripOffLineZero_of_rightHalfCounterexample hs⟩
+
+/--
 Failure of mathlib's formal Riemann Hypothesis is equivalent to the existence
 of a zeta zero in the open right half of the critical strip.
 -/
@@ -374,5 +683,169 @@ theorem not_riemannHypothesis_iff_exists_rightHalfStrip_zero :
   unfold RightHalfStripZeroFree
   push Not
   exact Iff.rfl
+
+/--
+Failure of mathlib's formal Riemann Hypothesis is equivalent to the existence
+of a concrete right-half strip counterexample.
+-/
+theorem not_riemannHypothesis_iff_exists_rightHalfStripCounterexample :
+    ¬ RiemannHypothesis ↔ ∃ s : Complex, RightHalfStripCounterexample s := by
+  rw [not_riemannHypothesis_iff_exists_rightHalfStrip_zero]
+  rfl
+
+/--
+Mathlib's formal Riemann Hypothesis is equivalent to the nonexistence of a
+right-half strip counterexample.
+-/
+theorem riemannHypothesis_iff_no_rightHalfStripCounterexample :
+    RiemannHypothesis ↔ ¬ ∃ s : Complex, RightHalfStripCounterexample s := by
+  rw [← rightHalfStripZeroFree_iff_riemannHypothesis]
+  exact rightHalfStripZeroFree_iff_no_rightHalfStripCounterexample
+
+/--
+Failure of mathlib's formal Riemann Hypothesis is equivalently witnessed by a
+left-half strip counterexample.
+-/
+theorem not_riemannHypothesis_iff_exists_leftHalfStripCounterexample :
+    ¬ RiemannHypothesis ↔ ∃ s : Complex, LeftHalfStripCounterexample s := by
+  rw [not_riemannHypothesis_iff_exists_rightHalfStripCounterexample]
+  exact exists_rightHalfCounterexample_iff_exists_leftHalfCounterexample
+
+/--
+Mathlib's formal Riemann Hypothesis is equivalent to the nonexistence of a
+left-half strip counterexample.
+-/
+theorem riemannHypothesis_iff_no_leftHalfStripCounterexample :
+    RiemannHypothesis ↔ ¬ ∃ s : Complex, LeftHalfStripCounterexample s := by
+  rw [← leftHalfStripZeroFree_iff_riemannHypothesis]
+  unfold LeftHalfStripZeroFree LeftHalfStripCounterexample
+  constructor
+  · intro hfree hcounter
+    rcases hcounter with ⟨s, hpos, hleft, hz⟩
+    exact (hfree s hpos hleft) hz
+  · intro hno s hpos hleft hzero
+    exact hno ⟨s, hpos, hleft, hzero⟩
+
+/--
+Failure of mathlib's formal Riemann Hypothesis is equivalent to the existence
+of an off-line zero in the open critical strip.
+-/
+theorem not_riemannHypothesis_iff_exists_criticalStripOffLineZero :
+    ¬ RiemannHypothesis ↔ ∃ s : Complex, CriticalStripOffLineZero s := by
+  rw [not_riemannHypothesis_iff_exists_rightHalfStripCounterexample]
+  exact exists_criticalStripOffLineZero_iff_exists_rightHalfCounterexample.symm
+
+/--
+Mathlib's formal Riemann Hypothesis is equivalent to the nonexistence of an
+off-line zero in the open critical strip.
+-/
+theorem riemannHypothesis_iff_no_criticalStripOffLineZero :
+    RiemannHypothesis ↔ ¬ ∃ s : Complex, CriticalStripOffLineZero s := by
+  exact riemannHypothesis_iff_no_rightHalfStripCounterexample.trans
+    (not_congr exists_criticalStripOffLineZero_iff_exists_rightHalfCounterexample.symm)
+
+/--
+The no-off-line-zero formulation is equivalent to the native critical-strip
+obligation.
+-/
+theorem noCriticalStripOffLineZero_iff_criticalStripObligations :
+    (¬ ∃ s : Complex, CriticalStripOffLineZero s) ↔ CriticalStripObligations := by
+  constructor
+  · intro hno
+    refine ⟨?_⟩
+    intro s hpos hlt hz
+    by_contra hoff
+    exact hno ⟨s, hpos, hlt, hz, hoff⟩
+  · intro hobl hbad
+    rcases hbad with ⟨s, hpos, hlt, hz, hoff⟩
+    have hline : OnCriticalLine s := hobl.strip_zero_on_line s hpos hlt hz
+    exact hoff hline
+
+/--
+The native critical-strip obligation is equivalent to ruling out off-line zeros
+in the open critical strip.
+-/
+theorem criticalStripObligations_iff_noCriticalStripOffLineZero :
+    CriticalStripObligations ↔ ¬ ∃ s : Complex, CriticalStripOffLineZero s :=
+  noCriticalStripOffLineZero_iff_criticalStripObligations.symm
+
+/--
+Ruling out off-line zeros supplies the native critical-strip obligation.
+-/
+theorem criticalStripObligations_of_noCriticalStripOffLineZero
+    (h : ¬ ∃ s : Complex, CriticalStripOffLineZero s) : CriticalStripObligations :=
+  noCriticalStripOffLineZero_iff_criticalStripObligations.mp h
+
+/--
+The native critical-strip obligation rules out off-line zeros.
+-/
+theorem noCriticalStripOffLineZero_of_criticalStripObligations
+    (h : CriticalStripObligations) : ¬ ∃ s : Complex, CriticalStripOffLineZero s :=
+  noCriticalStripOffLineZero_iff_criticalStripObligations.mpr h
+
+/--
+A registry entry for a target that is known to be equivalent to mathlib's
+formal Riemann Hypothesis statement. This stores only the equivalence, not a
+proof of the target.
+-/
+structure RHEquivalentTarget where
+  target : Prop
+  iff_riemannHypothesis : target ↔ RiemannHypothesis
+
+/--
+The native critical-strip obligation as an RH-equivalent target.
+-/
+def criticalStripObligationsTarget : RHEquivalentTarget where
+  target := CriticalStripObligations
+  iff_riemannHypothesis := criticalStripObligations_iff_riemannHypothesis
+
+/--
+The right-half zero-free formulation as an RH-equivalent target.
+-/
+def rightHalfStripZeroFreeTarget : RHEquivalentTarget where
+  target := RightHalfStripZeroFree
+  iff_riemannHypothesis := rightHalfStripZeroFree_iff_riemannHypothesis
+
+/--
+The left-half zero-free formulation as an RH-equivalent target.
+-/
+def leftHalfStripZeroFreeTarget : RHEquivalentTarget where
+  target := LeftHalfStripZeroFree
+  iff_riemannHypothesis := leftHalfStripZeroFree_iff_riemannHypothesis
+
+/--
+The no-off-line-zero formulation as an RH-equivalent target.
+-/
+def noCriticalStripOffLineZeroTarget : RHEquivalentTarget where
+  target := ¬ ∃ s : Complex, CriticalStripOffLineZero s
+  iff_riemannHypothesis := riemannHypothesis_iff_no_criticalStripOffLineZero.symm
+
+/--
+The no-right-half-counterexample formulation as an RH-equivalent target.
+-/
+def noRightHalfCounterexampleTarget : RHEquivalentTarget where
+  target := ¬ ∃ s : Complex, RightHalfStripCounterexample s
+  iff_riemannHypothesis := riemannHypothesis_iff_no_rightHalfStripCounterexample.symm
+
+/--
+The no-left-half-counterexample formulation as an RH-equivalent target.
+-/
+def noLeftHalfCounterexampleTarget : RHEquivalentTarget where
+  target := ¬ ∃ s : Complex, LeftHalfStripCounterexample s
+  iff_riemannHypothesis := riemannHypothesis_iff_no_leftHalfStripCounterexample.symm
+
+/--
+Any registered target implies mathlib's formal Riemann Hypothesis statement.
+-/
+theorem riemannHypothesis_of_target (t : RHEquivalentTarget)
+    (h : t.target) : RiemannHypothesis :=
+  t.iff_riemannHypothesis.mp h
+
+/--
+Mathlib's formal Riemann Hypothesis statement implies any registered target.
+-/
+theorem target_of_riemannHypothesis (t : RHEquivalentTarget)
+    (h : RiemannHypothesis) : t.target :=
+  t.iff_riemannHypothesis.mpr h
 
 end Reinmann

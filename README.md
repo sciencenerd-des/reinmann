@@ -50,13 +50,53 @@ shortcuts, then runs `lake env lean` on each target file.
 - local theorem: `rightHalfStripZeroFree_iff_riemannHypothesis` proves that the
   one-sided zero-free target is equivalent to mathlib's formal
   `RiemannHypothesis`
+- local theorem: `criticalStripObligations_iff_riemannHypothesis` proves that
+  the native open-critical-strip obligation is equivalent to mathlib's formal
+  `RiemannHypothesis`
 - local theorem: `not_riemannHypothesis_iff_exists_rightHalfStrip_zero` proves
   that a failure of `RiemannHypothesis` is exactly an explicit zero with
   `1 / 2 < s.re < 1`
+- local definition: `RightHalfStripCounterexample` names that exact
+  counterexample shape for future proof-search steps
+- local definition: `LeftHalfStripCounterexample` names the reflected companion
+  shape
+- local theorem: `exists_rightHalfCounterexample_iff_exists_leftHalfCounterexample`
+  proves that counterexamples, if they exist, occur in reflected pairs across
+  `s ↦ 1 - s`
+- local theorem: `leftHalfStripZeroFree_iff_rightHalfStripZeroFree` proves that
+  zero-freeness on the left half of the critical strip is equivalent to
+  zero-freeness on the right half
+- local theorem: `leftHalfStripZeroFree_iff_riemannHypothesis` proves that the
+  left-half zero-free target is also equivalent to mathlib's formal
+  `RiemannHypothesis`
+- local theorem: `not_riemannHypothesis_iff_exists_leftHalfStripCounterexample`
+  proves that RH failure can be witnessed on the left half as well
+- local theorems: `riemannHypothesis_iff_no_rightHalfStripCounterexample` and
+  `riemannHypothesis_iff_no_leftHalfStripCounterexample` name the exact
+  no-counterexample targets equivalent to RH
+- local definition: `CriticalStripOffLineZero` names the native strip-zero
+  counterexample shape: a zero with `0 < s.re < 1` and `s.re ≠ 1 / 2`
+- local theorem: `not_riemannHypothesis_iff_exists_criticalStripOffLineZero`
+  proves that RH failure is exactly the existence of such an off-line strip zero
+- local theorem: `noCriticalStripOffLineZero_iff_criticalStripObligations`
+  proves directly that ruling out off-line strip zeros is the same as the native
+  critical-strip obligation
+- local structure: `RHEquivalentTarget` registers targets by storing an
+  equivalence to `RiemannHypothesis`, not a proof of the target
+- local theorems: `riemannHypothesis_of_target` and
+  `target_of_riemannHypothesis` convert between any registered target and RH
 - remaining obligation: prove `RightHalfStripZeroFree`
 
 The remaining obligation is not a weaker workaround: the equivalence theorem
 shows it is exactly Riemann-Hypothesis-strength.
+
+## Research drafts
+
+Exploratory files with placeholders or conjectural axioms are preserved under
+`research/lean-drafts/*.lean.draft`. They are intentionally not imported by
+`Reinmann.lean` and not scanned as verified Lean code. Promote a draft back into
+`Reinmann/` only after replacing every placeholder and axiom with Lean-checked
+proofs that pass `./scripts/safe-verify.sh`.
 
 ## What SafeVerify rejects
 

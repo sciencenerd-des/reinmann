@@ -11,10 +11,14 @@ import Reinmann.FiberCentroid
 import Reinmann.RiemannHypothesisReduction
 import Reinmann.FiberEnergyGap
 import Reinmann.MirrorHeightEnergy
+import Reinmann.HorizontalRepulsion
+import Reinmann.HorizontalCritical
+import Reinmann.HorizontalDerivative
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates
 import Reinmann.EulerFactorPositivity
+import Reinmann.Zeta341GlobalBridge
 import Reinmann.HilbertPolyaExperiment
 import Reinmann.HilbertPolyaConstruction
 import Reinmann.ProofArchitecture

@@ -1,0 +1,224 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.Analysis.Analytic.Uniqueness
+
+/-!
+# The Horizontal Line Argument for ZeroImUniqueness
+
+## CRITICAL FLAW DISCOVERED (2026-06-05)
+
+This approach is **fatally flawed**. The identity theorem requires zeros to
+accumulate (occur frequently/infinitely often near a point), NOT just two
+isolated zeros.
+
+### The Flaw
+
+The argument claimed: "Two zeros at same height → ζ ≡ 0 on connecting segment"
+
+But this is **FALSE**. The identity theorem `eqOn_zero_of_preconnected_of_frequently_eq_zero`
+requires `∃ᶠ z in 𝓝[≠] z₀, f z = 0` (frequently zero), not just f(z₁) = f(z₂) = 0.
+
+### Counterexample
+
+f(z) = (z - ρ₁)(z - ρ₂) has two zeros but is NOT zero on the segment [ρ₁, ρ₂].
+
+### Why This Matters
+
+- Two isolated zeros do NOT accumulate to each other
+- Identity theorem does NOT apply to isolated zeros
+- The argument does NOT prove ZeroImUniqueness
+
+See research/HORIZONTAL_LINE_FLAW.md for detailed analysis.
+
+## Original (Flawed) Approach
+
+Below is the original formalization, preserved for documentation.
+
+-/
+
+noncomputable section
+
+open Complex
+open scoped ComplexConjugate
+
+namespace Reinmann
+
+/-! ### Preliminary Lemmas -/
+
+/-- ζ is analytic on the critical strip away from s = 1 -/
+theorem zeta_analytic_critical_strip :
+    AnalyticOnNhd ℂ riemannZeta {s : ℂ | 0 < s.re ∧ s.re < 1 ∧ s ≠ 1} := by
+  intro s ⟨hre_pos, hre_lt, hs_ne_one⟩
+  apply analyticOn_riemannZeta
+  exact hs_ne_one
+
+/-- For γ ≠ 0, the line Im(s) = γ doesn't contain s = 1 -/
+theorem horizontal_line_avoids_one (γ : ℝ) (hγ : γ ≠ 0) :
+    {s : ℂ | s.im = γ} ∩ {1} = ∅ := by
+  ext s
+  simp only [Set.mem_inter_iff, Set.mem_setOf_eq, Set.mem_singleton_iff, Set.mem_empty_iff_false,
+    iff_false]
+  intro ⟨h_im, h_one⟩
+  rw [h_one] at h_im
+  simp at h_im
+  exact hγ h_im
+
+/-- ζ is analytic in a neighborhood of horizontal lines in the critical strip -/
+theorem zeta_analytic_near_horizontal_line (γ : ℝ) (hγ : γ ≠ 0) :
+    AnalyticOnNhd ℂ riemannZeta
+      {s : ℂ | 0 < s.re ∧ s.re < 1 ∧ s.im = γ} := by
+  intro s ⟨hre_pos, hre_lt, him⟩
+  apply analyticOn_riemannZeta
+  intro h_one
+  rw [h_one] at him
+  simp at him
+  exact hγ him
+
+/-! ### Identity Theorem Application -/
+
+/-- Key Lemma: If an analytic function on an open connected set has two distinct zeros,
+    and those zeros lie on a line segment in that set, then the function is identically
+    zero on the entire connected component containing that segment. -/
+theorem analytic_two_zeros_implies_zero_on_component {f : ℂ → ℂ} {U : Set ℂ} {a b : ℂ}
+    (h_open : IsOpen U)
+    (h_connected : IsConnected U)
+    (h_analytic : AnalyticOnNhd ℂ f U)
+    (ha_mem : a ∈ U) (hb_mem : b ∈ U)
+    (ha : f a = 0) (hb : f b = 0) (hab : a ≠ b) :
+  ∀ s ∈ U, f s = 0 := by
+  -- The identity theorem (from Mathlib) states that if an analytic function
+  -- agrees with zero at two distinct points, it is zero everywhere on the
+  -- connected component.
+  -- We use AnalyticOnNhd.eqOn_of_preconnected_of_eventuallyEq
+  sorry
+
+/-- For our specific case: two zeros on a horizontal line segment -/
+theorem analytic_two_zeros_on_horizontal_segment {f : ℂ → ℂ} {σ₁ σ₂ γ : ℝ}
+    (h_analytic : AnalyticOnNhd ℂ f {s : ℂ | 0 < s.re ∧ s.re < 1 ∧ s.im = γ})
+    (hσ_bounds : 0 < σ₁ ∧ σ₁ < 1 ∧ 0 < σ₂ ∧ σ₂ < 1)
+    (ha : f (σ₁ + γ * I) = 0)
+    (hb : f (σ₂ + γ * I) = 0)
+    (hab : σ₁ ≠ σ₂) :
+  ∀ σ : ℝ, 0 < σ → σ < 1 → f (σ + γ * I) = 0 := by
+  sorry
+
+/-- The horizontal line segment between two points -/
+def horizontalSegment (σ₁ σ₂ γ : ℝ) : Set ℂ :=
+  {s : ℂ | s.im = γ ∧ s.re ∈ Set.Icc (min σ₁ σ₂) (max σ₁ σ₂)}
+
+/-- If ζ has two zeros with same imaginary part but different real parts,
+    then ζ is zero on the entire horizontal segment connecting them -/
+theorem zeta_zero_on_horizontal_segment
+    (σ₁ σ₂ γ : ℝ)
+    (hγ : γ ≠ 0)
+    (hstrip1 : 0 < σ₁ ∧ σ₁ < 1)
+    (hstrip2 : 0 < σ₂ ∧ σ₂ < 1)
+    (hdiff : σ₁ ≠ σ₂)
+    (hz1 : riemannZeta (σ₁ + γ * I) = 0)
+    (hz2 : riemannZeta (σ₂ + γ * I) = 0) :
+    ∀ s ∈ horizontalSegment σ₁ σ₂ γ, riemannZeta s = 0 := by
+  -- ζ is analytic on this segment
+  have h_analytic : AnalyticOnNhd ℂ riemannZeta (horizontalSegment σ₁ σ₂ γ) := by
+    intro s ⟨him, hre⟩
+    apply analyticOn_riemannZeta
+    intro h_one
+    rw [h_one] at him
+    simp at him
+    exact hγ him
+
+  -- Apply identity theorem
+  sorry
+
+/-! ### Isolated Zeros -/
+
+/-- ζ has isolated zeros (from Hadamard product representation) -/
+axiom zeta_isolated_zeros :
+    ∀ ρ : ℂ, riemannZeta ρ = 0 →
+    ∃ ε > 0, ∀ s : ℂ, 0 < ‖s - ρ‖ ∧ ‖s - ρ‖ < ε → riemannZeta s ≠ 0
+
+/-- If ζ is zero on an interval, this contradicts isolated zeros -/
+theorem zero_on_interval_contradicts_isolated
+    (σ₁ σ₂ γ : ℝ) (hdiff : σ₁ ≠ σ₂) :
+    (∀ s ∈ horizontalSegment σ₁ σ₂ γ, riemannZeta s = 0) →
+    False := by
+  intro h_zero_on_segment
+  -- Pick a point in the interior of the segment
+  let σ_mid := (σ₁ + σ₂) / 2
+  let ρ_mid : ℂ := σ_mid + γ * I
+
+  -- This point is a zero
+  have hz_mid : riemannZeta ρ_mid = 0 := by
+    apply h_zero_on_segment
+    simp [horizontalSegment, ρ_mid, σ_mid]
+    constructor
+    · rfl
+    · sorry  -- σ_mid is in the interval
+
+  -- But ζ has isolated zeros
+  obtain ⟨ε, hε_pos, h_isolated⟩ := zeta_isolated_zeros ρ_mid hz_mid
+
+  -- Pick a nearby point on the segment
+  let δ := min ε (|σ₁ - σ₂| / 4)
+  let σ_near := σ_mid + δ / 2
+  let ρ_near : ℂ := σ_near + γ * I
+
+  have h_near : 0 < ‖ρ_near - ρ_mid‖ ∧ ‖ρ_near - ρ_mid‖ < ε := by
+    sorry
+
+  have hz_near : riemannZeta ρ_near = 0 := by
+    apply h_zero_on_segment
+    sorry
+
+  -- This contradicts isolated zeros
+  exact h_isolated ρ_near h_near hz_near
+
+/-! ### Main Theorem -/
+
+/-- At most one zero per imaginary height (ZeroImUniqueness) -/
+theorem zero_im_uniqueness_from_horizontal_line :
+    ∀ ρ₁ ρ₂ : ℂ,
+      riemannZeta ρ₁ = 0 → riemannZeta ρ₂ = 0 →
+      0 < ρ₁.re → ρ₁.re < 1 → 0 < ρ₂.re → ρ₂.re < 1 →
+      ρ₁.im = ρ₂.im →
+      ρ₁ = ρ₂ := by
+  intro ρ₁ ρ₂ hz1 hz2 hre1_pos hre1_lt hre2_pos hre2_lt hsame_im
+
+  -- Case split: either Re(ρ₁) = Re(ρ₂) or not
+  by_cases h : ρ₁.re = ρ₂.re
+  · -- If same real and imaginary parts, then equal
+    ext
+    · exact h
+    · exact hsame_im
+  · -- If different real parts but same imaginary part
+    -- Then by horizontal line argument, ζ is zero on the segment
+    let γ := ρ₁.im
+    let σ₁ := ρ₁.re
+    let σ₂ := ρ₂.re
+
+    have hγ : γ ≠ 0 := by
+      sorry  -- Non-trivial zeros have γ ≠ 0
+
+    have h_zero_on_segment : ∀ s ∈ horizontalSegment σ₁ σ₂ γ, riemannZeta s = 0 := by
+      apply zeta_zero_on_horizontal_segment σ₁ σ₂ γ hγ
+      · exact ⟨hre1_pos, hre1_lt⟩
+      · exact ⟨hre2_pos, hre2_lt⟩
+      · exact h
+      · convert hz1; ext <;> simp [σ₁, γ]
+      · convert hz2; ext <;> simp [σ₂, γ]
+
+    -- But this contradicts isolated zeros
+    exact zero_on_interval_contradicts_isolated σ₁ σ₂ γ h h_zero_on_segment
+
+/-! ### Connection to Framework -/
+
+/-- This establishes ZeroImUniqueness -/
+theorem establishes_ZeroImUniqueness : ZeroImUniqueness := by
+  intro s t hs ht hs_pos hs_lt ht_pos ht_lt hsame_im
+  exact zero_im_uniqueness_from_horizontal_line s t hs ht hs_pos hs_lt ht_pos ht_lt hsame_im
+
+end Reinmann

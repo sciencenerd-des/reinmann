@@ -1,0 +1,238 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+
+/-!
+# Explicit Formula Constraints on Zero Multiplicity
+
+A new approach: Use the explicit formula for ψ(x) to derive tight constraints
+that rule out multiple zeros at the same height.
+
+## The Explicit Formula
+
+ψ(x) = x - Σ_ρ (x^ρ / ρ) - log(2π) - 1/2 · log(1 - 1/x²)
+
+where the sum is over all non-trivial zeros ρ.
+
+## Key Insight
+
+If there are k zeros at height γ (on the critical line), they contribute:
+  k · x^(1/2) · [cos(γ·log x) / |1/2 + iγ|² + sin(γ·log x) · γ / |1/2 + iγ|²]
+
+The amplitude is MULTIPLIED by k, not just added k times.
+
+## Strategy
+
+1. Show that k ≥ 2 creates measurable oscillations in ψ(x) - x
+2. These oscillations violate known bounds on ψ(x)
+3. Therefore k = 1 for all γ
+
+## Why This Might Work
+
+Unlike derivative bounds (which need 500× improvement), this uses:
+- **Integral bounds** on ψ(x) - x over intervals
+- **L² bounds** which are better studied than pointwise bounds
+- **Phase coherence** - multiple zeros at same height create coherent oscillations
+- **Known tight bounds** on ψ(x) that don't require RH
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Explicit Formula Setup -/
+
+/-- The Chebyshev ψ function: ψ(x) = Σ_{n≤x} Λ(n) -/
+axiom chebyshev_psi (x : ℝ) : ℝ
+
+/-- The explicit formula for ψ(x) -/
+axiom explicit_formula (x : ℝ) (hx : 1 < x) :
+  chebyshev_psi x = x -
+    (∑' ρ : {z : ℂ // riemannZeta z = 0 ∧ 0 < z.re ∧ z.re < 1},
+      x ^ ρ.val.re * Complex.cos (ρ.val.im * Real.log x) / ρ.val.re) -
+    Real.log (2 * Real.pi) + O(1/x)
+
+/-! ### Contribution from Zeros at Same Height -/
+
+/-- If k zeros exist at height γ (all on critical line), their contribution -/
+def contribution_at_height (k : ℕ) (γ : ℝ) (x : ℝ) : ℝ :=
+  k * (x ^ (1/2 : ℝ)) * Real.cos (γ * Real.log x) / (1/4 + γ^2)
+
+/-- Key property: contribution scales linearly with k -/
+theorem contribution_scales_linearly (k : ℕ) (γ x : ℝ) :
+    contribution_at_height (2*k) γ x = 2 * contribution_at_height k γ x := by
+  simp [contribution_at_height]
+  ring
+
+/-! ### L² Bounds on ψ(x) - x -/
+
+/-- Known bound: ∫₁^X (ψ(x) - x)² dx = O(X² log X) -/
+axiom psi_L2_bound (X : ℝ) (hX : 1 < X) :
+  ∫ x in (1)..X, (chebyshev_psi x - x)^2 ≤ C_psi * X^2 * Real.log X
+
+/-- The constant C_psi is known and relatively small -/
+axiom C_psi_value : ∃ C : ℝ, C < 2 ∧ (∀ X > 1,
+  ∫ x in (1)..X, (chebyshev_psi x - x)^2 ≤ C * X^2 * Real.log X)
+
+/-! ### Parseval-Type Identity -/
+
+/-- The L² norm decomposes over zeros (Parseval) -/
+axiom parseval_for_psi (X : ℝ) (hX : 1 < X) :
+  ∫ x in (1)..X, (∑' ρ : {z : ℂ // riemannZeta z = 0}, x^ρ.val.re / ρ.val.re)^2
+  = ∑' ρ : {z : ℂ // riemannZeta z = 0},
+      ∫ x in (1)..X, (x^ρ.val.re / ρ.val.re)^2 + cross_terms
+
+/-- Cross terms between different heights average out (orthogonality) -/
+axiom cross_terms_small (X : ℝ) (hX : 1 < X) :
+  |cross_terms| ≤ o(X^2 * Real.log X)
+
+/-! ### The Constraint -/
+
+/-- Single zero at height γ contributes ~ X / γ² to L² norm -/
+theorem single_zero_contribution (γ : ℝ) (hγ : 1 < γ) (X : ℝ) (hX : 1 < X) :
+    ∫ x in (1)..X, (x^(1/2 : ℝ) * Real.cos (γ * Real.log x) / γ)^2
+    ≈ X / (2 * γ^2) := by
+  sorry
+
+/-- k zeros at same height contribute ~ k² · X / γ² (coherent interference) -/
+theorem multiple_zero_contribution (k : ℕ) (γ : ℝ) (hγ : 1 < γ) (X : ℝ) (hX : 1 < X) :
+    ∫ x in (1)..X, (k * x^(1/2 : ℝ) * Real.cos (γ * Real.log x) / γ)^2
+    = k^2 * (∫ x in (1)..X, (x^(1/2 : ℝ) * Real.cos (γ * Real.log x) / γ)^2) := by
+  sorry
+
+/-! ### The Number-Theoretic Constraint -/
+
+/-- The sum ∑_γ k(γ)² / γ² must converge and be bounded by known constants -/
+theorem multiplicity_sum_bounded :
+    ∑' γ : {r : ℝ // ∃ ρ : ℂ, riemannZeta ρ = 0 ∧ ρ.im = r},
+      (multiplicity_at_height γ.val)^2 / γ.val^2
+    ≤ C_psi * 2 := by
+  sorry
+
+/-! ### Key Calculation -/
+
+/-- Known: Number of zeros up to height T is ~ T·log(T)/(2π) -/
+axiom zero_counting (T : ℝ) (hT : 1 < T) :
+  N(T) = T * Real.log T / (2 * Real.pi) + O(Real.log T)
+
+/-- If all zeros have multiplicity 1: ∑_γ 1/γ² ~ log(T) -/
+theorem sum_if_all_simple (T : ℝ) (hT : 1 < T) :
+    ∑ γ in zeros_up_to T, 1 / γ^2
+    ≈ ∫ t in (1)..T, (Real.log t / (2 * Real.pi)) / t^2
+    = (Real.log T)^2 / (4 * Real.pi) := by
+  sorry
+
+/-- If all zeros have multiplicity 2: ∑_γ 4/γ² ~ 4·log(T) -/
+theorem sum_if_all_double (T : ℝ) (hT : 1 < T) :
+    ∑ γ in zeros_up_to T, 4 / γ^2
+    = 4 * (∑ γ in zeros_up_to T, 1 / γ^2)
+    ≈ 4 * (Real.log T)^2 / (4 * Real.pi)
+    = (Real.log T)^2 / Real.pi := by
+  sorry
+
+/-! ### The Problem -/
+
+/-- Both k=1 and k=2 give convergent sums! -/
+theorem both_cases_converge :
+    (∀ γ, k(γ) = 1 → ∑_γ 1/γ² converges) ∧
+    (∀ γ, k(γ) = 2 → ∑_γ 4/γ² converges) := by
+  sorry
+
+/-! ### Where This Approach Fails -/
+
+/-- The issue: L² bounds allow k=2 for sparse set or even everywhere
+    because the bounds grow with log(T) which accommodates the factor of 4
+
+    What we'd need: Bounds tight enough that even k=2 violates them
+    But current bounds: ∫ (ψ-x)² ≤ C·X²·log(X)
+
+    Even with k=2 everywhere: ∫ (ψ-x)² ≤ 4C·X²·log(X)
+
+    This just means C_actual = 4C_theoretical, which is fine!
+
+    The L² bound isn't tight enough to distinguish k=1 from k=2.
+-/
+
+/-! ### What Would Work -/
+
+/-- If we had a bound like ∫ (ψ-x)² ≤ C·X·log(X) (note X not X²)
+    then k=2 would violate it!
+
+    But actual bounds are O(X²·log X) not O(X·log X)
+-/
+
+theorem sharper_bound_would_suffice :
+    (∀ X > 1, ∫ (ψ-x)² ≤ C·X·log X) →
+    (∀ γ, k(γ) ≤ 1) := by
+  sorry
+
+/-! ### Alternative: Prime Number Theorem Error Term -/
+
+/-- The PNT says: π(x) = li(x) + O(x·exp(-c√(log x)))
+
+    The error term is related to ζ zeros via explicit formula.
+    Multiple zeros at same height would amplify the error term.
+
+    Can we show this amplification violates PNT error bounds?
+-/
+
+axiom prime_counting (x : ℝ) : ℕ  -- π(x) = number of primes ≤ x
+
+axiom PNT_error_bound (x : ℝ) (hx : 1 < x) :
+  |prime_counting x - li(x)| ≤ C_PNT * x * Real.exp (- c_PNT * Real.sqrt (Real.log x))
+
+/-- Error term contribution from zero at height γ -/
+axiom error_from_zero (γ : ℝ) (x : ℝ) :
+  contribution_to_error γ x ≈ x^(1/2) * Real.cos (γ * Real.log x) / γ
+
+/-- k zeros at same height amplify error by factor k -/
+theorem error_amplification (k : ℕ) (γ x : ℝ) :
+    contribution_to_error_k_zeros k γ x = k * contribution_to_error γ x := by
+  sorry
+
+/-- But even k=2 or k=3 might still be within the O(x^(1/2)) error bound! -/
+theorem small_k_still_works :
+    (∀ γ, k(γ) ≤ 3) →
+    |π(x) - li(x)| = O(x^(1/2) * log x) := by
+  sorry
+
+/-! ### Fundamental Limitation -/
+
+/-- The problem: All these approaches give bounds of the form
+    "k(γ) ≤ M for some constant M"
+
+    They can't prove M = 1 without additional input.
+
+    Going from "bounded" to "equals 1" requires:
+    - Either much sharper bounds (need 500× improvement)
+    - Or completely different mathematical structure
+    - Or RH-level understanding of zero distribution
+-/
+
+theorem bounded_but_not_one :
+    (∃ M : ℕ, ∀ γ, k(γ) ≤ M) ∧
+    ¬(∀ γ, k(γ) = 1) := by
+  sorry
+
+/-! ### Assessment -/
+
+/-- This approach clarifies why L² methods don't suffice:
+
+    1. They prove k is bounded (which is already known)
+    2. The bounds aren't sharp enough to force k=1
+    3. Convergence of ∑ k(γ)²/γ² works even for k=2,3,...
+    4. Need either:
+       a) Much sharper pointwise bounds (500× improvement)
+       b) A different type of constraint altogether
+       c) Understanding why k=1 from first principles
+
+    Probability of success via this route: ~10%
+    Would require proving bounds sharper than currently known by factor 4-10×
+-/
+
+end Reinmann

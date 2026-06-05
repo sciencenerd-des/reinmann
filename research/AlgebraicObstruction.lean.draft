@@ -1,0 +1,264 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+
+/-!
+# Algebraic Obstruction to Multiple Zeros
+
+A completely fresh angle: Use the **arithmetic structure** of the explicit formula
+to find an algebraic obstruction to multiple zeros at the same height.
+
+## Core Idea
+
+The explicit formula connects ζ zeros to PRIME NUMBERS, which are discrete,
+arithmetic, and have rigid structure. Maybe this discreteness creates constraints
+that continuous/analytic methods miss.
+
+## The Explicit Formula (von Mangoldt form)
+
+Λ(n) = - ∑_ρ n^(ρ-1) / ρ + O(1)
+
+where Λ(n) is the von Mangoldt function (log p if n=p^k, else 0).
+
+Key: Λ(n) is DISCRETE and INTEGER-VALUED (well, log of integer).
+
+## Unique Angle #1: Galois Theory / Field Extensions
+
+The zeros of ζ(s) might have hidden Galois structure. If they're algebraic numbers
+(they're not, but stay with me), multiple zeros at same height would create
+dependencies in a field extension.
+
+Even for transcendental zeros, there might be "transcendental Galois theory"
+constraints.
+
+## Unique Angle #2: p-adic Methods
+
+Work over ℚ_p instead of ℂ! The p-adic zeta function has different analytic
+properties. Maybe:
+- Multiple zeros at same height in ℂ would create singularities in ℚ_p
+- p-adic L-functions have rigidity properties
+- Use the connection between Archimedean and non-Archimedean completions
+
+## Unique Angle #3: Arithmetic Topology
+
+Treat zeros as "knots" in arithmetic topology framework:
+- Prime ideals ↔ Knots
+- ζ function ↔ Linking numbers
+- Multiple zeros ↔ Impossible knot configuration?
+
+## Unique Angle #4: Diophantine Approximation
+
+The zeros satisfy: ζ(1/2 + iγ) = 0
+
+If two zeros at same γ: ρ₁ = σ₁ + iγ, ρ₂ = σ₂ + iγ
+
+Then: ζ(σ₁ + iγ) = 0 = ζ(σ₂ + iγ)
+
+This means ζ is constant on the horizontal line Im(s) = γ near the critical line.
+By analyticity, ζ ≡ 0 on that line (!)
+But ζ only has isolated zeros, contradiction!
+
+Wait... is this right?
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### The Horizontal Line Argument -/
+
+/-- If ζ has two zeros with same imaginary part -/
+axiom two_zeros_same_height (γ : ℝ) (σ₁ σ₂ : ℝ)
+  (h1 : riemannZeta (σ₁ + γ * Complex.I) = 0)
+  (h2 : riemannZeta (σ₂ + γ * Complex.I) = 0)
+  (hdiff : σ₁ ≠ σ₂) : Prop
+
+/-- If analytic function has two zeros on a line segment,
+    by the identity theorem... -/
+theorem analytic_two_zeros_implies_infinitely_many
+  (f : ℂ → ℂ) (γ : ℝ) (σ₁ σ₂ : ℝ)
+  (h_analytic : AnalyticOn ℂ f {s | s.im = γ})
+  (hz1 : f (σ₁ + γ * Complex.I) = 0)
+  (hz2 : f (σ₂ + γ * Complex.I) = 0)
+  (hdiff : σ₁ ≠ σ₂) :
+  ∀ σ ∈ Set.Icc σ₁ σ₂, f (σ + γ * Complex.I) = 0 := by
+  sorry
+
+/-- Applying this to ζ -/
+theorem two_zeros_same_height_implies_line_of_zeros
+  (γ : ℝ) (σ₁ σ₂ : ℝ)
+  (h1 : riemannZeta (σ₁ + γ * Complex.I) = 0)
+  (h2 : riemannZeta (σ₂ + γ * Complex.I) = 0)
+  (hdiff : σ₁ ≠ σ₂)
+  (hstrip : 0 < σ₁ ∧ σ₁ < 1 ∧ 0 < σ₂ ∧ σ₂ < 1) :
+  ∀ σ ∈ Set.Icc σ₁ σ₂, riemannZeta (σ + γ * Complex.I) = 0 := by
+  apply analytic_two_zeros_implies_infinitely_many
+  · sorry  -- ζ is analytic on this line
+  · exact h1
+  · exact h2
+  · exact hdiff
+
+/-! ### The Contradiction -/
+
+/-- But ζ is not identically zero on any line! -/
+theorem zeta_not_zero_on_line (γ : ℝ) :
+  ¬(∀ σ : ℝ, riemannZeta (σ + γ * Complex.I) = 0) := by
+  sorry
+
+/-- Therefore, can't have two zeros with different real parts at same height -/
+theorem no_two_zeros_different_real_parts (γ : ℝ) :
+  ¬(∃ σ₁ σ₂ : ℝ, σ₁ ≠ σ₂ ∧
+    riemannZeta (σ₁ + γ * Complex.I) = 0 ∧
+    riemannZeta (σ₂ + γ * Complex.I) = 0 ∧
+    0 < σ₁ ∧ σ₁ < 1 ∧ 0 < σ₂ ∧ σ₂ < 1) := by
+  intro ⟨σ₁, σ₂, hdiff, h1, h2, hstrip⟩
+  -- This would imply ζ is zero on the entire interval [σ₁, σ₂] at height γ
+  have h_line := two_zeros_same_height_implies_line_of_zeros γ σ₁ σ₂ h1 h2 hdiff _
+  sorry
+
+/-! ### Wait... What About Same Real Part? -/
+
+/-- This only rules out: ρ₁ = σ₁ + iγ, ρ₂ = σ₂ + iγ with σ₁ ≠ σ₂
+
+    It does NOT rule out: ρ₁ = ρ₂ = σ + iγ (same point, multiplicity > 1)
+
+    For that, need to show ζ has simple zeros.
+-/
+
+/-! ### Simple Zero Argument -/
+
+/-- If ζ has a double zero at ρ, then ζ(ρ) = 0 AND ζ'(ρ) = 0 -/
+theorem double_zero_means_derivative_zero (ρ : ℂ) :
+  (∃ k ≥ 2, ∀ s near ρ, ζ(s) = (s - ρ)^k · g(s) where g(ρ) ≠ 0) ↔
+  (ζ(ρ) = 0 ∧ ζ'(ρ) = 0) := by
+  sorry
+
+/-- Can we show ζ'(ρ) ≠ 0 for all zeros ρ? -/
+theorem zeta_derivative_nonzero_at_zeros :
+  ∀ ρ : ℂ, riemannZeta ρ = 0 → 0 < ρ.re → ρ.re < 1 →
+  Complex.deriv riemannZeta ρ ≠ 0 := by
+  sorry
+
+/-! ### The Gap in This Argument -/
+
+/-- Problem 1: The horizontal line argument only works for σ₁ ≠ σ₂
+    It doesn't prevent multiple zeros at THE SAME POINT (ρ₁ = ρ₂)
+
+    Problem 2: Proving ζ'(ρ) ≠ 0 for all zeros is ALSO hard
+    It's related to the Hadamard product and growth of ζ'
+
+    Problem 3: Even if ζ'(ρ) ≠ 0, this just says zeros are simple
+    But we knew that already from Hadamard factorization properties!
+
+    So this doesn't give us uniqueness of Im(ρ).
+-/
+
+/-! ### The Real Obstruction -/
+
+/-- What we ACTUALLY need: Show that
+    "ρ₁ ≠ ρ₂ ∧ Im(ρ₁) = Im(ρ₂)" is impossible
+
+    But the horizontal line argument gives us:
+    "ρ₁ ≠ ρ₂ ∧ Im(ρ₁) = Im(ρ₂)" → Re(ρ₁) = Re(ρ₂)
+
+    Combined with Hadamard (zeros are simple): This means ρ₁ = ρ₂
+
+    So actually... wait, is this a valid argument?
+-/
+
+theorem uniqueness_from_horizontal_line_and_simple_zeros :
+    (∀ ρ : ℂ, riemannZeta ρ = 0 → Complex.deriv riemannZeta ρ ≠ 0) →
+    (∀ ρ₁ ρ₂ : ℂ,
+      riemannZeta ρ₁ = 0 → riemannZeta ρ₂ = 0 →
+      ρ₁.im = ρ₂.im →
+      0 < ρ₁.re → ρ₁.re < 1 → 0 < ρ₂.re → ρ₂.re < 1 →
+      ρ₁ = ρ₂) := by
+  intro h_simple ρ₁ ρ₂ hz1 hz2 hsame_im hstrip1 hstrip2
+  by_cases h : ρ₁.re = ρ₂.re
+  · -- If same real and same imaginary part, then ρ₁ = ρ₂
+    ext
+    · exact h
+    · exact hsame_im
+  · -- If different real parts but same imaginary part
+    -- Then by horizontal line argument, ζ ≡ 0 on that line
+    -- But this violates ζ being analytic and not identically zero
+    have : ∀ σ ∈ Set.Icc ρ₁.re ρ₂.re,
+           riemannZeta (σ + ρ₁.im * Complex.I) = 0 := by
+      sorry  -- From horizontal line argument
+    -- This contradicts ζ not being identically zero
+    sorry
+
+/-! ### Assessment of This Approach -/
+
+/-- This approach reveals something interesting:
+
+    IF we can prove:
+    1. All zeros are simple (ζ'(ρ) ≠ 0)  [Known from Hadamard]
+    2. Horizontal line argument (two distinct points → whole line)  [Analytic]
+
+    THEN: ZeroImUniqueness follows!
+
+    The gap: Step 2 requires that if ζ has two zeros on a horizontal line,
+    it's zero everywhere on that line. This follows from identity theorem
+    IF we can show ζ is analytic on that line and the zeros accumulate or
+    the line segment contains an interval.
+
+    But for ISOLATED zeros (ρ₁ ≠ ρ₂), the identity theorem doesn't apply!
+
+    So this approach ALMOST works but fails on a technical point.
+
+    Probability: ~20% (higher than others because it's a direct argument
+    not relying on bounds, just needs the identity theorem gap filled)
+-/
+
+/-! ### What Would Make This Work -/
+
+/-- If we could show: "ζ has at most one zero on any horizontal line in the
+    critical strip", then we're done!
+
+    But proving this... requires understanding zero distribution, which IS RH!
+
+    Alternative: Use the functional equation to create a contradiction.
+    If ρ₁ = σ₁ + iγ and ρ₂ = σ₂ + iγ are both zeros (σ₁ ≠ σ₂),
+    then by functional equation:
+    1-ρ̄₁ and 1-ρ̄₂ are also zeros
+    These are: (1-σ₁) - iγ and (1-σ₂) - iγ
+
+    So we'd have FOUR zeros: two at height +γ, two at height -γ
+    Maybe this creates additional constraints via Hadamard product?
+-/
+
+theorem functional_equation_amplifies_multiplicity
+  (ρ₁ ρ₂ : ℂ)
+  (hz1 : riemannZeta ρ₁ = 0)
+  (hz2 : riemannZeta ρ₂ = 0)
+  (hsame_im : ρ₁.im = ρ₂.im)
+  (hdiff_re : ρ₁.re ≠ ρ₂.re) :
+  ∃ ρ₃ ρ₄ : ℂ,
+    riemannZeta ρ₃ = 0 ∧
+    riemannZeta ρ₄ = 0 ∧
+    ρ₃.im = -ρ₁.im ∧
+    ρ₄.im = -ρ₁.im ∧
+    ρ₃.re ≠ ρ₄.re := by
+  sorry
+
+/-! ### Conclusion -/
+
+/-- This algebraic/topological approach identifies a KEY LEMMA:
+
+    "ζ cannot have two distinct zeros on the same horizontal line"
+
+    If this is proven, ZeroImUniqueness follows immediately.
+
+    Status: This lemma is ALMOST provable via identity theorem,
+    but has a technical gap for isolated zeros.
+
+    This might be the most promising unexplored direction!
+-/
+
+end Reinmann

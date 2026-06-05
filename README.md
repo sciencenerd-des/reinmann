@@ -21,7 +21,8 @@ Run the full verifier:
 ```
 
 With no arguments, the harness scans every `.lean` file outside `.lake/`, then
-runs `lake build`.
+runs `lake build` and typechecks every active `.lean` file directly with
+`lake env lean`.
 
 ```sh
 ./scripts/safe-verify.sh Reinmann.lean
@@ -29,6 +30,22 @@ runs `lake build`.
 
 With file arguments, the harness still scans every local `.lean` file for
 shortcuts, then runs `lake env lean` on each target file.
+
+## Verification boundary
+
+Only `.lean` files under `Reinmann/` are part of the active checked proof
+surface. Draft files live under `research/` and `research/active-lean-drafts/`;
+they are research notes, not verified proof artifacts.
+
+The active root module imports all proof-grade Lean modules:
+
+- `Reinmann.RiemannSpine`
+- `Reinmann.ConjugateHalfPlane`
+- `Reinmann.InvolutionSymmetry`
+- `Reinmann.KnownZeroFreeRegions`
+- `Reinmann.TwoBranchArchitecture`
+- `Reinmann.ZeroSymmetry`
+- `Reinmann.ProofArchitecture`
 
 ## Current proof spine
 
@@ -50,6 +67,44 @@ shortcuts, then runs `lake env lean` on each target file.
 - local theorem: `rightHalfStripZeroFree_iff_riemannHypothesis` proves that the
   one-sided zero-free target is equivalent to mathlib's formal
   `RiemannHypothesis`
+- local theorem: `riemannZeta_conj_of_one_lt_re` proves
+  `riemannZeta (conj s) = conj (riemannZeta s)` in the Dirichlet-series
+  half-plane `1 < s.re`
+- local definition: `StripConjugateZeroSymmetry` names the exact zero-level
+  conjugation obligation needed by the uniqueness route; it is weaker than
+  global value-level `ConjugateSymmetry`
+- local theorem: `stripConjugateZeroSymmetry_of_conjugateSymmetry` proves that
+  full conjugate symmetry implies the narrower strip zero-level obligation
+- local definition: `ZeroFiberRealUnique γ` names the fiberwise target: at
+  height `γ`, all critical-strip zeros have the same real coordinate
+- local theorem: `zeroImUniqueness_iff_forall_zeroFiberRealUnique` proves that
+  `ZeroImUniqueness` is exactly the conjunction of all fiberwise targets
+- local definition: `NoSameImaginaryPartCollision` names the spectral
+  no-degeneracy target: no two critical-strip zeros share an imaginary part
+  while having different real parts
+- local theorem: `noSameImaginaryPartCollision_iff_zeroImUniqueness` proves the
+  no-collision target is exactly equivalent to `ZeroImUniqueness`
+- local theorem: `riemannHypothesis_iff_noSameImaginaryPartCollision` proves
+  that, assuming `StripConjugateZeroSymmetry`, RH is exactly equivalent to the
+  no-collision target
+- local theorem: `riemannHypothesis_iff_forall_zeroFiberRealUnique` proves that,
+  assuming `StripConjugateZeroSymmetry`, RH is exactly equivalent to every
+  imaginary-height fiber being real-coordinate unique
+- local theorem: `not_riemannHypothesis_implies_same_height_collision` proves
+  that, assuming `StripConjugateZeroSymmetry`, any RH counterexample forces a
+  same-height pair of strip zeros with different real parts
+- local theorem: `not_riemannHypothesis_implies_failed_zeroFiberRealUnique`
+  proves that, assuming `StripConjugateZeroSymmetry`, any RH counterexample
+  produces a failed imaginary-height fiber
+- local theorem: `stripConjugateZeroSymmetry_of_riemannHypothesis` proves that
+  RH itself implies the strip zero-level conjugation bridge
+- local theorems: `rh_iff_noCollision_obligations` and
+  `rh_iff_fiberUniqueness_obligations` prove that the no-collision and
+  fiberwise remaining-obligation bundles are exactly RH-strength
+- local theorems: `one_lt_re_halfPlane_isOpen`,
+  `one_lt_re_halfPlane_isPreconnected`, and `one_lt_re_halfPlane_isConnected`
+  record the topology of the Dirichlet-series half-plane for future analytic
+  continuation work
 - local theorem: `criticalStripObligations_iff_riemannHypothesis` proves that
   the native open-critical-strip obligation is equivalent to mathlib's formal
   `RiemannHypothesis`
@@ -85,7 +140,10 @@ shortcuts, then runs `lake env lean` on each target file.
   equivalence to `RiemannHypothesis`, not a proof of the target
 - local theorems: `riemannHypothesis_of_target` and
   `target_of_riemannHypothesis` convert between any registered target and RH
-- remaining obligation: prove `RightHalfStripZeroFree`
+- remaining obligation: prove `RightHalfStripZeroFree`; via the uniqueness
+  path, it is enough to prove both `StripConjugateZeroSymmetry` and
+  `ZeroImUniqueness`, equivalently `StripConjugateZeroSymmetry` plus either
+  `NoSameImaginaryPartCollision` or `∀ γ, ZeroFiberRealUnique γ`
 
 The remaining obligation is not a weaker workaround: the equivalence theorem
 shows it is exactly Riemann-Hypothesis-strength.

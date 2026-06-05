@@ -122,6 +122,79 @@ def ZeroImUniqueness : Prop :=
     0 < s.re → s.re < 1 → 0 < t.re → t.re < 1 →
     s.im = t.im → s.re = t.re
 
+/-- No two critical-strip zeros collide at the same imaginary height with
+    different real parts. This is the operator/spectral no-degeneracy target. -/
+def NoSameImaginaryPartCollision : Prop :=
+  ¬ ∃ s t : Complex,
+    riemannZeta s = 0 ∧ riemannZeta t = 0 ∧
+    0 < s.re ∧ s.re < 1 ∧ 0 < t.re ∧ t.re < 1 ∧
+    s.im = t.im ∧ s.re ≠ t.re
+
+/-- A concrete same-height collision witness for critical-strip zeros. -/
+def SameHeightCollisionWitness : Prop :=
+  ∃ s t : Complex,
+    riemannZeta s = 0 ∧ riemannZeta t = 0 ∧
+    0 < s.re ∧ s.re < 1 ∧ 0 < t.re ∧ t.re < 1 ∧
+    s.im = t.im ∧ s.re ≠ t.re
+
+/-- A same-height collision witness is exactly the negation of the no-collision target. -/
+theorem sameHeightCollisionWitness_iff_not_noSameImaginaryPartCollision :
+    SameHeightCollisionWitness ↔ ¬ NoSameImaginaryPartCollision := by
+  unfold SameHeightCollisionWitness NoSameImaginaryPartCollision
+  constructor
+  · intro h hno
+    exact hno h
+  · intro h
+    by_contra hnone
+    exact h (by intro hw; exact hnone hw)
+
+/-- At a fixed imaginary height, all critical-strip zeros have the same real
+    coordinate. This is the fiberwise spectral rigidity target. -/
+def ZeroFiberRealUnique (γ : Real) : Prop :=
+  ∀ s t : Complex,
+    riemannZeta s = 0 → riemannZeta t = 0 →
+    0 < s.re → s.re < 1 → 0 < t.re → t.re < 1 →
+    s.im = γ → t.im = γ → s.re = t.re
+
+/-- Global imaginary-height uniqueness is equivalent to fiberwise real-coordinate
+    uniqueness at every height. -/
+theorem zeroImUniqueness_iff_forall_zeroFiberRealUnique :
+    ZeroImUniqueness ↔ ∀ γ : Real, ZeroFiberRealUnique γ := by
+  constructor
+  · intro h γ s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt hsγ htγ
+    exact h s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt (hsγ.trans htγ.symm)
+  · intro h s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt hsame
+    exact h s.im s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt rfl hsame.symm
+
+/-- Fiberwise uniqueness at every height implies the no-collision target. -/
+theorem noSameImaginaryPartCollision_of_forall_zeroFiberRealUnique
+    (hfiber : ∀ γ : Real, ZeroFiberRealUnique γ) :
+    NoSameImaginaryPartCollision := by
+  intro h
+  rcases h with ⟨s, t, hz_s, hz_t, hs_pos, hs_lt, ht_pos, ht_lt, him, hre_ne⟩
+  exact hre_ne (hfiber s.im s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt rfl him.symm)
+
+/-- Imaginary-height uniqueness rules out same-height real-part collisions. -/
+theorem noSameImaginaryPartCollision_of_zeroImUniqueness
+    (huniq : ZeroImUniqueness) : NoSameImaginaryPartCollision := by
+  intro h
+  rcases h with ⟨s, t, hz_s, hz_t, hs_pos, hs_lt, ht_pos, ht_lt, him, hre_ne⟩
+  exact hre_ne (huniq s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt him)
+
+/-- No same-height collision implies imaginary-height uniqueness. -/
+theorem zeroImUniqueness_of_noSameImaginaryPartCollision
+    (hno : NoSameImaginaryPartCollision) : ZeroImUniqueness := by
+  intro s t hz_s hz_t hs_pos hs_lt ht_pos ht_lt him
+  by_contra hne
+  exact hno ⟨s, t, hz_s, hz_t, hs_pos, hs_lt, ht_pos, ht_lt, him, hne⟩
+
+/-- The spectral no-collision target is exactly `ZeroImUniqueness`. -/
+theorem noSameImaginaryPartCollision_iff_zeroImUniqueness :
+    NoSameImaginaryPartCollision ↔ ZeroImUniqueness := by
+  constructor
+  · exact zeroImUniqueness_of_noSameImaginaryPartCollision
+  · exact noSameImaginaryPartCollision_of_zeroImUniqueness
+
 /-- If s and t are both zeros with the same imaginary part but different real parts,
     and both are in the critical strip, this is the core multiplicity problem.
     This is equivalent to saying that the operator (if it exists) has
@@ -144,9 +217,9 @@ def ZeroImaginaryParts : Set Real :=
 
 /-! ### Conditional Results -/
 
-/-- Assuming ConjugateSymmetry, if there's a zero off the critical line,
+/-- Assuming strip zero-level conjugate symmetry, if there's a zero off the critical line,
     there are at least two distinct zeros with the same imaginary part. -/
-theorem offLine_zero_implies_im_multiplicity (hconj : ConjugateSymmetry) :
+theorem offLine_zero_implies_im_multiplicity (hconj : StripConjugateZeroSymmetry) :
     (∃ s : Complex, 0 < s.re ∧ s.re < 1 ∧ riemannZeta s = 0 ∧ ¬OnCriticalLine s) →
     ∃ γ : Real, ∃ s t : Complex,
       s ≠ t ∧
@@ -201,8 +274,9 @@ theorem hilbertPolya_implies_uniqueness (hp : HilbertPolyaWitness) :
   -- Therefore s.re = t.re
   rw [hs_half, ht_half]
 
-/-- Uniqueness (plus conjugate symmetry) implies RH. -/
-theorem uniqueness_implies_rh (huniq : ZeroImUniqueness) (hconj : ConjugateSymmetry) :
+/-- Uniqueness plus strip zero-level conjugate symmetry implies RH. -/
+theorem uniqueness_implies_rh
+    (huniq : ZeroImUniqueness) (hconj : StripConjugateZeroSymmetry) :
     RiemannHypothesis := by
   by_contra hnrh
   have ⟨s, hright, hlt, hz⟩ :=
@@ -229,7 +303,127 @@ theorem uniqueness_implies_rh (huniq : ZeroImUniqueness) (hconj : ConjugateSymme
 
 /-- Alias for the main uniqueness → RH theorem. -/
 theorem riemannHypothesis_of_zero_im_uniqueness
-    (huniq : ZeroImUniqueness) (hconj : ConjugateSymmetry) : RiemannHypothesis :=
+    (huniq : ZeroImUniqueness) (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis :=
   uniqueness_implies_rh huniq hconj
+
+/-- The no-collision spectral target plus strip zero-level conjugation implies RH. -/
+theorem riemannHypothesis_of_no_same_imaginary_collision
+    (hno : NoSameImaginaryPartCollision) (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis :=
+  uniqueness_implies_rh
+    (zeroImUniqueness_of_noSameImaginaryPartCollision hno) hconj
+
+/-- RH rules out same-height real-part collisions among critical-strip zeros. -/
+theorem noSameImaginaryPartCollision_of_riemannHypothesis
+    (hrh : RiemannHypothesis) :
+    NoSameImaginaryPartCollision := by
+  intro h
+  rcases h with ⟨s, t, hz_s, hz_t, hs_pos, hs_lt, ht_pos, ht_lt, _him, hre_ne⟩
+  have hs_half : s.re = 1 / 2 :=
+    (criticalStripObligations_of_riemannHypothesis hrh).strip_zero_on_line
+      s hs_pos hs_lt hz_s
+  have ht_half : t.re = 1 / 2 :=
+    (criticalStripObligations_of_riemannHypothesis hrh).strip_zero_on_line
+      t ht_pos ht_lt hz_t
+  exact hre_ne (hs_half.trans ht_half.symm)
+
+/-- Assuming strip zero-level conjugation, RH is equivalent to no same-height
+    real-part collision among critical-strip zeros. -/
+theorem riemannHypothesis_iff_noSameImaginaryPartCollision
+    (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis ↔ NoSameImaginaryPartCollision := by
+  constructor
+  · exact noSameImaginaryPartCollision_of_riemannHypothesis
+  · intro hno
+    exact riemannHypothesis_of_no_same_imaginary_collision hno hconj
+
+/-- Assuming strip zero-level conjugation, RH is equivalent to fiberwise
+    real-coordinate uniqueness at every imaginary height. -/
+theorem riemannHypothesis_iff_forall_zeroFiberRealUnique
+    (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis ↔ ∀ γ : Real, ZeroFiberRealUnique γ := by
+  rw [riemannHypothesis_iff_noSameImaginaryPartCollision hconj]
+  rw [noSameImaginaryPartCollision_iff_zeroImUniqueness]
+  exact zeroImUniqueness_iff_forall_zeroFiberRealUnique
+
+/-- RH implies the strip zero-level conjugation bridge. On the critical line,
+    conjugation agrees with the functional-equation reflection `s ↦ 1 - s`. -/
+theorem stripConjugateZeroSymmetry_of_riemannHypothesis
+    (hrh : RiemannHypothesis) : StripConjugateZeroSymmetry := by
+  intro s hpos hlt hz
+  have hline : OnCriticalLine s :=
+    (criticalStripObligations_of_riemannHypothesis hrh).strip_zero_on_line
+      s hpos hlt hz
+  have hconj_eq : starRingEnd Complex s = 1 - s := by
+    exact (criticalLine_zero_pair_is_conjugate hline hz).symm
+  rw [hconj_eq]
+  exact strip_zero_reflects hpos hlt hz
+
+/-- Under strip zero-level conjugation, any failure of RH produces two
+    critical-strip zeros with the same imaginary part and different real parts. -/
+theorem not_riemannHypothesis_implies_same_height_collision
+    (hconj : StripConjugateZeroSymmetry) :
+    ¬ RiemannHypothesis → SameHeightCollisionWitness := by
+  intro hnrh
+  by_contra hno_exists
+  have hno : NoSameImaginaryPartCollision := by
+    intro h
+    exact hno_exists h
+  exact hnrh (riemannHypothesis_of_no_same_imaginary_collision hno hconj)
+
+/-- Under strip zero-level conjugation, RH failure is exactly a same-height
+    collision witness. -/
+theorem not_riemannHypothesis_iff_sameHeightCollisionWitness
+    (hconj : StripConjugateZeroSymmetry) :
+    ¬ RiemannHypothesis ↔ SameHeightCollisionWitness := by
+  rw [riemannHypothesis_iff_noSameImaginaryPartCollision hconj]
+  exact sameHeightCollisionWitness_iff_not_noSameImaginaryPartCollision.symm
+
+/-- Under strip zero-level conjugation, any failure of RH produces a failed
+    imaginary-height fiber. -/
+theorem not_riemannHypothesis_implies_failed_zeroFiberRealUnique
+    (hconj : StripConjugateZeroSymmetry) :
+    ¬ RiemannHypothesis → ∃ γ : Real, ¬ ZeroFiberRealUnique γ := by
+  intro hnrh
+  by_contra hno
+  have hfiber : ∀ γ : Real, ZeroFiberRealUnique γ := by
+    intro γ
+    by_contra hbad
+    exact hno ⟨γ, hbad⟩
+  exact hnrh ((riemannHypothesis_iff_forall_zeroFiberRealUnique hconj).mpr hfiber)
+
+/-- Under strip zero-level conjugation, RH failure is exactly the failure of
+    one imaginary-height fiber. -/
+theorem not_riemannHypothesis_iff_exists_failed_zeroFiberRealUnique
+    (hconj : StripConjugateZeroSymmetry) :
+    ¬ RiemannHypothesis ↔ ∃ γ : Real, ¬ ZeroFiberRealUnique γ := by
+  rw [riemannHypothesis_iff_forall_zeroFiberRealUnique hconj]
+  constructor
+  · intro h
+    by_contra hnone
+    apply h
+    intro γ
+    by_contra hbad
+    exact hnone ⟨γ, hbad⟩
+  · intro h hall
+    rcases h with ⟨γ, hbad⟩
+    exact hbad (hall γ)
+
+/-- Fiberwise real-coordinate uniqueness at every height plus strip zero-level
+    conjugation implies RH. -/
+theorem riemannHypothesis_of_forall_zeroFiberRealUnique
+    (hfiber : ∀ γ : Real, ZeroFiberRealUnique γ)
+    (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis :=
+  uniqueness_implies_rh
+    (zeroImUniqueness_iff_forall_zeroFiberRealUnique.mpr hfiber) hconj
+
+/-- The older full-conjugate-symmetry formulation remains available as a corollary. -/
+theorem uniqueness_implies_rh_of_conjugateSymmetry
+    (huniq : ZeroImUniqueness) (hconj : ConjugateSymmetry) :
+    RiemannHypothesis :=
+  uniqueness_implies_rh huniq
+    (stripConjugateZeroSymmetry_of_conjugateSymmetry hconj)
 
 end Reinmann

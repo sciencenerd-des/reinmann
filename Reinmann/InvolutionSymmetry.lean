@@ -28,7 +28,8 @@ For RH, the bridge is:
 ## Note
 
 `RiemannSpine.lean` already defines `zetaInvolution` and proves basic properties.
-This file adds the conjugate symmetry property and proves the involution maps zeros to zeros.
+This file isolates the zero-level conjugate symmetry needed by the RH proof
+spine and proves that it maps strip zeros through the geometric involution.
 -/
 
 noncomputable section
@@ -48,10 +49,15 @@ namespace Reinmann
 def ConjugateSymmetry : Prop :=
   ∀ s : Complex, s ≠ 1 → riemannZeta (starRingEnd Complex s) = starRingEnd Complex (riemannZeta s)
 
-/-- If s is a strip zero, then so is its conjugate s̄ (assuming conjugate symmetry). -/
-theorem conjugate_of_strip_zero (hconj : ConjugateSymmetry) {s : Complex}
-    (hpos : 0 < s.re) (hlt : s.re < 1) (hz : riemannZeta s = 0) :
-    riemannZeta (starRingEnd Complex s) = 0 := by
+/-- The exact zero-level conjugate symmetry needed by the uniqueness route. -/
+def StripConjugateZeroSymmetry : Prop :=
+  ∀ s : Complex, 0 < s.re → s.re < 1 → riemannZeta s = 0 →
+    riemannZeta (starRingEnd Complex s) = 0
+
+/-- Full value-level conjugate symmetry implies the zero-level strip obligation. -/
+theorem stripConjugateZeroSymmetry_of_conjugateSymmetry
+    (hconj : ConjugateSymmetry) : StripConjugateZeroSymmetry := by
+  intro s hpos hlt hz
   have hs_ne_one : s ≠ 1 := by
     intro h
     rw [h] at hlt
@@ -59,9 +65,15 @@ theorem conjugate_of_strip_zero (hconj : ConjugateSymmetry) {s : Complex}
   rw [hconj s hs_ne_one, hz]
   simp
 
-/-- The involution maps strip zeros to strip zeros (assuming conjugate symmetry).
+/-- If s is a strip zero, then so is its conjugate s̄. -/
+theorem conjugate_of_strip_zero (hconj : StripConjugateZeroSymmetry) {s : Complex}
+    (hpos : 0 < s.re) (hlt : s.re < 1) (hz : riemannZeta s = 0) :
+    riemannZeta (starRingEnd Complex s) = 0 :=
+  hconj s hpos hlt hz
+
+/-- The involution maps strip zeros to strip zeros.
     This combines: s is a zero → s̄ is a zero → 1-s̄ is a zero. -/
-theorem involution_maps_strip_zeros (hconj : ConjugateSymmetry) {s : Complex}
+theorem involution_maps_strip_zeros (hconj : StripConjugateZeroSymmetry) {s : Complex}
     (hstrip : 0 < s.re ∧ s.re < 1) (hz : riemannZeta s = 0) :
     riemannZeta (zetaInvolution s) = 0 := by
   -- First: s is a zero → s̄ is a zero (by conjugate symmetry)

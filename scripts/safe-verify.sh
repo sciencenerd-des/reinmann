@@ -74,6 +74,9 @@ echo "safe-verify: shortcut scan passed for ${#project_files[@]} Lean file(s)."
 
 if [ "$#" -eq 0 ]; then
   lake build
+  for file in "${project_files[@]}"; do
+    lake env lean "$file"
+  done
 else
   for file in "${targets[@]}"; do
     if [ ! -f "$file" ]; then

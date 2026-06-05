@@ -34,9 +34,10 @@ Here we formalize the analogous structure for RH:
 ## Structure
 
 The proof has three layers:
-1. **InvolutionSymmetry.lean** (the bridge) — PROVED (modulo one conjugate lemma)
-2. **This file** (the architecture) — Structure is PROVED, connects to axiom
-3. **HilbertPolyaWitness** (Branch 1 input) — AXIOMATIZED (open problem)
+1. **InvolutionSymmetry.lean** (the bridge) — verified conditionally on a
+   strip zero-level conjugation obligation
+2. **This file** (the architecture) — verified conditional reductions
+3. **HilbertPolyaWitness** (Branch 1 input) — open problem packaged as data
 
 The key insight: IF you could produce the self-adjoint operator (Branch 1),
 THEN the involution symmetry (Bridge) + functional equation (Branch 2)
@@ -97,13 +98,20 @@ theorem rightHalf_zero_contradicts_involution {ρ : Complex}
 
 /-! ### Branch 2: Functional Equation Forces Pairs -/
 
-/-- Any zero in the strip must come with its involution image as another zero
-    (assuming conjugate symmetry).
-    This combines functional equation reflection with conjugate symmetry. -/
-theorem zero_involution_also_zero (hconj : ConjugateSymmetry) {s : Complex}
+/-- Any zero in the strip must come with its involution image as another zero.
+    This combines functional equation reflection with zero-level conjugation. -/
+theorem zero_involution_also_zero (hconj : StripConjugateZeroSymmetry) {s : Complex}
     (hstrip : 0 < s.re ∧ s.re < 1) (hz : riemannZeta s = 0) :
     riemannZeta (zetaInvolution s) = 0 :=
   involution_maps_strip_zeros hconj hstrip hz
+
+/-- Full value-level conjugate symmetry is enough for the zero-involution theorem. -/
+theorem zero_involution_also_zero_of_conjugateSymmetry
+    (hconj : ConjugateSymmetry) {s : Complex}
+    (hstrip : 0 < s.re ∧ s.re < 1) (hz : riemannZeta s = 0) :
+    riemannZeta (zetaInvolution s) = 0 :=
+  zero_involution_also_zero
+    (stripConjugateZeroSymmetry_of_conjugateSymmetry hconj) hstrip hz
 
 /-! ### Main Two-Branch Theorem -/
 

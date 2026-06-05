@@ -169,3 +169,30 @@ them *is* proving RH.
 Begin **E1**: verify Mathlib's `-Complex.log(1-z)` series + summability (sub-task
 M1), then assemble `zeta_341_modulus` and feed it to `product_bound_contradiction`
 to re-derive `Re=1` nonvanishing through the project's own pipeline.
+
+### M1 assessment (done)
+
+Mathlib **does** provide the per-term building blocks for E1:
+- `Complex.hasSum_taylorSeries_neg_log {z} (hz : ‖z‖ < 1) :`
+  `HasSum (fun n : ℕ ↦ z ^ n / n) (-Complex.log (1 - z))` — the `-log(1-z)` series.
+- `Complex.log_re (x) : x.log.re = Real.log ‖x‖` — converts real parts of logs to
+  `log‖·‖`.
+- Euler product: `riemannZeta_eulerProduct_exp_log (hs : 1 < s.re) :`
+  `exp (∑' p : Nat.Primes, -log (1 - p^(-s))) = ζ s`.
+
+**Verdict:** E1's *per-prime, per-`k`* positivity is now fully supported (take `Re`
+of the neg-log series, combine `3·(angle 0) + 4·(angle ktlogp) + 1·(angle 2ktlogp)`,
+apply `cos_341_nonneg`). The remaining genuine work is the **double summation**:
+summability over `Nat.Primes × ℕ` and the interchange that turns the Euler product's
+`∑' p` into the cosine double series. That is the crux of E1 (feasibility still **M**),
+and is the precise next formalization target.
+
+### Reformulated micro-experiments toward E1
+- **E1.1** `re_neg_log_one_sub` : `(-(Complex.log (1-z))).re = ∑' n, (z^n/n).re` for
+  `‖z‖<1` (from `hasSum_taylorSeries_neg_log` + `Complex.re` continuity/HasSum.re). **S**
+- **E1.2** per-prime 3-4-1 nonnegativity of
+  `3·Re(-log(1-p⁻ˢ)) + 4·Re(-log(1-p⁻ˢ⁻ⁱᵗ)) + Re(-log(1-p⁻ˢ⁻²ⁱᵗ)) ≥ 0`. **S–M**
+- **E1.3** summability over primes of the per-prime quantity (from Euler-product
+  summability already used by Mathlib's nonvanishing proof). **M**
+- **E1.4** assemble `zeta_341_modulus` and discharge `Re=1` nonvanishing via
+  `product_bound_contradiction`. **M**

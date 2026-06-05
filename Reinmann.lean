@@ -4,3 +4,4 @@ import Reinmann.TwoBranchArchitecture
 import Reinmann.ZeroSymmetry
 import Reinmann.ProofArchitecture
 import Reinmann.KnownZeroFreeRegions
+import Reinmann.ConjugateSymmetry

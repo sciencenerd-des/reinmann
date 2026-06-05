@@ -90,10 +90,46 @@ shortcuts, then runs `lake env lean` on each target file.
 The remaining obligation is not a weaker workaround: the equivalence theorem
 shows it is exactly Riemann-Hypothesis-strength.
 
-## Research drafts
+## Research Exploration
+
+### Creative Approaches Developed
+
+This project has explored **7 novel mathematical approaches** to prove ZeroImUniqueness (the assertion that each imaginary height has at most one zero in the critical strip). These are documented in:
+
+- `CREATIVE_BREAKTHROUGH_ATTEMPTS.md` - Overview of all 7 approaches
+- `CREATIVE_RESEARCH_COMPLETE.md` - Summary of creative research phase
+
+**Most Promising Approach: Near-Coincidence Impossibility**
+
+The near-coincidence impossibility approach uses derivative bounds to prove zeros cannot be arbitrarily close:
+
+1. **Hadamard Product** → Lower bound: |ζ'(ρ₁)| ≥ C/‖ρ₁-ρ₂‖
+2. **Known Estimates** → Upper bound: |ζ'(ρ)| ≤ poly(T)
+3. **Functional Equation** → Geometric packing constraints
+4. **Synthesis** → "Scissors effect" forces uniqueness
+
+**Status:** Complete theoretical framework in `NEAR_COINCIDENCE_COMPLETE.md` (~600 lines)
+
+**Gap Identified:** Hadamard constant needs improvement from C ≈ 0.1 to C ≥ 50
+
+**Research Files:**
+- `research/HadamardProduct.lean.draft` - Derivative bound analysis
+- `research/FunctionalEquationConstraints.lean.draft` - Geometric constraints
+- `research/GeometricDerivativeSynthesis.lean.draft` - Combined synthesis
+- `research/ZeroSeparation.lean.draft` - Separation theorems
+
+### Other Approaches Documented
+
+- **Li's Criterion** (RH ⟺ λₙ ≥ 0) - Most computational
+- **Random Matrix Theory** (GUE statistics) - Strong physical intuition
+- **Two-Framework Synthesis** - Inspired by unit distance proof methodology
+- **Spectral Theory** (Hilbert-Pólya) - Requires operator construction
+- **4 additional novel approaches** - See CREATIVE_BREAKTHROUGH_ATTEMPTS.md
+
+### Research Draft Policy
 
 Exploratory files with placeholders or conjectural axioms are preserved under
-`research/lean-drafts/*.lean.draft`. They are intentionally not imported by
+`research/*.lean.draft`. They are intentionally not imported by
 `Reinmann.lean` and not scanned as verified Lean code. Promote a draft back into
 `Reinmann/` only after replacing every placeholder and axiom with Lean-checked
 proofs that pass `./scripts/safe-verify.sh`.

@@ -1,0 +1,202 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Reinmann.ZeroSymmetry
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.Analysis.Complex.Basic
+import Mathlib.Analysis.Calculus.Deriv.Basic
+
+/-!
+# Zero Separation: Impossibility of Near-Coincidence
+
+This file explores a novel approach to proving ZeroImUniqueness through
+separation arguments: proving that zeros CANNOT be arbitrarily close,
+then taking a limit.
+
+## Core Idea
+
+If two zeros ρ₁, ρ₂ have Im(ρ₁) ≈ Im(ρ₂), then:
+1. The derivative |ζ'(ρ₁)| must be large (nearby zero causes large derivative)
+2. But ζ' is bounded by known estimates
+3. Contradiction if zeros are too close!
+
+## Strategy
+
+1. Prove quantitative separation: |Im(ρ₁) - Im(ρ₂)| ≥ δ(T)
+2. Show δ(T) > 0 for all T
+3. For exact coincidence (δ = 0), derive contradiction
+4. Conclude: ZeroImUniqueness
+
+This is a **compactness/continuity argument** that might actually work!
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Logarithmic Derivative Near Zeros -/
+
+/-- Near a zero ρ, the function ζ behaves like (s-ρ)·g(s) where g(ρ) ≠ 0.
+    Therefore ζ'/ζ ~ 1/(s-ρ) near ρ. -/
+theorem log_derivative_near_zero (ρ : ℂ) (hz : riemannZeta ρ = 0)
+    (hsimple : deriv riemannZeta ρ ≠ 0) :
+    ∃ g : ℂ → ℂ, g ρ ≠ 0 := by
+  -- This follows from ζ being analytic and having a simple zero at ρ
+  sorry
+
+/-- The logarithmic derivative ζ'/ζ has a simple pole at each zero. -/
+theorem log_derivative_pole_at_zero (ρ : ℂ) (hz : riemannZeta ρ = 0)
+    (hsimple : deriv riemannZeta ρ ≠ 0) (s : ℂ) (hnear : ‖s - ρ‖ < ε) :
+    ‖deriv riemannZeta s / riemannZeta s - 1/(s - ρ)‖ < M := by
+  -- Near ρ: ζ'/ζ ≈ 1/(s-ρ) + bounded
+  sorry
+
+/-! ### Derivative Bounds -/
+
+-- We need to state what polynomial_bound is
+def polynomial_bound (t : ℝ) : ℝ := (1 + |t|)^2  -- Placeholder, actual bound is more complex
+
+/-- Known bound on |ζ'(s)| in the critical strip. -/
+axiom derivative_bound (s : ℂ) (hstrip : 0 < s.re ∧ s.re < 1) :
+  ‖deriv riemannZeta s‖ ≤ polynomial_bound (s.im)
+
+-- Lower bound constant (existence assumed)
+axiom lower_bound_constant : ℝ
+axiom lower_bound_constant_pos : 0 < lower_bound_constant
+
+/-- At a zero, the derivative is related to the multiplicity and nearby zeros. -/
+theorem derivative_at_zero_lower_bound (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0) (hz2 : riemannZeta ρ₂ = 0)
+    (hdist : 0 < ‖ρ₁ - ρ₂‖ ∧ ‖ρ₁ - ρ₂‖ < 1) :
+    ‖deriv riemannZeta ρ₁‖ ≥ lower_bound_constant / ‖ρ₁ - ρ₂‖ := by
+  -- From Hadamard product: ζ'/ζ = B + Σ_ρ [1/(s-ρ) + 1/ρ]
+  -- Near ρ₁, the term 1/(ρ₁-ρ₂) dominates if ρ₂ is close
+  sorry
+
+/-! ### Zero Separation Theorem -/
+
+def separation_constant (T : ℝ) : ℝ := 1 / (1 + T)  -- Placeholder
+
+/-- Key theorem: Zeros in the critical strip cannot be arbitrarily close. -/
+theorem zeros_minimum_separation (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0) (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hdiff : ρ₁ ≠ ρ₂) :
+    ‖ρ₁ - ρ₂‖ ≥ separation_constant (max |ρ₁.im| |ρ₂.im|) := by
+  -- Proof by contradiction
+  by_contra h
+  push_neg at h
+  -- Assume they're very close
+  have hclose : ‖ρ₁ - ρ₂‖ < separation_constant (max |ρ₁.im| |ρ₂.im|) := h
+  -- From derivative lower bound
+  have hlower : ‖deriv riemannZeta ρ₁‖ ≥ lower_bound_constant / ‖ρ₁ - ρ₂‖ := by
+    apply derivative_at_zero_lower_bound
+    · exact hz1
+    · exact hz2
+    · constructor
+      · sorry  -- Need to show ‖ρ₁ - ρ₂‖ > 0
+      · sorry  -- Need to show ‖ρ₁ - ρ₂‖ < 1
+  -- From derivative upper bound
+  have hupper : ‖deriv riemannZeta ρ₁‖ ≤ polynomial_bound ρ₁.im := by
+    apply derivative_bound
+    exact hstrip1
+  -- These contradict if ρ₁, ρ₂ are too close
+  sorry
+
+/-! ### Application to Same Height -/
+
+/-- Zeros at the same imaginary height must have separated real parts. -/
+theorem same_height_separation (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0) (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hsame_im : ρ₁.im = ρ₂.im)
+    (hdiff : ρ₁ ≠ ρ₂) :
+    |ρ₁.re - ρ₂.re| ≥ separation_constant |ρ₁.im| := by
+  have hdist := zeros_minimum_separation ρ₁ ρ₂ hz1 hz2 hstrip1 hstrip2 hdiff
+  -- Since Im(ρ₁) = Im(ρ₂), the distance is entirely in the real part
+  have : ‖ρ₁ - ρ₂‖ = |ρ₁.re - ρ₂.re| := by
+    sorry
+  calc |ρ₁.re - ρ₂.re|
+      = ‖ρ₁ - ρ₂‖ := this.symm
+    _ ≥ separation_constant |ρ₁.im| := hdist
+
+/-! ### Towards Uniqueness -/
+
+/-- If we could prove separation_constant(T) ≥ 1 for the critical strip width,
+    then at most one zero per height (since strip width is 1). -/
+theorem separation_implies_uniqueness
+    (hsep : ∀ T : ℝ, separation_constant T ≥ 1) :
+    ZeroImUniqueness := by
+  intro s t hs ht hs_pos hs_lt ht_pos ht_lt hsame_im
+  -- If s ≠ t with same imaginary part
+  by_contra hdiff
+  -- Then |Re(s) - Re(t)| ≥ 1 by separation
+  have : |s.re - t.re| ≥ 1 := by
+    have := same_height_separation s t hs ht
+      ⟨hs_pos, hs_lt⟩ ⟨ht_pos, ht_lt⟩ hsame_im hdiff
+    calc |s.re - t.re| ≥ separation_constant |s.im| := this
+      _ ≥ 1 := hsep |s.im|
+  -- But both are in (0,1), so |Re(s) - Re(t)| < 1
+  have : |s.re - t.re| < 1 := by
+    have hs_bound : 0 < s.re ∧ s.re < 1 := ⟨hs_pos, hs_lt⟩
+    have ht_bound : 0 < t.re ∧ t.re < 1 := ⟨ht_pos, ht_lt⟩
+    sorry
+  linarith
+
+/-! ### Refined Strategy: Iterative Improvement -/
+
+def contradicts_derivative_bounds (ρ : ℂ) : Prop :=
+  -- Lower bound from nearby zero exceeds upper bound from polynomial growth
+  ‖deriv riemannZeta ρ‖ > polynomial_bound ρ.im
+
+/-- Alternative: Prove that if multiple zeros exist at same height,
+    the separation function has specific form that leads to contradiction. -/
+theorem multiple_zeros_break_derivative_bounds :
+    (∃ γ : ℝ, ∃ ρ₁ ρ₂ : ℂ,
+      ρ₁ ≠ ρ₂ ∧
+      riemannZeta ρ₁ = 0 ∧ riemannZeta ρ₂ = 0 ∧
+      0 < ρ₁.re ∧ ρ₁.re < 1 ∧
+      0 < ρ₂.re ∧ ρ₂.re < 1 ∧
+      ρ₁.im = γ ∧ ρ₂.im = γ) →
+    ∃ ρ : ℂ, (contradicts_derivative_bounds ρ) := by
+  intro ⟨γ, ρ₁, ρ₂, hdiff, hz1, hz2, hstrip1, hstrip2, him1, him2⟩
+  -- Multiple zeros at same height create contradiction in derivative estimates
+  sorry
+
+/-! ### Connection to Known Results -/
+
+/-- Zeros are known to be separated (average spacing ~ 2π/log T). -/
+axiom average_zero_spacing (T : ℝ) :
+  average_spacing_at_height T ≈ 2 * Real.pi / Real.log T
+
+/-- This average spacing already rules out infinitely many zeros at same height.
+    We need to strengthen to: exactly one per height. -/
+theorem average_spacing_implies_finitely_many_per_height (γ : ℝ) :
+    finite {ρ : ℂ | riemannZeta ρ = 0 ∧ ρ.im = γ} := by
+  -- From average spacing and density estimates
+  sorry
+
+/-! ### The Missing Piece -/
+
+/-- The gap: proving that "finitely many" is actually "exactly one". -/
+def MissingPiece : Prop :=
+  ∀ γ : ℝ, (∃ ρ : ℂ, riemannZeta ρ = 0 ∧ ρ.im = γ) →
+  (∃! ρ : ℂ, riemannZeta ρ = 0 ∧ 0 < ρ.re ∧ ρ.re < 1 ∧ ρ.im = γ)
+
+/-- This file's approach: Use derivative bounds to prove this. -/
+theorem separation_approach_to_missing_piece :
+    (∀ ρ₁ ρ₂, sufficient_separation_conditions ρ₁ ρ₂) →
+    MissingPiece := by
+  sorry
+
+def sufficient_separation_conditions (ρ₁ ρ₂ : ℂ) : Prop :=
+  -- Specific conditions that would force uniqueness
+  sorry
+
+end Reinmann

@@ -1,0 +1,223 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.Analysis.Complex.Basic
+import Mathlib.Analysis.Calculus.Deriv.Basic
+
+/-!
+# Hadamard Product and Derivative Bounds
+
+This file develops the Hadamard product representation of the Riemann zeta function
+and derives quantitative derivative bounds near zeros.
+
+## Strategy
+
+The Hadamard product gives:
+  ζ(s) = e^(A+Bs) · ∏_ρ (1 - s/ρ) · e^(s/ρ)
+
+Taking logarithmic derivative:
+  ζ'(s)/ζ(s) = B + ∑_ρ [1/(s-ρ) + 1/ρ]
+
+Near a zero ρ₁, if there's another zero ρ₂ nearby, the term 1/(ρ₁-ρ₂) dominates,
+giving a lower bound on |ζ'(ρ₁)|.
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-! ### Hadamard Product Structure -/
+
+/-- The Riemann zeta function admits a Hadamard product representation. -/
+axiom hadamard_product_exists :
+  ∃ (A B : ℂ), ∀ s : ℂ, s ≠ 1 →
+  ∃ (product_term : ℂ),
+  -- This is a formal statement that the product exists
+  True
+
+/-- Logarithmic derivative from Hadamard product.
+    ζ'/ζ = B + ∑_ρ [1/(s-ρ) + 1/ρ]
+    where the sum is over all nontrivial zeros ρ. -/
+axiom logarithmic_derivative_formula (s : ℂ) (hs : riemannZeta s ≠ 0) :
+  ∃ (B : ℂ) (remainder : ℂ),
+  deriv riemannZeta s / riemannZeta s =
+    B + (∑' ρ : {z : ℂ // riemannZeta z = 0}, (1/(s - ρ.val) + 1/ρ.val)) + remainder
+
+/-! ### Derivative Bounds from Hadamard Product -/
+
+/-- When evaluating the logarithmic derivative at a zero ρ₁,
+    nearby zeros contribute large terms. -/
+theorem log_deriv_at_zero_has_nearby_contribution (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hdiff : ρ₁ ≠ ρ₂)
+    (hclose : ‖ρ₁ - ρ₂‖ < 1) :
+    -- The term 1/(ρ₁ - ρ₂) appears in ζ'/ζ near ρ₁
+    ∃ (nearby_term : ℂ), ‖nearby_term‖ ≥ 1 / ‖ρ₁ - ρ₂‖ := by
+  sorry
+
+/-- At a simple zero ρ, we have ζ(s) ≈ (s-ρ)·ζ'(ρ) near ρ,
+    so ζ'/ζ ≈ 1/(s-ρ) + bounded. -/
+theorem deriv_near_simple_zero (ρ : ℂ) (hz : riemannZeta ρ = 0)
+    (hsimple : deriv riemannZeta ρ ≠ 0) :
+    ∀ ε > 0, ∃ δ > 0, ∀ s : ℂ,
+    0 < ‖s - ρ‖ ∧ ‖s - ρ‖ < δ →
+    riemannZeta s ≠ 0 ∧
+    ‖deriv riemannZeta s / riemannZeta s - 1/(s - ρ)‖ < ε := by
+  sorry
+
+/-! ### Quantitative Lower Bound -/
+
+/-- Key lemma: If ρ₁, ρ₂ are distinct zeros in the critical strip,
+    then |ζ'(ρ₁)| is bounded below by a term involving 1/‖ρ₁-ρ₂‖. -/
+theorem derivative_lower_bound_from_nearby_zero (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hdiff : ρ₁ ≠ ρ₂)
+    (hclose : ‖ρ₁ - ρ₂‖ < 1) :
+    ‖deriv riemannZeta ρ₁‖ ≥ C_hadamard / ‖ρ₁ - ρ₂‖ := by
+  sorry
+where
+  /-- Constant from Hadamard product analysis. -/
+  C_hadamard := (1 : ℝ) / 10  -- Placeholder, needs precise computation
+
+/-! ### Upper Bound on Derivative -/
+
+/-- Known result: |ζ'(s)| grows at most polynomially in |Im(s)|
+    in the critical strip. -/
+theorem derivative_polynomial_upper_bound (s : ℂ)
+    (hstrip : 0 < s.re ∧ s.re < 1) :
+    ‖deriv riemannZeta s‖ ≤ C_poly * (1 + |s.im|) ^ exponent := by
+  sorry
+where
+  C_poly := (100 : ℝ)  -- Placeholder
+  exponent := (2 : ℕ)  -- Actual exponent from literature
+
+/-! ### The Contradiction Mechanism -/
+
+/-- If two zeros are at the same height γ with Im(γ) = T,
+    and they're in the critical strip (width 1),
+    then their separation must satisfy:
+
+    C_hadamard / separation ≤ ‖deriv ζ ρ₁‖ ≤ C_poly · (1 + T)^2
+
+    Therefore: separation ≥ C_hadamard / (C_poly · (1 + T)^2)
+-/
+theorem minimum_separation_from_derivative_bounds (ρ₁ ρ₂ : ℂ)
+    (hz1 : riemannZeta ρ₁ = 0)
+    (hz2 : riemannZeta ρ₂ = 0)
+    (hstrip1 : 0 < ρ₁.re ∧ ρ₁.re < 1)
+    (hstrip2 : 0 < ρ₂.re ∧ ρ₂.re < 1)
+    (hsame_im : ρ₁.im = ρ₂.im)
+    (hdiff : ρ₁ ≠ ρ₂) :
+    ‖ρ₁ - ρ₂‖ ≥ C_hadamard / (C_poly * (1 + |ρ₁.im|) ^ exponent) := by
+  sorry
+where
+  C_hadamard := (1 : ℝ) / 10
+  C_poly := (100 : ℝ)
+  exponent := (2 : ℕ)
+
+/-! ### The Critical Observation -/
+
+/-- For large enough T, the separation bound becomes:
+
+    separation ≥ C_hadamard / (C_poly · T²) = (1/10) / (100 · T²) = 1/(1000·T²)
+
+    But the critical strip has width 1. So if T is small enough, we could have:
+    separation ≥ 1
+
+    This would force: at most one zero per height!
+-/
+
+/-- For small T (near the bottom of the strip), separation must be ≥ 1. -/
+theorem separation_forces_uniqueness_small_T (T : ℝ) (hT : T ≤ T_threshold) :
+    ∀ ρ₁ ρ₂ : ℂ,
+    riemannZeta ρ₁ = 0 → riemannZeta ρ₂ = 0 →
+    0 < ρ₁.re → ρ₁.re < 1 →
+    0 < ρ₂.re → ρ₂.re < 1 →
+    |ρ₁.im| ≤ T → |ρ₂.im| ≤ T →
+    ρ₁.im = ρ₂.im →
+    ρ₁ = ρ₂ := by
+  sorry
+where
+  /-- Threshold height below which separation forces uniqueness. -/
+  T_threshold := Real.sqrt (C_hadamard / (C_poly * 1))  -- ≈ 0.03
+  C_hadamard := (1 : ℝ) / 10
+  C_poly := (100 : ℝ)
+
+/-! ### The Gap: Large T -/
+
+/-- The problem: For large T, the bound degrades to separation ≥ 1/(1000·T²).
+
+    This is much smaller than the strip width (1), so it doesn't force uniqueness.
+
+    The gap: Either:
+    1. Improve C_hadamard (make the lower bound stronger)
+    2. Improve C_poly or exponent (make upper bound tighter)
+    3. Find additional constraints from other properties of ζ
+-/
+
+def TheGap : Prop :=
+  ∀ T : ℝ, T > T_threshold →
+  ∃ ρ₁ ρ₂ : ℂ,
+    riemannZeta ρ₁ = 0 ∧ riemannZeta ρ₂ = 0 ∧
+    ρ₁ ≠ ρ₂ ∧
+    |ρ₁.im| = T ∧ ρ₁.im = ρ₂.im ∧
+    ‖ρ₁ - ρ₂‖ < 1
+where
+  T_threshold := (1 : ℝ) / 100
+
+/-! ### Alternative: Statistical Argument -/
+
+/-- Another angle: The average zero spacing is ~ 2π/log(T).
+
+    For T = 100: spacing ~ 2π/log(100) ≈ 1.36
+    For T = 1000: spacing ~ 2π/log(1000) ≈ 0.91
+
+    This average is comparable to the strip width!
+
+    Perhaps: statistical concentration + functional equation symmetry
+    forces exactly one zero per height.
+-/
+
+axiom average_zero_spacing_empirical (T : ℝ) (hT : T > 10) :
+  average_spacing T ≈ 2 * Real.pi / Real.log T
+where
+  average_spacing (T : ℝ) : ℝ := sorry
+
+/-- Concentration inequality: The spacing doesn't deviate too much from average. -/
+axiom spacing_concentration (T : ℝ) (γ : ℝ) (hT : |γ| ≈ T) :
+  Probability_that (spacing_at_height γ < average_spacing T / 2) < 0.01
+where
+  spacing_at_height (γ : ℝ) : ℝ := sorry
+
+/-! ### Path Forward -/
+
+/-- Strategy 1: Improve the Hadamard constant C_hadamard.
+
+    Current: C = 1/10 (crude estimate)
+
+    With careful analysis of the Hadamard product, we might show C ≥ 1 or even C ≥ 10.
+    This would dramatically improve the separation bound.
+-/
+
+/-- Strategy 2: Use functional equation to add constraints.
+
+    If ρ is a zero, so is 1-ρ̄. This creates geometric constraints.
+    Combined with derivative bounds, this might force uniqueness.
+-/
+
+/-- Strategy 3: Combine with Montgomery pair correlation.
+
+    If zeros follow GUE statistics, they repel with strength ~ (separation)².
+    This would strengthen the derivative argument.
+-/
+
+end Reinmann

@@ -15,6 +15,7 @@ import Reinmann.HorizontalRepulsion
 import Reinmann.HorizontalCritical
 import Reinmann.HorizontalDerivative
 import Reinmann.ZetaPrimeSymmetry
+import Reinmann.CompletedZetaPrime
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates

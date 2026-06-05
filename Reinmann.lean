@@ -17,6 +17,7 @@ import Reinmann.HorizontalDerivative
 import Reinmann.ZetaPrimeSymmetry
 import Reinmann.CompletedZetaPrime
 import Reinmann.CompletedZetaConj
+import Reinmann.CriticalLineRealSlice
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates

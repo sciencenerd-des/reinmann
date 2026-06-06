@@ -209,4 +209,56 @@ theorem slackFactor_succ_lt (n : ℕ) : slackFactor (n + 1) < slackFactor n := b
   push_cast
   nlinarith [hn, sq_nonneg (n : ℝ)]
 
+/-! ## The complete ladder: PF positivity ⟺ factorial-weighted moment determinants
+
+The order-`2` slack is special (a scalar factor); higher orders do not collapse to a
+scalar.  The *complete* general reduction is determinantal: at **every** order `k`
+and offset `m`, the Pólya-frequency (Toeplitz) minor of the signed coefficients
+equals `2^k` times the determinant of the **factorial-weighted moment** matrix
+`[ M_{i-j} / (2(i-j))! ]`.  So PF positivity at all orders — i.e. RH, via
+`XiToeplitzPositivity` — is *exactly* positivity of these moment determinants: the
+concrete-analytic target on Pólya's kernel `Φ`, ladder-complete. -/
+
+/-- Factorial-weighted moment Toeplitz entry: `M_{i-j}/(2(i-j))!` for `j ≤ i`. -/
+def momentToeplitzEntry (M : ℕ → ℝ) (i j : ℕ) : ℝ :=
+  if j ≤ i then M (i - j) / ((2 * (i - j)).factorial : ℝ) else 0
+
+/-- The order-`k`, offset-`m` factorial-weighted moment Toeplitz minor. -/
+def momentToeplitzContigMinor (M : ℕ → ℝ) (k m : ℕ) : ℝ :=
+  (Matrix.of (fun i j : Fin k => momentToeplitzEntry M (m + i.val) j.val)).det
+
+/-- Each signed-coefficient Toeplitz entry is `2 ×` the moment-weighted entry. -/
+theorem xiToeplitzEntry_eq_two_mul_moment_of_kernelRep {M : ℕ → ℝ}
+    (hM : ∀ n, XiCoeff n = (-1) ^ n * (2 * M n / ((2 * n).factorial : ℝ))) (i j : ℕ) :
+    XiToeplitzEntry i j = 2 * momentToeplitzEntry M i j := by
+  unfold XiToeplitzEntry momentToeplitzEntry
+  split_ifs with h
+  · rw [xiMomentCoeff_eq_of_kernelRep hM]; ring
+  · ring
+
+/-- **Complete ladder (identity).** Under the moment representation, the order-`k`
+Toeplitz minor of the signed coefficients is `2^k` times the factorial-weighted
+moment Toeplitz minor — at every order `k` and offset `m`. -/
+theorem xiToeplitzContigMinor_eq_of_kernelRep {M : ℕ → ℝ}
+    (hM : ∀ n, XiCoeff n = (-1) ^ n * (2 * M n / ((2 * n).factorial : ℝ))) (k m : ℕ) :
+    XiToeplitzContigMinor k m = 2 ^ k * momentToeplitzContigMinor M k m := by
+  have hmat : (Matrix.of (fun i j : Fin k => XiToeplitzEntry (m + i.val) j.val))
+      = (2 : ℝ) • Matrix.of (fun i j : Fin k => momentToeplitzEntry M (m + i.val) j.val) := by
+    ext i j
+    simp only [Matrix.of_apply, Matrix.smul_apply, smul_eq_mul]
+    exact xiToeplitzEntry_eq_two_mul_moment_of_kernelRep hM _ _
+  unfold XiToeplitzContigMinor momentToeplitzContigMinor
+  rw [hmat, Matrix.det_smul, Fintype.card_fin]
+
+/-- **Complete ladder (positivity).** Under the moment representation, the
+Pólya-frequency positivity of the signed coefficients at *every* order is
+equivalent to positivity of the factorial-weighted moment Toeplitz determinants.
+This is the full concrete-analytic ladder: RH (via PF positivity) ⟺ positivity of
+explicit moment determinants of Pólya's kernel `Φ`, at all orders. -/
+theorem xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep {M : ℕ → ℝ}
+    (hM : ∀ n, XiCoeff n = (-1) ^ n * (2 * M n / ((2 * n).factorial : ℝ))) (k m : ℕ) :
+    0 ≤ XiToeplitzContigMinor k m ↔ 0 ≤ momentToeplitzContigMinor M k m := by
+  rw [xiToeplitzContigMinor_eq_of_kernelRep hM]
+  exact mul_nonneg_iff_of_pos_left (by positivity)
+
 end Reinmann

@@ -25,6 +25,7 @@ import Reinmann.JensenProgram
 import Reinmann.XiPlanePrincipalValue
 import Reinmann.XiTotalPositivity
 import Reinmann.XiToeplitzPositivity
+import Reinmann.XiMomentKernel
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates

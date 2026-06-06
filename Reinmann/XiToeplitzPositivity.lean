@@ -170,6 +170,105 @@ theorem xiTuran2_of_toeplitzTP (h : XiToeplitzTotalPositive) (n : ℕ) :
 theorem xiTuran2All_of_toeplitzTP (h : XiToeplitzTotalPositive) : XiTuran2All :=
   xiTuran2_of_toeplitzTP h
 
+/-! ## `3×3` minor: the first frontier rung (order 3)
+
+The `2×2` rung is a theorem (CNV). The genuine open frontier is order `≥ 3`. We
+formalize the order-`3` Toeplitz (Pólya-frequency) minor directly via the PF
+index selection, so its nonnegativity is an *immediate* consequence of
+`XiToeplitzTotalPositive`, and we give its explicit algebraic expansion.
+
+**Sign structure.** Every term of this `3×3` determinant is a product of three
+signed moments `μ_{r+i-σ(i)} = (-1)^{r+i-σ(i)} b_{r+i-σ(i)}` whose indices sum to
+`3r = 3(n+2)`, so each term carries the *same* factor `(-1)^{3(n+2)} = (-1)^n`.
+Hence the signed minor equals `(-1)^n` times the unsigned `b`-determinant — the
+correct alternating-positivity demand for a Laguerre–Pólya product, exactly as
+the `2×2` case was sign-free. -/
+
+/-- Row selection `{n+2, n+3, n+4}` for the order-`3` Toeplitz minor. -/
+def xiToeplitzRows3 (n : ℕ) : Fin 3 → ℕ := ![n + 2, n + 3, n + 4]
+
+/-- Column selection `{0, 1, 2}` for the order-`3` Toeplitz minor. -/
+def xiToeplitzCols3 : Fin 3 → ℕ := ![0, 1, 2]
+
+/-- The order-`3` contiguous Toeplitz minor of the signed `Ξ` moments, defined
+through the PF index selection so that nonnegativity is immediate from the PF
+condition. -/
+def XiToeplitzMinor3 (n : ℕ) : ℝ :=
+  (Matrix.of (fun a b => XiToeplitzEntry (xiToeplitzRows3 n a) (xiToeplitzCols3 b))).det
+
+theorem xiToeplitzRows3_strictMono (n : ℕ) : StrictMono (xiToeplitzRows3 n) := by
+  intro a b hab
+  fin_cases a <;> fin_cases b <;>
+    simp_all [xiToeplitzRows3, Matrix.cons_val_zero, Matrix.cons_val_one]
+
+theorem xiToeplitzCols3_strictMono : StrictMono xiToeplitzCols3 := by decide
+
+/-- **Order-`3` rung is immediate from PF total positivity.** -/
+theorem xiToeplitzMinor3_nonneg_of_toeplitzTP
+    (h : XiToeplitzTotalPositive) (n : ℕ) : 0 ≤ XiToeplitzMinor3 n :=
+  h 3 (xiToeplitzRows3 n) xiToeplitzCols3
+    (xiToeplitzRows3_strictMono n) xiToeplitzCols3_strictMono
+
+/-- Explicit algebraic expansion of the order-`3` signed Toeplitz minor. -/
+theorem xiToeplitzMinor3_eq (n : ℕ) :
+    XiToeplitzMinor3 n =
+      XiMomentCoeff (n + 2) *
+          (XiMomentCoeff (n + 2) ^ 2 - XiMomentCoeff (n + 1) * XiMomentCoeff (n + 3))
+        - XiMomentCoeff (n + 1) *
+          (XiMomentCoeff (n + 3) * XiMomentCoeff (n + 2)
+            - XiMomentCoeff (n + 1) * XiMomentCoeff (n + 4))
+        + XiMomentCoeff n *
+          (XiMomentCoeff (n + 3) ^ 2 - XiMomentCoeff (n + 2) * XiMomentCoeff (n + 4)) := by
+  unfold XiToeplitzMinor3
+  rw [Matrix.det_fin_three]
+  have r0 : xiToeplitzRows3 n 0 = n + 2 := rfl
+  have r1 : xiToeplitzRows3 n 1 = n + 3 := rfl
+  have r2 : xiToeplitzRows3 n 2 = n + 4 := rfl
+  have c0 : xiToeplitzCols3 0 = 0 := rfl
+  have c1 : xiToeplitzCols3 1 = 1 := rfl
+  have c2 : xiToeplitzCols3 2 = 2 := rfl
+  simp only [Matrix.of_apply, r0, r1, r2, c0, c1, c2]
+  rw [xiToeplitzEntry_sub (n + 2) 0 (by omega), xiToeplitzEntry_sub (n + 3) 1 (by omega),
+      xiToeplitzEntry_sub (n + 4) 2 (by omega), xiToeplitzEntry_sub (n + 2) 1 (by omega),
+      xiToeplitzEntry_sub (n + 3) 2 (by omega), xiToeplitzEntry_sub (n + 4) 0 (by omega),
+      xiToeplitzEntry_sub (n + 2) 2 (by omega), xiToeplitzEntry_sub (n + 3) 0 (by omega),
+      xiToeplitzEntry_sub (n + 4) 1 (by omega),
+      show n + 2 - 0 = n + 2 from rfl, show n + 3 - 1 = n + 2 from rfl,
+      show n + 4 - 2 = n + 2 from rfl, show n + 2 - 1 = n + 1 from rfl,
+      show n + 3 - 2 = n + 1 from rfl, show n + 4 - 0 = n + 4 from rfl,
+      show n + 2 - 2 = n from rfl, show n + 3 - 0 = n + 3 from rfl,
+      show n + 4 - 1 = n + 3 from rfl]
+  ring
+
+/-- **Sign reduction.** The order-`3` signed Toeplitz minor equals `(-1)^n` times
+the unsigned `b`-coefficient `3×3` Toeplitz determinant — the correct
+alternating-positivity demand of a Laguerre–Pólya product. -/
+theorem xiToeplitzMinor3_sign_eq (n : ℕ) :
+    XiToeplitzMinor3 n =
+      (-1) ^ n *
+        (XiCoeff (n + 2) *
+            (XiCoeff (n + 2) ^ 2 - XiCoeff (n + 1) * XiCoeff (n + 3))
+          - XiCoeff (n + 1) *
+            (XiCoeff (n + 3) * XiCoeff (n + 2) - XiCoeff (n + 1) * XiCoeff (n + 4))
+          + XiCoeff n *
+            (XiCoeff (n + 3) ^ 2 - XiCoeff (n + 2) * XiCoeff (n + 4))) := by
+  rw [xiToeplitzMinor3_eq]
+  unfold XiMomentCoeff
+  have e1 : (-1 : ℝ) ^ (n + 1) = -(-1) ^ n := by rw [pow_add]; ring
+  have e2 : (-1 : ℝ) ^ (n + 2) = (-1) ^ n := by rw [pow_add]; ring
+  have e3 : (-1 : ℝ) ^ (n + 3) = -(-1) ^ n := by rw [pow_add]; ring
+  have e4 : (-1 : ℝ) ^ (n + 4) = (-1) ^ n := by rw [pow_add]; ring
+  have hsq : ((-1 : ℝ) ^ n) ^ 2 = 1 := by rw [← pow_mul]; exact Even.neg_one_pow ⟨n, by ring⟩
+  rw [e1, e2, e3, e4]
+  linear_combination
+    ((-1 : ℝ) ^ n *
+        (XiCoeff (n + 2) *
+            (XiCoeff (n + 2) ^ 2 - XiCoeff (n + 1) * XiCoeff (n + 3))
+          - XiCoeff (n + 1) *
+            (XiCoeff (n + 3) * XiCoeff (n + 2) - XiCoeff (n + 1) * XiCoeff (n + 4))
+          + XiCoeff n *
+            (XiCoeff (n + 3) ^ 2 - XiCoeff (n + 2) * XiCoeff (n + 4)))) * hsq
+
 /-! ## The Edrei–ASW bridge and the RH packaging -/
 
 /-- **The Edrei–Aissen–Schoenberg–Whitney bridge.** Pólya-frequency (Toeplitz)

@@ -269,6 +269,51 @@ theorem xiToeplitzMinor3_sign_eq (n : ℕ) :
           + XiCoeff n *
             (XiCoeff (n + 3) ^ 2 - XiCoeff (n + 2) * XiCoeff (n + 4)))) * hsq
 
+/-! ## General contiguous minor: the whole ladder at once
+
+Both the order-`2` and order-`3` extractions are instances of a single uniform
+statement: for *every* order `k` and offset `m`, the contiguous Toeplitz minor
+with rows `{m, m+1, …, m+k-1}` and columns `{0, 1, …, k-1}` is nonnegative under
+the PF condition.  This is the genuine "all rungs" object; the open analytic
+content is establishing `XiToeplitzTotalPositive` (proved for `k ≤ 2` via CNV). -/
+
+theorem strictMono_addLeft_val (m k : ℕ) :
+    StrictMono (fun i : Fin k => m + i.val) := by
+  intro a b hab
+  have h : a.val < b.val := hab
+  change m + a.val < m + b.val
+  omega
+
+theorem strictMono_fin_val (k : ℕ) : StrictMono (fun j : Fin k => j.val) := by
+  intro a b hab
+  change a.val < b.val
+  exact hab
+
+/-- The order-`k`, offset-`m` contiguous Toeplitz minor of the signed `Ξ`
+moments. -/
+def XiToeplitzContigMinor (k m : ℕ) : ℝ :=
+  (Matrix.of (fun i j : Fin k => XiToeplitzEntry (m + i.val) j.val)).det
+
+/-- **The whole ladder.** Under PF total positivity, every contiguous Toeplitz
+minor of the signed `Ξ` moments is nonnegative. -/
+theorem xiToeplitzContigMinor_nonneg_of_toeplitzTP
+    (h : XiToeplitzTotalPositive) (k m : ℕ) : 0 ≤ XiToeplitzContigMinor k m :=
+  h k (fun i => m + i.val) (fun j => j.val)
+    (strictMono_addLeft_val m k) (strictMono_fin_val k)
+
+/-- The order-`2` rung is the `k = 2, m = n+1` instance of the general ladder. -/
+theorem xiToeplitzMinor2_eq_contig (n : ℕ) :
+    XiToeplitzMinor2 n = XiToeplitzContigMinor 2 (n + 1) := by
+  rw [XiToeplitzContigMinor, Matrix.det_fin_two, XiToeplitzMinor2]
+  simp only [Matrix.of_apply, Fin.val_zero, Fin.val_one]
+  rw [xiToeplitzEntry_sub (n + 1 + 0) 0 (by omega),
+      xiToeplitzEntry_sub (n + 1 + 1) 1 (by omega),
+      xiToeplitzEntry_sub (n + 1 + 0) 1 (by omega),
+      xiToeplitzEntry_sub (n + 1 + 1) 0 (by omega),
+      show n + 1 + 0 - 0 = n + 1 from rfl, show n + 1 + 1 - 1 = n + 1 from rfl,
+      show n + 1 + 0 - 1 = n from rfl, show n + 1 + 1 - 0 = n + 2 from rfl]
+  ring
+
 /-! ## The Edrei–ASW bridge and the RH packaging -/
 
 /-- **The Edrei–Aissen–Schoenberg–Whitney bridge.** Pólya-frequency (Toeplitz)

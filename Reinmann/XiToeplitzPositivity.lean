@@ -1,0 +1,201 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.XiTotalPositivity
+import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+
+/-!
+# The Correct Total-Positivity Route for Ξ: Pólya Frequency / Toeplitz (not Hankel)
+
+`XiTotalPositivity` routed the Laguerre–Pólya program through **Hankel**
+determinants of the signed moment sequence `μ_n = (-1)^n · XiCoeff n`.  This file
+records, and partially proves, a *correction*: the Hankel/moment machine is the
+wrong one for an entire function, and the correct object is the **Toeplitz**
+matrix `[μ_{i-j}]` — i.e. the **Pólya frequency (PF) sequence** condition, whose
+characterization is the **Aissen–Edrei–Schoenberg–Whitney theorem** (1951).
+
+## Why Toeplitz, not Hankel (the new analytic content)
+
+* **Hamburger / Stieltjes (Hankel).** A sequence `(μ_n)` has positive-semidefinite
+  Hankel matrices `[μ_{i+j}]` iff `μ_n = ∫ x^n dν` for a positive measure `ν`.
+  These are *moment* sequences; their generating function is a Cauchy/Stieltjes
+  transform `∫ dν/(1-xz)` — a function with **poles**, never an entire product.
+  Consequently Hankel positivity forces **log-convexity** `μ_n² ≤ μ_{n-1}μ_{n+1}`.
+
+* **Edrei–ASW (Toeplitz).** A sequence `(a_n)` (with `a_n = 0` for `n<0`) is a
+  *Pólya frequency sequence* — every minor of the Toeplitz matrix `[a_{i-j}]` is
+  `≥ 0` — iff its generating function is
+  `∑ a_n z^n = e^{γ z} ∏_i (1 + α_i z) / ∏_j (1 - β_j z)`, `γ, α_i, β_j ≥ 0`.
+  With **no poles** (`β_j` absent) this is exactly a Laguerre–Pólya function with
+  only nonpositive real zeros.  PF sequences are **log-concave**:
+  `a_n² ≥ a_{n-1} a_{n+1}` (the `2×2` Toeplitz minor).
+
+## Matching the proven Riemann-ξ result
+
+Write `Ξ(t) = F(t²)`, `F(u) = ∑ b_n u^n`, `b_n = XiCoeff n`.  RH says every zero
+of `Ξ` is real, i.e. every zero of `F` is real and positive, i.e.
+`F(-u) = ∑ (-1)^n b_n u^n = ∑ XiMomentCoeff_n · u^n` has only negative real zeros
+and lies in Laguerre–Pólya.  By Edrei–ASW this is exactly:
+
+> **the signed sequence `XiMomentCoeff` is a Pólya frequency sequence.**
+
+The `2×2` rung of this is `XiMomentCoeff_{n+1}² ≥ XiMomentCoeff_n · XiMomentCoeff_{n+2}`,
+which is precisely the **Turán inequality** `XiTuran2 n` — and the Riemann-ξ
+Turán inequalities were proved unconditionally by **Csordas–Norfolk–Varga**.  So
+the corrected Toeplitz route's first rung is *already a theorem*, whereas the
+Hankel route demanded the opposite (log-convex) inequality, which is false for a
+genuine Laguerre–Pólya product.
+
+## What is proved here (unconditional)
+
+* `XiToeplitzTotalPositive` — full PF condition (all minors of `[μ_{i-j}] ≥ 0`).
+* `xiMomentCoeff_nonneg_of_toeplitzTP` — `1×1` minors give `μ_n ≥ 0`.
+* `xiToeplitzMinor2_eq`, `xiToeplitzMinor2_nonneg_iff_turan2` — the `2×2` minor
+  *is* the Turán determinant (log-concavity), with the correct sign.
+* `xiTuran2All_of_toeplitzTP` — PF positivity implies *all* Turán inequalities,
+  i.e. the corrected route subsumes the CNV rung.
+
+## What remains (the honest frontier, via Edrei–ASW — a theorem, not RH)
+
+* `XiToeplitzTPToScaledFiniteBridge` — PF positivity ⟹ finite real-rooted
+  approximants.  This is the Edrei–ASW payload: a *universal* classical theorem
+  about sequences, provable without RH.  The RH-hard hypothesis is establishing
+  `XiToeplitzTotalPositive` for Ξ's coefficients (the all-order minors); the
+  `2×2` rung is closed (CNV), the frontier is order `≥ 3`.
+-/
+
+noncomputable section
+
+open Matrix
+
+namespace Reinmann
+
+/-! ## Toeplitz matrix of the signed Ξ moment sequence -/
+
+/-- Entry of the (lower-triangular) Toeplitz matrix of the signed `Ξ` moment
+sequence: `T(i,j) = μ_{i-j}` if `j ≤ i`, else `0`, where `μ_n = (-1)^n XiCoeff n`. -/
+def XiToeplitzEntry (i j : ℕ) : ℝ :=
+  if j ≤ i then XiMomentCoeff (i - j) else 0
+
+theorem xiToeplitzEntry_sub (i j : ℕ) (h : j ≤ i) :
+    XiToeplitzEntry i j = XiMomentCoeff (i - j) := if_pos h
+
+/-- **Pólya frequency (total positivity) condition for the signed `Ξ` moments.**
+Every minor of the infinite Toeplitz matrix `[μ_{i-j}]` is nonnegative.  This is
+the honest full PF condition (arbitrary strictly-monotone row/column selections),
+not merely contiguous blocks.  By Edrei–ASW it is equivalent to `Ξ` lying in the
+Laguerre–Pólya class, hence to RH. -/
+def XiToeplitzTotalPositive : Prop :=
+  ∀ (k : ℕ) (rows cols : Fin k → ℕ),
+    StrictMono rows → StrictMono cols →
+    0 ≤ (Matrix.of (fun a b => XiToeplitzEntry (rows a) (cols b))).det
+
+/-! ## `1×1` minors: nonnegativity of the signed moments -/
+
+theorem xiMomentCoeff_nonneg_of_toeplitzTP
+    (h : XiToeplitzTotalPositive) (n : ℕ) : 0 ≤ XiMomentCoeff n := by
+  have hrow : StrictMono (![n] : Fin 1 → ℕ) := by
+    intro a b hab; fin_cases a; fin_cases b; simp_all
+  have hcol : StrictMono (![0] : Fin 1 → ℕ) := by
+    intro a b hab; fin_cases a; fin_cases b; simp_all
+  have hdet := h 1 (![n]) (![0]) hrow hcol
+  rw [Matrix.det_fin_one] at hdet
+  simp only [Matrix.of_apply, Matrix.cons_val_zero] at hdet
+  rw [xiToeplitzEntry_sub n 0 (Nat.zero_le _), Nat.sub_zero] at hdet
+  exact hdet
+
+/-! ## `2×2` minor: the Turán (log-concavity) determinant -/
+
+/-- The canonical `2×2` Toeplitz (Pólya-frequency) minor of the signed moment
+sequence: `μ_{n+1}² − μ_n·μ_{n+2}`.  Nonnegativity is **log-concavity**. -/
+def XiToeplitzMinor2 (n : ℕ) : ℝ :=
+  XiMomentCoeff (n + 1) ^ 2 - XiMomentCoeff n * XiMomentCoeff (n + 2)
+
+/-- The signed sign factors cancel: the Toeplitz `2×2` minor of `μ` equals the
+log-concavity determinant of the *unsigned* coefficients `b_n = XiCoeff n`. -/
+theorem xiToeplitzMinor2_eq (n : ℕ) :
+    XiToeplitzMinor2 n = XiCoeff (n + 1) ^ 2 - XiCoeff n * XiCoeff (n + 2) := by
+  unfold XiToeplitzMinor2 XiMomentCoeff
+  have h1 : ((-1 : ℝ) ^ (n + 1)) ^ 2 = 1 := by
+    rw [← pow_mul]; exact Even.neg_one_pow ⟨n + 1, by ring⟩
+  have h2 : (-1 : ℝ) ^ n * (-1) ^ (n + 2) = 1 := by
+    rw [← pow_add]; exact Even.neg_one_pow ⟨n + 1, by ring⟩
+  calc
+    ((-1 : ℝ) ^ (n + 1) * XiCoeff (n + 1)) ^ 2
+        - (-1) ^ n * XiCoeff n * ((-1) ^ (n + 2) * XiCoeff (n + 2))
+      = ((-1 : ℝ) ^ (n + 1)) ^ 2 * XiCoeff (n + 1) ^ 2
+        - ((-1) ^ n * (-1) ^ (n + 2)) * (XiCoeff n * XiCoeff (n + 2)) := by ring
+    _ = XiCoeff (n + 1) ^ 2 - XiCoeff n * XiCoeff (n + 2) := by rw [h1, h2]; ring
+
+/-- The `2×2` Toeplitz minor is nonnegative **iff** the Turán inequality holds.
+This pins the *correct* curvature direction: Pólya-frequency ⟹ log-concavity,
+matching the (proven) Csordas–Norfolk–Varga Turán inequalities for Ξ. -/
+theorem xiToeplitzMinor2_nonneg_iff_turan2 (n : ℕ) :
+    0 ≤ XiToeplitzMinor2 n ↔ XiTuran2 n := by
+  rw [xiToeplitzMinor2_eq]
+  unfold XiTuran2
+  constructor <;> intro h <;> nlinarith
+
+/-- A `2×2` Toeplitz minor of the signed `Ξ` moments, extracted from the PF
+condition with rows `{n+1, n+2}` and columns `{0, 1}`. -/
+theorem xiToeplitzMinor2_nonneg_of_toeplitzTP
+    (h : XiToeplitzTotalPositive) (n : ℕ) : 0 ≤ XiToeplitzMinor2 n := by
+  have hrows : StrictMono (![n + 1, n + 2] : Fin 2 → ℕ) := by
+    intro a b hab
+    fin_cases a <;> fin_cases b <;>
+      simp_all [Matrix.cons_val_zero, Matrix.cons_val_one]
+  have hcols : StrictMono (![0, 1] : Fin 2 → ℕ) := by decide
+  have hdet := h 2 (![n + 1, n + 2]) (![0, 1]) hrows hcols
+  rw [Matrix.det_fin_two] at hdet
+  simp only [Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one] at hdet
+  rw [xiToeplitzEntry_sub (n + 1) 0 (Nat.zero_le _),
+      xiToeplitzEntry_sub (n + 2) 1 (by omega),
+      xiToeplitzEntry_sub (n + 1) 1 (by omega),
+      xiToeplitzEntry_sub (n + 2) 0 (Nat.zero_le _),
+      show n + 1 - 0 = n + 1 from rfl,
+      show n + 2 - 1 = n + 1 from rfl,
+      show n + 1 - 1 = n from rfl,
+      show n + 2 - 0 = n + 2 from rfl] at hdet
+  unfold XiToeplitzMinor2
+  nlinarith [hdet]
+
+/-- **The corrected route subsumes the CNV rung.** Pólya-frequency total
+positivity of the signed `Ξ` moments implies *every* Turán inequality. -/
+theorem xiTuran2_of_toeplitzTP (h : XiToeplitzTotalPositive) (n : ℕ) :
+    XiTuran2 n :=
+  (xiToeplitzMinor2_nonneg_iff_turan2 n).1 (xiToeplitzMinor2_nonneg_of_toeplitzTP h n)
+
+theorem xiTuran2All_of_toeplitzTP (h : XiToeplitzTotalPositive) : XiTuran2All :=
+  xiTuran2_of_toeplitzTP h
+
+/-! ## The Edrei–ASW bridge and the RH packaging -/
+
+/-- **The Edrei–Aissen–Schoenberg–Whitney bridge.** Pólya-frequency (Toeplitz)
+total positivity of the signed `Ξ` coefficients implies the finite real-rooted
+(Laguerre–Pólya) approximation target.
+
+This is the *correct* analytic payload (replacing the Hankel/moment bridge of
+`XiTotalPositivity`).  Edrei–ASW is a universal theorem about sequences — it is
+**not** RH; it is provable without assuming anything about ζ.  The RH-hard input
+is the hypothesis `XiToeplitzTotalPositive` itself, whose `2×2` rung is already a
+theorem (CNV) and whose frontier is order `≥ 3`. -/
+def XiToeplitzTPToScaledFiniteBridge : Prop :=
+  XiToeplitzTotalPositive → XiLaguerrePolyaScaledFiniteTarget
+
+/-- A bundled witness for the corrected Toeplitz/Pólya-frequency route. -/
+structure XiToeplitzPositivityWitness where
+  toeplitzPositive : XiToeplitzTotalPositive
+  toScaledFinite : XiToeplitzTPToScaledFiniteBridge
+  closure : XiLaguerrePolyaClosureBridge
+  polya : PolyaJensenBridge
+
+/-- Pólya-frequency total positivity of the signed `Ξ` coefficients implies RH
+once the Edrei–ASW bridge and the Laguerre–Pólya/Jensen closure are supplied. -/
+theorem riemannHypothesis_of_xiToeplitzPositivity
+    (w : XiToeplitzPositivityWitness) : RiemannHypothesis :=
+  riemannHypothesis_of_xiLaguerrePolyaScaledFinite
+    (w.toScaledFinite w.toeplitzPositive) w.closure w.polya
+
+end Reinmann

@@ -15,11 +15,16 @@ import Reinmann.HorizontalRepulsion
 import Reinmann.HorizontalCritical
 import Reinmann.HorizontalDerivative
 import Reinmann.ZetaPrimeSymmetry
+import Reinmann.FiniteGaussLucas
 import Reinmann.CompletedZetaPrime
 import Reinmann.CompletedZetaConj
+import Reinmann.HadamardZetaTransfer
 import Reinmann.CriticalLineRealSlice
 import Reinmann.CriticalLineCounting
 import Reinmann.JensenProgram
+import Reinmann.XiPlanePrincipalValue
+import Reinmann.XiTotalPositivity
+import Reinmann.XiToeplitzPositivity
 import Reinmann.ZeroFreeEngine
 import Reinmann.VdpConditional
 import Reinmann.VdpCertificates
@@ -33,4 +38,5 @@ import Reinmann.HilbertPolyaExperiment
 import Reinmann.HilbertPolyaConstruction
 import Reinmann.HilbertPolyaConverse
 import Reinmann.InfiniteHilbertPolya
+import Reinmann.RHAttackBridges
 import Reinmann.ProofArchitecture

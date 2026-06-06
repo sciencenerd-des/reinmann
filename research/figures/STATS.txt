@@ -1,0 +1,8 @@
+RH reduction: high-precision certification summary
+====================================================
+- coefficients certified to >= 236 significant digits (n=0..120)
+- order-1: mu_n > 0 for all n=0..120: True
+- order-2 Turan holds for all n=0..118: True
+- mu log-concave (R_n>1) for all n=0..118: True
+- ALL contiguous Toeplitz (PF) minors orders k=1..16, all offsets, strictly positive: True
+- Jensen polynomials hyperbolic for d=2..6, n=0..114: worst |Im root| = 1.00e-320

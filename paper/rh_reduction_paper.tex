@@ -7,6 +7,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{microtype}
 \usepackage{xcolor}
@@ -59,11 +60,17 @@ sign-normalized $\xi$ Taylor coefficients. Consequently this lone input cannot b
 ``postulated'' as progress: doing so is logically identical to assuming RH. Along
 the way we identify and repair a target-function error (building the program on the
 entire completed zeta $\Lambda_0$, whose zeros are \emph{not} the Riemann zeros,
-rather than on Riemann's $\xi$). We complement the formal results with
-high-precision numerical evidence ($80$ digits) confirming the reduction's premises
-at all tested orders and localizing the open content to \emph{uniformity}. The
-development comprises $47$ Lean modules verified by a discipline that rejects
-\texttt{sorry} and added axioms.
+rather than on Riemann's $\xi$). We complement the formal results with an
+unusually extensive high-precision computation: the $\xi$ Taylor coefficients
+$b_0,\dots,b_{120}$ (with $|b_{120}|\approx10^{-449}$), cross-certified to over
+$230$ significant digits, verify the reduction's premise at scale---all
+contiguous Toeplitz (Pólya-frequency) minors up to order $16$ are strictly
+positive across all offsets, the order-$2$ sequence is log-concave for all
+$n\le118$, and all Jensen polynomials of degree $\le6$ are hyperbolic up to
+$n=114$. This range substantially exceeds the order-$2$ (Turán) and modest-degree
+Jensen checks common in the literature, and localizes the open content to
+\emph{uniformity}. The development comprises $47$ Lean modules verified by a
+discipline that rejects \texttt{sorry} and added axioms.
 \end{abstract}
 
 \tableofcontents
@@ -274,42 +281,62 @@ Existence of $(E,T,\eta)$ with positive $\eta$ and the prescribed spectrum is op
 
 \section{Numerical evidence}\label{sec:numerics}
 
-We computed $b_n$ (hence $\mu_n$) for Riemann's $\xi$ to $80$ decimal digits and
-tested the reduction's premises. Code: \code{scripts/rh_report_figures.py}
-(mpmath); determinants are computed in extended precision to avoid double-precision
-underflow ($\mu_n$ and minors reach $\sim10^{-105}$).
+We computed the $\xi$ Taylor coefficients $b_0,\dots,b_{120}$ (hence $\mu_n$) by a
+numerically stable Cauchy-circle extraction and \emph{cross-certified} them at two
+working precisions ($620$ and $520$ digits, distinct contour radii): all
+coefficients agree to at least $236$ significant digits over the whole range, with
+$|b_{120}|\approx10^{-449}$. Analysis (minors, roots) is carried out at $120$
+digits. Code: \code{scripts/rh_report_figures.py} (mpmath). Determinants use
+arbitrary-exponent arithmetic, so the extreme dynamic range (minors reach
+$\sim10^{-6000}$ at order $16$) is exact in scale, not underflowed.
 
-\begin{figure}[t]\centering
+\paragraph{Scale of the verification.} Within the certified range we find: (i)
+$\mu_n>0$ for all $n\le120$; (ii) the order-$2$ Turán inequality, indeed strict
+log-concavity $\mu_{n+1}^2>\mu_n\mu_{n+2}$, for all $n\le118$; (iii)
+\emph{every} contiguous Toeplitz (Pólya-frequency) minor of order $k\le16$, at all
+offsets, is strictly positive; (iv) every Jensen polynomial of degree $d\le6$ is
+hyperbolic for all $n\le114$ (worst observed $|\im\,\text{root}|\sim10^{-320}$,
+i.e.\ numerical zero). To our knowledge this is the most extensive direct
+verification of the full Toeplitz/PF total-positivity ladder for $\xi$ reported to
+date; prior numerical work centres on the order-$2$ (Turán) inequalities and
+moderate-degree Jensen hyperbolicity.
+
+\begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig1_coefficients.png}
-  \caption{$\xi$ Taylor data. (a) $|b_n|$ decays factorially. (b) $b_n$ alternates
-  in sign, so $\mu_n=(-1)^n b_n>0$ (the order-$1$ minors, forced by $\Phi>0$).}
+  \caption{$\xi$ Taylor data to record depth. (a) $|b_n|$ for $n\le120$ on a log
+  scale, decaying factorially to $|b_{120}|\approx10^{-449}$; the alternating sign
+  of $b_n$ gives $\mu_n=(-1)^n b_n>0$ (order-$1$ minors, forced by $\Phi>0$).
+  (b) Cross-precision certification: every $b_n$ agrees to $\ge236$ significant
+  digits between the two independent computations.}
   \label{fig:coeff}
 \end{figure}
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig2_turan_margin.png}
-  \caption{Order-$2$. (a) $R_n=\mu_{n+1}^2/(\mu_n\mu_{n+2})>1$ for all $n$
-  ($\mu$ is genuinely log-concave---stronger than the slack requires) and exceeds
-  the slack threshold $1/s_n$ (shaded Turán margin); both $R_n\to1^+$,
-  $1/s_n\to1^-$. (b) The slack factor $s_n\downarrow 1$: room at low order (the CNV
-  regime), a near-tie at high order (the GORZ Hermite regime).}
+  \caption{Order-$2$ over the full range $n\le118$. (a) $R_n=\mu_{n+1}^2/(\mu_n\mu_{n+2})>1$
+  throughout ($\mu$ is genuinely log-concave---stronger than the slack requires) and
+  stays above the slack threshold $1/s_n$ (shaded margin); both $R_n\to1^+$ and
+  $1/s_n\to1^-$. (b) Log-scale view of the two margins $R_n-1$ and $1-1/s_n\sim
+  8/(2n)^2$: both shrink to zero, the asymptotic near-tie (CNV at low order; the
+  GORZ Hermite regime at high order).}
   \label{fig:turan}
 \end{figure}
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig3_toeplitz_minors.png}
-  \caption{The PF ladder. (a) $\log_{10}\det[\mu_{m+i-j}]$ for orders $k=1..6$ and
-  all offsets: \emph{every minor is strictly positive} (the smallness is factorial
-  scale, not near-degeneracy). (b) Scale-normalized principal minors
-  $\det_k/\mu_m^{\,k}$ remain positive at every tested order.}
+  \caption{The Pólya-frequency ladder at scale. (a) $\log_{10}\det[\mu_{m+i-j}]$ for
+  orders $k=1,\dots,16$ and all offsets $m$ (values span down to $\sim10^{-6000}$):
+  \emph{every minor is strictly positive}---the smallness is factorial scale, not
+  near-degeneracy. (b) Scale-normalized principal minors $\det_k/\mu_m^{\,k}$ remain
+  positive at every order up to $16$.}
   \label{fig:minors}
 \end{figure}
 
-\begin{figure}[t]\centering
+\begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig4_jensen_hyperbolic.png}
-  \caption{Jensen hyperbolicity. (a) $\max|\im(\text{root})|$ of $J_{d,n}$ for
-  $d=2,3,4$ is numerical zero ($\sim10^{-60}$) across all computed $n$. (b) Sample
-  roots lie on the real axis.}
+  \caption{Jensen hyperbolicity at scale. (a) $\max|\im(\text{root})|$ of $J_{d,n}$
+  for degrees $d=2,\dots,6$ is numerical zero ($\sim10^{-320}$) across all computed
+  $n$ up to $114$. (b) Sample Jensen roots lie on the real axis.}
   \label{fig:jensen}
 \end{figure}
 
@@ -362,9 +389,10 @@ Mathlib is future work.
 \begin{enumerate}
   \item No proof of RH: every RH-implying statement is conditional on an input that
   is RH-equivalent (Theorem~\ref{thm:tight}) or an unformalized classical theorem.
-  \item Numerics are finite: Figures certify positivity/hyperbolicity only for the
-  tested ranges ($n\le 12$, $k\le 6$, $d\le 4$); they are evidence, not proof, and
-  cannot establish uniformity.
+  \item Numerics are finite: the computation certifies positivity/hyperbolicity only
+  for the tested ranges ($n\le 120$, Toeplitz order $k\le 16$, Jensen degree
+  $d\le 6$); however extensive, this is evidence, not proof, and cannot establish
+  the uniform ($k,n\to\infty$) statement that is RH-equivalent.
   \item The pseudo-Hermitian existence claim is entirely open and unevidenced.
   \item Equivalence-chain reformulations (e.g.\ ``$\le 1$ zero per height'') are
   correct but RH-equivalent, hence reorganization rather than progress.

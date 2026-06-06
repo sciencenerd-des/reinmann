@@ -181,4 +181,32 @@ theorem xiMoment_logConcave_iff_relaxedMoment_of_kernelRep {M : ℕ → ℝ}
   · intro h; nlinarith [h]
   · intro h; nlinarith [h]
 
+/-! ## Quantifying the slack: the fight tightens with `n`
+
+The order-`2` slack factor `s_n = (2n+3)(2n+4) / ((2n+1)(2n+2))` is the multiplier
+by which the factorial weights relax the moment log-convexity.  It is always `> 1`
+(so there is always *some* room), and it **strictly decreases toward `1`** as `n`
+grows.  This is the verified quantitative shape of the literature picture: at small
+`n` the slack is large (room to spare — the regime CNV closes), while at large `n`
+the slack `→ 1`, the near-tie governed by the Griffin–Ono–Rolen–Zagier Hermite
+asymptotics.  These are statements of elementary real analysis — *not* RH. -/
+
+/-- The order-`2` factorial slack factor `s_n = (2n+3)(2n+4)/((2n+1)(2n+2))`. -/
+def slackFactor (n : ℕ) : ℝ := ((2 * n + 3) * (2 * n + 4)) / ((2 * n + 1) * (2 * n + 2))
+
+/-- There is always room: `s_n > 1`. -/
+theorem one_lt_slackFactor (n : ℕ) : 1 < slackFactor n := by
+  have hn : (0 : ℝ) ≤ (n : ℝ) := Nat.cast_nonneg n
+  unfold slackFactor
+  rw [one_lt_div (by positivity)]
+  nlinarith [hn]
+
+/-- The slack strictly decreases in `n` (toward `1`): the order-`2` fight tightens. -/
+theorem slackFactor_succ_lt (n : ℕ) : slackFactor (n + 1) < slackFactor n := by
+  have hn : (0 : ℝ) ≤ (n : ℝ) := Nat.cast_nonneg n
+  unfold slackFactor
+  rw [div_lt_div_iff₀ (by positivity) (by positivity)]
+  push_cast
+  nlinarith [hn, sq_nonneg (n : ℝ)]
+
 end Reinmann

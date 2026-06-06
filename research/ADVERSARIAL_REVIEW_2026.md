@@ -142,6 +142,22 @@ unbounded-operator obstruction. No progress on existence.
 3. **Downgrade language** in commit messages/docs that frames RH-equivalent
    restatements or classical formalizations as "new mathematics / progress."
 
+## Resolution status (2026-06-06)
+
+- **Finding 1 — FIXED.** `JensenProgram.Xi` is rebuilt on Riemann's `ξ`:
+  `xiCompleted s = (s(s-1)/2)·completedRiemannZeta s`,
+  `Xi t = -((t²+1/4)/2)·Zslice t = Re ξ(1/2+it)`. New verified lemmas:
+  `xiCompleted_critical_eq_ofReal_Xi`, `Xi_even`, and crucially
+  `Xi_eq_zero_iff_riemannZeta : Ξ t = 0 ↔ ζ(1/2+it) = 0` — the zero-correspondence
+  `Λ₀` lacked. All downstream Toeplitz/moment files recompile unchanged (they use
+  `XiCoeff` abstractly). With `Ξ = ξ`, the Pólya/CNV citations are now correctly
+  attributable. Axiom-clean, `safe-verify` passes (44 files).
+- **Finding (CNV attribution) — FIXED.** Docstrings now state CNV/Pólya are
+  **external classical inputs, not formalized here**; the "subsumes the CNV rung"
+  / "already a theorem" language is downgraded accordingly.
+- **Findings 2–5 stand.** The equivalence chain is still RH-equivalent (no progress),
+  the classical-formalization and Hilbert–Pólya assessments are unchanged.
+
 ## One-line summary
 
 Sound Lean engineering and honest bookkeeping; **zero genuinely new mathematics

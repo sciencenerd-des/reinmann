@@ -12,6 +12,12 @@ import Mathlib.Data.Nat.Factorial.Basic
 This file isolates, and *verifies*, the precise analytic mechanism that governs
 the open order-`≥3` Toeplitz (Pólya-frequency) minors of `XiToeplitzPositivity`.
 
+**Correctness note (2026-06-06).** `Ξ` is now **Riemann's `ξ`** (see
+`JensenProgram`), so Pólya's positive-kernel representation below genuinely applies
+(it is a property of `ξ`, false for the earlier `Λ₀` slice).  `XiMomentKernelRep`
+states that representation as a **named external classical input** (true, not RH,
+not an axiom); the CNV/Pólya facts cited are external and **not formalized here**.
+
 ## The genuine obstruction (why order `≥ 3` is RH)
 
 Riemann's **Pólya integral representation** (classical, elementary, NOT RH):

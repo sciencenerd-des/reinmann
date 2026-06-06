@@ -16,7 +16,14 @@ wrong one for an entire function, and the correct object is the **Toeplitz**
 matrix `[μ_{i-j}]` — i.e. the **Pólya frequency (PF) sequence** condition, whose
 characterization is the **Aissen–Edrei–Schoenberg–Whitney theorem** (1951).
 
-## Why Toeplitz, not Hankel (the new analytic content)
+**Correctness note (2026-06-06).** `XiCoeff`/`Ξ` are now the coefficients of
+**Riemann's `ξ`** (see `JensenProgram`), not of `Λ₀`.  So the classical Pólya /
+Csordas–Norfolk–Varga statements quoted below genuinely apply to this `Ξ`.  Those
+classical results are cited as **external inputs (not formalized here)**; what is
+proved in Lean is only the extraction/algebra explicitly listed under "What is
+proved here".
+
+## Why Toeplitz, not Hankel (the structural point — classical, not original)
 
 * **Hamburger / Stieltjes (Hankel).** A sequence `(μ_n)` has positive-semidefinite
   Hankel matrices `[μ_{i+j}]` iff `μ_n = ∫ x^n dν` for a positive measure `ν`.
@@ -43,10 +50,10 @@ and lies in Laguerre–Pólya.  By Edrei–ASW this is exactly:
 
 The `2×2` rung of this is `XiMomentCoeff_{n+1}² ≥ XiMomentCoeff_n · XiMomentCoeff_{n+2}`,
 which is precisely the **Turán inequality** `XiTuran2 n` — and the Riemann-ξ
-Turán inequalities were proved unconditionally by **Csordas–Norfolk–Varga**.  So
-the corrected Toeplitz route's first rung is *already a theorem*, whereas the
-Hankel route demanded the opposite (log-convex) inequality, which is false for a
-genuine Laguerre–Pólya product.
+Turán inequalities are a classical theorem of **Csordas–Norfolk–Varga** (external,
+**not formalized here**).  So the corrected Toeplitz route's first rung is backed
+by an existing classical theorem, whereas the Hankel route demanded the opposite
+(log-convex) inequality, which is false for a genuine Laguerre–Pólya product.
 
 ## What is proved here (unconditional)
 
@@ -54,8 +61,8 @@ genuine Laguerre–Pólya product.
 * `xiMomentCoeff_nonneg_of_toeplitzTP` — `1×1` minors give `μ_n ≥ 0`.
 * `xiToeplitzMinor2_eq`, `xiToeplitzMinor2_nonneg_iff_turan2` — the `2×2` minor
   *is* the Turán determinant (log-concavity), with the correct sign.
-* `xiTuran2All_of_toeplitzTP` — PF positivity implies *all* Turán inequalities,
-  i.e. the corrected route subsumes the CNV rung.
+* `xiTuran2All_of_toeplitzTP` — PF positivity implies *all* Turán inequalities
+  (`XiTuran2`); conversely the order-`2` rung is backed by the external CNV theorem.
 
 ## What remains (the honest frontier, via Edrei–ASW — a theorem, not RH)
 
@@ -172,7 +179,8 @@ theorem xiTuran2All_of_toeplitzTP (h : XiToeplitzTotalPositive) : XiTuran2All :=
 
 /-! ## `3×3` minor: the first frontier rung (order 3)
 
-The `2×2` rung is a theorem (CNV). The genuine open frontier is order `≥ 3`. We
+The `2×2` rung is backed by the external CNV theorem (not formalized here). The
+genuine open frontier is order `≥ 3`. We
 formalize the order-`3` Toeplitz (Pólya-frequency) minor directly via the PF
 index selection, so its nonnegativity is an *immediate* consequence of
 `XiToeplitzTotalPositive`, and we give its explicit algebraic expansion.
@@ -323,8 +331,8 @@ total positivity of the signed `Ξ` coefficients implies the finite real-rooted
 This is the *correct* analytic payload (replacing the Hankel/moment bridge of
 `XiTotalPositivity`).  Edrei–ASW is a universal theorem about sequences — it is
 **not** RH; it is provable without assuming anything about ζ.  The RH-hard input
-is the hypothesis `XiToeplitzTotalPositive` itself, whose `2×2` rung is already a
-theorem (CNV) and whose frontier is order `≥ 3`. -/
+is the hypothesis `XiToeplitzTotalPositive` itself, whose `2×2` rung is backed by
+the external CNV theorem (not formalized here) and whose frontier is order `≥ 3`. -/
 def XiToeplitzTPToScaledFiniteBridge : Prop :=
   XiToeplitzTotalPositive → XiLaguerrePolyaScaledFiniteTarget
 

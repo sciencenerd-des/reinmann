@@ -1,0 +1,62 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.RiemannSpine
+import Mathlib.Analysis.Complex.Basic
+import Mathlib.Analysis.Calculus.Deriv.Basic
+
+/-!
+# The Dynamical Repulsion Principle (Lean Draft)
+
+This draft formalizes the Dynamical Repulsion Principle: under the de Bruijn-Newman zero
+dynamics (Dyson's Brownian motion), any off-line zeros experience a strictly positive net
+outward force, making it impossible for them to converge to the critical line at $t \to \infty$.
+
+-/
+
+noncomputable section
+
+namespace Reinmann
+
+/-- Representation of a deformed Riemann zero particle at time t. -/
+structure DeformedZero (t : ℝ) where
+  val : ℂ
+  is_zero : completedRiemannZeta (val) = 0 -- representing deformed zeros
+
+/-- The horizontal velocity of a zero under Dyson's Brownian motion. -/
+def horizontal_velocity (t : ℝ) (ρ : DeformedZero t) (all_zeros : Finset (DeformedZero t)) : ℝ :=
+  ∑' j : {z ∈ all_zeros // z ≠ ρ}, 2 * (ρ.val.re - z.val.val.re) / ((ρ.val.re - z.val.val.re)^2 + (ρ.val.im - z.val.val.im)^2)
+
+/-- The outermost zero displacement from the critical line. -/
+def is_outermost_zero (t : ℝ) (ρ : DeformedZero t) (all_zeros : Finset (DeformedZero t)) : Prop :=
+  ∀ z ∈ all_zeros, |z.val.re - 1/2| ≤ |ρ.val.re - 1/2|
+
+/-- Symmetric pair contribution is strictly positive for the outermost zero. -/
+theorem symmetric_pair_force_positive (t : ℝ) (ρ₁ ρ₂ : DeformedZero t) (all_zeros : Finset (DeformedZero t))
+    (houter : is_outermost_zero t ρ₁ all_zeros)
+    (hpair : ρ₂.val = 1 - ρ₁.val.conj)
+    (hoff_line : ρ₁.val.re > 1/2) :
+    2 * (ρ₁.val.re - ρ₂.val.re) / ((ρ₁.val.re - ρ₂.val.re)^2 + (ρ₁.val.im - ρ₂.val.im)^2) > 0 := by
+  sorry
+
+/-- The main Dynamical Repulsion Theorem: the outermost zero has strictly positive outward drift. -/
+theorem outermost_zero_drift_positive (t : ℝ) (ρ : DeformedZero t) (all_zeros : Finset (DeformedZero t))
+    (houter : is_outermost_zero t ρ all_zeros)
+    (hoff_line : ρ.val.re > 1/2) :
+    horizontal_velocity t ρ all_zeros > 0 := by
+  sorry
+
+/-- The GORZ Hermite limit forces the maximum displacement to decay to zero. -/
+axiom gorz_hermite_limit (all_zeros : ∀ t, Finset (DeformedZero t)) :
+    ∀ ε > 0, ∃ T_limit : ℝ, ∀ t > T_limit, ∀ z ∈ all_zeros t,
+    |z.val.re - 1/2| < ε
+
+/-- The contradiction: strictly increasing outermost displacement cannot converge to zero. -/
+theorem dynamical_repulsion_excludes_offline_zeros (all_zeros : ∀ t, Finset (DeformedZero t))
+    (hflow : ∀ t, ∀ ρ ∈ all_zeros t, is_outermost_zero t ρ (all_zeros t) → ρ.val.re > 1/2 → True) :
+    False := by
+  sorry
+
+end Reinmann

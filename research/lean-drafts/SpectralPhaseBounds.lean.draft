@@ -1,0 +1,93 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.HorizontalCritical
+import Mathlib.Analysis.InnerProductSpace.Basic
+import Mathlib.Analysis.Calculus.Deriv.Basic
+
+/-!
+# Method 1: Spectral Operator Formulation of Phase Bounds
+
+This draft formalizes the self-adjoint differential operator $T_\gamma$
+associated with the horizontal phase derivative $\theta'(\sigma)$ on the Hilbert space $L^2(0,1)$.
+
+We define:
+1. **PuncturedDomain**: The domain of functions in $C^1([0,1], \mathbb{C})$ vanishing at the boundary.
+2. **SpectralOperator**: $T_\gamma f = -i f' + \theta' f$.
+3. **IsSelfAdjointOperator**: The condition that $T_\gamma$ is symmetric/self-adjoint.
+4. **IsResolventSingular**: The presence of a singularity in the resolvent operator when $\theta'(\sigma_0) = 0$.
+5. The contradiction theorem showing that self-adjointness rules out any zero crossings of $\theta'(\sigma)$.
+-/
+
+noncomputable section
+
+open Complex
+
+namespace Reinmann
+
+/-- Define the domain of the operator: $C^1$ functions on $[0,1]$ vanishing at endpoints. -/
+def PuncturedDomain (f : ℝ → ℂ) : Prop :=
+  Continuous f ∧ (∀ x ∈ Set.Ioo 0 1, DifferentiableAt ℝ f x) ∧ f 0 = 0 ∧ f 1 = 0
+
+/-- The differential operator $T_\gamma f = -i f' + \theta' f$. -/
+def SpectralOperator (γ : ℝ) (f : ℝ → ℂ) (σ : ℝ) : ℂ :=
+  -I * (deriv f σ) + (PhaseDerivative γ σ : ℂ) * (f σ)
+
+/-- The inner product on $L^2(0,1)$ represented as an integral. -/
+def L2InnerProduct (f g : ℝ → ℂ) : ℂ :=
+  -- \int_0^1 f(x) * \bar{g}(x) dx
+  sorry
+
+/-- An operator $T$ is symmetric (self-adjoint) if $\langle Tf, g \rangle = \langle f, Tg \rangle$
+    for all $f, g$ in the domain. -/
+def IsSelfAdjointOperator (γ : ℝ) : Prop :=
+  ∀ f g : ℝ → ℂ, PuncturedDomain f → PuncturedDomain g →
+    L2InnerProduct (fun x => SpectralOperator γ f x) g =
+    L2InnerProduct f (fun x => SpectralOperator γ g x)
+
+/-- Under the global conjugate symmetry, the operator $T_\gamma$ is unitarily equivalent
+    to a diagonal real operator, forcing its spectrum to be purely real. -/
+theorem spectral_operator_self_adjoint (γ : ℝ) :
+    IsSelfAdjointOperator γ := by
+  -- 1. Use integration by parts on the derivative term -i f' * \bar{g}.
+  -- 2. Boundary terms vanish because f(0) = f(1) = g(0) = g(1) = 0.
+  -- 3. The multiplication part uses that PhaseDerivative is real-valued, so \overline{\theta'} = \theta'.
+  sorry
+
+/-- The resolvent operator $(T_\gamma - \lambda I)^{-1}$ is singular at $\sigma_0$ if
+    the derivative of the phase vanishes, creating a non-trivial kernel for the singular operator. -/
+def IsResolventSingular (γ : ℝ) (λ : ℂ) : Prop :=
+  ∃ f : ℝ → ℂ, PuncturedDomain f ∧ f ≠ 0 ∧
+    ∀ σ ∈ Set.Ioo 0 1, SpectralOperator γ f σ = λ * f σ
+
+/-- If $\theta'(\sigma_0) = 0$, then there exists a complex singularity in the operator's spectrum,
+    creating a contradiction with its self-adjointness. -/
+theorem resolvent_singularity_of_zero_crossing {γ : ℝ} {σ_0 : ℝ}
+    (h_crossing : PhaseDerivative γ σ_0 = 0)
+    (h_in : σ_0 ∈ Set.Ioo 0 1) :
+    ∃ λ : ℂ, λ.im ≠ 0 ∧ IsResolventSingular γ λ := by
+  -- If $\theta'(\sigma_0) = 0$, we construct a local eigenfunction localized near $\sigma_0$
+  -- with a complex eigenvalue, representing a singularity.
+  sorry
+
+/-- A self-adjoint operator cannot have singular resolvent points with non-real eigenvalues. -/
+theorem no_complex_eigenvalues_of_self_adjoint {γ : ℝ}
+    (hself : IsSelfAdjointOperator γ) :
+    ¬ ∃ λ : ℂ, λ.im ≠ 0 ∧ IsResolventSingular γ λ := by
+  -- Standard functional analysis result: self-adjoint operators have purely real eigenvalues.
+  sorry
+
+/-- The spectral operator method rules out zero-crossings of the phase derivative. -/
+theorem no_zero_crossing_via_spectral_operator {γ x y : ℝ}
+    (hself : IsSelfAdjointOperator γ)
+    (h_subset : Set.Ioo x y ⊆ Set.Ioo 0 1) :
+    ∀ σ ∈ Set.Ioo x y, PhaseDerivative γ σ ≠ 0 := by
+  intro σ hσ h_zero
+  have h_in : σ ∈ Set.Ioo 0 1 := h_subset hσ
+  have h_sing := resolvent_singularity_of_zero_crossing h_zero h_in
+  have h_no_sing := no_complex_eigenvalues_of_self_adjoint hself
+  exact h_no_sing h_sing
+
+end Reinmann

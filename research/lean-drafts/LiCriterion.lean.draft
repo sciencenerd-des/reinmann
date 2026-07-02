@@ -6,6 +6,7 @@ Authors: Biswajit Mondal
 import Reinmann.TwoBranchArchitecture
 import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
+import Mathlib.Analysis.SpecialFunctions.Gamma.Deligne
 import Mathlib.NumberTheory.Harmonic.EulerMascheroni
 
 /-!
@@ -71,13 +72,37 @@ def completedXi (s : ℂ) : ℂ :=
 
 /-- The completed ξ function is symmetric under s ↦ 1-s -/
 theorem completedXi_symmetry (s : ℂ) : completedXi (1 - s) = completedXi s := by
-  sorry
+  unfold completedXi
+  rw [completedRiemannZeta_one_sub]
+  ring
 
 /-- Zeros of ξ are exactly the nontrivial zeros of ζ -/
 theorem completedXi_zero_iff_zeta_zero_critical {s : ℂ}
     (hstrip : 0 < s.re ∧ s.re < 1) :
     completedXi s = 0 ↔ riemannZeta s = 0 := by
-  sorry
+  have hs0 : s ≠ 0 := by
+    intro h
+    rw [h] at hstrip
+    simp at hstrip
+  have hs1 : s ≠ 1 := by
+    intro h
+    rw [h] at hstrip
+    simp at hstrip
+  have hGamma : Gammaℝ s ≠ 0 := Gammaℝ_ne_zero_of_re_pos hstrip.1
+  unfold completedXi
+  have h_eq : completedRiemannZeta s = Gammaℝ s * riemannZeta s := by
+    have h_zeta := riemannZeta_def_of_ne_zero hs0
+    rw [h_zeta]
+    exact (mul_div_cancel₀ (completedRiemannZeta s) hGamma).symm
+  rw [h_eq]
+  have h_prod : (1 / 2 : ℂ) * s * (s - 1) * Gammaℝ s ≠ 0 := by
+    have h1 : (1 / 2 : ℂ) ≠ 0 := by norm_num
+    have h2 : s - 1 ≠ 0 := sub_ne_zero.mpr hs1
+    refine mul_ne_zero (mul_ne_zero (mul_ne_zero h1 hs0) h2) hGamma
+  have h_rewrite : ((1 / 2 : ℂ) * s * (s - 1)) * (Gammaℝ s * riemannZeta s) =
+      ((1 / 2 : ℂ) * s * (s - 1) * Gammaℝ s) * riemannZeta s := by ring
+  rw [h_rewrite]
+  rw [mul_eq_zero, or_iff_right h_prod]
 
 /-! ### Step 2: Li's Coefficients λ_n -/
 

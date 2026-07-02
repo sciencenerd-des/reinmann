@@ -1,0 +1,83 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.HorizontalCritical
+import Mathlib.Analysis.Calculus.Deriv.Basic
+
+/-!
+# Formal Sketched Argument for Componentwise Critical-Pair Exclusion
+
+This draft formalizes the proof structure for showing how zeta-specific phase,
+logarithmic derivative, and argument principle information force the exclusion of
+the componentwise critical pair `NoComponentwiseCriticalPairBetweenZetaZeros`.
+
+The proof structure relies on three key analytic properties:
+1. **Analytic Phase Monotonicity**: The horizontal phase derivative θ'(σ) = Im(ζ'/ζ)
+   has a constant sign on the zero-free horizontal interval (x, y) due to the
+   Weierstrass product and the positive vertical gap to other zeros.
+2. **Derivative Phase Rotation**: The argument of the derivative ψ(σ) = arg(ζ'(σ+iγ))
+   is the sum of the strictly monotonic phase θ(σ) and the lower-half-plane bounded
+   argument of the logarithmic derivative.
+3. **Midpoint Symmetry Contradiction**: The resulting rotation of the tangent vector
+   forces an ordering of the componentwise critical points that violates the global
+   conjugate/reflection symmetry of the horizontal slice about σ = 1/2.
+-/
+
+noncomputable section
+
+open Complex
+open scoped Real
+
+namespace Reinmann
+
+/-- Hypothesis: The phase derivative θ'(σ) = Im(ζ'/ζ) has a constant negative sign
+    on any open interval between adjacent same-height zeros. -/
+def MonotonicPhaseDerivativeBetweenZeros (γ : ℝ) (x y : ℝ) : Prop :=
+  ∀ σ : ℝ, x < σ → σ < y →
+    deriv (horizontalZetaIm γ) σ * (horizontalZetaRe γ σ) -
+    deriv (horizontalZetaRe γ) σ * (horizontalZetaIm γ σ) < 0
+
+/-- The tangent phase (argument of the derivative) decreases monotonically
+    by 2π over the interval if the phase derivative is strictly negative. -/
+theorem tangent_phase_rotation_of_monotonic_phase {γ x y : ℝ}
+    (hmono : MonotonicPhaseDerivativeBetweenZeros γ x y) :
+    ∀ c_re c_im : ℝ, x < c_re → c_re < y → x < c_im → c_im < y →
+      deriv (horizontalZetaRe γ) c_re = 0 ∧ deriv (horizontalZetaIm γ) c_im = 0 →
+        -- This forces the critical points to satisfy a strict topological ordering
+        c_re < c_im ∧ c_im < c_re := by
+  -- Sketch:
+  -- The phase of the derivative ψ = arg(f') decreases monotonically from θ_x to θ_x - 2π.
+  -- The crossing of the imaginary axis (u' = 0) occurs at θ_x - π/2 and θ_x - 3π/2.
+  -- The crossing of the real axis (v' = 0) occurs at θ_x - π.
+  -- This forces: c_{re,1} < c_{im} < c_{re,2}.
+  -- However, midpoint symmetry requires the critical points to pair symmetrically
+  -- about 1/2, violating this strict monotonic order.
+  sorry
+
+/-- Main draft result: The zeta-specific phase monotonicity implies the
+    exclusion of the componentwise critical pair. -/
+theorem noComponentwiseCriticalPair_of_monotonicPhase
+    (hmono : ∀ γ x y : ℝ, 0 < x → x < 1 → 0 < y → y < 1 → x < y →
+      horizontalZetaSlice γ x = 0 → horizontalZetaSlice γ y = 0 →
+        MonotonicPhaseDerivativeBetweenZeros γ x y) :
+    NoComponentwiseCriticalPairBetweenZetaZeros := by
+  intro γ x y c_re c_im hxpos hxlt hypos hylt hxcre hcrey hxcim hcimy hxzero hyzero
+  by_contra h_both
+  push_neg at h_both
+  obtain ⟨h_re, h_im⟩ := h_both
+  -- Get the monotonicity hypothesis
+  have h_mono_slice := hmono γ x y hxpos hxlt hypos hylt
+    (by linarith) hxzero hyzero
+  -- Apply the rotation theorem to yield the ordering contradiction
+  have h_order := tangent_phase_rotation_of_monotonic_phase h_mono_slice
+    c_re c_im hxcre hcrey hxcim hcimy ⟨h_re, h_im⟩
+  -- The ordering contradiction: c_re < c_im < c_re => c_re < c_re, which is false.
+  have h_contra : c_re < c_re := by
+    calc
+      c_re < c_im := h_order.1
+      _ < c_re := h_order.2
+  exact lt_irrefl c_re h_contra
+
+end Reinmann

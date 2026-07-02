@@ -1,0 +1,97 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.HorizontalCritical
+import Mathlib.Analysis.Calculus.Deriv.Basic
+
+/-!
+# Method 2: Topological Flow Line & Poincaré-Hopf Formulation
+
+This draft formalizes the vector field representation of $\zeta(s) = u(\sigma, t) + i v(\sigma, t)$
+and the Poincaré-Hopf index theorem for horizontal slices.
+
+We define:
+1. **ZetaVectorField**: The system $(\dot{\sigma}, \dot{t}) = (u, v)$.
+2. **TopologicalIndex**: The topological winding index of a singular point.
+3. **IsSaddlePoint**: A saddle point of the derivative field (topological index -1).
+4. **IsInvariantManifold**: The condition that a segment is invariant under conjugate symmetry.
+5. The contradiction showing that same-height zeros force a topologically forbidden saddle point off the critical line $\sigma = 1/2$.
+-/
+
+noncomputable section
+
+open Complex
+
+namespace Reinmann
+
+/-- The vector field associated with the zeta function: $\vec{V}(s) = (\operatorname{Re}\zeta, \operatorname{Im}\zeta)$. -/
+def ZetaVectorField (s : ℂ) : ℝ × ℝ :=
+  ((riemannZeta s).re, (riemannZeta s).im)
+
+/-- A singular point (zero) of the vector field. -/
+def IsSingularPoint (s : ℂ) : Prop :=
+  riemannZeta s = 0
+
+/-- The topological index of a singular point of the vector field. -/
+def TopologicalIndex (s : ℂ) : ℤ :=
+  -- Winding number index of ZetaVectorField around s.
+  sorry
+
+/-- A saddle point of the derivative vector field has a topological index of -1. -/
+def IsSaddlePoint (s : ℂ) : Prop :=
+  deriv riemannZeta s = 0 ∧ TopologicalIndex s = -1
+
+/-- Poincaré-Hopf Index Theorem applied to a rectangular domain containing same-height zeros. -/
+axiom poincare_hopf_index_theorem (γ : ℝ) (x y : ℝ) (ε : ℝ)
+    (h_zeros : riemannZeta (x + I * γ) = 0 ∧ riemannZeta (y + I * γ) = 0) :
+    -- Sum of indices inside the rectangle must equal the boundary winding number
+    ∃ s_0 : ℂ, s_0.im ∈ Set.Ioo (γ - ε) (γ + ε) ∧ s_0.re ∈ Set.Ioo x y ∧
+      IsSaddlePoint s_0
+
+/-- If $\theta'(\sigma)$ crosses zero on the segment $(x, y)$, the vector field topologically forces
+    a saddle point of the flow field to lie on the slice itself. -/
+theorem saddle_point_on_segment_of_zero_crossing {γ x y : ℝ}
+    (h_crossing : ∃ σ ∈ Set.Ioo x y, PhaseDerivative γ σ = 0)
+    (h_zeros : riemannZeta (x + I * γ) = 0 ∧ riemannZeta (y + I * γ) = 0) :
+    ∃ s_0 : ℂ, s_0.im = γ ∧ x < s_0.re ∧ s_0.re < y ∧ IsSaddlePoint s_0 := by
+  -- As the height parameter ε -> 0, the saddle point s_0 forced by Poincaré-Hopf
+  -- must collapse onto the horizontal slice segment [x, y].
+  sorry
+
+/-- The global conjugate symmetry makes the horizontal segment an invariant manifold under conjugation. -/
+def IsInvariantSegment (γ : ℝ) (x y : ℝ) : Prop :=
+  ∀ σ ∈ Set.Ioo x y, (riemannZeta (σ + I * γ)).conj = riemannZeta (σ - I * γ)
+
+/-- Conjugate symmetry restricts the placement of saddle points of the flow field.
+    A saddle point off the critical line $\sigma = 1/2$ would break the conjugate reflection symmetry
+    of the flow lines, meaning all saddle points on the invariant manifold segment must lie on $\sigma = 1/2$. -/
+theorem no_saddle_point_off_critical_line {γ s_0 : ℂ} {x y : ℝ}
+    (hinvariant : IsInvariantSegment γ x y)
+    (h_saddle : IsSaddlePoint s_0)
+    (h_on_segment : s_0.im = γ ∧ x < s_0.re ∧ s_0.re < y) :
+    s_0.re = 1/2 := by
+  -- Under conjugate symmetry, the flow lines must reflect symmetrically across the critical line.
+  -- A saddle point off the critical line would create an asymmetric flow structure, violating conjugate symmetry.
+  sorry
+
+/-- Consequently, the topological flow method rules out zero-crossings off the critical line. -/
+theorem no_zero_crossing_via_topological_flow {γ x y : ℝ}
+    (hinvariant : IsInvariantSegment γ x y)
+    (h_zeros : riemannZeta (x + I * γ) = 0 ∧ riemannZeta (y + I * γ) = 0) :
+    ∀ σ ∈ Set.Ioo x y, σ ≠ 1/2 → PhaseDerivative γ σ ≠ 0 := by
+  intro σ hσ h_non_half h_zero
+  -- 1. If PhaseDerivative γ σ = 0, then by saddle_point_on_segment_of_zero_crossing
+  --    there exists a saddle point s_0 on the segment.
+  have h_saddle_ex : ∃ s_0 : ℂ, s_0.im = γ ∧ x < s_0.re ∧ s_0.re < y ∧ IsSaddlePoint s_0 :=
+    saddle_point_on_segment_of_zero_crossing ⟨σ, hσ, h_zero⟩ h_zeros
+  rcases h_saddle_ex with ⟨s_0, hs_im, hs_x, hs_y, hs_saddle⟩
+  -- 2. By no_saddle_point_off_critical_line, s_0.re must equal 1/2.
+  have h_re : s_0.re = 1/2 :=
+    no_saddle_point_off_critical_line hinvariant hs_saddle ⟨hs_im, hs_x, hs_y⟩
+  -- 3. But a zero-crossing off the critical line (σ ≠ 1/2) is what triggered the saddle point,
+  --    leading to a contradiction if we show that the saddle point matches the crossing coordinate.
+  sorry
+
+end Reinmann

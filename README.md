@@ -5,6 +5,12 @@ not prove the Riemann Hypothesis. The project imports mathlib's formal
 `RiemannHypothesis : Prop` target and verifies only reductions and supporting
 lemmas that Lean can check.
 
+> **Start here:** [`ARCHITECTURE.md`](ARCHITECTURE.md) is the canonical, current
+> map of the codebase — the module inventory, the verified reduction chain, the
+> open three-level frontier, and an explicit "what is and is not proven" table.
+> Run `bash scripts/verify_axiom_clean.sh` to confirm the 0-`sorry` /
+> 0-custom-axiom claim. Historical progress notes live in [`docs/archive/`](docs/archive/).
+
 ## Commands
 
 Fetch dependencies and cached mathlib artifacts:

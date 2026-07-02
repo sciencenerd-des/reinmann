@@ -86,4 +86,51 @@ theorem zeroFreeRightOf_half_iff_riemannHypothesis :
   unfold ZeroFreeRightOf
   exact rightHalfStripZeroFree_iff_riemannHypothesis
 
+/-! ### Threshold bookkeeping -/
+
+/-- Any zero-free region pushed to `b ≤ 1/2` proves RH. This is the exact
+formal threshold the VDP-style program would have to reach. -/
+theorem riemannHypothesis_of_zeroFreeRightOf_le_half {b : ℝ}
+    (hb : b ≤ 1 / 2) (h : ZeroFreeRightOf b) : RiemannHypothesis :=
+  zeroFreeRightOf_half_iff_riemannHypothesis.mp (zeroFreeRightOf_mono hb h)
+
+/-- Conversely, RH supplies every weaker right-half zero-free region
+`ZeroFreeRightOf b` with `1/2 ≤ b`. -/
+theorem zeroFreeRightOf_of_riemannHypothesis {b : ℝ}
+    (hb : 1 / 2 ≤ b) (hrh : RiemannHypothesis) : ZeroFreeRightOf b :=
+  zeroFreeRightOf_mono hb (zeroFreeRightOf_half_iff_riemannHypothesis.mpr hrh)
+
+/-- A zero-free region with boundary at or to the right of `1` is vacuous inside
+the open critical strip. This records why merely proving a boundary-line theorem
+does not move the RH target. -/
+theorem zeroFreeRightOf_of_one_le {b : ℝ} (hb : 1 ≤ b) : ZeroFreeRightOf b := by
+  intro s hb_re hlt _hz
+  linarith
+
+/-- The boundary `b = 1` case is vacuous for `ZeroFreeRightOf`. -/
+theorem zeroFreeRightOf_one : ZeroFreeRightOf 1 :=
+  zeroFreeRightOf_of_one_le le_rfl
+
+/-! ### Approaching the critical line -/
+
+/-- If zero-free regions are available for every boundary strictly to the right
+of the critical line, then RH follows. The proof picks a boundary between
+`1/2` and a hypothetical right-half zero. -/
+theorem riemannHypothesis_of_zeroFreeRightOf_all_gt_half
+    (h : ∀ b : ℝ, 1 / 2 < b → ZeroFreeRightOf b) : RiemannHypothesis := by
+  apply riemannHypothesis_of_rightHalfStripZeroFree
+  intro s hs_half hs_lt hz
+  rcases exists_between hs_half with ⟨b, hb_half, hb_s⟩
+  exact h b hb_half s hb_s hs_lt hz
+
+/-- RH is equivalent to having `ZeroFreeRightOf b` for every `b > 1/2`. This is
+the formal version of "a zero-free boundary can approach the critical line from
+the right." -/
+theorem riemannHypothesis_iff_zeroFreeRightOf_all_gt_half :
+    RiemannHypothesis ↔ ∀ b : ℝ, 1 / 2 < b → ZeroFreeRightOf b := by
+  constructor
+  · intro hrh b hb
+    exact zeroFreeRightOf_of_riemannHypothesis hb.le hrh
+  · exact riemannHypothesis_of_zeroFreeRightOf_all_gt_half
+
 end Reinmann

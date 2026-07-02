@@ -1,1 +1,19 @@
 .lake/
+
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Distribution bundles
+*.zip
+
+# Nested / external repositories (tracked independently, not vendored here)
+alphaproof-nexus-results/

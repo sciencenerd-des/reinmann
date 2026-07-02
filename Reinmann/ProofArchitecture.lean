@@ -78,7 +78,7 @@ theorem main_uniqueness_reduction
 
 /-- The spectral path decomposes: witness → uniqueness → RH. -/
 theorem spectral_path_decomposition (hp : HilbertPolyaWitness) :
-    ∃ huniq : ZeroImUniqueness, ∀ hconj : StripConjugateZeroSymmetry,
+    ∃ _ : ZeroImUniqueness, StripConjugateZeroSymmetry →
       RiemannHypothesis :=
   ⟨hilbertPolya_implies_uniqueness hp,
    fun hconj => uniqueness_implies_rh (hilbertPolya_implies_uniqueness hp) hconj⟩
@@ -142,31 +142,31 @@ theorem offLine_implies_multiplicity (hconj : StripConjugateZeroSymmetry) :
 
 /-- Therefore: ZeroImUniqueness + strip zero-level conjugate symmetry → RH.
     (This is an alias for uniqueness_implies_rh with a descriptive name.) -/
-theorem uniqueness_plus_strip_conjugate_implies_rh :
-    ∀ (huniq : ZeroImUniqueness) (hconj : StripConjugateZeroSymmetry),
-      RiemannHypothesis :=
-  uniqueness_implies_rh
+theorem uniqueness_plus_strip_conjugate_implies_rh
+    (huniq : ZeroImUniqueness) (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis :=
+  uniqueness_implies_rh huniq hconj
 
 /-- Therefore: no same-height zero collision + strip zero-level conjugate
     symmetry → RH. -/
-theorem no_collision_plus_strip_conjugate_implies_rh :
-    ∀ (hno : NoSameImaginaryPartCollision) (hconj : StripConjugateZeroSymmetry),
-      RiemannHypothesis :=
-  riemannHypothesis_of_no_same_imaginary_collision
+theorem no_collision_plus_strip_conjugate_implies_rh
+    (hno : NoSameImaginaryPartCollision) (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_no_same_imaginary_collision hno hconj
 
 /-- Therefore: fiberwise real-coordinate uniqueness + strip zero-level
     conjugation → RH. -/
-theorem fiber_uniqueness_plus_strip_conjugate_implies_rh :
-    ∀ (hfiber : ∀ γ : Real, ZeroFiberRealUnique γ)
-      (hconj : StripConjugateZeroSymmetry),
-      RiemannHypothesis :=
-  riemannHypothesis_of_forall_zeroFiberRealUnique
+theorem fiber_uniqueness_plus_strip_conjugate_implies_rh
+    (hfiber : ∀ γ : Real, ZeroFiberRealUnique γ)
+    (hconj : StripConjugateZeroSymmetry) :
+    RiemannHypothesis :=
+  riemannHypothesis_of_forall_zeroFiberRealUnique hfiber hconj
 
 /-- The older full-conjugate-symmetry formulation remains available. -/
-theorem uniqueness_plus_conjugate_implies_rh :
-    ∀ (huniq : ZeroImUniqueness) (hconj : ConjugateSymmetry),
-      RiemannHypothesis :=
-  uniqueness_implies_rh_of_conjugateSymmetry
+theorem uniqueness_plus_conjugate_implies_rh
+    (huniq : ZeroImUniqueness) (hconj : ConjugateSymmetry) :
+    RiemannHypothesis :=
+  uniqueness_implies_rh_of_conjugateSymmetry huniq hconj
 
 /-! ### Architecture Documentation -/
 
@@ -177,9 +177,8 @@ theorem uniqueness_plus_conjugate_implies_rh :
 
     All three are interconnected and verified. -/
 theorem architecture_is_sound :
-    (∀ hp : HilbertPolyaWitness, RiemannHypothesis) ∧
-    (∀ huniq : ZeroImUniqueness, ∀ hconj : StripConjugateZeroSymmetry,
-      RiemannHypothesis) ∧
+    (HilbertPolyaWitness → RiemannHypothesis) ∧
+    (ZeroImUniqueness → StripConjugateZeroSymmetry → RiemannHypothesis) ∧
     (∀ s : Complex, zetaInvolution (zetaInvolution s) = s) :=
   ⟨riemannHypothesis_of_twoBranchArchitecture,
    uniqueness_implies_rh,
@@ -190,9 +189,8 @@ theorem architecture_is_sound :
 /-- The two gaps are independent: proving either one
     (plus ConjugateSymmetry for uniqueness) yields RH. -/
 theorem gaps_are_alternative_paths :
-    (∀ hp : HilbertPolyaWitness, RiemannHypothesis) ∨
-    (∀ huniq : ZeroImUniqueness, ∀ hconj : StripConjugateZeroSymmetry,
-      RiemannHypothesis) :=
+    (HilbertPolyaWitness → RiemannHypothesis) ∨
+    (ZeroImUniqueness → StripConjugateZeroSymmetry → RiemannHypothesis) :=
   Or.inr uniqueness_implies_rh
 
 /-- Summary: What remains to prove RH via the uniqueness path. -/

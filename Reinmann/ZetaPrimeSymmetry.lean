@@ -103,4 +103,22 @@ its zeros would occur in conjugate pairs. -/
 def SpeiserLeftHalfZeroFree : Prop :=
   ∀ s : ℂ, 0 < s.re → s.re < 1 / 2 → deriv riemannZeta s ≠ 0
 
+/-- **Speiser bridge.** Classically, RH is equivalent to the absence of zeros of
+`ζ′` in the left half of the critical strip.  This is a named external bridge,
+not an axiom and not proved here. -/
+def SpeiserBridge : Prop :=
+  RiemannHypothesis ↔ SpeiserLeftHalfZeroFree
+
+/-- If Speiser's bridge is supplied, the derivative zero-free target proves RH. -/
+theorem riemannHypothesis_of_speiserLeftHalfZeroFree
+    (hbridge : SpeiserBridge) (hspeiser : SpeiserLeftHalfZeroFree) :
+    RiemannHypothesis :=
+  hbridge.mpr hspeiser
+
+/-- If Speiser's bridge is supplied, RH gives the derivative zero-free target. -/
+theorem speiserLeftHalfZeroFree_of_riemannHypothesis
+    (hbridge : SpeiserBridge) (hRH : RiemannHypothesis) :
+    SpeiserLeftHalfZeroFree :=
+  hbridge.mp hRH
+
 end Reinmann

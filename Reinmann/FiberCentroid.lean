@@ -94,4 +94,44 @@ theorem fiber_centroid_eq_half (γ : ℝ) (h : (fiberFinset γ).Nonempty) :
   rw [fiber_sum_re]
   field_simp
 
+/-! ### Cardinality bridge to the energy criterion -/
+
+/-- If a height-fiber has at most one zero, its energy vanishes. The proof uses
+the unconditional centroid identity: a singleton fiber with centroid `1/2` must
+sit on the critical line. -/
+theorem fiberEnergy_eq_zero_of_fiber_card_le_one (γ : ℝ)
+    (hcard : (fiberFinset γ).card ≤ 1) : fiberEnergy γ = 0 := by
+  rw [fiberEnergy_eq_zero_iff]
+  intro s hs
+  have hsF : s ∈ fiberFinset γ := mem_fiberFinset.mpr hs
+  have huniq : ∀ t ∈ fiberFinset γ, t = s := by
+    intro t ht
+    exact (Finset.card_le_one.mp hcard) t ht s hsF
+  have hsum : ∑ x ∈ fiberFinset γ, (x.re - 1 / 2) = s.re - 1 / 2 := by
+    calc
+      ∑ x ∈ fiberFinset γ, (x.re - 1 / 2)
+          = ∑ x ∈ fiberFinset γ, (s.re - 1 / 2) := by
+              refine Finset.sum_congr rfl ?_
+              intro x hx
+              rw [huniq x hx]
+      _ = (fiberFinset γ).card * (s.re - 1 / 2) := by
+              rw [Finset.sum_const, nsmul_eq_mul]
+      _ = 1 * (s.re - 1 / 2) := by
+              have hcard_pos : 0 < (fiberFinset γ).card := Finset.card_pos.mpr ⟨s, hsF⟩
+              have hcard_eq : (fiberFinset γ).card = 1 := by omega
+              rw [hcard_eq]
+              norm_num
+      _ = s.re - 1 / 2 := by ring
+  have hzero := fiber_sum_re_sub_half_eq_zero γ
+  rw [hsum] at hzero
+  linarith
+
+/-- A cardinality version of the uniqueness route: if every height-fiber has at
+most one critical-strip zero, then RH follows. -/
+theorem riemannHypothesis_of_all_fiber_card_le_one
+    (hcard : ∀ γ : ℝ, (fiberFinset γ).card ≤ 1) : RiemannHypothesis := by
+  rw [riemannHypothesis_iff_forall_fiberEnergy_zero]
+  intro γ
+  exact fiberEnergy_eq_zero_of_fiber_card_le_one γ (hcard γ)
+
 end Reinmann

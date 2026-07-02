@@ -217,6 +217,16 @@ theorem xiToeplitzMinor3_nonneg_of_toeplitzTP
   h 3 (xiToeplitzRows3 n) xiToeplitzCols3
     (xiToeplitzRows3_strictMono n) xiToeplitzCols3_strictMono
 
+/-- The first genuinely new finite Toeplitz target beyond the classical
+order-`2` Turán rung. -/
+def XiToeplitzOrder3Positive : Prop :=
+  ∀ n : ℕ, 0 ≤ XiToeplitzMinor3 n
+
+/-- Full Pólya-frequency positivity includes the order-`3` frontier target. -/
+theorem xiToeplitzOrder3Positive_of_toeplitzTP
+    (h : XiToeplitzTotalPositive) : XiToeplitzOrder3Positive :=
+  xiToeplitzMinor3_nonneg_of_toeplitzTP h
+
 /-- Explicit algebraic expansion of the order-`3` signed Toeplitz minor. -/
 theorem xiToeplitzMinor3_eq (n : ℕ) :
     XiToeplitzMinor3 n =
@@ -321,6 +331,15 @@ theorem xiToeplitzMinor2_eq_contig (n : ℕ) :
       show n + 1 + 0 - 0 = n + 1 from rfl, show n + 1 + 1 - 1 = n + 1 from rfl,
       show n + 1 + 0 - 1 = n from rfl, show n + 1 + 1 - 0 = n + 2 from rfl]
   ring
+
+/-- The order-`3` frontier rung is the `k = 3, m = n+2` instance of the general
+contiguous Toeplitz ladder. -/
+theorem xiToeplitzMinor3_eq_contig (n : ℕ) :
+    XiToeplitzMinor3 n = XiToeplitzContigMinor 3 (n + 2) := by
+  unfold XiToeplitzMinor3 XiToeplitzContigMinor xiToeplitzRows3 xiToeplitzCols3
+  congr
+  funext i j
+  fin_cases i <;> fin_cases j <;> rfl
 
 /-! ## The Edrei–ASW bridge and the RH packaging -/
 

@@ -223,6 +223,14 @@ concrete-analytic target on Pólya's kernel `Φ`, ladder-complete. -/
 def momentToeplitzEntry (M : ℕ → ℝ) (i j : ℕ) : ℝ :=
   if j ≤ i then M (i - j) / ((2 * (i - j)).factorial : ℝ) else 0
 
+/-- The factorial-weighted moment sequence that appears in the Toeplitz/PF
+determinants. -/
+def weightedMoment (M : ℕ → ℝ) (n : ℕ) : ℝ :=
+  M n / ((2 * n).factorial : ℝ)
+
+theorem momentToeplitzEntry_sub (M : ℕ → ℝ) (i j : ℕ) (h : j ≤ i) :
+    momentToeplitzEntry M i j = weightedMoment M (i - j) := if_pos h
+
 /-- The order-`k`, offset-`m` factorial-weighted moment Toeplitz minor. -/
 def momentToeplitzContigMinor (M : ℕ → ℝ) (k m : ℕ) : ℝ :=
   (Matrix.of (fun i j : Fin k => momentToeplitzEntry M (m + i.val) j.val)).det
@@ -260,5 +268,82 @@ theorem xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep {M : ℕ → ℝ}
     0 ≤ XiToeplitzContigMinor k m ↔ 0 ≤ momentToeplitzContigMinor M k m := by
   rw [xiToeplitzContigMinor_eq_of_kernelRep hM]
   exact mul_nonneg_iff_of_pos_left (by positivity)
+
+/-! ## The order-`3` frontier as a kernel determinant target -/
+
+/-- Kernel-side form of the first non-Turán frontier target: every order-`3`
+factorial-weighted moment Toeplitz determinant is nonnegative at the xi offsets
+corresponding to `XiToeplitzMinor3`. -/
+def MomentToeplitzOrder3Positive (M : ℕ → ℝ) : Prop :=
+  ∀ n : ℕ, 0 ≤ momentToeplitzContigMinor M 3 (n + 2)
+
+/-- Explicit algebraic expansion of the order-`3` factorial-weighted moment
+Toeplitz determinant.  This is the concrete inequality to attack analytically
+for the first non-Turán rung. -/
+theorem momentToeplitzOrder3_eq (M : ℕ → ℝ) (n : ℕ) :
+    momentToeplitzContigMinor M 3 (n + 2) =
+      weightedMoment M (n + 2) *
+          (weightedMoment M (n + 2) ^ 2
+            - weightedMoment M (n + 1) * weightedMoment M (n + 3))
+        - weightedMoment M (n + 1) *
+          (weightedMoment M (n + 3) * weightedMoment M (n + 2)
+            - weightedMoment M (n + 1) * weightedMoment M (n + 4))
+        + weightedMoment M n *
+          (weightedMoment M (n + 3) ^ 2
+            - weightedMoment M (n + 2) * weightedMoment M (n + 4)) := by
+  unfold momentToeplitzContigMinor
+  rw [Matrix.det_fin_three]
+  simp only [Matrix.of_apply, Fin.val_zero, Fin.val_one]
+  rw [show (2 : Fin 3).val = 2 from rfl,
+      momentToeplitzEntry_sub M (n + 2 + 0) 0 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 1) 1 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 2) 2 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 0) 1 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 1) 2 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 2) 0 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 0) 2 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 1) 0 (by omega),
+      momentToeplitzEntry_sub M (n + 2 + 2) 1 (by omega),
+      show n + 2 + 0 - 0 = n + 2 from rfl,
+      show n + 2 + 1 - 1 = n + 2 from by omega,
+      show n + 2 + 2 - 2 = n + 2 from by omega,
+      show n + 2 + 0 - 1 = n + 1 from by omega,
+      show n + 2 + 1 - 2 = n + 1 from by omega,
+      show n + 2 + 2 - 0 = n + 4 from by omega,
+      show n + 2 + 0 - 2 = n from by omega,
+      show n + 2 + 1 - 0 = n + 3 from by omega,
+      show n + 2 + 2 - 1 = n + 3 from by omega]
+  ring
+
+/-- The order-`3` determinant normalized by the central scale
+`weightedMoment M (n+2)^3`.  Numerically this is the right diagnostic because raw
+determinants shrink at the factorial scale of the xi coefficients. -/
+def normalizedMomentToeplitzOrder3 (M : ℕ → ℝ) (n : ℕ) : ℝ :=
+  momentToeplitzContigMinor M 3 (n + 2) / weightedMoment M (n + 2) ^ 3
+
+/-- The adjacent-ratio expression for the normalized order-`3` determinant. -/
+def momentToeplitzOrder3RatioExpr (M : ℕ → ℝ) (n : ℕ) : ℝ :=
+  let c := weightedMoment M (n + 2)
+  let x := weightedMoment M (n + 1) / c
+  let y := weightedMoment M n / c
+  let z := weightedMoment M (n + 3) / c
+  let w := weightedMoment M (n + 4) / c
+  1 - 2 * x * z - y * w + x ^ 2 * w + y * z ^ 2
+
+/-- Under Pólya's moment representation, the coefficient-side order-`3`
+Toeplitz target is exactly the kernel-side order-`3` determinant target. -/
+theorem xiToeplitzOrder3Positive_iff_moment_of_kernelRep {M : ℕ → ℝ}
+    (hM : ∀ n, XiCoeff n = (-1) ^ n * (2 * M n / ((2 * n).factorial : ℝ))) :
+    XiToeplitzOrder3Positive ↔ MomentToeplitzOrder3Positive M := by
+  unfold XiToeplitzOrder3Positive MomentToeplitzOrder3Positive
+  constructor
+  · intro h n
+    have hminor : 0 ≤ XiToeplitzMinor3 n := h n
+    rwa [xiToeplitzMinor3_eq_contig,
+      xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep hM 3 (n + 2)] at hminor
+  · intro h n
+    have hminor : 0 ≤ momentToeplitzContigMinor M 3 (n + 2) := h n
+    rw [xiToeplitzMinor3_eq_contig]
+    rwa [xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep hM 3 (n + 2)]
 
 end Reinmann

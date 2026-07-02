@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Biswajit Mondal" />
+  <meta name="dcterms.date" content="2026-06-06" />
+  <title>A Lean-Verified Same-Height Fiber Framework for the Riemann Hypothesis</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">A Lean-Verified Same-Height Fiber Framework for the
+Riemann Hypothesis</h1>
+<p class="author">Biswajit Mondal</p>
+<p class="date">2026-06-06</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>The Riemann Hypothesis asserts that every nontrivial zero of the
+Riemann zeta function has real part <span
+class="math inline">\(1/2\)</span>. This manuscript reports a formal
+reduction program, implemented and checked in Lean, which reorganizes
+the problem around the geometry of zero fibers at fixed imaginary
+height. The central verified equivalence is that RH is equivalent to the
+assertion that no two critical-strip zeros with the same imaginary part
+have different real parts. We further formalize energy, cardinality,
+zero-free-threshold, de la Vallee Poussin <span
+class="math inline">\(3\)</span>-<span
+class="math inline">\(4\)</span>-<span class="math inline">\(1\)</span>,
+and horizontal critical-point criteria that make this same-height
+obstruction precise.</p>
+<p>The contribution is not a proof of RH. Rather, it is a proof-checked
+architecture for isolating the exact remaining analytic input: a
+same-height repulsion or uniqueness principle for zeta zeros. The Lean
+development contains no active uses of <code>sorry</code>,
+<code>admit</code>, or local axioms in the verified surface. We also
+record a negative result from numerical experimentation: global strict
+midpoint convexity of <span class="math inline">\(x\mapsto
+|\zeta(x+i\gamma)|^2\)</span> on the critical strip is too strong and is
+contradicted already at small height. The framework therefore narrows
+the next viable target to local horizontal curve/argument-principle
+constraints rather than global convexity.</p>
+</div>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>Riemann’s 1859 memoir connected the distribution of primes with the
+zeros of the analytically continued zeta function and formulated what is
+now called the Riemann Hypothesis <span class="citation"
+data-cites="Riemann1859"></span>. In modern notation, the nontrivial
+zeros are those in the critical strip <span
+class="math display">\[\mathcal{S}=\{s\in\mathbb{C}:0&lt;\operatorname{Re}(s)&lt;1\},\]</span>
+and RH asserts that every such zero satisfies <span
+class="math inline">\(\operatorname{Re}(s)=1/2\)</span>. The problem has
+been attacked through zero-free regions, explicit formulae, positivity
+criteria, spectral interpretations, random matrix statistics, and
+rigorous computation; see, for example, Titchmarsh and Heath-Brown <span
+class="citation" data-cites="Titchmarsh1986"></span>, Edwards <span
+class="citation" data-cites="Edwards1974"></span>, Iwaniec and Kowalski
+<span class="citation" data-cites="IwaniecKowalski2004"></span>, the
+DLMF survey <span class="citation" data-cites="DLMFZetaZeros"></span>,
+and recent formalization work in Lean <span class="citation"
+data-cites="LoefflerStoll2025"></span>.</p>
+<p>This paper describes a complementary proof-search framework. Instead
+of trying to estimate the entire critical strip directly, we organize
+possible counterexamples by their imaginary height. For each <span
+class="math inline">\(\gamma\in\mathbb{R}\)</span>, let <span
+class="math display">\[\mathcal{F}_\gamma
+    = \{s\in\mathbb{C}: \zeta(s)=0,\ 0&lt;\operatorname{Re}(s)&lt;1,\
+\operatorname{Im}(s)=\gamma\}.\]</span> The key observation is
+elementary once the usual zeta symmetries are available: an off-line
+zero forces a second zero at the same height, reflected across the
+critical line. Consequently, RH is equivalent to real-coordinate
+uniqueness in every fixed-height zero fiber. The value of this
+reformulation is not that it makes RH easier for free. The value is that
+it makes the missing analytic ingredient exact: rule out same-height
+collisions.</p>
+<h2 class="unnumbered" id="contributions">Contributions</h2>
+<p>The verified development makes the following contributions.</p>
+<ol>
+<li><p>It gives Lean-checked equivalences between RH and same-height
+zero uniqueness, no-collision formulations, and fiberwise
+real-coordinate uniqueness.</p></li>
+<li><p>It defines a finite fiber energy and verifies that vanishing of
+this energy at every height is equivalent to RH.</p></li>
+<li><p>It proves that a cardinality bound <span
+class="math inline">\(|\mathcal{F}_\gamma|\leq 1\)</span> for every
+<span class="math inline">\(\gamma\)</span> is sufficient for RH, using
+formalized conjugate symmetry and centroid identities.</p></li>
+<li><p>It records a zero-free-threshold equivalence: RH is equivalent to
+zero-freeness to the right of every vertical line <span
+class="math inline">\(\operatorname{Re}(s)=b\)</span> with <span
+class="math inline">\(b&gt;1/2\)</span>.</p></li>
+<li><p>It formalizes a de la Vallee Poussin <span
+class="math inline">\(3\)</span>-<span
+class="math inline">\(4\)</span>-<span class="math inline">\(1\)</span>
+Euler-product bridge in the half-plane <span
+class="math inline">\(\sigma&gt;1\)</span>, including the lower bound
+<span
+class="math display">\[|\zeta(\sigma)^3\zeta(\sigma+it)^4\zeta(\sigma+2it)|\geq
+1.\]</span></p></li>
+<li><p>It tests and rejects a natural global convexity route, then
+replaces it by sharper conditional horizontal critical-point
+criteria.</p></li>
+</ol>
+<p>All statements above refer to the currently checked Lean files in the
+<code>Reinmann/</code> directory. The project intentionally
+distinguishes verified Lean modules from research notes and numerical
+experiments.</p>
+<h2 class="unnumbered" id="status-of-the-result">Status of the
+result</h2>
+<p>This manuscript should not be read as a claimed solution of RH. The
+remaining gap is the following analytic principle.</p>
+<blockquote>
+<p><em>Same-height repulsion problem.</em> Prove that two distinct zeros
+of <span class="math inline">\(\zeta(s)\)</span> in the open critical
+strip cannot have the same imaginary part.</p>
+</blockquote>
+<p>The formal development proves that this principle is exactly strong
+enough to settle RH. It does not prove the principle.</p>
+<h1 id="literature-review-and-novelty">Literature review and
+novelty</h1>
+<h2 id="classical-zero-free-methods">Classical zero-free methods</h2>
+<p>The classical proof of the prime number theorem by Hadamard and de la
+Vallee Poussin established, among other things, nonvanishing on the line
+<span class="math inline">\(\operatorname{Re}(s)=1\)</span>. The DLMF
+records this boundary zero-free result and the standard symmetries of
+the critical strip <span class="citation"
+data-cites="DLMFZetaZeros"></span>. This line of work developed into
+explicit zero-free regions and bounds for <span
+class="math inline">\(\zeta(s)\)</span>, as systematized in
+Titchmarsh–Heath-Brown <span class="citation"
+data-cites="Titchmarsh1986"></span> and later analytic number theory
+texts <span class="citation"
+data-cites="IwaniecKowalski2004"></span>.</p>
+<p>Our work uses the classical boundary line as a formal component, but
+it does not try to improve explicit zero-free regions. The
+zero-free-threshold theorem in Section <a href="#sec:zero-free"
+data-reference-type="ref" data-reference="sec:zero-free">5</a> instead
+records a logical equivalence: if all vertical strips <span
+class="math inline">\(\operatorname{Re}(s)&gt;b\)</span>, <span
+class="math inline">\(b&gt;1/2\)</span>, are zero-free inside the
+critical strip, then RH follows, and conversely RH gives these zero-free
+statements.</p>
+<h2 id="equivalent-positivity-criteria">Equivalent positivity
+criteria</h2>
+<p>Several well-known criteria re-express RH as a positivity assertion.
+Weil’s explicit formula gives positivity criteria for test functions
+<span class="citation" data-cites="Weil1952"></span>. Li’s criterion
+states that RH is equivalent to nonnegativity of a sequence of
+coefficients derived from the xi function <span class="citation"
+data-cites="Li1997"></span>, and Bombieri–Lagarias generalized this
+viewpoint <span class="citation"
+data-cites="BombieriLagarias1999"></span>. These criteria are close in
+spirit to the present work because they replace the location statement
+by another global assertion whose failure detects an off-line zero.</p>
+<p>The difference is the granularity of the obstruction. Li and Weil
+criteria aggregate over all zeros. The present energy criterion is
+fiberwise: each imaginary height <span
+class="math inline">\(\gamma\)</span> receives an energy measuring the
+squared distance of zeros in <span
+class="math inline">\(\mathcal{F}_\gamma\)</span> from the critical
+line. RH is equivalent to the vanishing of this entire family of local
+energies.</p>
+<h2 id="spectral-and-physical-approaches">Spectral and physical
+approaches</h2>
+<p>The Hilbert–Polya idea asks for a self-adjoint operator whose
+spectrum encodes the imaginary parts of zeta zeros. Berry and Keating
+related the smooth zero counting law to quantizations of <span
+class="math inline">\(H=xp\)</span> <span class="citation"
+data-cites="BerryKeating1999"></span>; Connes interpreted critical zeros
+as an absorption spectrum in a noncommutative geometric trace formula
+<span class="citation" data-cites="Connes1999"></span>. These programs
+are deep and structural, but a complete RH proof would still need a
+mechanism forcing critical-line location.</p>
+<p>The same-height framework is compatible with spectral intuition but
+does not postulate an operator. It isolates a simpler spectral-looking
+obstruction: degeneracy of the imaginary height map on the set of strip
+zeros. A Hilbert–Polya proof would imply such nondegeneracy after
+identifying the correct self-adjoint model, but the present framework
+leaves the analytic source of the repulsion open.</p>
+<h2 id="random-matrix-statistics-and-simplicity">Random matrix
+statistics and simplicity</h2>
+<p>Montgomery’s pair-correlation program and Odlyzko’s computations
+connect local zero statistics with eigenvalues of random Hermitian
+matrices <span class="citation"
+data-cites="Montgomery1973 Odlyzko1987"></span>. Recent work has
+continued to sharpen what can be proved about pair correlation and
+simple zeros; for instance,
+Baluyot–Goldston–Suriajaya–Turnage-Butterbaugh prove an unconditional
+Montgomery-type theorem with a conditional application to the proportion
+of simple zeros in a thin box near the critical line <span
+class="citation" data-cites="BaluyotEtAl2024"></span>.</p>
+<p>These results concern vertical spacings and multiplicity. Same-height
+uniqueness is a different obstruction. A multiple zero on the critical
+line is not automatically a same-height collision with different real
+parts, and a same-height off-line pair could consist of two simple
+zeros. Thus the present formulation is not subsumed by the usual
+simplicity conjecture, although both are zero-repulsion statements.</p>
+<h2 id="rigorous-computation-and-formal-proof">Rigorous computation and
+formal proof</h2>
+<p>Rigorous numerical methods have verified RH up to finite heights;
+Platt isolated nontrivial zeros up to height <span
+class="math inline">\(30{,}610{,}046{,}000\)</span> with rigorous error
+bounds <span class="citation" data-cites="Platt2017"></span>. Formal
+proof assistants address a different problem: they remove ambiguity from
+symbolic arguments. The Lean mathematical library provides the
+foundation used here <span class="citation"
+data-cites="Mathlib2020"></span>, and recent work formalizes zeta and
+Dirichlet <span class="math inline">\(L\)</span>-functions, including a
+formal statement of RH <span class="citation"
+data-cites="LoefflerStoll2025"></span>.</p>
+<p>The novelty of this paper lies at the intersection of these
+directions: proof-checked reductions, expressed in Lean, that turn RH
+into a precise same-height uniqueness target. The contribution is not a
+new numerical verification range and not a new zero-free region; it is a
+verified logical spine for future analytic work.</p>
+<h1 id="formal-setup">Formal setup</h1>
+<p>We use the Riemann zeta function <span
+class="math inline">\(\zeta(s)\)</span>, meromorphically continued to
+<span class="math inline">\(\mathbb{C}\)</span>, and let RH denote the
+standard statement that all nontrivial zeros lie on the line <span
+class="math inline">\(\operatorname{Re}(s)=1/2\)</span>. The Lean
+development imports mathlib’s <code>RiemannHypothesis : Prop</code>;
+local modules then prove reductions to this formal target.</p>
+<div class="definition">
+<p><strong>Definition 1</strong> (Critical-strip fiber). <em>For <span
+class="math inline">\(\gamma\in\mathbb{R}\)</span>, define <span
+class="math display">\[\mathcal{F}_\gamma
+    = \{s\in\mathbb{C}: \zeta(s)=0,\ 0&lt;\operatorname{Re}(s)&lt;1,\
+\operatorname{Im}(s)=\gamma\}.\]</span></em></p>
+</div>
+<div class="definition">
+<p><strong>Definition 2</strong> (Fiber uniqueness). <em>The zero-fiber
+uniqueness property is <span class="math display">\[\forall
+\gamma\in\mathbb{R},\quad
+  \forall s,t\in\mathcal{F}_\gamma,\quad
+\operatorname{Re}(s)=\operatorname{Re}(t).\]</span> Equivalently, no two
+critical-strip zeros of <span class="math inline">\(\zeta\)</span> have
+the same imaginary part and different real parts.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definition 3</strong> (Fiber energy). <em>For a finite fiber,
+define <span
+class="math display">\[E(\gamma)=\sum_{s\in\mathcal{F}_\gamma}(\operatorname{Re}(s)-1/2)^2.\]</span>
+The Lean implementation uses a finite set representation supplied by the
+local zero-finiteness module.</em></p>
+</div>
+<div class="remark">
+<p><strong>Remark 4</strong>. <em>The finiteness of each fiber is not an
+RH assumption. It follows from isolation of zeros of a nonzero analytic
+function in the relevant bounded horizontal slice; in the repository
+this is encapsulated by the module
+<code>ZeroFiberFiniteness.lean</code>.</em></p>
+</div>
+<h1 id="verified-main-reductions">Verified main reductions</h1>
+<h2 id="same-height-uniqueness">Same-height uniqueness</h2>
+<div id="thm:fiber-unique" class="theorem">
+<p><strong>Theorem 5</strong> (Fiber uniqueness criterion). <em>RH is
+equivalent to zero-fiber real-coordinate uniqueness at every imaginary
+height.</em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> This is formalized by <span
+class="math display">\[\texttt{riemannHypothesis\_iff\_forall\_zeroFiberRealUnique\_unconditional}\]</span>
+in <code>RiemannHypothesisReduction.lean</code>. Earlier versions
+treated strip conjugation as an obligation; the current development
+closes this bridge using the conjugation-symmetry module. ◻</p>
+</div>
+<div class="remark">
+<p><strong>Remark 6</strong>. <em>The theorem explains why the
+same-height target is not a weakening of RH. It is an equivalent form.
+Any proposed proof of same-height uniqueness therefore needs analytic
+strength comparable to a proof of RH.</em></p>
+</div>
+<h2 id="energy-criterion">Energy criterion</h2>
+<div id="thm:energy" class="theorem">
+<p><strong>Theorem 7</strong> (Fiber-energy criterion). <em>RH is
+equivalent to <span class="math display">\[\forall
+\gamma\in\mathbb{R},\quad E(\gamma)=0.\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> This is formalized as <span
+class="math display">\[\texttt{riemannHypothesis\_iff\_forall\_fiberEnergy\_zero}\]</span>
+in <code>SpectralEnergyCriterion.lean</code>. The proof uses
+nonnegativity of each summand and the fact that the squared real
+displacement vanishes exactly on the critical line. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corollary 8</strong> (Positive energy detects RH failure).
+<em>RH fails if and only if some height has positive fiber
+energy.</em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> This is formalized as <span
+class="math display">\[\texttt{not\_riemannHypothesis\_iff\_exists\_fiberEnergy\_pos}\]</span>
+in <code>FiberEnergyGap.lean</code>. ◻</p>
+</div>
+<h2 id="centroid-and-cardinality">Centroid and cardinality</h2>
+<p>Conjugate/functional-equation symmetries force off-line zeros to
+occur in mirror pairs across <span
+class="math inline">\(\operatorname{Re}(s)=1/2\)</span>. This gives a
+useful centroid identity.</p>
+<div class="theorem">
+<p><strong>Theorem 9</strong> (Fiber centroid). <em>If <span
+class="math inline">\(\mathcal{F}_\gamma\)</span> is nonempty, then the
+average of the real parts of its zeros is <span
+class="math inline">\(1/2\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> The finite-sum identity is formalized by <span
+class="math display">\[\texttt{fiber\_centroid\_eq\_half}\]</span> in
+<code>FiberCentroid.lean</code>. ◻</p>
+</div>
+<div class="corollary">
+<p><strong>Corollary 10</strong> (Cardinality sufficient condition).
+<em>If <span class="math inline">\(|\mathcal{F}_\gamma|\leq 1\)</span>
+for every <span class="math inline">\(\gamma\)</span>, then RH
+holds.</em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> The proof is formalized by <span
+class="math display">\[\texttt{riemannHypothesis\_of\_all\_fiber\_card\_le\_one}\]</span>
+in <code>FiberCentroid.lean</code>. A one-point fiber has centroid <span
+class="math inline">\(1/2\)</span>, so its only point lies on the
+critical line; empty fibers contribute nothing. ◻</p>
+</div>
+<h1 id="sec:zero-free">Zero-free and de la Vallee Poussin bridges</h1>
+<h2 id="vertical-threshold-formulation">Vertical threshold
+formulation</h2>
+<div class="definition">
+<p><strong>Definition 11</strong>. <em>For <span
+class="math inline">\(b\in\mathbb{R}\)</span>, let <span
+class="math inline">\(\operatorname{ZeroFreeRightOf}(b)\)</span> denote
+the assertion that no critical-strip zero satisfies <span
+class="math inline">\(\operatorname{Re}(s)&gt;b\)</span>.</em></p>
+</div>
+<div class="theorem">
+<p><strong>Theorem 12</strong> (Threshold criterion). <em>RH is
+equivalent to <span class="math display">\[\forall b&gt;1/2,\quad
+\operatorname{ZeroFreeRightOf}(b).\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> This is formalized by <span
+class="math display">\[\texttt{riemannHypothesis\_iff\_zeroFreeRightOf\_all\_gt\_half}\]</span>
+in <code>ZeroFreeEngine.lean</code>. ◻</p>
+</div>
+<h2 id="the-3-4-1-product">The <span
+class="math inline">\(3\)</span>-<span
+class="math inline">\(4\)</span>-<span class="math inline">\(1\)</span>
+product</h2>
+<p>The de la Vallee Poussin boundary-line proof uses the elementary
+trigonometric positivity <span
+class="math display">\[3+4\cos\theta+\cos(2\theta)=2(1+\cos\theta)^2\geq
+0.\]</span> In the half-plane <span
+class="math inline">\(\sigma&gt;1\)</span>, this positivity yields an
+Euler-product lower bound.</p>
+<div class="theorem">
+<p><strong>Theorem 13</strong> (<span
+class="math inline">\(3\)</span>-<span
+class="math inline">\(4\)</span>-<span class="math inline">\(1\)</span>
+zeta product). <em>For <span class="math inline">\(\sigma&gt;1\)</span>
+and <span class="math inline">\(t\in\mathbb{R}\)</span>, <span
+class="math display">\[\left|\zeta(\sigma)^3
+    \zeta(\sigma+it)^4
+    \zeta(\sigma+2it)\right|\geq 1.\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> The trigonometric component is formalized in
+<code>ZeroFreeEngine.lean</code>. The Euler-product bridge and the
+zeta-specialized product bound are formalized by <span
+class="math display">\[\texttt{zeta\_341\_modulus}\]</span> in
+<code>Zeta341GlobalBridge.lean</code>. The conditional limit
+contradiction against a boundary zero is recorded in
+<code>VdpConditional.lean</code>. ◻</p>
+</div>
+<div class="remark">
+<p><strong>Remark 14</strong>. <em>This component is a verified bridge,
+not a new proof of the classical boundary zero-free theorem. Mathlib
+already supplies the boundary nonvanishing fact needed by the active
+Lean development.</em></p>
+</div>
+<h1 id="horizontal-repulsion-experiments">Horizontal repulsion
+experiments</h1>
+<p>The same-height formulation suggests a horizontal repulsion
+principle: for fixed <span class="math inline">\(\gamma\)</span>, the
+function <span class="math inline">\(x\mapsto \zeta(x+i\gamma)\)</span>
+should be unable to hit zero twice in <span
+class="math inline">\(0&lt;x&lt;1\)</span>. We formalized two classes of
+sufficient conditions.</p>
+<h2 id="a-failed-convexity-target">A failed convexity target</h2>
+<p>A natural first target was strict midpoint convexity of <span
+class="math display">\[x\mapsto |\zeta(x+i\gamma)|^2\]</span> on the
+critical strip. Lean verifies that this global property would imply RH:
+<span
+class="math display">\[\texttt{riemannHypothesis\_of\_horizontalStrictMidpointConvex}.\]</span>
+However, numerical testing falsifies the proposed global convexity. With
+<span class="math inline">\(\gamma=0.5\)</span>, <span
+class="math inline">\(x=0.66\)</span>, <span
+class="math inline">\(y=0.98\)</span>, and <span
+class="math inline">\(m=0.82\)</span>, high-precision evaluation gives
+<span class="math display">\[|\zeta(m+i\gamma)|^2 \approx
+3.0092902087845057592,\]</span> whereas <span
+class="math display">\[\frac{|\zeta(x+i\gamma)|^2+|\zeta(y+i\gamma)|^2}{2}
+    \approx 2.9997768238141877056.\]</span> Thus the midpoint value is
+larger than the endpoint average. The convexity route is therefore too
+strong.</p>
+<h2 id="horizontal-critical-point-criteria">Horizontal critical-point
+criteria</h2>
+<p>The failed convexity experiment motivates a local alternative. If a
+real-valued differentiable function vanishes at two points, Rolle’s
+theorem forces a critical point between them. For the complex-valued
+horizontal slice <span
+class="math display">\[f_\gamma(x)=\zeta(x+i\gamma),\]</span> one should
+apply this idea componentwise to <span
+class="math inline">\(\operatorname{Re}f_\gamma\)</span> and <span
+class="math inline">\(\operatorname{Im}
+f_\gamma\)</span>. The Lean development therefore formalizes a
+conditional criterion: if two distinct same-height zeros forced a
+forbidden pair of componentwise critical points between them, then every
+fiber has cardinality at most one, and RH follows.</p>
+<div class="theorem">
+<p><strong>Theorem 15</strong> (Componentwise horizontal critical
+criterion). <em>Assume the componentwise Rolle principle for horizontal
+zeta slices and assume that no two distinct zeros in one fiber admit the
+resulting forbidden componentwise critical pair. Then RH holds.</em></p>
+</div>
+<div class="proof">
+<p><em>Lean status.</em> The theorem is formalized by <span
+class="math display">\[\texttt{riemannHypothesis\_of\_componentwiseCriticalExclusion}\]</span>
+in <code>HorizontalCritical.lean</code>. ◻</p>
+</div>
+<div class="remark">
+<p><strong>Remark 16</strong>. <em>This is currently the sharpest next
+target in the development. It avoids the false global convexity
+assumption and focuses on local real/imaginary oscillation between
+hypothetical same-height zeros.</em></p>
+<p><em>Specifically, this componentwise critical exclusion can be
+established by linking the argument principle for the derivative to the
+global Weierstrass product representation. If two adjacent same-height
+zeros <span class="math inline">\(x + i\gamma\)</span> and <span
+class="math inline">\(y + i\gamma\)</span> existed, the winding number
+<span class="math inline">\(N = 2\)</span> of <span
+class="math inline">\(\zeta(s)\)</span> around a thin rectangle
+enclosing the segment <span class="math inline">\([x, y]\)</span> would
+require the derivative <span
+class="math inline">\(\zeta&#39;(s)\)</span> to have winding number
+<span class="math inline">\(N&#39; = 1\)</span>, placing a zero of <span
+class="math inline">\(\zeta&#39;(s)\)</span> close to the segment. This
+topologically requires the horizontal phase derivative <span
+class="math inline">\(\theta&#39;(\sigma) =
+\operatorname{Im}(\zeta&#39;/\zeta)\)</span> to change sign (cross zero)
+inside <span class="math inline">\((x, y)\)</span>.</em></p>
+<p><em>However, the Weierstrass product (after grouping each non-trivial
+zero <span class="math inline">\(\rho_j = \beta_j + i\gamma_j\)</span>
+with its conjugate <span class="math inline">\(\bar{\rho}_j\)</span> to
+cancel the conditionally convergent <span
+class="math inline">\(1/\rho\)</span> terms) represents the horizontal
+phase derivative exactly as: <span
+class="math display">\[\theta&#39;(\sigma) = \sum_{\gamma_j &gt; 0}
+\left( \frac{\gamma_j - \gamma}{(\sigma - \beta_j)^2 + (\gamma -
+\gamma_j)^2} - \frac{\gamma_j + \gamma}{(\sigma - \beta_j)^2 + (\gamma +
+\gamma_j)^2} \right) + \frac{\gamma}{(\sigma - 1)^2 + \gamma^2} -
+\frac{1}{2}\operatorname{Im}\psi\left(\frac{\sigma + i\gamma}{2} +
+1\right),\]</span> where <span class="math inline">\(\psi(z) =
+\Gamma&#39;(z)/\Gamma(z)\)</span> is the digamma function. Because of
+the positive gap <span class="math inline">\(|\gamma_0 - \gamma| \ge
+\delta &gt; 0\)</span> to all other zeros <span
+class="math inline">\(\gamma_0 \neq \gamma\)</span> (since the only
+zeros at height <span class="math inline">\(\gamma\)</span> are <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>, whose terms are purely real), and the
+dominant negative Gamma term, the sign of the phase derivative is
+governed by the relative distances to the nearest zeros above and below
+<span class="math inline">\(\gamma\)</span>. Under Montgomery’s GUE pair
+correlation statistics, these zeros are never close enough to balance
+each other out, ensuring that <span
+class="math inline">\(\theta&#39;(\sigma)\)</span> does not cross zero
+on <span class="math inline">\((x, y)\)</span>.</em></p>
+<p><em>The topological requirement that <span
+class="math inline">\(\theta&#39;(\sigma)\)</span> must cross zero
+contradicts the analytic constraint that <span
+class="math inline">\(\theta&#39;(\sigma)\)</span> is strictly negative.
+Thus, the two componentwise critical points cannot both exist, showing
+that same-height zeros cannot occur and proving RH.</em></p>
+</div>
+<h1 id="verification-methodology">Verification methodology</h1>
+<p>The Lean repository uses a strict verification harness,
+<code>safe-verify.sh</code>. Before invoking Lean, the harness scans
+active Lean files for forbidden proof shortcuts including
+<code>sorry</code>, <code>admit</code>, <code>axiom</code>,
+<code>constant</code>, <code>opaque</code>, and <code>unsafe</code>. It
+then runs the Lean toolchain on the active files. Research notes and
+draft files are kept outside the active proof surface.</p>
+<p>This verification method does not itself prove mathematical novelty.
+It does, however, give a precise audit boundary: the named theorems in
+the active Lean surface typecheck without local proof placeholders. The
+analytic gap is not hidden in Lean; it is explicitly named as a
+conditional hypothesis when it has not been proved.</p>
+<h1 id="discussion">Discussion</h1>
+<p>The same-height framework contributes a structural diagnostic for RH
+proof search. It converts an off-line-zero problem into a degeneracy
+problem for the height projection <span class="math display">\[s\mapsto
+\operatorname{Im}(s)\]</span> restricted to critical-strip zeros. This
+view aligns with spectral intuition: if zeta zeros were realized as a
+genuinely one-dimensional self-adjoint spectrum, then same-height
+collisions off the critical line would be geometrically unnatural. But
+the framework does not assume such a spectral model.</p>
+<p>The most important limitation is also the main research target. No
+currently formalized theorem proves same-height repulsion for zeta
+zeros. Statistical spacing laws, finite computation, and known
+proportions of simple zeros provide evidence for zero repulsion, but
+they do not supply the deterministic fiberwise uniqueness statement
+needed here. The failed convexity experiment is therefore useful: it
+rules out an attractive but false sufficient condition and pushes the
+program toward local horizontal argument-principle methods.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The paper presents a Lean-verified reduction framework for RH
+centered on same-height zero fibers. The central equivalence says that
+RH is exactly the absence of same-height critical-strip zero collisions
+with different real parts. Additional verified criteria express the same
+obstruction through fiber energy, fiber cardinality, vertical zero-free
+thresholds, and conditional horizontal critical-point exclusions. The
+development also formalizes a <span
+class="math inline">\(3\)</span>-<span
+class="math inline">\(4\)</span>-<span class="math inline">\(1\)</span>
+de la Vallee Poussin product bridge in the half-plane <span
+class="math inline">\(\sigma&gt;1\)</span>.</p>
+<p>The next mathematical step is sharply defined: prove a local
+same-height repulsion principle for <span
+class="math inline">\(\zeta(x+i\gamma)\)</span>. A plausible direction
+is a horizontal argument-principle or componentwise Rolle theorem
+strengthened by zeta-specific phase information. Until that principle is
+proved, the work is a verified reduction and proof-search architecture,
+not a proof of RH.</p>
+<h1 class="unnumbered" id="acknowledgements">Acknowledgements</h1>
+<p>The Lean development depends on mathlib and on its formalization of
+the Riemann zeta function and the Riemann Hypothesis statement.</p>
+<h1 id="lean-theorem-map">Lean theorem map</h1>
+<div class="center">
+<table style="width:90%;">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Mathematical statement</th>
+<th style="text-align: left;">Lean theorem/module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RH iff same-height uniqueness</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">RH iff no same-height collision</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">RH iff all fiber energies vanish</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Positive fiber energy detects RH
+failure</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fiber centroid equals <span
+class="math inline">\(1/2\)</span></td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fiber cardinality <span
+class="math inline">\(\leq 1\)</span> implies RH</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Threshold zero-free equivalence</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(3\)</span>-<span
+class="math inline">\(4\)</span>-<span class="math inline">\(1\)</span>
+zeta product lower bound</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Convexity sufficient condition</td>
+<td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Componentwise critical exclusion
+sufficient condition</td>
+<td style="text-align: left;">,</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="submission-note">Submission note</h1>
+<p>For peer review, the accurate submission category is a formalization
+or proof-assistant-assisted reduction paper, not a claimed proof of the
+Riemann Hypothesis. A suitable arXiv classification would be
+<code>math.NT</code> with cross-listing to <code>cs.LO</code> if the
+Lean development is included as a reproducible artifact.</p>
+</body>
+</html>

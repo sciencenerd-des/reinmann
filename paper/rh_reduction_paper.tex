@@ -39,7 +39,7 @@
 \title{\bfseries A Machine-Checked Reduction of the Riemann Hypothesis to
 Pólya--Frequency Positivity of the $\xi$ Taylor Coefficients}
 
-\author{Biswajit Mondal}
+\author{Biswajit Mondal\thanks{Corresponding author: \texttt{b.mondal0000@gmail.com}}}
 \date{June 7, 2026}
 
 \begin{document}
@@ -412,6 +412,23 @@ The verified contribution is a correct, tight, axiom-clean \emph{reduction} of R
 to an explicit positivity statement, plus an independent operator reduction, a
 repaired target-function error, and numerical evidence. RH itself remains open, as
 stated throughout.
+
+\section*{Disclosure of AI-assisted tools}
+In preparing this work the author used large language model assistants---OpenAI
+GPT-5.5 and Anthropic Claude Opus 4.8---for drafting and editing of exposition,
+literature triage, code scaffolding for the numerical scripts, and consistency
+checking of the manuscript. These tools were used strictly as assistance under the
+author's direction. They are not authors and bear no responsibility for the work:
+all mathematical statements, the Lean~4 formalization and its axiom audit, the
+high-precision numerical computations, and the final text were specified, checked,
+and verified by the author, who takes full and sole responsibility for the content,
+including any errors. No claim of correctness rests on the AI tools; every
+``verified'' result is established by the Lean kernel and the
+\code{scripts/safe-verify.sh} discipline as described in the text.
+
+\section*{Acknowledgements}
+The author thanks the Lean and Mathlib communities for the formal-mathematics
+infrastructure on which this development depends.
 
 \begin{thebibliography}{99}
 \bibitem{Riemann1859} B.~Riemann, \emph{Ueber die Anzahl der Primzahlen unter einer

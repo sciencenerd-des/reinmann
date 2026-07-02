@@ -27,6 +27,7 @@ import Reinmann.XiPlanePrincipalValue
 import Reinmann.XiTotalPositivity
 import Reinmann.XiToeplitzPositivity
 import Reinmann.XiMomentKernel
+import Reinmann.Order3Certificate
 import Reinmann.CrossFieldBridges
 import Reinmann.RHTheoremTargets
 import Reinmann.RHReductionCapstone
@@ -45,4 +46,5 @@ import Reinmann.HilbertPolyaConstruction
 import Reinmann.HilbertPolyaConverse
 import Reinmann.InfiniteHilbertPolya
 import Reinmann.RHAttackBridges
+import Reinmann.LiCriterion
 import Reinmann.ProofArchitecture

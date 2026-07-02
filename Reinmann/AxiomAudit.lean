@@ -6,6 +6,8 @@ Authors: Biswajit Mondal
 import Reinmann.ProofArchitecture
 import Reinmann.RHReductionCapstone
 import Reinmann.RHTheoremTargets
+import Reinmann.LiCriterion
+import Reinmann.Order3Certificate
 
 /-!
 # Axiom Audit
@@ -46,5 +48,14 @@ namespace Reinmann.AxiomAudit
 -- and the RH ↔ PF-positivity equivalence that shows why the input cannot be axiomatized.
 #print axioms riemannHypothesis_of_pf_and_classical_inputs
 #print axioms xiToeplitzTotalPositive_iff_riemannHypothesis
+
+-- Frontier advance (Phase 4): the Li-criterion route and the order-3 certificate
+-- fragment. Both isolate their open analytic content in named `Prop` hypotheses.
+#print axioms li_criterion_iff_rh
+#print axioms riemannHypothesis_of_liCriterion
+#print axioms completedXi_symmetry
+#print axioms momentToeplitzOrder3Positive_of_prefix_and_tail
+#print axioms order3DetExpr_pos_certificate
+#print axioms momentToeplitzContigMinor_eq_order3DetExpr
 
 end Reinmann.AxiomAudit

@@ -102,6 +102,7 @@ namespace Reinmann.AxiomAudit
 #print axioms schurSzegoComposition_two_hyperbolic_of_discriminant
 #print axioms hermitePoulainSchurSzego_two_of_coeff_discriminants
 #print axioms jensenPoly_two_hyperbolic_as_schurSzego
+#print axioms schurSzegoComposition_three_one_add_X_pow_hyperbolic
 #print axioms polynomialRootsSameSign_one_add_X_pow
 #print axioms jensenCoeffPoly_coeff
 #print axioms hermitePoulainSchurSzego_one

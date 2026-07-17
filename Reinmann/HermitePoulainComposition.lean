@@ -376,4 +376,17 @@ theorem jensenPoly_two_hyperbolic_as_schurSzego
   rw [← JensenPoly_eq_schurSzego_one_add_X_pow]
   exact jensenPoly_two_hyperbolic_of_turan n h2 hT
 
+/- Composition with the Jensen factor is an exact identity on a degree-`3`
+polynomial.  This is a small but useful cubic sanity check for the coefficient
+convention used by the higher-degree target. -/
+theorem schurSzegoComposition_three_one_add_X_pow_hyperbolic
+    (p : ℝ[X]) (hpdeg : p.natDegree = 3)
+    (hp : PolynomialHyperbolic p) :
+    PolynomialHyperbolic (schurSzegoComposition 3 p ((1 + X) ^ 3)) := by
+  rw [schurSzegoComposition_one_add_X_pow]
+  have hrepr := p.as_sum_range_C_mul_X_pow
+  rw [hpdeg] at hrepr
+  rw [← hrepr]
+  exact hp
+
 end Reinmann

@@ -36,9 +36,16 @@ line through `z₁`, forcing the limit to vanish on an infinite set.
 bridge to the named analytic condition `XiJensenApproximationBridge`: from the
 scaled finite real-rooted approximants of `Ξ`, produce, for each degree and
 shift, hyperbolic approximants of bounded degree converging to that Jensen
-polynomial, which must also be nonzero.  The classical content of that
-condition is Cauchy coefficient convergence plus the Hermite–Poulain/Schur
-fact that Jensen polynomials of real-rooted polynomials are real-rooted.
+polynomial, which must also be nonzero.  The finite-degree algebraic part of
+Cauchy coefficient convergence is proved in
+`CauchyCoefficientConvergence`: Lagrange interpolation on `D + 1` real nodes
+turns nodewise evaluation limits into coefficient limits.  The remaining
+analytic work is supplying those nodewise limits from the chosen locally
+uniform approximants, together with the Hermite–Poulain/Schur fact that Jensen
+polynomials of real-rooted polynomials are real-rooted.  The exact coefficientwise
+composition convention and its identification with `JensenPoly` are fixed in
+`HermitePoulainComposition`; the general hyperbolicity-preservation proposition
+there remains the open composition theorem.
 RH is not proved here; this closes one of the three legs of one of the four
 scaffolding bridges.
 -/

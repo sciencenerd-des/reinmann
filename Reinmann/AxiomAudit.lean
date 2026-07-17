@@ -15,6 +15,10 @@ import Reinmann.GrassmannSyzygy
 import Reinmann.FeketeAllOrders
 import Reinmann.ToeplitzFullPF
 import Reinmann.HyperbolicLimit
+import Reinmann.HermitePoulainDerivative
+import Reinmann.HermitePoulainComposition
+import Reinmann.CauchyCoefficientConvergence
+import Reinmann.JensenTuranBridge
 import Reinmann.TuranRouteKill
 
 /-!
@@ -65,10 +69,43 @@ namespace Reinmann.AxiomAudit
 #print axioms momentToeplitzOrder3Positive_of_prefix_and_tail
 #print axioms order3DetExpr_pos_certificate
 #print axioms momentToeplitzContigMinor_eq_order3DetExpr
+#print axioms order3DetNonneg_of_ratio_nonneg
+#print axioms order3RatioTailGap_of_scaled_limit
+#print axioms XiOrder3PositiveScaledLimit
+#print axioms xiToeplitzMinor3_eventually_nonneg_of_scaled_limit
+#print axioms weightedMoment_pos_of_pos
+#print axioms order3TailGap_of_ratioTailGap
+#print axioms momentToeplitzOrder3Positive_of_prefix_and_ratioTail
+#print axioms momentToeplitzOrder3RatioExpr_eq_adjacentGap
+#print axioms order3RatioGapExpr_nonneg_of_effective_bounds
+#print axioms order3RatioTailGap_of_effective_bounds
 #print axioms dodgsonCondensationIdentity_fin_two
 #print axioms dodgsonCondensationIdentity_fin_three
 #print axioms xiInitialColumnMinorThree_det_eq
 #print axioms xiInitialColumnMinorThree_nonneg_of_contig
+
+-- Concrete Hermite--Poulain derivative leg and its Mathlib root-count bound.
+#print axioms polynomialHyperbolic_derivative_of_degree_pos
+#print axioms polynomial_root_count_le_derivative
+#print axioms polynomial_coeff_tendsto_of_bounded_degree
+#print axioms locallyUniformlyOn_univ_tendsto_real_node
+#print axioms locallyUniformlyOn_univ_tendsto_mapped_real_node
+#print axioms jensenPoly_one_hyperbolic
+#print axioms schurSzegoComposition_one_add_X_pow
+#print axioms schurSzegoComposition_one
+#print axioms coefficientwiseComposition_not_hyperbolicity_preserver
+#print axioms unrestrictedSchurSzegoComposition_not_hyperbolicity_preserver
+#print axioms schurSzegoComposition_two
+#print axioms schurSzegoComposition_three
+#print axioms schurSzegoComposition_two_discriminant_nonneg
+#print axioms polynomialHyperbolic_quadratic_of_discriminant
+#print axioms schurSzegoComposition_two_hyperbolic_of_discriminant
+#print axioms hermitePoulainSchurSzego_two_of_coeff_discriminants
+#print axioms jensenPoly_two_hyperbolic_as_schurSzego
+#print axioms polynomialRootsSameSign_one_add_X_pow
+#print axioms jensenCoeffPoly_coeff
+#print axioms hermitePoulainSchurSzego_one
+#print axioms JensenPoly_eq_schurSzego_one_add_X_pow
 
 -- Fekete row-gap induction (arbitrary-row initial-column minors).
 -- The order-3 named target is closed modulo strict positivity + strict Turán;

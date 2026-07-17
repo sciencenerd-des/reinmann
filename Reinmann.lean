@@ -50,6 +50,8 @@ import Reinmann.LiCriterion
 import Reinmann.HurwitzZeros
 import Reinmann.HermitePoulterObreschkoff
 import Reinmann.HermitePoulainDerivative
+import Reinmann.HermitePoulainComposition
+import Reinmann.CauchyCoefficientConvergence
 import Reinmann.LaguerrePolyaClosure
 import Reinmann.PolyaJensen
 import Reinmann.DodgsonCondensation

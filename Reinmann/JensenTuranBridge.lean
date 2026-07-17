@@ -35,6 +35,40 @@ open Polynomial Complex
 
 namespace Reinmann
 
+/-- The degree-`1` Jensen polynomial, used as the first nontrivial
+Hermite--Poulain/Schur sanity check. -/
+theorem jensenPoly_one (n : ℕ) :
+    JensenPoly 1 n
+      = C (XiCoeff n) + C (XiCoeff (n + 1)) * X := by
+  unfold JensenPoly
+  simp only [Finset.sum_range_succ, Finset.sum_range_zero, zero_add, Nat.add_zero,
+    Nat.choose_zero_right, Nat.choose_self, Nat.cast_one, one_mul, pow_zero,
+    pow_one, mul_one]
+
+theorem jensenPoly_one_map_eval (n : ℕ) (z : ℂ) :
+    eval z ((JensenPoly 1 n).map (algebraMap ℝ ℂ))
+      = (XiCoeff (n + 1) : ℂ) * z + (XiCoeff n : ℂ) := by
+  rw [jensenPoly_one]
+  simp only [Polynomial.map_add, Polynomial.map_mul, Polynomial.map_C,
+    Polynomial.map_X, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X, Complex.coe_algebraMap]
+  ring
+
+/-- Every nonzero degree-`1` Jensen polynomial is hyperbolic.  This closes the
+linear base case of the Jensen/Schur composition program without importing any
+unproved composition theorem. -/
+theorem jensenPoly_one_hyperbolic (n : ℕ) (h1 : XiCoeff (n + 1) ≠ 0) :
+    PolynomialHyperbolic (JensenPoly 1 n) := by
+  intro z hz
+  rw [jensenPoly_one_map_eval] at hz
+  have him : XiCoeff (n + 1) * z.im = 0 := by
+    have him' := congrArg Complex.im hz
+    simpa [Complex.add_im, Complex.mul_im, Complex.ofReal_re,
+      Complex.ofReal_im] using him'
+  rcases mul_eq_zero.mp him with h | h
+  · exact absurd h h1
+  · exact h
+
 /-- The degree-`2` Jensen polynomial of `Ξ` written out. -/
 theorem jensenPoly_two (n : ℕ) :
     JensenPoly 2 n

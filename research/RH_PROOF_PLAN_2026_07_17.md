@@ -378,6 +378,22 @@ contiguous Toeplitz rung at the sequence level — witness
 Closing the `k = 3` rung therefore requires xi-specific quantitative input
 (effective asymptotics + certified finite prefix), not local Turán data.
 
+Progress marker 5 (2026-07-17, `Reinmann/EffectiveAssembly.lean`): **receptor
+architecture** — the repository now accepts the remaining open mathematics at
+proved interfaces.  (i) Ladder route: `KernelEffectiveCertificates M` (per
+order `k`: a `norm_num`-dischargeable strict prefix `KernelMinorPrefixStrict`
++ an explicit-remainder-bound tail `KernelMinorTailStrict`) assembles through
+the strict `2^k`-scaling transfer into the coefficient-side strict ladder and
+then RH: `riemannHypothesis_of_effectiveCertificates`.  This is the all-order
+positivity propagation: order-local certificates ⟹ full PF ⟹ RH.
+(ii) Jensen route: the general same-sign Schur–Szegő target
+`HermitePoulainSchurSzegoTheorem` is instantiated at the Jensen factor
+`(1+X)^d` with degree/hyperbolicity/same-sign side conditions proved
+(`jensenPoly_hyperbolic_of_hpss`), so HPSS + per-window input
+`XiJensenCoeffHyperbolic` + the Pólya–Jensen bridge give RH:
+`riemannHypothesis_of_hpss_route`.  Any future proof of a named input closes
+its route by `exact`; nothing is axiomatized, RH remains unproved.
+
 7. Final open surface, in priority order:
    (a) `XiContigToeplitzStrictPositive` — the single Xi-specific positivity
    input, now machine-checked to be at least RH-strength; its `k = 1, 2` rungs

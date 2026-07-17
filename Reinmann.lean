@@ -63,6 +63,7 @@ import Reinmann.FeketeAllOrders
 import Reinmann.ToeplitzFullPF
 import Reinmann.HyperbolicLimit
 import Reinmann.TuranRouteKill
+import Reinmann.EffectiveAssembly
 import Reinmann.VanDantzigPick
 import Reinmann.VanDantzigOperator
 import Reinmann.GlobalCapstone

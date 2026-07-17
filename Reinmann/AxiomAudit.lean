@@ -20,6 +20,7 @@ import Reinmann.HermitePoulainComposition
 import Reinmann.CauchyCoefficientConvergence
 import Reinmann.JensenTuranBridge
 import Reinmann.TuranRouteKill
+import Reinmann.EffectiveAssembly
 
 /-!
 # Axiom Audit
@@ -159,5 +160,18 @@ namespace Reinmann.AxiomAudit
 -- Falsification discipline: the (2nd, 3rd)-Turán window does not close the
 -- order-3 contiguous rung at the sequence level; counterexample preserved.
 #print axioms turan23_not_imp_toeplitz3
+
+-- Effective assembly (receptor architecture): per-order kernel certificates
+-- propagate to the strict ladder and to RH; the general Schur–Szegő target
+-- instantiates at the Jensen factor with all side conditions discharged.
+#print axioms xiToeplitzContigMinor_pos_iff_moment_of_kernelRep
+#print axioms kernelLadderStrict_of_certificates
+#print axioms xiContigToeplitzStrictPositive_of_kernelLadder
+#print axioms riemannHypothesis_of_effectiveCertificates
+#print axioms order3TailGap_of_kernelTailStrict
+#print axioms polynomialHyperbolic_one_add_X_pow
+#print axioms jensenPoly_hyperbolic_of_hpss
+#print axioms allJensenHyperbolic_of_hpss
+#print axioms riemannHypothesis_of_hpss_route
 
 end Reinmann.AxiomAudit

@@ -1,4 +1,4 @@
-# Journal & preprint targets — RH reduction / formalization paper
+# Journal & preprint targets — synthesized RH formalization paper
 
 **Positioning (from your SUBMISSION_CHECKLIST):** this is a *Lean-verified reduction
 and formalization study*, not a proof of RH. The targets below are chosen to fit
@@ -15,8 +15,8 @@ journals. Ranked by fit:
 ## Tier 1 — best fit (start here)
 
 1. **Experimental Mathematics** (Taylor & Francis)
-   - Scope: rigorous computation + theory, exactly your numerics-plus-formalization
-     blend. Cover letter already drafted for this one.
+   - Scope: rigorous computation + theory, exactly the manuscript's
+     numerics-plus-formalization blend. The revised cover letter is aligned.
    - Why #1: rewards experimental delimitation of an open problem; "no proof" is
      not a strike here.
 
@@ -73,7 +73,7 @@ journals. Ranked by fit:
 ## Before any submission (from your checklist)
 
 - Run `./scripts/safe-verify.sh`; record the exact commit hash.
-- Confirm the compiled PDF (done: `rh_reduction_paper.pdf`, 10 pp.).
+- Confirm the compiled PDF (current: `rh_two_routes_paper.pdf`, 14 A4 pp.).
 - Add appendix: Lean version, Mathlib commit, Lake manifest hash.
 - Add the Zenodo DOI / repo archive link.
 - Verify each journal's current submission system, formatting, and any fees on its

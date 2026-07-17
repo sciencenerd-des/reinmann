@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "Two Machine-Checked Conditional Routes to the Riemann Hypothesis"
+message: "If you use this software, formalization, or manuscript, please cite this release. A DOI will be added after an authenticated Zenodo deposition."
+type: software
+version: "0.1.0"
+date-released: "2026-07-17"
+authors:
+  - family-names: Mondal
+    given-names: Biswajit
+    email: bmondal0000@gmail.com
+abstract: >-
+  A Lean-checked formalization scaffold and research manuscript for two
+  conditional routes to the Riemann Hypothesis. The release records the
+  generic Grassmann/Fekete Toeplitz closure, exact-ready effective and Jensen
+  receptors, numerical diagnostics, theorem-status ledger, and the remaining
+  open analytic inputs. It does not claim a proof of the Riemann Hypothesis.
+keywords:
+  - Riemann Hypothesis
+  - Lean
+  - formal mathematics
+  - total positivity
+  - Fekete criterion
+  - Jensen polynomials
+  - Riemann xi function
+  - Schur-Szego composition
+license: "NOASSERTION"
+```

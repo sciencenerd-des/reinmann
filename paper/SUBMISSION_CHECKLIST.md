@@ -5,26 +5,33 @@
 Submit as a formalization / proof-search reduction paper, not as a proof of the
 Riemann Hypothesis.
 
-Suggested title:
+Current manuscript:
 
-> A Lean-Verified Same-Height Fiber Framework for the Riemann Hypothesis
+> Two Machine-Checked Conditional Routes to the Riemann Hypothesis: A Formalized
+> Fekete Criterion, Effective Positivity Targets, and an Exact-Ready Receptor
+> Architecture
 
 Suggested arXiv categories:
 
 - Primary: `math.NT`
 - Cross-list: `cs.LO`
 
-## Novelty claim
+## Defensible contribution claim
 
-The defensible novelty is:
+The defensible contribution is the combination of:
 
-- Lean-verified equivalence between RH and same-height zero-fiber uniqueness.
-- Lean-verified fiber-energy and cardinality sufficient criteria.
-- Lean-verified zero-free-threshold equivalence.
-- Lean-verified de la Vallee Poussin `3-4-1` zeta-product bridge.
-- Documented rejection of the global horizontal convexity route.
-- Sharpened next gap: prove a local same-height repulsion or componentwise
-  horizontal critical-point exclusion principle.
+- a Lean-verified generic Grassmann syzygy and Toeplitz gap-shrinking identity;
+- an all-orders Fekete-style closure from strict contiguous minors to full PF;
+- exact-ready effective-certificate and Jensen/HPSS receptor theorems;
+- the corrected use of Riemann's entire `xi` function rather than `Lambda_0`;
+- machine-checked falsification of the local Turán and continuous-kernel PF
+  shortcuts;
+- a synthesis of the same-height, Li, Hilbert–Pólya, 3–4–1, Jensen, PF, and
+  heat-flow programs.
+
+Do not claim that this is the first Lean RH reduction or the first
+formalization of total positivity.  The claim is a specific, axiom-audited
+closure and interface architecture.
 
 ## Do not claim
 
@@ -41,6 +48,9 @@ The defensible novelty is:
 2. Compile the LaTeX PDF.
 3. Add a repository archive or DOI if submitting to arXiv.
 4. Add an appendix with Lean version, mathlib commit, and Lake manifest hash.
-5. Decide whether to include the negative convexity experiment as an appendix or
-   supplementary note.
-
+5. Add the exact theorem ledger mapping `proved`, `external input`, and `open
+   target`.
+6. Decide whether to include the negative convexity experiment as an appendix
+   or supplementary note.
+7. Obtain an independent analytic-number-theory review of the Fekete theorem
+   and Xi coefficient normalization.

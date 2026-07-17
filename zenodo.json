@@ -1,0 +1,23 @@
+{
+  "upload_type": "software",
+  "publication_date": "2026-07-17",
+  "title": "Two Machine-Checked Conditional Routes to the Riemann Hypothesis",
+  "creators": [
+    {
+      "name": "Mondal, Biswajit"
+    }
+  ],
+  "description": "Lean-checked formalization scaffold and research manuscript for two conditional routes to the Riemann Hypothesis. The release records the generic Grassmann/Fekete Toeplitz closure, exact-ready effective and Jensen receptors, numerical diagnostics, theorem-status ledger, and remaining open analytic inputs. It does not claim a proof of the Riemann Hypothesis.",
+  "keywords": [
+    "Riemann Hypothesis",
+    "Lean",
+    "formal mathematics",
+    "total positivity",
+    "Fekete criterion",
+    "Jensen polynomials",
+    "Riemann xi function",
+    "Schur-Szego composition"
+  ],
+  "access_right": "open",
+  "prereserve_doi": true
+}

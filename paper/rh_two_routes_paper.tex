@@ -1,0 +1,967 @@
+\documentclass[11pt,a4paper]{article}
+
+% A restrained arXiv layout: readable margins, stable line breaks, and
+% typography that remains portable across pdflatex and tectonic.
+\usepackage[top=2.65cm,bottom=2.7cm,left=3.0cm,right=3.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{seqsplit}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage{bookmark}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=2em,itemsep=0.15em,topsep=0.25em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.15em,topsep=0.25em}
+\setcounter{tocdepth}{2}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Two Conditional Routes to RH}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{target}[theorem]{Named Target}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newcommand{\Lean}[1]{\texttt{\small\seqsplit{#1}}}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\PF}{\mathrm{PF}}
+
+\title{\bfseries\Large Two Machine-Checked Conditional Routes to the Riemann Hypothesis\\[0.35em]
+\large A Formalized Fekete Criterion, Effective Positivity Targets, and an Exact-Ready Receptor Architecture}
+
+\author{Biswajit Mondal\thanks{Corresponding author:
+\texttt{b.mondal0000@gmail.com}.  The Lean formalization was developed with
+the assistance of an AI pair programmer (Claude, Anthropic); all theorems are
+verified by the Lean kernel independently of how they were produced.}}
+\date{\small July 17, 2026\\[0.25em]
+\textit{Research preprint; unconditional RH is not claimed}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent\textbf{We do not prove the Riemann Hypothesis.}  We present a
+Lean~4 / Mathlib formalization (71 modules, $\approx 28{,}000$ lines,
+87 audited theorems depending only on Lean's three foundational axioms, with
+no \texttt{sorry} and no project axioms) that reduces RH to explicitly named
+open positivity inputs along two independent, \emph{exact-ready} routes, and
+that isolates---by proof and by machine-checked counterexample---precisely
+which new mathematics remains.
+
+The formal core is a machine-checked Fekete-type total positivity criterion:
+for the lower-triangular Toeplitz
+matrix of the signed Taylor coefficients of Riemann's $\Xi$-function,
+\emph{strict positivity of all contiguous minors implies full total
+positivity}.  The proof mechanizes a generic Grassmann syzygy and a
+three-term gap-shrinking identity valid at every matrix order, an all-orders
+double induction (on order and row dispersion), a dominance dichotomy whose
+vanishing half is a permutation-pigeonhole argument, and a Toeplitz reversal
+symmetry.  Combined with the classical scaffolding
+(Aissen--Schoenberg--Whitney/Edrei, Laguerre--P\'olya closure,
+P\'olya--Jensen), this yields a minimal named conditional reduction: RH
+follows from the strict contiguous ladder alone,
+with no initial-column criterion and no kernel representation.
+
+We further formalize a bounded-degree hyperbolic-limit theorem (a
+finite-dimensional Hurwitz-type statement with a fully elementary proof), a
+receptor architecture that lets each future ingredient---an explicit
+remainder bound, a certified prefix, or the general same-sign
+Schur--Szeg\H{o} composition theorem---close its route by a single
+\texttt{exact}, and a machine-checked counterexample showing that the known
+second- and third-order Tur\'an inequalities for the $\Xi$ coefficients
+cannot, at the sequence level, close even the order-$3$ rung of the ladder.
+We conclude with a research map of the new mathematics the architecture is
+ready to receive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Riemann hypothesis; P\'olya frequency sequences;
+Toeplitz total positivity; Jensen polynomials; formal mathematics; Lean~4.
+
+\noindent\textbf{MSC 2020:} 11M26 (primary); 15B48, 26C10, 03B35 (secondary).
+
+\tableofcontents
+\clearpage
+
+\section{Introduction}\label{sec:intro}
+
+The Riemann Hypothesis (RH) \cite{Riemann1859} admits a classical
+reformulation in the language of total positivity: writing
+$\Xi(t) = \sum_{n \ge 0} b_n t^{2n}$ for the Taylor expansion of Riemann's
+$\Xi$-function and $\mu_n = (-1)^n b_n$ for its signed coefficients, RH is
+equivalent (through the Laguerre--P\'olya theory and the
+Aissen--Schoenberg--Whitney--Edrei characterization
+\cite{ASW1952,Edrei1953}) to the assertion that $(\mu_n)$ is a
+\emph{P\'olya frequency sequence}: every minor of the one-sided infinite
+Toeplitz matrix
+\[
+  T(i,j) \;=\; \begin{cases} \mu_{i-j}, & j \le i,\\ 0, & j > i,\end{cases}
+\]
+is nonnegative.  The order-$1$ and order-$2$ fragments of this condition are
+classical theorems---positivity of the $\mu_n$ follows from P\'olya's
+integral representation \cite{Polya1926}, and the order-$2$ (Tur\'an)
+inequalities were proved by Csordas, Norfolk and Varga \cite{CNV1986},
+resolving a problem posed by P\'olya \cite{Polya1927}.  Everything at order
+$\ge 3$ is open and is, in aggregate, equivalent to RH.
+
+This paper reports a formalization program, carried out in Lean~4 over
+Mathlib \cite{Mathlib2020,Lean4}, whose purpose is \emph{not} to prove RH
+but to do three things that we believe are individually useful and jointly
+new:
+
+\begin{enumerate}
+\item \textbf{Prove, with kernel-checked proofs, every step of the
+  reduction that is genuinely provable today}, so that the open mathematics
+  is isolated into a small number of explicitly named hypotheses
+  (\S\ref{sec:method}).  The formal centerpiece is an all-orders Fekete-type
+  criterion (\S\ref{sec:fekete}): strict positivity of the \emph{contiguous}
+  Toeplitz minors implies the full P\'olya frequency condition.
+\item \textbf{Assemble two independent, exact-ready conditional routes to
+  RH} (\S\ref{sec:routeA}--\ref{sec:routeB}), each terminating in a Lean
+  theorem whose hypotheses are named propositions:
+  \begin{itemize}
+  \item the kernel/PF route \Lean{riemannHypothesis\_of\_effectiveCertificates},
+    whose single open input \Lean{KernelEffectiveCertificates} asks, for each
+    matrix order, for a certified finite prefix together with an explicit
+    remainder-bound tail; and
+  \item the Jensen/HPSS route \Lean{riemannHypothesis\_of\_hpss\_route},
+    whose open inputs are the P\'olya--Jensen bridge, the general same-sign
+    Hermite--Poulain/Schur--Szeg\H{o} composition theorem, and per-window
+    hyperbolicity of the coefficient polynomials.
+  \end{itemize}
+\item \textbf{Prune dead branches by machine-checked falsification}
+  (\S\ref{sec:falsification}): we exhibit a kernel-checked counterexample
+  showing that the known local Tur\'an data (orders $2$ and $3$) cannot
+  close even the order-$3$ contiguous rung at the sequence level, and we
+  record why a recent certified $\PF_5$ failure for the continuous
+  de Bruijn--Newman kernel \cite{PF5counterexample} forces any proof to
+  target the discrete moment sequence directly.
+\end{enumerate}
+
+\paragraph{Claims and non-claims.}
+No theorem in this paper or in the underlying repository proves RH,
+and none assumes it: every RH-equivalent or RH-adjacent statement is carried
+as a named \emph{hypothesis} (a Lean \Lean{Prop}), never as an axiom.  An
+automated audit (\S\ref{sec:method}) verifies that all 87 audited theorems
+depend on nothing beyond Lean's three foundational axioms
+(\Lean{propext}, \Lean{Classical.choice}, \Lean{Quot.sound}).  In
+particular, we prove (Corollary~\ref{cor:rhstrength}) that our main
+positivity hypothesis is \emph{at least RH-strength}, which is exactly why
+it must remain a hypothesis.  What the formalization contributes is the
+complete, kernel-checked closure of everything between that hypothesis and
+RH---a closure which, to our knowledge, had not previously been carried out
+in full even informally at this level of granularity.
+
+\section{Background and conventions}\label{sec:background}
+
+We use the completed zeta function
+$\xi(s) = \tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and its real form
+$\Xi(t) = \xi(\tfrac12 + it)$, an even entire function of order one, real
+and positive at $t = 0$.  In the formalization the coefficient sequence is
+\emph{defined} derivative-first,
+\[
+  b_n \;=\; \Lean{XiCoeff}\,n \;=\; \frac{\Xi^{(2n)}(0)}{(2n)!},
+  \qquad \mu_n \;=\; (-1)^n b_n ,
+\]
+so that all downstream theorems are anchored to a concrete real sequence;
+the analytic identification of $(b_n)$ with the Taylor coefficients and
+P\'olya's kernel representation
+$b_n = (-1)^n\,2 M_n/(2n)!$ with $M_n = \int_0^\infty \Phi(u)\,u^{2n}\,du$
+and $\Phi > 0$ \cite{Polya1926} are named classical inputs, not silent
+assumptions.
+
+For $k, m \in \mathbb{N}$ the \emph{contiguous minor of order $k$ at offset
+$m$} is
+\[
+  D_k(m) \;=\; \det\bigl[\,T(m+i,\,j)\,\bigr]_{0 \le i,j < k},
+\]
+the determinant of the $k\times k$ block whose rows are consecutive and
+whose columns are the initial interval $\{0,\dots,k-1\}$
+(\Lean{XiToeplitzContigMinor}).  Three positivity conditions on the family
+of \emph{all} minors will occur:
+\begin{itemize}
+  \item \emph{Contiguous, strict:}
+    \Lean{XiContigToeplitzStrictPositive}, meaning
+    $\forall k,m,\ D_k(m)>0$.
+  \item \emph{Initial-column:} \Lean{XiInitialColumnMinorTotalPositive},
+    meaning arbitrary rows with columns $0,\ldots,k-1$ and determinant
+    $\ge0$.
+  \item \emph{Full PF:} \Lean{XiToeplitzTotalPositive}, meaning arbitrary
+    rows and columns with determinant $\ge0$.
+\end{itemize}
+The classical scaffolding is bundled as a structure
+\Lean{ClassicalToeplitzScaffolding} with four fields: the
+ASW/Edrei bridge from full PF to real-rooted finite approximants of $\Xi$
+\cite{ASW1952,Edrei1953}, the Laguerre--P\'olya closure bridge, the
+P\'olya--Jensen bridge ($\RH \iff$ hyperbolicity of all Jensen polynomials
+\cite{Polya1927}), and the classical converse
+($\RH \Rightarrow$ full PF).  Each is a proved theorem of classical
+analysis whose formalization is a separate, ongoing program
+(\S\ref{sec:newmath}); none is RH-strength.
+
+\section{Formal methodology}\label{sec:method}
+
+The repository comprises 71 Lean modules ($\approx 28{,}000$ lines) over
+Mathlib \cite{Mathlib2020}.  Three disciplines are enforced mechanically.
+
+\paragraph{Named hypotheses, never axioms.}  Open mathematics enters only as
+a named \Lean{Prop} passed explicitly to conditional theorems.  A source
+scanner rejects \Lean{sorry}, \Lean{admit}, and project-level \Lean{axiom}
+declarations in the entire library.
+
+\paragraph{Semantic axiom audit.}  A dedicated module runs
+\Lean{\#print axioms} on the 87 headline theorems; a CI script fails unless
+every one reports exactly
+\[
+[\Lean{propext},\ \Lean{Classical.choice},\ \Lean{Quot.sound}].
+\]
+This guards against silent placeholder reintroduction: assuming an
+RH-equivalent statement anywhere in a proof would surface immediately.
+
+\paragraph{Falsification before formalization.}  Numerical claims are
+treated as falsification evidence, never proof.  Interval-certified scans
+(exact rational interval arithmetic over decimal enclosures of the first
+$120$ coefficients) test each named positivity target before formal work
+begins; certified negative signs would kill a route, and one such
+sequence-level route-kill is itself formalized
+(\S\ref{sec:falsification}).
+
+\section{Synthesis of the formalization program and the literature}
+\label{sec:synthesis}
+
+The repository contains more than one proposed route to RH.  A publishable
+account must distinguish the common analytic object, the unconditional Lean
+algebra, the conditional interfaces, and the exploratory programs that were
+rejected or demoted.  This section records that synthesis so that the paper is
+not read as claiming that an equivalent reformulation is itself progress on
+RH.
+
+\subsection{The corrected object and the common spine}
+
+An early version of the development used the meromorphic completed-zeta
+variant $\Lambda_0$.  That is not the correct object for a P\'olya--Jensen or
+P\'olya-frequency argument: its critical-line zeros do not coincide with the
+non-trivial zeros of $\zeta$.  The current formalization instead defines
+\begin{equation}
+  \xi(s):=\frac{s(s-1)}{2}\,\pi^{-s/2}\Gamma(s/2)\zeta(s),
+  \qquad \Xi(t):=\xi\!\left(\tfrac12+it\right),
+  \label{eq:xi-common-spine}
+\end{equation}
+and proves the zero-correspondence theorem
+\Lean{Xi\_eq\_zero\_iff\_riemannZeta}.  Every coefficient, Jensen, Toeplitz,
+and moment statement in this paper is downstream of this corrected spine.
+The correction is a soundness repair, not a claim of a new theorem about
+$\zeta$.
+
+\subsection{What is retained, and what is demoted}
+
+Table~\ref{tab:program-synthesis} gives the status of every major route
+developed in the project.  ``Proved'' means proved in Lean from the ordinary
+foundational axioms; it does not mean that an external analytic hypothesis has
+been discharged.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Synthesis of the formalized RH program.  The final column identifies
+the obstruction that prevents an unconditional proof.}
+\label{tab:program-synthesis}
+\begin{tabular}{p{0.22\linewidth}p{0.32\linewidth}p{0.34\linewidth}}
+\toprule
+\textbf{Layer} & \textbf{Lean contribution} & \textbf{Remaining qualification}\\
+\midrule
+Same-height fibers & Centroid, energy, and cardinality reductions & RH-equivalent restatements; no repulsion theorem\\
+Li / Hilbert--P\'olya & Symmetry and conditional witness packages & Li data and operator existence are external inputs\\
+$3$--$4$--$1$ & Zero-free boundary bridge and certificate barrier & Classical near-$\operatorname{Re}s=1$ result; cannot reach $1/2$\\
+Fekete--Toeplitz & Grassmann identity, all-order gap shrinking, full-PF capstone & Strict contiguous ladder is at least RH-strength\\
+Jensen / HPSS & Hyperbolic-limit theorem and exact receptor & All-degree/all-shift window input and general same-sign composition remain open\\
+Heat flow & Named third-route interface & Requires a new rigidity theorem proving $\Lambda\le0$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The same-height and Li/Hilbert--P\'olya files are therefore retained as
+reusable interfaces and as negative-control examples.  They are not merged
+into the two main routes because they do not supply a non-equivalent analytic
+lever.  Likewise, the $3$--$4$--$1$ product is a verified classical boundary
+argument, while the formal certificate barrier records why that family cannot
+be extrapolated to RH.
+
+\subsection{The Jensen literature and the exact role of Route B}
+
+The Jensen literature is both relevant and cautionary.  The
+Griffin--Ono--Rolen--Zagier theorem gives Hermite asymptotics and eventual
+fixed-degree information; the Xi-specific effective work makes the asymptotic
+regime effective; and O'Sullivan gives a complementary Hermite-combination
+criterion and detailed coefficient expansions
+\cite{GORZ2019,XiEffective,OSullivan}.  These results motivate the
+root-separation and remainder targets in \S\ref{sec:newmath}.
+
+They do not, however, close P\'olya--Jensen.  Farmer's analysis argues that
+the Hermite phenomenon can lose the information needed to attack RH and gives
+criteria for distinguishing a useful equivalence from an information-losing
+one \cite{Farmer2022}.  We incorporate that criticism explicitly: Route B is
+an exact formal receptor, not a claim that Jensen asymptotics are by
+themselves a plausible proof strategy.  The recent finite-strip analysis of
+Planat further sharpens the distinction between eventual large-shift
+hyperbolicity and the finite set of low shifts that still carries the RH
+content \cite{Planat2026}.
+
+\subsection{The PF literature and the discrete/continuous separation}
+
+The ASW--Edrei characterization and the Fekete criterion supply the classical
+total-positivity context \cite{ASW1952,Edrei1953,GK,Pinkus}.  Our contribution
+is the Lean proof of the Toeplitz-specific algebraic closure, not a new
+classification of PF sequences.  The certified PF$_5$ failure for the
+continuous de Bruijn--Newman kernel \cite{PF5counterexample} is retained as a
+route-kill: it prevents silently replacing the discrete factorial-weighted Xi
+moments by a continuous PF$_\infty$ kernel.  Any future proof must establish a
+discrete transfer theorem or prove the discrete minors directly.
+
+\subsection{Position relative to other formalization projects}
+
+The Lean Millennium Prize Problems repository formalizes the official problem
+statements while leaving the RH proof open \cite{LeanMillennium}.  Other active
+Lean projects publish conditional RH reductions with named analytic frontiers
+\cite{NagyRH,BeanapologistRH}.  The defensible distinction of the present work
+is narrower: it provides an axiom-audited Fekete/Toeplitz all-orders closure,
+an effective-certificate assembly theorem, a bounded-degree hyperbolic-limit
+theorem, and a Schur--Szeg\H{o} receptor, together with falsification artifacts
+for the tempting local routes.  We therefore claim a formalized algebraic
+closure and an exact-ready interface, not the first or only Lean reduction of
+RH.
+
+\section{The Fekete engine}\label{sec:fekete}
+
+Fekete's classical criterion---strict positivity of solid minors implies
+strict total positivity \cite{GK,Pinkus}---suggests that the contiguous
+ladder should control all minors.  For the one-sided (lower-triangular)
+Toeplitz setting we formalize a complete, self-contained version of this
+mechanism.  All results in this section are unconditional, kernel-checked
+theorems.
+
+\subsection{A generic Grassmann syzygy and three-term identity}
+
+The engine is Xi-free multilinear algebra over an arbitrary commutative
+ring $R$ (\Lean{GrassmannSyzygy.lean}).  For $q \ge 0$ let
+$W \colon \mathrm{Fin}(q{+}3) \to \mathrm{Fin}(q{+}2) \to R$ be a family of
+$q+3$ row vectors in $R^{q+2}$, let $M_i$ denote the maximal minor deleting
+row $i$, and for $u < v$ let $S(\widehat{u},\widehat{v})$ denote the
+order-$(q{+}1)$ minor on the first $q+1$ columns whose rows are the
+ascending complement of $\{u,v\}$.
+
+\begin{theorem}[Grassmann syzygy; \Lean{maxMinor\_syzygy}]\label{thm:syzygy}
+For every column index $c$,
+$\ \sum_{i=0}^{q+2} (-1)^i\, W_{i,c}\, M_i = 0$.
+\end{theorem}
+
+The proof formalizes the classical duplicated-column argument: the
+$(q{+}3)\times(q{+}3)$ determinant obtained by adjoining the $c$-th
+coordinate column to $W$ vanishes, and Laplace expansion along the adjoined
+column yields the syzygy.
+
+\begin{theorem}[Three-term identity; \Lean{grassmann\_three\_term}]\label{thm:threeterm}
+For every interior index $0 < t < q+2$,
+\[
+  M_t \cdot S(\widehat{0},\widehat{q{+}2})
+  \;=\;
+  M_0 \cdot S(\widehat{t},\widehat{q{+}2})
+  \;+\;
+  M_{q+2} \cdot S(\widehat{0},\widehat{t}).
+\]
+\end{theorem}
+
+The proof contracts Theorem~\ref{thm:syzygy} against the cofactor
+functional of $q$ fixed spectator rows (killing all but three terms by the
+alternating property) and sorts the surviving sub-minors into ascending row
+order, with signs computed by the cycle-range permutation
+($\Lean{Fin.cycleRange}$, of sign $(-1)^p$).  All signs cancel, yielding
+the subtraction-free three-term form.  At orders $3$ and $4$ the identity
+specializes to polynomial identities we had previously verified by
+\Lean{ring}; Theorem~\ref{thm:threeterm} holds at every order, which is
+what the induction below consumes.
+
+\subsection{The all-orders gap-shrinking induction}
+
+\begin{theorem}[All-orders initial-column theorem;
+\Lean{xiInitialMinor\_pos\_of\_strictLadder}]\label{thm:allorders}
+Assume the strict contiguous ladder
+(\Lean{XiContigToeplitzStrictPositive}).  Then for every $k$ and every
+strictly increasing row selection $r_0 < \dots < r_{k-1}$, the
+initial-column minor
+$\det[\,T(r_a, b)\,]_{0\le a,b<k}$ is strictly positive.
+\end{theorem}
+
+The proof is a joint induction: an outer induction on the order $k$ (each
+order divides by a strict order-$(k{-}1)$ arbitrary-row minor supplied by
+the previous stage) and an inner strong induction on the \emph{row
+dispersion} $r_{k-1} - r_0 - (k-1)$.  When the dispersion is zero the rows
+are consecutive and the minor is a ladder rung.  Otherwise a row $s$ is
+inserted into any gap (via \Lean{Fin.insertNth}), and
+Theorem~\ref{thm:threeterm}---applied to the extended $(k{+}1)$-row
+family---expresses the target minor, times a strictly positive divisor of
+order $k-1$, as a nonnegative combination of two order-$k$ minors of
+strictly smaller dispersion.  The two ladder rungs $k=1,2$ of the
+hypothesis are, respectively, strict positivity of the $\mu_n$ and the
+strict Tur\'an inequalities; the formalization records this subsumption
+(\Lean{xiMomentStrictTuran\_of\_strictLadder}).
+
+\subsection{Dominance dichotomy, reversal symmetry, and full PF}
+
+\begin{theorem}[Dominance dichotomy;
+\Lean{xiMinor\_eq\_zero\_of\_lt}, \Lean{xiMinor\_pos\_of\_dominant}]\label{thm:dichotomy}
+Let $r_0 < \dots < r_{k-1}$ and $c_0 < \dots < c_{k-1}$ be arbitrary
+strictly increasing row and column selections.
+\begin{enumerate}
+\item If $r_a < c_a$ for some $a$, then
+  $\det[\,T(r_a,c_b)\,] = 0$.
+\item If $c_a \le r_a$ for all $a$ and the strict contiguous ladder holds,
+  then $\det[\,T(r_a,c_b)\,] > 0$.
+\end{enumerate}
+\end{theorem}
+
+Part (1) is a permutation-pigeonhole argument on the lower-triangular zero
+pattern: every permutation term contains an entry above the support.  Part
+(2) repeats the gap-shrinking induction with the columns fixed but
+arbitrary; its base case (consecutive rows, arbitrary dominated columns)
+reduces to Theorem~\ref{thm:allorders} by a Toeplitz \emph{reversal
+symmetry} (\Lean{xiMinor\_contigRows}): reversing both index orders and
+transposing carries a contiguous-row minor to an arbitrary-row
+initial-column minor.  In the induction step the only possibly degenerate
+term is the drop-last-row flanking minor, and there part (1) supplies the
+required nonnegativity.
+
+\begin{corollary}[Full PF from the strict ladder;
+\Lean{xiToeplitzTotalPositive\_of\_strictLadder}]\label{cor:fullpf}
+The strict contiguous ladder implies the full P\'olya frequency condition
+\Lean{XiToeplitzTotalPositive}.
+\end{corollary}
+
+\begin{corollary}[Sharpest reduction, and RH-strength labeling;
+\Lean{riemannHypothesis\_of\_strictLadder}]\label{cor:rhstrength}
+Given the classical scaffolding, the strict contiguous ladder implies RH.
+Since, conversely, the scaffolding makes the full PF condition
+\emph{equivalent} to RH
+(\Lean{xiToeplitzTotalPositive\_iff\_riemannHypothesis}), the strict ladder
+is at least RH-strength: it can never be assumed, axiomatized, or verified
+numerically.
+\end{corollary}
+
+Corollary~\ref{cor:fullpf} eliminates two inputs that earlier versions of
+the reduction required: Cryer's lower-triangular initial-column criterion
+\cite{Cryer1976} and P\'olya's kernel representation are no longer consumed
+by the minimal path (both remain available, as named classical inputs, to
+secondary routes).
+
+\section{Route A: effective kernel certificates}\label{sec:routeA}
+
+Under P\'olya's representation the coefficient-side and kernel-side
+contiguous minors are related by the exact scaling
+$D_k(m) = 2^k \cdot D^{\mathrm{ker}}_k(m)$, where
+$D^{\mathrm{ker}}_k$ is built from the factorial-weighted moments
+$M_n/(2n)!$; strict positivity therefore transfers verbatim
+(\Lean{xiToeplitzContigMinor\_pos\_iff\_moment\_of\_kernelRep}).  This
+suggests organizing the open mathematics \emph{order by order}:
+
+\begin{definition}[Per-order effective certificates;
+\Lean{KernelEffectiveCertificates}]\label{def:cert}
+For a moment model $M$: for every order $k$ there exists a cutoff $N$ with
+\begin{itemize}
+\item \emph{certified prefix} (\Lean{KernelMinorPrefixStrict}):
+  $D^{\mathrm{ker}}_k(m) > 0$ for all $m < N$ --- for rational interval
+  enclosures of the moments this is dischargeable offset-by-offset by
+  \Lean{norm\_num};
+\item \emph{explicit remainder tail} (\Lean{KernelMinorTailStrict}):
+  $D^{\mathrm{ker}}_k(m) > 0$ for all $m \ge N$ --- the target of effective
+  asymptotic analysis.
+\end{itemize}
+\end{definition}
+
+\begin{theorem}[Route A; \Lean{riemannHypothesis\_of\_effectiveCertificates}]
+Classical scaffolding $+$ P\'olya kernel data $+$
+\Lean{KernelEffectiveCertificates}\ $\Longrightarrow$ RH.
+\end{theorem}
+
+Every interface in this statement is a proved theorem: certificates
+assemble into the kernel-side strict ladder, transfer to the
+coefficient-side ladder, and feed
+Corollary~\ref{cor:rhstrength}.  The order-$3$ instance connects to an
+existing prefix/ratio-tail decomposition of the first open rung
+(compatibility lemma \Lean{order3TailGap\_of\_kernelTailStrict}); the
+current interval scans certify the contiguous order-$3$ prefix through
+offset $116$ with smallest normalized value $\approx 4.2\times10^{-6}$, and
+all $8{,}367$ order-$3$ and $72{,}033$ order-$4$ certified arbitrary-row
+initial-column selections in the scanned box are positive.  These are
+falsification evidence, not proof.
+
+\section{Route B: the Jensen/Schur--Szeg\H{o} receptor}\label{sec:routeB}
+
+The second route runs through P\'olya's equivalence of RH with
+hyperbolicity (real-rootedness) of all Jensen polynomials
+$J_{d,n}(x) = \sum_{k\le d}\binom{d}{k} b_{n+k} x^k$ \cite{Polya1927}.
+
+\begin{theorem}[Bounded-degree hyperbolic limits;
+\Lean{polynomialHyperbolic\_of\_tendsto}]\label{thm:hyplimit}
+Let $p_j$ be real polynomials of degree at most $D$, each hyperbolic, whose
+complexifications converge pointwise on $\mathbb{C}$ to that of a nonzero
+real polynomial $f$.  Then $f$ is hyperbolic.
+\end{theorem}
+
+The formal proof is elementary and complex-analysis-free: for a real-rooted
+polynomial and two points on a horizontal line $\mathrm{im}\,z = y \ne 0$,
+each root factor obeys
+$\lvert z_2 - r\rvert^2 \le K \lvert z_1 - r\rvert^2$ with
+$K = 2 + 2(\mathrm{re}\,z_2 - \mathrm{re}\,z_1)^2/y^2$, so a nonreal zero of
+the limit would force vanishing along the entire line.  This is a proved
+leg of the Laguerre--P\'olya closure bridge, which the formalization
+correspondingly reduces to a sharper named condition
+(\Lean{XiJensenApproximationBridge}).
+
+The Jensen polynomial is exactly the Schur--Szeg\H{o} binomial composition
+of its coefficient-window polynomial with $(1+X)^d$
+(\Lean{JensenPoly\_eq\_schurSzego\_one\_add\_X\_pow}), and the general
+same-sign composition theorem \cite{Szego1922,RS} enters as the named
+target \Lean{HermitePoulainSchurSzegoTheorem}; its low-degree cases
+($d \le 3$), the hyperbolicity-preservation of differentiation, and a
+counterexample showing the \emph{unrestricted} composition claim is false
+are proved in the repository.  The receptor result discharges the fixed
+factor's side conditions once and for all:
+
+\begin{theorem}[Schur--Szeg\H{o} receptor;
+\Lean{jensenPoly\_hyperbolic\_of\_hpss},
+\Lean{riemannHypothesis\_of\_hpss\_route}]
+The polynomial $(1+X)^d$ has degree $d$, is hyperbolic, and has all real
+roots of one sign.  Consequently, given
+\emph{(i)} the P\'olya--Jensen bridge,
+\emph{(ii)} the general same-sign Schur--Szeg\H{o} theorem, and
+\emph{(iii)} hyperbolicity with full degree of every coefficient-window
+polynomial of $(b_n)$ (\Lean{XiJensenCoeffHyperbolic}),
+RH follows.
+\end{theorem}
+
+\section{Machine-checked falsification results}\label{sec:falsification}
+
+\begin{theorem}[Local Tur\'an data cannot close order $3$;
+\Lean{turan23\_not\_imp\_toeplitz3}]\label{thm:routekill}
+There exist positive reals $b_0,\dots,b_4$ satisfying the strict
+second-order Tur\'an inequalities and both third-order Tur\'an inequalities
+on the window, for which the contiguous $3\times 3$ Toeplitz determinant is
+negative.  A witness is $(b_0,\dots,b_4) = (\tfrac1{100},\,1,\,\tfrac54,\,1,\,\tfrac1{100})$,
+with Tur\'an margins $\approx 0.68$ and determinant
+$\tfrac{45}{64} - \tfrac{31}{25} + \tfrac{79}{8000} \approx -0.53$.
+\end{theorem}
+
+Since the second-order inequalities are the CNV theorem \cite{CNV1986} and
+the third-order inequalities are the Dimitrov--Lucas theorem
+\cite{DimitrovLucas2011}, Theorem~\ref{thm:routekill} shows that the two
+strongest known unconditional local results about $(\mu_n)$ cannot, by
+sequence-level algebra alone, prove even the first open rung of the ladder:
+any proof must use quantitative information that the five-term Tur\'an
+window forgets (the $\Xi$ windows have $\mu_m^2/(\mu_{m-1}\mu_{m+1}) \to 1^+$
+with specific super-exponential decay, far from the witness's regime).
+
+Separately, a recent computer-certified failure of $\PF_5$ for the
+continuous de Bruijn--Newman translation kernel $\Phi(|u|)$
+\cite{PF5counterexample} rules out any argument that silently upgrades that
+kernel to $\PF_\infty$; it does \emph{not} bear on the discrete moment
+sequence targets above, and the repository records this separation so the
+two objects cannot be conflated.
+
+\section{The new mathematics required for an RH proof}\label{sec:newmath}
+
+The formal reduction is now short enough that the remaining mathematics can
+be stated as explicit proof obligations rather than as a general request for
+``more asymptotics.''  This section gives the proposed statements in the
+notation consumed by the Lean receptors.  A statement marked \emph{target}
+is not claimed as a theorem of the present repository; it is a precise
+mathematical problem whose proof would close a named interface.  The first
+two conditional capstones below are proved in Lean once their hypotheses are
+supplied; the heat-flow item is a proposed third receptor.
+
+\subsection{The order-three tail as an interval theorem}
+
+For a positive coefficient sequence $(\mu_n)$, write
+\begin{equation}
+  \rho_n := \frac{\mu_{n+1}}{\mu_n},\qquad
+  \Delta_3(m):=\det\!\begin{bmatrix}
+    \mu_m&\mu_{m-1}&\mu_{m-2}\\
+    \mu_{m+1}&\mu_m&\mu_{m-1}\\
+    \mu_{m+2}&\mu_{m+1}&\mu_m
+  \end{bmatrix},\qquad
+  G_3(m):=\frac{\Delta_3(m)}{\mu_m^3}.
+  \label{eq:normalized-three-gap}
+\end{equation}
+For $m\ge2$, direct division by $\mu_m^3$ gives the ratio expression
+\begin{equation}
+\begin{split}
+G_3(m)={}&1-2\frac{\rho_m}{\rho_{m-1}}
+ +\frac{\rho_m^2}{\rho_{m-2}\rho_{m-1}}
+ +\frac{\rho_m\rho_{m+1}}{\rho_{m-1}^2}\\[-0.2em]
+&-\frac{\rho_m\rho_{m+1}}{\rho_{m-2}\rho_{m-1}}.
+\end{split}
+\label{eq:ratio-three-gap}
+\end{equation}
+This identity is useful because asymptotic results naturally control ratios,
+whereas the Lean target is a determinant.
+
+\begin{definition}[Effective ratio box]
+An effective ratio box at offset $m$ is a tuple of rational intervals
+\begin{equation}
+  I_{m,j}=[\underline\rho_{m+j},\overline\rho_{m+j}]
+  \quad (j=-2,-1,0,1),
+  \qquad 0<\underline\rho_{m+j}\le\overline\rho_{m+j},
+  \label{eq:ratio-box}
+\end{equation}
+containing the four adjacent ratios.  Let $\mathcal G_3(I_{m,-2},\ldots,I_{m,1})$
+be the natural interval evaluation of the right-hand side of
+\eqref{eq:ratio-three-gap}.
+\end{definition}
+
+\begin{target}[Effective $k=3$ remainder compiler]
+Suppose that, for some explicit $N$, effective asymptotics produce ratio boxes
+\eqref{eq:ratio-box} for every $m\ge N$ and that
+\begin{equation}
+  \inf\mathcal G_3(I_{m,-2},I_{m,-1},I_{m,0},I_{m,1})>0
+  \qquad(m\ge N).
+  \label{eq:positive-three-tail}
+\end{equation}
+Then $\Lean{KernelMinorTailStrict}(M,3,N)$ holds.  In particular, the
+proof is an exact rational interval calculation once the asymptotic error
+terms have been translated into the four intervals.
+\end{target}
+
+The target isolates the genuinely new analytic step: one must obtain an
+error margin that survives the cancellation in \eqref{eq:ratio-three-gap}.
+An asymptotic equivalence without an explicit signed remainder is
+insufficient.  O'Sullivan's Lambert-$W$ expansions \cite{OSullivan} are a
+natural source of such bounds; the missing work is the remainder translation,
+not another Lean interface.
+
+\subsection{From one rung to every order}
+
+The Fekete engine gives the following exact capstone, which is the central
+all-order theorem of the formalization.
+
+\begin{theorem}[All-order positivity capstone]
+Assume the classical Toeplitz scaffolding and
+\begin{equation}
+  \forall k,m\in\mathbb N,\qquad D_k(m)>0.
+  \label{eq:strict-ladder}
+\end{equation}
+Then every minor of the signed Xi Toeplitz matrix is nonnegative and RH
+holds.  In Lean this is
+\Lean{riemannHypothesis\_of\_strictLadder}, obtained through
+\Lean{xiToeplitzTotalPositive\_of\_strictLadder}.
+\end{theorem}
+
+The theorem is conditional because \eqref{eq:strict-ladder} is itself at
+least RH-strength.  Route A packages the order-by-order version of this
+obligation: a finite certified prefix plus a tail certificate for each $k$.
+Thus an all-order asymptotic theorem need not mention Toeplitz minors at all;
+it only has to imply the named proposition
+\Lean{KernelEffectiveCertificates}.
+
+\begin{target}[Uniform all-order remainder scheme]
+Construct explicit functions $N(k)$ and $\varepsilon_k(m)$ such that the
+kernel determinant admits a certified decomposition
+\begin{equation}
+ D_k^{\rm ker}(m)=L_k(m)+R_k(m),\qquad
+ |R_k(m)|\le\varepsilon_k(m),\qquad
+ L_k(m)>\varepsilon_k(m)\quad(m\ge N(k)).
+ \label{eq:all-order-remainder}
+\end{equation}
+Then \Lean{KernelEffectiveCertificates} follows by combining
+\eqref{eq:all-order-remainder} with a finite interval prefix.
+\end{target}
+
+The order-three compiler above is the first nontrivial instance.  The
+mathematical challenge at large $k$ is uniformity: determinant expansion
+creates many cancellation terms, so a bound that is effective for each fixed
+$k$ may still be unusable when the certificate is assembled over all orders.
+
+\subsection{A root-separation theorem for the Jensen route}
+
+Let $p(x)=a\prod_{i=1}^d(x-r_i)$ be a real polynomial with distinct real
+roots, and choose $0<s<\tfrac12\min_{i\ne j}|r_i-r_j|$.  Set
+\begin{equation}
+  \eta(p,s):=\min_{1\le i\le d}\min_{|z-r_i|=s}|p(z)|>0.
+  \label{eq:rouche-margin}
+\end{equation}
+
+\begin{theorem}[Root-separation perturbation]
+Let $q$ be a real polynomial of degree $d$ and suppose
+\begin{equation}
+  \sup_{|z-r_i|=s}|q(z)-p(z)|<\eta(p,s)
+  \qquad(1\le i\le d).
+  \label{eq:root-separation-condition}
+\end{equation}
+Then $q$ has exactly one zero in each disk $|z-r_i|<s$, and every zero of
+$q$ is real.  Consequently $q$ is hyperbolic.
+\end{theorem}
+
+Indeed, Rouch\'e's theorem gives one zero in each disk.  The disks are
+pairwise disjoint and $q$ has degree $d$, so these are all its zeros.  A
+nonreal zero in a disk centered on the real axis would bring its conjugate
+into the same disk, contradicting the count one.  This theorem is elementary
+but exact-ready: coefficient bounds imply the left side of
+\eqref{eq:root-separation-condition} by the triangle inequality.
+
+\begin{target}[Xi Jensen window certificate]
+For every degree $d$ there are explicit $n_0(d)$, Hermite-model polynomials
+$H_d$, and margins $s_d,\eta_d>0$ such that for every $n\ge n_0(d)$ the
+normalized coefficient-window polynomial of the Xi coefficients satisfies
+\eqref{eq:root-separation-condition} with $p=H_d$.  The finite set of windows
+$n<n_0(d)$ is discharged by exact algebra or certified interval arithmetic.
+This target implies \Lean{XiJensenCoeffHyperbolic}.
+\end{target}
+
+The asymptotic input from Griffin--Ono--Rolen--Zagier \cite{GORZ2019} gives
+the Hermite shape; an effective version must additionally bound the root
+separation margin and the coefficient error in a common normalization.  This
+is a concrete alternative to proving the full same-sign
+Hermite--Poulain/Schur--Szeg\H{o} theorem for every degree.
+
+\subsection{Conditional capstones and a possible heat-flow route}
+
+The exact-ready architecture can be summarized as the following theorem
+schema.  It is deliberately stated with named propositions, so the proof
+does not hide a conjecture in a typeclass or an imported declaration.
+
+\begin{theorem}[Three conditional RH capstones]
+Assume the classical analytic scaffolding.  Each of the following hypotheses
+is separately sufficient for RH:
+\begin{enumerate}
+  \item \Lean{KernelEffectiveCertificates};
+  \item \Lean{PolyaJensenBridge},
+    \Lean{HermitePoulainSchurSzegoTheorem}, and
+    \Lean{XiJensenCoeffHyperbolic};
+  \item a proved heat-flow rigidity proposition
+    \Lean{HeatFlowRigidity} asserting that the de Bruijn--Newman constant
+    satisfies $\Lambda\le0$.
+\end{enumerate}
+The first two implications are the Lean theorems
+\Lean{riemannHypothesis\_of\_effectiveCertificates} and
+\Lean{riemannHypothesis\_of\_hpss\_route}; the third combines
+$\Lambda\ge0$ of Rodgers--Tao \cite{RodgersTao2020} with the classical
+equivalence $\RH\iff\Lambda\le0$.
+\end{theorem}
+
+The third item is a research direction, not a hidden assumption.  A possible
+mathematical target is a quantitative backward-heat-flow rigidity statement:
+if $\Lambda>0$, then a specified zero-statistics inequality is violated at an
+explicit height.  Proving that implication would produce
+\Lean{HeatFlowRigidity} and close a third route without Toeplitz positivity.
+
+\subsection{What remains genuinely open}
+
+The four classical bridges (ASW/Edrei, Laguerre--P\'olya closure,
+P\'olya--Jensen, and the converse) are formalization work, albeit substantial
+work involving entire functions and Hadamard products.  The new mathematics
+is concentrated in either an effective positive remainder such as
+\eqref{eq:positive-three-tail}, a uniform all-order scheme such as
+\eqref{eq:all-order-remainder}, or an effective root-separation certificate
+such as \eqref{eq:root-separation-condition}.  None of these is currently
+proved in the repository or in the cited sources in the exact Lean form.
+
+\section{Discussion and conclusion}\label{sec:conclusion}
+
+Formalized analytic number theory has advanced rapidly---Mathlib contains
+the nonvanishing of $\zeta$ on $\mathrm{Re}(s) \ge 1$, the functional
+equation, and discreteness of the zero set, while independent Lean projects
+now formalize other RH reductions and the official Millennium-problem
+statement \cite{LeanMillennium,NagyRH,BeanapologistRH}.  Our narrower claim is
+that the present repository combines a generic Grassmann three-term
+gap-shrinking identity, a Toeplitz-specific all-orders closure, and two
+axiom-audited exact-ready receptors in one checked development.  The
+counterexample of Theorem~\ref{thm:routekill} appears to be new as a stated
+separation, though it is elementary once asked.
+
+The honest summary is unchanged from the abstract: RH is not proved, and
+the remaining inputs are provably at least as hard as RH (the strict
+ladder) or are classical formalization debt (the scaffolding).  What has
+changed is the shape of the problem: the open mathematics is now a short
+list of named statements, each with a kernel-checked theorem waiting to
+consume it.  All results are reproducible from the repository by running
+\Lean{lake build}, the axiom-audit script, and the verification harness;
+the audit reports 87 theorems depending only on Lean's foundational axioms.
+
+\appendix
+\section{Reproducibility and theorem-status ledger}
+\label{app:reproducibility}
+
+This release has not received an independent human expert report.  The
+review questions and evidence bundle are recorded in
+\Lean{research/INDEPENDENT\_REVIEW\_PACKET\_2026\_07\_17.md}; kernel
+checking and a literature audit should not be represented as external
+mathematical certification.
+
+The Lean baseline used for this revision is Lean~4.30.0
+(``\texttt{leanprover/lean4:v4.30.0}'') with Mathlib revision
+\Lean{c5ea00351c28e24afc9f0f84379aa41082b1188f}.  The repository baseline
+commit at the time of this audit is
+\Lean{a51533a69956fb5939d16e97ccad27dfdd4bd5c9}; a release archive must
+record the final commit that includes this manuscript and the scan reports.
+The following commands were run successfully:
+\begin{verbatim}
+lake build Reinmann
+bash scripts/verify_axiom_clean.sh
+bash scripts/safe-verify.sh
+bash scripts/run_scan_48.sh
+\end{verbatim}
+The first command completed 3522 jobs.  The axiom audit reported 87 headline
+theorems depending only on
+\texttt{[propext, Classical.choice, Quot.sound]}; the source scan found no
+\texttt{sorry}, \texttt{admit}, or project-declared axioms, and the safe
+verification scan covered 72 Lean files.  The row-48 numerical scan reported
+zero certified negative minors for the tested order-three and order-four
+initial-column boxes; its coefficient cache remains provenance for a numerical
+diagnostic, not a formal proof of the Xi coefficients.
+
+The status ledger is:
+\begin{itemize}
+  \item \emph{Proved in Lean:} the Xi target-function correction, the generic
+    Grassmann syzygy and three-term identity, the all-orders Fekete closure,
+    the bounded-degree hyperbolic-limit theorem, the Tur\'an route-kill, and
+    the two conditional assembly theorems.
+  \item \emph{External classical input:} the P\'olya kernel representation,
+    ASW/Edrei, Laguerre--P\'olya closure, and P\'olya--Jensen bridge.
+  \item \emph{Open analytic targets:}
+    \Lean{KernelEffectiveCertificates},
+    \Lean{HermitePoulainSchurSzegoTheorem},
+    \Lean{XiJensenCoeffHyperbolic}, and the proposed heat-flow rigidity
+    proposition.  None is imported as an axiom.
+\end{itemize}
+
+\subsection*{Acknowledgments}
+The formalization was developed interactively with an AI pair programmer
+(Claude, Anthropic).  Every stated theorem is checked by the Lean~4 kernel;
+the mathematical responsibility for conventions and interpretations rests
+with the author.
+
+\begin{thebibliography}{99}\small
+
+\bibitem{Riemann1859} B.~Riemann,
+\emph{\"Uber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse},
+Monatsber.\ Berlin.\ Akad.\ (1859), 671--680.
+
+\bibitem{Polya1926} G.~P\'olya,
+\emph{Bemerkung \"uber die Integraldarstellung der Riemannschen
+$\xi$-Funktion}, Acta Math.\ \textbf{48} (1926), 305--317.
+
+\bibitem{Polya1927} G.~P\'olya,
+\emph{\"Uber die algebraisch-funktionentheoretischen Untersuchungen von
+J.~L.~W.~V.~Jensen}, Kgl.\ Danske Vid.\ Sel.\ Math.-Fys.\ Medd.\
+\textbf{7} (1927), 3--33.
+
+\bibitem{ASW1952} M.~Aissen, I.~J.~Schoenberg, A.~M.~Whitney,
+\emph{On the generating functions of totally positive sequences~I},
+J.~Anal.\ Math.\ \textbf{2} (1952), 93--103.
+
+\bibitem{Edrei1953} A.~Edrei,
+\emph{On the generating function of a doubly infinite, totally positive
+sequence}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{74} (1953), 367--383.
+
+\bibitem{GK} F.~R.~Gantmacher, M.~G.~Krein,
+\emph{Oscillation Matrices and Kernels and Small Vibrations of Mechanical
+Systems}, AMS Chelsea, 2002 (orig.\ 1941).
+
+\bibitem{Pinkus} A.~Pinkus,
+\emph{Totally Positive Matrices}, Cambridge Tracts in Mathematics 181,
+Cambridge University Press, 2010.
+
+\bibitem{Cryer1976} C.~W.~Cryer,
+\emph{Some properties of totally positive matrices},
+Linear Algebra Appl.\ \textbf{15} (1976), 1--25.
+
+\bibitem{CNV1986} G.~Csordas, T.~S.~Norfolk, R.~S.~Varga,
+\emph{The Riemann hypothesis and the Tur\'an inequalities},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{296} (1986), 521--541.
+
+\bibitem{DimitrovLucas2011} D.~K.~Dimitrov, F.~R.~Lucas,
+\emph{Higher order Tur\'an inequalities for the Riemann $\xi$-function},
+Proc.\ Amer.\ Math.\ Soc.\ \textbf{139} (2011), 1013--1022.
+
+\bibitem{GORZ2019} M.~Griffin, K.~Ono, L.~Rolen, D.~Zagier,
+\emph{Jensen polynomials for the Riemann zeta function and other
+sequences}, Proc.\ Natl.\ Acad.\ Sci.\ USA \textbf{116} (2019),
+11103--11110.
+
+\bibitem{XiEffective} M.~Griffin, K.~Ono, L.~Rolen, J.~Thorner,
+Z.~Tripp, I.~Wagner,
+\emph{Jensen polynomials for the Riemann Xi function}, preprint,
+arXiv:1910.01227 (2019).
+
+\bibitem{Farmer2022} D.~W.~Farmer,
+\emph{Jensen polynomials are not a plausible route to proving the Riemann
+Hypothesis}, Adv.\ Math.\ \textbf{411} (2022), 108781.
+
+\bibitem{Planat2026} M.~Planat,
+\emph{Asymptotic hyperbolicity of Jensen polynomials and the finite-strip
+obstruction to the Riemann Hypothesis}, Mathematics \textbf{14} (2026),
+1884.
+
+\bibitem{RodgersTao2020} B.~Rodgers, T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum Math.\ Pi \textbf{8} (2020), e6.
+
+\bibitem{OSullivan} C.~O'Sullivan,
+\emph{Zeros of Jensen polynomials and asymptotics for the Riemann xi
+function}, preprint, arXiv:2007.13582 (2020).
+
+\bibitem{PF5counterexample}
+W.~Micha\l{}owski,
+\emph{On the P\'olya Frequency Order of the de Bruijn--Newman Kernel.
+Certified Failure at Order Five and the Toeplitz Threshold Phenomenon},
+preprint, arXiv:2602.20313 (2026).
+
+\bibitem{Szego1922} G.~Szeg\H{o},
+\emph{Bemerkungen zu einem Satz von J.~H.~Grace \"uber die Wurzeln
+algebraischer Gleichungen}, Math.\ Z.\ \textbf{13} (1922), 28--55.
+
+\bibitem{RS} Q.~I.~Rahman, G.~Schmeisser,
+\emph{Analytic Theory of Polynomials}, London Math.\ Soc.\ Monographs 26,
+Oxford University Press, 2002.
+
+\bibitem{Mathlib2020} The mathlib Community,
+\emph{The Lean mathematical library}, CPP 2020, 367--381.
+
+\bibitem{Lean4} L.~de~Moura, S.~Ullrich,
+\emph{The Lean 4 theorem prover and programming language},
+CADE 28, LNCS 12699 (2021), 625--635.
+
+\bibitem{LeanMillennium} LeanDojo,
+\emph{Millennium Prize Problems in Lean 4}, software repository,
+\url{https://github.com/lean-dojo/LeanMillenniumPrizeProblems} (accessed 2026).
+
+\bibitem{NagyRH} T.~Nagy,
+\emph{The Riemann Hypothesis}, formalization project,
+\url{https://riemann-hypothesis.dev/} (accessed 2026).
+
+\bibitem{BeanapologistRH} beanapologist,
+\emph{RH: A Geometric Reduction of the Riemann Hypothesis}, Lean 4 software
+repository, \url{https://github.com/beanapologist/RH} (accessed 2026).
+
+\end{thebibliography}
+
+\end{document}

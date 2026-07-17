@@ -1,56 +1,54 @@
 Biswajit Mondal
 b.mondal0000@gmail.com
 
-June 7, 2026
+July 17, 2026
 
 To the Editors,
 *Experimental Mathematics*
 
 Dear Editors,
 
-I am submitting for your consideration the manuscript **"A Machine-Checked
-Reduction of the Riemann Hypothesis to Pólya–Frequency Positivity of the ξ Taylor
-Coefficients"** for publication in *Experimental Mathematics*.
+I submit for consideration the manuscript **“Two Machine-Checked Conditional
+Routes to the Riemann Hypothesis: A Formalized Fekete Criterion, Effective
+Positivity Targets, and an Exact-Ready Receptor Architecture.”**
 
-**What the paper is — and is not.** This is a formalization and reduction study. It
-does **not** prove the Riemann Hypothesis, and it makes no such claim. Its
-contribution is a chain of *conditional reductions*, each checked by the Lean 4
-kernel and depending only on the foundational axioms {propext, Classical.choice,
-Quot.sound}, that convert RH into explicit total-positivity and operator-positivity
-statements. The central result is a **tightness theorem**: modulo three standard
-classical inputs (Pólya–Jensen, Aissen–Schoenberg–Whitney/Edrei, and Laguerre–Pólya
-closure), RH is *equivalent* to total positivity of the Toeplitz matrix of the
-sign-normalized ξ Taylor coefficients — so that single remaining input cannot be
-"postulated" as progress without assuming RH itself.
+This is a formalization and reduction study. It does **not** prove the Riemann
+Hypothesis and makes no unconditional claim. The Lean 4 development contains
+71 modules and 87 audited headline theorems; the axiom audit reports only
+`propext`, `Classical.choice`, and `Quot.sound`, with no `sorry` and no
+project-declared axioms.
 
-**Why *Experimental Mathematics*.** The paper pairs formal verification with an
-unusually deep, cross-certified computation: the ξ Taylor coefficients b₀,…,b₁₂₀
-(with |b₁₂₀| ≈ 10⁻⁴⁴⁹), agreeing to over 230 significant digits across two
-independent precisions, are used to verify the reduction's premise at scale — all
-contiguous Pólya-frequency minors through order 16, log-concavity through n = 118,
-and Jensen hyperbolicity through degree 6. This combination of rigorous computation
-and machine-checked theory is squarely within your journal's scope, and the work's
-value is precisely in the experimental delimitation of the open frontier.
+The main formal contribution is an all-orders Toeplitz/Fekete closure: a generic
+Grassmann syzygy and three-term gap-shrinking identity imply that strict
+contiguous minors of the sign-normalized Taylor coefficients of Riemann’s
+entire \(\xi\)-function force full Pólya-frequency positivity. Two exact-ready
+capstones then consume either (i) per-order effective kernel certificates or
+(ii) a Pólya–Jensen bridge, the same-sign Hermite–Poulain/Schur–Szegő theorem,
+and hyperbolicity of every coefficient window.
 
-**Distinct contributions.**
-1. A correct, tight, axiom-clean Lean reduction of RH to one sign-correct
-   positivity statement.
-2. Identification and repair of a target-function error (building on the completed
-   zeta Λ₀, whose zeros are *not* the Riemann zeros, rather than on Riemann's ξ).
-3. An independent operator-positivity (pseudo-Hermitian) reduction.
-4. Reproducible high-precision numerical evidence localizing the open content to a
-   uniformity statement.
+The manuscript also synthesizes and audits the surrounding program. It records
+the correction from the meromorphic \(\Lambda_0\) variant to the correct entire
+\(\xi\)-function, retains the same-height, Li, Hilbert–Pólya, and de la Vallée
+Poussin interfaces as conditional or negative-control results, and separates
+the discrete Xi moment problem from the recently certified PF\(_5\) failure of
+the continuous de Bruijn–Newman kernel. The literature discussion now includes
+the Jensen asymptotics of Griffin–Ono–Rolen–Zagier, the effective Xi work,
+O’Sullivan’s coefficient expansions, Farmer’s caution about information loss in
+Jensen reformulations, and Planat’s finite-strip obstruction.
 
-**Originality and ethics.** This manuscript is original, has not been published
-elsewhere, and is not under consideration by any other journal. I am the sole
-author. A disclosure of AI-assisted tools (used for drafting, code scaffolding, and
-consistency checking, under my direction and responsibility) is included in the
-manuscript per current best practice; these tools are not authors. The Lean
-development and verification scripts are available for review, and I am happy to
-provide the repository archive and a commit hash on request.
+The numerical scans are presented only as falsification diagnostics. They do
+not discharge any RH-strength hypothesis. This distinction, together with the
+named theorem contracts and reproducibility scripts, is the paper’s central
+methodological contribution.
 
-Thank you for your consideration. I would be glad to suggest qualified referees in
-analytic number theory and in formalized mathematics if helpful.
+The manuscript is original, has not been published elsewhere, and is not under
+consideration by another journal. I am the sole author. AI tools assisted with
+drafting and code scaffolding under my direction; they are not authors, and the
+Lean kernel independently checks the formal proofs. The source, verification
+scripts, exact commit, and repository archive can be supplied to referees.
+
+Thank you for your consideration. I would be pleased to suggest referees in
+analytic number theory, total positivity, and interactive theorem proving.
 
 Sincerely,
 Biswajit Mondal

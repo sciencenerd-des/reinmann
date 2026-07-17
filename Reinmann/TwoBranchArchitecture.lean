@@ -80,8 +80,8 @@ structure HilbertPolyaWitness where
 
     This is fully verified in InvolutionSymmetry.lean. -/
 theorem criticalStrip_involutionFixed_onLine {ρ : Complex}
-    (hstrip : 0 < ρ.re ∧ ρ.re < 1)
-    (hzero : riemannZeta ρ = 0)
+    (_hstrip : 0 < ρ.re ∧ ρ.re < 1)
+    (_hzero : riemannZeta ρ = 0)
     (hfixed : zetaInvolution ρ = ρ) : OnCriticalLine ρ := by
   rw [← zetaInvolution_fixed_iff_onCriticalLine]
   exact hfixed

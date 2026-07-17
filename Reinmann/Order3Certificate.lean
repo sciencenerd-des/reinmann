@@ -109,4 +109,18 @@ theorem order3DetNonneg_iff_expr (M : ℕ → ℝ) (n : ℕ) :
   unfold Order3DetNonneg
   rw [momentToeplitzContigMinor_eq_order3DetExpr]
 
+/-- The ratio-form algebraic equivalence for the order-3 determinant. If the central
+moment `weightedMoment M (n + 2)` is non-zero, then the determinant is the product of
+the cube of the central moment and the normalized ratio-form expression. -/
+theorem momentToeplitzContigMinor_eq_ratioExpr (M : ℕ → ℝ) (n : ℕ)
+    (hc : weightedMoment M (n + 2) ≠ 0) :
+    momentToeplitzContigMinor M 3 (n + 2) =
+      weightedMoment M (n + 2) ^ 3 * momentToeplitzOrder3RatioExpr M n := by
+  unfold momentToeplitzOrder3RatioExpr
+  dsimp only
+  rw [momentToeplitzContigMinor_eq_order3DetExpr]
+  unfold order3DetExpr
+  field_simp
+  ring
+
 end Reinmann

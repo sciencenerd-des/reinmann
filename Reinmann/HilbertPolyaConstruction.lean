@@ -47,6 +47,7 @@ namespace Reinmann
 
 variable {ι : Type*} [Fintype ι] [DecidableEq ι]
 
+omit [Fintype ι] in
 /-- A real diagonal matrix (entries cast into `ℂ`) is Hermitian. -/
 theorem diagonal_real_isHermitian (d : ι → ℝ) :
     (Matrix.diagonal fun j => (d j : ℂ)).IsHermitian := by
@@ -70,9 +71,9 @@ theorem diagOp_eigen (d : ι → ℝ) (i : ι) :
     diagOp d (EuclideanSpace.single i 1) = (d i : ℂ) • EuclideanSpace.single i 1 := by
   apply WithLp.ofLp_injective
   unfold diagOp
-  rw [Matrix.ofLp_toEuclideanLin_apply, WithLp.ofLp_smul, PiLp.ofLp_single]
+  rw [Matrix.ofLp_toLpLin, WithLp.ofLp_smul, PiLp.ofLp_single]
   funext k
-  rw [Matrix.mulVec_diagonal]
+  rw [Matrix.toLin'_apply, Matrix.mulVec_diagonal]
   by_cases h : k = i <;> simp [Pi.single_apply, h]
 
 /-- **Prescribed real spectrum is realizable by a symmetric operator.**
@@ -84,6 +85,6 @@ theorem prescribed_real_spectrum_realizable (d : ι → ℝ) :
         ∀ i : ι, T (EuclideanSpace.single i 1) = (d i : ℂ) • EuclideanSpace.single i 1
           ∧ EuclideanSpace.single i (1 : ℂ) ≠ 0 := by
   refine ⟨diagOp d, diagOp_isSymmetric d, fun i => ⟨diagOp_eigen d i, ?_⟩⟩
-  simp [EuclideanSpace.single_eq_zero_iff]
+  simp [PiLp.single_eq_zero_iff]
 
 end Reinmann

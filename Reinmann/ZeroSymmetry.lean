@@ -39,13 +39,13 @@ theorem functional_equation_pair {s : Complex}
 
 /-- If a zero is on the critical line, its functional equation pair is its conjugate. -/
 theorem criticalLine_zero_pair_is_conjugate {s : Complex}
-    (hline : OnCriticalLine s) (hz : riemannZeta s = 0) :
+    (hline : OnCriticalLine s) (_hz : riemannZeta s = 0) :
     1 - s = starRingEnd Complex s := by
   simp only [OnCriticalLine] at hline
   apply Complex.ext
   · simp only [Complex.sub_re, Complex.one_re, Complex.conj_re]
     linarith
-  · simp only [Complex.sub_im, Complex.one_im, Complex.conj_im, zero_sub, neg_neg]
+  · simp only [Complex.sub_im, Complex.one_im, Complex.conj_im, zero_sub]
 
 /-- The imaginary parts of functional equation pairs sum to zero. -/
 theorem functional_pair_im_sum_zero {s : Complex} :
@@ -64,7 +64,7 @@ theorem functional_pair_re_sum_one {s : Complex} :
 /-- If a zero is not on the critical line, then it and its functional equation pair
     are distinct points. -/
 theorem offLine_zero_has_distinct_pair {s : Complex}
-    (hstrip : 0 < s.re ∧ s.re < 1)
+    (_hstrip : 0 < s.re ∧ s.re < 1)
     (hoffLine : ¬OnCriticalLine s) :
     1 - s ≠ s := by
   intro h
@@ -75,7 +75,7 @@ theorem offLine_zero_has_distinct_pair {s : Complex}
 
 /-- An off-line zero has its pair on the opposite side of the critical line. -/
 theorem offLine_zero_pair_opposite_side {s : Complex}
-    (hstrip : 0 < s.re ∧ s.re < 1)
+    (_hstrip : 0 < s.re ∧ s.re < 1)
     (hright : 1 / 2 < s.re) :
     (1 - s).re < 1 / 2 := by
   simp only [Complex.sub_re, Complex.one_re]

@@ -55,7 +55,7 @@ theorem exists_injective_critical_zeros_of_alternating {n : ℕ}
   · exfalso
     have hlt' : (i : ℕ) < (j : ℕ) := hlt
     have hle : i.succ ≤ j.castSucc := by
-      rw [Fin.le_def]; simp only [Fin.val_succ, Fin.coe_castSucc]; omega
+      rw [Fin.le_def]; simp only [Fin.val_succ, Fin.val_castSucc]; omega
     have hxle : x i.succ ≤ x j.castSucc := hmono.monotone hle
     have hzz : z i < z j :=
       lt_of_lt_of_le (hz2 i) (le_trans hxle (le_of_lt (hz1 j)))
@@ -64,7 +64,7 @@ theorem exists_injective_critical_zeros_of_alternating {n : ℕ}
   · exfalso
     have hgt' : (j : ℕ) < (i : ℕ) := hgt
     have hle : j.succ ≤ i.castSucc := by
-      rw [Fin.le_def]; simp only [Fin.val_succ, Fin.coe_castSucc]; omega
+      rw [Fin.le_def]; simp only [Fin.val_succ, Fin.val_castSucc]; omega
     have hxle : x j.succ ≤ x i.castSucc := hmono.monotone hle
     have hzz : z j < z i :=
       lt_of_lt_of_le (hz2 j) (le_trans hxle (le_of_lt (hz1 i)))

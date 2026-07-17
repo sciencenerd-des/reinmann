@@ -1,0 +1,58 @@
+{
+  "cache": "research/figures/coeffs_M120.txt",
+  "cache_cert_metadata": "235.92527516266202",
+  "enclosure": "half-unit in the last stored decimal place",
+  "max_row": 40,
+  "orders": [
+    {
+      "size": 3,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "max_row": 40,
+      "counts": {
+        "certified_positive": 8367,
+        "certified_negative": 0,
+        "exact_zero": 0,
+        "inconclusive": 2293
+      },
+      "tightest_certified_positive": {
+        "rows": [
+          34,
+          35,
+          36
+        ],
+        "lower_bound": "3.467762177670661E-312"
+      },
+      "certified_negative_examples": []
+    },
+    {
+      "size": 4,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "max_row": 40,
+      "counts": {
+        "certified_positive": 72033,
+        "certified_negative": 0,
+        "exact_zero": 0,
+        "inconclusive": 29237
+      },
+      "tightest_certified_positive": {
+        "rows": [
+          32,
+          33,
+          34,
+          35
+        ],
+        "lower_bound": "9.169031201888276E-390"
+      },
+      "certified_negative_examples": []
+    }
+  ]
+}

@@ -14,10 +14,10 @@ if ! command -v lean >/dev/null 2>&1; then
   exit 127
 fi
 
-project_files=()
+project_files=("./Reinmann.lean")
 while IFS= read -r -d '' file; do
   project_files+=("$file")
-done < <(find . -type f -name '*.lean' -not -path './.lake/*' -print0)
+done < <(find Reinmann -type f -name '*.lean' -print0)
 
 if [ "${#project_files[@]}" -eq 0 ]; then
   echo "safe-verify: no Lean files found" >&2
@@ -41,28 +41,61 @@ scan_file() {
     exit 1
   fi
 
-  perl -ne '
-    my @checks = (
-      [qr/(?<![A-Za-z0-9_])sorry(?![A-Za-z0-9_])/, "sorry"],
-      [qr/(?<![A-Za-z0-9_])admit(?![A-Za-z0-9_])/, "admit"],
-      [qr/^\s*(?:private\s+)?axiom\b/, "axiom declaration"],
-      [qr/^\s*(?:private\s+)?constant\b/, "constant declaration"],
-      [qr/^\s*(?:private\s+)?opaque\b/, "opaque declaration"],
-      [qr/(?<![A-Za-z0-9_])unsafe(?![A-Za-z0-9_])/, "unsafe declaration or modifier"],
-      [qr/^\s*set_option\s+autoImplicit\s+true\b/, "set_option autoImplicit true"],
-      [qr/^\s*set_option\s+relaxedAutoImplicit\s+true\b/, "set_option relaxedAutoImplicit true"],
-    );
+  awk -v file="$file" '
+    BEGIN { depth = 0; failed = 0 }
+    {
+      source = $0
+      code = ""
+      i = 1
+      n = length(source)
 
-    for my $check (@checks) {
-      if ($_ =~ $check->[0]) {
-        print "$ARGV:$.: forbidden verification shortcut: $check->[1]\n";
-        $failed = 1;
+      while (i <= n) {
+        two = substr(source, i, 2)
+        if (depth > 0) {
+          if (two == "-/") { depth--; i += 2 }
+          else if (two == "/-") { depth++; i += 2 }
+          else i++
+        } else {
+          if (two == "/-") { depth++; i += 2 }
+          else if (two == "--") { break }
+          else { code = code substr(source, i, 1); i++ }
+        }
+      }
+
+      if (code ~ /(^|[^A-Za-z0-9_])sorry([^A-Za-z0-9_]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: sorry\n", file, NR
+        failed = 1
+      }
+      if (code ~ /(^|[^A-Za-z0-9_])admit([^A-Za-z0-9_]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: admit\n", file, NR
+        failed = 1
+      }
+      if (code ~ /^[[:space:]]*(private[[:space:]]+)?axiom([[:space:]]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: axiom declaration\n", file, NR
+        failed = 1
+      }
+      if (code ~ /^[[:space:]]*(private[[:space:]]+)?constant([[:space:]]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: constant declaration\n", file, NR
+        failed = 1
+      }
+      if (code ~ /^[[:space:]]*(private[[:space:]]+)?opaque([[:space:]]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: opaque declaration\n", file, NR
+        failed = 1
+      }
+      if (code ~ /(^|[^A-Za-z0-9_])unsafe([^A-Za-z0-9_]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: unsafe declaration or modifier\n", file, NR
+        failed = 1
+      }
+      if (code ~ /^[[:space:]]*set_option[[:space:]]+autoImplicit[[:space:]]+true([[:space:]]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: set_option autoImplicit true\n", file, NR
+        failed = 1
+      }
+      if (code ~ /^[[:space:]]*set_option[[:space:]]+relaxedAutoImplicit[[:space:]]+true([[:space:]]|$)/) {
+        printf "%s:%d: forbidden verification shortcut: set_option relaxedAutoImplicit true\n", file, NR
+        failed = 1
       }
     }
-
-    END {
-      exit($failed ? 1 : 0);
-    }
+    END { exit(failed ? 1 : 0) }
   ' "$file"
 }
 

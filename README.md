@@ -8,6 +8,8 @@ lemmas that Lean can check.
 > **Start here:** [`ARCHITECTURE.md`](ARCHITECTURE.md) is the canonical, current
 > map of the codebase — the module inventory, the verified reduction chain, the
 > open three-level frontier, and an explicit "what is and is not proven" table.
+> The executable research roadmap is
+> [`research/RH_PROOF_PLAN_2026_07_17.md`](research/RH_PROOF_PLAN_2026_07_17.md).
 > Run `bash scripts/verify_axiom_clean.sh` to confirm the 0-`sorry` /
 > 0-custom-axiom claim. Historical progress notes live in [`docs/archive/`](docs/archive/).
 
@@ -26,15 +28,15 @@ Run the full verifier:
 ./scripts/safe-verify.sh
 ```
 
-With no arguments, the harness scans every `.lean` file outside `.lake/`, then
-runs `lake build` and typechecks every active `.lean` file directly with
-`lake env lean`.
+With no arguments, the harness scans `Reinmann.lean` and every `.lean` file
+under `Reinmann/`, then runs `lake build` and typechecks every active file
+directly with `lake env lean`.
 
 ```sh
 ./scripts/safe-verify.sh Reinmann.lean
 ```
 
-With file arguments, the harness still scans every local `.lean` file for
+With file arguments, the harness still scans every active `.lean` file for
 shortcuts, then runs `lake env lean` on each target file.
 
 ## Verification boundary
@@ -214,8 +216,8 @@ verification shortcuts:
 
 ## Limitations
 
-- The precheck is lexical and conservative; it may reject forbidden words inside
-  comments or strings.
+- The precheck strips nested block comments and line comments before scanning,
+  but it is not a full Lean parser and may reject forbidden words inside strings.
 - The precheck is not a full Lean parser and cannot prove that a development is
   mathematically complete or trustworthy.
 - Passing this harness only means the scanned files avoid the listed shortcuts

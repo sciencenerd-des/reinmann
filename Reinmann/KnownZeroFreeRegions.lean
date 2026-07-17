@@ -110,7 +110,7 @@ theorem critical_strip_gap_characterization :
     RiemannHypothesis ↔ ¬∃ s : ℂ, 1/2 < s.re ∧ s.re < 1 ∧ riemannZeta s = 0 := by
   rw [riemannHypothesis_iff_rightHalfStripZeroFree]
   simp only [RightHalfStripZeroFree]
-  push_neg
+  push Not
   rfl
 
 /-! ### Density and Distribution Properties -/

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
 import Reinmann.XiMomentKernel
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 
 /-!
 # Cross-Field Bridge Contracts for the Order-3 Toeplitz Frontier
@@ -20,7 +21,45 @@ independent theorem implying the same concrete order-3 determinant positivity.
 
 noncomputable section
 
+open scoped BigOperators ComplexConjugate
+open Complex
+
 namespace Reinmann
+
+/-- A continuous function `f : ℝ → ℂ` is positive definite if for any finite collection of
+points and complex weights, the double sum is non-negative. By Bochner's theorem, this is
+equivalent to being a characteristic function. -/
+def IsPositiveDefinite (f : ℝ → ℂ) : Prop :=
+  ∀ (n : ℕ) (t : Fin n → ℝ) (c : Fin n → ℂ),
+    0 ≤ (∑ i : Fin n, ∑ j : Fin n, c i * conj (c j) * f (t i - t j)).re
+
+/-- A function `f` normalized to be 1 at the origin is in the van Dantzig class `mathds D`
+if it is positive definite and its reciprocal under `V f(t) = 1/f(it)` is also
+positive definite. -/
+def IsVanDantzigFunction (f : ℂ → ℂ) : Prop :=
+  f 0 = 1 ∧
+  IsPositiveDefinite (fun t => f t) ∧
+  (∀ t : ℝ, f (t * I) ≠ 0) ∧
+  IsPositiveDefinite (fun t => 1 / f (t * I))
+
+/-- The Laguerre-Pólya class `mathds D_L` consists of even entire functions in the
+van Dantzig class that have only real zeros. -/
+def IsLaguerrePolyaClass (f : ℂ → ℂ) : Prop :=
+  IsVanDantzigFunction f ∧
+  (∀ z : ℂ, f z = 0 → z.im = 0)
+
+/-- The normalized Riemann xi function: `z ↦ ξ(1/2 + Iz) / ξ(1/2)`. -/
+def xiNormalized (z : ℂ) : ℂ :=
+  xiCompleted (1 / 2 + I * z) / xiCompleted (1 / 2)
+
+/-- **Van Dantzig bridge target for the Riemann xi function.**
+
+This is a named theorem contract, not a proved equivalence.  Discharging it
+requires the analytic facts connecting the normalized critical-line slice to
+the Laguerre--Pólya/van Dantzig class; those facts are not currently available
+in Mathlib. -/
+def XiNormalizedVanDantzigBridge : Prop :=
+  RiemannHypothesis ↔ IsLaguerrePolyaClass xiNormalized
 
 /-- Algebraic-geometry / elliptic-curve style route.
 
@@ -63,18 +102,30 @@ structure HyperbolicSpectralOrder3Witness (M : ℕ → ℝ) where
   proof : model
   order3 : model → MomentToeplitzOrder3Positive M
 
+/-- Van Dantzig mixing and semigroup duality route.
+
+The intended payload is to represent the moment sequence as mixed by a Markov
+multiplicative operator `\Lambda_{\rm I}` satisfying the preservation property
+`\Lambda_{\rm I}(\mathds{D}_e) \subset \mathds{D}_e` (Konstantopoulos et al. 2023)
+to force the order-3 determinant positivity. -/
+structure VanDantzigMixingOrder3Witness (M : ℕ → ℝ) where
+  model : Prop
+  proof : model
+  order3 : model → MomentToeplitzOrder3Positive M
+
 /-- A cross-field witness closes the order-3 kernel positivity target if any one
 of the outside models supplies its promised independent positivity theorem. -/
 def CrossFieldOrder3Witness (M : ℕ → ℝ) : Prop :=
   Nonempty (WeilHodgeOrder3Witness M) ∨
   Nonempty (CombinatorialOrder3Witness M) ∨
   Nonempty (EuclideanConvexityOrder3Witness M) ∨
-  Nonempty (HyperbolicSpectralOrder3Witness M)
+  Nonempty (HyperbolicSpectralOrder3Witness M) ∨
+  Nonempty (VanDantzigMixingOrder3Witness M)
 
 theorem momentToeplitzOrder3Positive_of_crossFieldWitness
     {M : ℕ → ℝ} (w : CrossFieldOrder3Witness M) :
     MomentToeplitzOrder3Positive M := by
-  rcases w with hW | hC | hE | hH
+  rcases w with hW | hC | hE | hH | hV
   · rcases hW with ⟨wW⟩
     exact wW.order3 wW.proof
   · rcases hC with ⟨wC⟩
@@ -83,6 +134,8 @@ theorem momentToeplitzOrder3Positive_of_crossFieldWitness
     exact wE.order3 wE.proof
   · rcases hH with ⟨wH⟩
     exact wH.order3 wH.proof
+  · rcases hV with ⟨wV⟩
+    exact wV.order3 wV.proof
 
 /-- If Pólya's moment representation is supplied, any successful cross-field
 order-3 witness transfers back to the coefficient-side Toeplitz target. -/

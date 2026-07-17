@@ -88,9 +88,17 @@ if [[ $audit_status -ne 0 ]]; then
   exit 1
 fi
 
+# `#print axioms` wraps long axiom lists across continuation lines (leading
+# whitespace); join them back onto their parent line before matching.
+audit_flat="$(echo "$audit_out" | awk '
+  /^[[:space:]]/ && buf != "" { sub(/^[[:space:]]+/, " "); buf = buf $0; next }
+  { if (buf != "") print buf; buf = $0 }
+  END { if (buf != "") print buf }
+')"
+
 # Every non-empty line must end with the canonical axiom list.
-bad="$(echo "$audit_out" | grep 'depends on axioms' | grep -vF "$CANON" || true)"
-n_lines="$(echo "$audit_out" | grep -c 'depends on axioms')"
+bad="$(echo "$audit_flat" | grep 'depends on axioms' | grep -vF "$CANON" || true)"
+n_lines="$(echo "$audit_flat" | grep -c 'depends on axioms')"
 
 if [[ -n "$bad" ]]; then
   echo "FAIL: theorem(s) depend on non-canonical axioms:"

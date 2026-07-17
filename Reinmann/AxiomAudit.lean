@@ -8,6 +8,14 @@ import Reinmann.RHReductionCapstone
 import Reinmann.RHTheoremTargets
 import Reinmann.LiCriterion
 import Reinmann.Order3Certificate
+import Reinmann.DodgsonCondensation
+import Reinmann.InitialColumnThree
+import Reinmann.FeketeRowGap
+import Reinmann.GrassmannSyzygy
+import Reinmann.FeketeAllOrders
+import Reinmann.ToeplitzFullPF
+import Reinmann.HyperbolicLimit
+import Reinmann.TuranRouteKill
 
 /-!
 # Axiom Audit
@@ -57,5 +65,61 @@ namespace Reinmann.AxiomAudit
 #print axioms momentToeplitzOrder3Positive_of_prefix_and_tail
 #print axioms order3DetExpr_pos_certificate
 #print axioms momentToeplitzContigMinor_eq_order3DetExpr
+#print axioms dodgsonCondensationIdentity_fin_two
+#print axioms dodgsonCondensationIdentity_fin_three
+#print axioms xiInitialColumnMinorThree_det_eq
+#print axioms xiInitialColumnMinorThree_nonneg_of_contig
+
+-- Fekete row-gap induction (arbitrary-row initial-column minors).
+-- The order-3 named target is closed modulo strict positivity + strict Turán;
+-- the k = 4 rung additionally consumes the strict order-3 contiguous rung.
+#print axioms xiInitialMinor3_gap_first
+#print axioms xiInitialMinor3_gap_second
+#print axioms xiMomentCoeff_strict_tp2
+#print axioms xiInitialColumnMinorThreeFromContig_of_strictTuran
+#print axioms xiInitialColumnMinorThreeFromContig_of_kernelRep_strictTuran
+#print axioms xiInitialMinor3_pos
+#print axioms xiInitialMinor4_gap_first
+#print axioms xiInitialMinor4_gap_second
+#print axioms xiInitialMinor4_gap_third
+#print axioms xiInitialColumnMinorFourFromContig_of_strictTuran
+#print axioms xiInitialColumnMinorGeFourFromContig_of_four_and_geFive
+#print axioms kernelContigToPFInitialColumnGeFourTheorem_of_strictTuran_and_geFive
+
+-- Generic Grassmann syzygy and the all-orders Fekete theorem.
+-- The arbitrary-row initial-column frontier is closed at EVERY order under the
+-- single strict-ladder hypothesis; RH reduces to scaffolding + kernel data +
+-- strict ladder + Cryer's criterion. All still conditional; none of the inputs
+-- is proved here.
+#print axioms maxMinor_syzygy
+#print axioms grassmann_three_term
+#print axioms xiMomentStrictTuran_of_strictLadder
+#print axioms xiInitialMinor_pos_of_strictLadder
+#print axioms xiInitialColumnMinorTotalPositive_of_strictLadder
+#print axioms xiContigToInitialColumnMinorBridge_of_strictLadder
+#print axioms xiInitialColumnMinorGeFourFromContig_of_strictLadder
+#print axioms kernelContigToPFInitialColumnGeFourTheorem_of_strictLadder
+#print axioms riemannHypothesis_of_strictLadder_and_criterion
+
+-- Full Pólya-frequency positivity from the strict ladder (dominance dichotomy
+-- + Toeplitz reversal symmetry). Cryer's criterion and the kernel
+-- representation are no longer needed by the sharpest reduction:
+-- RH ⟸ classical scaffolding + strict contiguous ladder. Still conditional.
+#print axioms xiMinor_eq_zero_of_lt
+#print axioms xiMinor_contigRows
+#print axioms xiMinor_pos_of_dominant
+#print axioms xiToeplitzTotalPositive_of_strictLadder
+#print axioms riemannHypothesis_of_strictLadder
+
+-- Scaffolding program, first proved leg: bounded-degree hyperbolic limits are
+-- hyperbolic; the Laguerre–Pólya closure bridge reduces to the named Jensen
+-- approximation condition.
+#print axioms prod_normSq_line_le
+#print axioms polynomialHyperbolic_of_tendsto
+#print axioms xiLaguerrePolyaClosureBridge_of_jensenApproximation
+
+-- Falsification discipline: the (2nd, 3rd)-Turán window does not close the
+-- order-3 contiguous rung at the sequence level; counterexample preserved.
+#print axioms turan23_not_imp_toeplitz3
 
 end Reinmann.AxiomAudit

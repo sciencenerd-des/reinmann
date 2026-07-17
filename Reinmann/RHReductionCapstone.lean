@@ -3,7 +3,7 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
-import Reinmann.XiToeplitzPositivity
+import Reinmann.CrossFieldBridges
 
 /-!
 # Capstone: the RH reduction, with every input classified — and proven *tight*
@@ -96,5 +96,17 @@ theorem riemannHypothesis_iff_pf_of_scaffolding
     (S : ClassicalToeplitzScaffolding) :
     RiemannHypothesis ↔ XiToeplitzTotalPositive :=
   (xiToeplitzTotalPositive_iff_riemannHypothesis S.asw S.lp S.polyaJensen S.converse).symm
+
+/-- **Order-3 reduction with cross-field witness.** The order-3 Toeplitz minor
+    positivity for Riemann's xi coefficients follows if any of the registered
+    cross-field bridge structures (Weil-Hodge, Combinatorial, Euclidean
+    convexity, non-Euclidean hyperbolic spectral, or van Dantzig mixing)
+    supplies its positivity witness for the xi-kernel moments. -/
+theorem xiToeplitzOrder3Positive_of_crossFieldWitness_capstone
+    {M : ℕ → ℝ}
+    (hM : ∀ n, XiCoeff n = (-1) ^ n * (2 * M n / ((2 * n).factorial : ℝ)))
+    (w : CrossFieldOrder3Witness M) :
+    XiToeplitzOrder3Positive :=
+  xiToeplitzOrder3Positive_of_crossFieldWitness hM w
 
 end Reinmann

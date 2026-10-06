@@ -68,3 +68,9 @@ import Reinmann.VanDantzigPick
 import Reinmann.VanDantzigOperator
 import Reinmann.GlobalCapstone
 import Reinmann.ProofArchitecture
+
+import Reinmann.FinitePFBaseline
+import Reinmann.TuranDeficit
+import Reinmann.CurvatureControls
+import Reinmann.CoupledRankEnergy
+import Reinmann.WeilRankTail

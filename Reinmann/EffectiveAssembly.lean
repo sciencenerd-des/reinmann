@@ -10,22 +10,16 @@ import Reinmann.Order3Certificate
 /-!
 # Effective assembly: where new mathematics plugs into the RH reduction
 
-This module is the *receptor architecture* for the remaining open mathematics.
-It proves the glue theorems so that each future ingredient — an explicit
-remainder bound, a certified prefix, the general Schur–Szegő composition
-theorem — plugs into the machine-checked reduction with **no further Lean work
-at the interfaces**.
+This module contains conditional assembly theorems. Its legacy certificate
+names do not themselves encode computability or an explicit error estimate.
+Additional analytic and certificate-checking work remains at those boundaries.
 
-## Ladder route (per-order effective certificates)
+## Ladder route (logical prefix/tail split)
 
-`KernelEffectiveCertificates M` asks, for each order `k`, for a cutoff `N`
-with a strict certified prefix (`KernelMinorPrefixStrict`, dischargeable by
-`norm_num` on rational moment enclosures) and a strict analytic tail
-(`KernelMinorTailStrict`, the *explicit remainder bound* target).  The
-assembly proves:
-
-`riemannHypothesis_of_effectiveCertificates`:
-scaffolding + kernel representation + per-order certificates ⟹ RH.
+`KernelEffectiveCertificates M` is equivalent to `KernelLadderStrict M`, as
+proved below: choosing cutoff zero makes the prefix empty. It records no
+computable cutoff or remainder bound. The end-to-end implication remains a
+valid conditional theorem, not an independent positivity mechanism.
 
 The strict transfer `xiToeplitzContigMinor_pos_iff_moment_of_kernelRep`
 (from the `2^k`-scaling identity) moves kernel-side certificates to the
@@ -37,17 +31,11 @@ program is `order3TailGap_of_kernelTailStrict`.
 
 ## Jensen route (Schur–Szegő receptor)
 
-`jensenPoly_hyperbolic_of_hpss` instantiates the named general same-sign
-Schur–Szegő target `HermitePoulainSchurSzegoTheorem` at the Jensen factor
-`(1 + X)^d` — whose degree, hyperbolicity, and same-sign root location are
-proved here — so that the general composition theorem, once proved, converts
-per-window coefficient data (`XiJensenCoeffHyperbolic`) into
-`AllJensenHyperbolic`, and with the Pólya–Jensen bridge into RH
-(`riemannHypothesis_of_hpss_route`).
-
-Every hypothesis below is a named `Prop`, never an axiom.  RH remains
-unproved; this module guarantees that the day any input is proved — here or
-in a future Mathlib — the reduction closes by `exact`.
+The HPSS per-window hypothesis already contains legacy Jensen hyperbolicity.
+Its retained RH implication requires `DiagnosticJensenRHBridge`, not the
+classical factorial-normalized Pólya--Jensen theorem. The primary classical
+route uses `ClassicalJensenPoly` through `JensenUniformHyperbolicityWitness`.
+All statements remain conditional and no custom axioms are introduced.
 -/
 
 noncomputable section
@@ -79,14 +67,13 @@ moment enclosures this is dischargeable by `norm_num`, offset by offset. -/
 def KernelMinorPrefixStrict (M : ℕ → ℝ) (k N : ℕ) : Prop :=
   ∀ m : ℕ, m < N → 0 < momentToeplitzContigMinor M k m
 
-/-- Strict analytic tail at order `k` beyond cutoff `N`: the **explicit
-remainder bound** target.  This is what an effective-asymptotics theorem for
-the xi moments must supply, one order at a time. -/
+/-- Strict tail proposition at order `k` beyond cutoff `N`.
+It does not encode a quantitative remainder bound. -/
 def KernelMinorTailStrict (M : ℕ → ℝ) (k N : ℕ) : Prop :=
   ∀ m : ℕ, N ≤ m → 0 < momentToeplitzContigMinor M k m
 
-/-- The complete effective input: for every order, some cutoff splits the
-ladder rung into a certified prefix and a bounded tail. -/
+/-- Legacy name for a purely logical prefix/tail split, equivalent to the
+strict ladder. No computable cutoff or quantitative bound is encoded. -/
 def KernelEffectiveCertificates (M : ℕ → ℝ) : Prop :=
   ∀ k : ℕ, ∃ N : ℕ, KernelMinorPrefixStrict M k N ∧ KernelMinorTailStrict M k N
 
@@ -100,6 +87,19 @@ theorem kernelLadderStrict_of_certificates {M : ℕ → ℝ}
   · exact hpre m hm
   · exact htail m hm
 
+/-- Choosing cutoff zero proves that the legacy certificate predicate carries
+exactly the strict-ladder obligation, with no additional effectiveness. -/
+theorem kernelEffectiveCertificates_iff_ladder (M : ℕ → ℝ) :
+    KernelEffectiveCertificates M ↔ KernelLadderStrict M := by
+  constructor
+  · exact kernelLadderStrict_of_certificates
+  · intro h k
+    refine ⟨0, ?_, ?_⟩
+    · intro m hm
+      omega
+    · intro m _
+      exact h k m
+
 /-- **All-order propagation.**  The kernel-side strict ladder transfers to the
 coefficient-side strict ladder — the single positivity input of the
 Fekete/full-PF machinery. -/
@@ -108,11 +108,8 @@ theorem xiContigToeplitzStrictPositive_of_kernelLadder {M : ℕ → ℝ}
     (h : KernelLadderStrict M) : XiContigToeplitzStrictPositive :=
   fun k m => (xiToeplitzContigMinor_pos_iff_moment_of_kernelRep hM k m).mpr (h k m)
 
-/-- **The effective end-to-end reduction.**  RH follows from: the classical
-scaffolding, Pólya's kernel representation data, and per-order effective
-certificates (certified prefix + explicit remainder bound at every order).
-Still conditional — the certificates are the open mathematics — but every
-interface is now a proved theorem. -/
+/-- Conditional RH reduction from scaffolding, kernel representation and the
+strict ladder expressed as a prefix/tail split. No effective bound is proved. -/
 theorem riemannHypothesis_of_effectiveCertificates
     (S : ClassicalToeplitzScaffolding)
     (M : ℕ → ℝ)
@@ -170,11 +167,18 @@ theorem jensenPoly_hyperbolic_of_hpss
 
 /-- The per-window analytic input of the Jensen route: every coefficient
 window polynomial of the xi sequence is hyperbolic of full degree.  This is
-where xi-specific analysis (moment positivity, window real-rootedness) must
-enter; it is not RH-strength by itself. -/
+a stronger form of the legacy output itself, since `jensenCoeffPoly` is
+definitionally `JensenPoly`. It is not an independent mechanism for proving it. -/
 def XiJensenCoeffHyperbolic : Prop :=
   ∀ d n : ℕ, (jensenCoeffPoly d n).natDegree = d ∧
     PolynomialHyperbolic (jensenCoeffPoly d n)
+
+/-- The HPSS payload already contains the requested legacy hyperbolicity.
+Composition with `(1+X)^d` supplies no additional real-rootedness. -/
+theorem allJensenHyperbolic_of_coeffHyperbolic
+    (hcoeff : XiJensenCoeffHyperbolic) : AllJensenHyperbolic := by
+  intro d n
+  exact (hcoeff d n).2
 
 /-- The general composition theorem plus the per-window input yield the full
 Jensen hyperbolicity target. -/
@@ -185,11 +189,11 @@ theorem allJensenHyperbolic_of_hpss
   obtain ⟨hdeg, hhyp⟩ := hcoeff d n
   exact jensenPoly_hyperbolic_of_hpss hHPSS d n hdeg hhyp
 
-/-- **The Jensen-route end-to-end reduction.**  RH follows from: the
-Pólya–Jensen bridge, the general same-sign Schur–Szegő theorem, and the
-per-window hyperbolicity input.  Conditional, with every interface proved. -/
+/-- Legacy diagnostic conditional reduction only. Its unestablished
+`DiagnosticJensenRHBridge` is not the classical Pólya--Jensen theorem, and the
+per-window input already contains the output. Retained for compatibility. -/
 theorem riemannHypothesis_of_hpss_route
-    (hPJ : PolyaJensenBridge)
+    (hPJ : DiagnosticJensenRHBridge)
     (hHPSS : HermitePoulainSchurSzegoTheorem)
     (hcoeff : XiJensenCoeffHyperbolic) :
     RiemannHypothesis :=

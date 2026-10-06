@@ -6,6 +6,7 @@ Authors: Biswajit Mondal
 import Reinmann.JensenProgram
 import Mathlib.Analysis.Calculus.LogDeriv
 import Mathlib.Order.Filter.Basic
+import Mathlib.Topology.UniformSpace.LocallyUniformConvergence
 
 /-!
 # Principal Values in the Ξ-Plane
@@ -15,7 +16,7 @@ zeta zero symmetry is centered at height `0`, not around every target height
 `γ`.  The better coordinate is the critical-line variable `t` for the even real
 function
 
-`Ξ(t) = Re Λ₀(1/2 + i t)`.
+`Ξ(t) = Re ξ(1/2 + i t)`.
 
 In the `t`-plane, the functional equation gives the natural symmetry
 `t ↦ -t`.  This file proves the finite algebraic core for that route: a product
@@ -181,6 +182,9 @@ structure XiLaguerrePolyaFiniteWitness where
   zeroPairs : ℕ → Finset ℝ
   approximants_eq : ∀ n : ℕ, approximants n = xiEvenProduct (zeroPairs n)
   pointwiseConverges : ∀ t : ℝ, Tendsto (fun n : ℕ => approximants n t) atTop (𝓝 (Xi t))
+  complexLocallyUniform : TendstoLocallyUniformly
+    (fun (n : ℕ) (z : ℂ) => ∏ τ ∈ zeroPairs n, (z - (τ : ℂ)) * (z + (τ : ℂ)))
+    (fun z => xiCompleted (1 / 2 + z * Complex.I)) atTop
 
 /-- The current Ξ-plane target: build canonical finite real-rooted even products
 that converge to `Ξ`.  Supplying this would put the attack back onto the
@@ -201,6 +205,10 @@ structure XiLaguerrePolyaScaledFiniteWitness where
     ∀ n : ℕ, approximants n = xiEvenScaledProduct (scales n) (zeroPairs n)
   pointwiseConverges :
     ∀ t : ℝ, Tendsto (fun n : ℕ => approximants n t) atTop (𝓝 (Xi t))
+  complexLocallyUniform : TendstoLocallyUniformly
+    (fun (n : ℕ) (z : ℂ) => (scales n : ℂ) *
+      ∏ τ ∈ zeroPairs n, (z - (τ : ℂ)) * (z + (τ : ℂ)))
+    (fun z => xiCompleted (1 / 2 + z * Complex.I)) atTop
 
 /-- The corrected finite-product target for the Ξ-plane route. -/
 def XiLaguerrePolyaScaledFiniteTarget : Prop :=
@@ -210,11 +218,13 @@ def XiLaguerrePolyaScaledFiniteTarget : Prop :=
 real-rooted approximants: such convergence places `Ξ` in the
 Laguerre--Pólya/Jensen class, hence all Jensen polynomials are hyperbolic.
 
-This is intentionally a `Prop`, not an axiom.  Proving it requires the real
+The witness explicitly requires locally uniform convergence on ℂ, not merely
+pointwise convergence on ℝ. This is intentionally a `Prop`, not an axiom.
+Proving it requires the real
 entire-function theorem connecting locally uniform limits of real-rooted
 polynomials to Jensen hyperbolicity. -/
 def XiLaguerrePolyaClosureBridge : Prop :=
-  XiLaguerrePolyaScaledFiniteTarget → AllJensenHyperbolic
+  XiLaguerrePolyaScaledFiniteTarget → AllClassicalJensenHyperbolic
 
 /-- If the normalized finite real-rooted approximation theorem and its
 Laguerre--Pólya closure bridge are supplied, then the remaining deduction to RH
@@ -236,6 +246,7 @@ theorem xiLaguerrePolyaScaledFiniteTarget_of_unscaled
     zeroPairs := w.zeroPairs
     approximants_eq := ?_
     pointwiseConverges := w.pointwiseConverges
+    complexLocallyUniform := by simpa using w.complexLocallyUniform
   }⟩
   intro n
   rw [w.approximants_eq n]

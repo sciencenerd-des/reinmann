@@ -21,6 +21,11 @@ import Reinmann.CauchyCoefficientConvergence
 import Reinmann.JensenTuranBridge
 import Reinmann.TuranRouteKill
 import Reinmann.EffectiveAssembly
+import Reinmann.FinitePFBaseline
+import Reinmann.TuranDeficit
+import Reinmann.CurvatureControls
+import Reinmann.CoupledRankEnergy
+import Reinmann.WeilRankTail
 
 /-!
 # Axiom Audit
@@ -166,6 +171,7 @@ namespace Reinmann.AxiomAudit
 -- instantiates at the Jensen factor with all side conditions discharged.
 #print axioms xiToeplitzContigMinor_pos_iff_moment_of_kernelRep
 #print axioms kernelLadderStrict_of_certificates
+#print axioms kernelEffectiveCertificates_iff_ladder
 #print axioms xiContigToeplitzStrictPositive_of_kernelLadder
 #print axioms riemannHypothesis_of_effectiveCertificates
 #print axioms order3TailGap_of_kernelTailStrict
@@ -174,4 +180,46 @@ namespace Reinmann.AxiomAudit
 #print axioms allJensenHyperbolic_of_hpss
 #print axioms riemannHypothesis_of_hpss_route
 
+-- New finite-baseline transport and deficit algebra, not analytic Xi proofs.
+#print axioms finitePF_mono
+#print axioms finitePF_nonneg_scale
+#print axioms finitePF_iff_upper
+#print axioms xi_contig_nonneg_of_finitePF
+#print axioms xi_fullPF_iff_all_finite
+#print axioms order3_deficit_identity
+#print axioms order3_pos_of_deficit_slack
+#print axioms condensation_pos_of_quantitative_bound
+
+-- Quantitative recurrence continuation: abstract induction and exact controls.
+#print axioms all_ranks_pos_of_quantitative_condensation
+#print axioms shiftedExponentialGamma_logConcave
+#print axioms exponential_shift_rank2_bound_fails
+#print axioms rank2_scaled_deficit_factorization
+#print axioms rank2_logConcave_of_gamma_and_scaled_deficit
+
 end Reinmann.AxiomAudit
+
+#print axioms Reinmann.rank_slope_eq_cumulative_correction
+#print axioms Reinmann.rank_lower_bound_of_cumulative_budget
+
+#print axioms Reinmann.boundary_ratio_le_one_iff
+
+-- Curvature controls, coupled rank energy, and the Weil omitted-mode algebra.
+#print axioms Reinmann.realZeroControl_turan
+#print axioms Reinmann.realZeroControl_scaled_deficit_fails
+#print axioms Reinmann.realZeroControl_curvature_numerator_pos
+#print axioms Reinmann.realZeroControl_discrete_numerator_pos
+#print axioms Reinmann.curvature_negative_of_half_budget
+#print axioms Reinmann.CoupledRankEnergy.galerkin_increment_orthogonal
+#print axioms Reinmann.CoupledRankEnergy.energy_increment
+#print axioms Reinmann.CoupledRankEnergy.pairing_increment
+#print axioms Reinmann.CoupledRankEnergy.cumulative_pairing_budget
+#print axioms Reinmann.CoupledRankEnergy.cumulative_galerkin_budget
+#print axioms Reinmann.CoupledRankEnergy.uniform_galerkin_budget
+#print axioms Reinmann.CoupledRankEnergy.absolute_rank_summability
+#print axioms Reinmann.WeilRankTail.paired_displacement
+#print axioms Reinmann.WeilRankTail.geometric_remainder
+#print axioms Reinmann.WeilRankTail.geometric_remainder_abs
+#print axioms Reinmann.WeilRankTail.paired_even_tail
+#print axioms Reinmann.WeilRankTail.denominator_remainder
+#print axioms Reinmann.WeilRankTail.weighted_moment_remainder

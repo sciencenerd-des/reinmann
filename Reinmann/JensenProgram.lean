@@ -36,9 +36,10 @@ prefactor `s(s-1)/2 = -(t²+1/4)/2` is a nonzero real scalar, `Ξ` is a genuine
 * `Xi_eq_zero_iff_riemannZeta`: `Ξ t = 0 ↔ ζ(1/2+it) = 0` — the property `Λ₀`
   lacked, and the reason this is the correct target for RH.
 
-`ξ` equals `½ s(s-1) π^{-s/2} Γ(s/2) ζ(s)` exactly, so its Taylor coefficients are
-Riemann's `ξ`-coefficients and the classical Pólya–Jensen / Csordas–Norfolk–Varga
-results genuinely apply.  The full Pólya–Jensen theorem and the CNV Turán
+`ξ` agrees with the usual product away from 0 and 1 and takes value 1/2
+at both poles. The legacy `JensenPoly` lacks the factorial normalization of
+the classical criterion; `ClassicalJensenPoly` supplies that normalization.
+The full Pólya–Jensen theorem and the CNV Turán
 inequalities are recorded as **named external classical inputs**, not axioms and
 not proved here.
 -/
@@ -51,11 +52,33 @@ open scoped Polynomial
 
 namespace Reinmann
 
-/-- **Riemann's `ξ`**: `ξ(s) = (s(s-1)/2)·Λ(s)`, `Λ = completedRiemannZeta`.  This
-is `½ s(s-1) π^{-s/2} Γ(s/2) ζ(s)`, entire, with exactly the nontrivial zeros of
-`ζ` (the prefactor `s(s-1)/2` only adds zeros at `s = 0, 1`, which are the poles of
-`Λ`). -/
-def xiCompleted (s : ℂ) : ℂ := s * (s - 1) / 2 * completedRiemannZeta s
+/-- The entire extension of Riemann's ξ, including its values at the two
+poles of Λ. Using Λ₀ here is algebraic pole removal, not substitution of Λ₀
+for Λ in the definition of the zero set. -/
+def xiCompleted (s : ℂ) : ℂ :=
+  1 / 2 + s * (s - 1) / 2 * completedRiemannZeta₀ s
+
+@[simp] theorem xiCompleted_zero : xiCompleted 0 = 1 / 2 := by
+  simp [xiCompleted]
+
+@[simp] theorem xiCompleted_one : xiCompleted 1 = 1 / 2 := by
+  simp [xiCompleted]
+
+/-- ξ is entire; the definition does not multiply pointwise pole values by zero. -/
+theorem differentiable_xiCompleted : Differentiable ℂ xiCompleted := by
+  unfold xiCompleted
+  exact (differentiable_const (1 / 2 : ℂ)).add
+    (((differentiable_id.mul (differentiable_id.sub_const 1)).div_const 2).mul
+      differentiable_completedZeta₀)
+
+/-- Away from the poles, the entire extension agrees with the usual product. -/
+theorem xiCompleted_eq_product {s : ℂ} (h0 : s ≠ 0) (h1 : s ≠ 1) :
+    xiCompleted s = s * (s - 1) / 2 * completedRiemannZeta s := by
+  rw [completedRiemannZeta_eq]
+  unfold xiCompleted
+  have hsub : 1 - s ≠ 0 := sub_ne_zero.mpr (Ne.symm h1)
+  field_simp
+  ring
 
 /-- The real critical-line slice of Riemann's `ξ`:
 `Ξ(t) = Re ξ(1/2+it) = -((t²+1/4)/2)·Zslice t`. -/
@@ -69,7 +92,11 @@ theorem xiCompleted_critical_eq_ofReal_Xi (t : ℝ) :
     have h : (1 / 2 + (t : ℂ) * I) * ((1 / 2 + (t : ℂ) * I) - 1)
         = (t : ℂ) ^ 2 * I ^ 2 - 1 / 4 := by ring
     rw [h, Complex.I_sq]; ring
-  unfold xiCompleted Xi
+  rw [xiCompleted_eq_product (linePoint_ne_zero t) (by
+    intro h
+    have hr := congrArg Complex.re h
+    simp at hr)]
+  unfold Xi
   rw [completedRiemannZeta_critical_eq_ofReal, hpre]
   push_cast
   ring
@@ -120,8 +147,8 @@ is left to the Laguerre--Pólya/Jensen program. -/
 def XiCoeff (n : ℕ) : ℝ :=
   deriv^[2 * n] Xi 0 / ((Nat.factorial (2 * n) : ℕ) : ℝ)
 
-/-- The degree-`d`, shift-`n` Jensen polynomial attached to the `Ξ` coefficient
-sequence:
+/-- Legacy Borel-coefficient diagnostic, NOT the classical Jensen polynomial
+of the folded Xi function. Kept for existing Turán diagnostics:
 
 `J_{d,n}(X) = Σ_{k=0}^d binom(d,k) b_{n+k} X^k`. -/
 def JensenPoly (d n : ℕ) : ℝ[X] :=
@@ -134,22 +161,42 @@ hyperbolicity API while expressing exactly what the Jensen criterion needs. -/
 def PolynomialHyperbolic (p : ℝ[X]) : Prop :=
   ∀ z : ℂ, Polynomial.eval z (p.map (algebraMap ℝ ℂ)) = 0 → z.im = 0
 
-/-- The Structure-A Jensen target: all Jensen polynomials attached to `Ξ` are
-hyperbolic. -/
+/-- All legacy Borel-coefficient diagnostic polynomials are hyperbolic. -/
 def AllJensenHyperbolic : Prop :=
   ∀ d n : ℕ, PolynomialHyperbolic (JensenPoly d n)
 
-/-- The external Pólya--Jensen bridge needed to turn Structure A into RH.  It is
-kept as a definition, not assumed as an axiom, so the active Lean surface remains
-honest about the gap. -/
-def PolyaJensenBridge : Prop :=
+/-- Legacy unproved RH equivalence for the Borel-coefficient diagnostics.
+This is NOT the classical Pólya--Jensen theorem: the factorial normalization
+is missing. Existing conditional reductions requiring this input therefore
+remain conditional on an additional, unestablished statement. -/
+def DiagnosticJensenRHBridge : Prop :=
   RiemannHypothesis ↔ AllJensenHyperbolic
 
-/-- If the Pólya--Jensen bridge is proved, RH is exactly Jensen hyperbolicity for
-the coefficient sequence of `Ξ`. -/
+/-- Compatibility theorem for the legacy diagnostic bridge only. -/
 theorem riemannHypothesis_iff_allJensenHyperbolic_of_polyaJensen
-    (h : PolyaJensenBridge) : RiemannHypothesis ↔ AllJensenHyperbolic :=
-  h
+    (h : DiagnosticJensenRHBridge) : RiemannHypothesis ↔ AllJensenHyperbolic := h
+
+/-- Exponential-series coefficients of the folded Xi function:
+`F(z) = Σ (-1)^n XiCoeff n z^n = Σ XiJensenCoeff n z^n/n!`.
+The Taylor-series identity and the classical analytic bridge remain external. -/
+def XiJensenCoeff (n : ℕ) : ℝ :=
+  (Nat.factorial n : ℝ) * (-1 : ℝ) ^ n * XiCoeff n
+
+/-- Correctly factorial-normalized classical Jensen polynomial of folded Xi. -/
+def ClassicalJensenPoly (d n : ℕ) : ℝ[X] :=
+  ∑ k ∈ Finset.range (d + 1),
+    C ((Nat.choose d k : ℝ) * XiJensenCoeff (n + k)) * X ^ k
+
+def AllClassicalJensenHyperbolic : Prop :=
+  ∀ d n : ℕ, PolynomialHyperbolic (ClassicalJensenPoly d n)
+
+/-- Correct classical Pólya--Jensen interface; still an unproved named input,
+not an axiom and not interchangeable with `DiagnosticJensenRHBridge`. -/
+def PolyaJensenBridge : Prop :=
+  RiemannHypothesis ↔ AllClassicalJensenHyperbolic
+
+theorem riemannHypothesis_iff_classicalJensen_of_polyaJensen
+    (h : PolyaJensenBridge) : RiemannHypothesis ↔ AllClassicalJensenHyperbolic := h
 
 /-! ## The `d = 2` Turán fragment -/
 

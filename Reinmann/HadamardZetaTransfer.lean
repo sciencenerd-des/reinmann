@@ -38,23 +38,18 @@ open Filter Topology
 
 namespace Reinmann
 
-/-- A canonical completed-zeta Hadamard approximation at one center.
-
-`approximants` are the finite zero-product approximants.  The field `canonical`
-records the external fact that these are the actual canonical completed-zeta
-Hadamard truncations, rather than arbitrary functions.  The mathematically hard
-field is `derivConverges`: derivative convergence at the center to
-`completedRiemannZeta₀`. -/
+/-- A derivative-convergence witness at one center, retaining its legacy name.
+This structure does not assert a canonical product or arithmetic provenance.
+The old freely chosen `canonical : Prop` tag could always be `True` and conveyed
+no constraint on `approximants`; it has been removed. -/
 structure CompletedZetaHadamardApproximationAt where
   approximants : ℕ → ℂ → ℂ
   center : ℂ
-  canonical : Prop
-  hcanonical : canonical
   derivConverges :
     Tendsto (fun n : ℕ => deriv (approximants n) center) atTop
       (𝓝 (deriv completedRiemannZeta₀ center))
 
-/-- If canonical completed-zeta Hadamard approximants have finite critical
+/-- If the supplied approximants have finite critical
 geometry at a center, derivative convergence transfers that critical point to
 `completedRiemannZeta₀`. -/
 theorem deriv_completedZeta₀_eq_zero_of_hadamardApproximationAt
@@ -76,10 +71,10 @@ theorem deriv_completedZeta₀_criticalLinePoint_eq_zero_of_hadamardApproximatio
 
 This packages the exact desired pipeline:
 
-1. the approximants are canonical completed-zeta Hadamard truncations;
+1. arbitrary approximants are supplied (canonical provenance is not encoded);
 2. a separate finite-geometry theorem proves each approximant has a derivative
    zero at `1/2 + iγ`;
-3. the canonical Hadamard derivative convergence transfers those zeros to
+3. the supplied derivative convergence transfers those zeros to
    `completedRiemannZeta₀`.
 
 The nontrivial payloads are `hadamard.derivConverges` and `finiteCritical`.
@@ -101,22 +96,28 @@ theorem deriv_completedZeta₀_eq_zero_of_finiteCriticalHadamardSpeiserWitness
     (w := w.hadamard) w.center_eq
   exact w.finiteCritical
 
-/-- The exact open analytic target: produce canonical completed-zeta Hadamard
-approximants at height `γ` whose finite truncations have a derivative zero at
+/-- Conditional predicate: supply approximants at height `γ` whose finite
+truncations have a derivative zero at
 `1/2 + iγ` and whose derivatives converge to `completedRiemannZeta₀`.
 
 This is a named target, not a theorem claimed here. -/
 def CompletedZetaHadamardDerivativeConvergenceTarget (γ : ℝ) : Prop :=
   Nonempty (FiniteCriticalHadamardSpeiserWitness γ)
 
-/-! ## Principal-value cross-height cancellation target -/
+/-! ## Height-specific conditional cancellation predicates
+
+These predicates are not universal research targets. Quantifying them over all
+real heights forces the derivative of the nonconstant entire Λ₀ to vanish on a
+line, an impossible condition. Even at an individual height, no witness is
+asserted here, and Λ₀ has a different zero set from ξ. These definitions preserve
+the finite-model implications only; they do not supply an RH reduction. -/
 
 /-- A local same-height mirror cloud can explain one finite critical point.  A
 canonical completed-zeta Hadamard truncation also contains zeros at other
 heights.  This target names the additional cancellation theorem needed before
 the local finite model can be applied to canonical global truncations. -/
-def OtherHeightCancellationTarget : Prop :=
-  ∀ γ : ℝ, CompletedZetaHadamardDerivativeConvergenceTarget γ
+def OtherHeightCancellationTarget (γ : ℝ) : Prop :=
+  CompletedZetaHadamardDerivativeConvergenceTarget γ
 
 /-- A sharper version of the other-height target: canonical truncations must be
 organized as symmetric principal values around the target height.  The finite
@@ -139,9 +140,9 @@ theorem deriv_completedZeta₀_eq_zero_of_principalValueCrossHeightCancellation
     (w := w.hadamard) w.center_eq
   exact w.balancedFiniteCritical
 
-/-- The refined open target for the Hadamard/Speiser path. -/
-def PrincipalValueCrossHeightCancellationTarget : Prop :=
-  ∀ γ : ℝ, Nonempty (PrincipalValueCrossHeightCancellationWitness γ)
+/-- Conditional witness predicate at one specified height; not universal. -/
+def PrincipalValueCrossHeightCancellationTarget (γ : ℝ) : Prop :=
+  Nonempty (PrincipalValueCrossHeightCancellationWitness γ)
 
 /-- A stronger constructive witness: every finite approximant is explicitly a
 product of principal-value mirror blocks. -/
@@ -165,8 +166,8 @@ theorem deriv_completedZeta₀_eq_zero_of_principalValueBlockHadamardWitness
   rw [w.approximants_eq n, w.center_eq]
   exact hcrit
 
-/-- The most concrete open target produced by the finite algebraic analysis. -/
-def PrincipalValueBlockHadamardTarget : Prop :=
-  ∀ γ : ℝ, Nonempty (PrincipalValueBlockHadamardWitness γ)
+/-- Conditional finite-block witness at one specified height; not universal. -/
+def PrincipalValueBlockHadamardTarget (γ : ℝ) : Prop :=
+  Nonempty (PrincipalValueBlockHadamardWitness γ)
 
 end Reinmann

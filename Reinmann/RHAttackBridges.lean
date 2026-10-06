@@ -34,7 +34,7 @@ namespace Reinmann
 /-- A bundled witness for the Jensen/Laguerre--Pólya route. -/
 structure JensenUniformHyperbolicityWitness where
   bridge : PolyaJensenBridge
-  hyperbolic : AllJensenHyperbolic
+  hyperbolic : AllClassicalJensenHyperbolic
 
 /-- Uniform Jensen hyperbolicity, together with the Pólya--Jensen bridge, implies RH. -/
 theorem riemannHypothesis_of_jensenUniformHyperbolicity

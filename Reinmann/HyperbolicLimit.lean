@@ -226,21 +226,21 @@ and shift `n`, hyperbolic real polynomials of degree at most `d` converging
 pointwise (over `ℂ`) to the Jensen polynomial `J_{d,n}` of `Ξ`, which must in
 particular be nonzero.
 
-Classical content: (i) locally uniform convergence upgrades pointwise
-convergence of the approximants to convergence of their Taylor coefficients
+Classical content: (i) locally uniform convergence on the complex plane
+gives convergence of the approximants' Taylor coefficients
 (Cauchy estimates); (ii) Jensen polynomials of real-rooted polynomials are
 real-rooted (Hermite–Poulain/Schur composition theorems); (iii) nonvanishing
 of the limit Jensen polynomials (positivity of the `Ξ` moments).  None of this
 is RH-strength. -/
 def XiJensenApproximationBridge : Prop :=
   XiLaguerrePolyaScaledFiniteTarget →
-    ∀ d n : ℕ, JensenPoly d n ≠ 0 ∧
+    ∀ d n : ℕ, ClassicalJensenPoly d n ≠ 0 ∧
       ∃ q : ℕ → Polynomial ℝ,
         (∀ j, (q j).natDegree ≤ d) ∧
         (∀ j, PolynomialHyperbolic (q j)) ∧
         (∀ z : ℂ,
           Tendsto (fun j => Polynomial.eval z ((q j).map (algebraMap ℝ ℂ))) atTop
-            (nhds (Polynomial.eval z ((JensenPoly d n).map (algebraMap ℝ ℂ)))))
+            (nhds (Polynomial.eval z ((ClassicalJensenPoly d n).map (algebraMap ℝ ℂ)))))
 
 /-- **The closure bridge, reduced.**  Given the Jensen approximation legs, the
 Laguerre–Pólya closure bridge follows from the proved bounded-degree
@@ -250,6 +250,6 @@ theorem xiLaguerrePolyaClosureBridge_of_jensenApproximation
     (h : XiJensenApproximationBridge) : XiLaguerrePolyaClosureBridge := by
   intro hfinite d n
   obtain ⟨hne, q, hdeg, hhyp, hconv⟩ := h hfinite d n
-  exact polynomialHyperbolic_of_tendsto q (JensenPoly d n) hdeg hhyp hconv hne
+  exact polynomialHyperbolic_of_tendsto q (ClassicalJensenPoly d n) hdeg hhyp hconv hne
 
 end Reinmann

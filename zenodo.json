@@ -1,13 +1,15 @@
 {
-  "upload_type": "software",
-  "publication_date": "2026-07-17",
-  "title": "Two Machine-Checked Conditional Routes to the Riemann Hypothesis",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-06",
+  "version": "0.2.0",
+  "title": "Two Machine-Checked Conditional Routes to the Riemann Hypothesis: A Formalized Fekete Criterion, Effective Positivity Targets, and an Exact-Ready Receptor Architecture",
   "creators": [
     {
       "name": "Mondal, Biswajit"
     }
   ],
-  "description": "Lean-checked formalization scaffold and research manuscript for two conditional routes to the Riemann Hypothesis. The release records the generic Grassmann/Fekete Toeplitz closure, exact-ready effective and Jensen receptors, numerical diagnostics, theorem-status ledger, and remaining open analytic inputs. It does not claim a proof of the Riemann Hypothesis.",
+  "description": "<p>This preprint presents a Lean 4 / Mathlib formalization scaffold for two conditional routes to the Riemann Hypothesis. It records a machine-checked generic Grassmann/Fekete Toeplitz closure, exact-ready effective and Jensen receptors, numerical diagnostics, and a theorem-status ledger. The manuscript does not prove the Riemann Hypothesis; the remaining analytic inputs are explicitly named and are not axiomatized.</p><p><strong>Changes in 0.2.0.</strong> Positions the work against Katkova's classical Xi/PF criterion and the 2026 cubic tail-wedge preprint (arXiv:2607.16795), which is cited as an external result and not counted among the audited Lean theorems. The Route A frontier is restated as a complementary finite-prefix wedge. The arbitrary-row minor scan is extended to the row-48 box and replicated independently in Python, JavaScript and TypeScript. The axiom audit now covers 122 theorems, all depending only on Lean's three foundational axioms.</p>",
   "keywords": [
     "Riemann Hypothesis",
     "Lean",
@@ -19,5 +21,12 @@
     "Schur-Szego composition"
   ],
   "access_right": "open",
-  "prereserve_doi": true
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sciencenerd-des/reinmann",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ]
 }

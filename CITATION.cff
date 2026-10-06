@@ -1,13 +1,21 @@
 cff-version: 1.2.0
 title: "Two Machine-Checked Conditional Routes to the Riemann Hypothesis"
-message: "If you use this software, formalization, or manuscript, please cite this release. A DOI will be added after an authenticated Zenodo deposition."
+message: "If you use this software, formalization, or manuscript, please cite the version you used; the concept DOI below resolves to the latest version."
 type: software
-version: "0.1.0"
-date-released: "2026-07-17"
+version: "0.2.0"
+date-released: "2026-10-06"
+doi: 10.5281/zenodo.23187646
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21416394
+    description: Concept DOI (all versions)
+  - type: doi
+    value: 10.5281/zenodo.23187645
+    description: Companion preprint on the semilocal Weil quadratic form
 authors:
   - family-names: Mondal
     given-names: Biswajit
-    email: bmondal0000@gmail.com
+    email: b.mondal0000@gmail.com
 abstract: >-
   A Lean-checked formalization scaffold and research manuscript for two
   conditional routes to the Riemann Hypothesis. The release records the
@@ -23,5 +31,5 @@ keywords:
   - Jensen polynomials
   - Riemann xi function
   - Schur-Szego composition
-license: "NOASSERTION"
-```
+license: "CC-BY-4.0"
+repository-code: "https://github.com/sciencenerd-des/reinmann"

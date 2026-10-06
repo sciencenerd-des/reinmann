@@ -1,0 +1,1131 @@
+\documentclass[11pt,a4paper]{article}
+
+% Same restrained layout as the companion preprint; portable under tectonic.
+\usepackage[top=2.65cm,bottom=2.7cm,left=3.0cm,right=3.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage{bookmark}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=2em,itemsep=0.15em,topsep=0.25em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.15em,topsep=0.25em}
+\setcounter{tocdepth}{2}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Infinite Fourier tails of the semilocal Weil form}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{problem}[theorem]{Open Problem}
+
+\newtheorem*{mainthm}{Main Theorem}
+
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\Lmin}{L_{-}}
+\newcommand{\Lmax}{L_{+}}
+\newcommand{\Arch}{\mathfrak{A}}
+\newcommand{\Dist}{\mathfrak{D}}
+\newcommand{\sinw}{\mathrm{s}}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\diag}{diag}
+
+\title{\bfseries\Large Infinite Fourier Tails and High-Mode Coercivity\\ for the Semilocal Weil Quadratic Form\\[0.35em]
+\large A complete proof of a coupled tail bound for the rank-eight ground state\\ on the support cell $17\le C\le 19$}
+
+\author{Biswajit Mondal}
+\date{\small October 6, 2026 \quad doi:10.5281/zenodo.23187645\\[0.25em]
+\textit{Research preprint. The Riemann Hypothesis is not claimed.}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Connes, Consani and Moscovici encode the semilocal Weil quadratic form on
+$[C^{-1/2},C^{1/2}]$ by an infinite real symmetric matrix $A(C)$ in a
+Fourier basis, with off-diagonal entries of displacement form
+$A_{ij}=(b_i-b_j)/(i-j)$. Their spectral programme compares the ground
+states of finite truncations of $A(C)$ with the zeros of the Riemann zeta
+function. Any such comparison has to control how the infinite matrix acts on
+a truncated ground state. We derive the matrix from the explicit-formula
+distributions and prove three rank-independent estimates. First, an exact
+identity for the omitted components of $A\,c$, for any finitely supported
+even vector $c$, expressed through signed moments of $c$ plus an explicit
+remainder that is uniform over infinitely many indices. Second, the operator
+bound $\norm{A_{\mathrm{off}}}\le 2\pi\sup_i\abs{b_i}$, obtained from the
+discrete Hilbert transform. Third, explicit logarithmic coercivity of
+high-mode compressions. We combine these with validated interval
+enclosures of the rank-eight even ground vector $u(C)$. The result is the
+following uniform statement over the whole cell $17\le C\le 19$: the
+even components of $A(C)\,u(C)$ at every Fourier index $j>64$ have joint
+$\ell^2$ norm below $9.491\times 10^{-12}$. Ignoring the signs gives a
+bound of about $2.906$. Moreover, the even compression of $A(C)$ to
+indices $j\ge 18{,}612{,}929$, and the full compression to
+$\abs{j}\ge 60{,}879{,}750$, both exceed the identity. Every
+infinite-index statement is proved analytically; finite-dimensional
+quantities are certified by outward-rounded ball arithmetic and replayed
+by an independent implementation. These results do not bound the response
+of the intermediate modes $9\le j<18{,}612{,}929$. They give no uniform
+profile budget over all ranks and supports, and they do not identify any
+limit with Riemann's $\Xi$ function. We do not prove the Riemann Hypothesis,
+and we explain why the present estimates cannot by themselves imply it.
+\end{abstract}
+
+\tableofcontents
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+%======================================================================
+
+\subsection{Context}
+Weil's explicit formula expresses a sum over the nontrivial zeros of
+$\zeta$ as a distribution $\Psi$ built from the pole of $\zeta$, the
+archimedean place and the primes. Weil's criterion~\cite{Weil1952} states
+that the Riemann Hypothesis holds if and only if the quadratic form
+$f\mapsto \Psi(f^{*}*f)$ is nonnegative on a suitable class of test functions;
+see also Bombieri~\cite{Bombieri2000}. Restricting the test functions to
+$[\lambda^{-1},\lambda]\subset\R_+^{*}$ produces the \emph{semilocal} form
+$QW_\lambda$. Only the finitely many prime powers $p^a\le\lambda^2$ enter it.
+
+Connes, Consani and Moscovici~\cite{CCM2025} computed the matrix of
+$QW_\lambda$ in the Fourier basis of $L^2([\lambda^{-1},\lambda],d^{*}u)$.
+They observed that the off-diagonal part has displacement form, and
+constructed from the even ground state of each finite truncation a
+self-adjoint operator. The spectrum of that operator consists of the real
+zeros of an entire function. Numerically these zeros approximate the
+lowest zeros of $\zeta(\tfrac12+is)$ with striking accuracy. Proving
+convergence would prove RH~\cite[\S7--8]{CCM2025}.
+
+A necessary ingredient of any convergence argument is control of the
+\emph{infinite} matrix acting on a \emph{truncated} ground state. If
+$c$ is the ground vector at retained Fourier rank $N$, then $A c$ has
+infinitely many nonzero components outside the retained block. The
+retained eigenproblem cannot see these components. A naive row bound on
+them fails: individual off-diagonal rows decay only like $1/\abs{i-j}$ and
+are not absolutely summable. This paper proves an estimate of this kind
+that is uniform over all omitted indices and over a whole support interval.
+
+\subsection{Main results}
+Throughout, $C>1$ is the support parameter ($C=\lambda^2$ in the notation of
+\cite{CCM2025}), $L=\log C$, and $A=A(C)$ is the infinite Weil matrix of
+Definition~\ref{def:matrix}. The even orthonormal coordinates of a vector are
+$u=(u_0,\dots,u_N)$, with full coefficients $c_0=u_0$ and
+$c_{\pm i}=u_i/\sqrt2$. For $n>N$ the even component of $Ac$ at index $n$ is
+$R_n=\sqrt2\,(Ac)_n$.
+
+\begin{mainthm}
+Let $17\le C\le 19$, and let $u(C)$ be the unit ground eigenvector, oriented
+by $u_0>0$, of the even block of the $17\times17$ truncation of $A(C)$
+(retained rank $N=8$). Then:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item \textbf{Infinite forcing tail.}\quad
+$\displaystyle\Bigl(\sum_{n>64}R_n(C)^2\Bigr)^{1/2}<9.491\times10^{-12}$
+for every $C\in[17,19]$. (Theorem~\ref{thm:main-tail}.)
+\item \textbf{Rank-independent off-diagonal bound.}\quad The off-diagonal
+part of $A(C)$ defines a bounded operator on $\ell^2(\Z)$ with norm below
+$19.836078$. Every finite compression obeys the same bound.
+(Theorem~\ref{thm:hilbert}, Proposition~\ref{prop:b-bounds}.)
+\item \textbf{High-mode coercivity.}\quad For every nonzero finitely supported
+$x$ with $x_j=0$ for $\abs{j}<n_0$:
+$\ip{x}{A(C)x}>\norm{x}^2$ if $x$ is even and $n_0\ge18{,}612{,}929$; and
+$\ip{x}{A(C)x}>\norm{x}^2$ for arbitrary $x$ if $n_0\ge60{,}879{,}750$.
+(Theorem~\ref{thm:coercive}.)
+\end{enumerate}
+\end{mainthm}
+
+The infinite range of indices in (i) and the rank independence in (ii)
+and (iii) are proved analytically (Sections~\ref{sec:tail}--\ref{sec:coercive}).
+The only computer-assisted inputs are enclosures of finitely many real
+numbers: the boundary sum, sixteen signed moments and two absolute moments
+of $u(C)$, uniformly over the cell. Section~\ref{sec:certificate} gives
+their validation theorems in full.
+
+The decisive point is \emph{order of operations}. The leading coefficient
+of $R_n$ is $\sqrt2\,b_n S/n$, where $S=\sum_j c_j$ is the boundary value of
+the ground state. For the ground state $\abs{S}<6.6\times10^{-12}$
+(Table~\ref{tab:worst-cell}). If $S$ is formed before absolute values are
+taken, this cancellation survives. Expanding the remaining terms in signed
+moments preserves further cancellation. If instead each entry is bounded in
+absolute value and summed, the bound is $2.906$, about $3\times10^{11}$
+times larger (Remark~\ref{rem:uncoupled}).
+
+\subsection{What is not proved}\label{subsec:not-proved}
+We state the limits of these results plainly, because the surrounding
+programme aims at RH.
+\begin{itemize}
+\item The theorems control the forcing at indices $j>64$ and the far block
+$j\ge 18{,}612{,}929$. They do \emph{not} control the inverse response of
+the intermediate modes $9\le j<18{,}612{,}929$. Eliminating those modes can
+amplify the forcing through a nearly singular constrained inverse:
+the certified ground eigenvalue lies in
+$[2.26\times10^{-26},1.38\times10^{-24}]$, and the spectral gap is about
+$4\times10^{-23}$ (Section~\ref{sec:limits}).
+\item No estimate here is uniform in growing support $C\to\infty$, and none
+provides a summable support/rank path.
+\item No limit is identified with Riemann's $\Xi$ function, and
+the Riemann Hypothesis is not proved.
+\end{itemize}
+
+\subsection{Organization and conventions}
+Section~\ref{sec:matrix} derives the matrix from the explicit-formula
+distributions. Section~\ref{sec:closed} evaluates its entries in closed form.
+Section~\ref{sec:operator} proves the uniform displacement bounds and the
+Hilbert-commutator estimate. Section~\ref{sec:tail} proves the omitted-mode
+identity and its infinite-index moment bound. Section~\ref{sec:coercive}
+proves high-mode coercivity. Section~\ref{sec:certificate} proves the
+validation lemmas and states the computer-assisted theorem.
+Section~\ref{sec:limits} records a consequence and the remaining
+obstructions. Appendix~\ref{app:crosscheck} reports an independent
+cross-check, and Appendix~\ref{app:repro} gives replay instructions and
+hashes.
+
+We use the following classical facts without proof: the Weierstrass
+product of $\Gamma$ in the form~\eqref{eq:psi-series}, Gauss's integral for
+$\psi$, the expansion $E_1(x)=-\gamma-\log x+O(x)$ of the exponential
+integral~\cite[5.7.6, 5.9.16, 6.6.2]{DLMF}, Parseval's identity on the
+circle, and the inclusion property of interval arithmetic~\cite{Johansson2017,Rump2010}.
+Everything else is proved here.
+
+%======================================================================
+\section{The semilocal Weil form and its matrix}\label{sec:matrix}
+%======================================================================
+
+\subsection{The explicit-formula distributions}
+For a function $F$ on $\R_+^{*}$ we write $F^{\vee}(x)=F(x^{-1})$ and
+$d^{*}x=dx/x$. Following~\cite{Weil1952,CCM2025}, the distributions of the
+explicit formula in the normalization $F(x)=x^{1/2}f(x)$ are
+\begin{align}
+W_{0,2}(F)&=\int_0^\infty F(x)\,(x^{1/2}+x^{-1/2})\,d^{*}x,\label{eq:W02}\\
+W_p(F)&=(\log p)\sum_{m\ge1}p^{-m/2}\bigl(F(p^m)+F(p^{-m})\bigr),\label{eq:Wp}\\
+W_\R(F)&=(\log4\pi+\gamma)F(1)+\int_1^\infty\Bigl(F(x)+F(x^{-1})-2x^{-1/2}F(1)\Bigr)\frac{x^{1/2}}{x-x^{-1}}\,d^{*}x.\label{eq:WR}
+\end{align}
+Put $\Psi=W_{0,2}-W_\R-\sum_pW_p$. With the involutive convolution algebra
+$(f^{*}*g)(y)=\int\overline{f(x/y)}\,g(x)\,d^{*}x$ on $\R_+^{*}$, the Weil
+sesquilinear form is $QW(f,g)=\Psi(f^{*}*g)$.
+
+\begin{lemma}[Half-line reduction]\label{lem:halfline}
+Define on functions on $[1,\infty)$
+\[
+W_{0,2}^{\sharp}(F)=\int_1^\infty F(x)(x^{1/2}+x^{-1/2})\,d^{*}x,\qquad
+W_p^{\sharp}(F)=(\log p)\sum_{m\ge1}p^{-m/2}F(p^m),
+\]
+\[
+W_\R^{\sharp}(F)=\tfrac12(\log4\pi+\gamma)F(1)+\int_1^\infty\frac{x^{1/2}F(x)-F(1)}{x-x^{-1}}\,d^{*}x,
+\]
+and $\Psi^{\sharp}=W_{0,2}^{\sharp}-W_\R^{\sharp}-\sum_pW_p^{\sharp}$. Then
+$\Psi(h)=\Psi^{\sharp}(h+h^{\vee})$ for every $h$ for which both sides are
+defined.
+\end{lemma}
+
+\begin{proof}
+Each identity follows by splitting $\int_0^\infty$ at $x=1$ and substituting
+$x\mapsto x^{-1}$ on $(0,1)$. The measure $d^{*}x$ is invariant under this
+substitution, and $x^{1/2}+x^{-1/2}$ is symmetric. For $W_\R$ note that
+$(h+h^{\vee})(1)=2h(1)$, which accounts for the factor $\tfrac12$ in front of
+the constant and for the term $2x^{-1/2}F(1)$ in~\eqref{eq:WR}.
+\end{proof}
+
+\subsection{Additive coordinates and the Fourier basis}
+Fix $C>1$ and $L=\log C$. The map $u\mapsto \log(C^{1/2}u)$ carries
+$[C^{-1/2},C^{1/2}]$ with $d^{*}u$ isometrically onto $[0,L]$ with $dx$. It
+carries the multiplicative convolution to the additive one,
+$(f^{*}*g)(y)=\int\overline{f(x-y)}\,g(x)\,dx$, and inversion to $y\mapsto -y$.
+We work on $\mathcal H_L=L^2([0,L],dx)$ with the orthonormal basis
+\begin{equation}\label{eq:basis}
+U_n(x)=L^{-1/2}e^{iw_nx},\qquad w_n=\frac{2\pi n}{L},\qquad n\in\Z.
+\end{equation}
+Set $q(f,g)(y)=(f^{*}*g)(y)+(f^{*}*g)(-y)$, an even function supported in
+$[-L,L]$. Pulled back to $[0,L]$ (where $y=\log x$, $x\ge1$), the
+half-line distributions become
+\begin{equation}\label{eq:Dist}
+\Dist(F)=\int_0^LF(y)\,2\cosh\tfrac y2\,dy-\Arch(F)-\sum_{1<p^a<C}\frac{\log p}{p^{a/2}}F(a\log p),
+\end{equation}
+\begin{equation}\label{eq:Arch}
+\Arch(F)=\tfrac12(\log4\pi+\gamma)F(0)+\int_0^\infty\frac{e^{y/2}F(y)-F(0)}{2\sinh y}\,dy,
+\end{equation}
+for $F$ continuous on $[0,\infty)$, piecewise $C^1$, and vanishing on
+$[L,\infty)$. A prime power with $p^a=C$ would contribute $F(L)=0$, so
+the sum may equally run over $p^a\le C$. In particular, on
+$17\le C\le 19$ the active set is $\{p^a\le17\}$ throughout; at $C=19$ the
+term $p^a=19$ vanishes identically.
+
+\begin{lemma}[Correlations]\label{lem:corr}
+For $y\in[0,L]$,
+\[
+q(U_m,U_n)(y)=\begin{cases}\dfrac{\sin(w_my)-\sin(w_ny)}{\pi(n-m)},&m\ne n,\\[2mm]
+2\bigl(1-\tfrac yL\bigr)\cos(w_ny),&m=n.\end{cases}
+\]
+\end{lemma}
+
+\begin{proof}
+For $0\le y\le L$, $(U_m^{*}*U_n)(y)=L^{-1}\int_y^Le^{iw_m(y-x)}e^{iw_nx}\,dx$.
+If $m\ne n$ this equals
+$\bigl(e^{iw_my}-e^{iw_ny}\bigr)/\bigl(2\pi i(n-m)\bigr)$, because
+$e^{i(w_n-w_m)L}=1$. If $m=n$ it equals $(1-y/L)e^{iw_ny}$. Since
+$(f^{*}*g)(-y)=\overline{(g^{*}*f)(y)}$ and the expression for $m\ne n$ is
+symmetric in $(m,n)$, the function $q$ is twice the real part. This gives
+the stated formulas.
+\end{proof}
+
+\begin{definition}[Weil matrix]\label{def:matrix}
+The \emph{Weil matrix} at support $C$ is the infinite real matrix
+$A_{mn}=QW(U_m,U_n)=\Dist\bigl(q(U_m,U_n)\bigr)$, for $m,n\in\Z$. Write
+$A=P-H-S$ for the pole, archimedean and prime contributions, i.e.\ the three
+terms of~\eqref{eq:Dist}. For a finitely supported $c\in\C^{\Z}$ with
+$f=\sum_nc_nU_n$, one has $QW(f,f)=\ip{c}{Ac}$.
+\end{definition}
+
+\begin{proposition}[Displacement structure]\label{prop:displacement}
+Let $\sinw_n(y)=\sin(w_ny)\mathbf 1_{[0,L]}(y)$ and $b_n=-\pi^{-1}\Dist(\sinw_n)$.
+Then $b_{-n}=-b_n$, $b_0=0$, $A_{-m,-n}=A_{mn}=A_{nm}$, and
+\begin{equation}\label{eq:displacement}
+A_{mn}=\frac{b_m-b_n}{m-n}\quad(m\ne n),\qquad b_n=n\,A_{n0}.
+\end{equation}
+The same holds separately for each of the three terms of~\eqref{eq:Dist},
+so that $b=b^P+b^\R+b^\Pi$ with each part odd in $n$.
+\end{proposition}
+
+\begin{proof}
+$\Dist$ is linear, and $\sinw_n(0)=0$, so~\eqref{eq:Arch} needs no
+regularization on $\sinw_n$. By Lemma~\ref{lem:corr},
+$A_{mn}=\Dist(\sinw_m-\sinw_n)/(\pi(n-m))=(b_m-b_n)/(m-n)$. Oddness of
+$n\mapsto\sinw_n$ gives $b_{-n}=-b_n$ and $b_0=0$. Taking $n=0$ gives
+$b_m=mA_{m0}$. The diagonal formula of Lemma~\ref{lem:corr} is even in $n$,
+and~\eqref{eq:displacement} is invariant under $(m,n)\mapsto(-m,-n)$. All
+three distributions are real on real functions.
+\end{proof}
+
+\begin{remark}
+Equivalently, with $\mathcal J=\diag(n)$ and $e=(1)_{n}$, one has the commutator
+identity $[A,\mathcal J]=e\,b^{T}-b\,e^{T}$ on finitely supported vectors. This is the
+structure used in~\cite[Lemma~5.2]{CCM2025}.
+\end{remark}
+
+Let $\gamma$ be the reflection $U_n\mapsto U_{-n}$. Under the centring
+$x\mapsto x-L/2$ it is the reflection $x\mapsto-x$, which corresponds to
+$u\mapsto u^{-1}$ on $[C^{-1/2},C^{1/2}]$. Since $A$ commutes with $\gamma$,
+$A$ preserves the even vectors $c_{-n}=c_n$. The even orthonormal basis is
+$e_0=U_0$ and $e_j=(U_j+U_{-j})/\sqrt2$ for $j\ge1$.
+
+%======================================================================
+\section{Closed formulas for the entries}\label{sec:closed}
+%======================================================================
+
+\subsection{Digamma facts}
+Let $\psi=\Gamma'/\Gamma$. We use
+\begin{equation}\label{eq:psi-series}
+\psi(z)=-\gamma+\sum_{k\ge0}\Bigl(\frac1{k+1}-\frac1{k+z}\Bigr),\qquad
+\psi'(z)=\sum_{k\ge0}\frac1{(k+z)^2},
+\end{equation}
+\begin{equation}\label{eq:gauss}
+\psi(z)=\int_0^\infty\Bigl(\frac{e^{-t}}t-\frac{e^{-zt}}{1-e^{-t}}\Bigr)dt,\qquad
+\psi'(z)=\int_0^\infty\frac{t\,e^{-zt}}{1-e^{-t}}\,dt\qquad(\Rea z>0).
+\end{equation}
+The second identity in~\eqref{eq:gauss} follows from~\eqref{eq:psi-series}
+by writing $(k+z)^{-2}=\int_0^\infty te^{-(k+z)t}dt$ and summing the
+geometric series, which Tonelli's theorem permits. From the first identity
+in~\eqref{eq:gauss} and $E_1(x)=\int_x^\infty e^{-t}t^{-1}dt=-\gamma-\log x+O(x)$,
+\begin{equation}\label{eq:reg}
+\int_\eps^\infty\frac{e^{-zt}}{1-e^{-t}}\,dt=-\gamma-\log\eps-\psi(z)+o(1)\qquad(\eps\downarrow0).
+\end{equation}
+Let $a_k=2k+\tfrac12$ and $\rho(y)=e^{y/2}/(2\sinh y)$. Then
+\begin{equation}\label{eq:rho}
+\rho(y)=\sum_{k\ge0}e^{-a_ky}\quad(y>0),\qquad
+\int_\eps^\infty\rho(y)e^{iwy}dy=\tfrac12\int_{2\eps}^\infty\frac{e^{-zt}}{1-e^{-t}}dt,\quad z=\tfrac14-\tfrac{iw}2,
+\end{equation}
+by the substitution $t=2y$.
+
+\subsection{The three contributions}
+Write $D=\cosh(L/2)-1$ and $z_n=\tfrac14+i\pi n/L=\tfrac14+iw_n/2$.
+
+\begin{proposition}[Pole]\label{prop:pole}
+For $m\ne n$,
+$P_{mn}=\dfrac{2D}{\pi(m-n)}\Bigl[\dfrac{w_m}{\frac14+w_m^2}-\dfrac{w_n}{\frac14+w_n^2}\Bigr]$,
+and $P_{nn}=\dfrac{4D}{L}\cdot\dfrac{\frac14-w_n^2}{(\frac14+w_n^2)^2}$.
+\end{proposition}
+
+\begin{proof}
+For $s=a+iw_n$ with $a=\pm\frac12$ we have $e^{sL}=e^{aL}$, hence
+$\int_0^L e^{sy}\sin(w_n y)\,dy$ and the corresponding integral with
+$(1-y/L)$ are elementary:
+$\int_0^L e^{ay}\sin(w_ny)\,dy=w_n(1-e^{aL})/(a^2+w_n^2)$ and
+$\int_0^L(1-\tfrac yL)e^{sy}dy=-\tfrac1s+\tfrac{e^{aL}-1}{Ls^2}$. Summing
+over $a=\pm\frac12$ with $2\cosh\frac y2=e^{y/2}+e^{-y/2}$ and taking real
+parts (the terms $-1/s$ cancel in pairs) gives
+$\int_0^L\sinw_n\,2\cosh\frac y2\,dy=-2Dw_n/(\frac14+w_n^2)$ and the stated
+diagonal. The off-diagonal formula follows from
+Proposition~\ref{prop:displacement}.
+\end{proof}
+
+\begin{proposition}[Archimedean place]\label{prop:arch}
+For every $n\in\Z$,
+\[
+H_{nn}=\log\pi-\Rea\psi(z_n)-\frac{\Rea\psi'(z_n)}{2L}+\frac2L\sum_{k\ge0}e^{-a_kL}\frac{a_k^2-w_n^2}{(a_k^2+w_n^2)^2},
+\]
+and $\Arch(\sinw_n)=\tfrac12\Ima\psi(z_n)-\sum_{k\ge0}e^{-a_kL}\dfrac{w_n}{a_k^2+w_n^2}$.
+\end{proposition}
+
+\begin{proof}
+Let $F=2(1-y/L)\cos(w_ny)\mathbf 1_{[0,L]}$, so $F(0)=2$. The integrand of
+\eqref{eq:Arch} is bounded near $0$ and integrable at $\infty$, so
+\[
+\Arch(F)=\log4\pi+\gamma+\lim_{\eps\downarrow0}\Bigl[\int_\eps^L\rho F\,dy-\int_\eps^\infty\frac{dy}{\sinh y}\Bigr].
+\]
+First, $\int_\eps^\infty dy/\sinh y=\log\coth(\eps/2)=-\log(\eps/2)+O(\eps^2)$.
+Second, split $\int_\eps^L\rho F$ as
+$2\Rea\int_\eps^\infty\rho e^{iw_ny}-\tfrac2L\Rea\int_\eps^\infty y\rho e^{iw_ny}+2\int_L^\infty\rho(\tfrac yL-1)\cos(w_ny)$.
+By~\eqref{eq:rho} and~\eqref{eq:reg} the first piece is
+$-\gamma-\log(2\eps)-\Rea\psi(\bar z_n)+o(1)$. By~\eqref{eq:gauss} with $t=2y$
+the second piece tends to $-\Rea\psi'(\bar z_n)/(2L)$. In the third piece put
+$y=L+s$ and use $\cos(w_n(L+s))=\cos(w_ns)$ together with~\eqref{eq:rho}:
+it equals
+$\tfrac2L\sum_ke^{-a_kL}\Rea(a_k-iw_n)^{-2}=\tfrac2L\sum_ke^{-a_kL}(a_k^2-w_n^2)/(a_k^2+w_n^2)^2$.
+The constants combine to
+$\log4\pi+\gamma+\log(\eps/2)-\gamma-\log(2\eps)=\log\pi$. Finally
+$\Rea\psi(\bar z)=\Rea\psi(z)$ and $\Rea\psi'(\bar z)=\Rea\psi'(z)$, and
+$H_{nn}=\Arch(F)$.
+
+For $\sinw_n$ we have $F(0)=0$, so $\Arch(\sinw_n)=\int_0^L\rho\,\sinw_n$.
+The imaginary part of~\eqref{eq:reg} has a limit, and it gives
+$\Ima\int_0^\infty\rho e^{iw_ny}dy=-\tfrac12\Ima\psi(\bar z_n)=\tfrac12\Ima\psi(z_n)$.
+The tail $\int_L^\infty\rho\sin(w_ny)\,dy$ equals
+$\sum_ke^{-a_kL}w_n/(a_k^2+w_n^2)$, by the same substitution.
+\end{proof}
+
+\begin{proposition}[Primes]\label{prop:primes}
+$S_{nn}=\sum_{p^a<C}\frac{\log p}{p^{a/2}}\,2\bigl(1-\frac{a\log p}{L}\bigr)\cos(w_na\log p)$,
+and the prime contribution to $b_n$ is
+$b^\Pi_n=\pi^{-1}\sum_{p^a<C}\frac{\log p}{p^{a/2}}\sin(w_na\log p)$.
+\end{proposition}
+
+\begin{proof}
+Evaluate the finite sum in~\eqref{eq:Dist} on Lemma~\ref{lem:corr}.
+\end{proof}
+
+\begin{corollary}[Closed displacement sequence]\label{cor:b}
+For $n\ge1$,
+\begin{equation}\label{eq:b-closed}
+b_n=\frac{2D}{\pi}\frac{w_n}{\frac14+w_n^2}
++\underbrace{\frac{\Ima\psi(z_n)}{2\pi}-\frac1\pi\sum_{k\ge0}e^{-a_kL}\frac{w_n}{a_k^2+w_n^2}}_{=:\,b_n^\R}
++\frac1\pi\sum_{p^a<C}\frac{\log p}{p^{a/2}}\sin(w_na\log p).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Use $b_n=-\pi^{-1}\Dist(\sinw_n)$ together with
+Propositions~\ref{prop:pole}--\ref{prop:primes}. The archimedean
+distribution enters $\Dist$ with a minus sign, so it contributes
+$+\pi^{-1}\Arch(\sinw_n)$.
+\end{proof}
+
+\begin{remark}
+These closed forms are equivalent to the hypergeometric expressions
+of~\cite[Prop.~4.2--4.3]{CCM2025}. The constant $\log\pi$ is obtained from
+the regularization, not fitted. Appendix~\ref{app:crosscheck} compares the
+closed entries with direct numerical quadrature of~\eqref{eq:Dist}--\eqref{eq:Arch},
+using code that is independent of the certificate generator. They agree
+to better than $2\times10^{-30}$.
+\end{remark}
+
+%======================================================================
+\section{Rank-independent operator bounds}\label{sec:operator}
+%======================================================================
+
+From now on $17\le C\le19$. Put $\Lmin=\log17$, $\Lmax=\log19$, and
+\begin{equation}\label{eq:constants}
+E=\frac{e^{-\Lmin/2}}{1-e^{-2\Lmin}},\qquad
+\mathcal P=\sum_{p^a\le17}\frac{\log p}{\sqrt{p^a}},\qquad
+D_{+}=\cosh\tfrac{\Lmax}2-1.
+\end{equation}
+Since $e^{\Lmin/2}=\sqrt{17}$ and $e^{\Lmax/2}=\sqrt{19}$, these are explicit
+algebraic and logarithmic numbers. Table~\ref{tab:constants} gives outward
+enclosures.
+
+\begin{lemma}[Digamma inequalities]\label{lem:digamma}
+For $y>0$:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $0<\Ima\psi(\tfrac14+iy)\le\tfrac\pi2+\min(2,1/y)$;
+\item $\Rea\psi(\tfrac14+iy)\ge\log y-1/y$;
+\item $\abs{\psi'(\tfrac14+iy)}\le 1/y^2+\pi/(2y)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By~\eqref{eq:psi-series},
+$\Ima\psi(\frac14+iy)=\sum_{k\ge0}g(k)$ with $g(t)=y/((t+\frac14)^2+y^2)>0$
+decreasing on $[0,\infty)$. Hence the sum is at most
+$g(0)+\int_0^\infty g=g(0)+\frac\pi2-\arctan\frac1{4y}$. Finally
+$g(0)=y/(\frac1{16}+y^2)\le\min(2,1/y)$, since the maximum $2$ is attained
+at $y=\frac14$.
+
+(b) By~\eqref{eq:psi-series} and $\gamma=\lim_M(\sum_{k<M}\frac1{k+1}-\log M)$,
+we have $\Rea\psi(\frac14+iy)=\lim_M[\log M-\sum_{k<M}f(k)]$ with
+$f(t)=(t+\frac14)/((t+\frac14)^2+y^2)$. For each $k$,
+$\abs{f(k)-\int_k^{k+1}f}\le\int_k^{k+1}\abs{f'}$. The function $f$ increases
+up to $t+\frac14=y$ and then decreases, with maximum $1/(2y)$. Hence
+$\int_0^\infty\abs{f'}\le 2\cdot\frac1{2y}=\frac1y$, and so
+$\sum_{k<M}f(k)\le\int_0^Mf+\frac1y$. Since
+$\int_0^Mf=\frac12\log\frac{(M+1/4)^2+y^2}{1/16+y^2}$, letting $M\to\infty$
+gives $\Rea\psi\ge\frac12\log(\frac1{16}+y^2)-\frac1y\ge\log y-\frac1y$.
+
+(c) By~\eqref{eq:psi-series},
+$\abs{\psi'}\le\sum_k((k+\frac14)^2+y^2)^{-1}$. The $k=0$ term is at most
+$y^{-2}$. The sum of the rest is at most
+$\int_0^\infty dt/((t+\frac14)^2+y^2)\le\pi/(2y)$.
+\end{proof}
+
+\begin{proposition}[Uniform displacement bounds]\label{prop:b-bounds}
+For all $C\in[17,19]$ and all $n\in\Z$,
+\begin{align}
+\abs{b_n}&\le B:=\frac{2D_{+}}\pi+\frac{\frac\pi2+\min(2,\Lmax/\pi)}{2\pi}+\frac E\pi+\frac{\mathcal P}\pi,\label{eq:B}\\
+\abs{b^\R_n}&\le B_\R:=\frac{\frac\pi2+\min(2,\Lmax/\pi)}{2\pi}+\frac E\pi,\label{eq:BR}\\
+\abs{b_n}&\le B_0+\frac{B_1}{\abs n}\ (n\ne0),\qquad B_0=\frac14+\frac{\mathcal P}\pi,\quad B_1=\frac{\Lmax}{\pi^2}\Bigl(D_{+}+\frac{1+E}2\Bigr).\label{eq:B01}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+By oddness it suffices to take $n\ge1$; let $y=\pi n/L\ge\pi/\Lmax$. In
+\eqref{eq:b-closed}: the pole term is at most $2D_{+}/\pi$, because
+$w/(\frac14+w^2)\le1$, and also at most $2D_{+}/(\pi w_n)=D_{+}L/(\pi^2n)$.
+The digamma term is controlled by Lemma~\ref{lem:digamma}(a), using
+$1/y\le\Lmax/\pi$ for~\eqref{eq:B} and $1/y=L/(\pi n)$ for~\eqref{eq:B01}.
+For the exponential series, $w/(a^2+w^2)\le1/(2a)\le1$ and also
+$\le1/w$; moreover $\sum_ke^{-a_kL}=e^{-L/2}/(1-e^{-2L})\le E$, because this
+function decreases in $L$. The prime sum has absolute value at most
+$\mathcal P/\pi$, because the active set is $\{p^a\le17\}$ on the whole
+cell. Adding the pieces gives the three bounds.
+\end{proof}
+
+\begin{theorem}[Hilbert commutator bound]\label{thm:hilbert}
+Let $\beta\in\ell^\infty(\Z)$ and let $T_{ij}=(\beta_i-\beta_j)/(i-j)$ for
+$i\ne j$, with $T_{ii}=0$. Then $T$ extends from finitely supported vectors
+to a bounded operator on $\ell^2(\Z)$ with
+$\norm T\le2\pi\norm\beta_\infty$. For every set $I\subset\Z$, the
+compression $\Pi_IT\Pi_I$ obeys the same bound.
+\end{theorem}
+
+\begin{proof}
+Let $\mathsf H_{ij}=1/(i-j)$ for $i\ne j$ and $\mathsf H_{ii}=0$. On
+$(0,2\pi)$ the function $\pi-\theta$ has Fourier coefficients
+$\frac1{2\pi}\int_0^{2\pi}(\pi-\theta)e^{-ik\theta}d\theta=-i/k$ for $k\ne0$,
+and $0$ for $k=0$, by one integration by parts. Hence
+$h(\theta):=\sum_{k\ne0}e^{ik\theta}/k=i(\pi-\theta)$ in $L^2(0,2\pi)$. For
+finitely supported $x,y$ put $X(\theta)=\sum x_je^{ij\theta}$ and
+$Y(\theta)=\sum y_je^{ij\theta}$. Since $\overline XY$ is a trigonometric
+polynomial,
+\[
+\ip x{\mathsf Hy}=\sum_{i\ne j}\frac{\overline{x_i}y_j}{i-j}=\frac1{2\pi}\int_0^{2\pi}h\,\overline XY\,d\theta,
+\]
+so $\abs{\ip x{\mathsf Hy}}\le\pi\cdot\frac1{2\pi}\int\abs X\abs Y\le\pi\norm x\norm y$
+by Cauchy--Schwarz and Parseval. Thus $\norm{\mathsf H}\le\pi$; this is Hilbert's inequality~\cite[Ch.~IX]{HLP}. Now
+$T=D_\beta\mathsf H-\mathsf HD_\beta$ with $D_\beta=\diag(\beta_i)$, so
+$\norm T\le2\norm\beta_\infty\norm{\mathsf H}$. The compression is
+$D_{\Pi\beta}(\Pi\mathsf H\Pi)-(\Pi\mathsf H\Pi)D_{\Pi\beta}$, and
+$\norm{\Pi\mathsf H\Pi}\le\pi$.
+\end{proof}
+
+\begin{corollary}\label{cor:offdiag}
+On the whole cell, the off-diagonal part of $A(C)$ has norm at most
+$2\pi B<19.836078$. The off-diagonal part of the archimedean contribution
+has norm at most $2\pi B_\R<2.994796$.
+\end{corollary}
+
+Individual rows of $A_{\mathrm{off}}$ are not absolutely summable, because
+$\sum_j\abs{b_i-b_j}/\abs{i-j}$ diverges logarithmically in general.
+Theorem~\ref{thm:hilbert} retains the signed structure that an
+absolute-row (Schur) bound discards.
+
+\begin{table}[ht]
+\centering
+\caption{Constants for the cell $17\le C\le19$. Each enclosure is outward;
+the certificate (1024-bit Arb) and the independent check (mpmath interval
+arithmetic, 40 digits) agree.}\label{tab:constants}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Quantity & Definition & Enclosure\\
+\midrule
+$\mathcal P$ & \eqref{eq:constants} & $5.8323263624721337\ldots$\\
+$E$ & \eqref{eq:constants} & $0.2433777626232646\ldots$\\
+$B$ & \eqref{eq:B} & $<3.157010$\\
+$B_{64}=B_0+B_1/64$ & \eqref{eq:B01} & $<2.115418$\\
+$2\pi B$ & Cor.~\ref{cor:offdiag} & $<19.836078$\\
+$2\pi B_\R$ & Cor.~\ref{cor:offdiag} & $<2.994796$\\
+$2\sinh(\Lmax/2)-\Lmax$ & Lemma~\ref{lem:pole-form} & $<1.185045$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%======================================================================
+\section{The omitted-mode identity and its infinite moment bound}\label{sec:tail}
+%======================================================================
+
+Fix a retained rank $N\ge1$ and real even coordinates $u=(u_0,\dots,u_N)$.
+Its full coefficients are $c_0=u_0$ and $c_{\pm i}=u_i/\sqrt2$; it has
+boundary sum $S=\sum_jc_j=u_0+\sqrt2\sum_{i=1}^Nu_i$. For $n>N$, $Ac$ is
+even, so its component along $e_n$ is
+$R_n:=\ip{e_n}{Ac}=\sqrt2(Ac)_n$, and its odd components vanish. Hence
+$\norm{\Pi_{\abs j>J}Ac}_{\ell^2(\Z)}=\bigl(\sum_{n>J}R_n^2\bigr)^{1/2}$.
+
+\begin{lemma}[Paired identity]\label{lem:paired}
+For every $n>N$,
+\begin{equation}\label{eq:paired}
+R_n=\frac{\sqrt2\,b_nS}n+\frac{2b_n}n\sum_{i=1}^N\frac{u_i\,i^2}{n^2-i^2}-2\sum_{i=1}^N\frac{i\,b_iu_i}{n^2-i^2}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By~\eqref{eq:displacement},
+$(Ac)_n=b_n\sum_jc_j/(n-j)-\sum_jb_jc_j/(n-j)$. Pair $j=\pm i$:
+$\frac1{n-i}+\frac1{n+i}=\frac{2n}{n^2-i^2}$; and, since $b_{-i}=-b_i$,
+$\frac{b_i}{n-i}-\frac{b_i}{n+i}=\frac{2ib_i}{n^2-i^2}$. The term $j=0$
+contributes $u_0/n$ to the first sum and nothing to the second, because
+$b_0=0$. Finally write $\frac{2n}{n^2-i^2}=\frac2n+\frac{2i^2}{n(n^2-i^2)}$ and
+collect $\frac{\sqrt2}{n}(u_0+\sqrt2\sum u_i)=\frac{\sqrt2S}n$.
+\end{proof}
+
+\begin{definition}[Signed and absolute moments]
+For an order $R\ge0$, set
+$m_r=\sum_{i=1}^Nu_i\,i^{2r}$ for $1\le r\le R$, and
+$\nu_r=\sum_{i=1}^Nu_ib_i\,i^{2r+1}$ for $0\le r\le R-1$. Further set
+$M=\sum_{i=1}^N\abs{u_i}\,i^{2R+2}$ and $V=\sum_{i=1}^N\abs{u_ib_i}\,i^{2R+1}$.
+\end{definition}
+
+\begin{lemma}[Finite geometric expansion]\label{lem:geometric}
+For $n>N$,
+\[
+R_n=\frac{\sqrt2b_nS}n+2b_n\sum_{r=1}^R\frac{m_r}{n^{2r+1}}-2\sum_{r=0}^{R-1}\frac{\nu_r}{n^{2r+2}}+\mathcal E_n,
+\]
+\[
+\mathcal E_n=\frac{2b_n}{n^{2R+1}}\sum_{i=1}^N\frac{u_i\,i^{2R+2}}{n^2-i^2}-\frac2{n^{2R}}\sum_{i=1}^N\frac{u_ib_i\,i^{2R+1}}{n^2-i^2}.
+\]
+If $J>N$ and $\abs{b_n}\le B_J$ for all $n>J$, then for all $n>J$
+\[
+\abs{\mathcal E_n}\le2\gamma_J\Bigl[\frac{B_JM}{n^{2R+3}}+\frac V{n^{2R+2}}\Bigr],\qquad\gamma_J=\frac1{1-(N/J)^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+With $x=i^2/n^2<1$ one has $\frac x{1-x}=\sum_{r=1}^Rx^r+\frac{x^{R+1}}{1-x}$ and
+$\frac1{1-x}=\sum_{r=0}^{R-1}x^r+\frac{x^R}{1-x}$. Hence
+$\frac{i^2}{n^2-i^2}=\sum_{r=1}^R\frac{i^{2r}}{n^{2r}}+\frac{i^{2R+2}}{n^{2R}(n^2-i^2)}$
+and
+$\frac1{n^2-i^2}=\sum_{r=0}^{R-1}\frac{i^{2r}}{n^{2r+2}}+\frac{i^{2R}}{n^{2R}(n^2-i^2)}$.
+Substitute these into~\eqref{eq:paired}. For the bound, note that $i\le N<J<n$
+gives $\frac1{n^2-i^2}=\frac{n^{-2}}{1-(i/n)^2}\le\frac{\gamma_J}{n^2}$.
+\end{proof}
+
+\begin{lemma}[Integral test]\label{lem:integral}
+For integers $p\ge1$ and $J\ge1$,
+$H_p(J):=\bigl(\sum_{n>J}n^{-2p}\bigr)^{1/2}\le J^{1/2-p}/\sqrt{2p-1}$.
+\end{lemma}
+
+\begin{proof}
+$t\mapsto t^{-2p}$ decreases, so $\sum_{n>J}n^{-2p}\le\int_J^\infty t^{-2p}dt$.
+\end{proof}
+
+\begin{theorem}[Infinite-index tail bound]\label{thm:tail}
+Let $N\ge1$, $R\ge0$, $J>N$, and $\abs{b_n}\le B_J$ for $n>J$. For every
+real even $u\in\R^{N+1}$,
+\begin{multline}\label{eq:tail}
+\Bigl(\sum_{n>J}R_n^2\Bigr)^{1/2}\le\sqrt2B_J\abs SH_1+2B_J\sum_{r=1}^R\abs{m_r}H_{2r+1}\\
++2\sum_{r=0}^{R-1}\abs{\nu_r}H_{2r+2}+2\gamma_J\bigl[B_JMH_{2R+3}+VH_{2R+2}\bigr],
+\end{multline}
+with $H_p=H_p(J)$.
+\end{theorem}
+
+\begin{proof}
+Apply Minkowski's inequality in $\ell^2(\{n>J\})$ to the decomposition of
+Lemma~\ref{lem:geometric}. Bound each sequence pointwise by a constant times
+$n^{-p}$; then Lemma~\ref{lem:integral} gives its $\ell^2$ norm.
+\end{proof}
+
+Theorem~\ref{thm:tail} is a statement about every omitted index at once.
+It holds for any finite rank, any cutoff $J>N$ and any order $R$. Neither
+the sum over $n$ nor the remainder is truncated. The only inputs it needs
+are the scalars $S$, $m_r$, $\nu_r$, $M$, $V$ and $B_J$.
+
+\begin{remark}[Why the signs matter]\label{rem:uncoupled}
+Bounding $\abs{A_{nj}}\le2B/\abs{n-j}$ entrywise and summing gives the
+\emph{uncoupled} estimate
+$\bigl(\sum_{n>J}R_n^2\bigr)^{1/2}\le2\sqrt2B\bigl(\abs{u_0}+\sqrt2\sum\abs{u_i}\bigr)/\sqrt{J-N}$.
+For the rank-eight ground on the cell this is about $2.906$ when $J=64$.
+Theorem~\ref{thm:tail} gives $9.49\times10^{-12}$
+(Theorem~\ref{thm:main-tail}), roughly $3.06\times10^{11}$ times smaller. The
+improvement comes from three facts: the ground state has a tiny boundary
+sum $S$, low signed moments $m_1$ and $\nu_0$ that are small, and the
+moment expansion preserves the sign cancellation across the retained
+coordinates.
+\end{remark}
+
+%======================================================================
+\section{High-mode coercivity}\label{sec:coercive}
+%======================================================================
+
+\begin{lemma}[Pole form]\label{lem:pole-form}
+For $f\in\mathcal H_L$, let $\tilde f(x)=f(x+L/2)$ on $[-L/2,L/2]$. Then
+$\ip{c}{Pc}=2\abs{\ip{\cosh\frac\cdot2}{\tilde f}}^2-2\abs{\ip{\sinh\frac\cdot2}{\tilde f}}^2$.
+Consequently $P\ge0$ on even vectors, and $P\ge-(2\sinh\frac L2-L)$ on
+all vectors.
+\end{lemma}
+
+\begin{proof}
+By~\eqref{eq:W02}, in additive coordinates,
+$W_{0,2}(f^{*}*f)=\iint\overline{f(s)}f(t)\,2\cosh\frac{s-t}2\,ds\,dt$. This
+kernel is translation invariant, so we may centre. Then
+$2\cosh\frac{s-t}2=2\cosh\frac s2\cosh\frac t2-2\sinh\frac s2\sinh\frac t2$.
+The two functions are orthogonal on $[-L/2,L/2]$. For even $\tilde f$ the
+sinh term vanishes. In general the negative eigenvalue is
+$-2\norm{\sinh\frac\cdot2}^2=-(2\sinh\frac L2-L)$.
+\end{proof}
+
+\begin{lemma}[Prime form]\label{lem:prime-form}
+$\abs{\ip c{Sc}}\le2\mathcal P\norm c^2$ on the cell.
+\end{lemma}
+
+\begin{proof}
+$\ip c{Sc}=\sum_{p^a<C}\frac{\log p}{p^{a/2}}\bigl(F(a\log p)+F(-a\log p)\bigr)$
+with $F(y)=\int\overline{f(x-y)}f(x)\,dx$, and Cauchy--Schwarz gives
+$\abs{F(y)}\le\norm f^2$.
+\end{proof}
+
+\begin{lemma}[Archimedean diagonal]\label{lem:arch-diag}
+For $n\ne0$ and $C\in[17,19]$,
+\[
+-H_{nn}\ge\delta(\abs n):=\log\frac{\abs n}{\Lmax}-\frac{\Lmax}{\pi\abs n}-\frac1{4\abs n}-\frac{\Lmax(1+E)}{2\pi^2n^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Use Proposition~\ref{prop:arch} with $y=\pi\abs n/L$. By
+Lemma~\ref{lem:digamma}(b), $-\log\pi+\Rea\psi(z_n)\ge\log\frac{\abs n}L-\frac L{\pi\abs n}$.
+By Lemma~\ref{lem:digamma}(c),
+$\frac{\abs{\psi'(z_n)}}{2L}\le\frac L{2\pi^2n^2}+\frac1{4\abs n}$. The
+exponential series is at most
+$\frac2L\sum_ke^{-a_kL}w_n^{-2}\le\frac{LE}{2\pi^2n^2}$, because
+$\abs{a^2-w^2}\le a^2+w^2$. Each resulting term is monotone in
+$L\in[\Lmin,\Lmax]$ in the direction used.
+\end{proof}
+
+\begin{theorem}[High-mode coercivity]\label{thm:coercive}
+For $n_0\ge1$ put
+\[
+\beta_{\mathrm{even}}(n_0)=\delta(n_0)-2\pi B_\R-2\mathcal P,\qquad
+\beta_{\mathrm{full}}(n_0)=\beta_{\mathrm{even}}(n_0)-\bigl(2\sinh\tfrac\Lmax2-\Lmax\bigr).
+\]
+For every $C\in[17,19]$ and every finitely supported $x$ with $x_j=0$ for
+$\abs j<n_0$, one has $\ip x{A(C)x}\ge\beta_{\mathrm{full}}(n_0)\norm x^2$.
+If moreover $x$ is even, then $\ip x{A(C)x}\ge\beta_{\mathrm{even}}(n_0)\norm x^2$.
+Both lower bounds increase to $+\infty$ as $n_0$ grows, and
+\[
+\beta_{\mathrm{even}}(18{,}612{,}929)>1.000000028,\qquad
+\beta_{\mathrm{full}}(60{,}879{,}750)>1.000000002.
+\]
+\end{theorem}
+
+\begin{proof}
+Decompose $\ip xAx=\ip xPx-\ip x{H_{\mathrm{diag}}x}-\ip x{H_{\mathrm{off}}x}-\ip xSx$.
+Then apply Lemma~\ref{lem:pole-form}, Lemma~\ref{lem:arch-diag} (with $\delta$
+increasing in $\abs n$), Corollary~\ref{cor:offdiag} (compressions keep the
+bound) and Lemma~\ref{lem:prime-form}. The numerical values come from
+outward interval evaluation (Table~\ref{tab:constants}). The certificate
+uses 1024-bit Arb; the independent check uses mpmath intervals. Both report
+$\beta_{\mathrm{even}}(18{,}612{,}928)<1$ and $\beta_{\mathrm{full}}(60{,}879{,}749)<1$.
+Thus the stated starts are the least integers for which \emph{these
+particular} bounds exceed one; they are not claimed sharp for $A$ itself.
+\end{proof}
+
+Since the span of the $U_n$ is a form core for the closed semilocal
+form~\cite[Prop.~3.4]{CCM2025}, the same lower bounds hold for the closure
+of the far-block form. We use only finite compressions below.
+
+%======================================================================
+\section{The finite-rank certificate}\label{sec:certificate}
+%======================================================================
+
+Theorem~\ref{thm:tail} reduces the infinite tail to finitely many real
+numbers attached to $u(C)$. This section proves that the enclosures of
+those numbers are valid uniformly in $C\in[17,19]$. All arithmetic is
+midpoint--radius ball arithmetic with outward rounding (Arb via
+python-flint 0.8.0, 1024 bits~\cite{Johansson2017}). The
+\emph{inclusion property} is the only fact about the computer we use: each
+computed ball contains the exact value of the corresponding real
+expression for every choice of inputs from the input balls.
+
+\subsection{Analytic Taylor enclosure in the support parameter}
+Replace $\Rea\psi(z_n)$ by $\frac12[\psi(\frac14-\frac{i\pi n}L)+\psi(\frac14+\frac{i\pi n}L)]$,
+and $\Ima\psi$ by the corresponding odd combination divided by $2i$. Then
+every entry of Section~\ref{sec:closed} is holomorphic in $L$ on $\Rea L>0$,
+for a fixed active prime set. Let $c_\ast=\frac12(\Lmin+\Lmax)$,
+$\delta=\frac12(\Lmax-\Lmin)<0.055613$ and $R_\ast=\frac14$.
+
+\begin{lemma}[Cauchy remainder]\label{lem:cauchy}
+Let $W$ be holomorphic on $\abs{L-c_\ast}\le R_\ast$ with $\abs W\le M_W$
+there, and let $W_j$ be its Taylor coefficients at $c_\ast$. If
+$\abs h\le\delta<R_\ast$ and $q=\delta/R_\ast$, then
+$\abs{W(c_\ast+h)-\sum_{j\le d}W_jh^j}\le M_Wq^{d+1}/(1-q)$.
+\end{lemma}
+
+\begin{proof}
+Cauchy's estimate gives $\abs{W_j}\le M_W/R_\ast^j$; sum the geometric tail.
+\end{proof}
+
+The certificate~\cite[artifact \texttt{weil\_support\_taylor\_17\_19\_8\_degree64}]{Artifacts}
+encloses every coefficient of the $9\times9$ even block to degree $d=64$.
+It truncates the exponential series after 80 terms, with an omitted tail
+bounded uniformly over the complex disk and over \emph{all} index pairs. It
+bounds $M_W$ on the circle by covering it with rectangles. The resulting
+operator-norm error of the polynomial matrix over the real cell is
+below $4.870\times10^{-41}$.
+
+\subsection{Validated eigenfamily}
+The cell is covered by 32 adjacent closed subcells. On each subcell the
+polynomial matrix is translated to the local centre. A candidate eigenbasis
+$U(L)$ and candidate eigenvalues $\Lambda=\diag(\ell_i(L))$ are polynomials
+with exact dyadic coefficients, written in a fixed orthogonal centre basis
+$Q$. No convergence of the recurrence that proposed them is assumed.
+
+\begin{lemma}[Uniform isolation]\label{lem:isolation}
+Let $B=Q^TAQ$ be real symmetric. Let $E=BU-U\Lambda$, and suppose
+$\norm{U-I}_\infty\le\beta<1$. Put $\eta=\norm E_\infty/(1-\beta)$. If the
+intervals $[\ell_i-\eta,\ell_i+\eta]$ are pairwise disjoint, then each
+contains exactly one eigenvalue of $A$, in increasing order.
+\end{lemma}
+
+\begin{proof}
+By the Neumann series, $\norm{U^{-1}}_\infty\le1/(1-\beta)$, and
+$U^{-1}BU=\Lambda+U^{-1}E$. Gershgorin's theorem with row sums places the
+spectrum in the union of the disks of radius $\eta$ about the $\ell_i$. By
+continuity of eigenvalues along $t\mapsto\Lambda+tU^{-1}E$, a union of $k$
+disjoint disks contains exactly $k$ eigenvalues. The eigenvalues are real
+because $A$ is symmetric.
+\end{proof}
+
+\begin{lemma}[Eigenvector distance]\label{lem:distance}
+Let $A$ be real symmetric with simple lowest eigenvalue $\lambda_0$ and unit
+eigenvector $v$. Let $\hat u$ be a unit vector with
+$\norm{A\hat u-\ell\hat u}\le\rho$, and suppose every other eigenvalue
+satisfies $\lambda-\ell\ge D>0$. If $v$ is oriented so that
+$\ip v{\hat u}\ge0$, then $\norm{\hat u-v}\le\sqrt2\rho/D$.
+\end{lemma}
+
+\begin{proof}
+Write $\hat u=\alpha v+w$ with $w\perp v$ and $\alpha\ge0$. Projecting
+$(A-\ell)\hat u$ onto $v^\perp$ gives $(A-\ell)w$, so $D\norm w\le\rho$.
+Then $\norm{\hat u-v}^2=2(1-\alpha)\le2(1-\alpha^2)=2\norm w^2$.
+\end{proof}
+
+All 32 subcells pass Lemma~\ref{lem:isolation}, with
+$\norm{U-I}_\infty<0.01633$ and disk radii below $4.456\times10^{-40}$. An
+independent odd-block certificate with the same subdivision places every
+odd eigenvalue above the even ground. Hence $u(C)$ is the simple ground of
+the full $17\times17$ truncation; the tail theorem below does not need this.
+Uniformly on the cell, the lowest eigenvalue lies in
+$[2.259\times10^{-26},\,1.380\times10^{-24}]$, and the full ground gap
+exceeds $4.043\times10^{-23}$. Lemma~\ref{lem:distance} gives
+\begin{equation}\label{eq:dist}
+\norm{\hat u(C)-u(C)}\le d<8.687\times10^{-21},
+\end{equation}
+where $\hat u=p/\norm p$ is the normalized candidate. The candidate's
+centre-basis anchor coordinate is identically one, so
+$\norm{p}\in[1,\bar\nu]$ for a certified $\bar\nu$. The unit ground origin
+satisfies $u_0>0.5753$, which fixes the orientation consistently across
+subcells.
+
+\subsection{Enclosures of the moments}
+
+\begin{lemma}[Linear functionals of the exact ground]\label{lem:functional}
+Let $\omega\in\R^{N+1}$. For $C$ in a subcell,
+\[
+\ip\omega{u(C)}\in\frac{\mathrm{range}\,\ip\omega{p}}{[1,\bar\nu]}+\bigl[-d\norm\omega,\,d\norm\omega\bigr].
+\]
+If the weights depend on $C$ through $b_i(L)=\mathrm{poly}_i(L)+\eta_i$ with
+$\abs{\eta_i}\le\epsilon_i$, then
+\[
+\sum_i\omega_ib_iu_i\in\frac{\mathrm{range}\sum_i\omega_i\,\mathrm{poly}_i\,p_i}{[1,\bar\nu]}+\Bigl[\pm\Bigl(d\,\bigl\|(\omega_i\sup\abs{b_i})_i\bigr\|+\sum_i\abs{\omega_i}\epsilon_i\sup\abs{p_i}\Bigr)\Bigr].
+\]
+\end{lemma}
+
+\begin{proof}
+Write $u=\hat u+(u-\hat u)$, use~\eqref{eq:dist} with Cauchy--Schwarz, and
+use $\norm p\ge1$ for the polynomial-error term.
+\end{proof}
+
+The key design choice is that each moment is formed as \emph{one}
+polynomial in the support parameter, namely $\sum_i\omega_ip_i(L)$ or
+$\sum_i\omega_ib_i(L)p_i(L)$, \emph{before} its range is enclosed. Neighbouring
+Fourier coordinates nearly cancel, and a common parameter is shared, so
+enclosing each coordinate separately would destroy the cancellation that
+Remark~\ref{rem:uncoupled} quantifies. We apply the lemma with:
+\begin{itemize}
+\item $\omega=(1,\sqrt2,\dots,\sqrt2)$ for $S$. The spatial certificate
+evaluates $S$ as the endpoint Bernstein coefficient of the spatial ground
+kernel, which equals $S$ exactly;
+\item $\omega_i=i^{2r}$ ($i\ge1$) for $m_r$, $1\le r\le8$;
+\item $\omega_i=i^{2r+1}$ with $b_i(L)=iA_{i0}(L)$ taken from the same
+Taylor certificate, for $\nu_r$, $0\le r\le7$;
+\item absolute weights after the signed expansion, for $M$ and $V$ with $R=8$.
+\end{itemize}
+
+\subsection{The main computer-assisted theorem}
+
+\begin{theorem}[Coupled infinite Fourier tail]\label{thm:main-tail}
+For every $C\in[17,19]$, the unit even rank-eight ground vector $u(C)$
+satisfies
+\[
+\Bigl(\sum_{n>64}R_n(C)^2\Bigr)^{1/2}\le 9.4900466\times10^{-12}<9.491\times10^{-12}.
+\]
+\end{theorem}
+
+\begin{proof}
+On each of the 32 subcells, apply Theorem~\ref{thm:tail} with $N=8$, $J=64$,
+$R=8$ and $B_{64}=B_0+B_1/64$; this is valid because $n>64$ implies
+$\abs{b_n}\le B_0+B_1/n<B_{64}$ by Proposition~\ref{prop:b-bounds}. The scalar
+inputs are enclosed uniformly over the subcell by Lemma~\ref{lem:functional}.
+The right side of~\eqref{eq:tail} is evaluated in outward ball arithmetic,
+and the bound is the maximum over the subcells. Table~\ref{tab:worst-cell}
+lists the contributions for the worst subcell, which is adjacent to $C=17$.
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\caption{Worst subcell (index 0, adjacent to $C=17$) of
+Theorem~\ref{thm:main-tail}. Each entry is a certified outward upper bound.
+The moment intervals are certified enclosures over the whole subcell.}
+\label{tab:worst-cell}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Term of~\eqref{eq:tail} & Certified input & Contribution\\
+\midrule
+$\sqrt2B_{64}\abs SH_1$ & $S\in[6.3167,\,6.5920]\times10^{-12}$ & $2.465\times10^{-12}$\\
+$2B_{64}\abs{m_1}H_3$ & $m_1\in[-6.317,-5.976]\times10^{-8}$ & $3.648\times10^{-12}$\\
+$2B_{64}\abs{m_2}H_5$ & $m_2\in[1.1354,\,1.1920]\times10^{-4}$ & $1.252\times10^{-12}$\\
+$2B_{64}\abs{m_3}H_7$ & $m_3\in[-7.691,-7.419]\times10^{-2}$ & $1.642\times10^{-13}$\\
+$2B_{64}\sum_{r=4}^8\abs{m_r}H_{2r+1}$ & & $<9.5\times10^{-15}$\\
+$2\abs{\nu_0}H_2$ & $\nu_0\in[-5.406,-4.750]\times10^{-10}$ & $1.219\times10^{-12}$\\
+$2\abs{\nu_1}H_4$ & $\nu_1\in[1.5495,\,1.7150]\times10^{-6}$ & $6.182\times10^{-13}$\\
+$2\abs{\nu_2}H_6$ & $\nu_2\in[-1.5124,-1.3961]\times10^{-3}$ & $1.062\times10^{-13}$\\
+$2\sum_{r=3}^7\abs{\nu_r}H_{2r+2}$ & & $<7.9\times10^{-15}$\\
+remainder $2\gamma_{64}[\cdots]$ & $M,V$ & $1.001\times10^{-22}$\\
+\midrule
+total & & $9.4900\times10^{-12}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Over all 32 subcells the bound ranges from $3.03\times10^{-12}$ to
+$9.490\times10^{-12}$, and the expansion remainder never exceeds
+$1.219\times10^{-22}$. The uncoupled estimate of
+Remark~\ref{rem:uncoupled} ranges from $2.889$ to $2.906$.
+
+%======================================================================
+\section{A consequence, and what remains open}\label{sec:limits}
+%======================================================================
+
+\begin{corollary}[Far-block inverse energy]\label{cor:energy}
+Let $n_0=18{,}612{,}929$. Let $Q_M$ be the orthogonal projection onto
+$\mathrm{span}\{e_j:n_0\le j\le M\}$ for any $M\ge n_0$, let $\lambda(C)$ be
+the lowest even eigenvalue at rank eight, and let
+$T_M=Q_MAQ_M-\lambda I$ on the range of $Q_M$. Then, uniformly in $M$ and
+$C\in[17,19]$,
+\[
+\ip{Q_MAc}{T_M^{-1}Q_MAc}\le\frac{\norm{Q_MAc}^2}{1-\lambda}<9.007\times10^{-23}.
+\]
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:coercive}, $Q_MAQ_M\ge\beta_{\mathrm{even}}(n_0)>1$, so
+$T_M\ge1-\lambda$, with $0<\lambda<1.380\times10^{-24}$. Since $n_0>64$,
+Theorem~\ref{thm:main-tail} gives $\norm{Q_MAc}^2<(9.49005\times10^{-12})^2<9.0061\times10^{-23}$.
+\end{proof}
+
+This is the energy of the \emph{direct} far-block response. It is not the
+change of the ground state when the rank is increased. The following
+problems remain open.
+
+\begin{problem}[Intermediate block]\label{prob:intermediate}
+Control the Schur complement obtained by eliminating the modes
+$9\le j<18{,}612{,}929$, together with the profile response it induces. The
+forcing into those modes is not bounded here; for $9\le j\le64$ it is a
+finite computation, but for $j>64$ only its $\ell^2$ norm is controlled.
+More importantly, the eliminated block contains spectrum close to the
+ground eigenvalue. Tiny energy does not imply a tiny profile increment;
+the response can be amplified by a nearly singular inverse. A
+Davis--Kahan bound~\cite{DavisKahan1970} that uses the full residual would
+need a spectral gap of the infinite operator larger than the forcing,
+whereas the certified finite gap is about $4\times10^{-23}$.
+\end{problem}
+
+\begin{problem}[All supports and ranks]
+Find estimates of Theorem~\ref{thm:main-tail} type that are uniform as
+$C\to\infty$ and $N\to\infty$ jointly, with a summable combined
+support/rank path. The present constants $\mathcal P$, $D_{+}$ and the
+coercivity start $n_0$ all grow with $C$, so the argument does not
+extend without new ideas.
+\end{problem}
+
+\begin{problem}[Identification with $\Xi$]\label{prob:xi}
+Show that suitably normalized ground profiles converge to Riemann's
+$\Xi$ function, as proposed in~\cite[\S7]{CCM2025}. Nothing in this paper
+addresses that identification.
+\end{problem}
+
+Consequently, the results here are finite-cell, rank-independent
+estimates. They are not, and do not imply, a proof of the Riemann
+Hypothesis.
+
+\subsection*{Theorem-status ledger}
+\begin{center}
+\begin{tabular}{@{}p{0.47\textwidth}p{0.45\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+Lemmas~\ref{lem:halfline}--\ref{lem:corr}, Props.~\ref{prop:displacement}--\ref{prop:primes}, Cor.~\ref{cor:b} & Proved (from the explicit-formula distributions)\\
+Lemma~\ref{lem:digamma}, Prop.~\ref{prop:b-bounds}, Thm.~\ref{thm:hilbert} & Proved; constants by interval evaluation\\
+Lemmas~\ref{lem:paired}--\ref{lem:integral}, Thm.~\ref{thm:tail} & Proved, all ranks, all indices\\
+Thm.~\ref{thm:coercive} & Proved; thresholds by interval evaluation\\
+Lemmas~\ref{lem:cauchy}--\ref{lem:functional} & Proved\\
+Thm.~\ref{thm:main-tail}, Cor.~\ref{cor:energy} & Proved, computer-assisted (validated ball arithmetic)\\
+Appendix~\ref{app:crosscheck} & Independent floating-point evidence, not proof\\
+Problems~\ref{prob:intermediate}--\ref{prob:xi}, RH & Open\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Software and use of AI tools}
+Ball arithmetic uses Arb through python-flint~0.8.0~\cite{Johansson2017};
+the independent cross-check uses mpmath. The author used AI tools to write
+and execute the code for the certificate generators, the regression tests
+and the independent cross-check. Every computational claim in this paper
+is reproducible from the replay commands in Appendix~\ref{app:repro}.
+
+\appendix
+
+%======================================================================
+\section{Independent cross-check}\label{app:crosscheck}
+%======================================================================
+
+The script \texttt{paper/weil\_tail\_crosscheck.py} shares no code with the
+certificate generator. It implements the formulas of
+Sections~\ref{sec:closed}--\ref{sec:tail} directly in mpmath at 80 digits.
+Its results, which are floating-point evidence and not part of any proof:
+\begin{enumerate}
+\item \emph{Closed entries versus the defining distributions.} At $C=17$
+the closed entries $(0,0)$, $(3,3)$, $(8,8)$, $(1,0)$, $(5,-2)$, $(8,-8)$ and
+$(7,6)$ agree with adaptive quadrature of~\eqref{eq:Dist}--\eqref{eq:Arch} to
+within $1.6\times10^{-30}$. This checks the $\log\pi$ regularization of
+Proposition~\ref{prop:arch} independently.
+\item \emph{Paired identity.} At $C=17,18,19$ and $n=9,65,1000$,
+\eqref{eq:paired} agrees with a direct product $\sqrt2\sum_jA_{nj}c_j$ to
+within $10^{-60}$.
+\item \emph{Ground moments.} The independently computed unit ground at
+$C=17$, $18$ and $19$ gives
+{\small\[
+\setlength{\arraycolsep}{4pt}
+\begin{array}{@{}lccccc@{}}
+C & S & m_1 & \nu_0 & m_2 & \nu_1\\
+17 & 6.3425\times10^{-12} & -6.2547\times10^{-8} & -5.3873\times10^{-10} & 1.1860\times10^{-4} & 1.7116\times10^{-6}\\
+18 & 1.3773\times10^{-12} & -1.9552\times10^{-8} & -1.2350\times10^{-10} & 5.2081\times10^{-5} & 5.3834\times10^{-7}\\
+19 & 4.0274\times10^{-12} & -4.1936\times10^{-8} & -3.4992\times10^{-10} & 8.3493\times10^{-5} & 1.1650\times10^{-6}
+\end{array}
+\]}
+In each case $S$, $m_1$ and $\nu_0$ lie inside the certified intervals of the
+containing subcell (indices 0, 16 and 31).
+\item \emph{Direct omitted-mode sum.} Summing $R_n^2$ directly for
+$64<n\le20{,}000$ and bounding $n>20{,}000$ by Theorem~\ref{thm:tail} with
+$R=4$ gives totals $\le1.02\times10^{-12}$, $2.02\times10^{-13}$ and
+$6.45\times10^{-13}$ at $C=17,18,19$. These are consistent with the
+certified uniform bound, and the direct sum at $C=17$
+($8.21\times10^{-13}$) shows that the bound is conservative by a factor of
+about $11$.
+\item \emph{Constants.} The mpmath interval evaluation reproduces every entry
+of Table~\ref{tab:constants}. It also reproduces both coercivity thresholds,
+including the failure at $n_0-1$.
+\end{enumerate}
+
+%======================================================================
+\section{Replay and data}\label{app:repro}
+%======================================================================
+
+The certificate chain (matrix Taylor, even eigenfamily, odd block, spatial
+boundary, rank tail) is stored in \texttt{research/prime\_spectral/}. Each
+artifact records the SHA-256 hashes of its source files and of its input
+artifacts, and the generators refuse stale inputs. The tail certificate
+\texttt{weil\_rank\_tail\_cell\_17\_19\_8\_degree64.json} records the input
+hashes
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+Taylor & \texttt{5f745aa6175bc5b06477d90e587f2435b74feae4a1012af70710bacaa573e0db}\\
+even & \texttt{8a977827a832ccaca8c706eab1ad334e4636d2508518b21f3e708a6a39a1083b}\\
+\end{tabular}
+\end{center}
+Replay the tail certificate (7 tests, including a full replay of the 32-cell
+cover) and the independent check with
+\begin{verbatim}
+uv run --with python-flint==0.8.0 --python 3.12 python -m unittest \
+  discover -s experiments/prime_spectral -p test_weil_rank_tail_cell.py -v
+uv run --with mpmath python paper/weil_tail_crosscheck.py 20000
+\end{verbatim}
+The full prime-spectral regression suite (159 tests) is run with the same
+command and the pattern \texttt{test\_*.py}. The analytic arguments of this
+paper are not formalized in Lean.
+
+\begin{thebibliography}{99}
+\bibitem{Artifacts}
+B.~Mondal, \emph{Reinmann: certificates and replay scripts for the semilocal Weil form}, research repository, directories \texttt{experiments/prime\_spectral} (code and certificates) and \texttt{research/prime\_spectral} (reports), 2026. Archived with this preprint, doi:10.5281/zenodo.23187645.
+
+\bibitem{Bombieri2000}
+E.~Bombieri, Remarks on Weil's quadratic functional in the theory of prime numbers.~I, \emph{Rend. Mat. Acc. Lincei} (9) \textbf{11} (2000), 183--233.
+
+\bibitem{CCM2025}
+A.~Connes, C.~Consani and H.~Moscovici, Zeta spectral triples, \emph{arXiv:2511.22755} (2025).
+
+\bibitem{DavisKahan1970}
+C.~Davis and W.~M.~Kahan, The rotation of eigenvectors by a perturbation.~III, \emph{SIAM J. Numer. Anal.} \textbf{7} (1970), 1--46.
+
+\bibitem{DLMF}
+\emph{NIST Digital Library of Mathematical Functions}, \url{https://dlmf.nist.gov/}, \S\S5.7, 5.9, 5.15, 6.6.
+
+\bibitem{HLP}
+G.~H.~Hardy, J.~E.~Littlewood and G.~P\'olya, \emph{Inequalities}, 2nd ed., Cambridge University Press, 1952.
+
+\bibitem{Johansson2017}
+F.~Johansson, Arb: efficient arbitrary-precision midpoint-radius interval arithmetic, \emph{IEEE Trans. Comput.} \textbf{66} (2017), 1281--1292.
+
+\bibitem{Rump2010}
+S.~M.~Rump, Verification methods: rigorous results using floating-point arithmetic, \emph{Acta Numer.} \textbf{19} (2010), 287--449.
+
+\bibitem{Weil1952}
+A.~Weil, Sur les ``formules explicites'' de la th\'eorie des nombres premiers, \emph{Comm. S\'em. Math. Univ. Lund} (1952), tome suppl\'ementaire, 252--265.
+\end{thebibliography}
+
+\end{document}

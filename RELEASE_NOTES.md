@@ -1,4 +1,22 @@
-# Release notes: conditional RH routes v0.1.0
+# Release notes: conditional RH routes
+
+## v0.2.0 (2026-10-06)
+
+- Zenodo: doi:10.5281/zenodo.23187646 (concept DOI for all versions:
+  doi:10.5281/zenodo.21416394; v0.1.0 is doi:10.5281/zenodo.21416395).
+- Manuscript revised: Katkova's Xi/PF criterion and the cubic tail-wedge
+  preprint (arXiv:2607.16795, cited as external, not audited), Route A
+  restated as a complementary finite-prefix wedge, row-48 minor scan with
+  Python/JavaScript/TypeScript differential replication.
+- Lean: `CurvatureControls`, `CoupledRankEnergy` and `WeilRankTail` are now
+  imported by `Reinmann.lean` and audited; the axiom audit covers 122
+  theorems. `WeilRankTail` previously failed to elaborate and was not built.
+- Companion preprint, *Infinite Fourier Tails and High-Mode Coercivity for
+  the Semilocal Weil Quadratic Form* (`paper/weil_infinite_rank_tail_paper`),
+  deposited separately: doi:10.5281/zenodo.23187645.
+
+## v0.1.0 (2026-07-17)
+
 
 This release is an immutable source-and-artifact snapshot of the Lean
 formalization and the synthesized manuscript
@@ -28,9 +46,7 @@ diagnostics and are not used as formal theorem inputs.
 
 ## DOI status
 
-`CITATION.cff` and `zenodo.json` are prepared for an authenticated Zenodo
-deposit. No DOI is asserted in this repository: the public repository URL,
-license choice, and Zenodo deposition must be supplied by the maintainer.
+Zenodo: doi:10.5281/zenodo.21416395 (preprint and source archive, CC-BY-4.0).
 
 ## Review status
 

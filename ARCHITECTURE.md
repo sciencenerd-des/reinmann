@@ -1,5 +1,12 @@
 # Reinmann — Architecture & Verification Map
 
+> **2026-09-13 correction:** See the [implementation report](research/RH_IMPLEMENTATION_2026_09_13.md)
+> for repaired entire-xi/Jensen interfaces and the new `FinitePFBaseline` and
+> `TuranDeficit` modules. Legacy diagnostic Jensen and Hadamard constructions
+> remain conditional; the new coefficient certificates are FLINT balls, not
+> Lean proofs. Earlier roadmap descriptions below must be read with these corrections.
+
+
 **Canonical, current overview of the repository.** This file supersedes the
 ~19 historical status/summary files now archived under [`docs/archive/`](docs/archive/).
 For narrative and dated progress logs, see that archive and [`research/`](research/).

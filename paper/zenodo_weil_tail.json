@@ -1,0 +1,37 @@
+{
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-06",
+  "version": "1.0.0",
+  "title": "Infinite Fourier Tails and High-Mode Coercivity for the Semilocal Weil Quadratic Form",
+  "creators": [
+    {
+      "name": "Mondal, Biswajit"
+    }
+  ],
+  "description": "<p>Connes, Consani and Moscovici encode the semilocal Weil quadratic form on [C<sup>-1/2</sup>, C<sup>1/2</sup>] by an infinite real symmetric matrix A(C) in a Fourier basis. This preprint proves three rank-independent estimates for how that infinite matrix acts on a truncated ground state: an exact signed-moment identity for the omitted components of A c with a remainder uniform over infinitely many indices; the operator bound ||A<sub>off</sub>|| &le; 2&pi; sup<sub>i</sub> |b<sub>i</sub>| via the discrete Hilbert transform; and explicit logarithmic coercivity of high-mode compressions.</p><p>Combined with validated interval enclosures of the rank-eight even ground vector u(C), the result holds uniformly over the cell 17 &le; C &le; 19: the even components of A(C) u(C) at every Fourier index j &gt; 64 have joint &ell;<sup>2</sup> norm below 9.491 &times; 10<sup>-12</sup>, and the even and full compressions of A(C) to sufficiently high modes exceed the identity. Infinite-index statements are proved analytically; finite-dimensional quantities are certified by outward-rounded ball arithmetic (Arb via python-flint) and replayed by an independent mpmath implementation.</p><p>The estimates do not bound the intermediate modes, give no uniform budget over all ranks and supports, and do not identify any limit with Riemann's &Xi; function. <strong>The Riemann Hypothesis is not claimed.</strong> The attached archive contains the certificate generators, the regression suite and the replay scripts.</p>",
+  "keywords": [
+    "Weil quadratic form",
+    "explicit formula",
+    "Riemann zeta function",
+    "spectral triples",
+    "validated numerics",
+    "ball arithmetic",
+    "discrete Hilbert transform",
+    "computer-assisted proof"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2511.22755",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/sciencenerd-des/reinmann",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ]
+}

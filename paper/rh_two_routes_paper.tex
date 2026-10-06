@@ -51,11 +51,8 @@
 \title{\bfseries\Large Two Machine-Checked Conditional Routes to the Riemann Hypothesis\\[0.35em]
 \large A Formalized Fekete Criterion, Effective Positivity Targets, and an Exact-Ready Receptor Architecture}
 
-\author{Biswajit Mondal\thanks{Corresponding author:
-\texttt{b.mondal0000@gmail.com}.  The Lean formalization was developed with
-the assistance of an AI pair programmer (Claude, Anthropic); all theorems are
-verified by the Lean kernel independently of how they were produced.}}
-\date{\small July 17, 2026\\[0.25em]
+\author{Biswajit Mondal}
+\date{\small Version 0.2.0, October 6, 2026 \quad doi:10.5281/zenodo.23187646\\[0.25em]
 \textit{Research preprint; unconditional RH is not claimed}}
 
 \begin{document}
@@ -63,8 +60,8 @@ verified by the Lean kernel independently of how they were produced.}}
 
 \begin{abstract}
 \noindent\textbf{We do not prove the Riemann Hypothesis.}  We present a
-Lean~4 / Mathlib formalization (71 modules, $\approx 28{,}000$ lines,
-87 audited theorems depending only on Lean's three foundational axioms, with
+Lean~4 / Mathlib formalization (76 modules, $\approx 29{,}000$ lines,
+122 audited theorems depending only on Lean's three foundational axioms, with
 no \texttt{sorry} and no project axioms) that reduces RH to explicitly named
 open positivity inputs along two independent, \emph{exact-ready} routes, and
 that isolates---by proof and by machine-checked counterexample---precisely
@@ -163,7 +160,7 @@ new:
 No theorem in this paper or in the underlying repository proves RH,
 and none assumes it: every RH-equivalent or RH-adjacent statement is carried
 as a named \emph{hypothesis} (a Lean \Lean{Prop}), never as an axiom.  An
-automated audit (\S\ref{sec:method}) verifies that all 87 audited theorems
+automated audit (\S\ref{sec:method}) verifies that all 122 audited theorems
 depend on nothing beyond Lean's three foundational axioms
 (\Lean{propext}, \Lean{Classical.choice}, \Lean{Quot.sound}).  In
 particular, we prove (Corollary~\ref{cor:rhstrength}) that our main
@@ -231,7 +228,7 @@ scanner rejects \Lean{sorry}, \Lean{admit}, and project-level \Lean{axiom}
 declarations in the entire library.
 
 \paragraph{Semantic axiom audit.}  A dedicated module runs
-\Lean{\#print axioms} on the 87 headline theorems; a CI script fails unless
+\Lean{\#print axioms} on the 122 headline theorems; a CI script fails unless
 every one reports exactly
 \[
 [\Lean{propext},\ \Lean{Classical.choice},\ \Lean{Quot.sound}].
@@ -242,10 +239,19 @@ RH-equivalent statement anywhere in a proof would surface immediately.
 \paragraph{Falsification before formalization.}  Numerical claims are
 treated as falsification evidence, never proof.  Interval-certified scans
 (exact rational interval arithmetic over decimal enclosures of the first
-$120$ coefficients) test each named positivity target before formal work
+$121$ coefficients, indexed $0$ through $120$) test each named positivity target before formal work
 begins; certified negative signs would kill a route, and one such
 sequence-level route-kill is itself formalized
 (\S\ref{sec:falsification}).
+
+\paragraph{Differential numerical replication.}  The bounded minor scan is
+implemented independently in Python, JavaScript, and TypeScript.  Python and
+TypeScript use exact interval arithmetic under the stated half-ULP
+decimal model; JavaScript uses exact midpoint \texttt{BigInt} arithmetic and a
+fraction-free Bareiss determinant.  Positive, zero, and negative controls,
+the coefficient-file SHA-256 digest, and full sign-stream hashes are compared
+automatically.  Agreement strengthens reproducibility of the finite scan but
+does not certify the upstream coefficient extraction or any infinite claim.
 
 \section{Synthesis of the formalization program and the literature}
 \label{sec:synthesis}
@@ -326,14 +332,28 @@ an exact formal receptor, not a claim that Jensen asymptotics are by
 themselves a plausible proof strategy.  The recent finite-strip analysis of
 Planat further sharpens the distinction between eventual large-shift
 hyperbolicity and the finite set of low shifts that still carries the RH
-content \cite{Planat2026}.
+content \cite{Planat2026}.  A subsequent experimental study reports
+parity-dependent onset behavior, finite Hankel positivity, and Pad\'e evidence
+for a conjectural Stieltjes bridge \cite{PlanatStieltjes2026}.  We use these
+observations only to motivate falsification targets; no conjectural bridge is
+consumed by Route~B.
 
 \subsection{The PF literature and the discrete/continuous separation}
 
 The ASW--Edrei characterization and the Fekete criterion supply the classical
-total-positivity context \cite{ASW1952,Edrei1953,GK,Pinkus}.  Our contribution
-is the Lean proof of the Toeplitz-specific algebraic closure, not a new
-classification of PF sequences.  The certified PF$_5$ failure for the
+total-positivity context \cite{ASW1952,Edrei1953,GK,Pinkus}.  Katkova applies
+the multiply-positive/PF hierarchy directly to the Riemann Xi generating
+function and records the relevant consecutive-minor criterion
+\cite{Katkova2007}.  Our contribution is the Lean proof of the
+Toeplitz-specific algebraic closure and its exact receptors, not a new
+classification of PF sequences or discovery of the classical criterion.
+
+A July 2026 preprint gives an explicit uniform tail wedge for the discrete Xi
+coefficients: in its normalization, every consecutive minor of order $r\ge2$
+is positive once the shift is at least $10^{18}r^3$
+\cite{CubicWedge2026}.  The result is recent and has not been independently
+rechecked or transported into Lean here, but it directly informs the revised
+Route~A frontier below.  By contrast, the certified PF$_5$ failure for the
 continuous de Bruijn--Newman kernel \cite{PF5counterexample} is retained as a
 route-kill: it prevents silently replacing the discrete factorial-weighted Xi
 moments by a continuous PF$_\infty$ kernel.  Any future proof must establish a
@@ -510,9 +530,13 @@ Corollary~\ref{cor:rhstrength}.  The order-$3$ instance connects to an
 existing prefix/ratio-tail decomposition of the first open rung
 (compatibility lemma \Lean{order3TailGap\_of\_kernelTailStrict}); the
 current interval scans certify the contiguous order-$3$ prefix through
-offset $116$ with smallest normalized value $\approx 4.2\times10^{-6}$, and
-all $8{,}367$ order-$3$ and $72{,}033$ order-$4$ certified arbitrary-row
-initial-column selections in the scanned box are positive.  These are
+offset $116$ with smallest normalized value $\approx 4.2\times10^{-6}$.  In
+the corrected row box $0\le r_i\le48$, all $18{,}424$ order-$3$ and
+$211{,}876$ order-$4$ arbitrary-row initial-column selections are certified
+positive, with no negative, zero, or inconclusive intervals.  The complete
+row-$48$ scan is now reproduced independently by Python and TypeScript exact
+interval implementations and a JavaScript midpoint implementation; the
+row-$30$ baseline remains available for regression comparison.  These are
 falsification evidence, not proof.
 
 \section{Route B: the Jensen/Schur--Szeg\H{o} receptor}\label{sec:routeB}
@@ -682,23 +706,39 @@ Thus an all-order asymptotic theorem need not mention Toeplitz minors at all;
 it only has to imply the named proposition
 \Lean{KernelEffectiveCertificates}.
 
-\begin{target}[Uniform all-order remainder scheme]
-Construct explicit functions $N(k)$ and $\varepsilon_k(m)$ such that the
-kernel determinant admits a certified decomposition
+The order-three compiler above is the first nontrivial instance.  A recent
+preprint now supplies a much stronger coefficient-side statement
+\cite{CubicWedge2026}: for every order $k\ge2$,
 \begin{equation}
- D_k^{\rm ker}(m)=L_k(m)+R_k(m),\qquad
- |R_k(m)|\le\varepsilon_k(m),\qquad
- L_k(m)>\varepsilon_k(m)\quad(m\ge N(k)).
- \label{eq:all-order-remainder}
+  D_k(m)>0\qquad\text{whenever}\qquad m\ge10^{18}k^3.
+  \label{eq:cubic-tail-wedge}
 \end{equation}
-Then \Lean{KernelEffectiveCertificates} follows by combining
-\eqref{eq:all-order-remainder} with a finite interval prefix.
+Its matrix is the transpose of our consecutive block.  In the preprint's
+normalization $G(z)=\tfrac18\xi(\tfrac12+\tfrac12\sqrt z)$, its positive
+coefficient is $a_n=\mu_n/(8\cdot4^n)$; hence an order-$k$ minor at shift $m$
+is multiplied by the positive factor $8^{-k}4^{-km}$, so the determinant
+signs agree.  We have not independently rerun
+the preprint's Arb ancillary certificates or formalized this transport;
+\eqref{eq:cubic-tail-wedge} is therefore cited as an external preprint theorem,
+not counted among the 122 audited Lean theorems.
+
+If \eqref{eq:cubic-tail-wedge} is accepted, the former uniform-tail target has
+an explicit solution $N(k)=10^{18}k^3$.  The remaining Route~A obligation is
+the complementary wedge.
+
+\begin{target}[Complementary finite-prefix wedge]
+Certify $D_k(m)>0$ for every $k\ge2$ and every
+$0\le m<10^{18}k^3$, in the exact coefficient normalization consumed by the
+Lean receptor.  Together with \eqref{eq:cubic-tail-wedge}, these certificates
+instantiate the strict contiguous ladder.
 \end{target}
 
-The order-three compiler above is the first nontrivial instance.  The
-mathematical challenge at large $k$ is uniformity: determinant expansion
-creates many cancellation terms, so a bound that is effective for each fixed
-$k$ may still be unusable when the certificate is assembled over all orders.
+The word ``finite'' is per order only: the union over all $k$ remains infinite
+and RH-strength.  For order three alone the external cutoff is
+$2.7\times10^{19}$, so the current prefix through offset $116$ leaves an
+enormous interval.  The preprint changes the shape of the frontier from an
+unknown tail to a certified-tail/uncertified-wedge split; it does not make the
+remaining verification computationally routine.
 
 \subsection{A root-separation theorem for the Jensen route}
 
@@ -777,12 +817,13 @@ explicit height.  Proving that implication would produce
 
 The four classical bridges (ASW/Edrei, Laguerre--P\'olya closure,
 P\'olya--Jensen, and the converse) are formalization work, albeit substantial
-work involving entire functions and Hadamard products.  The new mathematics
-is concentrated in either an effective positive remainder such as
-\eqref{eq:positive-three-tail}, a uniform all-order scheme such as
-\eqref{eq:all-order-remainder}, or an effective root-separation certificate
-such as \eqref{eq:root-separation-condition}.  None of these is currently
-proved in the repository or in the cited sources in the exact Lean form.
+work involving entire functions and Hadamard products.  Subject to independent
+verification, the cubic-wedge preprint supplies the all-order tail shape
+formerly missing from Route~A; what remains is its normalization-exact Lean
+transport and the complementary finite-prefix wedge.  The Jensen route still
+requires an effective root-separation certificate such as
+\eqref{eq:root-separation-condition}.  None of these remaining statements is
+currently proved in the repository in the exact Lean form.
 
 \section{Discussion and conclusion}\label{sec:conclusion}
 
@@ -804,7 +845,7 @@ changed is the shape of the problem: the open mathematics is now a short
 list of named statements, each with a kernel-checked theorem waiting to
 consume it.  All results are reproducible from the repository by running
 \Lean{lake build}, the axiom-audit script, and the verification harness;
-the audit reports 87 theorems depending only on Lean's foundational axioms.
+the audit reports 122 theorems depending only on Lean's foundational axioms.
 
 \appendix
 \section{Reproducibility and theorem-status ledger}
@@ -819,24 +860,39 @@ mathematical certification.
 The Lean baseline used for this revision is Lean~4.30.0
 (``\texttt{leanprover/lean4:v4.30.0}'') with Mathlib revision
 \Lean{c5ea00351c28e24afc9f0f84379aa41082b1188f}.  The repository baseline
-commit at the time of this audit is
-\Lean{a51533a69956fb5939d16e97ccad27dfdd4bd5c9}; a release archive must
-record the final commit that includes this manuscript and the scan reports.
+commit preceding this revision is
+\Lean{c4729cd}.  The release archive deposited with this version
+(doi:10.5281/zenodo.23187646; all versions: doi:10.5281/zenodo.21416394)
+records the final commit that includes this manuscript and the scan reports.
 The following commands were run successfully:
 \begin{verbatim}
 lake build Reinmann
 bash scripts/verify_axiom_clean.sh
-bash scripts/safe-verify.sh
 bash scripts/run_scan_48.sh
+python3 -m pytest -q \
+  experiments/cross_language_toeplitz/test_uncertainty.py
+bash scripts/run_cross_language_toeplitz.sh 30
+bash scripts/run_cross_language_toeplitz.sh 48 \\
+  research/cross_language_toeplitz/row48
 \end{verbatim}
-The first command completed 3522 jobs.  The axiom audit reported 87 headline
+The first command completed 3527 jobs.  The axiom audit reported 122 headline
 theorems depending only on
 \texttt{[propext, Classical.choice, Quot.sound]}; the source scan found no
-\texttt{sorry}, \texttt{admit}, or project-declared axioms, and the safe
-verification scan covered 72 Lean files.  The row-48 numerical scan reported
-zero certified negative minors for the tested order-three and order-four
-initial-column boxes; its coefficient cache remains provenance for a numerical
-diagnostic, not a formal proof of the Xi coefficients.
+\texttt{sorry}, \texttt{admit}, or project-declared axioms.  The shortcut and
+full-build phases of \texttt{safe-verify.sh} also passed over 72 Lean files;
+its redundant per-file recompilation phase was sampled without failures but
+was not rerun to completion for this paper/script-only revision and remains a
+final submission gate.  The row-48 numerical scans reported
+all $18{,}424$ order-three and $211{,}876$ order-four initial-column minors as
+certified positive, with zero negatives or inconclusive intervals.  The
+cross-language row-48 run completed in 453.26 seconds and produced matching
+sign-stream hashes across the two interval implementations and the
+JavaScript midpoint check.  This run
+uses an exponent-aware half-ULP parser; an earlier parser ignored the exponent
+when assigning uncertainty to scientific-notation tokens and therefore
+produced invalidly wide intervals.  Regression tests cover that defect.  The
+coefficient cache remains provenance for a numerical diagnostic, not a formal
+proof of the Xi coefficients.
 
 The status ledger is:
 \begin{itemize}
@@ -846,6 +902,10 @@ The status ledger is:
     the two conditional assembly theorems.
   \item \emph{External classical input:} the P\'olya kernel representation,
     ASW/Edrei, Laguerre--P\'olya closure, and P\'olya--Jensen bridge.
+  \item \emph{External recent preprint theorem:} the cubic coefficient-tail
+    wedge \eqref{eq:cubic-tail-wedge}.  Its normalization transport and
+    computer-assisted certificates have not been checked by Lean or
+    independently rerun in this repository.
   \item \emph{Open analytic targets:}
     \Lean{KernelEffectiveCertificates},
     \Lean{HermitePoulainSchurSzegoTheorem},
@@ -853,11 +913,13 @@ The status ledger is:
     proposition.  None is imported as an axiom.
 \end{itemize}
 
-\subsection*{Acknowledgments}
-The formalization was developed interactively with an AI pair programmer
-(Claude, Anthropic).  Every stated theorem is checked by the Lean~4 kernel;
-the mathematical responsibility for conventions and interpretations rests
-with the author.
+\subsection*{Software and use of AI tools}
+The formalization, the scan implementations and the audit scripts were
+developed interactively with an AI pair programmer (Claude, Anthropic).
+Every stated theorem is checked by the Lean~4 kernel independently of how it
+was produced, and every computational claim is reproducible from the commands
+in Appendix~\ref{app:reproducibility}.  Mathematical responsibility for
+conventions and interpretations rests with the author.
 
 \begin{thebibliography}{99}\small
 
@@ -894,6 +956,11 @@ Cambridge University Press, 2010.
 \emph{Some properties of totally positive matrices},
 Linear Algebra Appl.\ \textbf{15} (1976), 1--25.
 
+\bibitem{Katkova2007} O.~M.~Katkova,
+\emph{Multiple positivity and the Riemann zeta-function},
+Comput. Methods Funct. Theory \textbf{7} (2007), 13--31,
+doi:10.1007/BF03321628.
+
 \bibitem{CNV1986} G.~Csordas, T.~S.~Norfolk, R.~S.~Varga,
 \emph{The Riemann hypothesis and the Tur\'an inequalities},
 Trans.\ Amer.\ Math.\ Soc.\ \textbf{296} (1986), 521--541.
@@ -921,6 +988,11 @@ Hypothesis}, Adv.\ Math.\ \textbf{411} (2022), 108781.
 obstruction to the Riemann Hypothesis}, Mathematics \textbf{14} (2026),
 1884.
 
+\bibitem{PlanatStieltjes2026} M.~Planat,
+\emph{Parity bifurcation, $P_{\rm III}(D_6)$ topology, and a Stieltjes
+framework to Jensen polynomial hyperbolicity}, Mathematics \textbf{14}
+(2026), 2240.
+
 \bibitem{RodgersTao2020} B.~Rodgers, T.~Tao,
 \emph{The de Bruijn--Newman constant is non-negative},
 Forum Math.\ Pi \textbf{8} (2020), e6.
@@ -934,6 +1006,11 @@ W.~Micha\l{}owski,
 \emph{On the P\'olya Frequency Order of the de Bruijn--Newman Kernel.
 Certified Failure at Order Five and the Toeplitz Threshold Phenomenon},
 preprint, arXiv:2602.20313 (2026).
+
+\bibitem{CubicWedge2026}
+W.~Micha\l{}owski,
+\emph{An explicit uniform cubic wedge for consecutive Toeplitz minors of the
+Riemann xi coefficients}, preprint, arXiv:2607.16795 (2026).
 
 \bibitem{Szego1922} G.~Szeg\H{o},
 \emph{Bemerkungen zu einem Satz von J.~H.~Grace \"uber die Wurzeln

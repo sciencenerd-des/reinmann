@@ -1,112 +1,124 @@
 #!/usr/bin/env python3
-import os
-import sys
+"""Prepare Zenodo depositions as drafts.  Publishing is left to the web UI.
+
+Two-step workflow, so the reserved DOI can be printed in the PDF:
+
+  # 1. create a draft (new record, or a new version of an existing one) and
+  #    reserve its DOI
+  python3 scripts/submit_to_zenodo.py reserve --metadata paper/zenodo_weil_tail.json
+  python3 scripts/submit_to_zenodo.py reserve --metadata zenodo.json --new-version-of 21416395
+
+  # 2. after the DOI is in the manuscript, upload the files to that draft
+  python3 scripts/submit_to_zenodo.py upload --deposition ID --file a.pdf --file b.tar.gz
+
+The token is read from ZENODO_TOKEN or from ~/.config/zenodo/token (chmod 600).
+It is never accepted on the command line, where it would land in shell history.
+"""
 import argparse
+import json
+import os
+import stat
+import sys
+
 import requests
 
-def main():
-    parser = argparse.ArgumentParser(description="Submit paper to Zenodo or Zenodo Sandbox")
-    parser.add_argument("--token", help="Zenodo personal access token (or set ZENODO_TOKEN env var)")
-    parser.add_argument("--production", action="store_true", help="Target production (zenodo.org) instead of Sandbox")
-    parser.add_argument("--publish", action="store_true", help="Actually publish the deposition (default: draft only)")
-    parser.add_argument("--file", default="paper/rh_reduction_paper.pdf", help="Path to the PDF file to upload")
-    
-    args = parser.parse_args()
-    
-    token = args.token or os.environ.get("ZENODO_TOKEN")
-    if not token:
-        print("Error: Zenodo personal access token is required. Use --token or set ZENODO_TOKEN environment variable.", file=sys.stderr)
-        sys.exit(1)
-        
-    base_url = "https://zenodo.org" if args.production else "https://sandbox.zenodo.org"
-    print(f"Targeting: {base_url}")
-    
-    # Metadata definition
-    metadata = {
-        "metadata": {
-            "title": "A Machine-Checked Reduction of the Riemann Hypothesis to Pólya--Frequency Positivity of the xi Taylor Coefficients",
-            "upload_type": "publication",
-            "publication_type": "preprint",
-            "description": (
-                "We present a formally verified study, in Lean 4 / Mathlib, of the "
-                "Laguerre--Pólya / total-positivity approach to the Riemann Hypothesis (RH). "
-                "We do not prove RH. We prove a chain of conditional reductions, each checked by "
-                "the Lean kernel and depending only on the foundational axioms, that convert RH "
-                "into total-positivity statements about an explicit positive kernel and into "
-                "an operator-positivity (pseudo-Hermitian) statement. Our central result is a "
-                "tightness theorem: modulo three classical, machine-uncertified but standard "
-                "inputs (Pólya--Jensen, Aissen--Schoenberg--Whitney/Edrei, and the Laguerre--Pólya "
-                "closure), RH is equivalent to total positivity of the Toeplitz matrix of the "
-                "sign-normalized xi Taylor coefficients."
-            ),
-            "creators": [
-                {
-                    "name": "Mondal, Biswajit",
-                    "affiliation": "Independent Researcher"
-                }
-            ],
-            "access_right": "open",
-            "license": "cc-by-4.0"
-        }
-    }
-    
-    headers = {"Content-Type": "application/json"}
-    params = {"access_token": token}
-    
-    # 1. Create a new deposition
-    print("Creating deposition draft...")
-    dep_url = f"{base_url}/api/deposit/depositions"
-    r = requests.post(dep_url, params=params, json={}, headers=headers)
-    if r.status_code != 201:
-        print(f"Failed to create deposition: {r.status_code} - {r.text}", file=sys.stderr)
-        sys.exit(1)
-        
-    dep_data = r.json()
-    dep_id = dep_data["id"]
-    bucket_url = dep_data["links"]["bucket"]
-    html_url = dep_data["links"].get("html", f"{base_url}/deposit/{dep_id}")
-    print(f"Deposition draft created successfully. ID: {dep_id}")
-    print(f"Draft Web URL: {html_url}")
-    
-    # 2. Update metadata
-    print("Updating deposition metadata...")
-    update_url = f"{dep_url}/{dep_id}"
-    r = requests.put(update_url, params=params, json=metadata, headers=headers)
-    if r.status_code != 200:
-        print(f"Failed to update metadata: {r.status_code} - {r.text}", file=sys.stderr)
-        sys.exit(1)
-    print("Metadata updated successfully.")
-    
-    # 3. Upload file
-    file_path = args.file
-    if not os.path.exists(file_path):
-        print(f"Error: File '{file_path}' not found.", file=sys.stderr)
-        sys.exit(1)
-        
-    filename = os.path.basename(file_path)
-    upload_url = f"{bucket_url}/{filename}"
-    print(f"Uploading file '{filename}' to {upload_url}...")
-    
-    with open(file_path, "rb") as f:
-        r = requests.put(upload_url, data=f, params=params)
-        
-    if r.status_code not in (200, 201):
-        print(f"Failed to upload file: {r.status_code} - {r.text}", file=sys.stderr)
-        sys.exit(1)
-    print("File uploaded successfully.")
-    
-    # 4. Optional Publish
-    if args.publish:
-        print("Publishing deposition...")
-        publish_url = f"{dep_url}/{dep_id}/actions/publish"
-        r = requests.post(publish_url, params=params)
-        if r.status_code != 202:
-            print(f"Failed to publish: {r.status_code} - {r.text}", file=sys.stderr)
-            sys.exit(1)
-        print("Deposition published successfully!")
+TOKEN_FILE = os.path.expanduser("~/.config/zenodo/token")
+
+
+def load_token():
+    token = os.environ.get("ZENODO_TOKEN")
+    if token:
+        return token.strip()
+    if os.path.exists(TOKEN_FILE):
+        mode = os.stat(TOKEN_FILE).st_mode
+        if mode & (stat.S_IRWXG | stat.S_IRWXO):
+            sys.exit(f"Error: {TOKEN_FILE} is readable by others; run chmod 600 on it.")
+        with open(TOKEN_FILE) as f:
+            return f.read().strip()
+    sys.exit(f"Error: set ZENODO_TOKEN or write the token to {TOKEN_FILE} (chmod 600).")
+
+
+def check(r, ok, what):
+    if r.status_code not in ok:
+        sys.exit(f"Failed to {what}: {r.status_code} - {r.text}")
+    return r.json() if r.content else {}
+
+
+def reserve(args, base, params):
+    with open(args.metadata) as f:
+        metadata = json.load(f)
+    metadata["prereserve_doi"] = True
+    dep_url = f"{base}/api/deposit/depositions"
+
+    if args.new_version_of:
+        print(f"Opening a new version of record {args.new_version_of}...")
+        r = requests.post(f"{dep_url}/{args.new_version_of}/actions/newversion", params=params)
+        draft_url = check(r, (201,), "create new version")["links"]["latest_draft"]
+        dep = check(requests.get(draft_url, params=params), (200,), "read new-version draft")
+        # A new version inherits the previous files; the release replaces them all.
+        for f in dep.get("files", []):
+            print(f"Removing inherited file {f['filename']}...")
+            check(requests.delete(f"{draft_url}/files/{f['id']}", params=params),
+                  (204,), "remove inherited file")
     else:
-        print("\nSubmission prepared successfully as a DRAFT.")
-        print(f"Please review and publish it manually here: {html_url}")
+        print("Creating deposition draft...")
+        dep = check(requests.post(dep_url, params=params, json={}), (201,), "create deposition")
+
+    dep_id = dep["id"]
+    r = requests.put(f"{dep_url}/{dep_id}", params=params, json={"metadata": metadata})
+    dep = check(r, (200,), "update metadata")
+    doi = dep["metadata"]["prereserve_doi"]["doi"]
+    print(f"Draft ID:     {dep_id}")
+    print(f"Reserved DOI: {doi}")
+    print(f"Draft URL:    {base}/deposit/{dep_id}")
+
+
+def upload(args, base, params):
+    dep_url = f"{base}/api/deposit/depositions/{args.deposition}"
+    dep = check(requests.get(dep_url, params=params), (200,), "read deposition")
+    if dep.get("submitted"):
+        sys.exit("Error: this deposition is already published; files cannot change.")
+    existing = {f["filename"]: f["id"] for f in dep.get("files", [])}
+    bucket_url = dep["links"]["bucket"]
+
+    for path in args.file:
+        if not os.path.exists(path):
+            sys.exit(f"Error: File '{path}' not found.")
+        name = os.path.basename(path)
+        if name in existing:
+            print(f"Replacing existing '{name}'...")
+            check(requests.delete(f"{dep_url}/files/{existing[name]}", params=params),
+                  (204,), "remove old file")
+        print(f"Uploading '{name}'...")
+        with open(path, "rb") as f:
+            r = requests.put(f"{bucket_url}/{name}", data=f, params=params)
+        meta = check(r, (200, 201), f"upload {name}")
+        print(f"  checksum {meta.get('checksum')}")
+
+    print("\nFiles uploaded. The deposition is still a DRAFT.")
+    print(f"Review and publish it here: {base}/deposit/{args.deposition}")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Prepare Zenodo deposition drafts")
+    parser.add_argument("--production", action="store_true",
+                        help="Target production (zenodo.org) instead of Sandbox")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("reserve", help="create a draft and reserve its DOI")
+    p.add_argument("--metadata", required=True, help="JSON file with Zenodo deposit metadata")
+    p.add_argument("--new-version-of", help="record ID to open a new version of")
+
+    p = sub.add_parser("upload", help="upload files to an existing draft")
+    p.add_argument("--deposition", required=True, help="draft ID printed by 'reserve'")
+    p.add_argument("--file", action="append", required=True, help="file to upload (repeatable)")
+
+    args = parser.parse_args()
+    base = "https://zenodo.org" if args.production else "https://sandbox.zenodo.org"
+    print(f"Targeting: {base}")
+    params = {"access_token": load_token()}
+    (reserve if args.cmd == "reserve" else upload)(args, base, params)
+
 
 if __name__ == "__main__":
     main()

@@ -13,6 +13,58 @@ lemmas that Lean can check.
 > Run `bash scripts/verify_axiom_clean.sh` to confirm the 0-`sorry` /
 > 0-custom-axiom claim. Historical progress notes live in [`docs/archive/`](docs/archive/).
 
+## Current research implementation
+
+The [2026-09-13 implementation report](research/RH_IMPLEMENTATION_2026_09_13.md)
+records the repaired classical Jensen interfaces, rigorous Xi coefficient balls,
+finite-PF baseline, theta deficit laboratory, quantitative recurrence candidate,
+and independent prime-defined Weil-form program. It supersedes older claims
+about coefficient certification, quartic discriminant classifiers and universal
+Hadamard cancellation. Historical manuscript and figures have not been regenerated.
+
+The prime-defined track's [exact prolate residual-and-gap audit](research/prime_spectral/PROLATE_RESIDUAL_GAP_AUDIT_2026_09_26.md)
+tests the canonical candidate in the certified Weil Fourier space. Its finite
+Rayleigh quotients fail the strip theorem's clearance gate. The
+[smooth-support derivative audit](research/prime_spectral/SMOOTH_SUPPORT_DERIVATIVE_2026_10_05.md)
+gives finite, certified one-sided matrix and ground-profile derivatives,
+including the prime-threshold jump; an all-support profile bound remains open.
+The [closed Weil Taylor audit](research/prime_spectral/CLOSED_WEIL_TAYLOR_CELL_2026_10_05.md)
+now encloses the full rank-8 even matrix and its derivative throughout the
+17–19 support cell, with analytic remainder bounds and both boundary checks.
+The [uniform even eigenfamily audit](research/prime_spectral/WEIL_EVEN_EIGENFAMILY_CELL_2026_10_05.md)
+validates positive lowest even eigenvalues, spectral separation and an
+origin-normalized candidate-profile error below `1.285e-9` throughout that
+cell. The [full-cell ground and spatial audit](research/prime_spectral/WEIL_FULL_CELL_GATES_2026_10_05.md)
+now closes the odd-parity and positive-kernel gates throughout that same
+cell with degree-64 enclosures. An exact displacement argument also makes
+nonzero spatial boundary follow from strict parity separation at any finite
+rank. All-support/all-rank control and Xi identification remain open.
+The [coupled density budget](research/prime_spectral/WEIL_STRIP_CELL_BUDGET_2026_10_05.md)
+bounds exact profile increments across any two supports in that cell,
+including spatial endpoint flux and certified transfer errors: below
+`0.085421` on the height-`2/5` strip and `0.203537` on the height-`1` strip.
+Infinite-path summability remains open.
+The [infinite Fourier-tail audit](research/prime_spectral/WEIL_INFINITE_RANK_TAIL_2026_10_06.md)
+now bounds all omitted even forcing modes `j>64` by `9.491e-12` in
+`l2`, uniformly across that cell, using shared signed moments and an
+effective geometric remainder. A discrete Hilbert commutator also gives
+rank-independent operator bounds and explicit high-mode coercivity.
+The intermediate-mode inverse response and all-rank profile budget remain open.
+The [signed spectral-deflation audit](research/prime_spectral/DEFLATED_RANK_RESPONSE_2026_10_06.md)
+reduces finite rank-transfer bounds by extracting two constrained low modes
+before bounding complementary energy. High-mode coercivity also bounds the
+number of potentially dangerous modes uniformly in rank on the 17–19 cell;
+their inverse projections and cumulative budget remain uncontrolled.
+The [residual-centered prolate audit](research/prime_spectral/COUPLED_PROLATE_RESIDUAL_2026_10_06.md)
+checks the normalization and exact Fourier projection and sharpens Rayleigh
+error transfer by up to 181,000 times in the tested cases. The canonical
+prolate candidate still fails the finite residual-clearance gate.
+The [common-parameter cumulative audit](research/prime_spectral/COMMON_SHIFT_CUMULATIVE_BUDGET_2026_10_06.md)
+derives an absolute compact-profile rank budget conditional on two bounded
+telescoping energies and gives an explicit changing-ground-parameter bound.
+The finite joint energy bound loses rank alignment, the uniform constrained
+gap remains open, and generic boundary dual energy diverges.
+
 ## Commands
 
 Fetch dependencies and cached mathlib artifacts:

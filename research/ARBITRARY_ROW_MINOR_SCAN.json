@@ -13,18 +13,18 @@
       ],
       "max_row": 48,
       "counts": {
-        "certified_positive": 8367,
+        "certified_positive": 18424,
         "certified_negative": 0,
         "exact_zero": 0,
-        "inconclusive": 10057
+        "inconclusive": 0
       },
       "tightest_certified_positive": {
         "rows": [
-          34,
-          35,
-          36
+          46,
+          47,
+          48
         ],
-        "lower_bound": "3.467762177670661E-312"
+        "lower_bound": "1.080011084146537E-443"
       },
       "certified_negative_examples": []
     },
@@ -38,19 +38,19 @@
       ],
       "max_row": 48,
       "counts": {
-        "certified_positive": 72033,
+        "certified_positive": 211876,
         "certified_negative": 0,
         "exact_zero": 0,
-        "inconclusive": 139843
+        "inconclusive": 0
       },
       "tightest_certified_positive": {
         "rows": [
-          32,
-          33,
-          34,
-          35
+          45,
+          46,
+          47,
+          48
         ],
-        "lower_bound": "9.169031201888276E-390"
+        "lower_bound": "9.465570600920423E-579"
       },
       "certified_negative_examples": []
     }

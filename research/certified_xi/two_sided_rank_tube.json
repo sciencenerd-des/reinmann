@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "exact_repeated_root_two_sided_tube_checked",
+  "symbolic_all_degree_identity": {
+    "central_numerator_factorization": true,
+    "neighbor_numerator_factorizations": true,
+    "joint_correction_polynomial_zero": true
+  },
+  "degree": 6,
+  "head": 4,
+  "interior_shifts": [
+    2,
+    4
+  ],
+  "rows": [
+    {
+      "status": "conditional_two_sided_tube_pass",
+      "head_rank": 4,
+      "shift": 2,
+      "conditions": {
+        "ordered_ratios_0": true,
+        "upper_ratio_below_one_0": true,
+        "ordered_slopes_0": true,
+        "ordered_ratios_1": true,
+        "upper_ratio_below_one_1": true,
+        "ordered_slopes_1": true,
+        "ordered_ratios_2": true,
+        "upper_ratio_below_one_2": true,
+        "ordered_slopes_2": true,
+        "lower_correction_polynomial": true,
+        "upper_correction_polynomial": true
+      },
+      "lower_correction_shifted_coefficients": [],
+      "upper_correction_shifted_coefficients": [],
+      "polynomial_scope": "All real r>=head_rank; zero polynomials pass exactly.",
+      "hypotheses": "Actual ratios and rank slopes start in the two-sided tube at every interior shift. Both exterior shift boundaries have positive determinant values and remain in their tubes at every later rank. The normalized recurrence and positive starting determinant rows hold.",
+      "head_conditions": {
+        "lower_curvature": true,
+        "upper_curvature": true,
+        "lower_slope": true,
+        "upper_slope": true
+      }
+    },
+    {
+      "status": "conditional_two_sided_tube_pass",
+      "head_rank": 4,
+      "shift": 3,
+      "conditions": {
+        "ordered_ratios_0": true,
+        "upper_ratio_below_one_0": true,
+        "ordered_slopes_0": true,
+        "ordered_ratios_1": true,
+        "upper_ratio_below_one_1": true,
+        "ordered_slopes_1": true,
+        "ordered_ratios_2": true,
+        "upper_ratio_below_one_2": true,
+        "ordered_slopes_2": true,
+        "lower_correction_polynomial": true,
+        "upper_correction_polynomial": true
+      },
+      "lower_correction_shifted_coefficients": [],
+      "upper_correction_shifted_coefficients": [],
+      "polynomial_scope": "All real r>=head_rank; zero polynomials pass exactly.",
+      "hypotheses": "Actual ratios and rank slopes start in the two-sided tube at every interior shift. Both exterior shift boundaries have positive determinant values and remain in their tubes at every later rank. The normalized recurrence and positive starting determinant rows hold.",
+      "head_conditions": {
+        "lower_curvature": true,
+        "upper_curvature": true,
+        "lower_slope": true,
+        "upper_slope": true
+      }
+    },
+    {
+      "status": "conditional_two_sided_tube_pass",
+      "head_rank": 4,
+      "shift": 4,
+      "conditions": {
+        "ordered_ratios_0": true,
+        "upper_ratio_below_one_0": true,
+        "ordered_slopes_0": true,
+        "ordered_ratios_1": true,
+        "upper_ratio_below_one_1": true,
+        "ordered_slopes_1": true,
+        "ordered_ratios_2": true,
+        "upper_ratio_below_one_2": true,
+        "ordered_slopes_2": true,
+        "lower_correction_polynomial": true,
+        "upper_correction_polynomial": true
+      },
+      "lower_correction_shifted_coefficients": [],
+      "upper_correction_shifted_coefficients": [],
+      "polynomial_scope": "All real r>=head_rank; zero polynomials pass exactly.",
+      "hypotheses": "Actual ratios and rank slopes start in the two-sided tube at every interior shift. Both exterior shift boundaries have positive determinant values and remain in their tubes at every later rank. The normalized recurrence and positive starting determinant rows hold.",
+      "head_conditions": {
+        "lower_curvature": true,
+        "upper_curvature": true,
+        "lower_slope": true,
+        "upper_slope": true
+      }
+    }
+  ],
+  "boundary_control": "At shifts 1 and N-1, t_r(m)=(N-m)/(r+N-m) for every r>=1, by the existing exact determinant proof.",
+  "conclusion": "Both correction polynomials vanish identically. The tube includes the exact logarithmic-growth model without forcing a positive limiting slope.",
+  "remaining": "No Xi two-sided envelopes, uniform all-shift parameter bounds, or exterior boundary tubes are certified here. RH is not proved.",
+  "source_hashes": {
+    "two_sided_rank_tube.py": "ca16d6d98813a226e0b2cc75a497ff8608cdcb3a1e2351253ee6499be3507c32",
+    "repeated_root_rank_control.py": "34166c363b53bff42670542bf2ade28608143221de460c044821f5ad64ab80a0"
+  }
+}

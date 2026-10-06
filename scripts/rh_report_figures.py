@@ -1,10 +1,9 @@
 """
-High-precision figures + certification for the RH reduction report.
+High-precision numerical figures for the RH reduction report.
 
-Pushes the numerical verification of the Polya-frequency / Toeplitz total-positivity
-premise far beyond typical ranges: xi Taylor coefficients b_0..b_M for M=120
+Samples the Polya-frequency / Toeplitz total-positivity premise: xi Taylor coefficients b_0..b_M for M=120
 (b_120 ~ 1e-449), computed by a numerically stable Cauchy-circle extraction and
-CROSS-CERTIFIED at two precisions, then used to test:
+compared at two precisions (not certified), then used to test:
   (1) order-1: mu_n > 0;
   (2) order-2 Turan ratio + log-concavity over the full range;
   (3) Toeplitz / Polya-frequency minors det[mu_{m+i-j}] up to order KMAX;
@@ -70,7 +69,7 @@ if os.path.exists(CACHE):
     lines = open(CACHE).read().strip().splitlines()
     min_cert = float(lines[0].split("=")[1])
     b = [mp.mpf(s) for s in lines[1:]]
-    cert = [min(min_cert + 50, 999.0)] * (M + 1)  # placeholder for plot; min_cert is the certified bound
+    cert = [min_cert] * (M + 1)  # Cached global agreement only; per-coefficient values unavailable.
 else:
     print(f"computing b_0..b_{M} (Cauchy, dps={DPS_HI}) ...")
     t0 = time.time(); b = coeffs_cauchy(M, DPS_HI, R_HI); print("  primary  %.0fs" % (time.time() - t0))
@@ -87,7 +86,7 @@ else:
 mu = [((-1) ** n) * b[n] for n in range(M + 1)]
 
 stats = []
-stats.append(f"coefficients certified to >= {min_cert:.0f} significant digits (n=0..{M})")
+stats.append(f"coefficients cross-precision agreement >= (not certified) {min_cert:.0f} significant digits (n=0..{M})")
 stats.append(f"order-1: mu_n > 0 for all n=0..{M}: {all(mu[n] > 0 for n in range(M+1))}")
 print(stats[0]); print(stats[1])
 
@@ -112,7 +111,7 @@ ax[0].set_title(r"(a) $\xi$ coefficients to $n=%d$  ($|b_{%d}|\approx10^{%d}$)" 
 ax[1].plot(ns, cert, "-", color=GREEN, lw=1.4)
 ax[1].axhline(30, color=GREY, ls=":", lw=1)
 ax[1].set_xlabel("n"); ax[1].set_ylabel("significant digits")
-ax[1].set_title("(b) cross-precision certification of $b_n$")
+ax[1].set_title("(b) cross-precision agreement (not certification) of $b_n$")
 fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig1_coefficients.png")); plt.close(fig)
 print("fig1 done")
 
@@ -162,7 +161,7 @@ ks = list(range(1, KMAX + 1))
 norm = [float(mp.log10(toeplitz_minor(mu, k, k - 1) / mu[k - 1] ** k)) for k in ks]
 ax[1].plot(ks, norm, "o-", color=ACCENT)
 ax[1].set_xlabel("order k"); ax[1].set_ylabel(r"$\log_{10}(\det_k/\mu_m^{\,k})$")
-ax[1].set_title("(b) scale-normalized principal minors ($>0$ at every order)")
+ax[1].set_title("(b) scale-normalized principal minors (sampled orders only)")
 fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig3_toeplitz_minors.png")); plt.close(fig)
 print("fig3 done")
 
@@ -175,29 +174,29 @@ for idx, d in enumerate(range(2, DMAX + 1)):
     nn = list(range(0, M - d + 1))
     maxim = []
     for n in nn:
-        cef = [mp.binomial(d, k) * b[n + k] for k in range(d + 1)]
+        cef = [mp.binomial(d, k) * mp.factorial(n + k) * b[n + k] for k in range(d + 1)]
         roots = mp.polyroots(list(reversed(cef)), maxsteps=400, extraprec=400)
         mi = float(max(abs(r.imag) for r in roots)) + 1e-320
         maxim.append(mi); worst = max(worst, mi)
     ax[0].semilogy(nn, maxim, "-", color=cmap[idx], lw=1.3, label=f"d={d}")
 ax[0].set_xlabel("shift n"); ax[0].set_ylabel(r"$\max|\mathrm{Im\ root}|$")
-ax[0].set_title(r"(a) Jensen hyperbolic: $d\leq%d$, $n\leq%d$" % (DMAX, M - 2))
+ax[0].set_title(r"(a) Numerical Jensen roots: $d\leq%d$, $n\leq%d$" % (DMAX, M - 2))
 ax[0].legend(frameon=False, ncol=2, fontsize=9)
-stats.append(f"Jensen polynomials hyperbolic for d=2..{DMAX}, n=0..{M-DMAX}: worst |Im root| = {worst:.2e}")
+stats.append(f"Uncertified Jensen root diagnostic for d=2..{DMAX}, n=0..{M-DMAX}: worst |Im root| = {worst:.2e}")
 for idx, d in enumerate(range(2, DMAX + 1)):
-    cef = [mp.binomial(d, k) * b[0 + k] for k in range(d + 1)]
+    cef = [mp.binomial(d, k) * mp.factorial(k) * b[k] for k in range(d + 1)]
     roots = mp.polyroots(list(reversed(cef)), maxsteps=400, extraprec=400)
     ax[1].scatter([float(r.real) for r in roots], [float(r.imag) for r in roots],
                   s=40, color=cmap[idx], label=f"d={d}", zorder=3)
 ax[1].axhline(0, color=GREY, lw=1)
 ax[1].set_xlabel("Re(root)"); ax[1].set_ylabel("Im(root)")
-ax[1].set_title("(b) sample Jensen roots on the real axis")
+ax[1].set_title("(b) numerical sample Jensen roots")
 ax[1].legend(frameon=False, fontsize=8, ncol=2)
 fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig4_jensen_hyperbolic.png")); plt.close(fig)
 print("fig4 done")
 
 with open(os.path.join(OUT, "STATS.txt"), "w") as fh:
-    fh.write("RH reduction: high-precision certification summary\n")
+    fh.write("RH reduction: uncertified high-precision diagnostic summary\n")
     fh.write("=" * 52 + "\n")
     for s in stats:
         fh.write("- " + s + "\n")

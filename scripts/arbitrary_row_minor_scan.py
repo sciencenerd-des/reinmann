@@ -21,6 +21,7 @@ import json
 from dataclasses import dataclass
 from decimal import Decimal, localcontext
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 
 
@@ -62,9 +63,19 @@ class Interval:
         return Interval(min(products), max(products))
 
 
-def decimal_places(token: str) -> int:
-    mantissa = token.lower().split("e", 1)[0]
-    return len(mantissa.partition(".")[2])
+def last_place_exponent(token: str) -> int:
+    """Return the base-10 exponent of the last displayed mantissa digit."""
+    mantissa, separator, exponent = token.lower().partition("e")
+    fractional_digits = len(mantissa.partition(".")[2])
+    scientific_exponent = int(exponent) if separator else 0
+    return scientific_exponent - fractional_digits
+
+
+def half_ulp(token: str) -> Fraction:
+    exponent = last_place_exponent(token)
+    if exponent >= 0:
+        return Fraction(10**exponent, 2)
+    return Fraction(1, 2 * 10 ** (-exponent))
 
 
 def load_coefficients(path: Path) -> tuple[str, list[Interval]]:
@@ -73,8 +84,7 @@ def load_coefficients(path: Path) -> tuple[str, list[Interval]]:
     coefficients: list[Interval] = []
     for token in lines[1:]:
         value = Fraction(token)
-        places = decimal_places(token)
-        radius = Fraction(1, 2 * 10**places)
+        radius = half_ulp(token)
         coefficients.append(Interval(value - radius, value + radius))
     return cert_metadata, coefficients
 
@@ -90,19 +100,27 @@ def entry(coefficients: list[Interval], row: int, col: int) -> Interval:
     return signed_moment(coefficients, row - col)
 
 
-def determinant(coefficients: list[Interval], rows: tuple[int, ...]) -> Interval:
-    size = len(rows)
-    result = Interval.point(Fraction(0))
+@lru_cache(maxsize=None)
+def signed_permutations(size: int) -> tuple[tuple[tuple[int, ...], int], ...]:
+    result: list[tuple[tuple[int, ...], int]] = []
     for permutation in itertools.permutations(range(size)):
-        term = Interval.point(Fraction(1))
         inversions = sum(
             permutation[i] > permutation[j]
             for i in range(size)
             for j in range(i + 1, size)
         )
+        result.append((permutation, -1 if inversions % 2 else 1))
+    return tuple(result)
+
+
+def determinant(coefficients: list[Interval], rows: tuple[int, ...]) -> Interval:
+    size = len(rows)
+    result = Interval.point(Fraction(0))
+    for permutation, sign in signed_permutations(size):
+        term = Interval.point(Fraction(1))
         for i, column in enumerate(permutation):
             term = term * entry(coefficients, rows[i], column)
-        result = result + (term if inversions % 2 == 0 else -term)
+        result = result + (term if sign > 0 else -term)
     return result
 
 

@@ -14,8 +14,8 @@ the Cauchy extraction or of the Xi function itself.
 
 | order | certified + | certified - | exact zero | inconclusive | tightest positive |
 |---:|---:|---:|---:|---:|---|
-| 3 | 8367 | 0 | 0 | 10057 | `rows=[34, 35, 36], lo=3.467762177670661E-312` |
-| 4 | 72033 | 0 | 0 | 139843 | `rows=[32, 33, 34, 35], lo=9.169031201888276E-390` |
+| 3 | 18424 | 0 | 0 | 0 | `rows=[46, 47, 48], lo=1.080011084146537E-443` |
+| 4 | 211876 | 0 | 0 | 0 | `rows=[45, 46, 47, 48], lo=9.465570600920423E-579` |
 
 A certified negative count would falsify the corresponding discrete
 PF target for the scanned row box and should stop that route. A zero

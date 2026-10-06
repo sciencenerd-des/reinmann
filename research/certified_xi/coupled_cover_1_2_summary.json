@@ -1,0 +1,20 @@
+{
+  "domain": [
+    "1",
+    "2"
+  ],
+  "overall_status": "certified_finite_interval",
+  "cell_counts": {
+    "positive": 512,
+    "negative": 0,
+    "unresolved": 0
+  },
+  "certified_subintervals": [
+    [
+      "1",
+      "2"
+    ]
+  ],
+  "boundary": "Consistency check only; the numerical derivation is trusted or must be replayed.",
+  "input_sha256": "68362198f76f1bf793b9233660dd1a331dc1c235fd7b87186de8dec9c37d0981"
+}

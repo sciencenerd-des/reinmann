@@ -9,7 +9,7 @@ def get_zeta_zeros(n):
     return [mpmath.zetazero(k) for k in range(1, n + 1)]
 
 def flow_derivatives(zeros):
-    # de Bruijn-Newman flow equations:
+    # Finite rational-force toy equations:
     # d(rho_k)/dt = \sum_{j \ne k} 2 / (rho_k - rho_j)
     # Plus conjugate zeros to maintain symmetry:
     # Each zero has a conjugate zero \bar{rho}_j.
@@ -35,11 +35,16 @@ def flow_derivatives(zeros):
     return derivs
 
 def simulate_flow(zeros, dt, steps, perturbed=False):
-    # If perturbed, add a small off-line shift to the zeros to test if they return
-    if perturbed:
-        # Move first zero slightly off the line (e.g. real part = 0.51)
-        zeros = [mpmath.mpc(0.51 if i == 0 else mpmath.re(z), mpmath.im(z)) for i, z in enumerate(zeros)]
-        
+    # Finite rational-force toy in the s-plane, not a validated Xi heat flow.
+    if steps < 0 or not mpmath.isfinite(dt):
+        raise ValueError("invalid integration parameters")
+    zeros = list(zeros)
+    if perturbed and zeros:
+        first = zeros[0]
+        # Replace the first point with a mirror pair; conjugates are added below.
+        zeros = [mpmath.mpc("0.51", mpmath.im(first)),
+                 mpmath.mpc("0.49", mpmath.im(first))] + zeros[1:]
+
     history = []
     current = list(zeros)
     
@@ -72,15 +77,15 @@ def run_experiment():
     history_unperturbed = simulate_flow(raw_zeros, dt=0.01, steps=20, perturbed=False)
     
     # Test 2: Flow with perturbed zeros (one zero pushed slightly off-line)
-    print("Testing flow of perturbed zeros (one zero pushed off-line)...")
+    print("Testing flow of perturbed zeros (mirror pair perturbed off-line)...")
     history_perturbed = simulate_flow(raw_zeros, dt=0.01, steps=20, perturbed=True)
     
     # Write analysis log
     with open("research/DE_BRUIJN_NEWMAN_FLOW_LOG.md", "w") as f:
-        f.write("# De Bruijn-Newman Heat Flow Zero Dynamics Simulation\n\n")
-        f.write("This document logs the simulation of the non-trivial zeros of the Riemann zeta function under the de Bruijn-Newman flow:\n")
-        f.write("$$\\frac{d\\rho_k}{dt} = \\sum_{j \\ne k} \\frac{2}{\\rho_k - \\rho_j} + \\sum_{j} \\frac{2}{\\rho_k - \\bar{\\rho}_j}$$\n\n")
-        
+        f.write("# Finite Rational-Force Particle Toy\n\n")
+        f.write("Finite s-plane rational-force toy with Euler integration, conjugate points "
+                "and mirror-paired perturbations. This is not a certified approximation "
+                "to the infinite de Bruijn-Newman deformation.\n\n")
         f.write("## 1. Unperturbed Flow (Starting on the Critical Line)\n\n")
         f.write("| Step | Time $t$ | Energy $E(t)$ | Zeros real parts (first 3) |\n")
         f.write("|---|---|---|---|\n")
@@ -88,7 +93,7 @@ def run_experiment():
             reals_str = ", ".join(f"{z[0]:.6f}" for z in h['zeros'][:3])
             f.write(f"| {h['step']} | {h['t']:.2f} | {h['energy']:.6e} | {reals_str} |\n")
             
-        f.write("\n## 2. Perturbed Flow (One zero pushed off-line to $\\sigma = 0.51$)\n\n")
+        f.write("\n## 2. Perturbed Flow (Mirror pair at 0.49 and $\\sigma = 0.51$)\n\n")
         f.write("| Step | Time $t$ | Energy $E(t)$ | $dE/dt$ (approx) | Zeros real parts (first 3) |\n")
         f.write("|---|---|---|---|---|\n")
         for idx in range(len(history_perturbed)):
@@ -100,10 +105,14 @@ def run_experiment():
                 f.write(f"| {h['step']} | {h['t']:.2f} | {h['energy']:.6e} | {dedt:.6e} | {reals_str} |\n")
                 
         f.write("\n## 3. Findings\n\n")
-        f.write("1. **Critical Line Invariance**: If zeros start on the critical line ($Re(\\rho_k) = 0.5$), the energy remains exactly $0.0$. The forces from the conjugate symmetric pairs cancel out exactly, keeping the zeros on the line.\n")
-        f.write("2. **Strict Energy Dissipation ($dE/dt < 0$)**: When a zero is perturbed off-line, the energy $E(t) = \\sum_k (\\beta_k - 0.5)^2$ decreases monotonically under the forward flow. This numerical demonstration confirms that the forward flow behaves as an attractor toward the critical line, confirming that the Lyapunov functional energy $E(t)$ is strictly dissipating ($dE/dt < 0$) for $t > 0$.\n")
-        f.write("3. **Backward Flow Instability**: Running the flow backward ($t < 0$) corresponds to the original de Bruijn-Newman deformation that tests RH. In this regime, the energy $E(t)$ grows, confirming that any off-line zeros would diverge, whereas if RH holds, the backward flow cannot create off-line zeros for any $t \\ge 0$, limiting $\\Lambda_{dBN} \\le 0$.\n")
-        
+        energies = [h["energy"] for h in history_perturbed]
+        decreases = all(a > b for a, b in zip(energies, energies[1:]))
+        increases = all(a < b for a, b in zip(energies, energies[1:]))
+        f.write(f"Sampled perturbed energy strictly decreases: {decreases}.\n\n")
+        f.write(f"Sampled perturbed energy strictly increases: {increases}.\n\n")
+        f.write("These finite toy dynamics imply no attractor, Lyapunov theorem, "
+                "Newman-constant bound, or statement about RH.\n")
+
     print("Log written to research/DE_BRUIJN_NEWMAN_FLOW_LOG.md")
 
 if __name__ == "__main__":

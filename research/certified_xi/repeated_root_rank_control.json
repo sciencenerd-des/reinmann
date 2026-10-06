@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "exact_control_excludes_positive_uniform_tail_slope",
+  "degree": 6,
+  "shift": 3,
+  "head": 4,
+  "prefix_steps": 20,
+  "generating_polynomial": "(1+z/N)^N; sole zero -N has multiplicity N",
+  "all_rank_formulas": {
+    "normalized_minor": "A_r(m)=N^(-r*m)*product_(i=1)^m product_(j=1)^r (N+j-i)",
+    "t": "t_r(m)=(N-m)/(N-m+r)",
+    "B": "B_r(m)=(N+r)/(N-m+r)",
+    "delta": "delta_r(m)=log(1+r/(N-m))",
+    "exp_correction": "exp(C_r(m))=1-1/(N-m+r)^2",
+    "tail_slope": "delta_r-delta_(r-1)=log((N-m+r)/(N-m+r-1)) -> 0",
+    "infinite_correction_sum": "sum_(r=R)^infinity C_r=-log((N-m+R)/(N-m+R-1))"
+  },
+  "exact_prefix_correction_product": "81/91",
+  "exact_prefix_slope_exponential": "27/26",
+  "conclusion": "The existing scalar and compensated criteria cannot pass any head of this control with sustained slope b>0. Their conclusions would contradict its exact sublinear growth.",
+  "trust_boundary": "Written induction and elementary logarithm limits; exact rational regression checks are not the all-rank proof.",
+  "remaining": "This does not decide Xi heads or the RH question; it identifies an additional growth requirement of the sufficient criterion.",
+  "source_sha256": "34166c363b53bff42670542bf2ade28608143221de460c044821f5ad64ab80a0"
+}

@@ -1,4 +1,6 @@
 .lake/
+__pycache__/
+*.py[cod]
 
 # macOS
 .DS_Store
@@ -17,3 +19,9 @@ paper/*.fdb_latexmk
 
 # Nested / external repositories (tracked independently, not vendored here)
 alphaproof-nexus-results/
+
+# Scratch renders and review workspaces
+tmp/
+
+# Over GitHub's 100 MB limit; regenerate per research/RH_HIGH_ORDER_SADDLE_2026_09_15.md
+research/certified_xi/high_order_saddle.json

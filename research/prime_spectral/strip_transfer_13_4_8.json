@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "finite_strip_profile_comparison_not_convergence",
+  "cutoff": 13,
+  "mode_pair": [
+    4,
+    8
+  ],
+  "strip_height": "2/5",
+  "functional_norm": {
+    "lo": "1225581001539823/1125899906842624",
+    "hi": "2451162003079651/2251799813685248"
+  },
+  "profile_difference_upper": "1323094041886439/4503599627370496",
+  "real_axis_difference_upper": "4861927385076441/18014398509481984",
+  "comparison_sha256": "56d8746fd8b12b0f744f686833768fc3287f33643589a1d5f66237d905458c16",
+  "source_hashes": {
+    "strip_transfer.py": "13ce3a3c5c5f04ba0c6816ed5f260d6ca7e8ebcaa73c13419e4a8acee10dc246",
+    "certified_mode_comparison.py": "178e18e68e727ba7da60dbf89fde62dca55743d6cb899d40ad4745641b79f040"
+  },
+  "scope": "All complex z with |Im z|<=strip_height, for this one fixed-support pair.",
+  "remaining": "No candidate-to-Weil residual estimate along an infinite family and no Xi limit."
+}

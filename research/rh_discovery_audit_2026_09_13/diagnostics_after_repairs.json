@@ -1,0 +1,98 @@
+{
+  "repair_state": "Post-interface-repair replay; original diagnostics.json is historical",
+  "scope": "Exact stored-midpoint algebra plus bounded floating-point diagnostics; not Xi enclosures or RH evidence",
+  "input_sha256": "b35913c17dca981359ea8cce5e5e5af5aae3d0a82da4714ca3880d37a6d9fd44",
+  "coefficient_count": 121,
+  "exact_deficit_identity_windows": 117,
+  "positive_midpoint_windows": 117,
+  "strictly_decreasing_cached_ratio_steps": 119,
+  "first_four_ratios_approx": [
+    0.02310499311541897,
+    0.010748068720410914,
+    0.006742340015141909,
+    0.004796299947107615
+  ],
+  "first_window": {
+    "offset": 0,
+    "normalized_determinant_approx": 0.07815560396300557,
+    "relative_safety_approx": 0.5626753987160257,
+    "curvature_budget_ratio_approx": 0.11318271395879484,
+    "positive_midpoint": true
+  },
+  "last_window": {
+    "offset": 116,
+    "normalized_determinant_approx": 4.2108217057921755e-06,
+    "relative_safety_approx": 0.025480795478924886,
+    "curvature_budget_ratio_approx": 0.0025473989529727747,
+    "positive_midpoint": true
+  },
+  "quartic_control": {
+    "polynomial": "X^4+1",
+    "computed_discriminant": 256.0,
+    "real_root_count_exact": 0
+  },
+  "heat_diagnostic": {
+    "initial_energy": 0.0002,
+    "final_energy": 2.893660925854253,
+    "increasing_steps": 20,
+    "steps": 20
+  },
+  "hef_control": {
+    "coefficients": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "derivative_first_coefficient_at_zero": -4.0
+  },
+  "positive_kernel_nonreal_zero_control": {
+    "function": "3*cos(t)+cos(2*t)",
+    "reason_nonreal_zeros": "cos(t)=(-3-sqrt(17))/4 < -1",
+    "scan": [
+      {
+        "rank": 1,
+        "shifts_tested": 25,
+        "negative_minors": []
+      },
+      {
+        "rank": 2,
+        "shifts_tested": 25,
+        "negative_minors": []
+      },
+      {
+        "rank": 3,
+        "shifts_tested": 25,
+        "negative_minors": []
+      },
+      {
+        "rank": 4,
+        "shifts_tested": 25,
+        "negative_minors": []
+      },
+      {
+        "rank": 5,
+        "shifts_tested": 25,
+        "negative_minors": []
+      },
+      {
+        "rank": 6,
+        "shifts_tested": 25,
+        "negative_minors": [
+          {
+            "shift": 2,
+            "determinant": "-26968264743653/74568823160832000"
+          }
+        ]
+      }
+    ],
+    "boundary": "Finite scan only: no claim of global PF5. Atomic positive measure, not the Xi theta kernel."
+  },
+  "jensen_normalization_control": {
+    "ordinary_generating_polynomial": "1+2z+2z^2",
+    "degree_3_uncorrected_jensen": "1+6X+6X^2",
+    "uncorrected_discriminant": 12,
+    "degree_3_corrected_jensen": "1+6X+12X^2",
+    "corrected_discriminant": -12
+  }
+}

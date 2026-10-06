@@ -1,21 +1,24 @@
 import random
 import math
 
-def generate_wigner_spacing(mean_spacing):
+def generate_wigner_spacing(mean_spacing, rng):
     # Wigner surmise for GUE: P(s) = (32/pi^2) * s^2 * exp(-4*s^2/pi)
     # We can use acceptance-rejection sampling to generate a normalized spacing s
     while True:
-        s = random.uniform(0, 5)
+        s = rng.uniform(0, 5)
         # Max of P(s) occurs at s = sqrt(pi)/2 ≈ 0.886, value is P(s_max) ≈ 1.08
         p = (32.0 / (math.pi**2)) * (s**2) * math.exp(-4.0 * (s**2) / math.pi)
-        if random.uniform(0, 1.2) < p:
+        if rng.uniform(0, 1.2) < p:
             return s * mean_spacing
 
-def run_simulation(num_runs=1000, gamma=100.0):
+def run_simulation(num_runs=1000, gamma=100.0, seed=0):
+    if num_runs <= 0 or not math.isfinite(gamma) or gamma <= 2 * math.pi:
+        raise ValueError("positive runs and gamma > 2*pi required")
+    rng = random.Random(seed)
     print(f"Simulating RMT spacings for height gamma = {gamma} ({num_runs} runs)...")
     
-    # Average spacing at height gamma is 2*pi / log(gamma)
-    mean_spacing = 2.0 * math.pi / math.log(gamma)
+    # Leading mean spacing at height gamma: 2*pi / log(gamma/(2*pi))
+    mean_spacing = 2.0 * math.pi / math.log(gamma / (2.0 * math.pi))
     
     zero_crossings = 0
     min_theta_prime_magnitude = float('inf')
@@ -35,13 +38,13 @@ def run_simulation(num_runs=1000, gamma=100.0):
         # Zeros above gamma
         curr = gamma
         for _ in range(50):
-            curr += generate_wigner_spacing(mean_spacing)
+            curr += generate_wigner_spacing(mean_spacing, rng)
             heights.append(curr)
             
         # Zeros below gamma
         curr = gamma
         for _ in range(50):
-            curr -= generate_wigner_spacing(mean_spacing)
+            curr -= generate_wigner_spacing(mean_spacing, rng)
             if curr > 0:
                 heights.append(curr)
                 
@@ -77,7 +80,7 @@ def run_simulation(num_runs=1000, gamma=100.0):
                 
     crossing_prob = zero_crossings / num_runs
     print(f"Simulation completed for gamma = {gamma}.")
-    print(f"Zero-crossings detected: {zero_crossings} / {num_runs} ({crossing_prob*100:.3f}%)")
+    print(f"Runs with nonnegative sampled proxy: {zero_crossings} / {num_runs} ({crossing_prob*100:.3f}%)")
     print(f"Min |theta'| magnitude found: {min_theta_prime_magnitude:.6f}")
     
     return zero_crossings, min_theta_prime_magnitude
@@ -88,10 +91,10 @@ if __name__ == "__main__":
     
     with open("research/RMT_SIMULATION_LOG.md", "w") as f:
         f.write("# RMT Level Repulsion & Zero-Crossing Probability Simulation\n\n")
-        f.write("This document logs the statistical simulation of zero-crossings of the horizontal phase derivative $\\theta'(\\sigma)$ under GUE level-spacing statistics.\n\n")
+        f.write("This document logs the statistical simulation of zero-crossings of the horizontal phase derivative $\\theta'(\\sigma)$ in an independent truncated Wigner-spacing toy.\n\n")
         f.write("## Simulation Parameters\n\n")
         f.write("* **Wigner Surmise (GUE)**: Normalized spacing distribution $P(s) = \\frac{32}{\\pi^2} s^2 e^{-4s^2/\\pi}$\n")
-        f.write("* **Average Spacing**: $d = 2\\pi / \\log(\\gamma)$\n")
+        f.write("* **Average Spacing**: $d = 2\\pi / \\log(\\gamma/(2\\pi))$\n")
         f.write("* **Runs per height**: 1,000\n\n")
         
         f.write("## Results\n\n")
@@ -102,12 +105,14 @@ if __name__ == "__main__":
         sim_results = []
         for g in heights_to_test:
             crossings, min_mag = run_simulation(1000, g)
-            mean_space = 2.0 * math.pi / math.log(g)
+            mean_space = 2.0 * math.pi / math.log(g / (2.0 * math.pi))
             sim_results.append((g, mean_space, crossings, min_mag))
             
         for g, mean_space, crossings, min_mag in sim_results:
             f.write(f"| {g} | {mean_space:.4f} | {crossings} | {crossings/1000*100:.3f}% | {min_mag:.6f} |\n")
             
-        f.write("\n## Analysis of Fluctuation vs Dyson Stiffness\n")
-        f.write("1. **Fluctuation in Mock Spacings**: Our mock zeros are generated using independent Wigner-distributed spacings (a renewal process). This process allows independent spacing fluctuations, yielding a zero-crossing probability of ~7% to 25% due to local imbalances where multiple gaps align or shrink on one side.\n")
-        f.write("2. **Dyson's Logarithmic Stiffness (Determinantal Point Process)**: In the actual Riemann zeta zeros (which asymptotically follow the GUE determinantal point process), the eigenvalues are not independent; they are highly rigid (Dyson stiffness). The variance of the number of zeros in an interval of length $L$ grows as $O(\\log L)$, whereas for independent spacings it grows as $O(L)$. This logarithmic stiffness strictly forbids large fluctuations, explaining why the actual zeta zeros maintain a 100% sign-constancy without any crossings.\n")
+        f.write("\nSeed: 0 per height. Independent spacings follow a Wigner-surmisal "
+                "density truncated at s=5; this renewal process is not GUE. "
+                "The reported event is a nonnegative proxy at sampled sigma values, "
+                "not a verified zero crossing. No theorem about actual zeta zeros "
+                "or RH follows.\n")

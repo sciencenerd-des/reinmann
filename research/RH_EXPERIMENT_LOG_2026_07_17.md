@@ -92,3 +92,66 @@ the explicit Xi remainder estimates or all-degree theorem required by Lean.
 4. **Composition:** formalize the same-sign Schur–Szegő root-location argument
    in the binomial basis; the unrestricted statement is false and is guarded
    by a checked counterexample in `HermitePoulainComposition.lean`.
+
+## 2026-08-11 replication and uncertainty correction
+
+The historical arbitrary-row scanner assigned half a unit in the mantissa's
+last displayed decimal place but failed to shift that radius by the exponent
+for scientific-notation tokens.  Values were parsed correctly; their
+uncertainty intervals were not.  From the first scientific-notation token
+onward, the resulting intervals were many orders of magnitude wider than the
+documented model, so the earlier row-48 inconclusive counts are superseded.
+
+The parser now computes the exponent of the last displayed digit exactly and
+has regression cases for plain decimals, positive exponents, and negative
+exponents.  With the corrected half-ULP model, the exact-rational Python scan
+over every row choice in `0..48` reports:
+
+| order | selections | certified + | certified - | exact zero | inconclusive |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 18,424 | 18,424 | 0 | 0 | 0 |
+| 4 | 211,876 | 211,876 | 0 | 0 | 0 |
+
+A separate row-30 differential experiment used three implementations:
+
+- Python `Fraction` intervals with a Leibniz determinant;
+- TypeScript `BigInt` intervals with an independently written Leibniz
+  determinant;
+- JavaScript exact midpoint `BigInt` arithmetic with a fraction-free Bareiss
+  determinant.
+
+All implementations classified positive, geometric-zero, and negative
+controls correctly, read the same input SHA-256
+`b35913c17dca981359ea8cce5e5e5af5aae3d0a82da4714ca3880d37a6d9fd44`,
+and agreed on all 4,495 order-3 and 31,465 order-4 signs.  The two interval
+implementations produced identical full sign-stream hashes.  Protocol and raw
+outputs are under `experiments/cross_language_toeplitz/` and
+`research/cross_language_toeplitz/`.
+
+These results certify signs only for the stored decimal boxes.  They do not
+certify the coefficient-generation procedure, any row beyond 48, any order
+beyond 4, the full PF target, or RH.
+
+## 2026-09-03 extended differential scan
+
+The pre-registered Python/JavaScript/TypeScript protocol was rerun over the
+full row box `0..48`, preserving the original row-30 outputs as a regression
+baseline.  To make the exhaustive run tractable without changing the interval
+semantics, the Python reference now stores all endpoints as exact integers at
+one common decimal scale (`2*10^563`); this is algebraically equivalent to the
+previous `Fraction` enclosures and the row-30 sign streams are unchanged.
+
+The three implementations agreed on the same input SHA-256
+`b35913c17dca981359ea8cce5e5e5af5aae3d0a82da4714ca3880d37a6d9fd44`, all
+positive/zero/negative controls, and both complete sign streams:
+
+| order | selections | certified + | certified - | exact zero | inconclusive |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 18,424 | 18,424 | 0 | 0 | 0 |
+| 4 | 211,876 | 211,876 | 0 | 0 | 0 |
+
+The extended runner completed in 453.26 seconds on the active machine.  Its
+raw JSON outputs and report are under
+`research/cross_language_toeplitz/row48/`.  This remains bounded falsification
+evidence: it does not certify the coefficient-generation procedure, any order
+beyond four, the infinite positivity target, or RH.

@@ -1,0 +1,26 @@
+{
+  "domain": [
+    "1",
+    "3"
+  ],
+  "overall_status": "certified_finite_interval",
+  "cell_counts": {
+    "positive": 1018,
+    "negative": 0,
+    "unresolved": 0
+  },
+  "certified_subintervals": [
+    [
+      "1",
+      "3"
+    ]
+  ],
+  "boundary": "Consistency check only; the numerical derivation is trusted or must be replayed.",
+  "input_sha256": {
+    "coupled_cover_1_2.json": "68362198f76f1bf793b9233660dd1a331dc1c235fd7b87186de8dec9c37d0981",
+    "coupled_cover_2_3.json": "c4ddb525941a9625ce10f2cd833b8873521d54c354da2daa281599a6cfbaf08a"
+  },
+  "uniform_negative_log_curvature_margin": "208659/68719476736",
+  "consequence": "2 log epsilon(2) - log epsilon(1) - log epsilon(3) >= kappa > 0, by integrating the curvature bound against the unit tent kernel.",
+  "trust_boundary": "FLINT ball arithmetic, theta identity, tails, monotone split and mean-value theorem; not a Lean certificate"
+}

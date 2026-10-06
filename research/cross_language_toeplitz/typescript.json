@@ -1,0 +1,38 @@
+{
+  "implementation": "typescript-bigint-interval-leibniz",
+  "runtime": "v22.21.1",
+  "input": "research/figures/coeffs_M120.txt",
+  "input_sha256": "b35913c17dca981359ea8cce5e5e5af5aae3d0a82da4714ca3880d37a6d9fd44",
+  "max_row": 30,
+  "common_denominator": "2*10^563",
+  "uncertainty": "half-unit in each token's last displayed decimal place",
+  "controls": {
+    "positive": 1,
+    "zero": 0,
+    "negative": -1
+  },
+  "orders": [
+    {
+      "order": 3,
+      "total": 4495,
+      "counts": {
+        "positive": 4495,
+        "negative": 0,
+        "zero": 0,
+        "inconclusive": 0
+      },
+      "sign_stream_sha256": "4afe6e2f135f03c26d54fad0acd17c9fcc3ef0c8e5c367bf723791183e97e6f1"
+    },
+    {
+      "order": 4,
+      "total": 31465,
+      "counts": {
+        "positive": 31465,
+        "negative": 0,
+        "zero": 0,
+        "inconclusive": 0
+      },
+      "sign_stream_sha256": "595f5fa5a67d7bed9c36a8051dee3c278d622d9f5f57765d279ea09442b94b83"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "leading_model_theorem_and_exact_nonimplication_control_not_RH_proof",
+  "source_hashes": {
+    "lambert_curvature.py": "a35ccd540ad30b4c5e48449af4699e8c2e0e46fd39baa3ff1bd4cb987e43d12f",
+    "laboratory.py": "249f9c5b52740d2c7ae785f22abef4bcf9d7c111cb4340deb28e61357fb3a244",
+    "coefficients.py": "a37084aab18e2d36ba541743871b5460197d18e14b594884aa3579c66d5fbf4b"
+  },
+  "leading_tail": {
+    "threshold": "256",
+    "budget_upper": "4770467981722933066266554692789554516545084850949091565348408296832162359424396491233121508833183931816135706100880900914895526738613559136076825064799105/26815615859885194199148049996411692254958731641184786755447122887443528060147093953603748596333806855380063716372972101707507765623893139892867298012168192",
+    "margin_fraction_lower": "5511286969540565283220373825905534434603411697558923797524678647652841425180674365592656771875155730890982002568022800198153059721319895189197618236842271/6703903964971298549787012499102923063739682910296196688861780721860882015036773488400937149083451713845015929093243025426876941405973284973216824503042048",
+    "status": "proved_uniform_leading_lambert_model_sign_only",
+    "claim": "For every real x>=threshold, f0_second(x)<=-(1-budget_upper)*Q(x)<0, for f0=log((x+1)*(1-exp(-2w/(x*(1+w))))) and Q=(w*w+4*w+1)/(x*x*(1+w)**4).",
+    "remaining": "The degree-16 model and true Xi moments require the coupled residual derivative bounds; they are not inferred here."
+  },
+  "control": {
+    "function": "(1+z)*exp(z)",
+    "ordinary_coefficients": "(n+1)/n!",
+    "only_zero": "-1",
+    "records": [
+      {
+        "x": "3",
+        "epsilon": "19/16",
+        "continuous_log_curvature": "17/2888",
+        "discrete_logconcavity_slack": "-439/57600",
+        "gamma_turan_difference": "1",
+        "double_turan_difference": "0"
+      },
+      {
+        "x": "4",
+        "epsilon": "29/25",
+        "continuous_log_curvature": "107/21025",
+        "discrete_logconcavity_slack": "-2459/360000",
+        "gamma_turan_difference": "1",
+        "double_turan_difference": "0"
+      },
+      {
+        "x": "10",
+        "epsilon": "131/121",
+        "continuous_log_curvature": "2015/2076481",
+        "discrete_logconcavity_slack": "-48259/42166080",
+        "gamma_turan_difference": "1",
+        "double_turan_difference": "0"
+      }
+    ]
+  },
+  "trust_boundary": "Elementary analytic proof in RH_LAMBERT_SIGN_AND_SCOPE_2026_09_15.md plus FLINT threshold evaluation; separate Lean algebra controls."
+}

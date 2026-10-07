@@ -1,0 +1,26 @@
+'Reinmann.WeilWindow.energy_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.supported_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.publicLower_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.cutoff_support_dictionary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.cutoff_between_three_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.prime_powers_below_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.active_prime_powers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.linear_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.schur_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.schur_can_close_when_linear_allowance_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.WeilWindow.WindowBlockHypotheses.two_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.WindowBlockHypotheses.bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.WindowBlockHypotheses.schur_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.certificate_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.certified_exp_six_fifths_of_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.schur_certificate_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.window_bound_weaken' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.certified_exp_six_fifths_of_schur_blocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.WeilWindow.window_bound_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.smaller_windows_of_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.window_nonnegative_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilWindow.all_windows_of_cofinal_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]

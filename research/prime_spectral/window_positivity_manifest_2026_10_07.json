@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-07",
+  "theorem": "Written/Arb full Weil bound Q(f) >= 9e-13 ||f||^2 for smooth support [-3/5,3/5] and its closed Weil form domain; every 1<C<=exp(6/5)",
+  "active_prime_powers": [
+    2,
+    3
+  ],
+  "certificates": [
+    {
+      "file": "window_positivity_exp_1p2.json",
+      "polynomial_modes": 160,
+      "parity_dimensions": [
+        80,
+        80
+      ],
+      "block_method": "linear"
+    },
+    {
+      "file": "window_positivity_exp_1p2_schur.json",
+      "polynomial_modes": 124,
+      "parity_dimensions": [
+        62,
+        62
+      ],
+      "block_method": "schur",
+      "schur_target": "9.5e-13",
+      "linear_allowance_fails": true
+    }
+  ],
+  "focused_tests_passed": 10,
+  "independent_integral_entries_passed_per_certificate": 4,
+  "geometric_constant_check_passed_per_certificate": true,
+  "lean": {
+    "proved_statements_audited": 22,
+    "custom_axioms": 0,
+    "sorry": 0,
+    "formalization": "Conditional assembly, Schur inequalities, rational margins, exact prime content, smaller-support and cofinal-family consequences. Actual Weil form and analytic/numerical obligations remain explicit hypothesis arguments."
+  },
+  "full_working_tree_build_passed": true,
+  "repository_working_tree_axiom_audit_passed": true,
+  "repository_audited_statement_count": 240,
+  "verification_context": "Shared working tree contains unrelated uncommitted files; new standalone module depends only on Mathlib. Integration-file hashes below are staged versions, preserving unrelated edits outside the commit.",
+  "novelty": "No claim; larger competing preprint claims located, not independently reproduced here.",
+  "progress": "Same support endpoint; Schur certificate uses 22.5 percent fewer polynomial modes than the local linear certificate. No optimality or runtime claim.",
+  "sha256": {
+    "Reinmann.lean": "be8b59b8c0c618880996a16c638e1c523699bc669504f37f3a96c1d160d29019",
+    "Reinmann/AxiomAudit.lean": "96bd517e6d60fafbadc7447dddb37146425925f62daf04dfccade4270aac90fb",
+    "Reinmann/WeilWindowAudit.lean": "0c42d8c74e5ffdd43419f07bcd3c42b0eb0501fa11c6f2fac5852d0db181963d",
+    "Reinmann/WeilWindowHypotheses.lean": "e5060375790ca9e97cca9b8887968cc063bebc8f8824c8bc8b00a4693af24720",
+    "experiments/prime_spectral/compact_window_certificate.py": "7738cc9f421bc8bb31fee36fc5343afc6d33e7b579a35c8845fc23e43d4d6737",
+    "experiments/prime_spectral/test_window_positivity.py": "c612f2771722196748df453ae2c21112e8402b0858e0ce651cb81048c5170e0b",
+    "experiments/prime_spectral/verify_window_positivity.py": "fced27867e232b9a6fc6abca984315ef2807e77e90e9ecf59c754cab6c3849c4",
+    "research/prime_spectral/WEIL_WINDOW_NEXT_THEOREMS_2026_10_07.md": "79c6927914070cd8f3866909d1ccd942cfba05194ff98287950a4e97a1178489",
+    "research/prime_spectral/WINDOW_POSITIVITY_PRIOR_ART_2026_10_07.md": "a54e0021431c04c162fa6748750914b4e4415c18b095e9e1f23befabf476532d",
+    "research/prime_spectral/WINDOW_POSITIVITY_PROOF_2026_10_07.md": "9f1f2daed745766754fe89205bedb4cc483a17a46e474528cabaaf175309834d",
+    "research/prime_spectral/verification_2026_10_07_window/checks.json": "3c0eb473a187bc49864eec453b13ad7afb56daf08b8ea74aacdea2ac398635f8",
+    "research/prime_spectral/verification_2026_10_07_window/focused_tests.log": "1a63936a1a7bcfed098edea1538d912658d8b5119bd42417719e3024931337b7",
+    "research/prime_spectral/verification_2026_10_07_window/full_build.log": "e8d8c0d3fc41dd83bd20d6498d20e9ee855678e5086f84bf0d312d152cdafb6b",
+    "research/prime_spectral/verification_2026_10_07_window/repository_axioms.log": "95166ee4d5f68c0de069a197b3bc92db6bd194a4497e1726b030451777821347",
+    "research/prime_spectral/verification_2026_10_07_window/window_axioms.log": "5721347f53719a9229a19cf0c07037cca322573f01defe2e6a1faf4c3e8f3836",
+    "research/prime_spectral/window_positivity_exp_1p2.json": "e798071a01da0d0844900c2a8436e182165d6de9230a34e1aba277ec427159b5",
+    "research/prime_spectral/window_positivity_exp_1p2_schur.json": "7645dfadd5910c9921f2b02c787995bd85b829c28e8a43c2a2071c9794faacf4",
+    "research/prime_spectral/window_positivity_exp_1p2_schur_verification.json": "e397120754daf770d0dd18508565ce234b9891530a4f11b9f791c569af58e1b4",
+    "research/prime_spectral/window_positivity_exp_1p2_verification.json": "89df2a9575a2594d8350a228f63da45e2db64a89b8bf699897d4756fc9646df2",
+    "research/prime_spectral/verification_2026_10_07_window/README.md": "50a4ed5c2a758aae5b120f857d4a97ebeed50d02b33db826516b612716efcf36",
+    "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+    "experiments/prime_spectral/weil_matrix.py": "2811a607a16a758b293578efcf37314f3dcafab5b1a47e49d9f095efa9b95211"
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "full_build",
+    "command": [
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 6.9,
+    "log": "research/prime_spectral/verification_2026_10_07_window/full_build.log"
+  },
+  {
+    "name": "window_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "Reinmann/WeilWindowAudit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 37.465,
+    "log": "research/prime_spectral/verification_2026_10_07_window/window_axioms.log"
+  },
+  {
+    "name": "repository_axioms",
+    "command": [
+      "bash",
+      "scripts/verify_axiom_clean.sh"
+    ],
+    "exit_code": 0,
+    "seconds": 71.642,
+    "log": "research/prime_spectral/verification_2026_10_07_window/repository_axioms.log"
+  },
+  {
+    "name": "focused_tests",
+    "command": [
+      "uv",
+      "run",
+      "--with",
+      "python-flint==0.8.0",
+      "--python",
+      "3.12",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "experiments/prime_spectral",
+      "-p",
+      "test_window_positivity.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": 1.223,
+    "log": "research/prime_spectral/verification_2026_10_07_window/focused_tests.log"
+  }
+]

@@ -75,3 +75,4 @@ import Reinmann.TuranDeficit
 import Reinmann.CurvatureControls
 import Reinmann.CoupledRankEnergy
 import Reinmann.WeilRankTail
+import Reinmann.WeilWindowHypotheses

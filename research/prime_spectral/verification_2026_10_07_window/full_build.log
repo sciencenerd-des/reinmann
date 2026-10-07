@@ -1,0 +1,12 @@
+⚠ [3536/3539] Replayed Reinmann.CurvatureControls
+warning: Reinmann/CurvatureControls.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/CurvatureControls.lean:47:0: 'Reinmann.realZeroControl_turan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:48:0: 'Reinmann.realZeroControl_scaled_deficit_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:49:0: 'Reinmann.realZeroControl_curvature_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:50:0: 'Reinmann.realZeroControl_discrete_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:51:0: 'Reinmann.curvature_negative_of_half_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3539 jobs).

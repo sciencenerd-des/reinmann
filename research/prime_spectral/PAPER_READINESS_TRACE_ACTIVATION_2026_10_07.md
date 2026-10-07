@@ -1,5 +1,20 @@
 # Readiness decision for a paper on the Weil trace/prime-entry results
 
+Latest boundary-basis continuation: the
+[exact-trace trial and full-residual note](BOUNDARY_BASIS_RESIDUAL_TRACE_2026_10_07.md)
+now supplies a calibrated renewal quadrature, an operator-domain Green
+basis with known traces, and a linear certificate interface using full
+L2 and Linfinity residuals. Two changed-discretization Arb runs agree.
+The absolute endpoint-trace envelopes for both actual minimizing states
+improve to 4336 near prime 2 and 41395 near prime 3. No assembled unit
+trial has yet cleared a residual budget; no tight signed or nonzero
+actual trace interval has been certified. Four additional Lean scalar
+implications compile with foundation axioms only. These calculations
+do not change the novelty/readiness decision, and no paper is drafted.
+The Stieltjes representation and Green factorization remain attributed
+to established potential theory; the certificate interface itself is
+not asserted to be a new perturbation method.
+
 Checked 7 October 2026 against commit 26bf3da and the continuation recorded
 below. Decision: **not yet cleared as a novel research paper**. Continue
 the mathematics and validation. This is not a finding that the proposed

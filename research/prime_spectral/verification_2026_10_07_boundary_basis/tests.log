@@ -1,0 +1,10 @@
+test_actual_envelopes_and_split_residual_budget (test_boundary_basis.BoundaryBasisTests.test_actual_envelopes_and_split_residual_budget) ... ok
+test_cauchy_remainder_at_non_node_points (test_boundary_basis.BoundaryBasisTests.test_cauchy_remainder_at_non_node_points) ... ok
+test_changed_discretization_and_laplace_normalization (test_boundary_basis.BoundaryBasisTests.test_changed_discretization_and_laplace_normalization) ... ok
+test_full_residual_clearance_and_input_failure_gates (test_boundary_basis.BoundaryBasisTests.test_full_residual_clearance_and_input_failure_gates) ... ok
+test_signed_trace_corners_include_actual_state (test_boundary_basis.BoundaryBasisTests.test_signed_trace_corners_include_actual_state) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.989s
+
+OK

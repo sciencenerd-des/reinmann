@@ -1,0 +1,51 @@
+{
+  "base_commit": "782cfe1e376634d5c1572eccdbab69c6f5a03b69",
+  "date": "2026-10-07",
+  "checks": [
+    "Two certified renewal/Green-basis discretizations overlap at every profile; primary reproduced with retained log",
+    "Five numerical tests passed",
+    "Four named Lean scalar theorems built and audited with foundation axioms only",
+    "New Python sources compiled, local Markdown links and generator hashes checked"
+  ],
+  "written_mathematical_results": [
+    "Laplace-calibrated Stieltjes profiles with Cauchy interpolation and whole-tail allowances",
+    "Localized Green basis belongs to actual operator domain and has known normalized traces",
+    "Linear full-L2/Linfinity residual-to-actual-trace estimate with signed overlap normalization",
+    "Improved uniform absolute trace envelopes for both actual minimizing states in the two prime cells"
+  ],
+  "formal_scope": "Named conditional scalar implications only; no Lean operator-domain theorem, actual trial residual or operator trace estimate is supplied.",
+  "limitations": [
+    "No successful assembled unit-trial full residual certificate",
+    "No tight signed or nonzero actual minimizing-state trace",
+    "No explicit rate of moving-window trace convergence or gap persistence",
+    "Saved full-operator spectral inputs checked, not reassembled in this package",
+    "No larger positive window, RH proof, or established novelty"
+  ],
+  "sha256": {
+    "Reinmann/WeilResidualTrace.lean": "f3fb0be66752e5c6440468bcf4ec0a53fcf227c574c437ca55f2ec342adc9231",
+    "Reinmann/WeilResidualTraceAudit.lean": "4dc0d9f25cff1337d2b7db160a91622e45e2f154163b99762d116a873ac56302",
+    "experiments/prime_spectral/renewal_boundary_basis.py": "13895e7c851c262af66df69a10c346712ac839d065c66359ac263b911d0b9bfd",
+    "experiments/prime_spectral/residual_endpoint_certificate.py": "5a93adf4cfcdc73fd23786b40babd4ba3410f5008b0d767878fbfd5c23ef82ea",
+    "experiments/prime_spectral/test_boundary_basis.py": "77fe66aab4ee2681887a1c472bbc36903d5349b49897221831159ac48be912e3",
+    "experiments/prime_spectral/renewal_trace_enclosures.py": "621bc73b781fead2eee8adc876e6b621d110e5f47ef26047328ad87f79afa202",
+    "experiments/prime_spectral/threshold_ground_gap.py": "6be221950a0d63f515fb6885064010c1039e18a6f97364e8bd9ea516b179cc7d",
+    "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+    "research/prime_spectral/BOUNDARY_BASIS_RESIDUAL_TRACE_2026_10_07.md": "61857a5673741db5af95803af9928e15a20152c8a51075d37335fa073ab12e65",
+    "research/prime_spectral/PAPER_READINESS_TRACE_ACTIVATION_2026_10_07.md": "5ee1cb890a59e05bab3bf74574af3ccd9329a3515ad5f7a9f36f74133d60ba97",
+    "research/prime_spectral/BOUNDARY_REGULARITY_PRIME_ACTIVATION_2026_10_07.md": "d0f6d3e3a0919fa3102cac4e9d8b6cbaa80b69e1adad63dcfb1f6e965ce56356",
+    "research/prime_spectral/RENEWAL_ENDPOINT_TRACE_2026_10_07.md": "4a64fbc4d288735acf74c4d1d24b42d866704265a30b4bcb2b87993849f284a9",
+    "research/prime_spectral/TRACE_ENCLOSURES_STATE_CONVERGENCE_2026_10_07.md": "bd93ec4cca4694facc7127c858fb8231843cf44356adb4746a82a05f65b7a007",
+    "research/prime_spectral/WEIL_LOG_FORM_CORE_2026_10_07.md": "a09086a2717ceee6e0c335fe386ce055c9d06c087a97288e8ebee256f45f5797",
+    "research/prime_spectral/renewal_trace_enclosures_2026_10_07.json": "78ce844cc3a8fe0c5fa36b1e823182b1c74a328e3c730475691a5cde098ca69a",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_ground_gaps.json": "f5e8bac2b73f3e50ba65869c2da7d34236230029860e32e540347a51c414d373",
+    "research/prime_spectral/verification_2026_10_07_cluster_readiness/all_entry_reassembly.json": "c84a172ee8f8c2d3343496f77b0e44951b6edf0b9fdaaea38e89d9048537ac96",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/README.md": "f5b92e097dc424752fa419dc46e7eea0d6ff63f109f105a466e5b95930912728",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/generate_primary.log": "2bbec93d9cefff72492e3607990ab9eb4393ce973f62e3433d85d656664dbf1c",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/lean_build.log": "3cd9b2ac3e07f8b3a6fa1a27ef6a3cf766821d117fa5d3fb817eabdf65f80acc",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/renewal_basis.json": "2279a9305b10db343d5393850645a9f9ba7ce7f54702decab0322f177f61e308",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/renewal_basis_alternate.json": "29f7aeb0b38b91cf7c0a58dfe85bf08e3550bf16f27cc6996ad5676cf4fbc3e7",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/residual_trace_constants.json": "28129c8d7d03e1288025685f6060be0ded2a9b7348ba65217837411deaf1029c",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/source_checks.log": "52effedceb90a10eb5b8e3b87a581ac5c3ceb0c53e3b32944d261916ec214313",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/tests.log": "3a57a86352a1039e70d4e5663108709b9e5935b18ba9c1a3f6ffd64da4b023ad"
+  }
+}

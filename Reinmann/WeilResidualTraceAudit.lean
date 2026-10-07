@@ -1,0 +1,6 @@
+import Reinmann.WeilResidualTrace
+
+#print axioms Reinmann.WeilResidualTrace.overlap_enclosure
+#print axioms Reinmann.WeilResidualTrace.overlap_pos
+#print axioms Reinmann.WeilResidualTrace.linear_residual_trace_bound
+#print axioms Reinmann.WeilResidualTrace.signed_trace_enclosure

@@ -1,0 +1,7 @@
+✔ [2514/2515] Built Reinmann.WeilResidualTrace (44s)
+ℹ [2515/2515] Built Reinmann.WeilResidualTraceAudit (29s)
+info: Reinmann/WeilResidualTraceAudit.lean:3:0: 'Reinmann.WeilResidualTrace.overlap_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilResidualTraceAudit.lean:4:0: 'Reinmann.WeilResidualTrace.overlap_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilResidualTraceAudit.lean:5:0: 'Reinmann.WeilResidualTrace.linear_residual_trace_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilResidualTraceAudit.lean:6:0: 'Reinmann.WeilResidualTrace.signed_trace_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2515 jobs).

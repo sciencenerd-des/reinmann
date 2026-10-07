@@ -341,3 +341,26 @@ vanishing factor in (9). The existing prime-two and prime-three
 certificates address \(k=1\); no multiple ground state is asserted to
 occur there. No all-scale margin, zero-crossing exclusion, or RH
 implication follows from this local reduction.
+
+## 7. Quantitative continuation
+
+The subsequent [localized-resolvent note](LOCALIZED_RESOLVENT_RATE_2026_10_07.md)
+replaces the compactness-only factor by explicit upper and lower bounds.
+A second resolvent identity, with the first TWO free inverse moments
+separately dominated by killed-semigroup comparison, gives
+\(\omega_\delta\log(1/\delta)\to1\) under the uniform complement-gap,
+bounded-remainder and cluster-boundedness inputs. Its inverse-gap
+constant occurs in a lower-order term. A localized sine and removal
+of the finite cluster prove the matching lower bound.
+Consequently the Schur error here is
+\(O(\delta/\log^2(1/\delta))\), with explicit bounds once those inputs
+are quantified. The fixed-threshold resolvent bounds at 2 and 3 are
+evaluated; an explicit moving-window gap radius and tight actual
+endpoint traces remain unresolved. This strengthens the analysis
+without resolving the candidate theorem's priority.
+
+The subsequent [rescaled-layer argument](LAYER_RESOLVENT_SCHUR_COEFFICIENT_2026_10_07.md)
+identifies the leading Schur matrix itself as
+\(w^2(a^*a+b^*b)\) at scale \(\delta/\log^2(1/\delta)\).
+It yields a finer cluster eigenvalue reduction relative to the exact
+head \(G_\delta\), while retaining all its background and trace errors.

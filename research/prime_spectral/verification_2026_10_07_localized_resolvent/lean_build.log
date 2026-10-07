@@ -1,0 +1,11 @@
+ℹ [2516/2516] Replayed Reinmann.WeilLocalizedResolventAudit
+info: Reinmann/WeilLocalizedResolventAudit.lean:3:0: 'Reinmann.WeilLocalizedResolvent.second_resolvent_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilLocalizedResolventAudit.lean:4:0: 'Reinmann.WeilLocalizedResolvent.localized_resolvent_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilLocalizedResolventAudit.lean:5:0: 'Reinmann.WeilLocalizedResolvent.second_resolvent_coefficient_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Reinmann/WeilLocalizedResolventAudit.lean:6:0: 'Reinmann.WeilLocalizedResolvent.localized_resolvent_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilLocalizedResolventAudit.lean:7:0: 'Reinmann.WeilLocalizedResolvent.localized_schur_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilLocalizedResolventAudit.lean:8:0: 'Reinmann.WeilLocalizedResolvent.fixed_profile_action_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilLocalizedResolventAudit.lean:9:0: 'Reinmann.WeilLocalizedResolvent.exact_rayleigh_error_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2516 jobs).

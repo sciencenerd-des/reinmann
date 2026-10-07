@@ -1,0 +1,9 @@
+test_fail_closed_parameters (test_localized_resolvent.LocalizedResolventTests.test_fail_closed_parameters) ... ok
+test_lower_projection_cost_and_upper_gap_cap (test_localized_resolvent.LocalizedResolventTests.test_lower_projection_cost_and_upper_gap_cap) ... ok
+test_noncommuting_second_identity_and_both_linear_signs (test_localized_resolvent.LocalizedResolventTests.test_noncommuting_second_identity_and_both_linear_signs) ... ok
+test_sharp_scaled_enclosure_for_small_gap (test_localized_resolvent.LocalizedResolventTests.test_sharp_scaled_enclosure_for_small_gap) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

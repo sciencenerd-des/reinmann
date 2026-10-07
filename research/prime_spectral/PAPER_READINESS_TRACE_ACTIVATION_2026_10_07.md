@@ -186,3 +186,33 @@ Once the theorem and contribution are clear, a focused math.NT/math.SP
 manuscript on normalized Weil traces and prime-entry matrices may be
 appropriate. The present decision is to continue research, not to
 package an unverified novelty claim as a new paper.
+
+## 6. Further continuation: localized resolvent rate
+
+The next [analytic note](LOCALIZED_RESOLVENT_RATE_2026_10_07.md) supplies
+the previously missing computable localized-resolvent bound. It also
+proves a matching lower bound and the normalized norm limit
+\(\omega_\delta\log(1/\delta)\to1\), with an
+\(O(\delta/\log^2(1/\delta))\) upper Schur remainder in the cluster
+argument. Explicit intervals are evaluated for the actual operators
+at the prime-2 and prime-3 thresholds using the existing spectral
+gap and universal bounded-state certificates.
+
+This completes the resolvent-factor part of the quantitative target,
+subject to the written analytic inputs. It does not compute an
+explicit gap-persistence radius for moving windows or tight actual
+trace profiles. The general logarithmic concentration ingredients
+are standard; novelty of their precise Weil application has not been
+established. The readiness decision remains **not cleared** pending
+the focused proof/prior-art comparison and theorem consolidation.
+
+The [strong layer-resolvent continuation](LAYER_RESOLVENT_SCHUR_COEFFICIENT_2026_10_07.md)
+then identifies the leading Schur matrix
+\(w^2(a^*a+b^*b)\) at scale \(\delta/\log^2(1/\delta)\).
+It proves a proposed higher-order matrix reduction relative to the
+**exact** moving cluster head. In the simple case this gives the leading
+error of the exact one-state Rayleigh prediction. It neither replaces
+the head by its coarser first-order trace approximation nor asserts
+trace nonvanishing. This sharper candidate deserves a dedicated
+comparison with the closest perturbation and boundary-potential
+literature; the manuscript gate is still not cleared.

@@ -1,0 +1,9 @@
+import Reinmann.WeilLocalizedResolvent
+
+#print axioms Reinmann.WeilLocalizedResolvent.second_resolvent_upper
+#print axioms Reinmann.WeilLocalizedResolvent.localized_resolvent_upper
+#print axioms Reinmann.WeilLocalizedResolvent.second_resolvent_coefficient_nonneg
+#print axioms Reinmann.WeilLocalizedResolvent.localized_resolvent_lower
+#print axioms Reinmann.WeilLocalizedResolvent.localized_schur_rate
+#print axioms Reinmann.WeilLocalizedResolvent.fixed_profile_action_error
+#print axioms Reinmann.WeilLocalizedResolvent.exact_rayleigh_error_limit

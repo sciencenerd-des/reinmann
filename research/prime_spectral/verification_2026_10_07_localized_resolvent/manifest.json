@@ -1,0 +1,58 @@
+{
+  "base_commit": "2dbf2e53c2d8bcc67c4d12ee9e439f3b696c31b0",
+  "date": "2026-10-07",
+  "checks": [
+    "Both saved infinite-complement second-eigenvalue bounds replayed, and weakened full-operator threshold bounds checked",
+    "Arb 256-bit upper/lower localized complementary-resolvent bounds at primes 2 and 3",
+    "Seven named scalar Lean theorems built and audited; only propext, Classical.choice, Quot.sound",
+    "Four tests passed: noncommuting second identity with both linear signs, invalid inputs, sharp scaled enclosure with small gap, projection-cost/gap caps",
+    "Python compilation, local Markdown links, generator dependency hashes and displayed asymptotic-table bounds checked"
+  ],
+  "written_mathematical_results": [
+    "Sharp localized norm omega_delta log(1/delta) -> 1 under stated uniform complement and boundedness inputs",
+    "Strong identity limit on fixed rescaled endpoint-layer profiles; explicitly not norm convergence to identity",
+    "Conditional leading Schur matrix w^2(a^*a+b^*b) at scale delta/log^2(1/delta), with exact-head cluster reduction"
+  ],
+  "formal_scope": "Scalar consequences of named hypotheses, not Lean proofs of semigroup domination, Fourier localization, trace convergence, Feshbach operator identities, or the full operator/eigenvalue limits.",
+  "novelty_status": "not_cleared; targeted primary-source comparisons and additional potential-theory/prime-Schur leads recorded",
+  "limitations": [
+    "No tight actual endpoint-trace value or nonvanishing certificate",
+    "No explicit moving-window gap-persistence radius",
+    "Fixed-threshold numerical bounds are conservative, especially at prime 3",
+    "Saved trial and universal-state inputs checked via their previously verified records, not reintegrated here",
+    "No enlarged positive window, all-scale margin, or RH proof"
+  ],
+  "sha256": {
+    "Reinmann/WeilClusterActivation.lean": "db33466d9bececde0a156bfaff140c2c564a93e6639766991bcabfaaf970191f",
+    "Reinmann/WeilLocalizedResolvent.lean": "3ed26fc096b0a055787d7d0884d8a984a479c2e32f19cb471bb14b5353c8cf77",
+    "Reinmann/WeilLocalizedResolventAudit.lean": "fc8d8b9ad661bb98933235c42b4ad06fb06114f0c9a136366d7497e0a10332ce",
+    "Reinmann/WeilRenewalTrace.lean": "337b39946b09c3d24de87fe071f84ec43f7d861ac6948a2171bf8eaa245f96f2",
+    "Reinmann/WeilTraceStability.lean": "2a2aa3ce0a94f50bf47dc88755a5fadd276289a563986e65f41aa887d34d3f1c",
+    "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+    "experiments/prime_spectral/compact_window_certificate.py": "7738cc9f421bc8bb31fee36fc5343afc6d33e7b579a35c8845fc23e43d4d6737",
+    "experiments/prime_spectral/localized_resolvent_enclosures.py": "721807a17fa882fa8911b2a2d5aaa6a0c2bc3f7fd184490c448898aa8aa54de2",
+    "experiments/prime_spectral/renewal_trace_enclosures.py": "621bc73b781fead2eee8adc876e6b621d110e5f47ef26047328ad87f79afa202",
+    "experiments/prime_spectral/test_localized_resolvent.py": "dfe46565767d4ac5fe79bff10adfabfb5b19e0feba00a8449a9433fa692637da",
+    "experiments/prime_spectral/threshold_ground_gap.py": "6be221950a0d63f515fb6885064010c1039e18a6f97364e8bd9ea516b179cc7d",
+    "experiments/prime_spectral/weil_matrix.py": "2811a607a16a758b293578efcf37314f3dcafab5b1a47e49d9f095efa9b95211",
+    "research/prime_spectral/BOUNDARY_REGULARITY_PRIME_ACTIVATION_2026_10_07.md": "d0f6d3e3a0919fa3102cac4e9d8b6cbaa80b69e1adad63dcfb1f6e965ce56356",
+    "research/prime_spectral/DEGENERATE_CLUSTER_PRIME_ENTRY_2026_10_07.md": "d9ef9307e92f89e1a0215571f1777bcbe7cb5cfb429aa9306abcbe5fca72f4f5",
+    "research/prime_spectral/LAYER_RESOLVENT_SCHUR_COEFFICIENT_2026_10_07.md": "999c3e7e39b48454c226baabbe8d8b56f3d9aecb61ee14a8780b4d8dbb23351d",
+    "research/prime_spectral/LOCALIZED_RESOLVENT_RATE_2026_10_07.md": "7561355f813fe4523145f7f97a6ed153cef91c842308cc3d858431a9ab1e04d8",
+    "research/prime_spectral/PAPER_READINESS_TRACE_ACTIVATION_2026_10_07.md": "285711721073ddd948644c18aaf6841fc0aec63ac2e15b1c7e88fc8aa4b454aa",
+    "research/prime_spectral/RENEWAL_ENDPOINT_TRACE_2026_10_07.md": "4a64fbc4d288735acf74c4d1d24b42d866704265a30b4bcb2b87993849f284a9",
+    "research/prime_spectral/TRACE_ENCLOSURES_STATE_CONVERGENCE_2026_10_07.md": "bd93ec4cca4694facc7127c858fb8231843cf44356adb4746a82a05f65b7a007",
+    "research/prime_spectral/WEIL_LOG_FORM_CORE_2026_10_07.md": "a09086a2717ceee6e0c335fe386ce055c9d06c087a97288e8ebee256f45f5797",
+    "research/prime_spectral/renewal_trace_enclosures_2026_10_07.json": "78ce844cc3a8fe0c5fa36b1e823182b1c74a328e3c730475691a5cde098ca69a",
+    "research/prime_spectral/verification_2026_10_07_cluster_readiness/all_entry_reassembly.json": "c84a172ee8f8c2d3343496f77b0e44951b6edf0b9fdaaea38e89d9048537ac96",
+    "research/prime_spectral/verification_2026_10_07_localized_resolvent/README.md": "ec02fb89f2dd819ea35bf6a20406ba1e77e097bd0b48d266ffa056376a5cf9df",
+    "research/prime_spectral/verification_2026_10_07_localized_resolvent/generate.log": "06b4859b8527ddf68a5f0ae9dde4da39de559bcb73930c69916981ee3567f0b9",
+    "research/prime_spectral/verification_2026_10_07_localized_resolvent/lean_build.log": "40114aedb910e204d4613dfa285f759676fd4326d79f1303085d18b85d240f64",
+    "research/prime_spectral/verification_2026_10_07_localized_resolvent/localized_resolvents.json": "b3bf4465a0a70714358ffa410ca04c5abb292f98b9e47446adfef16017566984",
+    "research/prime_spectral/verification_2026_10_07_localized_resolvent/source_checks.log": "eb1c8a3e227e1d42c70668a78f2ed70afc56c49d38de186d258172a812f32f55",
+    "research/prime_spectral/verification_2026_10_07_localized_resolvent/tests.log": "4121bf0ae2e4f7390929e8c3c6ee70bd720eff54e44afe04cda8993212bb6d66",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_ground_gaps.json": "f5e8bac2b73f3e50ba65869c2da7d34236230029860e32e540347a51c414d373",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_lower_operator.json": "472296d82876df6beb267d48f1596a731b432cc8e258492d85d03a347987364b",
+    "research/prime_spectral/window_positivity_exp_1p2.json": "e798071a01da0d0844900c2a8436e182165d6de9230a34e1aba277ec427159b5"
+  }
+}

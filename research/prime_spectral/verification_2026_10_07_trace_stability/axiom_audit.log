@@ -1,0 +1,7 @@
+'Reinmann.WeilTraceStability.trace_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilTraceStability.two_minimizer_distance_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilTraceStability.distance_tendsto_zero_of_sq_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.WeilTraceStability.threshold_two_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilTraceStability.threshold_three_gap' depends on axioms: [propext, Classical.choice, Quot.sound]

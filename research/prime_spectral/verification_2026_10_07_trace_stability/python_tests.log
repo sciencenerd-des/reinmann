@@ -1,0 +1,9 @@
+test_full_complement_and_trial_replay (test_trace_stability.ThresholdGapTests.test_full_complement_and_trial_replay) ... ok
+test_invalid_bounds_fail_closed (test_trace_stability.TraceEnclosureTests.test_invalid_bounds_fail_closed) ... ok
+test_signed_quotients (test_trace_stability.TraceEnclosureTests.test_signed_quotients) ... ok
+test_whole_tail_and_quadrature_stability (test_trace_stability.TraceEnclosureTests.test_whole_tail_and_quadrature_stability) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.757s
+
+OK

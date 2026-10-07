@@ -1,0 +1,7 @@
+import Reinmann.WeilTraceStability
+
+#print axioms Reinmann.WeilTraceStability.trace_enclosure
+#print axioms Reinmann.WeilTraceStability.two_minimizer_distance_sq
+#print axioms Reinmann.WeilTraceStability.distance_tendsto_zero_of_sq_bound
+#print axioms Reinmann.WeilTraceStability.threshold_two_gap
+#print axioms Reinmann.WeilTraceStability.threshold_three_gap

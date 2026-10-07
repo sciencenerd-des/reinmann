@@ -1,0 +1,46 @@
+{
+  "status": "scoped_checks_passed",
+  "python_packages": [
+    "python-flint==0.8.0",
+    "mpmath==1.3.0"
+  ],
+  "checks": [
+    "four focused tests passed; signed trace intervals and gap replay",
+    "two lower-operator verifier passes with four independent integral entries each",
+    "two full-operator gap enclosures via written min-max and complement estimates",
+    "targeted Lean build: five theorems, foundational axioms only"
+  ],
+  "limitations": [
+    "written operator, Green, semigroup, and min-max reductions require independent review",
+    "coarse actual trace bound; no tight actual profile interval or nonzero trace certificate",
+    "no quantitative neighborhood radius for gap persistence",
+    "no enlarged positive window, novelty claim, or RH proof"
+  ],
+  "sha256": {
+    "Reinmann/WeilTraceStability.lean": "2a2aa3ce0a94f50bf47dc88755a5fadd276289a563986e65f41aa887d34d3f1c",
+    "Reinmann/WeilTraceStabilityAudit.lean": "d028978cbcfac101293226dc5b47ccb3c323bb90d2a19de6e8b1979d83e435f8",
+    "Reinmann/WeilBoundaryActivation.lean": "c8a165b2c545dd22cd5e34704c39fc51595e2cf2e1c276a4e0d053249334ae69",
+    "Reinmann/WeilRenewalTrace.lean": "337b39946b09c3d24de87fe071f84ec43f7d861ac6948a2171bf8eaa245f96f2",
+    "experiments/prime_spectral/renewal_trace_enclosures.py": "621bc73b781fead2eee8adc876e6b621d110e5f47ef26047328ad87f79afa202",
+    "experiments/prime_spectral/threshold_ground_gap.py": "6be221950a0d63f515fb6885064010c1039e18a6f97364e8bd9ea516b179cc7d",
+    "experiments/prime_spectral/test_trace_stability.py": "e542dfd961f0e9daf3e5e8e92b67645bc7695b9668e7c0976040485839d863db",
+    "experiments/prime_spectral/compact_window_certificate.py": "7738cc9f421bc8bb31fee36fc5343afc6d33e7b579a35c8845fc23e43d4d6737",
+    "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+    "experiments/prime_spectral/weil_matrix.py": "2811a607a16a758b293578efcf37314f3dcafab5b1a47e49d9f095efa9b95211",
+    "experiments/prime_spectral/verify_window_positivity.py": "fced27867e232b9a6fc6abca984315ef2807e77e90e9ecf59c754cab6c3849c4",
+    "research/prime_spectral/window_positivity_exp_1p2.json": "e798071a01da0d0844900c2a8436e182165d6de9230a34e1aba277ec427159b5",
+    "research/prime_spectral/renewal_trace_enclosures_2026_10_07.json": "78ce844cc3a8fe0c5fa36b1e823182b1c74a328e3c730475691a5cde098ca69a",
+    "research/prime_spectral/TRACE_ENCLOSURES_STATE_CONVERGENCE_2026_10_07.md": "bd93ec4cca4694facc7127c858fb8231843cf44356adb4746a82a05f65b7a007",
+    "research/prime_spectral/BOUNDARY_REGULARITY_PRIME_ACTIVATION_2026_10_07.md": "d0f6d3e3a0919fa3102cac4e9d8b6cbaa80b69e1adad63dcfb1f6e965ce56356",
+    "research/prime_spectral/RENEWAL_ENDPOINT_TRACE_2026_10_07.md": "4a64fbc4d288735acf74c4d1d24b42d866704265a30b4bcb2b87993849f284a9",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_ground_gaps.json": "f5e8bac2b73f3e50ba65869c2da7d34236230029860e32e540347a51c414d373",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_lower_operator.json": "472296d82876df6beb267d48f1596a731b432cc8e258492d85d03a347987364b",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_lower_verified.json": "ea0c14f80efaac10953209179f81b4d6938a9b3f9b6eee7e3308c6f2e56c3573",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_three_lower_verified.json": "89df2a9575a2594d8350a228f63da45e2db64a89b8bf699897d4756fc9646df2",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_verify.log": "5df7599d79f2a566675984bf095bae2af7e1c9ed7208a5268c6d4e023a1e2c22",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_three_verify.log": "8caff7640a9d68658893dd00bf6cda17056c0ccbb82a1b3308a0c81380014695",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/python_tests.log": "f5b0b950ce03cc3f76318fe121e2db711899aac552b9bf080a1a734ed14c42fb",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/lean_build.log": "0b520a4f49254155752f672248910c9134d6b90954321d9553fe20b7b50c127d",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/axiom_audit.log": "e87c18f20c533dc97ca8c8fa0f64102cbe03da4a846b030d7b642d28f8c28419"
+  }
+}

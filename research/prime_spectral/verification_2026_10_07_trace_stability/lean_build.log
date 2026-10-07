@@ -1,0 +1,10 @@
+✔ [2513/2514] Built Reinmann.WeilTraceStability (42s)
+ℹ [2514/2514] Built Reinmann.WeilTraceStabilityAudit (37s)
+info: Reinmann/WeilTraceStabilityAudit.lean:3:0: 'Reinmann.WeilTraceStability.trace_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTraceStabilityAudit.lean:4:0: 'Reinmann.WeilTraceStability.two_minimizer_distance_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTraceStabilityAudit.lean:5:0: 'Reinmann.WeilTraceStability.distance_tendsto_zero_of_sq_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Reinmann/WeilTraceStabilityAudit.lean:6:0: 'Reinmann.WeilTraceStability.threshold_two_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTraceStabilityAudit.lean:7:0: 'Reinmann.WeilTraceStability.threshold_three_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2514 jobs).

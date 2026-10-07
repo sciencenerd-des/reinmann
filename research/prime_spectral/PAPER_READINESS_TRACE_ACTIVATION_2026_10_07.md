@@ -1,13 +1,28 @@
 # Readiness decision for a paper on the Weil trace/prime-entry results
 
-Latest boundary-basis continuation: the
+Latest assembled-trial continuation: the
+[full-residual note](ASSEMBLED_TRIAL_FULL_RESIDUAL_2026_10_07.md) now gives
+actual unit operator-domain trials with certified norms, Rayleigh values,
+nonzero trial traces and full L2/Linfinity residual enclosures. A certified
+omitted-mode residual component proves that these trials fail the existing
+nonzero minimizing-state trace interface. Stronger full threshold gaps
+reduce the prime-3 residual budget difficulty by about 670 times. No
+nonzero minimizing-state trace or larger positive window is proved.
+The cutoff estimates also supply an explicit fixed-trace family whose
+actual L2 graph norm tends to zero: even full L2 residual convergence
+with a spectral gap does not ensure trial-trace convergence. A uniform
+stronger forcing estimate remains necessary. General trace unboundedness
+is not asserted to be novel.
+The novel-paper decision remains not cleared.
+
+Earlier boundary-basis continuation: the
 [exact-trace trial and full-residual note](BOUNDARY_BASIS_RESIDUAL_TRACE_2026_10_07.md)
 now supplies a calibrated renewal quadrature, an operator-domain Green
 basis with known traces, and a linear certificate interface using full
 L2 and Linfinity residuals. Two changed-discretization Arb runs agree.
 The absolute endpoint-trace envelopes for both actual minimizing states
 improve to 4336 near prime 2 and 41395 near prime 3. No assembled unit
-trial has yet cleared a residual budget; no tight signed or nonzero
+trial has cleared the trace residual budget; no tight signed or nonzero
 actual trace interval has been certified. Four additional Lean scalar
 implications compile with foundation axioms only. These calculations
 do not change the novelty/readiness decision, and no paper is drafted.

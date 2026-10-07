@@ -1,0 +1,12 @@
+Reinmann/WeilTrialResidual.lean: no admitted theorem or new axiom declaration
+Reinmann/WeilTrialResidualAudit.lean: no admitted theorem or new axiom declaration
+Five named Lean theorems: foundation axioms only
+assembled_trials.json: all recorded source/dependency hashes match
+all_entry_reassembly.json: all recorded source/dependency hashes match
+closer_prime_three_lower.json: all recorded source/dependency hashes match
+All-entry reassembly witness hash matches
+research/prime_spectral/ASSEMBLED_TRIAL_FULL_RESIDUAL_2026_10_07.md: local Markdown link targets exist
+research/prime_spectral/verification_2026_10_07_assembled_trial/README.md: local Markdown link targets exist
+research/prime_spectral/PAPER_READINESS_TRACE_ACTIVATION_2026_10_07.md: local Markdown link targets exist
+Coverage correction: exp(1.6094) in (4.9998104414,4.9998104415); log(5)-1.6094 in (0.0000379,0.0000380)
+New Python sources compiled with py_compile

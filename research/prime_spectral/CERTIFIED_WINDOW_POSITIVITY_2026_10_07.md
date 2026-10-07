@@ -11,14 +11,16 @@ FLINT/Arb ball arithmetic throughout. They are computer-assisted proofs,
 |---|---|---|---|---|---|---|
 | 1.16 | 3.190 | 2, 3 | 3.901e-9 | 4.33e-9 / 1.53e-6 | 100, 140 | 32 s |
 | 1.6 | 4.953 | 2, 3, 4 | **9.279e-18** | 1.031e-17 / 1.142e-14 | 200, 300 | 638 s |
-| 1.6094 | 4.9976 | 2, 3, 4 | **6.921e-18** | 7.69e-18 / 6.84e-15 | 300, 420 | 2553 s |
+| 1.6094 | 4.9998104414 | 2, 3, 4 | **6.921e-18** | 7.69e-18 / 6.84e-15 | 300, 420 | 2553 s |
 
 The certificates are `window_positivity_L1.16.json`, `window_positivity_L1.6.json`
 and `window_positivity_L1.6094.json` in this directory. All three were made by
 `experiments/prime_spectral/window_positivity_certificate.py` (SHA-256 `88a08abf10e6…`).
 Each keeps 90% of the reduced-form minimum as certified margin. Since
-`1.6094 < log 5`, the last row covers **every window that does not contain the
-prime 5**. Run time is dominated by direct Bessel evaluation, and a segmented
+`1.6094 < log 5`, the last row covers windows up to
+`C = exp(1.6094) = 4.9998104414...`. It does not cover the remaining interval
+`exp(1.6094) < C < 5` or the threshold `C = 5`.
+Run time is dominated by direct Bessel evaluation, and a segmented
 recurrence would cut it about 10×.
 
 Positivity on one window implies it on every shorter window. The Weil
@@ -32,7 +34,7 @@ any multiplicative interval of length `≤ C` is covered.
 | Yoshida 1992; Connes–Consani 2021 | `C = 2` | refereed |
 | Zhu, [arXiv:2608.24827v2](https://arxiv.org/abs/2608.24827) | `C = e^{1.6} ≈ 4.95` | certified (mpmath), unrefereed |
 | V. Liu, [alphaXiv](https://www.alphaxiv.org/abs/2609.weil-positivity-riemann-zeta-bounds) | `C = e² ≈ 7.39` (`2^-151`); `C ≈ 8.37` (`2^-49162`) | claimed; under review |
-| **this note** | `C ≈ 4.9976`, i.e. every window not containing 5 | Arb certificates |
+| **this note** | `C = exp(1.6094) ≈ 4.9998104414 < 5` | Arb certificates |
 
 What this adds:
 

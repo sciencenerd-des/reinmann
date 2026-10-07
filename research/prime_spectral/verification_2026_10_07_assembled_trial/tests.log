@@ -1,0 +1,11 @@
+test_actual_trial_record_and_unavoidable_trace_gate_failure (test_assembled_trial.AssembledTrialTests.test_actual_trial_record_and_unavoidable_trace_gate_failure) ... ok
+test_fail_closed_trial_inputs (test_assembled_trial.AssembledTrialTests.test_fail_closed_trial_inputs) ... ok
+test_fixed_trace_with_small_full_graph_norm (test_assembled_trial.AssembledTrialTests.test_fixed_trace_with_small_full_graph_norm) ... ok
+test_full_gap_witnesses_and_all_entry_reassembly (test_assembled_trial.AssembledTrialTests.test_full_gap_witnesses_and_all_entry_reassembly) ... ok
+test_outside_mode_is_not_a_projected_residual_upper_bound (test_assembled_trial.AssembledTrialTests.test_outside_mode_is_not_a_projected_residual_upper_bound) ... ok
+test_saved_probe_repeats_in_a_larger_test_space (test_assembled_trial.AssembledTrialTests.test_saved_probe_repeats_in_a_larger_test_space) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.600s
+
+OK

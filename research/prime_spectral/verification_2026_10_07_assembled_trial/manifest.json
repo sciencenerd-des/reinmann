@@ -1,0 +1,72 @@
+{
+  "base_commit": "26f2275ab8a1a765e1fbb895afc9eeec473f6216",
+  "date": "2026-10-07",
+  "checks": [
+    "Actual assembled norm, Rayleigh and full L2/Linfinity residual enclosures, including a certified omitted-mode lower bound",
+    "Full complementary clearances 0.055579 and 0.000004016 enclosed",
+    "All 16000 lower-block entries compared at alternate orders and 512 bits, and stronger full-gap witnesses replayed",
+    "Six numerical tests passed",
+    "Five named scalar Lean theorems built and audited: foundation axioms only",
+    "Python compilation, local links, source hashes and scalar large-window coverage correction checked"
+  ],
+  "written_mathematical_results": [
+    "Logarithmic cutoff commutator estimate and full L2 tail bounds",
+    "Actual normalized renewal-repaired trial construction with known nonzero trial traces",
+    "Certified failure of the sufficient nonzero minimizing-state trace interface for these particular trials",
+    "Fixed nonzero trace with vanishing actual L2 graph norm; graph-convergent Rayleigh/residual trials need not have convergent traces"
+  ],
+  "formal_scope": "Scalar consequences of named analytic hypotheses; actual operator-domain, comparison, renewal and graph-vanishing facts remain written proofs.",
+  "limitations": [
+    "These trials do not certify a tight or nonzero actual minimizing-state trace",
+    "Full residual upper bounds are conservative; the sufficient-interface failure is independently forced by a lower bound",
+    "No explicit moving-window trace-convergence rate or gap-persistence radius",
+    "No enlarged positive window, RH proof, or novelty clearance",
+    "The older exp(1.6094) large certificate was not replayed here; only its scalar endpoint/coverage summary was corrected"
+  ],
+  "primary_sources_compared": [
+    "https://arxiv.org/pdf/1107.0745",
+    "https://arxiv.org/html/2401.18033v2"
+  ],
+  "sha256": {
+    "Reinmann/WeilTrialResidual.lean": "99b9a667cc15b0bd8f92b22f43f55bbc86b67af15283ec80b4e1c1ca15391abd",
+    "Reinmann/WeilTrialResidualAudit.lean": "4296eb647b4297fed2492bcddad208979e1af364054494aae4b4348a0e2b841f",
+    "Reinmann/WeilResidualTrace.lean": "f3fb0be66752e5c6440468bcf4ec0a53fcf227c574c437ca55f2ec342adc9231",
+    "Reinmann/WeilTraceStability.lean": "2a2aa3ce0a94f50bf47dc88755a5fadd276289a563986e65f41aa887d34d3f1c",
+    "Reinmann/WeilRenewalTrace.lean": "337b39946b09c3d24de87fe071f84ec43f7d861ac6948a2171bf8eaa245f96f2",
+    "experiments/prime_spectral/assembled_trial_certificate.py": "ad3134b1b0efb3c045e4bfad53af4818d598c0a009c879551625e26e38ce2325",
+    "experiments/prime_spectral/test_assembled_trial.py": "a93e1109b624fc4d1bd22fba96686e2b651c58c534a16bacaf50a937540e3dd2",
+    "experiments/prime_spectral/compact_window_certificate.py": "7738cc9f421bc8bb31fee36fc5343afc6d33e7b579a35c8845fc23e43d4d6737",
+    "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+    "experiments/prime_spectral/weil_matrix.py": "2811a607a16a758b293578efcf37314f3dcafab5b1a47e49d9f095efa9b95211",
+    "experiments/prime_spectral/threshold_ground_gap.py": "6be221950a0d63f515fb6885064010c1039e18a6f97364e8bd9ea516b179cc7d",
+    "experiments/prime_spectral/reassemble_threshold_gaps.py": "ee26ed0c21db330977e7a4904bafeb51ed88572fe374973d54aa2bb1045eb5da",
+    "experiments/prime_spectral/residual_endpoint_certificate.py": "5a93adf4cfcdc73fd23786b40babd4ba3410f5008b0d767878fbfd5c23ef82ea",
+    "experiments/prime_spectral/renewal_boundary_basis.py": "13895e7c851c262af66df69a10c346712ac839d065c66359ac263b911d0b9bfd",
+    "experiments/prime_spectral/renewal_trace_enclosures.py": "621bc73b781fead2eee8adc876e6b621d110e5f47ef26047328ad87f79afa202",
+    "research/prime_spectral/ASSEMBLED_TRIAL_FULL_RESIDUAL_2026_10_07.md": "5f08ed03c95dff6f09a355d3c61f13e8df350fa43ab3a39c2279fc4380fa62b7",
+    "research/prime_spectral/PAPER_READINESS_TRACE_ACTIVATION_2026_10_07.md": "49d0fbbb49e4a76153f3979e280b0de119f9b4c159d4c071ae8dc98a06b4b70d",
+    "research/prime_spectral/CERTIFIED_WINDOW_POSITIVITY_2026_10_07.md": "9dd0a76b2d37c1e0c6947788517c22ddce9c512324d509c72c2fd179e203fc0f",
+    "research/prime_spectral/BOUNDARY_BASIS_RESIDUAL_TRACE_2026_10_07.md": "61857a5673741db5af95803af9928e15a20152c8a51075d37335fa073ab12e65",
+    "research/prime_spectral/WINDOW_POSITIVITY_PROOF_2026_10_07.md": "9f1f2daed745766754fe89205bedb4cc483a17a46e474528cabaaf175309834d",
+    "research/prime_spectral/BOUNDARY_REGULARITY_PRIME_ACTIVATION_2026_10_07.md": "d0f6d3e3a0919fa3102cac4e9d8b6cbaa80b69e1adad63dcfb1f6e965ce56356",
+    "research/prime_spectral/RENEWAL_ENDPOINT_TRACE_2026_10_07.md": "4a64fbc4d288735acf74c4d1d24b42d866704265a30b4bcb2b87993849f284a9",
+    "research/prime_spectral/TRACE_ENCLOSURES_STATE_CONVERGENCE_2026_10_07.md": "bd93ec4cca4694facc7127c858fb8231843cf44356adb4746a82a05f65b7a007",
+    "research/prime_spectral/WEIL_LOG_FORM_CORE_2026_10_07.md": "a09086a2717ceee6e0c335fe386ce055c9d06c087a97288e8ebee256f45f5797",
+    "research/prime_spectral/renewal_trace_enclosures_2026_10_07.json": "78ce844cc3a8fe0c5fa36b1e823182b1c74a328e3c730475691a5cde098ca69a",
+    "research/prime_spectral/window_positivity_L1.6094.json": "ebb0aa0f108850d6206f428aa11130e150ecfa991528ed0bf49adbf7cfb982c5",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_ground_gaps.json": "f5e8bac2b73f3e50ba65869c2da7d34236230029860e32e540347a51c414d373",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_lower_operator.json": "472296d82876df6beb267d48f1596a731b432cc8e258492d85d03a347987364b",
+    "research/prime_spectral/verification_2026_10_07_boundary_basis/renewal_basis.json": "2279a9305b10db343d5393850645a9f9ba7ce7f54702decab0322f177f61e308",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/README.md": "98b803aeb0e5048b79113f6eb0c903f2232e883f4b2019f3ed1fd4784d61e90f",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/all_entry_reassembly.json": "11cdbfb93bb400a82da60cf1e4eb91079d13d8c8fafa8bdb3e9ca8f8c68199ec",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/assemble_generate.log": "ff1dcf61925ca2b694d67849598cf51fecbf501ddf9a16c8e21e8e3b67091ecc",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/assembled_trials.json": "c84d55f44bf8bd36719e630a490de76cb6fead810933a1d9c4fe3f47364df14e",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/closer_gap_generate.log": "e4a1186dbd8d795b02ac99ba46f893086ff262b8c28009ea3e0fee7707200af4",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/closer_prime_three_lower.json": "db18bfe31bf94a664b4ad7c8233ad09c1607872f6780c81d9b39a3d05174bc99",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/lean_build.log": "ea26efe9a0e22aa0d21743252b15802bf3c12c27acf7ba7a15613454c13d96f7",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/reassembly.log": "c6f83efe3f45f9b34ca5dad74c81003a7102d8da940bdf2c28a00537f543d917",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/source_checks.log": "e0beafea9084fad57ffc36d62997f75575d1114e1f849b6fdd316c3e7b5ddc81",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/tests.log": "e36eb7f33ddb20756d773346c2847b8dc6c2682419d08cf34c20b255f0ebf187",
+    "research/prime_spectral/verification_2026_10_07_assembled_trial/threshold_ground_gaps.json": "8626247161b771b47016fc8755d5bd162f7b3e9f495eefa705cbf758d7bf5514"
+  }
+}

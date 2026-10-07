@@ -1,0 +1,8 @@
+✔ [2515/2516] Built Reinmann.WeilTrialResidual (49s)
+ℹ [2516/2516] Built Reinmann.WeilTrialResidualAudit (27s)
+info: Reinmann/WeilTrialResidualAudit.lean:3:0: 'Reinmann.WeilTrialResidual.full_residual_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTrialResidualAudit.lean:4:0: 'Reinmann.WeilTrialResidual.exact_trial_trace_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTrialResidualAudit.lean:5:0: 'Reinmann.WeilTrialResidual.trace_gate_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTrialResidualAudit.lean:6:0: 'Reinmann.WeilTrialResidual.positive_form_rayleigh_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilTrialResidualAudit.lean:7:0: 'Reinmann.WeilTrialResidual.fixed_trace_graph_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2516 jobs).

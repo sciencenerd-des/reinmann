@@ -1,0 +1,25 @@
+{
+  "status": "stronger_full_gap_witnesses_from_actual_trial_upper_bounds",
+  "results": [
+    {
+      "threshold_prime": 2,
+      "lower_operator_input": "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_lower_operator.json",
+      "lower_operator_sha256": "472296d82876df6beb267d48f1596a731b432cc8e258492d85d03a347987364b",
+      "shift": "57/1000",
+      "trial_ground_eigenvalue_upper": {
+        "lo": "418822187949234187/295147905179352825856",
+        "hi": "6701155007378080383/4722366482869645213696"
+      }
+    },
+    {
+      "threshold_prime": 3,
+      "lower_operator_input": "research/prime_spectral/verification_2026_10_07_assembled_trial/closer_prime_three_lower.json",
+      "lower_operator_sha256": "db18bfe31bf94a664b4ad7c8233ad09c1607872f6780c81d9b39a3d05174bc99",
+      "shift": "103/25000000",
+      "trial_ground_eigenvalue_upper": {
+        "lo": "7935206899753293301/77371252455336267181195264",
+        "hi": "7935206900079509375/77371252455336267181195264"
+      }
+    }
+  ]
+}

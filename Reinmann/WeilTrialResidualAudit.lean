@@ -1,0 +1,7 @@
+import Reinmann.WeilTrialResidual
+
+#print axioms Reinmann.WeilTrialResidual.full_residual_lower
+#print axioms Reinmann.WeilTrialResidual.exact_trial_trace_interval
+#print axioms Reinmann.WeilTrialResidual.trace_gate_obstruction
+#print axioms Reinmann.WeilTrialResidual.positive_form_rayleigh_change
+#print axioms Reinmann.WeilTrialResidual.fixed_trace_graph_obstruction

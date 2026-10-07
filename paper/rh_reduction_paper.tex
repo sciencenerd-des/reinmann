@@ -17,6 +17,9 @@
 
 % Robust verbatim-ish identifier macro that tolerates underscores.
 \newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+% Long Lean identifiers: prefer stretched lines over overfull boxes.
+\setlength{\emergencystretch}{3em}
+\sloppy
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
@@ -40,7 +43,9 @@
 Pólya--Frequency Positivity of the $\xi$ Taylor Coefficients}
 
 \author{Biswajit Mondal\thanks{Corresponding author: \texttt{b.mondal0000@gmail.com}}}
-\date{June 7, 2026}
+\date{Version 1.0.0 --- October 7, 2026\\[2pt]
+\small (updates the draft of June 7, 2026)\quad
+DOI: \href{https://doi.org/10.5281/zenodo.20574510}{10.5281/zenodo.20574510}}
 
 \begin{document}
 \maketitle
@@ -50,27 +55,31 @@ We present a formally verified study, in Lean~4 / Mathlib, of the
 Laguerre--Pólya / total-positivity approach to the Riemann Hypothesis (RH).
 \textbf{We do not prove RH.} We prove a chain of \emph{conditional reductions},
 each checked by the Lean kernel and depending only on the foundational axioms
-$\{\mathsf{propext},\allowbreak \mathsf{Classical.choice},\allowbreak \mathsf{Quot.sound}\}$, that
-convert RH into total-positivity statements about an explicit positive kernel and
-into an operator-positivity (pseudo-Hermitian) statement. Our central result is a
-\emph{tightness theorem}: modulo three classical, machine-uncertified but standard
-inputs (Pólya--Jensen, Aissen--Schoenberg--Whitney/Edrei, and the Laguerre--Pólya
-closure), RH is \emph{equivalent} to total positivity of the Toeplitz matrix of the
-sign-normalized $\xi$ Taylor coefficients. Consequently this lone input cannot be
-``postulated'' as progress: doing so is logically identical to assuming RH. Along
-the way we identify and repair a target-function error (building the program on the
-entire completed zeta $\Lambda_0$, whose zeros are \emph{not} the Riemann zeros,
-rather than on Riemann's $\xi$). We complement the formal results with an
-unusually extensive high-precision computation: the $\xi$ Taylor coefficients
-$b_0,\dots,b_{120}$ (with $|b_{120}|\approx10^{-449}$), cross-certified to over
-$230$ significant digits, verify the reduction's premise at scale---all
-contiguous Toeplitz (Pólya-frequency) minors up to order $16$ are strictly
-positive across all offsets, the order-$2$ sequence is log-concave for all
-$n\le118$, and all Jensen polynomials of degree $\le6$ are hyperbolic up to
-$n=114$. This range substantially exceeds the order-$2$ (Turán) and modest-degree
-Jensen checks common in the literature, and localizes the open content to
-\emph{uniformity}. The development comprises $47$ Lean modules verified by a
-discipline that rejects \texttt{sorry} and added axioms.
+$\{\mathsf{propext},\allowbreak \mathsf{Classical.choice},\allowbreak \mathsf{Quot.sound}\}$.
+They convert RH into total-positivity statements about an explicit positive kernel and
+into an operator-positivity (pseudo-Hermitian) statement. The central formal statement is a
+\emph{tightness theorem}. Assume three classical inputs that are not machine-checked
+here (Pólya--Jensen, Aissen--Schoenberg--Whitney/Edrei and the Laguerre--Pólya
+closure) and the classical converse. Then RH is \emph{equivalent} to total positivity of the
+Toeplitz matrix of the sign-normalized $\xi$ Taylor coefficients. The equivalence
+itself is classical; it is stated explicitly for $\xi$ by Katkova. Our contribution is a
+machine-checked form with every external input named. It makes precise that
+the lone open input cannot be ``postulated'' as progress: doing so is logically
+identical to assuming RH. Along the way we identify and repair a target-function
+error. The error was building the program on Mathlib's entire completed zeta $\Lambda_0$,
+whose zeros are \emph{not} the Riemann zeros, rather than on Riemann's $\xi$. We
+also record a moment-determinant ladder, a Turán-to-Jensen lemma in degree two,
+and an independent pseudo-Hermitian reduction. Numerically, we start from
+rigorous FLINT/Arb enclosures of the coefficients $\mu_0,\dots,\mu_{120}$. In ball
+arithmetic, we certify that all $1816$ contiguous Toeplitz minors of order $\le16$
+in this range are strictly positive. We also certify that $(\mu_n)$ is strictly log-concave for
+$n\le118$. These are consistency checks against known theorems, not new
+positivity results; the known theorems are Katkova's finite-order Pólya-frequency theorem,
+the Csordas--Norfolk--Varga Turán inequalities and a recent proof of infinite
+log-concavity. The open content is \emph{uniformity} in the order. This
+version updates the June 2026 draft. It certifies the numerics, corrects their
+positioning against the literature, and points to an archived, axiom-audited Lean
+release.
 \end{abstract}
 
 \tableofcontents
@@ -81,11 +90,37 @@ discipline that rejects \texttt{sorry} and added axioms.
 not a proof of the Riemann Hypothesis, and it makes no claim to be one. Every
 implication labelled ``verified'' is checked mechanically; every classical theorem
 we rely upon but do not formalize is cited explicitly as an \emph{external input}
-and is never silently assumed. The defensible contributions are: (i) a correct,
-machine-checked, and \emph{tight} reduction of RH to a single sign-correct
-positivity statement; (ii) the identification and repair of a target-function
-error; (iii) an independent operator-positivity reduction; and (iv) reproducible
-numerical evidence delimiting the open frontier.
+and is never silently assumed. The defensible contributions are:
+\begin{enumerate}
+  \item a correct, machine-checked and \emph{tight} formal version of the classical
+    reduction of RH to a single sign-correct positivity statement;
+  \item the identification and repair of a target-function error that arises
+    naturally when working with Mathlib's completed zeta;
+  \item an independent operator-positivity reduction;
+  \item reproducible, ball-arithmetic consistency checks of the reduction's premise
+    in a finite range.
+\end{enumerate}
+We do not claim that the equivalence, the Turán inequalities or finite-order
+Pólya-frequency positivity of the $\xi$ coefficients are new; see
+Section~\ref{sec:related}.
+
+\paragraph{Version history and relation to later work.} This manuscript was
+drafted in June 2026 (reserved DOI \texttt{10.5281/zenodo.20574510}) and is
+released here as version~1.0.0. Version~1.0.0 makes four changes:
+\begin{enumerate}
+  \item it replaces two-precision floating cross-checks with ball-arithmetic
+    certification (Section~\ref{sec:numerics});
+  \item it removes earlier claims that the computation exceeded what is known;
+    Katkova's theorem already yields nonnegativity of every minor of order
+    $\le 43$;
+  \item it records that frontier item~C of the June draft is settled in the
+    literature;
+  \item it ties every cited Lean theorem to an archived commit.
+\end{enumerate}
+The subsequent development is reported separately. A formalized Fekete-type
+closure from strict contiguous minors to full Pólya-frequency positivity, together
+with effective and Jensen receptor interfaces, appears in~\cite{Mondal2026TwoRoutes}.
+An independent prime-defined Weil-form programme appears in~\cite{Mondal2026Weil}.
 
 \paragraph{The object.} Riemann's entire $\xi$ function
 \begin{equation}\label{eq:xi}
@@ -111,7 +146,14 @@ and we set the \emph{sign-normalized sequence} $\mu_n := (-1)^n b_n$.
   $\gamma,\alpha_i,\beta_j\ge 0$; for an entire generating function this is exactly
   Laguerre--Pólya membership.
 \end{itemize}
-Together: \emph{RH $\iff (\mu_n)$ is a Pólya-frequency sequence.}
+Together: \emph{RH $\iff (\mu_n)$ is a Pólya-frequency sequence.} This
+consequence is classical; Katkova~\cite{Katkova2007} states it explicitly for
+$\xi_1(z)=\xi(\tfrac12+\sqrt z)=\sum_n\mu_n z^n$. She also proves that $(\mu_n)$ is a
+Pólya-frequency sequence of every finite order up to an explicit bound, using a
+zero-free sector theorem of Schoenberg. Her printed proof gives order $43$, while her
+statement gives $44$; we use $43$. Here $\mu_n$ coincides with Katkova's
+coefficients and with $\lambda_n=\xi^{(2n)}(\tfrac12)/(2n)!$
+of~\cite{LiuMao2026}.
 
 \paragraph{Pólya's positive kernel.} By Pólya's representation~\cite{Polya1926},
 $\Xib(t) = 2\int_0^\infty \Phi(u)\cos(ut)\,du$ with $\Phi>0$, so
@@ -125,7 +167,7 @@ $\Xib(t) = 2\int_0^\infty \Phi(u)\cos(ut)\,du$ with $\Phi>0$, so
 
 We record an error and its repair, because catching it is part of the
 contribution. Mathlib's \emph{entire} completed zeta
-$\Lambda_0=\code{completedRiemannZeta₀}$ satisfies
+$\Lambda_0=\texttt{completedRiemannZeta}\textsubscript{\texttt{0}}$ satisfies
 $\Lambda = \code{completedRiemannZeta} = \Lambda_0 - 1/s - 1/(1-s)$.
 
 \begin{proposition}[Wrong target]\label{prop:wrong}
@@ -158,7 +200,7 @@ corrected $\xi$.
 
 Throughout, ``verified'' means the Lean theorem reduces to
 $\{\mathsf{propext},\mathsf{Classical.choice},\mathsf{Quot.sound}\}$, confirmed by
-\code{#print axioms}. Definitions of type \texttt{Prop} that encode classical
+\texttt{\#print axioms}. Definitions of type \texttt{Prop} that encode classical
 theorems we do not formalize are \emph{named external inputs}; they are never
 asserted, only taken as explicit hypotheses.
 
@@ -199,10 +241,12 @@ Given the three classical bridges and the classical converse,
 \end{theorem}
 
 \begin{remark}[The honesty linchpin]
-Theorem~\ref{thm:tight} shows the lone non-classical input is \emph{equivalent} to
+Theorem~\ref{thm:tight} is the classical equivalence~\cite{Polya1927,ASW1952,Edrei1953,Katkova2007}
+in machine-checked form. Its value is not mathematical novelty. It mechanically pins down
+the one hypothesis that is not classical, and shows that this input is \emph{equivalent} to
 RH. Hence declaring it an axiom is logically identical to
 \texttt{axiom rh : RiemannHypothesis}: it does not constitute a proof, and
-\code{#print axioms} would expose the assumption. A reduction is progress only if
+\texttt{\#print axioms} would expose the assumption. A reduction is progress only if
 its hypothesis is \emph{weaker than, or independent of}, RH; this one is provably
 neither.
 \end{remark}
@@ -251,6 +295,11 @@ auxiliary lemma \code{im_zero_of_sq_eq_nonneg_real} ($w^2 = D\in\R_{\ge0}
 real) $\im z = 0$. No square roots and no zero-locus input are used.
 \end{proof}
 Nondegeneracy $b_{n+2}\neq0$ is supplied by~\eqref{eq:moments} ($M_n>0$).
+The analytic input is classical. Csordas, Norfolk and Varga~\cite{CNV1986} proved
+Pólya's conjectured Turán inequalities for the $\xi$ coefficients. Dimitrov and
+Lucas~\cite{DimitrovLucas2011} proved the higher-order (degree-$3$) Turán
+inequalities without assuming RH. Theorem~\ref{thm:jensen2} is the formal bridge
+from such inequalities to hyperbolicity, not a new inequality.
 
 \subsection{An independent operator-positivity route}
 
@@ -279,35 +328,58 @@ or boundedness---so this route is genuinely independent of the symmetric one.
 Existence of $(E,T,\eta)$ with positive $\eta$ and the prescribed spectrum is open.
 \end{proof}
 
-\section{Numerical evidence}\label{sec:numerics}
+\section{Numerical consistency checks}\label{sec:numerics}
 
-We computed the $\xi$ Taylor coefficients $b_0,\dots,b_{120}$ (hence $\mu_n$) by a
-numerically stable Cauchy-circle extraction and \emph{cross-certified} them at two
-working precisions ($620$ and $520$ digits, distinct contour radii): all
-coefficients agree to at least $236$ significant digits over the whole range, with
-$|b_{120}|\approx10^{-449}$. Analysis (minors, roots) is carried out at $120$
-digits. Code: \code{scripts/rh_report_figures.py} (mpmath). Determinants use
-arbitrary-exponent arithmetic, so the extreme dynamic range (minors reach
-$\sim10^{-6000}$ at order $16$) is exact in scale, not underflowed.
+\paragraph{Coefficient enclosures.} The coefficients $\mu_0,\dots,\mu_{120}$ are
+enclosed by rigorous balls computed with FLINT/Arb~\cite{Johansson2017}
+(python-flint~0.8.0, $4096$ working bits). The computation uses series for the
+special functions in $\xi$, with explicit analytic remainders. Every enclosure has relative
+accuracy of at least $2317$ bits and exact rational endpoints. The first nine
+coefficients agree with an independent theta-integral enclosure. Data and generator are in
+\code{research/certified_xi/coefficients_120.json} (SHA-256
+\texttt{adf3418d\ldots63b11}) of the archived release. The June draft instead used two
+floating-point Cauchy-contour computations ($620$ and $520$ digits), which agree
+to $\ge236$ digits. That is a consistency check, not an enclosure, and is superseded here.
 
-\paragraph{Scale of the verification.} Within the certified range we find: (i)
-$\mu_n>0$ for all $n\le120$; (ii) the order-$2$ Turán inequality, indeed strict
-log-concavity $\mu_{n+1}^2>\mu_n\mu_{n+2}$, for all $n\le118$; (iii)
-\emph{every} contiguous Toeplitz (Pólya-frequency) minor of order $k\le16$, at all
-offsets, is strictly positive; (iv) every Jensen polynomial of degree $d\le6$ is
-hyperbolic for all $n\le114$ (worst observed $|\im\,\text{root}|\sim10^{-320}$,
-i.e.\ numerical zero). To our knowledge this is the most extensive direct
-verification of the full Toeplitz/PF total-positivity ladder for $\xi$ reported to
-date; prior numerical work centres on the order-$2$ (Turán) inequalities and
-moderate-degree Jensen hyperbolicity.
+\paragraph{Certified claims.} The script \code{paper/certify_reduction_minors.py}
+works at $8192$ bits. It certifies in ball arithmetic, so that each output ball lies
+strictly in $(0,\infty)$:
+\begin{enumerate}
+  \item[(i)] $\mu_n>0$ for $0\le n\le120$;
+  \item[(ii)] strict log-concavity $\mu_{n+1}^2>\mu_n\mu_{n+2}$ for $0\le n\le118$;
+  \item[(iii)] every contiguous zero-extended Toeplitz minor
+  $\det[\mu_{m+i-j}]_{i,j<k}$ with $1\le k\le16$ and $m+k-1\le120$ is strictly
+  positive. These are $1816$ minors, and the largest relative radius of a determinant
+  ball is $6.5\times10^{-669}$, at $k=16$, $m=105$.
+\end{enumerate}
+The certificate output, including the input hash, is stored in
+\code{paper/rh_reduction_minor_certificate.json}. The trust boundary is FLINT/Arb
+together with the classical identities behind the enclosures. These are not Lean
+certificates. Claim~(iv) of the June draft, Jensen hyperbolicity for $d\le6$ and
+$n\le114$, was a floating-point root computation and remains uncertified. We report
+it only as a floating-point observation.
+
+\paragraph{What the checks do and do not show.} Nonnegativity in (iii) is already a
+theorem: Katkova's finite-order result covers every minor of order $\le43$, at
+every index~\cite{Katkova2007}. Claim~(ii) is a special case of the infinite
+log-concavity of $(\mu_n)$ proved in~\cite{LiuMao2026}. That proof is a preprint and is
+computer-assisted. For Jensen polynomials, hyperbolicity is known for $d\le3$ at
+every shift~\cite{CNV1986,DimitrovLucas2011}, and for every fixed $d$ at all
+sufficiently large shifts~\cite{GORZ2019,GORTTW}. The computations above are
+therefore calibration of conventions and margins: strictness with explicit
+error control in a finite range. They are not discoveries of previously unknown
+positivity. The figures below were produced in June from the floating-point
+coefficients. These agree with the midpoints of the certified balls to relative
+error below $5\times10^{-115}$ for every $n\le120$, far below plotting resolution.
 
 \begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig1_coefficients.png}
   \caption{$\xi$ Taylor data to record depth. (a) $|b_n|$ for $n\le120$ on a log
   scale, decaying factorially to $|b_{120}|\approx10^{-449}$; the alternating sign
   of $b_n$ gives $\mu_n=(-1)^n b_n>0$ (order-$1$ minors, forced by $\Phi>0$).
-  (b) Cross-precision certification: every $b_n$ agrees to $\ge236$ significant
-  digits between the two independent computations.}
+  (b) June 2026 cross-precision consistency check: every $b_n$ agrees to $\ge236$
+  significant digits between two floating-point computations. This check is superseded
+  by the ball enclosures of Section~\ref{sec:numerics}.}
   \label{fig:coeff}
 \end{figure}
 
@@ -325,8 +397,9 @@ moderate-degree Jensen hyperbolicity.
 \begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig3_toeplitz_minors.png}
   \caption{The Pólya-frequency ladder at scale. (a) $\log_{10}\det[\mu_{m+i-j}]$ for
-  orders $k=1,\dots,16$ and all offsets $m$ (values span down to $\sim10^{-6000}$):
-  \emph{every minor is strictly positive}---the smallness is factorial scale, not
+  orders $k=1,\dots,16$ and all offsets $m$ (values span down to $\sim10^{-6000}$).
+  \emph{Every minor is strictly positive}, as certified in ball arithmetic
+  (Section~\ref{sec:numerics}); the smallness is factorial scale, not
   near-degeneracy. (b) Scale-normalized principal minors $\det_k/\mu_m^{\,k}$ remain
   positive at every order up to $16$.}
   \label{fig:minors}
@@ -335,17 +408,18 @@ moderate-degree Jensen hyperbolicity.
 \begin{figure}[H]\centering
   \includegraphics[width=\linewidth]{fig4_jensen_hyperbolic.png}
   \caption{Jensen hyperbolicity at scale. (a) $\max|\im(\text{root})|$ of $J_{d,n}$
-  for degrees $d=2,\dots,6$ is numerical zero ($\sim10^{-320}$) across all computed
-  $n$ up to $114$. (b) Sample Jensen roots lie on the real axis.}
+  for degrees $d=2,\dots,6$ is numerically zero ($\sim10^{-320}$) across all computed
+  $n$ up to $114$. (b) Sample Jensen roots lie on the real axis. These are floating-point
+  observations, not certified.}
   \label{fig:jensen}
 \end{figure}
 
 \paragraph{Interpretation.} The reduction's premise holds for $\xi$ at every tested
 order (Fig.~\ref{fig:minors}), with comfortable low-order margins
-(Fig.~\ref{fig:turan}); indeed $\mu$ is empirically log-concave, strictly stronger
-than the slack-relaxed Turán requirement. The difficulty is therefore
-\emph{uniformity}---behaviour as $k\to\infty$ and $n\to\infty$---not any specific
-low rung.
+(Fig.~\ref{fig:turan}). As the known theorems predict, $\mu$ is log-concave, which is
+strictly stronger than the slack-relaxed Turán requirement. Any fixed low rung is
+settled. The difficulty is \emph{uniformity}: behaviour as $k\to\infty$, together with
+the shifts not covered by~\cite{Michalowski2026wedge}.
 
 \section{The open frontier}\label{sec:frontier}
 
@@ -354,30 +428,62 @@ explicit positive kernel $\Phi$ and an explicit operator metric---objects amenab
 to tools foreign to zero-counting.
 \begin{description}
   \item[A. Uniform total positivity.] Prove $\det[\mu_{m+i-j}]\ge0$ for all $k,m$.
-  Tools: Karlin total positivity~\cite{Karlin1968}; Schoenberg Pólya-frequency
-  \emph{functions}; the variation-diminishing property of the kernel in
-  $\sum\mu_n z^n = \int_0^\infty \Phi(u)\cosh(u\sqrt z)\,du$. (RH-equivalent, by
-  Theorem~\ref{thm:tight}.)
+  This is RH-equivalent, by Theorem~\ref{thm:tight}. Every \emph{fixed} order up to
+  $43$ is classical~\cite{Katkova2007}. A recent preprint claims strict positivity
+  of every contiguous minor of order $r\ge2$ at all shifts $m\ge10^{18}r^3$, using
+  certified saddle-point estimates~\cite{Michalowski2026wedge}. The open content is
+  therefore the complementary region of unbounded order and moderate shift. The continuous
+  de~Bruijn--Newman kernel is not PF$_5$~\cite{Michalowski2026pf5}, so a
+  continuous-kernel total-positivity shortcut is unavailable. Classical tools are
+  Karlin total positivity~\cite{Karlin1968}, Schoenberg Pólya-frequency functions, and
+  the variation-diminishing property of the kernel in
+  $\sum\mu_n z^n = \int_0^\infty \Phi(u)\cosh(u\sqrt z)\,du$.
   \item[B. Asymptotic margin.] Control $R_n-1$ versus $1-1/s_n\sim 8/(2n)^2$.
-  Tools: the Griffin--Ono--Rolen--Zagier Hermite asymptotics~\cite{GORZ2019}, made
-  effective and uniform in degree.
-  \item[C. $\mu$ log-concavity from $\Phi$.] Prove $\mu_{n+1}^2>\mu_n\mu_{n+2}$
-  (Fig.~\ref{fig:turan}, empirically robust) from the shape of $\Phi$ (moment
-  inequalities, log-concavity). Strictly weaker than RH; would close the order-$2$
-  rung unconditionally on the corrected coefficients.
+  Tools: the Griffin--Ono--Rolen--Zagier Hermite asymptotics~\cite{GORZ2019} and
+  their effective form~\cite{GORTTW}. Farmer argues that Jensen-polynomial
+  asymptotics alone are not a plausible route to RH~\cite{Farmer2022}.
+  \item[C. $\mu$ log-concavity (settled).] The June draft listed
+  $\mu_{n+1}^2>\mu_n\mu_{n+2}$ as open. By~\eqref{eq:moments} it is equivalent to
+  $M_{n+1}^2/(M_nM_{n+2})>1/s_n=\frac{(2n+1)(2n+2)}{(2n+3)(2n+4)}$. The Turán
+  inequalities of Csordas--Norfolk--Varga~\cite{CNV1986} give
+  $M_{n+1}^2>\frac{2n+1}{2n+3}M_nM_{n+2}$, which is stronger. A recent preprint proves much more,
+  strict \emph{infinite} log-concavity of $(\mu_n)$~\cite{LiuMao2026}. Like
+  Jensen asymptotics, this is a consequence of RH and does not imply it.
   \item[D. Operator existence.] Construct $(E,T,\eta)$ with a positive metric and
   spectrum $\{\gamma_k\}$ (operator theory; cf.~\cite{BBM2017}).
 \end{description}
-The de Bruijn--Newman programme~\cite{RodgersTao2020} provides an independent
-dynamical handle ($\Lambda\ge0$; RH $\iff\Lambda\le0$) on the same object.
+The de Bruijn--Newman programme provides an independent dynamical handle on the
+same object. It is known that $\Lambda\ge0$~\cite{RodgersTao2020} and
+$\Lambda\le0.2$~\cite{Polymath2019}, while RH $\iff\Lambda\le0$.
+
+\begin{remark}[A conditional finite-order improvement]\label{rem:qrh}
+Katkova's order $43$ uses two inputs. The first is that nontrivial zeros satisfy
+$|\re\rho-\tfrac12|\le\tfrac12$. The second is that no zero has
+$|\im\rho|<\gamma_1=14.1347\ldots$. In the variable $z=(s-\tfrac12)^2$, a zero
+$\tfrac12+x+i\gamma$ lies at angle $2\arctan(|x|/\gamma)$ from the negative axis.
+Schoenberg's sector theorem yields PF$_m$ when this angle is at most $\pi/(m+1)$.
+A recent manuscript claims that $\zeta(s)\neq0$ for $\re s>7/8$~\cite{OpenAI2026QRH}.
+Its statement is machine-checked in an external Lean library against Mathlib's
+\code{riemannZeta}, but it has not yet been refereed. If the claim holds, then
+$|x|\le\tfrac38$, the maximal angle drops from $0.07072$ to $0.05305$, and the
+same argument gives PF$_{58}$ in place of PF$_{43}$. This is a constant improvement only.
+Every fixed order already follows from RH verified to a sufficient height, so fixed
+order is not RH-strength. The remark is not used elsewhere in this paper.
+\end{remark}
 
 \section{Methodology, reproducibility, and limitations}
 
-\paragraph{Verification.} Lean~4 with Mathlib; $47$ modules; entry point
-\code{Reinmann.lean}. The script \code{scripts/safe-verify.sh} rejects
-\texttt{sorry}, \texttt{admit}, added axioms, and similar shortcuts, and rebuilds
-all files (exit $0$). Every theorem cited above has axiom footprint
-$\{\mathsf{propext},\mathsf{Classical.choice},\mathsf{Quot.sound}\}$.
+\paragraph{Verification.} Every Lean theorem and named input cited in this paper
+exists at commit \texttt{c749786} of
+\url{https://github.com/sciencenerd-des/reinmann}. That commit is archived with
+DOI \href{https://doi.org/10.5281/zenodo.23187646}{10.5281/zenodo.23187646}~\cite{Mondal2026TwoRoutes}.
+It uses Lean~\texttt{v4.30.0} and Mathlib~\texttt{v4.30.0}, with $78$ Lean files and entry
+point \code{Reinmann.lean}. The development has grown well beyond the $47$ modules of the June
+draft; this paper uses only the results cited here. On 7~October~2026 we rebuilt that
+commit and ran \texttt{\#print axioms} on each cited theorem; every footprint is
+$\{\mathsf{propext},\mathsf{Classical.choice},\mathsf{Quot.sound}\}$. The repository
+scripts \code{scripts/safe-verify.sh} and \code{scripts/verify_axiom_clean.sh} reject
+\texttt{sorry}, \texttt{admit}, added axioms and similar shortcuts.
 
 \paragraph{Named external inputs (never asserted).}
 \code{PolyaJensenBridge}, \code{XiToeplitzTPToScaledFiniteBridge},
@@ -389,23 +495,40 @@ Mathlib is future work.
 \begin{enumerate}
   \item No proof of RH: every RH-implying statement is conditional on an input that
   is RH-equivalent (Theorem~\ref{thm:tight}) or an unformalized classical theorem.
-  \item Numerics are finite: the computation certifies positivity/hyperbolicity only
-  for the tested ranges ($n\le 120$, Toeplitz order $k\le 16$, Jensen degree
-  $d\le 6$); however extensive, this is evidence, not proof, and cannot establish
-  the uniform ($k,n\to\infty$) statement that is RH-equivalent.
+  \item The numerics are finite. Ball arithmetic certifies positivity only for $n\le120$
+  and Toeplitz order $k\le16$, under the FLINT/Arb trust boundary. The Jensen
+  observations for $d\le6$ are floating-point only. None of this can establish the
+  uniform ($k,n\to\infty$) statement that is RH-equivalent, and the certified range
+  lies inside what known theorems already cover.
   \item The pseudo-Hermitian existence claim is entirely open and unevidenced.
   \item Equivalence-chain reformulations (e.g.\ ``$\le 1$ zero per height'') are
   correct but RH-equivalent, hence reorganization rather than progress.
 \end{enumerate}
 
-\section{Related work}
-Pólya~\cite{Polya1926,Polya1927}; Aissen--Schoenberg--Whitney~\cite{ASW1952} and
-Edrei~\cite{Edrei1953}; Karlin~\cite{Karlin1968}; Csordas--Norfolk--Varga
-\cite{CNV1986}; Griffin--Ono--Rolen--Zagier~\cite{GORZ2019}; de
-Bruijn--Newman/Rodgers--Tao~\cite{RodgersTao2020}; Mostafazadeh~\cite{Mostafazadeh2002}
-and Bender--Brody--Müller~\cite{BBM2017}; Mathlib~\cite{Mathlib2020}. Spectral and
-adelic perspectives (Berry--Keating, Connes) and the Weil/Li positivity criteria are
-classical antecedents of the operator and positivity viewpoints used here.
+\section{Related work}\label{sec:related}
+\paragraph{Classical background.} Classical sources are Pólya~\cite{Polya1926,Polya1927},
+Aissen--Schoenberg--Whitney~\cite{ASW1952}, Edrei~\cite{Edrei1953} and Karlin~\cite{Karlin1968}.
+For the $\xi$ coefficients specifically, Katkova~\cite{Katkova2007} gives the
+Pólya-frequency formulation and finite-order positivity. The Turán and higher-order Turán
+inequalities are due to Csordas--Norfolk--Varga~\cite{CNV1986} and
+Dimitrov--Lucas~\cite{DimitrovLucas2011}.
+
+\paragraph{Jensen polynomials and heat flow.} Jensen-polynomial asymptotics are developed
+in~\cite{GORZ2019,GORTTW}, with the critique of~\cite{Farmer2022}. On the de~Bruijn--Newman
+constant see~\cite{RodgersTao2020,Polymath2019}.
+
+\paragraph{Recent work on the same coefficients.} Three 2026 preprints concern exactly
+the coefficients studied here: a tail wedge for contiguous Toeplitz minors~\cite{Michalowski2026wedge},
+certified failure of PF$_5$ for the continuous kernel~\cite{Michalowski2026pf5}, and infinite
+log-concavity~\cite{LiuMao2026}. A claimed zero-free half-plane $\re s>7/8$~\cite{OpenAI2026QRH}
+bears on finite-order constants only (Remark~\ref{rem:qrh}).
+
+\paragraph{Operators and formalization.} For the pseudo-Hermitian viewpoint see
+Mostafazadeh~\cite{Mostafazadeh2002} and Bender--Brody--Müller~\cite{BBM2017}. The formal
+foundations are Mathlib~\cite{Mathlib2020} and its zeta and $L$-function
+library~\cite{LoefflerStoll2025}. Spectral and adelic perspectives (Berry--Keating, Connes)
+and the Weil and Li positivity criteria are classical antecedents of the operator and
+positivity viewpoints used here.
 
 \section*{Acknowledgement of limitations (summary)}
 The verified contribution is a correct, tight, axiom-clean \emph{reduction} of RH
@@ -460,6 +583,43 @@ zeros of the Riemann zeta function}, Phys.\ Rev.\ Lett.\ \textbf{118} (2017),
 130201.
 \bibitem{Mathlib2020} The mathlib Community, \emph{The Lean mathematical library},
 Proc.\ CPP 2020, 367--381.
+\bibitem{Katkova2007} O.~M.~Katkova, \emph{Multiple positivity and the Riemann
+zeta-function}, Comput.\ Methods Funct.\ Theory \textbf{7} (2007), 13--31;
+\href{https://arxiv.org/abs/math/0505174}{arXiv:math/0505174}.
+\bibitem{DimitrovLucas2011} D.~K.~Dimitrov, F.~R.~Lucas, \emph{Higher order Turán
+inequalities for the Riemann $\xi$-function}, Proc.\ Amer.\ Math.\ Soc.\ \textbf{139}
+(2011), 1013--1022.
+\bibitem{GORTTW} M.~Griffin, K.~Ono, L.~Rolen, J.~Thorner, Z.~Tripp, I.~Wagner,
+\emph{Jensen polynomials for the Riemann xi function},
+\href{https://arxiv.org/abs/1910.01227}{arXiv:1910.01227}.
+\bibitem{Farmer2022} D.~W.~Farmer, \emph{Jensen polynomials are not a plausible route
+to proving the Riemann Hypothesis}, Adv.\ Math.\ \textbf{411} (2022), 108781.
+\bibitem{Polymath2019} D.~H.~J.~Polymath, \emph{Effective approximation of heat flow
+evolution of the Riemann $\xi$ function, and a new upper bound for the de
+Bruijn--Newman constant}, Res.\ Math.\ Sci.\ \textbf{6} (2019), Paper No.~31.
+\bibitem{Michalowski2026wedge} W.~Micha\l{}owski, \emph{An explicit uniform cubic wedge
+for consecutive Toeplitz minors of the Riemann xi coefficients}, preprint (2026),
+\href{https://arxiv.org/abs/2607.16795}{arXiv:2607.16795}.
+\bibitem{Michalowski2026pf5} W.~Micha\l{}owski, \emph{On the Pólya frequency order of the
+de Bruijn--Newman kernel: certified failure at order five}, preprint (2026),
+\href{https://arxiv.org/abs/2602.20313}{arXiv:2602.20313}.
+\bibitem{LiuMao2026} Y.~Liu, J.~Mao, \emph{Infinite log-concavity of the Taylor
+coefficients of the Riemann xi-function}, preprint (2026),
+\href{https://arxiv.org/abs/2610.04972}{arXiv:2610.04972}.
+\bibitem{OpenAI2026QRH} OpenAI, \emph{The quasi-Riemann hypothesis: a zero-free
+half-plane $\re s>7/8$}, manuscript dated 30 September 2026, with Lean formalization,
+\url{https://github.com/openai/math} (accessed 7 October 2026).
+\bibitem{LoefflerStoll2025} D.~Loeffler, M.~Stoll, \emph{Formalizing zeta and
+$L$-functions in Lean}, Annals of Formalized Mathematics \textbf{1} (2025).
+\bibitem{Johansson2017} F.~Johansson, \emph{Arb: efficient arbitrary-precision
+midpoint-radius interval arithmetic}, IEEE Trans.\ Comput.\ \textbf{66} (2017),
+1281--1292.
+\bibitem{Mondal2026TwoRoutes} B.~Mondal, \emph{Two machine-checked conditional routes
+to the Riemann Hypothesis}, version~0.2.0, Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.23187646}{doi:10.5281/zenodo.23187646}.
+\bibitem{Mondal2026Weil} B.~Mondal, \emph{Infinite Fourier tails and high-mode
+coercivity for the semilocal Weil quadratic form}, version~1.0.0, Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.23187645}{doi:10.5281/zenodo.23187645}.
 \end{thebibliography}
 
 \end{document}

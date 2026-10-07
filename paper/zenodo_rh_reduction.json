@@ -1,0 +1,47 @@
+{
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-07",
+  "version": "1.0.0",
+  "title": "A Machine-Checked Reduction of the Riemann Hypothesis to Pólya–Frequency Positivity of the ξ Taylor Coefficients",
+  "creators": [
+    {
+      "name": "Mondal, Biswajit"
+    }
+  ],
+  "description": "<p>A formally verified study, in Lean 4 / Mathlib, of the Laguerre–Pólya / total-positivity approach to the Riemann Hypothesis. <strong>The Riemann Hypothesis is not claimed.</strong> The paper gives Lean-checked conditional reductions whose axiom footprint is only propext, Classical.choice and Quot.sound. The central statement is a tightness theorem. Given the classical Pólya–Jensen, Aissen–Schoenberg–Whitney/Edrei and Laguerre–Pólya-closure inputs and the classical converse, all carried as named hypotheses rather than axioms, RH is equivalent to total positivity of the Toeplitz matrix of the sign-normalized ξ Taylor coefficients. The equivalence is classical (stated for ξ by Katkova); the contribution is its machine-checked form, which shows that the single open input is RH-equivalent and cannot be postulated as progress.</p><p>The paper also repairs a target-function error: Mathlib's entire completed zeta Λ<sub>0</sub> does not have the Riemann zeros, so the program is rebuilt on Riemann's ξ. It records a moment-determinant ladder for Pólya's positive kernel, a Turán-to-Jensen lemma in degree two, and an independent pseudo-Hermitian operator reduction.</p><p>Numerically, the paper starts from rigorous FLINT/Arb enclosures of μ<sub>0</sub>,…,μ<sub>120</sub>. In ball arithmetic it certifies that all 1816 contiguous Toeplitz minors of order ≤ 16 in that range are strictly positive and that the sequence is strictly log-concave for n ≤ 118. These are consistency checks against known theorems (Katkova's finite-order Pólya-frequency theorem, the Csordas–Norfolk–Varga Turán inequalities and recent infinite log-concavity), not new positivity results.</p><p><strong>Version 1.0.0</strong> updates the June 2026 draft. It replaces floating-point cross-checks with ball-arithmetic certification, removes overstated novelty claims about the computation, records that the μ log-concavity item is settled in the literature, adds 2026 related work, and ties every cited Lean theorem to the archived commit c749786 (DOI 10.5281/zenodo.23187646). The attached supplement contains the certification script and its output.</p>",
+  "keywords": [
+    "Riemann Hypothesis",
+    "Lean",
+    "formal mathematics",
+    "total positivity",
+    "Pólya frequency sequences",
+    "Riemann xi function",
+    "Jensen polynomials",
+    "ball arithmetic"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23187646",
+      "relation": "isSupplementedBy",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.23187645",
+      "relation": "references",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "arXiv:math/0505174",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://github.com/sciencenerd-des/reinmann",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    }
+  ]
+}

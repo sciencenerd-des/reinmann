@@ -32,14 +32,20 @@ the Weil quadratic form is nonnegative, for every `C ≤ C*`. Positivity for
 every `C` is equivalent to RH, so `C*` is a monotone, publishable measure of
 progress.
 
-**Literature frontier (to re-verify before claiming).**
-- Connes–Consani prove archimedean positivity up to `C = 2`, before any prime
-  enters.
-- Zhu, arXiv:2608.24827v2, claimed positivity at window 2.38 and then
-  retracted it in §7.
-- Suzuki, arXiv:2606.09096, gives an operator perspective.
+**Literature frontier — CORRECTED the same day after a dedicated prior-art
+check.** The first version of this paragraph misread Zhu's normalization.
+His `supp f ⊆ [-L, L]` corresponds to our `log C = 2L`.
+- Yoshida (1992) and Connes–Consani (2021): positivity up to `C = 2`.
+- Zhu, arXiv:2608.24827v2: certified positivity at `L = 0.8`, that is
+  **`C ≈ 4.95`**, which includes 2, 3 and 4. The retracted §7 claim was at
+  `L = 1.19`, `C ≈ 10.8`.
+- V. Liu, *Certified Weil Positivity Beyond the Unit Window* (alphaXiv,
+  September 2026, under review): claims `C = e² ≈ 7.39` with coercivity
+  `2^-151`, and `C ≈ 8.37` with `2^-49162`.
 
-To my knowledge no certified window containing the prime 2 exists.
+A window containing 2 and 3 is therefore **not** new. See
+[prime_spectral/CERTIFIED_WINDOW_POSITIVITY_2026_10_07.md](prime_spectral/CERTIFIED_WINDOW_POSITIVITY_2026_10_07.md)
+for our independent certificates and the analysis of what lies beyond.
 
 **Feasibility data.** These come from
 [window_lowest_eigenvalue_probe.py](../experiments/prime_spectral/window_lowest_eigenvalue_probe.py).

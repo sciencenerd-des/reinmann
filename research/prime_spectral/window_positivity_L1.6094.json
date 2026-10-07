@@ -1,0 +1,49 @@
+{
+ "status": "certified",
+ "statement": "Q(f) >= c ||f||^2 for every f in L^2[0, L] with int |F|^2 log(2+|t|) dt < infinity (Weil form on [C^{-1/2}, C^{1/2}], C = e^L)",
+ "L": "1.6094",
+ "C_approx": "[4.99981044142 +/- 2.84e-12]",
+ "prime_powers": [
+  2,
+  4,
+  3
+ ],
+ "A_L": "[2.941973525 +/- 2.24e-10]",
+ "T": 300,
+ "beta": "[0.9239314201 +/- 4.07e-11]",
+ "N": 420,
+ "panels": 600,
+ "nodes": 21600,
+ "nq": 36,
+ "rho": "3",
+ "h": "1/2",
+ "quadrature_error_per_entry_unscaled": "[2.2417e-32 +/- 2.18e-37]",
+ "blocks": {
+  "0": {
+   "dim": 211,
+   "approx_lambda_min": "[7.6898195e-18 +/- 1.94e-26]",
+   "approx_lambda_2": "[4.2500537e-12 +/- 3.29e-20]",
+   "lambda0_certified": "[6.9208375e-18 +/- 3.27e-26]",
+   "ldl_ok": true,
+   "min_pivot": "[3.8449e-19 +/- 9.31e-25]"
+  },
+  "1": {
+   "dim": 210,
+   "approx_lambda_min": "[6.8388473e-15 +/- 4.67e-23]",
+   "approx_lambda_2": "[1.2484393e-9 +/- 2.11e-18]",
+   "lambda0_certified": "[6.1549625e-15 +/- 2.80e-23]",
+   "ldl_ok": true,
+   "min_pivot": "[3.4194e-16 +/- 2.37e-21]"
+  }
+ },
+ "M_T": "[9.23809 +/- 1.64e-6]",
+ "s_N": "[4.5019e-95 +/- 7.34e-102]",
+ "eps_D": "[6.3917e-92 +/- 4.39e-97]",
+ "eps_B": "[7.6842e-46 +/- 1.60e-51]",
+ "c_lower_bound": "[6.9208375e-18 +/- 3.27e-26]",
+ "prec_bits": 320,
+ "python_flint": "0.8.0",
+ "generator_sha256": "88a08abf10e67dd41175d2b1728c1ca77815d77d9b50c228c4223dc5e113bc02",
+ "seconds": 2553.3,
+ "trust_boundary": "FLINT/Arb ball arithmetic and the written proof chain; not a Lean certificate."
+}

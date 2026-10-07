@@ -1,0 +1,6 @@
+import Reinmann.WeilClusterActivation
+
+#print axioms Reinmann.WeilClusterActivation.localized_cost_ratio
+#print axioms Reinmann.WeilClusterActivation.localized_cost_vanishes
+#print axioms Reinmann.WeilClusterActivation.normalized_cluster_error
+#print axioms Reinmann.WeilClusterActivation.cluster_error_tendsto_zero

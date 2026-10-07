@@ -1,0 +1,40 @@
+{
+  "decision": "not_yet_cleared_as_novel_research_paper",
+  "checks": [
+    "All 16000 lower-operator matrix entries reassembled at different quadrature orders and 512 bits",
+    "Both full-complement threshold gap bounds preserved",
+    "Four scalar Lean theorems built and audited: only propext, Classical.choice, Quot.sound",
+    "Python compilation and local Markdown links checked"
+  ],
+  "proof_scope": "Written form-core proof and proposed conditional cluster activation theorem; operator analysis is not Lean-formalized or independently reviewed.",
+  "novelty_scope": "Targeted primary-source review. Existing ingredients credited. Exact transfer/cluster application remains a candidate.",
+  "limitations": [
+    "Same generator and Arb backend in alternate replay, not an independent implementation",
+    "No computable localized resolvent bound, tight actual trace enclosure, or gap-persistence radius",
+    "No enlarged positive window or RH proof"
+  ],
+  "sha256": {
+    "Reinmann/WeilClusterActivation.lean": "db33466d9bececde0a156bfaff140c2c564a93e6639766991bcabfaaf970191f",
+    "Reinmann/WeilClusterActivationAudit.lean": "494586c9632098f98ebfbfd1a44790619713c8c32766ccca5c59473f35ac1cbe",
+    "Reinmann/WeilTraceStability.lean": "2a2aa3ce0a94f50bf47dc88755a5fadd276289a563986e65f41aa887d34d3f1c",
+    "Reinmann/WeilRenewalTrace.lean": "337b39946b09c3d24de87fe071f84ec43f7d861ac6948a2171bf8eaa245f96f2",
+    "experiments/prime_spectral/reassemble_threshold_gaps.py": "ee26ed0c21db330977e7a4904bafeb51ed88572fe374973d54aa2bb1045eb5da",
+    "experiments/prime_spectral/compact_window_certificate.py": "7738cc9f421bc8bb31fee36fc5343afc6d33e7b579a35c8845fc23e43d4d6737",
+    "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+    "experiments/prime_spectral/threshold_ground_gap.py": "6be221950a0d63f515fb6885064010c1039e18a6f97364e8bd9ea516b179cc7d",
+    "experiments/prime_spectral/weil_matrix.py": "2811a607a16a758b293578efcf37314f3dcafab5b1a47e49d9f095efa9b95211",
+    "research/prime_spectral/DEGENERATE_CLUSTER_PRIME_ENTRY_2026_10_07.md": "d15f586015ba339fae0c7da6cace9fbe72b5fb4e9e3da5d99e633f636453ec35",
+    "research/prime_spectral/WEIL_LOG_FORM_CORE_2026_10_07.md": "a09086a2717ceee6e0c335fe386ce055c9d06c087a97288e8ebee256f45f5797",
+    "research/prime_spectral/PAPER_READINESS_TRACE_ACTIVATION_2026_10_07.md": "7d8eac83dc9f9ccd8983d1312bfe88c8f8e69de7a5c4029e6f8198e87fdff252",
+    "research/prime_spectral/TRACE_ENCLOSURES_STATE_CONVERGENCE_2026_10_07.md": "bd93ec4cca4694facc7127c858fb8231843cf44356adb4746a82a05f65b7a007",
+    "research/prime_spectral/RENEWAL_ENDPOINT_TRACE_2026_10_07.md": "4a64fbc4d288735acf74c4d1d24b42d866704265a30b4bcb2b87993849f284a9",
+    "research/prime_spectral/BOUNDARY_REGULARITY_PRIME_ACTIVATION_2026_10_07.md": "d0f6d3e3a0919fa3102cac4e9d8b6cbaa80b69e1adad63dcfb1f6e965ce56356",
+    "research/prime_spectral/window_positivity_exp_1p2.json": "e798071a01da0d0844900c2a8436e182165d6de9230a34e1aba277ec427159b5",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_ground_gaps.json": "f5e8bac2b73f3e50ba65869c2da7d34236230029860e32e540347a51c414d373",
+    "research/prime_spectral/verification_2026_10_07_trace_stability/threshold_two_lower_operator.json": "472296d82876df6beb267d48f1596a731b432cc8e258492d85d03a347987364b",
+    "research/prime_spectral/verification_2026_10_07_cluster_readiness/lean_build.log": "b5c68e53dde596910df966bd62cfb5559473096798b9436646039bbfcf8fb207",
+    "research/prime_spectral/verification_2026_10_07_cluster_readiness/all_entry_reassembly.log": "c6f83efe3f45f9b34ca5dad74c81003a7102d8da940bdf2c28a00537f543d917",
+    "research/prime_spectral/verification_2026_10_07_cluster_readiness/all_entry_reassembly.json": "c84a172ee8f8c2d3343496f77b0e44951b6edf0b9fdaaea38e89d9048537ac96",
+    "research/prime_spectral/verification_2026_10_07_cluster_readiness/README.md": "79b0e7d799a83ded26662f87d1a7d8025fa7e272105688bf264c8b0b68a898ff"
+  }
+}

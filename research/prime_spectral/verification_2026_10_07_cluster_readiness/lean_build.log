@@ -1,0 +1,7 @@
+✔ [2514/2515] Built Reinmann.WeilClusterActivation (28s)
+ℹ [2515/2515] Built Reinmann.WeilClusterActivationAudit (38s)
+info: Reinmann/WeilClusterActivationAudit.lean:3:0: 'Reinmann.WeilClusterActivation.localized_cost_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilClusterActivationAudit.lean:4:0: 'Reinmann.WeilClusterActivation.localized_cost_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilClusterActivationAudit.lean:5:0: 'Reinmann.WeilClusterActivation.normalized_cluster_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilClusterActivationAudit.lean:6:0: 'Reinmann.WeilClusterActivation.cluster_error_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2515 jobs).

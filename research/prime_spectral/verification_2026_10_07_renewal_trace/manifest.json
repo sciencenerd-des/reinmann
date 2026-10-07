@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-07",
+  "repository_head_before_commit": "c2082207a1d962f167f6fe63ea54792989261a9f",
+  "analytic_status": "Proposed written endpoint-trace and conditional prime-activation proof. Only weighted integral algebra and its limit consequence are Lean verified.",
+  "novelty": "Not established; classical renewal inputs and withdrawn Pohozaev shortcut recorded.",
+  "new_window": false,
+  "sha256": {
+    "Reinmann/WeilRenewalTrace.lean": "337b39946b09c3d24de87fe071f84ec43f7d861ac6948a2171bf8eaa245f96f2",
+    "Reinmann/WeilRenewalTraceAudit.lean": "9ee6979dbc8ddca7fffc56af5543c1cd21754a5751e4d9a6105ab8837658d6b2",
+    "research/prime_spectral/RENEWAL_ENDPOINT_TRACE_2026_10_07.md": "4a64fbc4d288735acf74c4d1d24b42d866704265a30b4bcb2b87993849f284a9",
+    "research/prime_spectral/verification_2026_10_07_renewal_trace/README.md": "39f02117948ecd097f1fe967bf941fad88d113627719a100a2afaad4775c2b21",
+    "research/prime_spectral/verification_2026_10_07_renewal_trace/checks.json": "58e88c31212832bc5e43c2ce2bbada20e040352ff7345479a5e3f474f33bb54e",
+    "research/prime_spectral/verification_2026_10_07_renewal_trace/lean_axioms.log": "1a96ee2402534d51e8a615e4af74f841b84b719218a2b884aec628bfe2ac99f4",
+    "research/prime_spectral/verification_2026_10_07_renewal_trace/lean_build.log": "c6766da90c55d22676bd71f1e57e3b25badeb765694437065180015e14b1d03e"
+  }
+}

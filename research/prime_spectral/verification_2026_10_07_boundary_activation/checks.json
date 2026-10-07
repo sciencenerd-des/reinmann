@@ -1,0 +1,44 @@
+[
+  {
+    "name": "lean_build",
+    "command": [
+      "lake",
+      "build",
+      "Reinmann.WeilBoundaryActivation",
+      "Reinmann.WeilBoundaryActivationAudit"
+    ],
+    "exit_code": 0,
+    "seconds": 6.124,
+    "log": "research/prime_spectral/verification_2026_10_07_boundary_activation/lean_build.log"
+  },
+  {
+    "name": "lean_axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "Reinmann/WeilBoundaryActivationAudit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 29.614,
+    "log": "research/prime_spectral/verification_2026_10_07_boundary_activation/lean_axioms.log"
+  },
+  {
+    "name": "kernel_normalization",
+    "command": [
+      "uv",
+      "run",
+      "--with",
+      "python-flint==0.8.0",
+      "--python",
+      "3.12",
+      "python",
+      "experiments/prime_spectral/check_boundary_activation_kernel.py",
+      "--output",
+      "research/prime_spectral/boundary_activation_kernel_check_2026_10_07.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.398,
+    "log": "research/prime_spectral/verification_2026_10_07_boundary_activation/kernel_normalization.log"
+  }
+]

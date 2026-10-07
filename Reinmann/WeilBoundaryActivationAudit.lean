@@ -1,0 +1,11 @@
+import Reinmann.WeilBoundaryActivation
+
+-- The semigroup and PDE application remain written analysis, not asserted here.
+#print axioms Reinmann.WeilBoundaryActivation.activation_bracket
+#print axioms Reinmann.WeilBoundaryActivation.activation_coefficient_error
+#print axioms Reinmann.WeilBoundaryActivation.activation_absolute_bound
+#print axioms Reinmann.WeilBoundaryActivation.reciprocal_sqrt_bounds
+#print axioms Reinmann.WeilBoundaryActivation.normalized_kernel_error
+#print axioms Reinmann.WeilBoundaryActivation.activationScale_pos
+#print axioms Reinmann.WeilBoundaryActivation.geometric_exponential_error
+#print axioms Reinmann.WeilBoundaryActivation.archimedean_remainder_allowance

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-07",
+  "repository_head_at_verification": "c2082207a1d962f167f6fe63ea54792989261a9f",
+  "lean_proved_statements_audited": 8,
+  "custom_axioms": 0,
+  "proof_placeholders": 0,
+  "kernel_normalizations_checked": 4,
+  "analytic_status": "Proposed prime-activation theorem with written semigroup/PDE proof, not Lean formalization or independent proof review. Exact leading coefficient additionally requires endpoint trace limits.",
+  "novelty": "Not established; known ingredients and continuation/threshold prior disclosures recorded.",
+  "new_window": false,
+  "sha256": {
+    "Reinmann/WeilBoundaryActivation.lean": "c8a165b2c545dd22cd5e34704c39fc51595e2cf2e1c276a4e0d053249334ae69",
+    "Reinmann/WeilBoundaryActivationAudit.lean": "987db195b261104ea722067f781395ed65c4717ba33cb876dd94114a4905b9d5",
+    "experiments/prime_spectral/check_boundary_activation_kernel.py": "ff96c50c5ae85797551912c7a5d7755b29efc0dc574752a7b5a868b22fd97f51",
+    "research/prime_spectral/boundary_activation_kernel_check_2026_10_07.json": "d063e106ca12f769436b0edaa6a8aa0a0c0021520c9c751df705d22aa9f399b9",
+    "research/prime_spectral/BOUNDARY_REGULARITY_PRIME_ACTIVATION_2026_10_07.md": "d0f6d3e3a0919fa3102cac4e9d8b6cbaa80b69e1adad63dcfb1f6e965ce56356",
+    "research/prime_spectral/verification_2026_10_07_boundary_activation/README.md": "66fcf5da6004ad39aa6c803b211f28e1b0b6937aba2d112d4b49fece1907d0ec",
+    "research/prime_spectral/verification_2026_10_07_boundary_activation/checks.json": "4f536e4afccce0abe5a91ffbd21e0d7509ba361defb542a6f736b8bcb1492e0f",
+    "research/prime_spectral/verification_2026_10_07_boundary_activation/kernel_normalization.log": "3a3f75938d02b0846cbb47377c2dc6363d6da8d2960747b1af10a9f796fae112",
+    "research/prime_spectral/verification_2026_10_07_boundary_activation/lean_axioms.log": "c0cb4870b7d1e941c1dec4ce98cffa6bb5e981ed01dfa0b1f3616dc53f3f31ff",
+    "research/prime_spectral/verification_2026_10_07_boundary_activation/lean_build.log": "43b6db75690608f6813ff196eb2733965eb89fdd6e7a1b46ec39e2c8a5643dfd"
+  }
+}

@@ -1,0 +1,5 @@
+$ lake env lean Reinmann/WeilRenewalTraceAudit.lean
+'Reinmann.WeilRenewalTrace.weighted_average_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilRenewalTrace.renewal_trace_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilRenewalTrace.trace_limit_of_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+Exit code: 0

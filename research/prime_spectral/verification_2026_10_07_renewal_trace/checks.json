@@ -1,0 +1,10 @@
+{
+  "targeted_build_exit_code": 0,
+  "direct_lean_audit_exit_code": 0,
+  "audited_statements": 3,
+  "custom_axioms": 0,
+  "proof_placeholders": 0,
+  "whitespace_passed": true,
+  "full_repository_audit": false,
+  "analytic_proof_independently_reviewed": false
+}

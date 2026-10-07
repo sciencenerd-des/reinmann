@@ -1,0 +1,12 @@
+'Reinmann.WeilBoundaryActivation.activation_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilBoundaryActivation.activation_coefficient_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.WeilBoundaryActivation.activation_absolute_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilBoundaryActivation.reciprocal_sqrt_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilBoundaryActivation.normalized_kernel_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilBoundaryActivation.activationScale_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilBoundaryActivation.geometric_exponential_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.WeilBoundaryActivation.archimedean_remainder_allowance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,8 @@
+$ lake build Reinmann.WeilRenewalTrace Reinmann.WeilRenewalTraceAudit
+✔ [2447/2448] Built Reinmann.WeilRenewalTrace (53s)
+ℹ [2448/2448] Built Reinmann.WeilRenewalTraceAudit (33s)
+info: Reinmann/WeilRenewalTraceAudit.lean:3:0: 'Reinmann.WeilRenewalTrace.weighted_average_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilRenewalTraceAudit.lean:4:0: 'Reinmann.WeilRenewalTrace.renewal_trace_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilRenewalTraceAudit.lean:5:0: 'Reinmann.WeilRenewalTrace.trace_limit_of_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2448 jobs).
+Exit code: 0

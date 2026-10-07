@@ -1,0 +1,14 @@
+ℹ [1917/1917] Replayed Reinmann.WeilBoundaryActivationAudit
+info: Reinmann/WeilBoundaryActivationAudit.lean:4:0: 'Reinmann.WeilBoundaryActivation.activation_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:5:0: 'Reinmann.WeilBoundaryActivation.activation_coefficient_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:6:0: 'Reinmann.WeilBoundaryActivation.activation_absolute_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:7:0: 'Reinmann.WeilBoundaryActivation.reciprocal_sqrt_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:8:0: 'Reinmann.WeilBoundaryActivation.normalized_kernel_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:9:0: 'Reinmann.WeilBoundaryActivation.activationScale_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:10:0: 'Reinmann.WeilBoundaryActivation.geometric_exponential_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/WeilBoundaryActivationAudit.lean:11:0: 'Reinmann.WeilBoundaryActivation.archimedean_remainder_allowance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully (1917 jobs).

@@ -22,6 +22,7 @@ import Reinmann.JensenTuranBridge
 import Reinmann.TuranRouteKill
 import Reinmann.EffectiveAssembly
 import Reinmann.FinitePFBaseline
+import Reinmann.QuasiRHInputs
 import Reinmann.TuranDeficit
 import Reinmann.CurvatureControls
 import Reinmann.CoupledRankEnergy
@@ -223,3 +224,16 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.WeilRankTail.paired_even_tail
 #print axioms Reinmann.WeilRankTail.denominator_remainder
 #print axioms Reinmann.WeilRankTail.weighted_moment_remainder
+
+-- Zero-free half-planes and folded-zero angles (QuasiRHInputs, 2026-10-07)
+#print axioms Reinmann.zetaZeroFreeRightOf_one
+#print axioms Reinmann.zetaZeroFreeRightOf_half_iff_riemannHypothesis
+#print axioms Reinmann.riemannHypothesis_iff_of_zeroFreeRightOf
+#print axioms Reinmann.riemannHypothesis_iff_band_of_quasiRH
+#print axioms Reinmann.abs_re_sub_half_le_of_zeroFreeRightOf
+#print axioms Reinmann.angleBound_of_strip
+#print axioms Reinmann.strip_numeric_43
+#print axioms Reinmann.strip_numeric_58
+#print axioms Reinmann.xi_finitePF43_of_classical
+#print axioms Reinmann.xi_finitePF58_of_quasiRH
+#print axioms Reinmann.forall_angleBound_iff_riemannHypothesis

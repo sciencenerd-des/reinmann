@@ -70,6 +70,7 @@ import Reinmann.GlobalCapstone
 import Reinmann.ProofArchitecture
 
 import Reinmann.FinitePFBaseline
+import Reinmann.QuasiRHInputs
 import Reinmann.TuranDeficit
 import Reinmann.CurvatureControls
 import Reinmann.CoupledRankEnergy

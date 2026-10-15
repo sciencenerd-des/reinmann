@@ -65,6 +65,31 @@ telescoping energies and gives an explicit changing-ground-parameter bound.
 The finite joint energy bound loses rank alignment, the uniform constrained
 gap remains open, and generic boundary dual energy diverges.
 
+The [publication and literature review](research/prime_spectral/WEIL_TAIL_PUBLICATION_REVIEW_2026_10_06.md)
+identifies required numerical-presentation corrections and direct prior work.
+The signed tail identities and conditional infinite rank-energy budget now
+have Lean proofs. The [support translation-chain refinement](research/prime_spectral/SUPPORT_TRANSLATION_CHAIN_BOUND_2026_10_06.md)
+now has Lean proofs of the support decomposition, complex autocorrelation
+normalization, complete prime-power enumeration and uniform prime integral
+bound on the whole cell, including its endpoints. Arb evaluates the exact
+allowance and the written coercivity envelope, lowering its conservative even
+high-mode start to `117259`. The archimedean specialization and intermediate
+constrained gap remain open.
+
+The [strict finite-PF deduction](research/STRICT_FINITE_PF_FROM_REAL_ZEROS_2026_10_06.md)
+extracts negative real folded zeros to obtain strict contiguous positivity
+at every shift through rank 43 using classical analytic inputs. Its
+determinant expansion and positive-factor transport are proved in Lean;
+`AnalyticPFLimit` proves coefficient convergence for approximants of
+unbounded degree and finite-PF closure under those limits.
+[`XiTaylorIdentification`](Reinmann/XiTaylorIdentification.lean) now constructs
+the actual entire folded Xi, proves its global square-root formula and ordinary
+Taylor coefficient identity, and transfers critical-line zeros to negative
+folded zeros. The Xi canonical product, positive center value, sector theorem
+and Hardy infinitude inputs remain unformalized. The support-translation
+modules prove a rank-independent integral estimate. Neither result closes the all-rank
+theta budget or the Weil intermediate-mode inverse bound.
+
 ## Commands
 
 Fetch dependencies and cached mathlib artifacts:

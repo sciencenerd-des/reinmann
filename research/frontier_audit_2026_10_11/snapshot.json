@@ -1,0 +1,80 @@
+{
+  "captured_at_utc": "2026-10-10T19:53:14.851202+00:00",
+  "purpose": "Read-only research audit snapshot, not a new Lean build certificate",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "original_checkout": "/Users/biswajitmondal/Developer/Maths/reinmann",
+  "head": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "worktree_sources": {
+    "Reinmann/XiGreenModel.lean": "98a19626e714c87291d6a566252a6fe2d1a3f31d8aca49333fb90693def46b61",
+    "Reinmann/XiGreenGram.lean": "e8df9adb726a4a9f08f2d679fbafba82953c71e279e3a1d604bc4b97258d7016",
+    "Reinmann/XiAlgebraicRows.lean": "9fd5da0ec8d5095970704f37e7b648065139c75b6a3635591a760e76dc04cb57",
+    "Reinmann/JensenProgram.lean": "22a6ad582b3b17ce84948c7f96d628716d73bdefeabc736bf18ce89ab38a3e0f",
+    "Reinmann/RHReductionCapstone.lean": "d8d2aa9d1aba23476e55af093c7ade131f52fb0d4cfecfea77e395ac5c9ea6d0",
+    "research/pseudo_hermitian/algebraic_mass_validation_2026_10_10.json": "bdfceccf8512bcc5c5f60434ecdc0c8329b37507491960226dd24688c1a6cafa",
+    "research/pseudo_hermitian/verification/green_workbench_v3_passed.json": "f7ca51fdb65194e1f70f5d9bf73ba1f3f9f0898ad4888c4fb0c80491e3267d0a",
+    "research/pseudo_hermitian/green_canonical_checks_2026_10_11.json": "6021066d7796aa57c6f2b9b2cadf69f974396b290d2a32d3f28492fde6c8262d"
+  },
+  "original_sources": {
+    "research/prime_spectral/ASSEMBLED_TRIAL_FULL_RESIDUAL_2026_10_07.md": "5f08ed03c95dff6f09a355d3c61f13e8df350fa43ab3a39c2279fc4380fa62b7",
+    "research/prime_spectral/CERTIFIED_WINDOW_POSITIVITY_2026_10_07.md": "9dd0a76b2d37c1e0c6947788517c22ddce9c512324d509c72c2fd179e203fc0f",
+    "research/prime_spectral/WEIL_INFINITE_RANK_TAIL_2026_10_06.md": "188969464a47cdb8a1be50e39f65bcda1e90adae6da3c9c1bfdc8d6b3dd7c9b7",
+    "research/RH_NEW_MATHEMATICS_FRONTIER_2026_07_17.md": "19db68a88a27fe04794340e6343e1e3a38525ca6ef493939a5cb2bbfaee95420",
+    "research/CURRENT_RH_FRONTIER_REVIEW_2026_06_30.md": "90edc348e25c4e42c89fce5b6aeafd8e703699b0f738d818b2c3d8d36c9f34a0"
+  },
+  "canonical_green_tracker": {
+    "record_kind": "canonical check execution tracker, not a completion certificate",
+    "source_sha256": {
+      "Reinmann/XiGreenGram.lean": "e8df9adb726a4a9f08f2d679fbafba82953c71e279e3a1d604bc4b97258d7016",
+      "Reinmann/XiAlgebraicRows.lean": "9fd5da0ec8d5095970704f37e7b648065139c75b6a3635591a760e76dc04cb57",
+      "Reinmann/XiGreenModel.lean": "98a19626e714c87291d6a566252a6fe2d1a3f31d8aca49333fb90693def46b61"
+    },
+    "started_at_utc": "2026-10-10T19:07:37.009685+00:00",
+    "checks": [
+      {
+        "label": "lake build Reinmann.XiGreenGram",
+        "command": [
+          "lake",
+          "build",
+          "Reinmann.XiGreenGram"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_XiGreenGram_build.log",
+        "status": "passed",
+        "pid": 72143,
+        "exit_code": 0,
+        "log_sha256": "6034afa557750bc609d77f1069faee926398896ccfd9cab8f17e1f575cb900cb"
+      },
+      {
+        "label": "lake build Reinmann.XiAlgebraicRows",
+        "command": [
+          "lake",
+          "build",
+          "Reinmann.XiAlgebraicRows"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_XiAlgebraicRows_build.log",
+        "status": "running",
+        "pid": 84862
+      }
+    ],
+    "status": "running",
+    "full_goal_complete": false,
+    "rh_proved": false,
+    "updated_at_utc": "2026-10-10T19:41:58.366166+00:00"
+  },
+  "toy_check": {
+    "status": "passed",
+    "kind": "exact symbolic countermodel to a generic inference, not RH",
+    "sympy_version": "1.14.0",
+    "folded_polynomial": "u**2 + 15*u/8 + 289/256",
+    "B": "-1/2 - 2*I",
+    "packet_mass": "1",
+    "packet_norm_squared": "h/2 + 2/(17*h)",
+    "residual_norm_squared": "h/8",
+    "paired_defect_absolute": "1/2",
+    "norm_product_limit_squared": "1/68"
+  },
+  "literature_count": 30,
+  "targeted_reading_count": 25,
+  "screened_only_count": 5,
+  "external_certificates_replayed": false,
+  "new_lean_build_launched": false
+}

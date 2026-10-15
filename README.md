@@ -5,15 +5,75 @@ not prove the Riemann Hypothesis. The project imports mathlib's formal
 `RiemannHypothesis : Prop` target and verifies only reductions and supporting
 lemmas that Lean can check.
 
-> **Start here:** [`ARCHITECTURE.md`](ARCHITECTURE.md) is the canonical, current
-> map of the codebase — the module inventory, the verified reduction chain, the
-> open three-level frontier, and an explicit "what is and is not proven" table.
+> **Current research status (updated 12 October 2026):**
+> [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
+> records the evidence and open assumptions for the active tracks. It supersedes
+> older priority and novelty claims below. The immediate target is a certified
+> full-operator spectral cluster, followed by prime-side counting and Fourier convergence.
+> [`ARCHITECTURE.md`](ARCHITECTURE.md) supplies the broader module inventory and
+> reduction map; its counts and validation claims must be read with their dates.
 > The executable research roadmap is
 > [`research/RH_PROOF_PLAN_2026_07_17.md`](research/RH_PROOF_PLAN_2026_07_17.md).
 > Run `bash scripts/verify_axiom_clean.sh` to confirm the 0-`sorry` /
 > 0-custom-axiom claim. Historical progress notes live in [`docs/archive/`](docs/archive/).
 
 ## Current research implementation
+
+The [D1–D6 cluster program](research/prime_spectral/CLUSTER_PROGRAM_2026_10_12.md)
+replaces division by an internal ground-state gap with a two-sided certificate
+for a whole full-operator block. The proposed rank staircase is checked at fixed
+supports rather than assumed as a counting theorem. It also records a precise
+[robustness obstruction at C=3.2](research/prime_spectral/ROBUSTNESS_OBSTRUCTION_C3P2_2026_10_12.md)
+and an arithmetic Davenport–Heilbronn negative control. An all-support counting
+law, calibrated zero-free region and full negative-control scan remain open.
+The [remaining-directions results](research/prime_spectral/DIRECTIONS_OUTCOME_2026_10_12.md)
+improve the C=3 full projector-distance bound to 0.425 and certify exactly four
+levels below 0.1, qualifying the proposed staircase. The actual DH form has a
+negative trial at C=31, despite passing finite ground gates and 6,400 tested
+solid Toeplitz minors. A packet-dependent window-to-zero theorem includes an
+explicit infinite tail; a universal ordinate-only region remains open.
+
+The [canonical arithmetic/prolate comparison](research/prime_spectral/CANONICAL_PROLATE_ADJOINT_2026_10_11.md)
+now has a [free-boundary and ground-angle improvement](research/prime_spectral/BOUNDARY_MOMENT_ADJOINT_2026_10_12.md):
+full Weil ground-state Fourier errors are below 0.000948 at C=2 and
+0.006274 at C=3 on abs(Re z)≤1, abs(Im z)≤0.4. The certificate retains the
+unprojected candidate, its odd part, nonzero boundary terms and every residual
+mode. Six abstract Hilbert-space lemmas are checked separately in Lean.
+These fixed-support bounds do not establish an increasing-support Xi limit
+for the ground states or RH.
+
+The isolated [Xi and local eigenvector research objective](research/pseudo_hermitian/RESEARCH_OBJECTIVE.md)
+records the coefficient normalization and zero-set corrections, and the new
+domain-explicit pseudo-Hermitian reduction with relative defect and residual
+bounds. The [Xi coefficient candidate](research/pseudo_hermitian/FOCK_CANDIDATE.md)
+constructs a zero-independent operator domain and explicit unit-mass zero
+states. Its required symmetry remains open. A separate written
+[Hilbert-space domain argument](research/pseudo_hermitian/FOCK_DOMAIN_ESTIMATES.md)
+has not been formalized or independently reviewed.
+
+The [Xi divided-difference form](research/pseudo_hermitian/XI_DIVIDED_DIFFERENCE.md)
+supplies a written bounded Hermitian form and domain symmetry, with checked
+kernel identities and actual-domain Jordan obstructions. The
+[approximate packet mass argument](research/pseudo_hermitian/APPROXIMATE_PACKET_MASS.md)
+constructs nonzero masses without assuming simple zeros. Its required paired
+residual control remains open. Generic mass lower bounds, normalization and
+ordinary residual estimates are now checked in Lean, with a checked Xi kernel
+packet realization for conditional simple off-critical pairs. The
+[higher-jet mass bridge](research/pseudo_hermitian/HIGHER_JET_MASS_BRIDGE.md)
+now checks coefficient-domain jets, finite multiplicity and a nonzero kernel
+derivative at every Xi zero. Full Fock-space compatibility remains a written
+proof without independent review. An optional checked norm criterion controls
+the product of state
+and residual norms at unit absolute mass. A checked real Jordan example shows
+that criterion is stronger than the required paired-defect condition.
+
+The [fixed algebraic jet construction](research/pseudo_hermitian/ALGEBRAIC_JET_MASS.md)
+now checks unique finite coordinates inside the coefficient space, the restricted
+arithmetic action and Xi-row domain, and one fixed Hermitian kernel-derivative
+form. Every Xi zero has an actual nonzero cross-pairing for this form, giving
+explicit packet mass bounds and unit absolute mass without assuming simplicity.
+Action symmetry and the relative paired budget for this algebraic form remain
+open; the full Fock-space claims retain their separate analytic obligations.
 
 The [2026-09-13 implementation report](research/RH_IMPLEMENTATION_2026_09_13.md)
 records the repaired classical Jensen interfaces, rigorous Xi coefficient balls,

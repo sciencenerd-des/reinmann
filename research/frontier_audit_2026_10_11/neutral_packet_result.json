@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "kind": "exact symbolic countermodel to a generic inference, not RH",
+  "sympy_version": "1.14.0",
+  "folded_polynomial": "u**2 + 15*u/8 + 289/256",
+  "B": "-1/2 - 2*I",
+  "packet_mass": "1",
+  "packet_norm_squared": "h/2 + 2/(17*h)",
+  "residual_norm_squared": "h/8",
+  "paired_defect_absolute": "1/2",
+  "norm_product_limit_squared": "1/68"
+}

@@ -1,0 +1,143 @@
+{
+  "status": "manuscript_rounding_requires_revision",
+  "scope": "exact comparison with saved certificate, not a Lean or Arb replay",
+  "sha256": {
+    "paper/weil_infinite_rank_tail_paper.tex": "1a019df59999f27df7697619e25ec32e24d8cd540c7ed03476f0586e16cb5f3a",
+    "research/prime_spectral/weil_rank_tail_cell_17_19_8_degree64.json": "d2c1d96fe682a1221b6e0f41426fb55aade057443166d4776951f3279bae9f01"
+  },
+  "interval_rows": [
+    {
+      "name": "S",
+      "printed_lower": "6.3167e-12",
+      "printed_upper": "6.5920e-12",
+      "lower_is_outward": true,
+      "upper_is_outward": true,
+      "certificate_lower_approx": 6.3167261063299e-12,
+      "certificate_upper_approx": 6.59194505528581e-12
+    },
+    {
+      "name": "m1",
+      "printed_lower": "-6.317e-8",
+      "printed_upper": "-5.976e-8",
+      "lower_is_outward": false,
+      "upper_is_outward": true,
+      "certificate_lower_approx": -6.317142498164785e-08,
+      "certificate_upper_approx": -5.976238259645938e-08
+    },
+    {
+      "name": "m2",
+      "printed_lower": "1.1354e-4",
+      "printed_upper": "1.1920e-4",
+      "lower_is_outward": true,
+      "upper_is_outward": true,
+      "certificate_lower_approx": 0.00011354291688903118,
+      "certificate_upper_approx": 0.00011919745600508236
+    },
+    {
+      "name": "m3",
+      "printed_lower": "-7.691e-2",
+      "printed_upper": "-7.419e-2",
+      "lower_is_outward": true,
+      "upper_is_outward": false,
+      "certificate_lower_approx": -0.07690818258743093,
+      "certificate_upper_approx": -0.07418763055284217
+    },
+    {
+      "name": "nu0",
+      "printed_lower": "-5.406e-10",
+      "printed_upper": "-4.750e-10",
+      "lower_is_outward": true,
+      "upper_is_outward": false,
+      "certificate_lower_approx": -5.405552317067942e-10,
+      "certificate_upper_approx": -4.749654098300769e-10
+    },
+    {
+      "name": "nu1",
+      "printed_lower": "1.5495e-6",
+      "printed_upper": "1.7150e-6",
+      "lower_is_outward": true,
+      "upper_is_outward": true,
+      "certificate_lower_approx": 1.5495249793273658e-06,
+      "certificate_upper_approx": 1.7149836538665753e-06
+    },
+    {
+      "name": "nu2",
+      "printed_lower": "-1.5124e-3",
+      "printed_upper": "-1.3961e-3",
+      "lower_is_outward": false,
+      "upper_is_outward": true,
+      "certificate_lower_approx": -0.0015124328857041291,
+      "certificate_upper_approx": -0.0013961331223413254
+    }
+  ],
+  "upper_bound_rows": [
+    {
+      "name": "boundary",
+      "printed_upper": "2.465e-12",
+      "is_outward": false,
+      "certificate_upper_approx": 2.4651011474156716e-12
+    },
+    {
+      "name": "m1",
+      "printed_upper": "3.648e-12",
+      "is_outward": true,
+      "certificate_upper_approx": 3.647639300785037e-12
+    },
+    {
+      "name": "m2",
+      "printed_upper": "1.252e-12",
+      "is_outward": false,
+      "certificate_upper_approx": 1.2524546188635837e-12
+    },
+    {
+      "name": "m3",
+      "printed_upper": "1.642e-13",
+      "is_outward": true,
+      "certificate_upper_approx": 1.641561626933909e-13
+    },
+    {
+      "name": "m4_to_m8",
+      "printed_upper": "9.5e-15",
+      "is_outward": true,
+      "certificate_upper_approx": 9.450178893307594e-15
+    },
+    {
+      "name": "nu0",
+      "printed_upper": "1.219e-12",
+      "is_outward": false,
+      "certificate_upper_approx": 1.219100423975696e-12
+    },
+    {
+      "name": "nu1",
+      "printed_upper": "6.182e-13",
+      "is_outward": true,
+      "certificate_upper_approx": 6.181744508296195e-13
+    },
+    {
+      "name": "nu2",
+      "printed_upper": "1.062e-13",
+      "is_outward": true,
+      "certificate_upper_approx": 1.0617442264973164e-13
+    },
+    {
+      "name": "nu3_to_nu7",
+      "printed_upper": "7.9e-15",
+      "is_outward": true,
+      "certificate_upper_approx": 7.795851293646777e-15
+    },
+    {
+      "name": "remainder",
+      "printed_upper": "1.001e-22",
+      "is_outward": true,
+      "certificate_upper_approx": 1.0000964693212458e-22
+    },
+    {
+      "name": "total",
+      "printed_upper": "9.4900e-12",
+      "is_outward": false,
+      "certificate_upper_approx": 9.490046557499695e-12
+    }
+  ],
+  "coarse_squared_inequality_is_true": false,
+  "corrected_squared_inequality_is_true": true
+}

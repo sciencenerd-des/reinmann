@@ -95,6 +95,7 @@ import Reinmann.AnalyticPFLimit
 import Reinmann.XiTaylorIdentification
 import Reinmann.TuranDeficit
 import Reinmann.WeilRankTail
+import Reinmann.WeilWindowAudit
 import Reinmann.CoupledRankEnergy
 import Reinmann.FiniteShiftChains
 import Reinmann.SupportTranslation

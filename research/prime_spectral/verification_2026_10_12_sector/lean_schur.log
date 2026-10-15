@@ -1,0 +1,129 @@
+Reinmann/WeilSchurInertia.lean:17:3: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:20:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:20:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:21:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  NonAssocSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:21:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:43:35: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:43:59: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:47:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  NonAssocSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:47:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:47:26: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:76:10: error(lean.unknownIdentifier): Unknown identifier `sigNeg_le_of_injective_domination`
+Reinmann/WeilSchurInertia.lean:78:30: error: Application type mismatch: The argument
+  h
+has type
+  Type u_3
+of sort `Type (u_3 + 1)` but is expected to have type
+  ?m.120 = ?m.121
+of sort `Prop` in the application
+  congrArg Prod.fst h
+Reinmann/WeilSchurInertia.lean:79:4: error: unsolved goals
+x : Type u_1
+⊢ {M : Type u_2} → {N : Type u_3} → (S : sorry ()) → (D : sorry ()) → (∀ (y : ?m.35 S D), 0 ≤ sorry ()) → Type u_7
+Reinmann/WeilSchurInertia.lean:76:2: error: unsolved goals
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} → (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → AddCommGroup (sorry S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} → (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → CommRing (sorry S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} → (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → LinearOrder (sorry S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} →
+        (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → Module (sorry S D hD) (sorry S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} → {N : Type u_3} → (S : sorry) → (D : sorry) → (∀ (y : ?m.35 S D), 0 ≤ sorry) → Type u_4
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} → {N : Type u_3} → (S : sorry) → (D : sorry) → (∀ (y : ?m.35 S D), 0 ≤ sorry) → Type u_5
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} → (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → AddCommGroup (?m.37 S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} → (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → CommRing (?m.36 S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} → (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → LinearOrder (?m.36 S D hD)
+
+⊢ {ℝ : Type u_1} →
+    {M : Type u_2} →
+      {N : Type u_3} →
+        (S : sorry) → (D : sorry) → (hD : ∀ (y : ?m.35 S D), 0 ≤ sorry) → Module (?m.36 S D hD) (?m.37 S D hD)
+Reinmann/WeilSchurInertia.lean:83:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  NonAssocSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:83:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:83:28: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  NonAssocSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:83:28: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:94:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:94:39: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:95:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:95:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  NonAssocSemiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:95:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Reinmann/WeilSchurInertia.lean:100:4: error: `sorryAx` is not a structure

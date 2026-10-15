@@ -1,0 +1,55 @@
+coefficient generation 720 32768
+coefficients complete seconds 1234.8844769580173
+rank 10 None unresolved working cells 0 seconds 1235.5838922919938
+rank 20 None unresolved working cells 0 seconds 1236.5336745419772
+rank 30 None unresolved working cells 0 seconds 1237.6975022919942
+rank 40 None unresolved working cells 0 seconds 1240.9650194169953
+rank 50 None unresolved working cells 0 seconds 1241.5811097080004
+rank 60 None unresolved working cells 0 seconds 1242.0878549169865
+rank 70 None unresolved working cells 0 seconds 1242.6971195000224
+rank 80 None unresolved working cells 0 seconds 1243.1857920420007
+rank 90 None unresolved working cells 0 seconds 1243.9014022499905
+rank 100 None unresolved working cells 0 seconds 1244.3076299169916
+rank 110 None unresolved working cells 0 seconds 1244.7158682500012
+rank 120 None unresolved working cells 0 seconds 1245.1274024579907
+rank 130 None unresolved working cells 0 seconds 1245.555691207992
+rank 140 None unresolved working cells 0 seconds 1245.9721589579713
+rank 150 None unresolved working cells 0 seconds 1246.3949974579737
+rank 160 None unresolved working cells 0 seconds 1246.823738874984
+rank 170 None unresolved working cells 0 seconds 1247.2121967080166
+rank 180 None unresolved working cells 0 seconds 1247.588363167015
+rank 190 None unresolved working cells 0 seconds 1247.9612252499792
+rank 200 None unresolved working cells 0 seconds 1248.328270500002
+rank 210 None unresolved working cells 0 seconds 1248.6748924999847
+rank 220 None unresolved working cells 0 seconds 1249.0095944170025
+rank 230 None unresolved working cells 0 seconds 1249.3305275000166
+rank 240 None unresolved working cells 0 seconds 1249.656562249991
+rank 250 None unresolved working cells 0 seconds 1249.9846490420168
+rank 260 None unresolved working cells 0 seconds 1250.3277570420178
+rank 270 None unresolved working cells 0 seconds 1250.6815221249708
+rank 280 None unresolved working cells 0 seconds 1250.9922889579902
+rank 290 None unresolved working cells 0 seconds 1251.3026426249999
+rank 300 None unresolved working cells 0 seconds 1251.6173988750088
+rank 310 None unresolved working cells 0 seconds 1251.9469267919776
+rank 320 None unresolved working cells 0 seconds 1252.3037002499914
+rank 330 None unresolved working cells 0 seconds 1252.6214314170065
+rank 340 None unresolved working cells 0 seconds 1252.9204202499823
+rank 350 None unresolved working cells 0 seconds 1253.2086132079712
+rank 360 None unresolved working cells 0 seconds 1253.4959547080216
+rank 370 None unresolved working cells 0 seconds 1253.7398821249953
+rank 380 None unresolved working cells 0 seconds 1253.9710802920163
+rank 390 None unresolved working cells 0 seconds 1254.2016436249833
+rank 400 None unresolved working cells 0 seconds 1254.4447930830065
+rank 410 None unresolved working cells 0 seconds 1254.655896042008
+rank 420 None unresolved working cells 0 seconds 1254.8614631670061
+rank 430 {'rank': 430, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1255.100205249968
+rank 440 {'rank': 440, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1255.3256791669992
+rank 450 {'rank': 450, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1255.5249553750036
+rank 460 {'rank': 460, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1255.7194165830151
+rank 470 {'rank': 470, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1255.9103418330196
+rank 480 {'rank': 480, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1256.105747582973
+rank 490 {'rank': 490, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1256.3013523329864
+rank 500 {'rank': 500, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1256.4805017919862
+rank 510 {'rank': 510, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1256.6452716250205
+rank 520 {'rank': 520, 'positive': 201, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1256.7990185000235
+result None

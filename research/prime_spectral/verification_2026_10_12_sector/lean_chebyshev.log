@@ -1,0 +1,49 @@
+Reinmann/ToeplitzQuadraticChebyshev.lean:31:27: warning: This simp argument is unused:
+  show ¬(0 = j.val + 1 + 1) by omega
+
+Hint: Omit it from the simp argument list.
+  simp [tri, Fin.val_succ, show ¬(0 +̲ ̲1̲ ̲= j̵.̵v̵a̵l̵+̵1̵+̵1̵)̵ ̵b̵y̵ ̵o̵m̵e̵g̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵s̵h̵o̵w̵ ̵¬̵(̵0̵+̵1̵ ̵=̵ ̵j̵.̵v̵a̵l̵+̵1̵+̵1̵j̲.̲v̲a̲l̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲ ∨ j̵.̵v̵a̵l̵+̵1̵+̵1̵+̵1̵j̲.̲v̲a̲l̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲ = 0) by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/ToeplitzQuadraticChebyshev.lean:32:4: warning: This simp argument is unused:
+  show ¬(0 + 1 = j.val + 1 + 1 ∨ j.val + 1 + 1 + 1 = 0) by omega
+
+Hint: Omit it from the simp argument list.
+  simp [tri, Fin.val_succ, show ¬(0 = j̵.̵v̵a̵l̵+̵1̵+̵1̵)̵j̲.̲v̲a̲l̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲)̲ by o̵m̵e̵g̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵s̵h̵o̵w̵ ̵¬̵(̵0̵+̵1̵ ̵=̵ ̵j̵.̵v̵a̵l̵+̵1̵+̵1̵ ̵∨̵ ̵j̵.̵v̵a̵l̵+̵1̵+̵1̵+̵1̵ ̵=̵ ̵0̵)̵ ̵b̵y̵ ̵omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/ToeplitzQuadraticChebyshev.lean:36:27: warning: This simp argument is unused:
+  show ¬(j.val + 1 + 1 = 0) by omega
+
+Hint: Omit it from the simp argument list.
+  simp [tri, Fin.val_succ, show ¬̵(̵j̵.̵v̵a̵l̵+̵1̵+̵1̵¬̲(̲j̲.̲v̲a̲l̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲ = 0̵)̵ ̵b̵y̵ ̵o̵m̵e̵g̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵s̵h̵o̵w̵ ̵¬̵(̵j̵.̵v̵a̵l̵+̵1̵+̵1̵+̵1̵ ̵=̵ ̵0 ∨̵ ̵0̵+̵1̵∨̲ ̲0̲ ̲+̲ ̲1̲ = j̵.̵v̵a̵l̵+̵1̵+̵1̵)̵j̲.̲v̲a̲l̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲)̲ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/ToeplitzQuadraticChebyshev.lean:37:4: warning: This simp argument is unused:
+  show ¬(j.val + 1 + 1 + 1 = 0 ∨ 0 + 1 = j.val + 1 + 1) by omega
+
+Hint: Omit it from the simp argument list.
+  simp [tri, Fin.val_succ, show ¬̵(̵j̵.̵v̵a̵l̵+̵1̵+̵1̵¬̲(̲j̲.̲v̲a̲l̲ ̲+̲ ̲1̲ ̲+̲ ̲1̲ = 0) by o̵m̵e̵g̵a̵,̵
+  ̵ ̵ ̵ ̵ ̵s̵h̵o̵w̵ ̵¬̵(̵j̵.̵v̵a̵l̵+̵1̵+̵1̵+̵1̵ ̵=̵ ̵0̵ ̵∨̵ ̵0̵+̵1̵ ̵=̵ ̵j̵.̵v̵a̵l̵+̵1̵+̵1̵)̵ ̵b̵y̵ ̵omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/ToeplitzQuadraticChebyshev.lean:51:37: warning: This simp argument is unused:
+  Fin.one_succAbove_zero
+
+Hint: Omit it from the simp argument list.
+  simp [B, Matrix.submatrix_apply,̵ ̵F̵i̵n̵.̵o̵n̵e̵_̵s̵u̵c̵c̵A̵b̵o̵v̵e̵_̵z̵e̵r̵o̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/ToeplitzQuadraticChebyshev.lean:74:17: warning: This simp argument is unused:
+  Matrix.det_fin_one
+
+Hint: Omit it from the simp argument list.
+  simp [̵M̵a̵t̵r̵i̵x̵.̵d̵e̵t̵_̵f̵i̵n̵_̵o̵n̵e̵,̵ ̵t̵r̵i̵]̵[̲t̲r̲i̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/ToeplitzQuadraticChebyshev.lean:85:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

@@ -1,0 +1,661 @@
+{
+  "status": "all_declared_sources_inputs_and_artifact_hashes_checked",
+  "artifacts": [
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C135_4.json",
+      "sha256": "3a5f82841dcb3987661243071e6f6a2581ebcd00f21362416ec6b3a3a0bbafe6",
+      "bytes": 13112590,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C16.json",
+      "sha256": "5f077d2fe84d1e8509fa7f7b2d110d94ce41d7078554a6ae950489102c8d0fb4",
+      "bytes": 13112155,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C2.json",
+      "sha256": "f7282cb89ceaed5615a3b06145869c8fe5169de0f079407e2550cd9f34a90750",
+      "bytes": 13122490,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C271_8.json",
+      "sha256": "2a020e60c16cddf8c1288d78f2bd7ed904c2d1d30ea88c98231683486e1a3e82",
+      "bytes": 13150915,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C32.json",
+      "sha256": "515fdcdc857bf3a5cc6d2dc64fce2fc60e3757dad85081eafddab2b238917b88",
+      "bytes": 13112491,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C33.json",
+      "sha256": "1c03a6ecdf5ec16cd60427feb2516a4d280742a648cf488336eab922a17e4bb5",
+      "bytes": 13111537,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C34.json",
+      "sha256": "ef678e5a5f71185fbf7c8f53ed6565cf3ef8edabdc441f1ef6f2bcbf3560cdcb",
+      "bytes": 13109881,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C36.json",
+      "sha256": "a1d5cfb8986412d16d57cc44bc8fbb071e706381b5da8aef48705cd89ad7a51d",
+      "bytes": 13050417,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C4.json",
+      "sha256": "d335832bf5fb71c0f874b8db0abddc77006693426e62f1a7ab3ce47f32c08ed0",
+      "bytes": 13122686,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C40.json",
+      "sha256": "8b7afa35adec2f5dbe2009b916630ab3b6a3fe9da6119cc5d991cb840c4d20c5",
+      "bytes": 13013596,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C48.json",
+      "sha256": "0e124d55636d0fac7134056fa604d7051a60b3e371ab57dea2d0007181ae1cf6",
+      "bytes": 13009725,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C64.json",
+      "sha256": "038d6b77745900e123cf54a0b5d1cdbcc2404a945dd8c571524b438402684c70",
+      "bytes": 13013291,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C67_2.json",
+      "sha256": "acfcc4cf66c5842ebcb1405873db27f751cccc594a79bf8c85c3bdc8568935f2",
+      "bytes": 13111947,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_C8.json",
+      "sha256": "7d22dd56aabdb55804f7be1489789d52a86ae44784688668d9df091e20341065",
+      "bytes": 13119362,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q13_summary.json",
+      "sha256": "faeac6a4a8e1c671408635e42039df9481a183dea291636c1a190fa4d881f99a",
+      "bytes": 15547,
+      "status": "structured_control_summary",
+      "checked_dependency_links": 17
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_C16.json",
+      "sha256": "8b4cfd495123127920a518218f58663c83519e6b7e5dccceb2e0803054b731bb",
+      "bytes": 13115233,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_C2.json",
+      "sha256": "b1e8e295f67f3f9f80a9bce0958bba88e3bbf291c64cbb201d3958b64cd6f53f",
+      "bytes": 13122490,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_C32.json",
+      "sha256": "6b02401a92c6c18b28856e0a70400ed66537a21b41c6056a9482164f6cf7959d",
+      "bytes": 13111827,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_C4.json",
+      "sha256": "494648433443f567956b96be9f2713672065a514a6f1c5e6270cacff5482d84f",
+      "bytes": 13120850,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_C64.json",
+      "sha256": "5bbbf79e37707bbb59be0d7d65eeb74d75e0e835aafafe6904c0fb24bd2d9c14",
+      "bytes": 13111443,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_C8.json",
+      "sha256": "6e3e2fdeb6e1e2f6483b412b34d3c79dffe38e2de0372096aecee47eee90a0e9",
+      "bytes": 13117890,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/analogue_q17_summary.json",
+      "sha256": "804c7939dd6d5aa4f8d9fd466ee45afc60dcb7d055468996fed3e82e642f1b7d",
+      "bytes": 13436,
+      "status": "structured_control_summary",
+      "checked_dependency_links": 9
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/atlas_H340.json",
+      "sha256": "f02849efb7cb282b922e856ec82ce0c9a0bc0b7250c7b624c1ac34c4d33af9bd",
+      "bytes": 22195,
+      "status": "certified_complete_DH_zero_atlas_and_steepest",
+      "checked_dependency_links": 5
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/atlas_replay.json",
+      "sha256": "be7de191bb6394e034c2894d77eabdf0d28106c7c34d1ef15fe466bb59701e98",
+      "bytes": 1498,
+      "status": "all_atlas_segments_brackets_and_disks_replayed",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_absolute_C31_N60.json",
+      "sha256": "5ac477ee258310ce52c4b5065e7377c47af2af4df3c50d00c469226251a2961f",
+      "bytes": 7376464,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C115_4_N80.json",
+      "sha256": "38dc0daae9ebc256d17c488e3fb6342f6183c42185dff564fb74da928661a69b",
+      "bytes": 13112203,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C13_N80.json",
+      "sha256": "e81d311750250d3ce07e654b651287d58bdb2f787967120eef660a4e6604a90c",
+      "bytes": 13115360,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C15737_512_N80.json",
+      "sha256": "95acc7346f9d2380934630693571a7f3181b16b81bc4538ec3e54ed865f8e77a",
+      "bytes": 13110856,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C1975_64_N80.json",
+      "sha256": "012ed6f67cd7c9b25e8432affc1dfb1760b044e1a9f0ecf1d208ae8b6f44a9f0",
+      "bytes": 13124319,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C22_N80.json",
+      "sha256": "f4c150e8037d1bc466ccb849533b3fb2f0f7bf97959c32833d14bc09ba0e35b2",
+      "bytes": 13111162,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C239_8_N80.json",
+      "sha256": "fdec334c3d699ebb49b8cb7ad56f2944efbee814c973a4585577bb50da3c5096",
+      "bytes": 13113653,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C31_N60.json",
+      "sha256": "eae563800755fe65248d307df92e953e18d8aa6e210cd086acb03b1b10bbb44b",
+      "bytes": 7463350,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C31_N80.json",
+      "sha256": "3c986317dc8a4be222291fc10b598037ba248d911218738d7fed2c7fc5e2b295",
+      "bytes": 13120134,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C3941_128_N80.json",
+      "sha256": "97ea60de0c2151dfaff4d9406f951ec47a6f3d0c405a9a75ca28f8abb9f756ac",
+      "bytes": 13130561,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C487_16_N80.json",
+      "sha256": "329315f8fbc95428a32262631031aa81723f151cd2326990540de8ea0d8b97f3",
+      "bytes": 13111876,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C53_2_N80.json",
+      "sha256": "007845d7e981fcf18b457b839aa5881efdb2648bbe566bb7fc75dfa443d99e1c",
+      "bytes": 13111780,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C7873_256_N80.json",
+      "sha256": "c75ca8a717b01e6eaa76faa07eedd4ff3dff6742e3129d7da22e7e28fb612196",
+      "bytes": 13139281,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C983_32_N80.json",
+      "sha256": "d364ba6c86c5b20c93b32756593086f6ce0febaad61e22a6187f811f7ce3f074",
+      "bytes": 13111026,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_prime-powers_C31_N60.json",
+      "sha256": "663cdfc5d214ef0643c6af63aa72b25f8554344bed03b201bdb86e7939f3be53",
+      "bytes": 7323253,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_rank1-80_shift0-80_4096bits.json",
+      "sha256": "9e0ce2c6ddd986dc331ee5723a9ad05d3ff188a346f7a139f742b5ac5802e712",
+      "bytes": 146486,
+      "status": "certified_finite_grid_with_explicit_unresolved_cells",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_rank1-80_shift0-80_4096bits_coefficients.json",
+      "sha256": "5dc4f29d30af36d6edc707f7b3b907945744588904ad02ad26d9e2612651de23",
+      "bytes": 685905,
+      "status": "structured_control_summary",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_rank430-520_shift0-200_32768bits.json",
+      "sha256": "3693b5492e17484bbf594f70a70df59bd7934448cbcc23d45705506088472c35",
+      "bytes": 1029117,
+      "status": "certified_finite_grid_with_explicit_unresolved_cells",
+      "checked_dependency_links": 4
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_rank430-520_shift0-200_32768bits_coefficients.json",
+      "sha256": "bf1d312730ec861c00f9e1ecc84d703ef0aa725c36419d01c257e98b94ef8b16",
+      "bytes": 25607754,
+      "status": "structured_control_summary",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_window_search_N80.json",
+      "sha256": "73ad1c166bbc4e5be22cb80bc753054e164d5bef0f7e0fb46ef35a917b4463e2",
+      "bytes": 3551,
+      "status": "finite_family_search_not_full_threshold_bracket",
+      "checked_dependency_links": 12
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C159_8.json",
+      "sha256": "ac1032c361d1cb5875eaa91e0d357b54091073959f3e02a25bfe3b4a51d03501",
+      "bytes": 13102098,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C16.json",
+      "sha256": "bfff168f39af1ed02a8144f876ba71d7057aef14247fef794ef2198f04e20ab2",
+      "bytes": 13107521,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C18.json",
+      "sha256": "d765d19f605a47feea437d4de41ec624fd5bc3b4a2988f6971457e62ae1801a4",
+      "bytes": 13107875,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C19.json",
+      "sha256": "8007a4b72e9fbd2cf40d16f99a3bc0d831a3843ce4ead0334673b38f3277fcb8",
+      "bytes": 13108143,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C2.json",
+      "sha256": "cb62acfe4a502cb6483386195dae82a2bc253b26196ae0a737f1f0ded3cf9294",
+      "bytes": 13113072,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C20.json",
+      "sha256": "d285048db3c4994d3195c144a1d4e90fdfc78d38dfb286ba30b3df476a7c0670",
+      "bytes": 13070247,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C24.json",
+      "sha256": "f182f8c9ee3c57daac53f166ba93af53f773a7589e40fa017b9ad0be64f778b2",
+      "bytes": 12971767,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C317_16.json",
+      "sha256": "dd86c38588dfaa08f0d7f13e01fb61b26998ffdce05c6cd602a1a7ae2e2deee5",
+      "bytes": 13108065,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C32.json",
+      "sha256": "e11d4bbd2e1edf1363c2d70cc616e05e079be44417ed2d106ea4b7a428fdcb19",
+      "bytes": 12972937,
+      "status": "negative_full_form_trial",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C39_2.json",
+      "sha256": "61e6632d2567f3d788ee50c8e6ae2fae3a7b126a5c5c46cac52f9a928fb47c95",
+      "bytes": 13106471,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C4.json",
+      "sha256": "71130760148890c370e5498d086129dd36d5613f2a5f6975b6d93c4aae3df8b5",
+      "bytes": 13112936,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C79_4.json",
+      "sha256": "e04796ef08e114131dd75a88d86a2eafcc1c30f1294441ecc2e3448af754852a",
+      "bytes": 13108373,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_C8.json",
+      "sha256": "5d21365dfc951ca888370fec4dfab4fdd60318a7ac0d92f7510fe9458d75b115",
+      "bytes": 13111084,
+      "status": "positive_finite_sections_only",
+      "checked_dependency_links": 3
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/epstein5_summary.json",
+      "sha256": "79ef822ab7e4240d49baa65294e7b9c6195816a5f5b7e60608deb81ca2bab0c8",
+      "bytes": 9988,
+      "status": "structured_control_summary",
+      "checked_dependency_links": 16
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/high_rank_replay.json",
+      "sha256": "90ab09c6ee658a192525a69f53cf8ced0a85693bd76466a43853c9289aa43ff9",
+      "bytes": 1028933,
+      "status": "condensation_replayed_and_24_high_rank_complementary_minors_positive",
+      "checked_dependency_links": 2
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/lean_validation.json",
+      "sha256": "2b34fcf288c0ff90caa506963d3c9cd51ac5bba4e97968f1eb354f04ad9cea81",
+      "bytes": 1599,
+      "status": "finite_targets_checked_and_axiom_audit_clean",
+      "checked_dependency_links": 6
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/line_brackets_H340.json",
+      "sha256": "357ed5d417aef2898271c997d4b88b1bf543c898679617bb9aa610ffe50aa181",
+      "bytes": 153581,
+      "status": "disjoint_certified_critical_line_sign_brackets",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/offline_disks_H340.json",
+      "sha256": "5e83230d5633a0219ee1ff89d97b3f6d19f7589d48d75f524bc954ffed27506f",
+      "bytes": 17264,
+      "status": "certified_individual_disks_not_yet_complete",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/winding_H340.json",
+      "sha256": "0ef2edd1e7157ab8a146f3b4f8e42311df834dd4e1e41515e4e32a1751e7f75c",
+      "bytes": 6308282,
+      "status": "certified_DH_rectangle_winding",
+      "checked_dependency_links": 0
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_12_sector/window_block_pilot.json",
+      "sha256": "9b1ba2424e1c9e10f3f6a2e2601f776150608b72de5e9b8b8acf15027d441300",
+      "bytes": 1498171,
+      "status": "finite_sections_and_matched_Schur_diagnostics",
+      "checked_dependency_links": 4
+    }
+  ],
+  "artifact_count": 64,
+  "requested_solid_minors_strictly_positive": 18291,
+  "unresolved_requested_solid_minors": 0,
+  "validation": {
+    "python_tests": {
+      "passed": 26,
+      "log": "research/prime_spectral/verification_2026_10_12_sector/tests_all.log",
+      "log_sha256": "585f2cf6c1cf74b1762b77c76bbf90635f78e1d6abe342340b87900fd6556564"
+    },
+    "paper": {
+      "file": "paper/rh_reduction_paper.pdf",
+      "sha256": "b250f24ed2742bbe9f0cc247abc4802b28c878e2e2f15ab6e78aaf2819840e63",
+      "build_log": "research/prime_spectral/verification_2026_10_12_sector/paper_build.log",
+      "build_log_sha256": "a3b79a8392d28b5a25cb48c13ec8f887f3a54ae8179975731af5ff0286107baf"
+    },
+    "sector_figure": {
+      "generator_sha256": "8835cb65a60109716560b6c2f3bcd1daec8615ae04a39104e31f55933e16d3f9",
+      "pdf_sha256": "871ee1dbe1166232c076977f4c67ef9639219ec33ccc725db615a66305ab7817",
+      "png_sha256": "391e4837b87be9a732f63b6921bdefb60dd2fb947d811d15381240399db5eb91",
+      "scope": "Scaled isolated quadratic determinant and counts of positive minors in the specified full-function grid."
+    },
+    "lean": {
+      "status": "finite_targets_checked_and_axiom_audit_clean",
+      "checked_at": "2026-10-13",
+      "combined_compiler_exit_code": 0,
+      "axiom_audit": "all_six_targets_standard_axioms_only",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "canonical_proof_bodies_match_audit": true,
+      "standalone_schur": "passed_after_adding_Real_Basic_import",
+      "input_sha256": {
+        "Reinmann/WeilSchurInertia.lean": "7ddcf7e66f7ba3e6d6a1ad0763fc424aca6c31e57fcb46e544286badf23f339e",
+        "Reinmann/ToeplitzQuadraticChebyshev.lean": "774875e4197534cbe02d425ef2314e767d3b73856efb2e30aa1f4fa7c679853c",
+        "research/prime_spectral/verification_2026_10_12_sector/FiniteTargetsAudit.lean": "6d22fcf83b4d323d8971e0c7b8b0edb2a3e3255042ba24cb6719b3df961117d5",
+        "research/prime_spectral/verification_2026_10_12_sector/lean_finite_targets_audit.log": "e1088f205ecc1862839c9c28225c3b10d48aae612cc9535db93bcd97ca42d553",
+        "research/prime_spectral/verification_2026_10_12_sector/lean_schur_final.log": "197cbadd399b08974d68aa1519ddcacd041602ab2c105f118642bb3968993ff4",
+        "research/prime_spectral/verification_2026_10_12_sector/lean_chebyshev.log": "f78d4f1ec26ce41cb4d7172e8738f3585007c4fb2668b440337498d0a02e4e0b"
+      },
+      "scope": "Finite-dimensional completion-of-square inertia and shift-one Toeplitz determinant. No infinite-dimensional realization or RH claim.",
+      "standalone_schur_exit_code": 0,
+      "standalone_chebyshev": "passed_with_linter_warnings",
+      "dependency_build": "2013_jobs_completed_successfully",
+      "root_project_build": "not_run",
+      "compiler_version": "Lean 4.30.0"
+    },
+    "written_results": {
+      "research/prime_spectral/RESEARCH_ROUND_2026_10_12.md": "aae0dd10414cc28869554b5dfdd6c4b876edc520e1647583ede0dc0a1d384f25",
+      "research/prime_spectral/LOCALIZED_TURAN_PACKET_2026_10_12.md": "1d6cd9878920fab8637bbbfdf2e8b2a542a236073e8a0995c3cd6254873bfc25",
+      "Reinmann/WeilSchurInertia.lean": "7ddcf7e66f7ba3e6d6a1ad0763fc424aca6c31e57fcb46e544286badf23f339e",
+      "Reinmann/ToeplitzQuadraticChebyshev.lean": "774875e4197534cbe02d425ef2314e767d3b73856efb2e30aa1f4fa7c679853c"
+    },
+    "verification_sources": {
+      "experiments/prime_spectral/adjoint_fourier_certificate.py": "7f1c19cb1de302f6ae338e7c5e25c4a26b073c6fc2e9ce79a59ea97976819abf",
+      "experiments/prime_spectral/assembled_trial_certificate.py": "ad3134b1b0efb3c045e4bfad53af4818d598c0a009c879551625e26e38ce2325",
+      "experiments/prime_spectral/boundary_moment_adjoint.py": "b1254f336492146236ee035444f15bb1a999486365435abcfa581c07fbcacff3",
+      "experiments/prime_spectral/boundary_susceptibility.py": "4a215f99023347d586655f96305d7bfc1785fd019c964c7c88ccdf5d9a8d65f8",
+      "experiments/prime_spectral/canonical_prolate_adjoint.py": "347ed94e06a85fba416627d59c852080688e5235b6caeb583823d8aae537867b",
+      "experiments/prime_spectral/certified_mode_comparison.py": "178e18e68e727ba7da60dbf89fde62dca55743d6cb899d40ad4745641b79f040",
+      "experiments/prime_spectral/certified_prolate_jacobi.py": "1828b348e7508108b35ca25e6642711bb64a43063c7a2eae8acbfc43be6b4870",
+      "experiments/prime_spectral/certified_prolate_projection.py": "c557cf82ede6c91379a3154116ce197c14efa9db7296bcef0038af5ee7c5fcd8",
+      "experiments/prime_spectral/certified_prolate_vectors.py": "e0c6db0a5021339ba65fb3534a372332b3c4fb729551aaa5c18872d4ddd3112f",
+      "experiments/prime_spectral/certified_weil.py": "cb18e36f25ca9bb2af2def57ba287501dfffb2094aa12dda4699a28329a7d4fd",
+      "experiments/prime_spectral/check_boundary_activation_kernel.py": "ff96c50c5ae85797551912c7a5d7755b29efc0dc574752a7b5a868b22fd97f51",
+      "experiments/prime_spectral/closed_weil.py": "cdcddd8933f8bdbce43ca8d03b86b82f1e304ca64ba692ecb261ab5cf0a4c2b1",
+      "experiments/prime_spectral/cluster_comparison_replay.py": "a94fd6eb5ee3a08fa46e54e5ae7484fd3d36564a88db15dd833100b581778080",
+      "experiments/prime_spectral/common_shift_rank_budget.py": "e413ed341cf2b1e8065e0445e14abc82fab6bafad31c6ea5bfbd5c3dfcd59a8e",
+      "experiments/prime_spectral/compact_window_certificate.py": "7738cc9f421bc8bb31fee36fc5343afc6d33e7b579a35c8845fc23e43d4d6737",
+      "experiments/prime_spectral/compare_cluster_ranks.py": "1e212bf64972d197503962f1c8eac85ccd42515ccdae1c94645c59affbd163ee",
+      "experiments/prime_spectral/coupled_prolate_residual.py": "2d48a7138c16024fd3f519f2cccc4bad6b7069481f806454ee7093de609351be",
+      "experiments/prime_spectral/cross_support_physical_overlap.py": "263d75de13cdbda10ab369189a2e2840b6f9bd0ec8e5d7c199c171535111c647",
+      "experiments/prime_spectral/davenport_heilbronn_control.py": "066e7beb2583b4b8da45fd60996c1c96ae1974c3acf64a3b18fbce0594d7ea25",
+      "experiments/prime_spectral/deflated_rank_response.py": "5746a78acf96cd86707262a60b4bb30c60be41641d40a0dfd0c135bf9391d0f5",
+      "experiments/prime_spectral/dh_analogue_controls.py": "5f6042facc5fb8176cb546344f94439e666882a6b5f760756e006e6d686d98a6",
+      "experiments/prime_spectral/dh_high_rank_scan.py": "0d2cda3009308beaeebbc630092274ba1526b93cd782c56eb01586571d3a1e49",
+      "experiments/prime_spectral/dh_toeplitz_scan.py": "d87eb1be29ebd658df190644e5099d07a6c8e0dc7558802ebcbbf9b714a3bdca",
+      "experiments/prime_spectral/dh_weil_certificate.py": "8762e4d754d2dc5bf09ee7ee3f4c1daab5769af53c2f2a93d4814a8bb417d89b",
+      "experiments/prime_spectral/dh_window_experiments.py": "d089c71111191c3caa0643a8f88156c65e97b15b91c009b38094c5e7f53335c2",
+      "experiments/prime_spectral/dh_zero_and_gates.py": "66daade31ee82afe19dd16353384121b7c380f8da147535157030944eedb04b2",
+      "experiments/prime_spectral/dh_zero_atlas.py": "e144af0fbb0a653371ba61e55c5d70423c30b53e559c2dd8d6b3fab6d9dc1b21",
+      "experiments/prime_spectral/eigenvalue_response.py": "540e0d7bd3575f03d8f4c21d8116b4a477b35255183a5227dd654c2a9c635cd9",
+      "experiments/prime_spectral/eigenvector_coefficients.py": "f41f0498ad4a0c99fbb792b2fc4e104b5b06d76ff736b3456870d23825135161",
+      "experiments/prime_spectral/epstein_control.py": "3ca16b65e4eb8e1f8af4e660b50631cb4b6722f7dc6a0cc6384234eca773b5e0",
+      "experiments/prime_spectral/euler_region_trace.py": "d2cfb280bd6d26054fd9cd12f8e59b7d7f9bc3faf97909b80ec0785592a00b04",
+      "experiments/prime_spectral/exact_prolate_finite_gate.py": "6557f425f25260346cd40dfd9ea7feb5c9d6500ae2c6eabd58dec4a3a7a8bfcb",
+      "experiments/prime_spectral/filtered_candidate_transfer.py": "1eebed4f8f64398eb05cff48239afa94c1fdd815d3cc63c8d1bfb3354989e575",
+      "experiments/prime_spectral/full_cluster_certificate.py": "61e9873b97ff84956c1b4b79b0e1a54dc7f182285d9327fff718176e533dac81",
+      "experiments/prime_spectral/full_cluster_residual.py": "e65d7a2b590d9ac286a10010d0da3fccc1b45067b886fd20b60f304300df5ec3",
+      "experiments/prime_spectral/full_ground_fourier.py": "4616c909cdc9220e03770b3e97fbe3c15643b3bd00e644b90049a37068625483",
+      "experiments/prime_spectral/grid_tail.py": "26b6a292644bbdd331a19018b7f660b84e812defa6187bc250297dcc3485b5a3",
+      "experiments/prime_spectral/ground_schur.py": "631a1d9072a70da70b175873dd2c0c7065a7622b0163bd8e4bcf1eee9be3539d",
+      "experiments/prime_spectral/higher_mode_prolate_gate.py": "afd7725d9e1c39d4e8d1b0da54055181b43e79b304e3af0db0081abf1cb53444",
+      "experiments/prime_spectral/isolated_kernel.py": "eb68330928a7551a3e8a575a9ae3d5d857a049ce2428ee144470ba0b7606f087",
+      "experiments/prime_spectral/localized_packet_bound.py": "415ed222c3d6913fb27dc8f510fed54d85a423622f2c297ba75fc1f22082813d",
+      "experiments/prime_spectral/localized_resolvent_enclosures.py": "721807a17fa882fa8911b2a2d5aaa6a0c2bc3f7fd184490c448898aa8aa54de2",
+      "experiments/prime_spectral/moving_support_boundary.py": "960d53d83272c97b222dfc511e72b4294a47b1e546c2ddd2a63aab44925b8ba8",
+      "experiments/prime_spectral/orthogonal_fourier_transfer.py": "8462640b169fbb6f0836c05d3c1711b6a4ee64f121ad2ec0a4c5aa27cc52386e",
+      "experiments/prime_spectral/perturbation_kernel.py": "01ca0d1ad7768067366c2b57dd3a6ce7ee2897e92ea499c70353f8a9d016ed7f",
+      "experiments/prime_spectral/plot_dh_sector_control.py": "8835cb65a60109716560b6c2f3bcd1daec8615ae04a39104e31f55933e16d3f9",
+      "experiments/prime_spectral/positive_kernel.py": "3826cee3f16d8b536c36461b8b2a63f655d45480953e1f4932b17806194e44dd",
+      "experiments/prime_spectral/prime_threshold_jump.py": "b625aceb7a8e9b4e807f6ce6eea7fcf12fe1a3bd427ae055d65f7c60a36deea9",
+      "experiments/prime_spectral/profile_constraint_gate.py": "c39050f175e030a7236f670746c63805fba6616f1770b945fe9de8a5796b4baf",
+      "experiments/prime_spectral/prolate_candidate_diagnostic.py": "2dd22d67e9afa2191895cc5743173b317dfccb0f4c5f02878b3d4091198d8e16",
+      "experiments/prime_spectral/prolate_cluster_gate.py": "12e8b11c912cad47f7e95e55782268ce0a274c66d29e73dc2ae841c1addcc911",
+      "experiments/prime_spectral/prolate_concentration_bound.py": "e56c64d19a0e7737543e341e7c47a4f07a4154680636a1c4af8af4669ea567a5",
+      "experiments/prime_spectral/prolate_ground_alignment.py": "97c03c1c90c17c1368d73e8cd4bc0d8e4555d3cd99504e205b8e21f4896f2de6",
+      "experiments/prime_spectral/prolate_residual_gap_audit.py": "19520b71ee22f8fd31a9e3ba6af3483c3a8b8046cb939fc308afebd9a4769dcc",
+      "experiments/prime_spectral/quotient_coefficient_budget.py": "e4a9ff483cc79f084513cb4216fc62633b66086d2ccf0cb6308115ab7ecf5db0",
+      "experiments/prime_spectral/quotient_operator.py": "d10a0e41132508d058a4c2ee513fd5ba03916a3b3a27a85154646b0952f2691c",
+      "experiments/prime_spectral/rank_response_determinant.py": "dc3cc2200a2b2a51a3b08f54ed61eaeaff9bc9cb71bc21d3e26cec96825401cc",
+      "experiments/prime_spectral/rank_schur_recurrence.py": "637e6dc5934042405ccc99b6842332d69c15c6017535387d89813f13a6418689",
+      "experiments/prime_spectral/reassemble_threshold_gaps.py": "ee26ed0c21db330977e7a4904bafeb51ed88572fe374973d54aa2bb1045eb5da",
+      "experiments/prime_spectral/refine_cluster.py": "cfee92da4003c703fbda4ff97247723a513db71a54135a41684e8d0fc5af4734",
+      "experiments/prime_spectral/renewal_boundary_basis.py": "13895e7c851c262af66df69a10c346712ac839d065c66359ac263b911d0b9bfd",
+      "experiments/prime_spectral/renewal_trace_enclosures.py": "621bc73b781fead2eee8adc876e6b621d110e5f47ef26047328ad87f79afa202",
+      "experiments/prime_spectral/replay_dh_atlas.py": "cca8d9cdd3af0ea0a489192a5dd225f0814a76de0d1d54014c0532a7f171da78",
+      "experiments/prime_spectral/replay_dh_high_rank.py": "2a2a035e8ee063f468284cb9f55aed7ef04196ab523820bd9c53ae94e3bb0459",
+      "experiments/prime_spectral/residual_endpoint_certificate.py": "5a93adf4cfcdc73fd23786b40babd4ba3410f5008b0d767878fbfd5c23ef82ea",
+      "experiments/prime_spectral/robust_prolate_gate.py": "afb7a5e25ed4b4fd5265ddf68a0083a954d963643f1e0dbfc33077cd7d2fe6bd",
+      "experiments/prime_spectral/smooth_support_derivative.py": "98cbbb74da33913c5887476698e5ed268f38872d9a4b623d818fdced47351c61",
+      "experiments/prime_spectral/smooth_support_profile.py": "4b1da0b871573a5ae7d08407cea89992c1dd2edffd15131d319ea7781ff903b8",
+      "experiments/prime_spectral/spectral_alignment.py": "41f4df621ee55e793276a8598538524602ccc353c4d2e118e32a57044b03e477",
+      "experiments/prime_spectral/strip_transfer.py": "13ce3a3c5c5f04ba0c6816ed5f260d6ca7e8ebcaa73c13419e4a8acee10dc246",
+      "experiments/prime_spectral/support_schur_recurrence.py": "5703253774bc96064873fd61d733266a8d234278971ca680dbde271cdaf9ba6c",
+      "experiments/prime_spectral/test_adjoint_fourier_certificate.py": "9522034f05397f0b2d80bf43f6cdd3512f9613055de68475f497029f8b75b19f",
+      "experiments/prime_spectral/test_assembled_trial.py": "a93e1109b624fc4d1bd22fba96686e2b651c58c534a16bacaf50a937540e3dd2",
+      "experiments/prime_spectral/test_boundary_basis.py": "77fe66aab4ee2681887a1c472bbc36903d5349b49897221831159ac48be912e3",
+      "experiments/prime_spectral/test_boundary_moment_adjoint.py": "78fb35b9810e67f110ab2fe910eba718164ca94cbab166c98f8c37a420c53aff",
+      "experiments/prime_spectral/test_boundary_susceptibility.py": "0a88b4cedce863b4e9bf148e65e70b61e66911151cadcdc564d2b31d703b787b",
+      "experiments/prime_spectral/test_canonical_prolate_adjoint.py": "a6d079b1f30e56a4376f9fcf4b98be3215f74e3d6f9934a00b1faa7417ff7f2f",
+      "experiments/prime_spectral/test_certified_mode_comparison.py": "fd93a9f03924ba1dd52263d6834b43bcac04ab9b19efdd937462830b131390b5",
+      "experiments/prime_spectral/test_certified_prolate_jacobi.py": "fe2780dfb058e8825f75abe5f1cc6ad1de9a7d072e1b6cb52c29a6ebd3ac6d93",
+      "experiments/prime_spectral/test_certified_prolate_projection.py": "35e44875951ecd355c02b56c9b75455aa9108b0f8bfc571f6d31dc9e8d439e05",
+      "experiments/prime_spectral/test_certified_prolate_vectors.py": "65030e58dd9dc7c33537553c89786f12888b79deeb52bb7fd350470911e8321c",
+      "experiments/prime_spectral/test_certified_weil.py": "46a67b67e3502c1b87a66e919985ffd81840526568cd3a5f443c22669c8a972d",
+      "experiments/prime_spectral/test_closed_weil.py": "054764707777e1621d766d290a88965c0a9fde93102c01eabb44e24bc14b5bc0",
+      "experiments/prime_spectral/test_common_shift_rank_budget.py": "be3248d814064f505e5862b9cedba3bf54b2ffbe11cded27de8a87aa02405b2a",
+      "experiments/prime_spectral/test_coupled_prolate_residual.py": "d22258769bee2952680603d8024ecac60c952df2bcc3cf1eedb3a5d70e81c15b",
+      "experiments/prime_spectral/test_cross_support_physical_overlap.py": "92268a858370e215b07b968c67b594831e153846fe0b7417a89f5c348056b64d",
+      "experiments/prime_spectral/test_davenport_heilbronn_control.py": "91edc65ed767b471a63bf92a165e27eff2b0bde6ba143bb05d9fa1c51c49d750",
+      "experiments/prime_spectral/test_deflated_rank_response.py": "29c72a059654f0b0725db6a1f31d2fe5509d0a6f3d796cb94aeedada0ccbd0e9",
+      "experiments/prime_spectral/test_dh_research_controls.py": "43cd2337f9d0088e88438e547222649680189290c90d7b2059d675310a88c315",
+      "experiments/prime_spectral/test_dh_sector_program.py": "5fe7be30907d4f32136f3b8f672a652ca0cc4214818787b668751b3ef242b5ab",
+      "experiments/prime_spectral/test_eigenvalue_response.py": "8dee66f860670182bdc0a2df2d4b9119bbfa9449e178625b8b44dc84c640edc5",
+      "experiments/prime_spectral/test_eigenvector_coefficients.py": "a3241e9273aad3aa376569c37a79ed0ffac15281af48c8e0e239761eca5711ad",
+      "experiments/prime_spectral/test_euler_region_trace.py": "19e76c88a5b8533420a2f98c3f676534d4c17a9e790ed28f0c90f79cb143eaf0",
+      "experiments/prime_spectral/test_exact_prolate_finite_gate.py": "d92ef2b399358c6cf69da3f2d4731fd3a1889b14c3343ce985c25773efa1f895",
+      "experiments/prime_spectral/test_filtered_candidate_transfer.py": "1ebe3c5cdfabf574abaedf3cd5af4e45d40b9946798bfbb5eb674dc67934f2c7",
+      "experiments/prime_spectral/test_full_cluster_certificate.py": "ff66a1c0d0982e607377cb3c6bb41e0de8e1ddaca5a6a7f6ce4af1ef9b0df718",
+      "experiments/prime_spectral/test_full_cluster_residual.py": "c4fd4d6f09f07b6cda99e5d4a8fe911e3eb966eae8fd516412a59e9f9340a46c",
+      "experiments/prime_spectral/test_full_ground_fourier.py": "0086d7db3cde51935e78aaa06012f8ee962d5f48318f76a06026d5f953a7df81",
+      "experiments/prime_spectral/test_grid_tail.py": "8de8fd9bb74c3ae647afcc8c6c84019f40b7bf55732b57b90d40b1bef120f95c",
+      "experiments/prime_spectral/test_ground_schur.py": "6a47b429a8d13f720c8fae3c75e1f411fa03acb115e2ce65692a57edbee78905",
+      "experiments/prime_spectral/test_higher_mode_prolate_gate.py": "29ce4589a343f4665159f8b5fc3f72426e220bd5d566f6d877d367b1298972e8",
+      "experiments/prime_spectral/test_isolated_kernel.py": "e2392b2d60a12f0db2e9d46e890b6e54cdd9a09dad3f5cb362af643b6e8bb6ee",
+      "experiments/prime_spectral/test_localized_resolvent.py": "dfe46565767d4ac5fe79bff10adfabfb5b19e0feba00a8449a9433fa692637da",
+      "experiments/prime_spectral/test_moving_support_boundary.py": "89e3829882ef16e4e08c3de153073ceb20a0882b9165080c192b8487f43f051c",
+      "experiments/prime_spectral/test_orthogonal_fourier_transfer.py": "1c85a724c7ec4619da30a02b3280bbb18ca5f5439a05332337d80c998276a0ef",
+      "experiments/prime_spectral/test_perturbation_kernel.py": "73e88a4690bc742bb2c946b66c456c389a26755deecf78307eb213c73ee18e40",
+      "experiments/prime_spectral/test_positive_kernel.py": "770564d6f048396409ad7bfb7246675f521373aa18af22e9d4809959d013b3ae",
+      "experiments/prime_spectral/test_prime_threshold_jump.py": "9ae5a7f1a805efcc8ad1cde6aed6f91a5436d053ed1f1e3beec94ce3f015b63d",
+      "experiments/prime_spectral/test_profile_constraint_gate.py": "1222872c381ba26ee3e1cf4620eb263b26abb0127ea04b19f42fde4c8449300f",
+      "experiments/prime_spectral/test_prolate_candidate_diagnostic.py": "5591fb89b89410a4c3626fdfd44a957786d02f746064df45a42cc99260201333",
+      "experiments/prime_spectral/test_prolate_cluster_gate.py": "aa0b599d697aec4682cad3e04dbe59917d9bef39205e190b6f03c1637857fc19",
+      "experiments/prime_spectral/test_prolate_concentration_bound.py": "79807619f72be92eacc58455a8bdb1413aa859c1eb82542ad4ec030e6f733b5e",
+      "experiments/prime_spectral/test_prolate_ground_alignment.py": "240323022a05dc2404e83306d1c347bfe324a265fdc8a9ccf0cde0ca4261c2df",
+      "experiments/prime_spectral/test_prolate_residual_gap_audit.py": "0543406638a4bac53cd2e15c8f0c32c7dc0453ee63c7eac8544468335cefca34",
+      "experiments/prime_spectral/test_quotient_coefficient_budget.py": "a02c5dbe61e7d41895070b636433dbb9523ab1c1efa7cef117c6273b8dc5cb1f",
+      "experiments/prime_spectral/test_quotient_operator.py": "da30b380de879ef2fca865cfde715575f43f0828795a3a0366cac7f5a73ef6b5",
+      "experiments/prime_spectral/test_rank_response_determinant.py": "70bf4e42a997c04bb7d17dc527e8a2cd464a075efcba740b55cb14831142b175",
+      "experiments/prime_spectral/test_rank_schur_recurrence.py": "54b26f544bed737def1eab5e04ae4a2e7fe4f96021a0c916a5241aa22e344c7a",
+      "experiments/prime_spectral/test_refine_cluster.py": "d7cf110d06655fb578f45350a3768c852c72c37199f8edbf1c42247dad4b904b",
+      "experiments/prime_spectral/test_research_round_controls.py": "2bd6a3113413f998a8583da9f7ce65c76c7adf60358c75ea405d823a16082e70",
+      "experiments/prime_spectral/test_robust_prolate_gate.py": "4dce872f4dabacb9d186bb1abccd020be8ffa539cd469863a8fad25351e12bed",
+      "experiments/prime_spectral/test_smooth_support_derivative.py": "bbcd77f9c9af673febdd9c81d4c93ba9b650ae9ffab60cff74f0c432db150af2",
+      "experiments/prime_spectral/test_smooth_support_profile.py": "315282f5d72258bb3ccf6fe831dde25f9279c86c311d5390e2032c32b0330fcb",
+      "experiments/prime_spectral/test_spectral_alignment.py": "2679bfbb863e7394dcbdb529a2b50121d1ff2b4b805921baf5ca1442e536ecac",
+      "experiments/prime_spectral/test_strip_transfer.py": "a9969eca3e9468d1188f01d65ae9d991db8253257069122666f796bfc72bbe99",
+      "experiments/prime_spectral/test_support_schur_recurrence.py": "1fd45c2a11abe745e0a9d81416ce0a2ecbd3af2a4019e972f221592008e51e43",
+      "experiments/prime_spectral/test_trace_stability.py": "e542dfd961f0e9daf3e5e8e92b67645bc7695b9668e7c0976040485839d863db",
+      "experiments/prime_spectral/test_weil_eigenfamily.py": "79a90b80a00e52f148eeba8994f126923073503cc286812c1188d8e4e330ec71",
+      "experiments/prime_spectral/test_weil_full_cell.py": "2b07d335d555b4e786a4412ad91849267b40eb48e7fec40115056489f79449b3",
+      "experiments/prime_spectral/test_weil_matrix.py": "34501e6640980a2031fedef94d2963e4263f3d44c8ad03bd44389102618b5069",
+      "experiments/prime_spectral/test_weil_profile_cell_budget.py": "61d83f560554ffdb4622285c1cbd5d9a48b6aa428ec867c8299c9dac450812ff",
+      "experiments/prime_spectral/test_weil_rank_tail_cell.py": "6b7a210326bfe6de4acd35dc2fc83a86e438ea5e9e1ef011a413980a02b245e7",
+      "experiments/prime_spectral/test_weil_support_taylor.py": "fc4e5b217eb3f68c8b86db2388c4b355e313dc9a0f0d0341e569106d9940e0c8",
+      "experiments/prime_spectral/test_window_packet_bound.py": "127a2ed3f0488e68d95e547288caef921cc7fa367e1f24f9507434a8f49810b6",
+      "experiments/prime_spectral/test_window_positivity.py": "c612f2771722196748df453ae2c21112e8402b0858e0ce651cb81048c5170e0b",
+      "experiments/prime_spectral/threshold_ground_gap.py": "6be221950a0d63f515fb6885064010c1039e18a6f97364e8bd9ea516b179cc7d",
+      "experiments/prime_spectral/verify_research_round.py": "4b305bfce44ece27d865031465ab9e55bda54d83214dada57f2f9434dc3b8abc",
+      "experiments/prime_spectral/verify_window_positivity.py": "fced27867e232b9a6fc6abca984315ef2807e77e90e9ecf59c754cab6c3849c4",
+      "experiments/prime_spectral/weil_eigenfamily.py": "8f90c94562b8b8f2f8d86889f6c066f0c4dedd8056d559d385f708e85b5a1069",
+      "experiments/prime_spectral/weil_matrix.py": "2811a607a16a758b293578efcf37314f3dcafab5b1a47e49d9f095efa9b95211",
+      "experiments/prime_spectral/weil_odd_cell.py": "ab7d8c2987c54e2dd28b96f511cb78f8dd9310d20ac74f4137f56b75e117e451",
+      "experiments/prime_spectral/weil_profile_cell_budget.py": "036899279be36e40549c3921479a3e74fb9651fc82daeec1c091d93fdd6c523c",
+      "experiments/prime_spectral/weil_rank_tail_cell.py": "0b89c9ad60f5efcc322b4369830afdc5193bfeefbe26508f829e0070f1fe46ea",
+      "experiments/prime_spectral/weil_spatial_cell.py": "a878cf208a95a5e106b5cc5cafee464df7731c2bf203b812765a36f73d83c901",
+      "experiments/prime_spectral/weil_support_taylor.py": "278f201b82dae37073f9d270a12be3c5337c80d4b34c8f05187512c6b705a93b",
+      "experiments/prime_spectral/window_block_pilot.py": "7c9040a845d0157b89df91df3c66ddbe895baba00eea1cd192c033f1212eb0d8",
+      "experiments/prime_spectral/window_lowest_eigenvalue_probe.py": "800ef0e4854acd1f2843d933cce33e6edf7ce04b054c8e482cfde2bfa91c7e42",
+      "experiments/prime_spectral/window_packet_bound.py": "d572c5abfdb2506a8d842a47c4b2acd05ef0c8f81ccd2a1a192851703bb16b03",
+      "experiments/prime_spectral/window_positivity_certificate.py": "88a08abf10e67dd41175d2b1728c1ca77815d77d9b50c228c4223dc5e113bc02",
+      "experiments/prime_spectral/window_shift_graph_bound.py": "0b4d0db265ab5d7a89b1782a7afcf6f265fd79d59527ea88a906990208737467"
+    }
+  },
+  "trust_boundary": "Written analytic reductions and Arb, not external peer review. Finite controls and conditional theorems are not RH or new full-window positivity records."
+}

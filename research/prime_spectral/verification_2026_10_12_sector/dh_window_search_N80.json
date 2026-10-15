@@ -1,0 +1,81 @@
+{
+  "status": "finite_family_search_not_full_threshold_bracket",
+  "positive_finite_evidence_C": "15737/512",
+  "negative_certificate_C": "7873/256",
+  "modes": 80,
+  "records": [
+    {
+      "C": "13",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C13_N80.json",
+      "sha256": "e81d311750250d3ce07e654b651287d58bdb2f787967120eef660a4e6604a90c"
+    },
+    {
+      "C": "31",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C31_N80.json",
+      "sha256": "3c986317dc8a4be222291fc10b598037ba248d911218738d7fed2c7fc5e2b295"
+    },
+    {
+      "C": "22",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C22_N80.json",
+      "sha256": "f4c150e8037d1bc466ccb849533b3fb2f0f7bf97959c32833d14bc09ba0e35b2"
+    },
+    {
+      "C": "53/2",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C53_2_N80.json",
+      "sha256": "007845d7e981fcf18b457b839aa5881efdb2648bbe566bb7fc75dfa443d99e1c"
+    },
+    {
+      "C": "115/4",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C115_4_N80.json",
+      "sha256": "38dc0daae9ebc256d17c488e3fb6342f6183c42185dff564fb74da928661a69b"
+    },
+    {
+      "C": "239/8",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C239_8_N80.json",
+      "sha256": "fdec334c3d699ebb49b8cb7ad56f2944efbee814c973a4585577bb50da3c5096"
+    },
+    {
+      "C": "487/16",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C487_16_N80.json",
+      "sha256": "329315f8fbc95428a32262631031aa81723f151cd2326990540de8ea0d8b97f3"
+    },
+    {
+      "C": "983/32",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C983_32_N80.json",
+      "sha256": "d364ba6c86c5b20c93b32756593086f6ce0febaad61e22a6187f811f7ce3f074"
+    },
+    {
+      "C": "1975/64",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C1975_64_N80.json",
+      "sha256": "012ed6f67cd7c9b25e8432affc1dfb1760b044e1a9f0ecf1d208ae8b6f44a9f0"
+    },
+    {
+      "C": "3941/128",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C3941_128_N80.json",
+      "sha256": "97ea60de0c2151dfaff4d9406f951ec47a6f3d0c405a9a75ca28f8abb9f756ac"
+    },
+    {
+      "C": "7873/256",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C7873_256_N80.json",
+      "sha256": "c75ca8a717b01e6eaa76faa07eedd4ff3dff6742e3129d7da22e7e28fb612196"
+    },
+    {
+      "C": "15737/512",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C15737_512_N80.json",
+      "sha256": "95acc7346f9d2380934630693571a7f3181b16b81bc4538ec3e54ed865f8e77a"
+    }
+  ],
+  "scope": "The lower endpoint is not a lower bound for the first full negative support. The finite rescaled trial spaces are not nested across C, so no monotonicity of their inertia is asserted."
+}

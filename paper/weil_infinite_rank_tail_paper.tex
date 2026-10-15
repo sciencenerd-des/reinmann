@@ -10,6 +10,8 @@
 \usepackage{fancyhdr}
 \usepackage{microtype}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \usepackage{bookmark}
 
@@ -195,6 +197,21 @@ provides a summable support/rank path.
 \item No limit is identified with Riemann's $\Xi$ function, and
 the Riemann Hypothesis is not proved.
 \end{itemize}
+
+Figure~\ref{fig:mode-map} places these statements along the Fourier index.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{weil_mode_map.pdf}
+\caption{What is controlled along the even Fourier index, uniformly for
+$C\in[17,19]$. Green: the retained rank-eight block, whose ground state is
+certified. Amber: the omitted-mode forcing, bounded for every index $n>64$
+by Theorem~\ref{thm:main-tail}. Blue: the far block, on which the form
+exceeds the identity (Theorem~\ref{thm:coercive}). Rose: the intermediate
+modes, whose inverse response is not controlled here; this is the gap
+between the present results and any convergence statement.}
+\label{fig:mode-map}
+\end{figure}
 
 \subsection{Organization and conventions}
 Section~\ref{sec:matrix} derives the matrix from the explicit-formula
@@ -457,6 +474,20 @@ using code that is independent of the certificate generator. They agree
 to better than $2\times10^{-30}$.
 \end{remark}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\linewidth]{weil_displacement.pdf}
+\caption{The displacement sequence $b_n=nA_{n0}$ at $C=18$ and its three
+parts from Corollary~\ref{cor:b}, computed from the closed formulas. The
+pole part decays like $1/n$, the archimedean part tends to $1/4$, and the
+prime part oscillates without decay. The sequence stays inside the uniform
+bound $\pm B$ of Proposition~\ref{prop:b-bounds}, but
+$A_{mn}=(b_m-b_n)/(m-n)$ then decays only like $1/\abs{m-n}$ along a row,
+which is why Section~\ref{sec:operator} needs Hilbert's inequality rather
+than row sums.}
+\label{fig:displacement}
+\end{figure}
+
 %======================================================================
 \section{Rank-independent operator bounds}\label{sec:operator}
 %======================================================================
@@ -687,6 +718,22 @@ moment expansion preserves the sign cancellation across the retained
 coordinates.
 \end{remark}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{weil_forcing_tail.pdf}
+\caption{The cancellation behind Theorem~\ref{thm:main-tail}, recomputed in
+$40$-digit floating point (illustration, not certificate). (a) The unit
+even ground vector $u(C)$ at three supports; its boundary sum $S$ is of
+order $10^{-12}$. (b) The exact omitted-mode forcing $\abs{R_n}$ at $C=17$
+by direct summation of the retained terms, its leading $S$-term, and the
+entrywise bound obtained by taking absolute values first. (c) The tail
+norm $\norm{R_{n>J}}$ summed directly to $n\le3000$, the uncoupled bound of
+Remark~\ref{rem:uncoupled}, and the certified bound at $J=64$. The arrow is
+the factor $\approx3\times10^{11}$ gained by forming $S$ and the signed
+moments before taking absolute values.}
+\label{fig:forcing}
+\end{figure}
+
 %======================================================================
 \section{High-mode coercivity}\label{sec:coercive}
 %======================================================================
@@ -769,6 +816,22 @@ form~\cite[Prop.~3.4]{CCM2025}, the same lower bounds hold for the closure
 of the far-block form. We use only finite compressions below.
 
 %======================================================================
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\linewidth]{weil_coercivity.pdf}
+\caption{Mechanism of Theorem~\ref{thm:coercive}. Markers: the actual
+diagonal entries $A_{nn}$ at $C=17$ and $C=19$, from the closed formulas.
+Green: the proved archimedean lower bound $\delta(n)$ of
+Lemma~\ref{lem:arch-diag}, which grows like $\log n$. Blue and red: the
+coercivity constants $\beta_{\mathrm{even}}(n_0)$ and
+$\beta_{\mathrm{full}}(n_0)$, which subtract the rank-independent
+off-diagonal and prime budget (and, for $\beta_{\mathrm{full}}$, the
+negative pole eigenvalue). They cross $1$ exactly at the thresholds stated
+in the theorem; the thresholds reflect these particular bounds, not the
+true onset of coercivity of $A$.}
+\label{fig:coercivity}
+\end{figure}
+
 \section{The finite-rank certificate}\label{sec:certificate}
 %======================================================================
 

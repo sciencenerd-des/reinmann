@@ -1,0 +1,53 @@
+note: Running TeX ...
+warning: rh_reduction_paper.tex:311: Underfull \hbox (badness 2020) in paragraph at lines 307--311
+warning: rh_reduction_paper.tex:311: Underfull \hbox (badness 3019) in paragraph at lines 307--311
+warning: rh_reduction_paper.tex:363: Underfull \hbox (badness 2418) in paragraph at lines 358--363
+warning: rh_reduction_paper.tex:448: Underfull \hbox (badness 10000) in paragraph at lines 445--448
+warning: rh_reduction_paper.tex:448: Underfull \hbox (badness 2426) in paragraph at lines 445--448
+warning: rh_reduction_paper.tex:643: Underfull \hbox (badness 1092) in paragraph at lines 623--643
+warning: rh_reduction_paper.tex:649: Underfull \hbox (badness 10000) in paragraph at lines 645--649
+warning: rh_reduction_paper.tex:649: Underfull \hbox (badness 2042) in paragraph at lines 645--649
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 10000) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 1817) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 10000) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:799: Underfull \hbox (badness 1383) in paragraph at lines 791--799
+warning: rh_reduction_paper.tex:799: Underfull \hbox (badness 3646) in paragraph at lines 791--799
+warning: rh_reduction_paper.tex:825: Underfull \hbox (badness 10000) in paragraph at lines 818--825
+warning: rh_reduction_paper.tex:845: Underfull \hbox (badness 10000) in paragraph at lines 842--845
+note: Rerunning TeX because "rh_reduction_paper.out" changed ...
+warning: rh_reduction_paper.tex:311: Underfull \hbox (badness 2020) in paragraph at lines 307--311
+warning: rh_reduction_paper.tex:311: Underfull \hbox (badness 3019) in paragraph at lines 307--311
+warning: rh_reduction_paper.tex:363: Underfull \hbox (badness 2418) in paragraph at lines 358--363
+warning: rh_reduction_paper.tex:448: Underfull \hbox (badness 10000) in paragraph at lines 445--448
+warning: rh_reduction_paper.tex:448: Underfull \hbox (badness 2426) in paragraph at lines 445--448
+warning: rh_reduction_paper.tex:643: Underfull \hbox (badness 1092) in paragraph at lines 623--643
+warning: rh_reduction_paper.tex:649: Underfull \hbox (badness 10000) in paragraph at lines 645--649
+warning: rh_reduction_paper.tex:649: Underfull \hbox (badness 2042) in paragraph at lines 645--649
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 10000) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 1817) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 10000) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:799: Underfull \hbox (badness 1383) in paragraph at lines 791--799
+warning: rh_reduction_paper.tex:799: Underfull \hbox (badness 3646) in paragraph at lines 791--799
+warning: rh_reduction_paper.tex:825: Underfull \hbox (badness 10000) in paragraph at lines 818--825
+warning: rh_reduction_paper.tex:845: Underfull \hbox (badness 10000) in paragraph at lines 842--845
+note: Rerunning TeX because "rh_reduction_paper.toc" changed ...
+warning: rh_reduction_paper.tex:311: Underfull \hbox (badness 2020) in paragraph at lines 307--311
+warning: rh_reduction_paper.tex:311: Underfull \hbox (badness 3019) in paragraph at lines 307--311
+warning: rh_reduction_paper.tex:363: Underfull \hbox (badness 2418) in paragraph at lines 358--363
+warning: rh_reduction_paper.tex:448: Underfull \hbox (badness 10000) in paragraph at lines 445--448
+warning: rh_reduction_paper.tex:448: Underfull \hbox (badness 2426) in paragraph at lines 445--448
+warning: rh_reduction_paper.tex:643: Underfull \hbox (badness 1092) in paragraph at lines 623--643
+warning: rh_reduction_paper.tex:649: Underfull \hbox (badness 10000) in paragraph at lines 645--649
+warning: rh_reduction_paper.tex:649: Underfull \hbox (badness 2042) in paragraph at lines 645--649
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 10000) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 1817) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:782: Underfull \hbox (badness 10000) in paragraph at lines 774--782
+warning: rh_reduction_paper.tex:799: Underfull \hbox (badness 1383) in paragraph at lines 791--799
+warning: rh_reduction_paper.tex:799: Underfull \hbox (badness 3646) in paragraph at lines 791--799
+warning: rh_reduction_paper.tex:825: Underfull \hbox (badness 10000) in paragraph at lines 818--825
+warning: rh_reduction_paper.tex:845: Underfull \hbox (badness 10000) in paragraph at lines 842--845
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `rh_reduction_paper.log` (25.7626953125 KiB)
+note: Writing `rh_reduction_paper.pdf` (372.4755859375 KiB)
+note: Skipped writing 3 intermediate files (use --keep-intermediates to keep them)

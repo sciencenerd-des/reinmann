@@ -1,0 +1,16 @@
+{
+  "source": "research/certified_xi/coefficients_120.json",
+  "source_sha256": "adf3418dbf0e7b823f204e527155d240f52034a8027fb0ecb058007a27963b11",
+  "python_flint": "0.8.0",
+  "prec_bits": 8192,
+  "positive_mu": true,
+  "strict_log_concave_0_118": true,
+  "contiguous_minors_checked": 1816,
+  "contiguous_minors_uncertified": [],
+  "worst_relative_radius": {
+    "value": "[6.47e-669 +/- 1.05e-672]",
+    "k": 16,
+    "m": 105
+  },
+  "all_certified": true
+}

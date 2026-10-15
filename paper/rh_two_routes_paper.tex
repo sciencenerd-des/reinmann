@@ -13,6 +13,10 @@
 \usepackage{microtype}
 \usepackage{seqsplit}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\graphicspath{{figures/}}
 \usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \usepackage{bookmark}
 
@@ -155,6 +159,23 @@ new:
   de Bruijn--Newman kernel \cite{PF5counterexample} forces any proof to
   target the discrete moment sequence directly.
 \end{enumerate}
+
+Figure~\ref{fig:architecture} summarizes the resulting architecture: each
+open input is a single named proposition, and every arrow below it is a
+kernel-checked theorem or a named classical input.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{\input{figures/two_routes_architecture}}
+\caption{Architecture of the two conditional routes. Green: Lean theorems
+whose axiom footprint is Lean's three foundational axioms. Amber: classical
+inputs carried as named hypotheses. Rose: the open inputs that close each
+route by a single \texttt{exact}; the strict ladder they feed is at least
+RH-strength (Corollary~\ref{cor:rhstrength}). Grey: shortcuts ruled out by a
+machine-checked counterexample (\S\ref{sec:falsification}) or by the
+certified PF$_5$ failure of the continuous kernel~\cite{PF5counterexample}.}
+\label{fig:architecture}
+\end{figure}
 
 \paragraph{Claims and non-claims.}
 No theorem in this paper or in the underlying repository proves RH,
@@ -605,6 +626,30 @@ any proof must use quantitative information that the five-term Tur\'an
 window forgets (the $\Xi$ windows have $\mu_m^2/(\mu_{m-1}\mu_{m+1}) \to 1^+$
 with specific super-exponential decay, far from the witness's regime).
 
+Figure~\ref{fig:turan} shows that the witness is not an isolated accident.
+Among about $9.1\times10^5$ sampled five-term windows that satisfy every
+order-$2$ and order-$3$ Tur\'an inequality, about $2.0\times10^5$ have
+$D_3<0$. Negative determinants occur at every margin scale, including the
+small margins $0.008$--$0.29$ occupied by the $\Xi$ windows; in the margin
+band $10^{-4}$--$10^{-2}$ they are $43\%$ of the samples. The sign of $D_3$
+is therefore information that the Tur\'an data do not carry.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.92\linewidth]{two_routes_turan_landscape.pdf}
+\caption{Five-term windows $(b_0,\dots,b_4)$ obeying every strict order-$2$
+Tur\'an inequality and both order-$3$ (Dimitrov--Lucas) inequalities,
+normalized by $b_2$. Horizontal axis: the smallest relative order-$2$
+margin. Vertical axis: the contiguous determinant $D_3/b_2^3$ on a
+symmetric logarithmic scale. Blue and red: random samples with $D_3>0$
+and $D_3<0$ (log-uniform windows plus perturbed log-quadratic windows;
+seed $20261010$). Black: the $\Xi$ windows $m=2,\dots,198$, from midpoints
+of the certified coefficient enclosures. Star: the Lean witness of
+Theorem~\ref{thm:routekill}. Generator:
+\texttt{paper/generate\_paper\_figures.py}.}
+\label{fig:turan}
+\end{figure}
+
 Separately, a recent computer-certified failure of $\PF_5$ for the
 continuous de Bruijn--Newman translation kernel $\Phi(|u|)$
 \cite{PF5counterexample} rules out any argument that silently upgrades that
@@ -682,6 +727,26 @@ insufficient.  O'Sullivan's Lambert-$W$ expansions \cite{OSullivan} are a
 natural source of such bounds; the missing work is the remainder translation,
 not another Lean interface.
 
+Figure~\ref{fig:order3} shows how small the order-$3$ margin already is.
+On the certified range the normalized gap $G_3(m)$ decays roughly like
+$m^{-2.8}$, falling to $4.2\times10^{-6}$ at the end of the certified prefix. An effective ratio box
+must therefore resolve the four ratios to better than this relative scale,
+uniformly in $m$.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{two_routes_order3_gap.pdf}
+\caption{The first open rung. (a) $G_3(m)=D_3(m)/\mu_m^3$ from midpoints of
+the rigorous coefficient enclosures; all values are positive. Blue: the
+$121$-coefficient prefix used in Route~A; purple: the extension to $201$
+coefficients. The least-squares slope is fitted on $m\ge40$. (b) The same
+data on the full scale up to the external cubic-wedge cutoff
+$2.7\times10^{19}$~\cite{CubicWedge2026}; the dotted extrapolation only
+indicates scale and is not a bound. The rose band is the uncertified
+order-$3$ wedge.}
+\label{fig:order3}
+\end{figure}
+
 \subsection{From one rung to every order}
 
 The Fekete engine gives the following exact capstone, which is the central
@@ -739,6 +804,22 @@ $2.7\times10^{19}$, so the current prefix through offset $116$ leaves an
 enormous interval.  The preprint changes the shape of the frontier from an
 unknown tail to a certified-tail/uncertified-wedge split; it does not make the
 remaining verification computationally routine.
+
+Figure~\ref{fig:frontier} draws this split in the order--shift plane.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{two_routes_frontier_map.pdf}
+\caption{Where the contiguous determinants $D_k(m)$ are controlled, on
+logarithmic axes. Blue: strict positivity certified by exact interval
+arithmetic ($k\le16$, $m\le121-k$). Green: nonnegativity of every minor of
+order at most $43$ at every shift~\cite{Katkova2007}; this gives $\ge0$,
+not the strict inequality the Fekete engine consumes. Hatched: the
+external cubic wedge $m\ge10^{18}k^3$~\cite{CubicWedge2026}, not re-checked
+here. Rose: the complementary wedge of unbounded order and moderate shift,
+where the open content of Route~A lies.}
+\label{fig:frontier}
+\end{figure}
 
 \subsection{A root-separation theorem for the Jensen route}
 

@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{enumitem}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage{hyperref}
 
 \hypersetup{
@@ -268,6 +270,24 @@ horizontal slice; in the repository this is encapsulated by the module
 
 \section{Verified main reductions}
 
+Figure~\ref{fig:fibers} illustrates the objects of this section.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{same_height_fibers.pdf}
+\caption{Same-height fibers. (a) The first ten nontrivial zeros, all on
+$\re s=\tfrac12$, so each nonempty fiber is a single point. The red pair is
+the configuration that Theorem~\ref{thm:fiber-unique} shows to be exactly
+what RH excludes: an off-line zero at height $\gamma$ forces its mirror
+image at the same height, giving a fiber with two real parts and positive
+energy $E(\gamma)$ (Theorem~\ref{thm:energy}). (b) Horizontal slices
+$\sigma\mapsto\log\lvert\zeta(\sigma+i\gamma)\rvert$, $0.02\le\sigma\le0.98$, at the
+first four zero heights, computed with mpmath; each vanishes only at
+$\sigma=\tfrac12$. The plot illustrates known data and is not evidence for
+heights beyond those shown.}
+\label{fig:fibers}
+\end{figure}
+
 \subsection{Same-height uniqueness}
 
 \begin{theorem}[Fiber uniqueness criterion]
@@ -445,6 +465,19 @@ whereas
 \]
 Thus the midpoint value is larger than the endpoint average.  The convexity
 route is therefore too strong.
+Figure~\ref{fig:convexity} shows the failure: on $[0.66,0.98]$ the slice
+rises above its chord on a whole subinterval, which no convex function can do.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{same_height_convexity.pdf}
+\caption{The falsified global convexity target at $\gamma=0.5$, computed
+with mpmath. (a) $f(x)=\lvert\zeta(x+0.5i)\rvert^2$ and its chord on
+$[0.66,0.98]$. (b) The difference $f(x)-\mathrm{chord}(x)$; a convex
+function would keep it $\le0$. It is positive on roughly $[0.81,0.98)$,
+including the reported midpoint $x=0.82$.}
+\label{fig:convexity}
+\end{figure}
 
 \subsection{Horizontal critical-point criteria}
 

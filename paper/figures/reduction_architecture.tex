@@ -1,0 +1,45 @@
+% Logical shape of the verified reduction (rh_reduction_paper.tex).
+% Colour code as in the two-routes paper: green = Lean theorem;
+% amber = named classical input; rose = the single RH-strength hypothesis.
+\begin{tikzpicture}[
+  font=\fontsize{8}{9.5}\selectfont, node distance=6mm and 9mm,
+  box/.style={draw, rounded corners=2pt, align=center, inner sep=3pt, text width=#1},
+  box/.default=3.2cm,
+  proved/.style={box, fill=green!10, draw=green!45!black},
+  classical/.style={box, fill=orange!12, draw=orange!70!black},
+  open/.style={box, fill=red!9, draw=red!60!black, very thick},
+  arr/.style={-{Stealth[length=2mm]}, thick},
+  lbl/.style={font=\fontsize{6.6}{7.8}\selectfont, align=center, fill=white, inner sep=1pt}]
+
+  \node[proved, text width=4.2cm] (xi) {$\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(\tfrac s2)\zeta(s)$\\ zero correspondence with $\zeta$\\ (corrects the $\Lambda_0$ target)};
+  \node[proved, below=of xi, text width=4.2cm] (mu) {$\mu_n=(-1)^n[z^{2n}]\,\xi(\tfrac12+z)$\\ Toeplitz matrix $[\mu_{i-j}]$};
+
+  \node[open, below left=10mm and -6mm of mu, text width=3.6cm] (P) {\textbf{P}: full PF\\ every minor of $[\mu_{i-j}]$ is $\ge0$};
+  \node[classical, below right=10mm and -6mm of mu, text width=3.7cm] (A) {\textbf{A}: scaled finite\\ real-rooted approximants};
+  \node[classical, below=14mm of A, text width=3.7cm] (J) {\textbf{J}: classical Jensen\\ polynomials hyperbolic};
+  \node[box=2.2cm, fill=blue!8, draw=blue!50!black, very thick, below=14mm of P] (RH) {\fontsize{11}{13}\selectfont\textbf{RH}};
+
+  \draw[arr] (xi) -- (mu);
+  \draw[arr] (mu) -- (P);
+  \draw[arr] (P) -- node[lbl, above]{ASW/Edrei} (A);
+  \draw[arr] (A) -- node[lbl, right]{Laguerre--P\'olya\\ closure} (J);
+  \draw[arr, {Stealth[length=2mm]}-{Stealth[length=2mm]}] (J) -- node[lbl, below]{P\'olya--Jensen} (RH);
+  \draw[arr] (RH) -- node[lbl, left]{classical\\ converse} (P);
+  \node[font=\fontsize{6.6}{7.8}\selectfont\itshape, align=center, text=green!35!black] at ($(P)!0.5!(J)$)
+       {checked composition:\\ $\mathbf P\Longleftrightarrow\mathrm{RH}$};
+
+  % Consequences inside P
+  \node[proved, left=8mm of P, text width=3.9cm] (ladder) {contiguous minors\\ $D_k(m)=2^k\det\!\big[\tfrac{M_{m+i-j}}{(2(m+i-j))!}\big]$\\ (all $k,m$; under P\'olya's\\ kernel representation)};
+  \draw[arr, densely dashed] (P) -- (ladder);
+
+  % Operator route
+  \node[proved, left=12mm of RH, text width=3.3cm] (op) {independent route:\\ $\eta$-self-adjoint witness for\\ every zero $\Rightarrow$ RH};
+  \draw[arr] (op) -- (RH);
+
+  \matrix[draw=gray!50, rounded corners=2pt, column sep=2mm, inner sep=2pt,
+          below=6mm of RH.south, anchor=north, font=\fontsize{6.6}{7.8}\selectfont, nodes={anchor=west}] {
+    \node[proved, text width=4mm, minimum height=3mm]{}; & \node{Lean theorem}; &
+    \node[classical, text width=4mm, minimum height=3mm]{}; & \node{classical named input}; &
+    \node[open, text width=4mm, minimum height=3mm, thick]{}; & \node{RH-equivalent hypothesis};\\
+  };
+\end{tikzpicture}

@@ -2,6 +2,8 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
 \geometry{margin=1in}
 
 \title{\textbf{The Hyperbolic Entropic Flow: A Dynamical Framework for Deforming Jensen Polynomials towards the Riemann Hypothesis}}
@@ -35,6 +37,21 @@ n_0(d) \approx e^{C \cdot d}
 This exponential growth leaves a massive, computationally and analytically inaccessible finite-strip gap where local non-hyperbolic crossings (complex roots) could theoretically occur, preventing a complete proof of RH.
 
 To resolve this uniformity barrier, we propose the \textbf{Hyperbolic Entropic Flow (HEF)}. Instead of studying static polynomials, we deform the coefficients under the de Bruijn-Newman heat flow. This paper details the complete mathematical framework of HEF to base future work upon.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{hef_hermite_limit.pdf}
+\caption{The Hermite limit behind the GORZ theorem, computed from midpoints
+of rigorous enclosures of the first $201$ Taylor coefficients of $\Xi$. For
+degrees $d=3,5,8$ and every available shift $n$, all roots of the classical
+(factorial-normalized) Jensen polynomial
+$J^{\mathrm{cl}}_{d,n}(X)=\sum_{j}\binom dj\gamma_{n+j}X^j$,
+$\gamma_m=m!\,\mu_m$, $\mu_m=(-1)^m[z^{2m}]\Xi(z)$, are real. After
+centring and scaling, they lie close to the zeros of $H_d$ (dashed). The
+figure covers $n\le200-d$ only; it is an illustration of the asymptotic
+regime, not a certificate.}
+\label{fig:hermite}
+\end{figure}
 
 \section{The Deformed Coefficient Dynamics}
 Let $\Xi(z) = \sum_{m=0}^{\infty} \frac{(-1)^m b_m}{(2m)!} z^{2m}$ be the Riemann $\Xi$-function, defined via the Jacobi theta Fourier kernel $\Phi(u)$:
@@ -81,6 +98,18 @@ Using the Taylor series expansion in $t$, we can express the deformed coefficien
 b_m(t) = \sum_{k=0}^{\infty} \frac{t^k}{k!} b_{m+k}(0)
 \end{equation}
 This series converges rapidly due to the factorial decay of the $\Xi$-coefficients.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{hef_kernel_flow.pdf}
+\caption{The deformation in kernel form, computed from the theta series for
+$\Phi$. (a) The deformed kernels $\Phi(u)e^{tu^2}$; the values of $t$ are
+enlarged for visibility. Positive $t$ moves weight to larger $u$ and so
+raises the higher moments that drive $\partial_tb_m=b_{m+1}$. (b) $\Phi$ is
+positive and decays double-exponentially, which is what makes every moment
+finite for every $t$.}
+\label{fig:kernel}
+\end{figure}
 
 \section{The Hyperbolic Entropy Functional}
 For a fixed degree $d \ge 1$ and flow time $t$, we define the deformed Jensen polynomials:

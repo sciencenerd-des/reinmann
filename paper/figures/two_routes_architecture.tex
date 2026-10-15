@@ -1,0 +1,63 @@
+% Logical architecture of the two conditional routes (rh_two_routes_paper.tex).
+% Colour code: green = kernel-checked Lean theorem; amber = named classical
+% input; rose = open (RH-strength or new mathematics); grey = refuted shortcut.
+\begin{tikzpicture}[
+  font=\fontsize{8}{9.5}\selectfont, node distance=4.5mm and 5mm,
+  box/.style={draw, rounded corners=2pt, align=center, inner sep=3pt, text width=#1},
+  box/.default=3.3cm,
+  proved/.style={box, fill=green!10, draw=green!45!black},
+  classical/.style={box, fill=orange!12, draw=orange!70!black},
+  open/.style={box, fill=red!9, draw=red!60!black, very thick},
+  dead/.style={box, fill=gray!8, draw=gray!70, dashed, text=gray!30!black},
+  arr/.style={-{Stealth[length=2mm]}, thick},
+  lbl/.style={font=\fontsize{6.6}{7.8}\selectfont\itshape, align=center, fill=white, inner sep=1pt}]
+
+  % Route A (left column)
+  \node[open] (cert) {\textbf{Route A input (open)}\\ {\fontsize{6.6}{7.8}\selectfont\texttt{KernelEffectiveCertificates}}:\\ certified prefix $m<N_k$\\ $+$ explicit tail $m\ge N_k$};
+  \node[proved, below=of cert] (kladder) {Kernel strict ladder\\ $D^{\ker}_k(m)>0$ for all $k,m$};
+  \node[proved, below=of kladder] (ladder) {Strict contiguous ladder\\ $D_k(m)=2^kD^{\ker}_k(m)>0$};
+  \node[proved, below=7mm of ladder, text width=3.3cm, fill=green!18] (fekete) {\textbf{Fekete engine}\\ Grassmann three-term identity\\ $\cdot$ gap-shrinking induction\\ $\cdot$ dominance dichotomy\\ $\cdot$ Toeplitz reversal};
+  \node[proved, below=9mm of fekete] (pf) {Full PF:\\ every Toeplitz minor $\ge0$};
+
+  % Route B (right column)
+  \node[open, right=12mm of cert] (hyp) {\textbf{Route B (open)}\\ {\fontsize{6.6}{7.8}\selectfont\texttt{XiJensenCoeffHyperbolic}}\\ $+$ same-sign HPSS theorem};
+  \node[proved, below=of hyp] (recv) {Schur--Szeg\H{o} receptor:\\ $J_{d,n}=(\text{window})\ast(1+X)^d$,\\ $(1+X)^d$ same-sign hyperbolic};
+  \node[proved, below=of recv] (jensen) {All Jensen polynomials\\ hyperbolic};
+  \node[proved, right=5mm of jensen, text width=2.3cm] (hlim) {Bounded-degree\\ hyperbolic limits\\ (proved leg of LP closure)};
+
+  % Heat flow (far right)
+  \node[open, right=5mm of hyp, text width=2.3cm] (heat) {\textbf{Route C (target)}\\ {\fontsize{6.6}{7.8}\selectfont\texttt{HeatFlowRigidity}}:\\ $\Lambda\le 0$};
+
+  % Classical scaffolding and RH
+  \node[classical, below=8mm of pf, xshift=24mm, text width=6.8cm] (scaff) {\textbf{Classical scaffolding} (named inputs, none RH-strength):\\ ASW/Edrei $\cdot$ Laguerre--P\'olya closure $\cdot$ P\'olya--Jensen $\cdot$ converse};
+  \node[box=2.2cm, fill=blue!8, draw=blue!50!black, very thick, below=6mm of scaff] (rh) {\fontsize{11}{13}\selectfont\textbf{RH}};
+
+  \draw[arr] (cert) -- (kladder);
+  \draw[arr] (kladder) -- node[lbl, right=1pt]{exact $2^k$ scaling} (ladder);
+  \draw[arr] (ladder) -- (fekete);
+  \draw[arr] (fekete) -- (pf);
+  \draw[arr] (pf) -- (scaff.north -| pf);
+  \draw[arr] (hyp) -- (recv);
+  \draw[arr] (recv) -- (jensen);
+  \draw[arr] (jensen) -- (scaff.north -| jensen);
+  \draw[arr, densely dotted] (hlim) |- ([yshift=2mm]scaff.east);
+  \draw[arr] (heat.east) -- ++(3mm,0) |- node[lbl, pos=0.3, right=1pt]{$+$ Rodgers--Tao\\ $\Lambda\ge0$} (rh.east);
+  \draw[arr] (scaff) -- (rh);
+
+  % Refuted shortcuts
+  \node[dead, left=5mm of ladder, text width=2.3cm] (turan) {CNV $+$ Dimitrov--Lucas\\ Tur\'an data (orders 2, 3)};
+  \draw[arr, gray, dashed] (turan) -- (ladder);
+  \node[below=0.5mm of turan, text=red!70!black, font=\fontsize{6.6}{7.8}\selectfont\bfseries, align=center] {$\times$ cannot close $D_3>0$\\ (Lean counterexample)};
+  \node[dead, left=5mm of pf, text width=2.3cm] (pf5) {continuous kernel\\ $\Phi(|u|)$ as PF$_\infty$};
+  \draw[arr, gray, dashed] (pf5) -- (pf);
+  \node[below=0.5mm of pf5, text=red!70!black, font=\fontsize{6.6}{7.8}\selectfont\bfseries, align=center] {$\times$ PF$_5$ fails\\ (certified)};
+
+  % Legend
+  \matrix[draw=gray!50, rounded corners=2pt, column sep=2mm, row sep=1mm, inner sep=2pt,
+          below=4mm of rh, font=\fontsize{6.6}{7.8}\selectfont, nodes={anchor=west}] {
+    \node[proved, text width=4mm, minimum height=3mm]{}; & \node{Lean theorem (3 axioms)}; &
+    \node[classical, text width=4mm, minimum height=3mm]{}; & \node{classical named input}; &
+    \node[open, text width=4mm, minimum height=3mm, thick]{}; & \node{open / RH-strength}; &
+    \node[dead, text width=4mm, minimum height=3mm]{}; & \node{refuted shortcut};\\
+  };
+\end{tikzpicture}

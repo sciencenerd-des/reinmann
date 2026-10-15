@@ -1,0 +1,63 @@
+{
+  "base_commit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "source_checkout": "/Users/biswajitmondal/Developer/Maths/reinmann",
+  "copied_current_manuscript_files": [
+    {
+      "path": "paper/rh_reduction_paper.tex",
+      "sha256": "5ee6d09a0504a4f032edd70564b011b83f4cbbf885c9c3b22f1dc6d7f9783a42"
+    },
+    {
+      "path": "paper/rh_reduction_paper.pdf",
+      "sha256": "c2d76b659bc48835472713cdc125cea352a2c909e9cd53adedc5a87dba6a5630"
+    },
+    {
+      "path": "paper/zenodo_rh_reduction.json",
+      "sha256": "0721990180e6bee29a0c3ddf5b445519608205d803190e52eb99f92f1f7aeff5"
+    },
+    {
+      "path": "paper/RH_REDUCTION_READINESS.md",
+      "sha256": "5922064b6afeac3bbe65d73dcd9f87c2acf736fda08f58ed10fa77f4713391a1"
+    },
+    {
+      "path": "paper/generate_reduction_figures.py",
+      "sha256": "0d265b095ff2b336fe23089141ffb284fe801a406d6d28fb032819133830262a"
+    },
+    {
+      "path": "paper/reduction_axiom_audit.lean",
+      "sha256": "8335e5908f1e5daf8d38ff37ad735ffae9ead4f8769a1064a9ccc677c783bbc6"
+    },
+    {
+      "path": "paper/rh_reduction_revision_validation.json",
+      "sha256": "bd67b94d5f9a59bd3fa5304a0279f0e85da9f4540974f7fc233acd6a5ceb45c6"
+    },
+    {
+      "path": "paper/figures/rh_reduction_minors.png",
+      "sha256": "6606bd00949f2c1a8717da2616fca1aa7d0eb143e68ddd48142f17e302de5cc9"
+    },
+    {
+      "path": "paper/figures/rh_reduction_coefficients.png",
+      "sha256": "004141371b77e4df44a512d16672ba9a44f8ce040fcb6c11b243984a357190b0"
+    },
+    {
+      "path": "paper/figures/rh_reduction_ratios.png",
+      "sha256": "54b1e348c652eca3c46393072ce9dc37cab7daf9f3d4742070f56f9a095856cb"
+    },
+    {
+      "path": "paper/verification/rh_reduction_2026_10_10/lean_build.log",
+      "sha256": "855254d397aa1b5b79bf45a41083fe060bc00a8228deb94e3c9b3154c8a691c7"
+    },
+    {
+      "path": "paper/verification/rh_reduction_2026_10_10/minor_replay.json",
+      "sha256": "eaca11b19b80a06fb81e48ae399195f3eca7d96d8058237cc065864c050d12ff"
+    },
+    {
+      "path": "paper/verification/rh_reduction_2026_10_10/latex_build.log",
+      "sha256": "b888b13c5a0ad2530f01a3e28a91bab1d17db9d80f090594fb8d02cbe17700e9"
+    },
+    {
+      "path": "paper/verification/rh_reduction_2026_10_10/lean_axiom_audit.log",
+      "sha256": "a30a1b004f64508e6fc248910514fbb628748626b4b15a579789d8cc1e02be5b"
+    }
+  ],
+  "other_dirty_research_files_copied": false
+}

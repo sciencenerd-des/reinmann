@@ -1,0 +1,144 @@
+{
+  "checked_at_utc": "2026-10-09T19:48:40.944263+00:00",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "branch": "codex/xi-eigenvector-reduction",
+  "base_commit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "uncommitted_research_changes": true,
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "checks": {
+    "lake build": {
+      "exit_code": 0,
+      "jobs": 3533
+    },
+    "safe_verify_focused_audit": {
+      "exit_code": 0,
+      "project_files_shortcut_scanned": 96,
+      "theorems_audited": 19
+    },
+    "git diff --check": {
+      "exit_code": 0
+    },
+    "manuscript_seed_hashes_match_both_checkouts": 14
+  },
+  "theorem_axioms": {
+    "Reinmann.ScalarHomogeneousForm.defect_eq_of_eigenpair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.ScalarHomogeneousForm.eigenvalue_conj_eq_of_local": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.ScalarHomogeneousForm.isotropic_of_nonreal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.norm_spectralParam_sub_conj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.ScalarHomogeneousForm.critical_distance_mass_eq_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.ScalarHomogeneousForm.critical_distance_le_of_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.AdditiveScalarForm.skew_mass_eq_defect_sub_residual": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.AdditiveScalarForm.critical_distance_le_of_residual_budget": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.riemannHypothesis_of_localForm_eigendata": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.riemannHypothesis_of_localForm_submodule": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.riemannHypothesis_of_pseudoHermitian_via_local": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.riemannHypothesis_of_localForm_approximation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.swapForm_hermitian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.swapForm_nondegenerate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.action_form_symmetric": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.eigenvector_nonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.eigenvalue_I": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.eigenvector_isotropic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PseudoHermitianIsotropy.eigenvalue_nonreal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_and_log_sha256": {
+    "Reinmann.lean": "0a19af0b691db2d5ba0d83455b10aeb44db112ce258a54cd1253b5321e57e455",
+    "Reinmann/PseudoHermitian.lean": "578a0bdf0e32d2db7b6fe025d74c710905bcd0f40a6b86883de78f92055430e0",
+    "Reinmann/PseudoHermitianLocal.lean": "314e083db810e318ea85ce1da6fcef94835ee5b3ec892ae4222bd8bf1c431d76",
+    "Reinmann/PseudoHermitianIsotropy.lean": "c25810a5fe4c1b71ac158e4933509170ab6a04bfa97be09945a729d8a54dbf25",
+    "README.md": "cdd535c0ad493d2a9a11fec90623f29e231bb45046332be90fa93bbcd5223954",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "24f6ee1e89c0c9bd0063f9b6de95953d4e2bb9b8e744df2ba78ae97d67d5e765",
+    "research/pseudo_hermitian/axiom_audit.lean": "ba5c043a727a909f51ddda575d971cd4d39766f495a3ab1c16a30067103c5438",
+    "research/pseudo_hermitian/worktree_seed.json": "caf6fce79af7926636629dc89f28b865819ce528e968c6c59cb9c84b74b986d6",
+    "research/pseudo_hermitian/verification/lean_build.log": "132c8dbd251c4629c80bdf85f1998324034d2d605821066dbdf72462edad749f",
+    "research/pseudo_hermitian/verification/lean_axiom_audit.log": "620824129cca9b64d067644c3015ccb9de012d2f182d8b958b4428cccf1dfdde"
+  },
+  "diagnostics": "Nonfatal style header warnings and an existing unused-variable warning; no compilation failures.",
+  "scope": {
+    "verified": "Conditional local, domain-explicit and approximate eigenvector reductions; quantitative paired defect bounds; Hermitian nondegenerate isotropic counterexample.",
+    "arithmetic_operator_constructed": false,
+    "zero_states_constructed": false,
+    "non_isotropy_for_zeta_states_proved": false,
+    "rh_proved": false,
+    "manuscript_pdf_updated_for_new_operator_extension": false,
+    "novelty_claimed": false,
+    "published": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checked_at_utc": "2026-10-10T08:23:29.810421+00:00",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "branch": "codex/xi-eigenvector-reduction",
+  "base_commit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "previous_goal_turn_classification": "progress: all-order arithmetic jets and nonzero Xi kernel derivatives checked; same-form full Fock bridge remained written",
+  "current_goal_turn_classification": "progress: one fixed algebraic coefficient space, arithmetic action/domain and Hermitian form with all-zero actual cross-pairing and packet mass bounds checked",
+  "checks": {
+    "lake build": {
+      "exit_code": 0,
+      "jobs": 3548
+    },
+    "safe_verify_algebraic_mass_audit": {
+      "exit_code": 0,
+      "project_files_shortcut_scanned": 110,
+      "theorems_audited": 35
+    },
+    "git diff --check": {
+      "exit_code": 0
+    },
+    "manuscript_seed_hashes_match_both_checkouts": 14
+  },
+  "witness_theorems": {
+    "coefficient_realization": "Reinmann.XiAlgebraicJetSpace.realize_injective",
+    "fixed_form_hermitian": "Reinmann.XiAlgebraicJetForm.arithmeticForm_hermitian",
+    "all_zero_nonzero_cross_pairing": "Reinmann.XiAlgebraicJetForm.zero_has_nonzero_arithmetic_cross_pairing",
+    "isotropic_packet_mass_and_residual": "Reinmann.XiAlgebraicMass.isotropic_zero_has_packet_mass_bounds",
+    "all_xi_zero_unit_absolute_mass": "Reinmann.XiAlgebraicMass.every_xi_zero_has_unit_absolute_mass",
+    "strip_zero_transfer": "Reinmann.XiAlgebraicMass.every_strip_zero_has_unit_absolute_mass",
+    "conditional_rh_endpoint": "Reinmann.XiAlgebraicMass.riemannHypothesis_of_arithmetic_unit_mass_paired_budget"
+  },
+  "scope": {
+    "all_parameter_all_order_jet_space": "Lean checked inside actual coefficient space, with unique finite coordinates",
+    "action": "restriction of the existing arithmetic coefficient differentiation operator; not a prescribed zero-indexed diagonal model",
+    "domain": "intersection of the algebraic span with the existing Xi Taylor-row domain; invariant under the action",
+    "form": "one fixed additive Hermitian form on the whole algebraic span, from Hermitianized mixed Xi-kernel derivatives",
+    "coherent_to_jet_form_compatibility": "Lean checked on the actual arithmetic domain",
+    "finite_multiplicity_and_nonzero_cross_pairing_at_every_xi_zero": "Lean checked without RH or simplicity",
+    "actual_isotropic_packet_mass_lower_upper_bounds": "Lean checked for the same fixed form and arithmetic domain",
+    "absolute_unit_mass_at_every_xi_and_critical_strip_zeta_zero": "Lean checked; isotropic case uses explicit packets",
+    "actual_packet_residual_identity": "Lean checked; no residual norm on this algebraic space is asserted",
+    "operator_form_symmetry_for_this_algebraic_form_proved": false,
+    "full_fock_form_identification_with_algebraic_hermitianized_gram": "not Lean formalized or independently reviewed",
+    "full_fock_higher_jet_norm_and_domain_estimates": "written proof; not Lean formalized or independently reviewed",
+    "same_form_paired_budget_for_every_zero_and_every_positive_tolerance_proved": false,
+    "conditional_rh_endpoint": "Lean checked from explicitly named ArithmeticUnitMassPairedBudget; no proof of that premise is supplied",
+    "norm_product_criterion_status": "optional stronger sufficient condition; not a replacement requirement",
+    "rh_proved": false,
+    "full_research_goal_complete": false,
+    "novelty_claimed": false,
+    "published": false,
+    "manuscript_pdf_updated_for_algebraic_extension": false
+  },
+  "checked_formulas": {
+    "coupling": "eta(v_s,J(1-conj(s),p))=i(-1)^p xi^(p+1)(s)/(p+1)",
+    "mass": "q_h=abs(B)^2(2h+h^2 C), h abs(B)^2<=q_h<=3h abs(B)^2",
+    "normalization": "eta(psi_h,psi_h)=1, psi_h=(v+h B w)/sqrt(q_h)",
+    "residual": "(T-lambda(s))psi_h=h B/sqrt(q_h) (T-lambda(s))w"
+  },
+  "proof_goal_requirement_status": {
+    "1_arithmetic_operator_and_domain": "fixed algebraic coefficient realization and Xi-row domain checked",
+    "2_zero_to_state_for_every_zero": "nonzero coherent eigenstates and reflected higher jets checked",
+    "3_mass_estimates": "actual same-form nonzero cross pairing and normalized packet estimates checked algebraically at every zero",
+    "4_relative_paired_budget": "unproved; action symmetry also not yet checked for this algebraic form",
+    "5_correct_xi_target_and_coefficient_normalization": "correct Xi target used; all 14 manuscript seed files containing the normalization corrections preserved"
+  },
+  "source_and_log_sha256": {
+    "Reinmann.lean": "3dc3ee82374aa26a55854b9970e235710269d6fb49e176bf3d48767d5c62f076",
+    "README.md": "cb620a6e63339548e537d8a2c9aee65e32dabdfd888e9df5bc91d51e144db9ca",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "lake-manifest.json": "a68511672a9f3196d87b941919c1a9b53a2347723ba6afe4ceaef326bbb0a961",
+    "Reinmann/XiAlgebraicJetSpace.lean": "7f6a03b3ed6b84133b66175a6e99bd0ca176af1a05e39e53d93a6d5ebd95b18c",
+    "Reinmann/XiAlgebraicJetForm.lean": "92de91bc6353111a49cca07ca3eb662c9916d7521f0e3d741771bb8460c9a3b8",
+    "Reinmann/XiAlgebraicMass.lean": "bd7387f66c7869540840174025a8ab7c7ee9dd2f3cf90b3aab8a4df5a2b8eed3",
+    "Reinmann/XiHigherJetDomain.lean": "44cee2dd216ec2ce78502d7587b1c7267aa81c11f22eef0202405cd7a7d1fcd4",
+    "Reinmann/XiHigherJetCoupling.lean": "ac5a39e5a141ccfd42c7db4fbd278da3e3084ae693030e9dcb10e492897f3c63",
+    "Reinmann/PseudoHermitianPacketMass.lean": "1bcd2b2169e45912bc4749641c127767f956b41166e170ee91da243f64fc4c14",
+    "Reinmann/PseudoHermitianLocal.lean": "314e083db810e318ea85ce1da6fcef94835ee5b3ec892ae4222bd8bf1c431d76",
+    "Reinmann/XiAnnihilator.lean": "4dd678a51199d84b84755553505eb62b78480b53439c38f6936e39672ef94acc",
+    "Reinmann/XiDividedDifference.lean": "383e82d5eb9300ede7813764f87b5656953591621e0801b130d5a88489d34264",
+    "Reinmann/FockEigenvectors.lean": "36506c9b6753c58a765d0cd2e5031844d2a0ee6cdf11f081bba640a0d8d8aae1",
+    "research/pseudo_hermitian/ALGEBRAIC_JET_MASS.md": "c0192e1932ba52fbd0119a341b887618d674d03d5aa9375f1b9964219d4fa298",
+    "research/pseudo_hermitian/HIGHER_JET_MASS_BRIDGE.md": "ae8d9cfd83dbc72d435a5a528e16cd38219ac73118e8e255f67a9ae1d4f88a90",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "1f372d3e0163984d4d84be2bd93d9ee76a4717fa922f8d8364dba9850e5d6264",
+    "research/pseudo_hermitian/APPROXIMATE_PACKET_MASS.md": "6d0a9e547f8e08f580b405b8a977c5b70e90a8dff5083193a85119eb071ec550",
+    "research/pseudo_hermitian/XI_DIVIDED_DIFFERENCE.md": "461776cd44545b3da2462088701f7b831e0ea430f58e9363b4137c248f46283f",
+    "research/pseudo_hermitian/FOCK_DOMAIN_ESTIMATES.md": "32e9edab7f9a6514a969c47143398e928caee1b494d32092a922e724cf2b2014",
+    "research/pseudo_hermitian/algebraic_mass_axiom_audit.lean": "1be4f4f76e17ee87a2561fcff44d470ec84720a3316eaa37c55d1140051b9123",
+    "research/pseudo_hermitian/worktree_seed.json": "caf6fce79af7926636629dc89f28b865819ce528e968c6c59cb9c84b74b986d6",
+    "research/pseudo_hermitian/verification/algebraic_mass_build.log": "2e884259123a7dd592e1f195d750af8e8705389e68f24646d7b9824b77859fac",
+    "research/pseudo_hermitian/verification/algebraic_mass_axiom_audit.log": "d1f2bffb1eb378a587549cbdc75dba724dcf5e8ce93e1c26ad8bfd1fa8ebbf41"
+  },
+  "diagnostics": "Nonfatal style and simplification warnings are retained in the saved logs."
+}

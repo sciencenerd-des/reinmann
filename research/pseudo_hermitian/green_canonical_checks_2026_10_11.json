@@ -1,0 +1,97 @@
+{
+  "record_kind": "canonical check execution tracker, not a completion certificate",
+  "source_sha256": {
+    "Reinmann/XiGreenGram.lean": "e8df9adb726a4a9f08f2d679fbafba82953c71e279e3a1d604bc4b97258d7016",
+    "Reinmann/XiAlgebraicRows.lean": "9fd5da0ec8d5095970704f37e7b648065139c75b6a3635591a760e76dc04cb57",
+    "Reinmann/XiGreenModel.lean": "98a19626e714c87291d6a566252a6fe2d1a3f31d8aca49333fb90693def46b61"
+  },
+  "started_at_utc": "2026-10-10T19:07:37.009685+00:00",
+  "checks": [
+    {
+      "label": "lake build Reinmann.XiGreenGram",
+      "command": [
+        "lake",
+        "build",
+        "Reinmann.XiGreenGram"
+      ],
+      "log": "research/pseudo_hermitian/verification/green_XiGreenGram_build.log",
+      "status": "passed",
+      "pid": 72143,
+      "exit_code": 0,
+      "log_sha256": "6034afa557750bc609d77f1069faee926398896ccfd9cab8f17e1f575cb900cb"
+    },
+    {
+      "label": "lake build Reinmann.XiAlgebraicRows",
+      "command": [
+        "lake",
+        "build",
+        "Reinmann.XiAlgebraicRows"
+      ],
+      "log": "research/pseudo_hermitian/verification/green_XiAlgebraicRows_build.log",
+      "status": "passed",
+      "pid": 84862,
+      "exit_code": 0,
+      "log_sha256": "16f16b8a4103b701f87fa876875e6df04c41e878a69e38d2df40878206315257"
+    },
+    {
+      "label": "lake build Reinmann.XiGreenModel",
+      "command": [
+        "lake",
+        "build",
+        "Reinmann.XiGreenModel"
+      ],
+      "log": "research/pseudo_hermitian/verification/green_XiGreenModel_build.log",
+      "status": "passed",
+      "pid": 97286,
+      "exit_code": 0,
+      "log_sha256": "49c211ea960d0006d0fd0b3ae1e19e1a661a14c90dc7e10206c62655437c62dc"
+    },
+    {
+      "label": "lake build",
+      "command": [
+        "lake",
+        "build"
+      ],
+      "log": "research/pseudo_hermitian/verification/green_full_build.log",
+      "status": "passed",
+      "pid": 8262,
+      "exit_code": 0,
+      "log_sha256": "5fc799f2d5beca735d487d0ad8c09c8cfdc40cf8533c8c0496296cd81e8ecd2a"
+    },
+    {
+      "label": "safe-verify canonical Green audit",
+      "command": [
+        "bash",
+        "scripts/safe-verify.sh",
+        "research/pseudo_hermitian/green_model_axiom_audit.lean"
+      ],
+      "log": "research/pseudo_hermitian/verification/green_canonical_axiom_audit.log",
+      "status": "passed",
+      "pid": 17450,
+      "exit_code": 0,
+      "log_sha256": "bb66551e5a81bb4ff24f2b488d936021a9582c0bb70edbe024ecb101a6a8fc86"
+    },
+    {
+      "label": "git diff --check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "log": "research/pseudo_hermitian/verification/green_diff_check.log",
+      "status": "passed",
+      "pid": 21146,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "requested_checks_completed",
+  "full_goal_complete": false,
+  "rh_proved": false,
+  "updated_at_utc": "2026-10-10T21:20:20.164128+00:00",
+  "root_imports_added_after_target_checks": [
+    "XiGreenGram",
+    "XiAlgebraicRows",
+    "XiGreenModel"
+  ]
+}

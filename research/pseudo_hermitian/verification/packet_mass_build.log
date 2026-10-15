@@ -1,0 +1,57 @@
+⚠ [3482/3541] Replayed Reinmann.PseudoHermitianLocal
+warning: Reinmann/PseudoHermitianLocal.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3483/3541] Replayed Reinmann.PseudoHermitianIsotropy
+warning: Reinmann/PseudoHermitianIsotropy.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3485/3541] Replayed Reinmann.XiAnnihilator
+warning: Reinmann/XiAnnihilator.lean:167:2: Try `simp at hm` instead of `simpa using hm`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3491/3541] Replayed Reinmann.XiKernelPackets
+warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: Reinmann/XiKernelPackets.lean:102:2: `have hz : (x.1 - y.1) * (s - t) = 0 := by linear_combination h1 - t * h0` uses `h0`!
+warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: Reinmann/XiKernelPackets.lean:102:2: `have hz : (x.1 - y.1) * (s - t) = 0 := by linear_combination h1 - t * h0` uses `h1`!
+warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: Reinmann/XiKernelPackets.lean:104:2: `have hy : x.2 = y.2 := by linear_combination h0 - hx` uses `h0`!
+⚠ [3535/3541] Replayed Reinmann.CurvatureControls
+warning: Reinmann/CurvatureControls.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/CurvatureControls.lean:47:0: 'Reinmann.realZeroControl_turan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:48:0: 'Reinmann.realZeroControl_scaled_deficit_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:49:0: 'Reinmann.realZeroControl_curvature_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:50:0: 'Reinmann.realZeroControl_discrete_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:51:0: 'Reinmann.curvature_negative_of_half_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3536/3541] Replayed Reinmann.CoupledRankEnergy
+warning: Reinmann/CoupledRankEnergy.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/CoupledRankEnergy.lean:80:20: unused variable `hEg`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3537/3541] Replayed Reinmann.WeilRankTail
+warning: Reinmann/WeilRankTail.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+✔ [3540/3541] Built Reinmann (28s)
+Build completed successfully (3541 jobs).

@@ -1,0 +1,33 @@
+safe-verify: shortcut scan passed for 101 Lean file(s).
+'Reinmann.XiDividedDifference.xi_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.xi_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.deriv_xi_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.deriv_xi_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_of_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_at_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_spectral_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_zero_spectral_symmetry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.reflected_self_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_mass_on_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_mass_off_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_mass_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiDividedDifference.kernel_mass_at_multiple_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.AdditiveScalarForm.mass_zero_of_real_jordan_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.AdditiveScalarForm.mass_zero_of_symmetric_jordan_chain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.FockEigenvectors.derivative_coherentJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.FockEigenvectors.spectral_coherentJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.FockEigenvectors.spectral_coherentJordan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.FockEigenvectors.coherent_mass_zero_of_real_chain_symmetry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAnnihilator.xiTaylor_derivative_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAnnihilator.derivative_power_coherentJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAnnihilator.rowTerm_coherentJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAnnihilator.coherentJet_row_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAnnihilator.coherentJet_mem_domain_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAnnihilator.jordanZeroState_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAnnihilator.mass_zero_at_multiple_xi_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

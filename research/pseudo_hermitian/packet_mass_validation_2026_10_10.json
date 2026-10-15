@@ -1,0 +1,202 @@
+{
+  "checked_at_utc": "2026-10-10T07:17:59.965049+00:00",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "branch": "codex/xi-eigenvector-reduction",
+  "base_commit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "previous_goal_turn_classification": "progress: checked Xi kernel and actual-domain Jordan obstruction, written all-multiplicity packet construction",
+  "current_goal_turn_classification": "progress: checked generic packet mass and residual bounds, arithmetic Xi finite core, and a norm-product sufficient criterion",
+  "checks": {
+    "lake build": {
+      "exit_code": 0,
+      "jobs": 3541
+    },
+    "safe_verify_packet_audit": {
+      "exit_code": 0,
+      "project_files_shortcut_scanned": 104,
+      "theorems_audited": 25
+    },
+    "git diff --check": {
+      "exit_code": 0
+    },
+    "manuscript_seed_hashes_match_both_checkouts": 14
+  },
+  "theorem_axioms": {
+    "Reinmann.PacketMass.self_eq_real": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.mixture_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.scalar_mass_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.mass_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.mass_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.normalized_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.normalized_mixture_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.normalized_mixture_nonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.normalized_residual_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.scalar_normalization_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.normalization_factor_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.normalized_residual_norm_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.exists_unit_mass_small_residual": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.paired_residual_norm_of_unit_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.paired_residual_norm_le_norm_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.distance_le_norm_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.PacketMass.critical_of_arbitrarily_small_norm_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.form_hermitian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.action_form_symmetric": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.realize_action": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.realize_residual": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.realize_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.partner_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.kernel_partner": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiKernelPackets.simple_offcritical_unit_mass_packets": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": {
+    "generic_isotropic_packet_mass_formula_lower_upper_bounds": "Lean checked for a Hermitian additive scalar form and nonzero cross pairing",
+    "generic_positive_mass_normalization_and_ordinary_residual_bounds": "Lean checked; ordinary residual arbitrarily small for every positive tolerance",
+    "bounded_form_unit_mass_norm_product_sufficient_criterion": "Lean checked conditional criterion; does not establish the arithmetic small-product premise",
+    "xi_two_coherent_state_kernel_gram_form_and_symmetry": "Lean checked",
+    "xi_packet_realization_into_actual_coefficient_domain": "Lean checked injective map for distinct parameters, intertwining the independently defined arithmetic action",
+    "xi_simple_offcritical_packet_mass_and_small_ordinary_residual": "Lean checked conditional on a simple off-critical Xi zero; neither its existence nor its absence is asserted",
+    "formal_packet_norm": "coordinate product norm on C x C; not the Fock norm",
+    "full_fock_bounded_hermitian_form_and_domain_symmetry": "written proof; not Lean formalized or independently reviewed",
+    "general_higher_jet_nonzero_pairing_and_all_multiplicity_hilbert_packets": "written proof; not Lean formalized or independently reviewed",
+    "coordinate_to_fock_norm_transfer": "written finite-span argument; not Lean formalized",
+    "unit_absolute_mass_paired_residual_defect": "Lean checked exactly 2 abs(Re(s)-1/2) under diagonal form symmetry",
+    "same_form_paired_budget_for_every_zero_and_every_positive_tolerance_proved": false,
+    "arithmetic_unit_mass_norm_product_arbitrarily_small_proved": false,
+    "rh_proved": false,
+    "full_research_goal_complete": false,
+    "novelty_claimed": false,
+    "published": false,
+    "manuscript_pdf_updated_for_packet_extension": false
+  },
+  "checked_bounds": {
+    "parameter_range": "0 < h <= 1/(1+abs(C)), B=eta(v,w) nonzero, eta(v,v)=0, C=re(eta(w,w))",
+    "mass": "q=abs(B)^2 (2h+h^2 C), h abs(B)^2 <= q <= 3h abs(B)^2",
+    "normalized_ordinary_residual": "at most sqrt(h) norm((T-lambda)w)",
+    "normalized_paired_residual": "2 abs(Re(s)-1/2)",
+    "bounded_form_norm_product": "abs(Re(s)-1/2) <= K norm(x) norm((T-lambda(s))x), at unit absolute form mass and diagonal symmetry"
+  },
+  "source_and_log_sha256": {
+    "Reinmann.lean": "3f2312f96f5bfebc7650c70b9267d12b1f9bcea895295c9400e72932f5796f17",
+    "README.md": "84b07ae2c80d85d1f6070613cdb6a80d3e7fea2e1099dcf41f4759fb9057c3b6",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "lake-manifest.json": "a68511672a9f3196d87b941919c1a9b53a2347723ba6afe4ceaef326bbb0a961",
+    "Reinmann/PseudoHermitianPacketMass.lean": "1bcd2b2169e45912bc4749641c127767f956b41166e170ee91da243f64fc4c14",
+    "Reinmann/PseudoHermitianPacketNorm.lean": "3dd226bf15e890219d6030c06228c5ee923400b708aad476854daededceb60ca",
+    "Reinmann/XiKernelPackets.lean": "731a7419c1a370ea912e7ea782cc520690965e0a09ebf274e064759f91cb1418",
+    "Reinmann/PseudoHermitianLocal.lean": "314e083db810e318ea85ce1da6fcef94835ee5b3ec892ae4222bd8bf1c431d76",
+    "Reinmann/XiAnnihilator.lean": "4dd678a51199d84b84755553505eb62b78480b53439c38f6936e39672ef94acc",
+    "Reinmann/XiDividedDifference.lean": "383e82d5eb9300ede7813764f87b5656953591621e0801b130d5a88489d34264",
+    "Reinmann/XiJordanDomain.lean": "007c153cf5b8ae56580b64d6dd78cb549d2554b3ac791aecc4cbae42b49dd046",
+    "Reinmann/FockEigenvectors.lean": "36506c9b6753c58a765d0cd2e5031844d2a0ee6cdf11f081bba640a0d8d8aae1",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "39d7f77b0a4273c6df4933f19afd4c47b6b65136add64cf8dda8773f25621b81",
+    "research/pseudo_hermitian/APPROXIMATE_PACKET_MASS.md": "ed4d6c3998c69389f2157fdb2e55154d158297cce9a3b99ad039259d0b570285",
+    "research/pseudo_hermitian/XI_DIVIDED_DIFFERENCE.md": "603a00514be18b40b4fae3e68bde0116cf19c9e99fe235735de6ccaf833f65d0",
+    "research/pseudo_hermitian/FOCK_DOMAIN_ESTIMATES.md": "32e9edab7f9a6514a969c47143398e928caee1b494d32092a922e724cf2b2014",
+    "research/pseudo_hermitian/packet_mass_axiom_audit.lean": "5b42b686ce6f9a5612829f4184d24bdf33e2a77246226d51a52b1ef3b1474c68",
+    "research/pseudo_hermitian/worktree_seed.json": "caf6fce79af7926636629dc89f28b865819ce528e968c6c59cb9c84b74b986d6",
+    "research/pseudo_hermitian/verification/packet_mass_build.log": "bd6dfd0271674e180e58b043400311bd77304da5aac815d45886dc14c22195f6",
+    "research/pseudo_hermitian/verification/packet_mass_axiom_audit.log": "625e373c16a3adb6fa20421a520f3d33b4c532fc2f76ba23561e7d17ac524b77"
+  },
+  "diagnostics": "Nonfatal existing style-header, unnecessary-simpa and unused-variable warnings; new flexible-tactic warnings in coefficient injectivity proof."
+}

@@ -1,0 +1,22 @@
+import Reinmann.PseudoHermitianLocal
+import Reinmann.PseudoHermitianIsotropy
+
+#print axioms Reinmann.ScalarHomogeneousForm.defect_eq_of_eigenpair
+#print axioms Reinmann.ScalarHomogeneousForm.eigenvalue_conj_eq_of_local
+#print axioms Reinmann.ScalarHomogeneousForm.isotropic_of_nonreal
+#print axioms Reinmann.norm_spectralParam_sub_conj
+#print axioms Reinmann.ScalarHomogeneousForm.critical_distance_mass_eq_defect
+#print axioms Reinmann.ScalarHomogeneousForm.critical_distance_le_of_defect
+#print axioms Reinmann.AdditiveScalarForm.skew_mass_eq_defect_sub_residual
+#print axioms Reinmann.AdditiveScalarForm.critical_distance_le_of_residual_budget
+#print axioms Reinmann.riemannHypothesis_of_localForm_eigendata
+#print axioms Reinmann.riemannHypothesis_of_localForm_submodule
+#print axioms Reinmann.riemannHypothesis_of_pseudoHermitian_via_local
+#print axioms Reinmann.riemannHypothesis_of_localForm_approximation
+#print axioms Reinmann.PseudoHermitianIsotropy.swapForm_hermitian
+#print axioms Reinmann.PseudoHermitianIsotropy.swapForm_nondegenerate
+#print axioms Reinmann.PseudoHermitianIsotropy.action_form_symmetric
+#print axioms Reinmann.PseudoHermitianIsotropy.eigenvector_nonzero
+#print axioms Reinmann.PseudoHermitianIsotropy.eigenvalue_I
+#print axioms Reinmann.PseudoHermitianIsotropy.eigenvector_isotropic
+#print axioms Reinmann.PseudoHermitianIsotropy.eigenvalue_nonreal

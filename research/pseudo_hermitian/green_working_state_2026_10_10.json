@@ -1,0 +1,179 @@
+{
+  "record_kind": "implementation tracker, not a verification certificate",
+  "updated_at_utc": "2026-10-10T19:17:20.708969+00:00",
+  "previous_goal_turn_classification": "progress: combined incremental Lean version 3 passes with zero errors and all 48 theorem audits using standard axioms only; exact canonical namespace bodies matched; separate module builds and full project validation remain pending",
+  "current_goal_turn_classification": "progress: five all-order factorial-weighted Fock jet summability lemma implementations written as explicitly unchecked draft, including zero parameter; canonical Gram compiler confirmed live and exact guarded source hashes unchanged",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "goal_complete": false,
+  "rh_proved": false,
+  "last_fully_verified_milestone": "algebraic_mass_validation_2026_10_10.json",
+  "checks_pending": {
+    "gram": {
+      "status": "Combined incremental check passed; canonical build running in guarded queue",
+      "first_session_id": 78109
+    },
+    "rows": {
+      "session_id": 79688,
+      "lake_pid": 73846,
+      "lean_pid": 75210,
+      "status": "Combined incremental check passed; canonical build queued",
+      "latest_observation": "75210 73846 S    44:16   0:55.82  97168 /Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+      "process_sample": {
+        "path": "research/pseudo_hermitian/verification/green_rows_import_sample.txt",
+        "sha256": "2e675954c3367cda7cdaab899e2429e8072036c9ec155f6956176671d46828be",
+        "finding": "Lean.Elab.processHeaderCore and Lean.finalizeImport on sampled stack; no proof diagnostics yet"
+      },
+      "first_session_id": 79688
+    },
+    "model": "Combined incremental check passed; canonical build queued behind Gram and Rows",
+    "full_build_and_axiom_audit": "Guarded sequential queue will run after the three canonical targets pass",
+    "automatic_row_resume": {
+      "session_id": 49488,
+      "script": "/tmp/rh-green-resume-row.py",
+      "behavior": "Wait for the exact Gram compiler child to become terminal, then SIGCONT the same row compiler child after checking parent and command identity; no compiler restart.",
+      "status": "terminal exit 0; successfully resumed same child"
+    },
+    "incremental_checker": {
+      "session_id": 3294,
+      "script": "/tmp/rh_green_lsp.py",
+      "status": "Version 3 completed with no errors; 48 audits standard axioms only",
+      "preserves_target": "Full all-parameter all-order recurrence, actual row bridge, fixed symmetric model and same-form mass estimates; canonical modules preserved",
+      "official_incremental_snapshot_reference": "https://github.com/leanprover/lean4/blob/master/src/Lean/Server/README.md",
+      "script_syntax_check": "passed; same queued process remains live, no restart",
+      "lake_pid": 94411,
+      "harness_pid": 86426,
+      "latest_observation": "94411 86426 S    04:47   0:10.08   6544 /Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lake",
+      "process_sample": "research/pseudo_hermitian/verification/green_incremental_workspace_sample.txt",
+      "finding": "Native sample shows Lake.loadWorkspace / importModulesUsingCache; server initialization not yet complete",
+      "server_pid": 94411,
+      "watchdog_pid": 96767,
+      "worker_pid": 96770,
+      "worker_latest_observation": "96770 96767 Ss   03:39   0:07.27  15840 /Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+      "workbench_version": 3,
+      "processing": [
+        {
+          "kind": 1,
+          "range": {
+            "end": {
+              "character": 0,
+              "line": 633
+            },
+            "start": {
+              "character": 0,
+              "line": 9
+            }
+          }
+        }
+      ],
+      "evidence": "verification/green_workbench_v3_passed.json"
+    },
+    "canonical_queue": {
+      "session_id": 7713,
+      "queue_pid": 72141,
+      "first_lake_pid": 72143,
+      "script": "/tmp/rh_green_validation_queue.py",
+      "tracker": "green_canonical_checks_2026_10_11.json",
+      "status": "live; first Lake build confirmed by ps and session poll",
+      "current_lean_pid": 73206,
+      "latest_observation": "73206 72143 S    07:14   0:17.36 182768 /Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean"
+    }
+  },
+  "manuscript_worktree_seed_hashes_match": 14,
+  "original_checkout_files_changed_since_seed": [
+    {
+      "path": "paper/rh_reduction_paper.tex",
+      "seed_sha256": "5ee6d09a0504a4f032edd70564b011b83f4cbbf885c9c3b22f1dc6d7f9783a42",
+      "source_current_sha256": "45ed529360fa979c04e4e1f62071ab6457c3ca8ebf83aacf2a5256571d26d29f"
+    },
+    {
+      "path": "paper/rh_reduction_paper.pdf",
+      "seed_sha256": "c2d76b659bc48835472713cdc125cea352a2c909e9cd53adedc5a87dba6a5630",
+      "source_current_sha256": "8d68ba7d9b61a8ec0d42583a5007bfc71cadc483d4ec0c15f68c7fae7559077d"
+    }
+  ],
+  "original_checkout_policy": "No edits made to original checkout; newer original files preserved, no seed overwrite or refresh.",
+  "source_sha256": {
+    "Reinmann/XiGreenGram.lean": "e8df9adb726a4a9f08f2d679fbafba82953c71e279e3a1d604bc4b97258d7016",
+    "Reinmann/XiAlgebraicRows.lean": "9fd5da0ec8d5095970704f37e7b648065139c75b6a3635591a760e76dc04cb57",
+    "Reinmann/XiGreenModel.lean": "98a19626e714c87291d6a566252a6fe2d1a3f31d8aca49333fb90693def46b61",
+    "research/pseudo_hermitian/GREEN_RECURRENCE_MODEL.md": "f25d4f5d01cd150c44db02c624a75b3a402abea1ec2702bbf6ddc9ef709e24c4",
+    "research/pseudo_hermitian/check_green_recurrence_polynomials.py": "b984ec63a99a7568669c7e2467dbe3835c6c4df80b284c57cb1879422d469d0a",
+    "research/pseudo_hermitian/green_recurrence_polynomial_diagnostics.json": "e6b6cda35c70382c0570ef13e55cd5c64b2c9b38d62832ce22d53b58ba107574",
+    "research/pseudo_hermitian/green_model_axiom_audit.lean": "fd7e883114ee5cdb4b3e022ee69c6c95afed4fe52e970316df2ebf750abc12a6",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "b00eb7abfbebffa599d3c00771fe2fb9fba4bd37fe6f17b5c5df078585ece871",
+    "research/pseudo_hermitian/EXPLICIT_JET_FOCK_NORMS.md": "0a3829ef242a1bc0af26376b69c35fa388586168ace1f3c14581b20f5086156a",
+    "research/pseudo_hermitian/check_jet_fock_norms.py": "101017cb95c74fe463ad99062bc8f686f8c913f5311179fb732df42bd71c96b8",
+    "research/pseudo_hermitian/jet_fock_norm_diagnostics.json": "6f546e629b38adcd47e3a392f81bb4a44cbe5efcce5210b21b3ea8cbc1be87c9",
+    "research/pseudo_hermitian/APPROXIMATE_PACKET_MASS.md": "5d1cc7a5db0186a7c81de55591e476a2f1088f428e72506521d986fb4bc3ee32",
+    "research/pseudo_hermitian/verification/jet_fock_norm_diagnostic.log": "f9effaff96c739b367ce07eb1ad04435c86437fe3084b698e2ed07808a062dca",
+    "research/pseudo_hermitian/verification/green_shortcut_scan.log": "0de1310499e8b6f304d0101ed09b8e36b30706067ae0855a1a8aeb3043a97795",
+    "research/pseudo_hermitian/verification/green_incremental_workspace_sample.txt": "1540fc2de6e4f83fa453dcec6da7d5b3e7975d9b53fbf58046b0dc8e0b333c89",
+    "research/pseudo_hermitian/verification/green_workbench_v3_passed.json": "f7ca51fdb65194e1f70f5d9bf73ba1f3f9f0898ad4888c4fb0c80491e3267d0a",
+    "research/pseudo_hermitian/verification/green_workbench_v3_axioms.log": "35072bcd7a23d6f90050084c4620ade0c78341607e1502c5957d13a68a510013",
+    "research/pseudo_hermitian/verification/green_workbench_v3.lean.snapshot": "8e34199328fd9f477cd36fc605403f8de14e46f39705a5522c07eac60149b7d1",
+    "research/pseudo_hermitian/FockJetSummability.lean.draft": "6be0daa2ebe7d9413558af702c73f8222ef9e320e8c1b6409f383827df82c230"
+  },
+  "independent_diagnostic": {
+    "status": "passed",
+    "exact_entries": 288,
+    "green_matrices_with_nonzero_boundary": 2,
+    "inputs": "degree-4 and degree-8 reflection-symmetric rational polynomials, not Xi",
+    "general_proof": false
+  },
+  "prepared_theorem_audits": 48,
+  "failed_attempts": [
+    {
+      "module": "Reinmann.XiGreenGram",
+      "exit_code": 1,
+      "source_sha256": "62770fe6b129074da6b7ad5fe4984d059d4c324682a84e0822e9e1bddf6f50db",
+      "log": "research/pseudo_hermitian/verification/green_gram_attempt_1_failed.log",
+      "log_sha256": "5386b08dd2a1bd6e521e01cad38956e27b9acd6d62c0a112fa849937bc410443",
+      "diagnosis": "Reflection zero order, conjugation simplification and reflected derivative orientation; recurrence and factorial identities had no reported errors."
+    },
+    {
+      "module": "Reinmann.XiAlgebraicRows",
+      "exit_code": 1,
+      "source_sha256": "479f386f1c0445eae82a3454d47b0f2a7b3c748058d28164e83d53c0539b7de8",
+      "log": "research/pseudo_hermitian/verification/green_rows_attempt_1_failed.log",
+      "log_sha256": "970084b36e442176e1b2a0286cccf0ca7011a086e174d5ede509eeacfc916aab",
+      "diagnosis": "Single zero-case HasSum simplification error; explicit row-sequence equality repair written; other seven theorems reported no errors."
+    }
+  ],
+  "explicit_fock_norm_refinement": {
+    "status": "written general derivation; exact finite diagnostics passed, not Lean formalized",
+    "norm_formula": "p! exp(r) sum_(j=0)^p binom(p,j) r^j/j!, r=abs(s)^2",
+    "diagnostic_exit_code": 0,
+    "coefficient_comparisons": 2025,
+    "symbolic_identities": 25,
+    "max_jet_order_tested": 12,
+    "max_series_coefficient_tested": 80,
+    "relative_paired_budget_proved": false,
+    "additional_written_results": "Exact packet Fock norm and state/residual norm-product limits; no paired-budget implication",
+    "pending_lean_helpers": [
+      "XiGreenModel.fock_coherent_jet_hasSum",
+      "XiGreenModel.fock_coherent_jet_pairing"
+    ],
+    "fock_pairing_helpers_status": "Both helpers passed combined incremental Lean check using standard axioms; canonical module verification pending"
+  },
+  "shortcut_scan": {
+    "exit_code": 0,
+    "project_lean_files": 113,
+    "scope": "Source shortcut scan only; no theorem verification inferred"
+  },
+  "prepared_axiom_audit_coverage": {
+    "theorems": 48,
+    "all_new_theorem_declarations_covered_exactly_once": true,
+    "axiom_audit_execution_passed": true,
+    "incremental_execution_passed": true,
+    "canonical_import_audit_execution_passed": false,
+    "scope_of_execution_pass": "Combined workbench version 3; canonical imported-module audit still pending"
+  },
+  "fock_summability_draft": {
+    "path": "FockJetSummability.lean.draft",
+    "theorem_implementations": 5,
+    "compiled": false,
+    "in_verified_module_tree": false,
+    "scope": "All complex parameters and natural jet orders, including parameter zero",
+    "purpose": "Actual weighted coefficient summability before constructing the normed Fock realization; no paired-budget substitution"
+  }
+}

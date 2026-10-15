@@ -1,0 +1,11 @@
+⚠ [3432/3441] Replayed Reinmann.PseudoHermitianLocal
+warning: Reinmann/PseudoHermitianLocal.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3441/3441] Built Reinmann.XiAnnihilator (280s)
+warning: Reinmann/XiAnnihilator.lean:167:2: Try `simp at hm` instead of `simpa using hm`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3441 jobs).

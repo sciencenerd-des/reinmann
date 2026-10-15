@@ -1,0 +1,16 @@
+{
+  "status": "exact_finite_algebra_checks_passed",
+  "checks": {
+    "max_jet_order": 12,
+    "max_series_coefficient": 80,
+    "exact_norm_coefficients": 1053,
+    "exact_adjacent_pairing_coefficients": 972,
+    "symbolic_derivative_identities": 25
+  },
+  "sympy_version": "1.14.0",
+  "scope": "Finite combinatorial and symbolic diagnostics for the written formulas.",
+  "general_lean_proof": false,
+  "xi_zero_certificate": false,
+  "relative_paired_budget_proved": false,
+  "rh_proved": false
+}

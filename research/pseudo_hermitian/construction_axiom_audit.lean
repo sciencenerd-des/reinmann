@@ -1,0 +1,30 @@
+import Reinmann.FockEigenvectors
+import Reinmann.XiAnnihilator
+
+#print axioms Reinmann.FockEigenvectors.derivative_coherent
+#print axioms Reinmann.FockEigenvectors.spectral_coherent
+#print axioms Reinmann.FockEigenvectors.coherent_pairing_term
+#print axioms Reinmann.FockEigenvectors.coherent_pairing_hasSum
+#print axioms Reinmann.FockEigenvectors.coherent_pairing
+#print axioms Reinmann.FockEigenvectors.coherent_mass_ne_zero
+#print axioms Reinmann.FockEigenvectors.coherent_mass_norm
+#print axioms Reinmann.FockEigenvectors.coherent_mass_norm_ge_one
+#print axioms Reinmann.FockEigenvectors.normalized_mass
+#print axioms Reinmann.FockEigenvectors.normalized_eigen
+#print axioms Reinmann.FockEigenvectors.normalized_defect_norm
+#print axioms Reinmann.FockEigenvectors.coherent_relative_defect
+#print axioms Reinmann.FockEigenvectors.coherent_diagonal_symmetry_iff
+#print axioms Reinmann.FockEigenvectors.coherent_cross_defect
+#print axioms Reinmann.FockEigenvectors.coherent_cross_symmetry_iff
+#print axioms Reinmann.XiAnnihilator.xiTaylor_hasSum
+#print axioms Reinmann.XiAnnihilator.derivative_mem_domain
+#print axioms Reinmann.XiAnnihilator.derivative_power_coherent
+#print axioms Reinmann.XiAnnihilator.rowTerm_coherent
+#print axioms Reinmann.XiAnnihilator.coherent_row_hasSum
+#print axioms Reinmann.XiAnnihilator.coherent_mem_domain_iff
+#print axioms Reinmann.XiAnnihilator.xi_zero_of_strip_zero
+#print axioms Reinmann.XiAnnihilator.zeroState_mass
+#print axioms Reinmann.XiAnnihilator.zeroState_eigen
+#print axioms Reinmann.XiAnnihilator.normalizedZeroState_mass
+#print axioms Reinmann.XiAnnihilator.normalizedZeroState_eigen
+#print axioms Reinmann.XiAnnihilator.strip_zero_unit_mass_eigendata

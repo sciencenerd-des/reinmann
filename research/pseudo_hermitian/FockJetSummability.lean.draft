@@ -1,0 +1,82 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.XiHigherJetDomain
+import Mathlib.Analysis.SpecificLimits.Normed
+
+/-!
+# Pending formalization of all-order Fock jet summability
+
+This is an unchecked implementation draft. It is intentionally outside the
+verified module tree and does not affect the running canonical Green checks.
+It treats every complex parameter and every natural jet order, including
+parameter zero. No reality, simplicity, Xi-zero or positivity-of-metric premise
+is used. This proves neither a normed-domain bridge nor the paired RH budget.
+-/
+
+noncomputable section
+open Complex Filter
+open scoped Topology
+
+namespace Reinmann.FockJetSummability
+open FockEigenvectors XiAnnihilator
+
+def jetWeight (p : ℕ) (r : ℝ) (k : ℕ) : ℝ :=
+  ((k + p).factorial : ℝ) * r ^ k / (k.factorial : ℝ) ^ 2
+
+theorem jetWeight_nonneg (p : ℕ) {r : ℝ} (hr : 0 ≤ r) (k : ℕ) :
+    0 ≤ jetWeight p r k := by
+  unfold jetWeight
+  positivity
+
+theorem jetWeight_succ (p k : ℕ) (r : ℝ) :
+    jetWeight p r (k + 1) =
+      (((k : ℝ) + p + 1) * r / (k + 1 : ℝ) ^ 2) * jetWeight p r k := by
+  unfold jetWeight
+  rw [show k + 1 + p = (k + p) + 1 by omega,
+    Nat.factorial_succ, Nat.factorial_succ]
+  simp only [Nat.cast_mul, Nat.cast_add, Nat.cast_one, pow_succ]
+  have hf : (k.factorial : ℝ) ≠ 0 := by exact_mod_cast k.factorial_ne_zero
+  have hk : (k + 1 : ℝ) ≠ 0 := by exact_mod_cast Nat.succ_ne_zero k
+  field_simp <;> ring
+
+/-- A deterministic eventual ratio bound, valid also at r=0. -/
+theorem jetWeight_summable (p : ℕ) {r : ℝ} (hr : 0 ≤ r) :
+    Summable (jetWeight p r) := by
+  apply summable_of_ratio_norm_eventually_le (r := (1 / 2 : ℝ)) (by norm_num)
+  obtain ⟨N, hN⟩ := exists_nat_gt (4 * r)
+  refine eventually_atTop.mpr ⟨max p N, ?_⟩
+  intro k hk
+  have hpk : (p : ℝ) ≤ k := by exact_mod_cast le_trans (le_max_left p N) hk
+  have hNk : (N : ℝ) ≤ k := by exact_mod_cast le_trans (le_max_right p N) hk
+  have hcut : 4 * r ≤ (k + 1 : ℝ) := by linarith
+  have hkp : (k : ℝ) + p + 1 ≤ 2 * (k + 1 : ℝ) := by linarith
+  have hproduct : 0 ≤ (k + 1 : ℝ) * ((k + 1 : ℝ) - 4 * r) :=
+    mul_nonneg (by positivity) (sub_nonneg.mpr hcut)
+  have hratio : ((k : ℝ) + p + 1) * r / (k + 1 : ℝ) ^ 2 ≤ 1 / 2 := by
+    apply (div_le_iff₀ (by positivity : 0 < (k + 1 : ℝ) ^ 2)).mpr
+    have hmul := mul_le_mul_of_nonneg_right hkp hr
+    nlinarith
+  simp only [Real.norm_eq_abs,
+    abs_of_nonneg (jetWeight_nonneg p hr (k + 1)),
+    abs_of_nonneg (jetWeight_nonneg p hr k)]
+  rw [jetWeight_succ]
+  exact mul_le_mul_of_nonneg_right hratio (jetWeight_nonneg p hr k)
+
+theorem weightedJet_term_shift (s : ℂ) (p k : ℕ) :
+    ((k + p).factorial : ℝ) * ‖higherJet s p (k + p)‖ ^ 2 =
+      jetWeight p (‖s‖ ^ 2) k := by
+  rw [higherJet_apply_add]
+  simp only [jetWeight, coherent, norm_div, norm_pow, Complex.norm_natCast, div_pow]
+  rw [← pow_mul, Nat.mul_comm k 2, pow_mul] <;> ring
+
+/-- Actual factorial-weighted coefficient square summability at every jet. -/
+theorem higherJet_fock_summable (s : ℂ) (p : ℕ) :
+    Summable (fun n => (n.factorial : ℝ) * ‖higherJet s p n‖ ^ 2) := by
+  apply (summable_nat_add_iff p).mp
+  simpa only [weightedJet_term_shift] using
+    jetWeight_summable p (sq_nonneg ‖s‖)
+
+end Reinmann.FockJetSummability

@@ -1,0 +1,300 @@
+{
+  "checked_at_utc": "2026-10-10T07:45:34.178769+00:00",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "branch": "codex/xi-eigenvector-reduction",
+  "base_commit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "previous_goal_turn_classification": "progress: packet mass bounds and Xi finite core verified, full 3541-job build and 25 standard-axiom audits passed",
+  "current_goal_turn_classification": "progress: arbitrary-order arithmetic jets, all-zero finite multiplicity and nonzero kernel derivative verified; stronger norm-product route distinguished from the required paired budget",
+  "checks": {
+    "lake build": {
+      "exit_code": 0,
+      "jobs": 3544
+    },
+    "safe_verify_higher_jet_audit": {
+      "exit_code": 0,
+      "project_files_shortcut_scanned": 107,
+      "theorems_audited": 42
+    },
+    "git diff --check": {
+      "exit_code": 0
+    },
+    "manuscript_seed_hashes_match_both_checkouts": 14
+  },
+  "theorem_axioms": {
+    "Reinmann.XiAnnihilator.creation_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.creation_succ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_creation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_power_creation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_succ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_apply_add": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_apply_lt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_nonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_higherJet_succ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.differentiable_iterated_xi": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.xiDerivativeTaylor_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.xiDerivativeTaylor_succ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.xiDerivativeTaylor_hasSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivativeRowTerm_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.coherent_derivative_row_hasSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_row_creation_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_row_creation_shift": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_row_creation_split": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.creation_rows_hasSum_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_derivative_rows_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_mem_domain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJetState_nonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJet_one_eq_coherentJet": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.spectral_higherJet_succ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.higherJetState_spectral_succ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.iteratedDeriv_xi_one_sub": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.iteratedDeriv_xi_conj": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.exists_nonzero_xi_derivative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.exists_finite_xi_multiplicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.iteratedDeriv_dslope_same": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.polarizedKernel_eq_kernel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.polarizedKernel_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.jetCoupling_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.jetCoupling_ne_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiDividedDifference.zero_has_domain_jet_and_nonzero_coupling": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.NormProductObstruction.jordan_form_symmetric": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.NormProductObstruction.jordan_paired_residual_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.NormProductObstruction.jordan_norm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.NormProductObstruction.mass_le_twice_norm_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.NormProductObstruction.unit_mass_norm_product_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.NormProductObstruction.exists_unit_mass_small_residual_and_fixed_norm_product": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": {
+    "arbitrary_coefficient_jets_and_creation_commutator": "Lean checked; higherJet(s,p) equals the coefficients of z^p exp(sz)",
+    "actual_xi_domain_membership": "Lean checked when derivatives through order p vanish; no RH or simplicity premise",
+    "arithmetic_restricted_action_on_higher_jets": "Lean checked triangular Jordan recurrence",
+    "finite_multiplicity_at_every_xi_zero": "Lean checked using the entire Taylor series and xiCompleted(0)=1/2",
+    "all_order_xi_reflection_and_conjugation": "Lean checked",
+    "removable_divided_difference_derivative": "Lean checked using analytic power-series uniqueness",
+    "nonzero_xi_kernel_jet_coupling_at_every_zero": "Lean checked as a holomorphic parameter derivative of the actual Xi kernel",
+    "full_fock_form_pairing_equals_that_kernel_jet_coupling": "written proof; not Lean formalized or independently reviewed",
+    "full_fock_higher_jet_norm_and_domain_estimates": "written proof; not Lean formalized or independently reviewed",
+    "generic_packet_mass_lower_bound_and_normalization": "previous Lean milestone; same-form compatibility still needed to apply in the full Hilbert construction",
+    "norm_product_counterexample": "Lean checked real Jordan block in C x C with its standard coordinate product norm; no assertion about actual Xi multiplicities",
+    "norm_product_criterion_status": "optional sufficient criterion; strictly stronger than paired cancellation in the checked example; not a replacement goal requirement",
+    "fixed_algebraic_all_parameter_jet_span_realization": "identified research route, not yet constructed or verified",
+    "same_form_paired_budget_for_every_zero_and_every_positive_tolerance_proved": false,
+    "rh_proved": false,
+    "full_research_goal_complete": false,
+    "novelty_claimed": false,
+    "published": false,
+    "manuscript_pdf_updated_for_higher_jet_extension": false
+  },
+  "checked_formulas": {
+    "jet_coefficients": "J(s,p)_(n+p)=s^n/n!, J(s,p)_n=0 for n<p",
+    "jet_action": "T J(s,p+1)=lambda(s) J(s,p+1)-i(p+1) J(s,p)",
+    "kernel_jet_coupling": "B(s,p)=i(-1)^p xi^(p+1)(s)/(p+1)",
+    "at_multiplicity_m": "B(rho,m-1)=i(-1)^(m+1) xi^(m)(rho)/m != 0",
+    "real_jordan_norm_product_lower_bound": "abs(eta(x,x))=1 implies norm(x) norm(Nx)>=1/2, despite arbitrarily small ordinary residual and zero paired defect"
+  },
+  "proof_goal_requirement_status": {
+    "1_arithmetic_operator_and_domain": "independently defined coefficient operator and all-order domain calculations checked; full Hilbert model remains written",
+    "2_zero_to_state_for_every_zero": "coherent zero states and all-multiplicity jets checked",
+    "3_mass_estimates": "generic lower bound and all-zero nonzero kernel derivative checked; full form compatibility remains unformalized",
+    "4_relative_paired_budget": "unproved; stronger norm-product criterion is optional and is not substituted for the required condition",
+    "5_correct_xi_target_and_coefficient_normalization": "correct Xi used by these modules; the 14 manuscript seed files containing normalization and target corrections are unchanged"
+  },
+  "source_and_log_sha256": {
+    "Reinmann.lean": "2f7c5d1783858fd1d2c408a281b6713005411859101386595d76300ef611cb55",
+    "README.md": "36ca67995f67aa25f110b419d7026712bd52b2223d356d8cd6e70a70af307819",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "lake-manifest.json": "a68511672a9f3196d87b941919c1a9b53a2347723ba6afe4ceaef326bbb0a961",
+    "Reinmann/XiHigherJetDomain.lean": "44cee2dd216ec2ce78502d7587b1c7267aa81c11f22eef0202405cd7a7d1fcd4",
+    "Reinmann/XiHigherJetCoupling.lean": "ac5a39e5a141ccfd42c7db4fbd278da3e3084ae693030e9dcb10e492897f3c63",
+    "Reinmann/PseudoHermitianNormProductObstruction.lean": "36e540ad4e86b3e3bb8c15103455cb5ddb6318f3aa9859a38cb3e9acfe9f4ee4",
+    "Reinmann/PseudoHermitianPacketMass.lean": "1bcd2b2169e45912bc4749641c127767f956b41166e170ee91da243f64fc4c14",
+    "Reinmann/PseudoHermitianPacketNorm.lean": "3dd226bf15e890219d6030c06228c5ee923400b708aad476854daededceb60ca",
+    "Reinmann/PseudoHermitianIsotropy.lean": "c25810a5fe4c1b71ac158e4933509170ab6a04bfa97be09945a729d8a54dbf25",
+    "Reinmann/PseudoHermitianLocal.lean": "314e083db810e318ea85ce1da6fcef94835ee5b3ec892ae4222bd8bf1c431d76",
+    "Reinmann/XiAnnihilator.lean": "4dd678a51199d84b84755553505eb62b78480b53439c38f6936e39672ef94acc",
+    "Reinmann/XiDividedDifference.lean": "383e82d5eb9300ede7813764f87b5656953591621e0801b130d5a88489d34264",
+    "Reinmann/XiJordanDomain.lean": "007c153cf5b8ae56580b64d6dd78cb549d2554b3ac791aecc4cbae42b49dd046",
+    "Reinmann/FockEigenvectors.lean": "36506c9b6753c58a765d0cd2e5031844d2a0ee6cdf11f081bba640a0d8d8aae1",
+    "Reinmann/XiKernelPackets.lean": "731a7419c1a370ea912e7ea782cc520690965e0a09ebf274e064759f91cb1418",
+    "research/pseudo_hermitian/HIGHER_JET_MASS_BRIDGE.md": "bfb0933614f3e864412e5fbe5ac0e94ffe936f06e7691c950e4fdc8a5ddaa900",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "d4f7ae3b9f3ad4ff6b34348ebec9e6d7cc9263dd398b21ddaf37a9f6329e048a",
+    "research/pseudo_hermitian/APPROXIMATE_PACKET_MASS.md": "90cdc9be2e8ce5beecc838a6fe8e03ba62d86d7db0261024cbc1215576db8e8d",
+    "research/pseudo_hermitian/XI_DIVIDED_DIFFERENCE.md": "461776cd44545b3da2462088701f7b831e0ea430f58e9363b4137c248f46283f",
+    "research/pseudo_hermitian/FOCK_DOMAIN_ESTIMATES.md": "32e9edab7f9a6514a969c47143398e928caee1b494d32092a922e724cf2b2014",
+    "research/pseudo_hermitian/higher_jet_axiom_audit.lean": "db72e468cf87656dc8aca8fe8908ab2f89414da7b50530d087fe0f8eb53bf1a7",
+    "research/pseudo_hermitian/worktree_seed.json": "caf6fce79af7926636629dc89f28b865819ce528e968c6c59cb9c84b74b986d6",
+    "research/pseudo_hermitian/verification/higher_jet_build.log": "a2a5047897e007726ee64039241ff57a85de992c4045cf0a9f454aa40c3fe055",
+    "research/pseudo_hermitian/verification/higher_jet_axiom_audit.log": "781d9e0e4ec1a9319541da85cad3607c01f7ff7f5912275cd4b929e92708cea9"
+  },
+  "diagnostics": "Nonfatal existing header, unused-variable and unnecessary-simpa warnings; unnecessary sequencing warnings in the new higher-jet domain proof."
+}

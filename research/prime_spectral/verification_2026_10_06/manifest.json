@@ -1,0 +1,21 @@
+{
+  "status": "verified_partial_formalization_not_RH_or_complete_Weil_theorem",
+  "new_theorems": 19,
+  "audited_theorems": 141,
+  "shortcut_scanned_files": 78,
+  "tail_replay_tests_passed": 7,
+  "source_sha256": {
+    "Reinmann/WeilRankTail.lean": "bd28679cee5aba7e908af352d56e8ffbebd60bb13cf632004b2b30357a77ff93",
+    "Reinmann/CoupledRankEnergy.lean": "1f93840933625351784ef79e6f9ca6e1815e2e45cf3fc153865e1417a165c01f",
+    "Reinmann/FiniteShiftChains.lean": "05ac39282c0fce15c6cf3cf2eb9b77ec086567a6fa2e90b3a8dfd7d8238ae5bf",
+    "Reinmann.lean": "f6bb74ce15a9c6cc7c89a1451e5a3667fd837fe19918cea40774666b93e2fa3e",
+    "Reinmann/AxiomAudit.lean": "c6102e518c684c36847fd779787f066a5801718caa345d483b4e47579e0278f3"
+  },
+  "log_sha256": {
+    "weil-lean-safe-verify.log": "ad3f8091fd93766fa64ab22942cbd72b18f5e7284609192cf8e04d5f86215b9c",
+    "weil-paper-review-tail-replay.log": "35c8203f1aaaad092785a53f855c2c4f8585b5ac4bfe52105067ddaceb65c779",
+    "weil-paper-review-crosscheck.log": "1b455b685c236c54ec5deb0ee809d57c01aebd717f3d3bfcdf2917135f84e943",
+    "weil-lean-full-build.log": "f60c716e3cd57dbb8881df935883f1db8eb218fc8720f4770bcc1fe14df404ef",
+    "weil-lean-axiom-audit.log": "3963bb5d013fbe15ea02466a31191130836286f14f11e2c25d8f463c2fa294ae"
+  }
+}

@@ -1,0 +1,12 @@
+test_digamma_and_trigamma_bounds_from_series (test_weil_rank_tail_cell.WeilRankTailCellTests.test_digamma_and_trigamma_bounds_from_series) ... ok
+test_exact_rational_geometric_expansion_with_remainder (test_weil_rank_tail_cell.WeilRankTailCellTests.test_exact_rational_geometric_expansion_with_remainder) ... ok
+test_integral_test_bounds_and_coercivity_monotonicity (test_weil_rank_tail_cell.WeilRankTailCellTests.test_integral_test_bounds_and_coercivity_monotonicity) ... ok
+test_invalid_tail_parameters_fail_closed (test_weil_rank_tail_cell.WeilRankTailCellTests.test_invalid_tail_parameters_fail_closed) ... ok
+test_saved_infinite_tail_cover_replays (test_weil_rank_tail_cell.WeilRankTailCellTests.test_saved_infinite_tail_cover_replays) ... ok
+test_signed_moments_match_original_integral_ground_at_endpoints (test_weil_rank_tail_cell.WeilRankTailCellTests.test_signed_moments_match_original_integral_ground_at_endpoints) ... ok
+test_uniform_displacement_bounds_at_large_indices_and_both_boundaries (test_weil_rank_tail_cell.WeilRankTailCellTests.test_uniform_displacement_bounds_at_large_indices_and_both_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 9.734s
+
+OK

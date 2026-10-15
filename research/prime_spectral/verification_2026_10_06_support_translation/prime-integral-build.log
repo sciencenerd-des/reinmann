@@ -1,0 +1,6 @@
+✔ [2528/2532] Built Mathlib.Tactic.NormNum.Prime (4.8s)
+✔ [2529/2532] Built Mathlib.Tactic.NormNum.RealSqrt (5.1s)
+✔ [2530/2532] Built Reinmann.FiniteShiftChains (31s)
+✔ [2531/2532] Built Reinmann.SupportTranslation (31s)
+✔ [2532/2532] Built Reinmann.SupportPrimeForm (61s)
+Build completed successfully (2532 jobs).

@@ -1,0 +1,52 @@
+import Reinmann.RHReductionCapstone
+import Reinmann.JensenTuranBridge
+import Reinmann.XiMomentKernel
+import Reinmann.PseudoHermitian
+
+/-! Focused audit of the reduction manuscript. Run in the pinned c749786
+checkout. Types expose hypotheses that an axiom-only audit cannot discharge. -/
+
+open Reinmann
+
+#check Xi_eq_zero_iff_riemannZeta
+#print axioms Xi_eq_zero_iff_riemannZeta
+#check xiCompleted_eq_product
+#print axioms xiCompleted_eq_product
+#check xiMomentCoeff_nonneg_of_toeplitzTP
+#print axioms xiMomentCoeff_nonneg_of_toeplitzTP
+#check xiToeplitzMinor2_nonneg_iff_turan2
+#print axioms xiToeplitzMinor2_nonneg_iff_turan2
+#check xiToeplitzContigMinor_nonneg_of_toeplitzTP
+#print axioms xiToeplitzContigMinor_nonneg_of_toeplitzTP
+#check xiToeplitzMinor3_sign_eq
+#print axioms xiToeplitzMinor3_sign_eq
+#check riemannHypothesis_of_pf_and_classical_inputs
+#print axioms riemannHypothesis_of_pf_and_classical_inputs
+#check xiToeplitzTotalPositive_iff_riemannHypothesis
+#print axioms xiToeplitzTotalPositive_iff_riemannHypothesis
+#check xiMomentCoeff_eq_of_kernelRep
+#print axioms xiMomentCoeff_eq_of_kernelRep
+#check xiToeplitzContigMinor_eq_of_kernelRep
+#print axioms xiToeplitzContigMinor_eq_of_kernelRep
+#check xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep
+#print axioms xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep
+#check one_lt_slackFactor
+#print axioms one_lt_slackFactor
+#check slackFactor_succ_lt
+#print axioms slackFactor_succ_lt
+#check im_zero_of_sq_eq_nonneg_real
+#print axioms im_zero_of_sq_eq_nonneg_real
+#check jensenPoly_two_hyperbolic_of_turan
+#print axioms jensenPoly_two_hyperbolic_of_turan
+#check allJensenTwo_hyperbolic_of_turan2All
+#print axioms allJensenTwo_hyperbolic_of_turan2All
+#check PseudoHermitianForm.eigenvalue_conj_eq
+#print axioms PseudoHermitianForm.eigenvalue_conj_eq
+#check riemannHypothesis_of_pseudoHermitianWitness
+#print axioms riemannHypothesis_of_pseudoHermitianWitness
+
+#check PolyaJensenBridge
+#check XiToeplitzTPToScaledFiniteBridge
+#check XiLaguerrePolyaClosureBridge
+#check XiMomentKernelRep
+#check XiToeplitzTPFromRH

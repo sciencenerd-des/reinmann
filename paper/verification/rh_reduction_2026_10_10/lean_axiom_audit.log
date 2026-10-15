@@ -1,0 +1,64 @@
+safe-verify: shortcut scan passed for 77 Lean file(s).
+Reinmann.Xi_eq_zero_iff_riemannZeta (t : ℝ) : Xi t = 0 ↔ riemannZeta (1 / 2 + ↑t * Complex.I) = 0
+'Reinmann.Xi_eq_zero_iff_riemannZeta' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiCompleted_eq_product {s : ℂ} (h0 : s ≠ 0) (h1 : s ≠ 1) :
+  xiCompleted s = s * (s - 1) / 2 * completedRiemannZeta s
+'Reinmann.xiCompleted_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiMomentCoeff_nonneg_of_toeplitzTP (h : XiToeplitzTotalPositive) (n : ℕ) : 0 ≤ XiMomentCoeff n
+'Reinmann.xiMomentCoeff_nonneg_of_toeplitzTP' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiToeplitzMinor2_nonneg_iff_turan2 (n : ℕ) : 0 ≤ XiToeplitzMinor2 n ↔ XiTuran2 n
+'Reinmann.xiToeplitzMinor2_nonneg_iff_turan2' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiToeplitzContigMinor_nonneg_of_toeplitzTP (h : XiToeplitzTotalPositive) (k m : ℕ) :
+  0 ≤ XiToeplitzContigMinor k m
+'Reinmann.xiToeplitzContigMinor_nonneg_of_toeplitzTP' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiToeplitzMinor3_sign_eq (n : ℕ) :
+  XiToeplitzMinor3 n =
+    (-1) ^ n *
+      (XiCoeff (n + 2) * (XiCoeff (n + 2) ^ 2 - XiCoeff (n + 1) * XiCoeff (n + 3)) -
+          XiCoeff (n + 1) * (XiCoeff (n + 3) * XiCoeff (n + 2) - XiCoeff (n + 1) * XiCoeff (n + 4)) +
+        XiCoeff n * (XiCoeff (n + 3) ^ 2 - XiCoeff (n + 2) * XiCoeff (n + 4)))
+'Reinmann.xiToeplitzMinor3_sign_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.riemannHypothesis_of_pf_and_classical_inputs (hPF : XiToeplitzTotalPositive)
+  (hASW : XiToeplitzTPToScaledFiniteBridge) (hLP : XiLaguerrePolyaClosureBridge) (hPJ : PolyaJensenBridge) :
+  RiemannHypothesis
+'Reinmann.riemannHypothesis_of_pf_and_classical_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiToeplitzTotalPositive_iff_riemannHypothesis (hASW : XiToeplitzTPToScaledFiniteBridge)
+  (hLP : XiLaguerrePolyaClosureBridge) (hPJ : PolyaJensenBridge) (hconv : XiToeplitzTPFromRH) :
+  XiToeplitzTotalPositive ↔ RiemannHypothesis
+'Reinmann.xiToeplitzTotalPositive_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiMomentCoeff_eq_of_kernelRep {M : ℕ → ℝ}
+  (hM : ∀ (n : ℕ), XiCoeff n = (-1) ^ n * (2 * M n / ↑(2 * n).factorial)) (n : ℕ) :
+  XiMomentCoeff n = 2 * M n / ↑(2 * n).factorial
+'Reinmann.xiMomentCoeff_eq_of_kernelRep' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiToeplitzContigMinor_eq_of_kernelRep {M : ℕ → ℝ}
+  (hM : ∀ (n : ℕ), XiCoeff n = (-1) ^ n * (2 * M n / ↑(2 * n).factorial)) (k m : ℕ) :
+  XiToeplitzContigMinor k m = 2 ^ k * momentToeplitzContigMinor M k m
+'Reinmann.xiToeplitzContigMinor_eq_of_kernelRep' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep {M : ℕ → ℝ}
+  (hM : ∀ (n : ℕ), XiCoeff n = (-1) ^ n * (2 * M n / ↑(2 * n).factorial)) (k m : ℕ) :
+  0 ≤ XiToeplitzContigMinor k m ↔ 0 ≤ momentToeplitzContigMinor M k m
+'Reinmann.xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Reinmann.one_lt_slackFactor (n : ℕ) : 1 < slackFactor n
+'Reinmann.one_lt_slackFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.slackFactor_succ_lt (n : ℕ) : slackFactor (n + 1) < slackFactor n
+'Reinmann.slackFactor_succ_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.im_zero_of_sq_eq_nonneg_real {w : ℂ} {D : ℝ} (hD : 0 ≤ D) (h : w ^ 2 = ↑D) : w.im = 0
+'Reinmann.im_zero_of_sq_eq_nonneg_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.jensenPoly_two_hyperbolic_of_turan (n : ℕ) (h2 : XiCoeff (n + 2) ≠ 0) (hT : XiTuran2 n) :
+  PolynomialHyperbolic (JensenPoly 2 n)
+'Reinmann.jensenPoly_two_hyperbolic_of_turan' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.allJensenTwo_hyperbolic_of_turan2All (hnz : ∀ (n : ℕ), XiCoeff n ≠ 0) (hT : XiTuran2All) (n : ℕ) :
+  PolynomialHyperbolic (JensenPoly 2 n)
+'Reinmann.allJensenTwo_hyperbolic_of_turan2All' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.PseudoHermitianForm.eigenvalue_conj_eq.{u_1} {E : Type u_1} [AddCommGroup E] [Module ℂ E] {T : E →ₗ[ℂ] E}
+  (P : PseudoHermitianForm T) {μ : ℂ} {v : E} (hv : v ≠ 0) (hev : T v = μ • v) : (starRingEnd ℂ) μ = μ
+'Reinmann.PseudoHermitianForm.eigenvalue_conj_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.riemannHypothesis_of_pseudoHermitianWitness (W : PseudoHermitianWitness) : RiemannHypothesis
+'Reinmann.riemannHypothesis_of_pseudoHermitianWitness' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.PolyaJensenBridge : Prop
+Reinmann.XiToeplitzTPToScaledFiniteBridge : Prop
+Reinmann.XiLaguerrePolyaClosureBridge : Prop
+Reinmann.XiMomentKernelRep : Prop
+Reinmann.XiToeplitzTPFromRH : Prop

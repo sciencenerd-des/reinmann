@@ -1,0 +1,163 @@
+{
+  "revision": "1.0.1-draft",
+  "validation_date": "2026-10-10",
+  "timezone": "Asia/Kolkata",
+  "formal_source_commit": "c749786972306bfe6be8890d78972bd9a2325f0c",
+  "working_tree_head_at_edit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "formal_verification": {
+    "method": "git archive of source pin in a temporary checkout; shared pinned package cache and copied Lake build cache, with Lake trace validation",
+    "lean_toolchain": "leanprover/lean4:v4.30.0",
+    "mathlib_commit": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+    "lake_manifest_sha256": "a68511672a9f3196d87b941919c1a9b53a2347723ba6afe4ceaef326bbb0a961",
+    "build_command": "lake build Reinmann.RHReductionCapstone Reinmann.JensenTuranBridge Reinmann.XiMomentKernel Reinmann.PseudoHermitian",
+    "build_exit_code": 0,
+    "build_jobs_including_cached": 3445,
+    "focused_audit_command": "bash scripts/safe-verify.sh paper/reduction_axiom_audit.lean",
+    "focused_audit_exit_code": 0,
+    "project_files_shortcut_scanned": 77,
+    "theorems_audited": 18,
+    "axiom_sets": {
+      "Reinmann.Xi_eq_zero_iff_riemannZeta": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiCompleted_eq_product": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiMomentCoeff_nonneg_of_toeplitzTP": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiToeplitzMinor2_nonneg_iff_turan2": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiToeplitzContigMinor_nonneg_of_toeplitzTP": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiToeplitzMinor3_sign_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.riemannHypothesis_of_pf_and_classical_inputs": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiToeplitzTotalPositive_iff_riemannHypothesis": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiMomentCoeff_eq_of_kernelRep": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiToeplitzContigMinor_eq_of_kernelRep": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.xiToeplitzContigMinor_nonneg_iff_moment_of_kernelRep": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.one_lt_slackFactor": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.slackFactor_succ_lt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.im_zero_of_sq_eq_nonneg_real": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.jensenPoly_two_hyperbolic_of_turan": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.allJensenTwo_hyperbolic_of_turan2All": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.PseudoHermitianForm.eigenvalue_conj_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Reinmann.riemannHypothesis_of_pseudoHermitianWitness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "full_archived_development_audit_rerun": false,
+    "later_dirty_working_tree_full_build_rerun": false,
+    "external_classical_inputs_discharged": false,
+    "external_preprint_proofs_or_certificates_replayed": false,
+    "evidence_directory": "paper/verification/rh_reduction_2026_10_10"
+  },
+  "numerical_verification": {
+    "command": "uv run --with python-flint==0.8.0 --python 3.12 python paper/certify_reduction_minors.py",
+    "exit_code": 0,
+    "matches_existing_certificate_exactly": true,
+    "positive_coefficient_balls": 121,
+    "strict_log_concavity_inequalities": 119,
+    "report": {
+      "source": "research/certified_xi/coefficients_120.json",
+      "source_sha256": "adf3418dbf0e7b823f204e527155d240f52034a8027fb0ecb058007a27963b11",
+      "python_flint": "0.8.0",
+      "prec_bits": 8192,
+      "positive_mu": true,
+      "strict_log_concave_0_118": true,
+      "contiguous_minors_checked": 1816,
+      "contiguous_minors_uncertified": [],
+      "worst_relative_radius": {
+        "value": "[6.47e-669 +/- 1.05e-672]",
+        "k": 16,
+        "m": 105
+      },
+      "all_certified": true
+    },
+    "coefficient_generation_rerun": false,
+    "figure_generation_exit_code": 0,
+    "figures_generated": 3,
+    "figure_signs_rechecked": 1816
+  },
+  "document_verification": {
+    "command": "tectonic --keep-logs rh_reduction_paper.tex (cwd: paper)",
+    "exit_code": 0,
+    "pages": 16,
+    "abstract_whitespace_word_count": 185,
+    "all_pages_rendered_and_visually_reviewed": true,
+    "overfull_boxes": 0,
+    "unresolved_labels": [],
+    "unresolved_citations": [],
+    "underfull_box_warnings_present": true,
+    "tex_sha256": "5ee6d09a0504a4f032edd70564b011b83f4cbbf885c9c3b22f1dc6d7f9783a42",
+    "pdf_sha256": "c2d76b659bc48835472713cdc125cea352a2c909e9cd53adedc5a87dba6a5630"
+  },
+  "remote_deposit_or_submission_performed": false,
+  "remaining_review": [
+    "Author approval of final text and personal/submission declarations",
+    "Independent analytic-number-theory and formalization review",
+    "Remote DOI/deposit status confirmation before publication"
+  ]
+}

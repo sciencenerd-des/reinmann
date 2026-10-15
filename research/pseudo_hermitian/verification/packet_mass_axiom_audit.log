@@ -1,0 +1,30 @@
+safe-verify: shortcut scan passed for 104 Lean file(s).
+'Reinmann.PacketMass.self_eq_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.mixture_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.scalar_mass_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.mass_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.mass_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.normalized_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.normalized_mixture_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.normalized_mixture_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.normalized_residual_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.scalar_normalization_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.normalization_factor_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.normalized_residual_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.exists_unit_mass_small_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.paired_residual_norm_of_unit_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.paired_residual_norm_le_norm_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.distance_le_norm_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PacketMass.critical_of_arbitrarily_small_norm_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiKernelPackets.form_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.action_form_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.realize_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.realize_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.realize_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.partner_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.kernel_partner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiKernelPackets.simple_offcritical_unit_mass_packets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

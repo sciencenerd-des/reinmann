@@ -650,6 +650,46 @@ Verification of RH to a specified finite height can improve the resulting
 finite-order bound; a single finite verification does not establish all orders. The remark is not used elsewhere in this paper.
 \end{remark}
 
+\subsection{A Davenport--Heilbronn sector control}\label{sec:dh-sector-control}
+
+To test whether the sufficient sector rank predicts the failure rank of the
+full coefficient sequence, use the conductor-five Davenport--Heilbronn
+function~\cite{BombieriGhosh2011}, with its entire odd completion
+\[
+ \Lambda_H(s)=(5/\pi)^{s/2}\Gamma((s+1)/2)H(s),\qquad
+ F_H(w)=\Lambda_H(1/2+\sqrt w)/\Lambda_H(1/2).
+\]
+The ordinary coefficients of $F_H$, rather than their factorial multiples,
+are used below. These are new computer-assisted results in the working tree,
+separate from the pinned Lean results described in the next section.
+
+An absolute Dirichlet-tail bound below $0.737591$ at $\re s=3/2$ and the
+completed functional equation give $|\re\rho-1/2|<1$. An Arb
+argument-principle computation counts $249$ zeros in
+$[-1/2,3/2]+i(0,340)$; $235$ critical-line sign brackets and seven reflected
+pairs of simple Rouch\'e disks account for the entire count. Comparing all
+seven right-hand disks and the higher-zero bound $2\arctan(1/340)$ proves
+that $0.80851718\ldots+85.69934849\ldots i$ has the steepest folded angle
+$\phi$, with
+\[
+ 436<\pi/\phi=436.3348656\ldots<437.
+\]
+The genus-zero product and Schoenberg's sufficient sector theorem
+therefore give PF$_{435}$. For the isolated quadratic factor, the
+shift-one rank-$k$ minor is
+$U_k(\cos\phi)=\sin((k+1)\phi)/\sin\phi$, first negative at $k=436$.
+
+Nevertheless every one of the $18\,291$ full-function solid minors with
+$430\le r\le520$ and $0\le m\le200$ is strictly positive at $32\,768$ bits,
+with no unresolved signs. The complete condensation sign stream is
+replayed, and $24$ selected high-rank minors are checked independently
+using complementary determinants. Thus the isolated factor's sharp rank
+does not predict a failure on this full-function grid. Neither the
+globally first negative minor nor PF$_{520}$ follows from a bounded
+solid-minor scan. Exact balls, analytic dependencies, source hashes and
+reproduction instructions are in
+\code{research/prime\_spectral/RESEARCH\_ROUND\_2026\_10\_12.md}.
+
 \section{Methodology, reproducibility, and limitations}\label{sec:reproducibility}
 
 \paragraph{Verification.} Every Lean theorem and named input cited in this paper
@@ -925,6 +965,10 @@ half-plane $\re s>7/8$}, manuscript dated 30 September 2026, with Lean formaliza
 (scope documentation accessed 10 October 2026).
 \bibitem{LoefflerStoll2025} D.~Loeffler, M.~Stoll, \emph{Formalizing zeta and
 $L$-functions in Lean}, Annals of Formalized Mathematics \textbf{1} (2025).
+\bibitem{BombieriGhosh2011} E.~Bombieri, A.~Ghosh,
+\emph{Around the Davenport--Heilbronn function},
+Russian Math.\ Surveys \textbf{66} (2011), 221--270,
+\href{https://doi.org/10.1070/RM2011v066n02ABEH004740}{doi:10.1070/RM2011v066n02ABEH004740}.
 \bibitem{Johansson2017} F.~Johansson, \emph{Arb: efficient arbitrary-precision
 midpoint-radius interval arithmetic}, IEEE Trans.\ Comput.\ \textbf{66} (2017),
 1281--1292.

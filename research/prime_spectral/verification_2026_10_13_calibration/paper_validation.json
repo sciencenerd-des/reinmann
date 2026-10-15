@@ -1,0 +1,43 @@
+{
+  "status": "twelve_page_controls_draft_built_and_visually_inspected",
+  "pages": 12,
+  "compiler": "Tectonic",
+  "layout_checks": {
+    "all_pages_inspected_in_contact_sheets": true,
+    "large_table_pages_inspected": [
+      8,
+      10
+    ],
+    "clipping_or_overlap_observed": false,
+    "undefined_references": false,
+    "overfull_boxes": false,
+    "build_warning": "inputenc ignored by the UTF-8 engine",
+    "dominant_pole_proof_page_inspected": 7
+  },
+  "numerical_tests": {
+    "passed": 9,
+    "runtime_seconds": 23.254,
+    "command": "uv run --with python-flint==0.8.0 --with mpmath --with numpy --python 3.12 python -m unittest discover -s experiments/prime_spectral -p test_control_calibration.py -v"
+  },
+  "prior_round_integrity": {
+    "artifact_hashes_checked": 64,
+    "source_hashes_checked": 150,
+    "written_result_hashes_checked": 4,
+    "failures": []
+  },
+  "input_sha256": {
+    "paper/dh_controls_paper.tex": "d775993f022a749b7b5fd4781002e8336608d10bc891ced0fab17b49f5fabd9a",
+    "paper/dh_controls_paper.pdf": "6cadd17d455b8590ef8536c1f69305ad83649a7b46917ae2e6cc5cf357b9dc29",
+    "paper/dh_controls_tables.tex": "8f445fa62eea3eac6d0b18263cff44c385c8c945d5113ef16d9596c334a183f1",
+    "paper/dh_controls_attribution_table.tex": "bc8482eb15ac6175384bdc80bc89e99071cbed0d52eca52222efcebda030b239",
+    "paper/figures/dh_controls_calibration.pdf": "3bd22ef23f944c78d5fb221f32e87e2911d2cd8b75eb64d987110148c73dc757",
+    "research/prime_spectral/verification_2026_10_12_sector/manifest.json": "b874014d2e26a35717da2d55856f6bdd50b2059c658302e41a556002b8fc7f81",
+    "research/prime_spectral/verification_2026_10_12_sector/dh_sector_grid.pdf": "871ee1dbe1166232c076977f4c67ef9639219ec33ccc725db615a66305ab7817",
+    "research/prime_spectral/verification_2026_10_13_calibration/tests.log": "d127f6cfbe783e095ea0fbc17e1f2ba1e1d086badb350d4fa608e1e950841e65",
+    "research/prime_spectral/verification_2026_10_13_calibration/paper_build.log": "043d7025b3a4c16a66f13950e2d469d499cef5461b60e3702d15ce40bc4f5d57"
+  },
+  "source_sha256": {
+    "test_control_calibration.py": "1a9d144e8e766bf35b92e63cfe843a0551c35cfcd8570a8ce5413156a853190c"
+  },
+  "scope": "Draft build and inspection; prior recorded proof boundaries retained. No external review, public archival release or submission."
+}

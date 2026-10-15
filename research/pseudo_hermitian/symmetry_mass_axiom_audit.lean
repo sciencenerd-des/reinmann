@@ -1,0 +1,31 @@
+import Reinmann.XiDividedDifference
+import Reinmann.XiJordanDomain
+
+#print axioms Reinmann.XiDividedDifference.xi_one_sub
+#print axioms Reinmann.XiDividedDifference.xi_conj
+#print axioms Reinmann.XiDividedDifference.deriv_xi_one_sub
+#print axioms Reinmann.XiDividedDifference.deriv_xi_conj
+#print axioms Reinmann.XiDividedDifference.kernel_of_ne
+#print axioms Reinmann.XiDividedDifference.kernel_at_reflection
+#print axioms Reinmann.XiDividedDifference.kernel_balance
+#print axioms Reinmann.XiDividedDifference.kernel_spectral_defect
+#print axioms Reinmann.XiDividedDifference.kernel_hermitian
+#print axioms Reinmann.XiDividedDifference.kernel_zero_spectral_symmetry
+#print axioms Reinmann.XiDividedDifference.reflected_self_iff
+#print axioms Reinmann.XiDividedDifference.kernel_mass_on_critical
+#print axioms Reinmann.XiDividedDifference.kernel_mass_off_critical
+#print axioms Reinmann.XiDividedDifference.kernel_mass_ne_zero_iff
+#print axioms Reinmann.XiDividedDifference.kernel_mass_at_multiple_zero
+#print axioms Reinmann.AdditiveScalarForm.mass_zero_of_real_jordan_chain
+#print axioms Reinmann.AdditiveScalarForm.mass_zero_of_symmetric_jordan_chain
+#print axioms Reinmann.FockEigenvectors.derivative_coherentJet
+#print axioms Reinmann.FockEigenvectors.spectral_coherentJet
+#print axioms Reinmann.FockEigenvectors.spectral_coherentJordan
+#print axioms Reinmann.FockEigenvectors.coherent_mass_zero_of_real_chain_symmetry
+#print axioms Reinmann.XiAnnihilator.xiTaylor_derivative_hasSum
+#print axioms Reinmann.XiAnnihilator.derivative_power_coherentJet
+#print axioms Reinmann.XiAnnihilator.rowTerm_coherentJet
+#print axioms Reinmann.XiAnnihilator.coherentJet_row_hasSum
+#print axioms Reinmann.XiAnnihilator.coherentJet_mem_domain_iff
+#print axioms Reinmann.XiAnnihilator.jordanZeroState_chain
+#print axioms Reinmann.XiAnnihilator.mass_zero_at_multiple_xi_zero

@@ -1,0 +1,47 @@
+{
+  "captured_at_utc": "2026-10-11T09:09:34.626120+00:00",
+  "status": "actual full-operator adjoint point and compact-rectangle certificates passed",
+  "scope": "Written domain, self-adjointness, form identity and infinite-tail analysis plus Arb arithmetic; not Lean operator formalization",
+  "checks": {
+    "tests_passed": 11,
+    "matrix_entry_comparisons": 18,
+    "independent_sequence_integrals": 6,
+    "independent_physical_fourier_integrals": 6,
+    "independent_correction_norm_integrals": 2,
+    "complete_complex_cells_replayed": 256,
+    "entire_omitted_residual_tail": "included by inverse-power series bound",
+    "eigenvalue_uncertainty_times_norm": "included for every point and cell",
+    "public_rational_bounds": "passed",
+    "python_compilation": "passed",
+    "local_links_whitespace": "passed",
+    "git_diff_check": "passed"
+  },
+  "source_sha256": {
+    "experiments/prime_spectral/adjoint_fourier_certificate.py": "7f1c19cb1de302f6ae338e7c5e25c4a26b073c6fc2e9ce79a59ea97976819abf",
+    "experiments/prime_spectral/test_adjoint_fourier_certificate.py": "9522034f05397f0b2d80bf43f6cdd3512f9613055de68475f497029f8b75b19f",
+    "research/prime_spectral/ADJOINT_FOURIER_CERTIFICATE_2026_10_11.md": "57e116002265034a3e559575165d9f48a6ac81a9a0fb48e05d2fd1114c619f47",
+    "research/prime_spectral/ORTHOGONAL_FOURIER_TRANSFER_2026_10_11.md": "6043af15f619e3a079f20ff2403379ed3478aedc973c58a0877f32c99e6bf4b8",
+    "research/prime_spectral/FULL_GROUND_FOURIER_2026_10_11.md": "556ea30067deb3b4addea289e5d0c43638fd54b59742678f202e2fe73a692086",
+    "research/RESEARCH_STATUS_2026_10_11.md": "bfee8ee31b1ba59749bcc718e6fc6a2845e17287bd4b16dd5446d1471f3e9a0f"
+  },
+  "dependency_sha256": {
+    "research/prime_spectral/verification_2026_10_11_fourier_ground_state/manifest.json": "b4ab7a7e781f8335ddbcabe79fd42962fd1e49b9917112dc477a2a192cab00eb",
+    "research/prime_spectral/verification_2026_10_11_orthogonal_fourier/manifest.json": "01081aed56455558845b83739be1cd07d951b3da4387b6c3be98a9f803e68a9c",
+    "research/prime_spectral/verification_2026_10_11_fourier_ground_state/full_ground_fourier.json": "a660af014ed3e13754dd705b4b5c18034222d8e0d8cbec9b223bbd9f623757e3"
+  },
+  "artifact_sha256": {
+    "research/prime_spectral/verification_2026_10_11_adjoint_fourier/adjoint_N8_M64.json": "9c0431e7559641afb22a0b71b0517db30667b8c290d160b8b896058ad2da8e6b",
+    "research/prime_spectral/verification_2026_10_11_adjoint_fourier/adjoint_N8_M64_cover16x8.json": "bdaa37a12af8f0505922572efb5382c128938aadcba591b13bbb445e4db868c5",
+    "research/prime_spectral/verification_2026_10_11_adjoint_fourier/matrix_C2_N8_M64.json": "72ac98de227b105e05a1bf5776b6ad71e34c30804808c25c34fbf18b824054fa",
+    "research/prime_spectral/verification_2026_10_11_adjoint_fourier/matrix_C3_N8_M64.json": "ce875744ead23bf5984545da5233ed9efe3c7ef2b443af183746f1b00cd30e17",
+    "research/prime_spectral/verification_2026_10_11_adjoint_fourier/point_generation.log": "03f81bcf1a31589e3a1bb0653118f39d3b907a33c0fbf42ce695767d86e92d5e",
+    "research/prime_spectral/verification_2026_10_11_adjoint_fourier/tests.log": "71daa354627f13e5006e060cccc592ab2a54eb296525bd38e53d93aae29f07fe"
+  },
+  "remaining": [
+    "Certified canonical arithmetic/prolate Fourier profile target",
+    "Protected mean and adjoint residual control across increasing supports",
+    "Larger complex regions and growing-support Xi identification"
+  ],
+  "rh_proved": false,
+  "novelty_claim": false
+}

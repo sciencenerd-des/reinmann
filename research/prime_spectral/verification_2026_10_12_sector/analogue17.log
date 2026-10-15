@@ -1,0 +1,10 @@
+conductor 17 root seeds 50
+conductor 17 root seeds 100
+conductor 17 root seeds 150
+conductor 17 root seeds 200
+conductor 17 C 2 positive_finite_sections_only
+conductor 17 C 4 positive_finite_sections_only
+conductor 17 C 8 positive_finite_sections_only
+conductor 17 C 16 positive_finite_sections_only
+conductor 17 C 32 positive_finite_sections_only
+conductor 17 C 64 positive_finite_sections_only

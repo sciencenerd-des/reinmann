@@ -1,0 +1,16 @@
+test_corrupted_vector_bound_is_rejected (test_canonical_prolate_adjoint.CanonicalTests.test_corrupted_vector_bound_is_rejected) ... ok
+test_every_saved_point_and_full_rectangle_cell_replays (test_canonical_prolate_adjoint.CanonicalTests.test_every_saved_point_and_full_rectangle_cell_replays) ... ok
+test_exact_origin_and_protected_normalization (test_canonical_prolate_adjoint.CanonicalTests.test_exact_origin_and_protected_normalization) ... ok
+test_first_three_moments_against_independent_physical_integrals (test_canonical_prolate_adjoint.CanonicalTests.test_first_three_moments_against_independent_physical_integrals) ... ok
+test_full_complex_transform_against_independent_legendre_integrals (test_canonical_prolate_adjoint.CanonicalTests.test_full_complex_transform_against_independent_legendre_integrals) ... ok
+test_interval_target_encloses_corners_and_center (test_canonical_prolate_adjoint.CanonicalTests.test_interval_target_encloses_corners_and_center) ... ok
+test_invalid_frequencies_radius_and_order_rejected (test_canonical_prolate_adjoint.CanonicalTests.test_invalid_frequencies_radius_and_order_rejected) ... ok
+test_larger_matrix_against_direct_geometric_integrals (test_canonical_prolate_adjoint.CanonicalTests.test_larger_matrix_against_direct_geometric_integrals) ... ok
+test_odd_candidate_part_is_retained_and_nonzero (test_canonical_prolate_adjoint.CanonicalTests.test_odd_candidate_part_is_retained_and_nonzero) ... ok
+test_provenance_and_dependency_hashes (test_canonical_prolate_adjoint.CanonicalTests.test_provenance_and_dependency_hashes) ... ok
+test_taylor_remainder_and_stable_target_at_large_frequency (test_canonical_prolate_adjoint.CanonicalTests.test_taylor_remainder_and_stable_target_at_large_frequency) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 3.613s
+
+OK

@@ -1,0 +1,65 @@
+{
+  "status": "numerical_sanity_checks_passed",
+  "precision_decimal_digits": 90,
+  "rigorous_interval_certificate": false,
+  "rh_proved": false,
+  "modes": [
+    {
+      "s": [
+        "0.5",
+        "1"
+      ],
+      "input_is_certified_zeta_zero": false,
+      "degree": 1024,
+      "truncated_mass": "1.0",
+      "mass_tail_bound_formula_evaluated": "1.11126954794275e-2544",
+      "truncated_eigenvector_residual_norm": "9.45767536045679e-92",
+      "truncated_symmetry_defect_norm": "5.4030689961042209273e-92",
+      "infinite_normalized_defect_norm": "0.0",
+      "residual_identity_error": "6.832320088e-94"
+    },
+    {
+      "s": [
+        "0.25",
+        "1"
+      ],
+      "input_is_certified_zeta_zero": false,
+      "degree": 1024,
+      "truncated_mass": "1.0",
+      "mass_tail_bound_formula_evaluated": "6.0474046544494e-2617",
+      "truncated_eigenvector_residual_norm": "1.62006050556501e-91",
+      "truncated_symmetry_defect_norm": "0.5",
+      "infinite_normalized_defect_norm": "0.5",
+      "residual_identity_error": "0.0"
+    },
+    {
+      "s": [
+        "0.75",
+        "1"
+      ],
+      "input_is_certified_zeta_zero": false,
+      "degree": 1024,
+      "truncated_mass": "1.0",
+      "mass_tail_bound_formula_evaluated": "1.74983935788944e-2445",
+      "truncated_eigenvector_residual_norm": "1.34914255174885e-91",
+      "truncated_symmetry_defect_norm": "0.5",
+      "infinite_normalized_defect_norm": "0.5",
+      "residual_identity_error": "0.0"
+    },
+    {
+      "s": [
+        "0.5",
+        "14"
+      ],
+      "input_is_certified_zeta_zero": false,
+      "degree": 1024,
+      "truncated_mass": "1.0",
+      "mass_tail_bound_formula_evaluated": "1.76689128160254e-378",
+      "truncated_eigenvector_residual_norm": "1.83461929661425e-90",
+      "truncated_symmetry_defect_norm": "9.2682011358078654488e-93",
+      "infinite_normalized_defect_norm": "0.0",
+      "residual_identity_error": "4.256423447e-92"
+    }
+  ],
+  "interpretation": "Small eigenvector residual alone does not make the off-critical symmetry defect vanish."
+}

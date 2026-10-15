@@ -1,0 +1,27 @@
+{
+  "status": "finite_targets_checked_and_axiom_audit_clean",
+  "checked_at": "2026-10-13",
+  "combined_compiler_exit_code": 0,
+  "axiom_audit": "all_six_targets_standard_axioms_only",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "canonical_proof_bodies_match_audit": true,
+  "standalone_schur": "passed_after_adding_Real_Basic_import",
+  "input_sha256": {
+    "Reinmann/WeilSchurInertia.lean": "7ddcf7e66f7ba3e6d6a1ad0763fc424aca6c31e57fcb46e544286badf23f339e",
+    "Reinmann/ToeplitzQuadraticChebyshev.lean": "774875e4197534cbe02d425ef2314e767d3b73856efb2e30aa1f4fa7c679853c",
+    "research/prime_spectral/verification_2026_10_12_sector/FiniteTargetsAudit.lean": "6d22fcf83b4d323d8971e0c7b8b0edb2a3e3255042ba24cb6719b3df961117d5",
+    "research/prime_spectral/verification_2026_10_12_sector/lean_finite_targets_audit.log": "e1088f205ecc1862839c9c28225c3b10d48aae612cc9535db93bcd97ca42d553",
+    "research/prime_spectral/verification_2026_10_12_sector/lean_schur_final.log": "197cbadd399b08974d68aa1519ddcacd041602ab2c105f118642bb3968993ff4",
+    "research/prime_spectral/verification_2026_10_12_sector/lean_chebyshev.log": "f78d4f1ec26ce41cb4d7172e8738f3585007c4fb2668b440337498d0a02e4e0b"
+  },
+  "scope": "Finite-dimensional completion-of-square inertia and shift-one Toeplitz determinant. No infinite-dimensional realization or RH claim.",
+  "standalone_schur_exit_code": 0,
+  "standalone_chebyshev": "passed_with_linter_warnings",
+  "dependency_build": "2013_jobs_completed_successfully",
+  "root_project_build": "not_run",
+  "compiler_version": "Lean 4.30.0"
+}

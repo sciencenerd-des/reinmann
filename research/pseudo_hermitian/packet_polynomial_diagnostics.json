@@ -1,0 +1,80 @@
+{
+  "status": "exact_synthetic_checks_passed",
+  "sympy_version": "1.14.0",
+  "cases": [
+    {
+      "synthetic_polynomial": "z**2 - z + 5/4",
+      "rho": "1/2 + I",
+      "multiplicity": 1,
+      "packet_dimension": 1,
+      "nonzero_cross_pairing": "-2",
+      "mixture_parameter": "None",
+      "normalized_signed_mass": "-1",
+      "paired_residual_defect_norm": "0",
+      "exact_checks_passed": true,
+      "input_is_riemann_xi": false
+    },
+    {
+      "synthetic_polynomial": "z**4 - 2*z**3 + 7*z**2/2 - 5*z/2 + 25/16",
+      "rho": "1/2 + I",
+      "multiplicity": 2,
+      "packet_dimension": 2,
+      "nonzero_cross_pairing": "4*I",
+      "mixture_parameter": "2/25",
+      "normalized_signed_mass": "1",
+      "paired_residual_defect_norm": "0",
+      "exact_checks_passed": true,
+      "input_is_riemann_xi": false
+    },
+    {
+      "synthetic_polynomial": "z**6 - 3*z**5 + 27*z**4/4 - 17*z**3/2 + 135*z**2/16 - 75*z/16 + 125/64",
+      "rho": "1/2 + I",
+      "multiplicity": 3,
+      "packet_dimension": 3,
+      "nonzero_cross_pairing": "16",
+      "mixture_parameter": "8/425",
+      "normalized_signed_mass": "1",
+      "paired_residual_defect_norm": "0",
+      "exact_checks_passed": true,
+      "input_is_riemann_xi": false
+    },
+    {
+      "synthetic_polynomial": "z**4 - 2*z**3 + 27*z**2/8 - 19*z/8 + 425/256",
+      "rho": "1/4 + I",
+      "multiplicity": 1,
+      "packet_dimension": 2,
+      "nonzero_cross_pairing": "-1/2 + 2*I",
+      "mixture_parameter": "sqrt(17)/(2*(2 + sqrt(17)))",
+      "normalized_signed_mass": "1",
+      "paired_residual_defect_norm": "1/2",
+      "exact_checks_passed": true,
+      "input_is_riemann_xi": false
+    },
+    {
+      "synthetic_polynomial": "z**8 - 4*z**7 + 43*z**6/4 - 73*z**5/4 + 3099*z**4/128 - 1451*z**3/64 + 17251*z**2/1024 - 8075*z/1024 + 180625/65536",
+      "rho": "1/4 + I",
+      "multiplicity": 2,
+      "packet_dimension": 3,
+      "nonzero_cross_pairing": "2 - 15*I/4",
+      "mixture_parameter": "17/42",
+      "normalized_signed_mass": "1",
+      "paired_residual_defect_norm": "1/2",
+      "exact_checks_passed": true,
+      "input_is_riemann_xi": false
+    },
+    {
+      "synthetic_polynomial": "z**12 - 6*z**11 + 177*z**10/8 - 445*z**9/8 + 27687*z**8/256 - 10551*z**7/64 + 210015*z**6/1024 - 210837*z**5/1024 + 11103423*z**4/65536 - 3597151*z**3/32768 + 29359425*z**2/524288 - 10295625*z/524288 + 76765625/16777216",
+      "rho": "1/4 + I",
+      "multiplicity": 3,
+      "packet_dimension": 4,
+      "nonzero_cross_pairing": "-47/4 + 13*I",
+      "mixture_parameter": "17*sqrt(17)/(4*(2 + 17*sqrt(17)/2))",
+      "normalized_signed_mass": "1",
+      "paired_residual_defect_norm": "1/2",
+      "exact_checks_passed": true,
+      "input_is_riemann_xi": false
+    }
+  ],
+  "rh_proved": false,
+  "scope": "Synthetic polynomial packets only; not a certificate for Xi zeros."
+}

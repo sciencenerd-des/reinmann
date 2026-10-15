@@ -1,0 +1,6 @@
+import Reinmann.WeilGroundFourier
+#print axioms Reinmann.WeilGroundFourier.orthogonal_mass_le
+#print axioms Reinmann.WeilGroundFourier.overlap_lower
+#print axioms Reinmann.WeilGroundFourier.phase_distance_sq_le
+#print axioms Reinmann.WeilGroundFourier.observable_error_le
+#print axioms Reinmann.WeilGroundFourier.origin_mean_pos

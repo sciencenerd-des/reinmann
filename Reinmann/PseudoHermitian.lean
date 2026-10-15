@@ -6,41 +6,21 @@ Authors: Biswajit Mondal
 import Reinmann.HilbertPolyaExperiment
 
 /-!
-# Pseudo-Hermitian / PT Reduction to RH (Lever 3)
+# Pseudo-Hermitian conditional eigenvector reduction
 
-An *independent* operator-positivity route, distinct from the symmetric
-Hilbert–Pólya reduction (`HilbertPolyaExperiment`).  The naive Hilbert–Pólya
-operator is self-adjoint w.r.t. the *ambient* inner product; that is exactly the
-obstruction (no such bounded/total operator is known).  The pseudo-Hermitian
-viewpoint (Mostafazadeh; Bender–Brody–Müller) **drops the ambient inner product
-entirely** and asks only for a *positive metric* `η` — a positive-definite
-sesquilinear form — with respect to which the operator is self-adjoint.
+The proof uses scalar homogeneity, symmetry and nonzero diagonal mass. The
+structure below asks for diagonal nonvanishing at every nonzero vector;
+this is stronger than ordinary nondegeneracy of an indefinite form. Its
+fields do not assert additivity or Hermitian symmetry.
 
-The key fact, proved here from the form laws alone (no `InnerProductSpace`
-instance, no completeness, no boundedness):
+`PseudoHermitianLocal` weakens the interface to the selected zero-indexed
+states, separates the action domain from the ambient space, and records
+relative defect and approximate-eigenvector budgets. The eigenvalue
+non-isotropy mechanism is classical (Mostafazadeh 2002, Proposition 2).
 
-> **An operator self-adjoint w.r.t. a nondegenerate sesquilinear form has, on any
-> eigenvector, an eigenvalue fixed by conjugation — hence real.**
-
-This is the operator-theoretic analogue of "unbroken PT ⟺ real spectrum": the
-positivity (nondegeneracy) of the metric `η` forces reality of the spectrum.
-
-* `PseudoHermitianForm` — a metric `η` making `T` `η`-self-adjoint, with `η`
-  nondegenerate (the trace of positive-definiteness actually used).
-* `PseudoHermitianForm.eigenvalue_conj_eq` — `η`-self-adjoint ⟹ real eigenvalues.
-* `riemannHypothesis_of_pseudoHermitian_eigendata` — if the critical-strip zeros
-  are realized as the `η`-self-adjoint spectrum via `spectralParam s = -i(s-1/2)`,
-  then RH.
-
-## Honest scope
-
-This is a **reduction**, formalized and verified: it converts RH into the
-*existence* of `(E, T, η)` with `η` a positive metric and the prescribed spectrum.
-That existence is the open analytic/operator-theoretic content (BBM gave only a
-formal construction).  Nothing here proves that existence; the reduction is
-assumption-free (reduces only to `[propext, Classical.choice, Quot.sound]`) and
-uses only the metric, never the ambient inner product — so it is genuinely
-independent of the symmetric route.
+Both files give conditional deductions. They construct no arithmetic
+operator, metric or zero-to-state map. The code makes no claim of logical
+independence from other RH criteria or of full-spectrum equality.
 -/
 
 noncomputable section
@@ -52,10 +32,9 @@ namespace Reinmann
 
 variable {E : Type*} [AddCommGroup E] [Module ℂ E]
 
-/-- A **positive (pseudo-Hermitian) metric** `η` making the operator `T`
-`η`-self-adjoint.  `η` is sesquilinear (linear in the left slot, conjugate-linear
-in the right) and **nondegenerate** (`η x x ≠ 0` for `x ≠ 0`) — the property that a
-positive-definite metric supplies.  No ambient inner product is used. -/
+/-- Scalar form laws, global symmetry and diagonal nonvanishing. A positive
+sesquilinear metric supplies these properties, but additivity and Hermitian
+symmetry are not fields of this structure. No ambient inner product is used. -/
 structure PseudoHermitianForm (T : E →ₗ[ℂ] E) where
   /-- The metric form. -/
   η : E → E → ℂ
@@ -65,7 +44,7 @@ structure PseudoHermitianForm (T : E →ₗ[ℂ] E) where
   smul_right : ∀ (c : ℂ) (x y : E), η x (c • y) = conj c * η x y
   /-- `T` is self-adjoint with respect to `η`. -/
   selfAdjoint : ∀ x y : E, η (T x) y = η x (T y)
-  /-- The metric is nondegenerate (supplied by positive-definiteness). -/
+  /-- Diagonal nonvanishing, stronger than ordinary form nondegeneracy. -/
   nondegenerate : ∀ x : E, x ≠ 0 → η x x ≠ 0
 
 /-- **`η`-self-adjoint ⟹ real eigenvalues.** For an eigenpair `T v = μ • v` with
@@ -81,11 +60,12 @@ theorem PseudoHermitianForm.eigenvalue_conj_eq {T : E →ₗ[ℂ] E}
   exact (mul_right_cancel₀ (P.nondegenerate v hv) hsa).symm
 
 /-- **Pseudo-Hermitian reduction to RH.** If there is a complex vector space `E`, an
-operator `T`, and a positive metric `η` making `T` `η`-self-adjoint, such that every
+operator `T`, and a scalar-homogeneous form `η` with diagonal nonvanishing making
+`T` symmetric for `η`, such that every
 critical-strip zero `s` has a nonzero eigenvector with eigenvalue
 `μ(s) = -i(s - 1/2)`, then RH holds.
 
-Reality of `μ(s)` is *proved* from `η`-positivity (not assumed); it pins
+Reality of `μ(s)` follows from symmetry and diagonal nonvanishing; it pins
 `Re s = 1/2`. -/
 theorem riemannHypothesis_of_pseudoHermitian_eigendata
     (T : E →ₗ[ℂ] E) (P : PseudoHermitianForm T)
@@ -109,7 +89,7 @@ structure PseudoHermitianWitness where
   [module : Module ℂ E]
   /-- The operator. -/
   T : E →ₗ[ℂ] E
-  /-- The positive metric making `T` self-adjoint. -/
+  /-- The scalar form with global symmetry and diagonal nonvanishing. -/
   form : PseudoHermitianForm T
   /-- Eigenvectors indexed by zeros. -/
   v : ℂ → E

@@ -1,0 +1,15 @@
+test_base_hash_tampering_rejected (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_base_hash_tampering_rejected) ... ok
+test_complete_cover_and_analytic_tail (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_complete_cover_and_analytic_tail) ... ok
+test_exact_trial_and_nearly_constant_mean (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_exact_trial_and_nearly_constant_mean) ... ok
+test_exact_two_mode_mean_saturates_geometric_bound (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_exact_two_mode_mean_saturates_geometric_bound) ... ok
+test_invalid_and_unprotected_inputs_fail_closed (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_invalid_and_unprotected_inputs_fail_closed) ... ok
+test_kernel_variance_against_independent_complex_integrals (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_kernel_variance_against_independent_complex_integrals) ... ok
+test_mean_zero_even_kernel_retains_exponential_growth (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_mean_zero_even_kernel_retains_exponential_growth) ... ok
+test_orthogonal_mean_gate_can_pass_when_distance_gate_fails (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_orthogonal_mean_gate_can_pass_when_distance_gate_fails) ... ok
+test_real_two_mode_normalized_profiles_on_complex_strip (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_real_two_mode_normalized_profiles_on_complex_strip) ... ok
+test_saved_bounds_improve_both_ground_means_and_all_strips (test_orthogonal_fourier_transfer.OrthogonalFourierTests.test_saved_bounds_improve_both_ground_means_and_all_strips) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.023s
+
+OK

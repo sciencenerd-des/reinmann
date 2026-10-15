@@ -1,0 +1,1458 @@
+{
+  "pid": 86426,
+  "server_pid": 94411,
+  "status": "complete",
+  "version": 2,
+  "diagnostics": [
+    {
+      "fullRange": {
+        "end": {
+          "character": 38,
+          "line": 21
+        },
+        "start": {
+          "character": 29,
+          "line": 21
+        }
+      },
+      "message": "please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`",
+      "range": {
+        "end": {
+          "character": 38,
+          "line": 21
+        },
+        "start": {
+          "character": 29,
+          "line": 21
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 49,
+          "line": 132
+        },
+        "start": {
+          "character": 42,
+          "line": 132
+        }
+      },
+      "message": "This simp argument is unused:\n  map_mul\n\nHint: Omit it from the simp argument list.\n  simp only [hp, hq, if_true, if_false, map_m\u0335u\u0335l\u0335,\u0335 \u0335m\u0335a\u0335p\u0335_\u0335zero, map_natCast,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Complex.conj_conj] at h hc \u22a2\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 49,
+          "line": 132
+        },
+        "start": {
+          "character": 42,
+          "line": 132
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 59,
+          "line": 132
+        },
+        "start": {
+          "character": 51,
+          "line": 132
+        }
+      },
+      "message": "This simp argument is unused:\n  map_zero\n\nHint: Omit it from the simp argument list.\n  simp only [hp, hq, if_true, if_false, map_mul, map_z\u0335e\u0335r\u0335o\u0335,\u0335 \u0335m\u0335a\u0335p\u0335_\u0335natCast,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Complex.conj_conj] at h hc \u22a2\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 59,
+          "line": 132
+        },
+        "start": {
+          "character": 51,
+          "line": 132
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 72,
+          "line": 132
+        },
+        "start": {
+          "character": 61,
+          "line": 132
+        }
+      },
+      "message": "This simp argument is unused:\n  map_natCast\n\nHint: Omit it from the simp argument list.\n  simp only [hp, hq, if_true, if_false, map_mul, map_zero, m\u0335a\u0335p\u0335_\u0335n\u0335a\u0335t\u0335C\u0335a\u0335s\u0335t\u0335,\u0335Complex.conj_conj] at h hc \u22a2\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 72,
+          "line": 132
+        },
+        "start": {
+          "character": 61,
+          "line": 132
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 23,
+          "line": 133
+        },
+        "start": {
+          "character": 6,
+          "line": 133
+        }
+      },
+      "message": "This simp argument is unused:\n  Complex.conj_conj\n\nHint: Omit it from the simp argument list.\n  simp only [hp, hq, if_true, if_false, map_mul, map_zero, map_natCast,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335C\u0335o\u0335m\u0335p\u0335l\u0335e\u0335x\u0335.\u0335c\u0335o\u0335n\u0335j\u0335_\u0335c\u0335o\u0335n\u0335j\u0335] at h hc \u22a2\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 23,
+          "line": 133
+        },
+        "start": {
+          "character": 6,
+          "line": 133
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 82,
+          "line": 231
+        },
+        "start": {
+          "character": 39,
+          "line": 231
+        }
+      },
+      "message": "This simp argument is unused:\n  higherJet_apply_lt s (by omega : 0 < p + 1)\n\nHint: Omit it from the simp argument list.\n  simp [constantRow, realize_single,\u0335 \u0335h\u0335i\u0335g\u0335h\u0335e\u0335r\u0335J\u0335e\u0335t\u0335_\u0335a\u0335p\u0335p\u0335l\u0335y\u0335_\u0335l\u0335t\u0335 \u0335s\u0335 \u0335(\u0335b\u0335y\u0335 \u0335o\u0335m\u0335e\u0335g\u0335a\u0335 \u0335:\u0335 \u03350\u0335 \u0335<\u0335 \u0335p\u0335 \u0335+\u0335 \u03351\u0335)\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+      "range": {
+        "end": {
+          "character": 82,
+          "line": 231
+        },
+        "start": {
+          "character": 39,
+          "line": 231
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 80,
+          "line": 338
+        },
+        "start": {
+          "character": 2,
+          "line": 338
+        }
+      },
+      "message": "Tactic `simp` failed with a nested error:\nmaximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+      "range": {
+        "end": {
+          "character": 80,
+          "line": 338
+        },
+        "start": {
+          "character": 2,
+          "line": 338
+        }
+      },
+      "severity": 1,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 78,
+          "line": 539
+        },
+        "start": {
+          "character": 4,
+          "line": 539
+        }
+      },
+      "message": "Type mismatch: After simplification, term\n  hb\n has type\n  \u2016arithmeticMetric.defect x (arithmeticSpectral x - spectralParam s \u2022 x)\u2016 \u2264 2 * \u03b5\nbut is expected to have type\n  \u2016arithmeticMetric.defect (id x) (arithmeticSpectral x)\u2016 +\n      \u2016arithmeticMetric.defect (id x) (arithmeticSpectral x - spectralParam s \u2022 x)\u2016 \u2264\n    2 * \u03b5 * \u2016arithmeticMetric.\u03b7 (id x) (id x)\u2016",
+      "range": {
+        "end": {
+          "character": 78,
+          "line": 539
+        },
+        "start": {
+          "character": 4,
+          "line": 539
+        }
+      },
+      "severity": 1,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 574
+        },
+        "start": {
+          "character": 2,
+          "line": 574
+        }
+      },
+      "message": "No goals to be solved",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 574
+        },
+        "start": {
+          "character": 2,
+          "line": 574
+        }
+      },
+      "severity": 1,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 585
+        },
+        "start": {
+          "character": 0,
+          "line": 585
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.confluent_zero_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 585
+        },
+        "start": {
+          "character": 0,
+          "line": 585
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 586
+        },
+        "start": {
+          "character": 0,
+          "line": 586
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.confluent_zero_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 586
+        },
+        "start": {
+          "character": 0,
+          "line": 586
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 587
+        },
+        "start": {
+          "character": 0,
+          "line": 587
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.confluent_interior_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 587
+        },
+        "start": {
+          "character": 0,
+          "line": 587
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 588
+        },
+        "start": {
+          "character": 0,
+          "line": 588
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.reflected_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 588
+        },
+        "start": {
+          "character": 0,
+          "line": 588
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 589
+        },
+        "start": {
+          "character": 0,
+          "line": 589
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.raw_balance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 589
+        },
+        "start": {
+          "character": 0,
+          "line": 589
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 590
+        },
+        "start": {
+          "character": 0,
+          "line": 590
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.gram_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 590
+        },
+        "start": {
+          "character": 0,
+          "line": 590
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 591
+        },
+        "start": {
+          "character": 0,
+          "line": 591
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.conj_delta' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 591
+        },
+        "start": {
+          "character": 0,
+          "line": 591
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 592
+        },
+        "start": {
+          "character": 0,
+          "line": 592
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.gram_balance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 592
+        },
+        "start": {
+          "character": 0,
+          "line": 592
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 593
+        },
+        "start": {
+          "character": 0,
+          "line": 593
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.raw_at_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 593
+        },
+        "start": {
+          "character": 0,
+          "line": 593
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 594
+        },
+        "start": {
+          "character": 0,
+          "line": 594
+        }
+      },
+      "message": "'Reinmann.XiGreenGram.gram_reflected_partner' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 594
+        },
+        "start": {
+          "character": 0,
+          "line": 594
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 595
+        },
+        "start": {
+          "character": 0,
+          "line": 595
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.higherJet_row_zero_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 595
+        },
+        "start": {
+          "character": 0,
+          "line": 595
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 596
+        },
+        "start": {
+          "character": 0,
+          "line": 596
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.xiRow_single' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 596
+        },
+        "start": {
+          "character": 0,
+          "line": 596
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 597
+        },
+        "start": {
+          "character": 0,
+          "line": 597
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.realization_row_zero_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 597
+        },
+        "start": {
+          "character": 0,
+          "line": 597
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 598
+        },
+        "start": {
+          "character": 0,
+          "line": 598
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.constantRow_single' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 598
+        },
+        "start": {
+          "character": 0,
+          "line": 598
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 599
+        },
+        "start": {
+          "character": 0,
+          "line": 599
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.realize_derivativeExpansion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 599
+        },
+        "start": {
+          "character": 0,
+          "line": 599
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 600
+        },
+        "start": {
+          "character": 0,
+          "line": 600
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.derivativeExpansion_single' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 600
+        },
+        "start": {
+          "character": 0,
+          "line": 600
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 601
+        },
+        "start": {
+          "character": 0,
+          "line": 601
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.coordinates_spectral' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 601
+        },
+        "start": {
+          "character": 0,
+          "line": 601
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 602
+        },
+        "start": {
+          "character": 0,
+          "line": 602
+        }
+      },
+      "message": "'Reinmann.XiAlgebraicRows.xiRow_coordinates_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 602
+        },
+        "start": {
+          "character": 0,
+          "line": 602
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 603
+        },
+        "start": {
+          "character": 0,
+          "line": 603
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.metric_basis' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 603
+        },
+        "start": {
+          "character": 0,
+          "line": 603
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 604
+        },
+        "start": {
+          "character": 0,
+          "line": 604
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.metric_zero_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 604
+        },
+        "start": {
+          "character": 0,
+          "line": 604
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 605
+        },
+        "start": {
+          "character": 0,
+          "line": 605
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.metric_zero_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 605
+        },
+        "start": {
+          "character": 0,
+          "line": 605
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 606
+        },
+        "start": {
+          "character": 0,
+          "line": 606
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.spectralExpansion_single_basis' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 606
+        },
+        "start": {
+          "character": 0,
+          "line": 606
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 607
+        },
+        "start": {
+          "character": 0,
+          "line": 607
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.boundary_basis' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 607
+        },
+        "start": {
+          "character": 0,
+          "line": 607
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 608
+        },
+        "start": {
+          "character": 0,
+          "line": 608
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.basis_green' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 608
+        },
+        "start": {
+          "character": 0,
+          "line": 608
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 609
+        },
+        "start": {
+          "character": 0,
+          "line": 609
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.actionDefect_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 609
+        },
+        "start": {
+          "character": 0,
+          "line": 609
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 610
+        },
+        "start": {
+          "character": 0,
+          "line": 610
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.actionDefect_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 610
+        },
+        "start": {
+          "character": 0,
+          "line": 610
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 611
+        },
+        "start": {
+          "character": 0,
+          "line": 611
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.actionDefect_smul_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 611
+        },
+        "start": {
+          "character": 0,
+          "line": 611
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 612
+        },
+        "start": {
+          "character": 0,
+          "line": 612
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.actionDefect_smul_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 612
+        },
+        "start": {
+          "character": 0,
+          "line": 612
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 613
+        },
+        "start": {
+          "character": 0,
+          "line": 613
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.boundary_add_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 613
+        },
+        "start": {
+          "character": 0,
+          "line": 613
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 614
+        },
+        "start": {
+          "character": 0,
+          "line": 614
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.boundary_add_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 614
+        },
+        "start": {
+          "character": 0,
+          "line": 614
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 615
+        },
+        "start": {
+          "character": 0,
+          "line": 615
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.boundary_smul_left' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 615
+        },
+        "start": {
+          "character": 0,
+          "line": 615
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 616
+        },
+        "start": {
+          "character": 0,
+          "line": 616
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.boundary_smul_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 616
+        },
+        "start": {
+          "character": 0,
+          "line": 616
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 617
+        },
+        "start": {
+          "character": 0,
+          "line": 617
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.expansion_green_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 617
+        },
+        "start": {
+          "character": 0,
+          "line": 617
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 618
+        },
+        "start": {
+          "character": 0,
+          "line": 618
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.arithmeticMetric_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 618
+        },
+        "start": {
+          "character": 0,
+          "line": 618
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 619
+        },
+        "start": {
+          "character": 0,
+          "line": 619
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.arithmeticMetric_symmetric' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 619
+        },
+        "start": {
+          "character": 0,
+          "line": 619
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 620
+        },
+        "start": {
+          "character": 0,
+          "line": 620
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.arithmeticMetric_jets' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 620
+        },
+        "start": {
+          "character": 0,
+          "line": 620
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 621
+        },
+        "start": {
+          "character": 0,
+          "line": 621
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.coherent_partner_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 621
+        },
+        "start": {
+          "character": 0,
+          "line": 621
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 622
+        },
+        "start": {
+          "character": 0,
+          "line": 622
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.zero_has_nonzero_cross_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 622
+        },
+        "start": {
+          "character": 0,
+          "line": 622
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 623
+        },
+        "start": {
+          "character": 0,
+          "line": 623
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.isotropic_zero_packet_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 623
+        },
+        "start": {
+          "character": 0,
+          "line": 623
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 624
+        },
+        "start": {
+          "character": 0,
+          "line": 624
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.every_xi_zero_has_unit_absolute_mass' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 624
+        },
+        "start": {
+          "character": 0,
+          "line": 624
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 625
+        },
+        "start": {
+          "character": 0,
+          "line": 625
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.every_strip_zero_has_unit_absolute_mass' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 625
+        },
+        "start": {
+          "character": 0,
+          "line": 625
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 626
+        },
+        "start": {
+          "character": 0,
+          "line": 626
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.action_defect_zero' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 626
+        },
+        "start": {
+          "character": 0,
+          "line": 626
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 627
+        },
+        "start": {
+          "character": 0,
+          "line": 627
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.paired_residual_norm' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 627
+        },
+        "start": {
+          "character": 0,
+          "line": 627
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 628
+        },
+        "start": {
+          "character": 0,
+          "line": 628
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.riemannHypothesis_of_green_paired_budget' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 628
+        },
+        "start": {
+          "character": 0,
+          "line": 628
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 629
+        },
+        "start": {
+          "character": 0,
+          "line": 629
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.green_paired_budget_of_riemannHypothesis' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 629
+        },
+        "start": {
+          "character": 0,
+          "line": 629
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 630
+        },
+        "start": {
+          "character": 0,
+          "line": 630
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.green_paired_budget_iff_riemannHypothesis' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 630
+        },
+        "start": {
+          "character": 0,
+          "line": 630
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 631
+        },
+        "start": {
+          "character": 0,
+          "line": 631
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.fock_coherent_jet_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 631
+        },
+        "start": {
+          "character": 0,
+          "line": 631
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 632
+        },
+        "start": {
+          "character": 0,
+          "line": 632
+        }
+      },
+      "message": "'Reinmann.XiGreenModel.fock_coherent_jet_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 632
+        },
+        "start": {
+          "character": 0,
+          "line": 632
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    }
+  ],
+  "updated_at": 1791648564.485596,
+  "source_ranges": [
+    [
+      "Reinmann/XiGreenGram.lean",
+      2,
+      152
+    ],
+    [
+      "Reinmann/XiAlgebraicRows.lean",
+      156,
+      124
+    ],
+    [
+      "Reinmann/XiGreenModel.lean",
+      282,
+      300
+    ]
+  ],
+  "processing": [],
+  "captured_at_utc": "2026-10-10T19:05:06.915662+00:00",
+  "canonical_source_sha256": {
+    "Reinmann/XiGreenGram.lean": "e8df9adb726a4a9f08f2d679fbafba82953c71e279e3a1d604bc4b97258d7016",
+    "Reinmann/XiAlgebraicRows.lean": "9fd5da0ec8d5095970704f37e7b648065139c75b6a3635591a760e76dc04cb57",
+    "Reinmann/XiGreenModel.lean": "032766b53b211ee58a2d44833b8840f6495673b4ab291d697cb7341e2a9124bc"
+  }
+}

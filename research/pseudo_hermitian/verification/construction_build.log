@@ -1,0 +1,44 @@
+⚠ [3482/3535] Replayed Reinmann.PseudoHermitianLocal
+warning: Reinmann/PseudoHermitianLocal.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3483/3535] Replayed Reinmann.PseudoHermitianIsotropy
+warning: Reinmann/PseudoHermitianIsotropy.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3485/3535] Replayed Reinmann.XiAnnihilator
+warning: Reinmann/XiAnnihilator.lean:167:2: Try `simp at hm` instead of `simpa using hm`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3529/3535] Replayed Reinmann.CurvatureControls
+warning: Reinmann/CurvatureControls.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/CurvatureControls.lean:47:0: 'Reinmann.realZeroControl_turan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:48:0: 'Reinmann.realZeroControl_scaled_deficit_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:49:0: 'Reinmann.realZeroControl_curvature_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:50:0: 'Reinmann.realZeroControl_discrete_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:51:0: 'Reinmann.curvature_negative_of_half_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3530/3535] Replayed Reinmann.CoupledRankEnergy
+warning: Reinmann/CoupledRankEnergy.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/CoupledRankEnergy.lean:80:20: unused variable `hEg`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3531/3535] Replayed Reinmann.WeilRankTail
+warning: Reinmann/WeilRankTail.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+✔ [3534/3535] Built Reinmann (307s)
+Build completed successfully (3535 jobs).

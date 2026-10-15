@@ -1,0 +1,15 @@
+conductor 13 root seeds 50
+conductor 13 C 2 positive_finite_sections_only
+conductor 13 C 4 positive_finite_sections_only
+conductor 13 C 8 positive_finite_sections_only
+conductor 13 C 16 positive_finite_sections_only
+conductor 13 C 32 positive_finite_sections_only
+conductor 13 C 64 negative_full_form_trial
+conductor 13 C 48 negative_full_form_trial
+conductor 13 C 40 negative_full_form_trial
+conductor 13 C 36 negative_full_form_trial
+conductor 13 C 34 negative_full_form_trial
+conductor 13 C 33 positive_finite_sections_only
+conductor 13 C 67/2 positive_finite_sections_only
+conductor 13 C 135/4 positive_finite_sections_only
+conductor 13 C 271/8 negative_full_form_trial

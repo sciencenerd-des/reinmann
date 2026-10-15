@@ -1,0 +1,11 @@
+test_analogue_root_number_and_period (test_research_round_controls.RoundControls.test_analogue_root_number_and_period) ... ok
+test_epstein_gamma_duplication_normalization (test_research_round_controls.RoundControls.test_epstein_gamma_duplication_normalization) ... ok
+test_epstein_representation_coefficients_against_L_products (test_research_round_controls.RoundControls.test_epstein_representation_coefficients_against_L_products) ... ok
+test_localized_tail_matches_direct_stieltjes_integration (test_research_round_controls.RoundControls.test_localized_tail_matches_direct_stieltjes_integration) ... ok
+test_saved_negative_witnesses (test_research_round_controls.RoundControls.test_saved_negative_witnesses) ... ok
+test_turan_hypotheses_fail_closed (test_research_round_controls.RoundControls.test_turan_hypotheses_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.443s
+
+OK

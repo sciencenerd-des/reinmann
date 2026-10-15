@@ -1,0 +1,10 @@
+{
+  "status": "individual_disks_only",
+  "kind": "character_combination",
+  "conductor": 11,
+  "Conrey_label": 2,
+  "gamma_degree": 1,
+  "normalization": "(q/pi)^(s/2) Gamma((s+1)/2) H(s), root number +1",
+  "height": 160,
+  "roots": []
+}

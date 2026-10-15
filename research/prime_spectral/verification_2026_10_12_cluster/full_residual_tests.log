@@ -1,0 +1,9 @@
+test_both_infinite_tail_formulas_dominate_known_omitted_modes (test_full_cluster_residual.FullClusterResidualTests.test_both_infinite_tail_formulas_dominate_known_omitted_modes) ... ok
+test_full_certificate_replay_and_nontrivial_angle (test_full_cluster_residual.FullClusterResidualTests.test_full_certificate_replay_and_nontrivial_angle) ... ok
+test_invalid_tail_cutoff_rejected (test_full_cluster_residual.FullClusterResidualTests.test_invalid_tail_cutoff_rejected) ... ok
+test_zero_vector_has_zero_action_tail (test_full_cluster_residual.FullClusterResidualTests.test_zero_vector_has_zero_action_tail) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.259s
+
+OK

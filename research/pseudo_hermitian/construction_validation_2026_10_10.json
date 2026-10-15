@@ -1,0 +1,202 @@
+{
+  "checked_at_utc": "2026-10-09T20:30:18.454253+00:00",
+  "worktree": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann",
+  "branch": "codex/xi-eigenvector-reduction",
+  "base_commit": "f62bb7f7d32f572d5d92300693b3ca4962ce942b",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "checks": {
+    "lake build": {
+      "exit_code": 0,
+      "jobs": 3535
+    },
+    "safe_verify_construction_audit": {
+      "exit_code": 0,
+      "project_files_shortcut_scanned": 98,
+      "theorems_audited": 27
+    },
+    "git diff --check": {
+      "exit_code": 0
+    },
+    "manuscript_seed_hashes_match_both_checkouts": 14,
+    "numerical_diagnostics": {
+      "exit_code": 0,
+      "modes": 4,
+      "mpmath_version": "1.3.0",
+      "decimal_precision": 90,
+      "rigorous_interval_certificate": false
+    }
+  },
+  "theorem_axioms": {
+    "Reinmann.FockEigenvectors.derivative_coherent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.spectral_coherent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_pairing_term": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_pairing_hasSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_pairing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_mass_ne_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_mass_norm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_mass_norm_ge_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.normalized_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.normalized_eigen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.normalized_defect_norm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_relative_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_diagonal_symmetry_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_cross_defect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.FockEigenvectors.coherent_cross_symmetry_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.xiTaylor_hasSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_mem_domain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.derivative_power_coherent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.rowTerm_coherent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.coherent_row_hasSum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.coherent_mem_domain_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.xi_zero_of_strip_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.zeroState_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.zeroState_eigen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.normalizedZeroState_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.normalizedZeroState_eigen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.XiAnnihilator.strip_zero_unit_mass_eigendata": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": {
+    "arithmetic_coefficient_domain_candidate_constructed": true,
+    "domain_invariance_formalized": true,
+    "coherent_membership_iff_xi_zero_formalized": true,
+    "critical_strip_zeta_zero_transfer_formalized": true,
+    "all_selected_zero_states_have_exact_unit_mass_formalized": true,
+    "diagonal_and_cross_symmetry_obstructions_formalized": true,
+    "hilbert_space_closure_and_theta_growth_estimates": "written argument; not Lean formalized or independently reviewed",
+    "truncation_mass_and_paired_residual_bounds": "written argument; floating-point diagnostics are not certificates",
+    "bounded_metric_perturbation_obstruction": "written argument; not Lean formalized",
+    "symmetric_arithmetic_realization_constructed": false,
+    "density_of_restricted_hilbert_operator_proved": false,
+    "rh_proved": false,
+    "novelty_claimed": false,
+    "manuscript_pdf_updated_for_construction": false,
+    "full_research_goal_complete": false,
+    "goal_turn_classification": "progress"
+  },
+  "source_and_log_sha256": {
+    "Reinmann.lean": "021c5a6fdb537e695e2e157823ba9bcf15290c7a5f7e75872a2596ba89e6c77e",
+    "README.md": "e6d2504eeeba9a2b54a00cbd671c0bbee92406c70373975d16a881ba5dc90eab",
+    "Reinmann/FockEigenvectors.lean": "36506c9b6753c58a765d0cd2e5031844d2a0ee6cdf11f081bba640a0d8d8aae1",
+    "Reinmann/XiAnnihilator.lean": "4dd678a51199d84b84755553505eb62b78480b53439c38f6936e39672ef94acc",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "eea2b6ef92168f4239584eeb9821b31a0052598be3f6741128b24cf6f071a906",
+    "research/pseudo_hermitian/FOCK_CANDIDATE.md": "5146aad00c9c96ba759b1f07f32d78b72fc347ca418a38d6cfe15e1aec399543",
+    "research/pseudo_hermitian/FOCK_DOMAIN_ESTIMATES.md": "32e9edab7f9a6514a969c47143398e928caee1b494d32092a922e724cf2b2014",
+    "research/pseudo_hermitian/construction_axiom_audit.lean": "fa687cbbd4d1056dcb666d2a97ec6f76a21932470acc26527361741d8c2f5842",
+    "research/pseudo_hermitian/check_fock_candidate.py": "af4b4f1ca39ca582dee7b05fca7d2442f0c04933c3bd8484cd13b4d2ea04f1b5",
+    "research/pseudo_hermitian/fock_diagnostics.json": "50ead87aa1247db6e5d73ae0e78f9adb4f762cefe0f8c524dd191f51f3f12451",
+    "research/pseudo_hermitian/worktree_seed.json": "caf6fce79af7926636629dc89f28b865819ce528e968c6c59cb9c84b74b986d6",
+    "research/pseudo_hermitian/verification/construction_build.log": "a2167b85f4c02bf6828415cc94bdad35c8008764c38fd749d19276a7452fb196",
+    "research/pseudo_hermitian/verification/construction_axiom_audit.log": "bec9e908da3b3f4c010a62816c82190ac2ef6cd06796b50532413343500e3005",
+    "research/pseudo_hermitian/verification/construction_focused_build.log": "06a4605488840eb69457829beac98943d26dd63d329f944c485db4b9766fbdce"
+  },
+  "diagnostics": "Nonfatal style-header, unnecessary-simpa and existing unused-variable warnings."
+}

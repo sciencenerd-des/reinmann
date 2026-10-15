@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/verify_window_positivity.py", line 128, in <module>
+    result = verify(args.certificate)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/verify_window_positivity.py", line 86, in verify
+    exact = independent_entry(2*i+parity, 2*j+parity, a, cutoff, beta, powers)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/verify_window_positivity.py", line 42, in independent_entry
+    raise ArithmeticError(f'independent integral unresolved at {(n,m)}: {value}')
+ArithmeticError: independent integral unresolved at (0, 0): [-3.0776013148053584063505441278152484920261140670 +/- 3.94e-47] + [+/- 3.37e-53]j

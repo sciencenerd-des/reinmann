@@ -1,0 +1,45 @@
+import Reinmann.XiHigherJetCoupling
+import Reinmann.PseudoHermitianNormProductObstruction
+
+#print axioms Reinmann.XiAnnihilator.creation_zero
+#print axioms Reinmann.XiAnnihilator.creation_succ
+#print axioms Reinmann.XiAnnihilator.derivative_creation
+#print axioms Reinmann.XiAnnihilator.derivative_power_creation
+#print axioms Reinmann.XiAnnihilator.higherJet_zero
+#print axioms Reinmann.XiAnnihilator.higherJet_succ
+#print axioms Reinmann.XiAnnihilator.higherJet_apply_add
+#print axioms Reinmann.XiAnnihilator.higherJet_apply_lt
+#print axioms Reinmann.XiAnnihilator.higherJet_nonzero
+#print axioms Reinmann.XiAnnihilator.derivative_higherJet_succ
+#print axioms Reinmann.XiAnnihilator.differentiable_iterated_xi
+#print axioms Reinmann.XiAnnihilator.xiDerivativeTaylor_zero
+#print axioms Reinmann.XiAnnihilator.xiDerivativeTaylor_succ
+#print axioms Reinmann.XiAnnihilator.xiDerivativeTaylor_hasSum
+#print axioms Reinmann.XiAnnihilator.derivativeRowTerm_zero
+#print axioms Reinmann.XiAnnihilator.coherent_derivative_row_hasSum
+#print axioms Reinmann.XiAnnihilator.derivative_row_creation_zero
+#print axioms Reinmann.XiAnnihilator.derivative_row_creation_shift
+#print axioms Reinmann.XiAnnihilator.derivative_row_creation_split
+#print axioms Reinmann.XiAnnihilator.creation_rows_hasSum_zero
+#print axioms Reinmann.XiAnnihilator.higherJet_derivative_rows_zero
+#print axioms Reinmann.XiAnnihilator.higherJet_mem_domain
+#print axioms Reinmann.XiAnnihilator.higherJetState_nonzero
+#print axioms Reinmann.XiAnnihilator.higherJet_one_eq_coherentJet
+#print axioms Reinmann.XiAnnihilator.spectral_higherJet_succ
+#print axioms Reinmann.XiAnnihilator.higherJetState_spectral_succ
+#print axioms Reinmann.XiDividedDifference.iteratedDeriv_xi_one_sub
+#print axioms Reinmann.XiDividedDifference.iteratedDeriv_xi_conj
+#print axioms Reinmann.XiDividedDifference.exists_nonzero_xi_derivative
+#print axioms Reinmann.XiDividedDifference.exists_finite_xi_multiplicity
+#print axioms Reinmann.XiDividedDifference.iteratedDeriv_dslope_same
+#print axioms Reinmann.XiDividedDifference.polarizedKernel_eq_kernel
+#print axioms Reinmann.XiDividedDifference.polarizedKernel_eq
+#print axioms Reinmann.XiDividedDifference.jetCoupling_eq
+#print axioms Reinmann.XiDividedDifference.jetCoupling_ne_zero
+#print axioms Reinmann.XiDividedDifference.zero_has_domain_jet_and_nonzero_coupling
+#print axioms Reinmann.NormProductObstruction.jordan_form_symmetric
+#print axioms Reinmann.NormProductObstruction.jordan_paired_residual_zero
+#print axioms Reinmann.NormProductObstruction.jordan_norm
+#print axioms Reinmann.NormProductObstruction.mass_le_twice_norm_product
+#print axioms Reinmann.NormProductObstruction.unit_mass_norm_product_lower
+#print axioms Reinmann.NormProductObstruction.exists_unit_mass_small_residual_and_fixed_norm_product

@@ -1,0 +1,6 @@
+Reinmann/WeilAdjointPairing.lean:44:4: error: Type mismatch
+  Eq.symm (add_sub_cancel_left (⟪g, u⟫_ℂ • g) u)
+has type
+  u = ⟪g, u⟫_ℂ • g + u - ⟪g, u⟫_ℂ • g
+but is expected to have type
+  u = ⟪g, u⟫_ℂ • g + (u - ⟪g, u⟫_ℂ • g)

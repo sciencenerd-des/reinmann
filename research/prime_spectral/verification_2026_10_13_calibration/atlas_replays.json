@@ -1,0 +1,165 @@
+{
+  "status": "seven_new_atlases_replayed",
+  "controls": [
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/q7_label3_H160",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 160,
+      "global_count": 107,
+      "critical_line_count": 93,
+      "right_off_line_count": 7,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 4036,
+      "replayed_segments": 4665,
+      "winding_ball": {
+        "lo": "7529455627010047/70368744177664",
+        "hi": "7529455627010049/70368744177664"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/q7_label3_H160/atlas.json": "9a239e1de2345f4f1d643119dbca8add27bab1858ace4f33b408e48a96225651",
+        "research/prime_spectral/verification_2026_10_13_calibration/q7_label3_H160/winding.json": "75c9b411eceb4898fb3c4b0e56a825451f7f4544ff764804f76fbfcdb19ec756",
+        "research/prime_spectral/verification_2026_10_13_calibration/q7_label3_H160/line_roots.json": "50af969dae55a5acab6fca699947ba09b0f9ee81ec3e69741eab9297647685d9",
+        "research/prime_spectral/verification_2026_10_13_calibration/q7_label3_H160/offline_disks.json": "aa46d87c8f9d51ddc56dd49e976b504819681e1477cce3c6b11dc926569937e2"
+      }
+    },
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/q11_label2_H160",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 160,
+      "global_count": 118,
+      "critical_line_count": 118,
+      "right_off_line_count": 0,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 4299,
+      "replayed_segments": 4718,
+      "winding_ball": {
+        "lo": "8303511812964351/70368744177664",
+        "hi": "8303511812964353/70368744177664"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/q11_label2_H160/atlas.json": "1b1efa23db05804f4e4c724c7492dbcce9827b63cb248f38843936bf6b12d1af",
+        "research/prime_spectral/verification_2026_10_13_calibration/q11_label2_H160/winding.json": "1ac461a1741e6042f6f8e10aaae3ca7d03cf555ae72de79a2dcc80413d6fd649",
+        "research/prime_spectral/verification_2026_10_13_calibration/q11_label2_H160/line_roots.json": "686bbec17e80a0e2982599f517ffad9d349742edb0947d6c895255471375de64",
+        "research/prime_spectral/verification_2026_10_13_calibration/q11_label2_H160/offline_disks.json": "a978700d61a3447ac278630153645fcca1f1e681ec957c4dac0d8749d51b0166"
+      }
+    },
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/q13_label2_H160",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 160,
+      "global_count": 123,
+      "critical_line_count": 113,
+      "right_off_line_count": 5,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 5453,
+      "replayed_segments": 5812,
+      "winding_ball": {
+        "lo": "8655355533852671/70368744177664",
+        "hi": "8655355533852673/70368744177664"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label2_H160/atlas.json": "5b9af6a9b7207fc9814144f2d93ab02fbdf57c9541bf3030b26acad95aae673e",
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label2_H160/winding.json": "06ae1f35c25657fefced1886bb36509ce5de6deb91487030eca01d9124fc0bef",
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label2_H160/line_roots.json": "f08ac11d4158c0782fce38cbb24503a0f7d69429ae8a93c5550a2e58a8a879ab",
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label2_H160/offline_disks.json": "6aea43319dc6cdcedc334dab6dbefcddc0697ae02920afc0853723fa6925cea9"
+      }
+    },
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/q13_label6_H160",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 160,
+      "global_count": 122,
+      "critical_line_count": 104,
+      "right_off_line_count": 9,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 5893,
+      "replayed_segments": 6335,
+      "winding_ball": {
+        "lo": "8584986789675007/70368744177664",
+        "hi": "8584986789675009/70368744177664"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label6_H160/atlas.json": "dd5159c379b4b8524491aaed84826a4f5d639115e51b141d696ac641b4b632c3",
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label6_H160/winding.json": "bb207bade3f77589cff2587b2c17df5b05dd3a3512f881d504694e986d88da8d",
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label6_H160/line_roots.json": "fff4742442508c9dd716536925a080ee8281e12f2246bab0e4fc877d8088fd15",
+        "research/prime_spectral/verification_2026_10_13_calibration/q13_label6_H160/offline_disks.json": "d82a1578d24b40dc6293a81d8e18956cbfd8207d65ddb14d085009d88cc31ca9"
+      }
+    },
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/q17_label3_H160",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 160,
+      "global_count": 130,
+      "critical_line_count": 128,
+      "right_off_line_count": 1,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 5544,
+      "replayed_segments": 5915,
+      "winding_ball": {
+        "lo": "4573968371548159/35184372088832",
+        "hi": "4573968371548161/35184372088832"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/q17_label3_H160/atlas.json": "c0ddba2d4ef87a95f82368785246861826eb96059c75f0260692de0d54af3d72",
+        "research/prime_spectral/verification_2026_10_13_calibration/q17_label3_H160/winding.json": "65a8b312346b59f8adab9f34bd5fa29434565a44f4ef0a33580844c80b6db259",
+        "research/prime_spectral/verification_2026_10_13_calibration/q17_label3_H160/line_roots.json": "c66827ce12dc859b1a605a5b2c3fe25b0ab1291807701f8c2a6e49bfdb85b7ce",
+        "research/prime_spectral/verification_2026_10_13_calibration/q17_label3_H160/offline_disks.json": "c8b40da3dc8d237dccbc02fe6a710c26ba5a61a07d7803beca003d15f10f0ca3"
+      }
+    },
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_H120",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 120,
+      "global_count": 133,
+      "critical_line_count": 101,
+      "right_off_line_count": 16,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 5946,
+      "replayed_segments": 6574,
+      "winding_ball": {
+        "lo": "4679521443715407/35184372088832",
+        "hi": "4679521531913905/35184372088832"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein5_H120/atlas.json": "a47f23f2a5b24d6e024e5a0fa831eee162cae57f370835681601214958a55fa2",
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein5_H120/winding.json": "5049a0ef89d40e0379633afd71b57ea0cc42e864ae564f23cd8821e744464879",
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein5_H120/line_roots.json": "c8f7b7c246f058a8f5e78d8904b4e0198cf0f0bde19dccb4d36f749908688652",
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein5_H120/offline_disks.json": "0d410b034c0badaef075847635784e225c89d0bd3db1e39741b44ffdb25bce25"
+      }
+    },
+    {
+      "folder": "research/prime_spectral/verification_2026_10_13_calibration/epstein6_H120",
+      "status": "all_contours_and_root_gates_replayed",
+      "height": 120,
+      "global_count": 136,
+      "critical_line_count": 104,
+      "right_off_line_count": 16,
+      "contour_bits": 320,
+      "root_gate_bits": 640,
+      "original_segments": 5935,
+      "replayed_segments": 6464,
+      "winding_ball": {
+        "lo": "2392537278063361/17592186044416",
+        "hi": "4785074652035581/35184372088832"
+      },
+      "input_sha256": {
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein6_H120/atlas.json": "c207400c0bb3c261a9b368cc165fb4410b658f2f077ed43a9dd8d31db4052f75",
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein6_H120/winding.json": "33c45d39671ac3ba9e1511cfc140682226678db7dd2a6701c07383dd960ce4a2",
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein6_H120/line_roots.json": "730e50253abfb1008af8c4c32b8bfd745058304d063752d08c70f636e7416235",
+        "research/prime_spectral/verification_2026_10_13_calibration/epstein6_H120/offline_disks.json": "d7989f33b8c0c86436b3428e5c3e4f675992304d145f914d4f97b3465fb7ad03"
+      }
+    }
+  ],
+  "source_sha256": {
+    "replay_control_atlases.py": "119e6d4f4d9c8b10c56a6f5a94362a9a5aa7fad22c597f7c51bbf3c8d1125f74",
+    "character_zero_atlas.py": "8a918f78c685a864e860d436eb2b654673d5f46a7968e28e60a2e8bb88230dab",
+    "epstein_zero_atlas.py": "9049a0a7d7d0975f290b755002641d3fa71217c7ae72ea9f80d82d3ed583d346"
+  },
+  "scope": "Fresh higher-precision evaluation on the same FLINT backend; classical functional equations, genus decompositions and argument principle remain written analytic dependencies."
+}

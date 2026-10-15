@@ -1,0 +1,79 @@
+{
+  "status": "finite_family_search_with_certified_negative_endpoint",
+  "positive_finite_evidence_C": "4014571/131072",
+  "negative_certificate_C": "1003691/32768",
+  "records": [
+    {
+      "C": "30",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C30_N192_2048bits.json",
+      "sha256": "f23794a01340fe36fb46ed150a0bf989255fe112e9b9543060909235e13ea7d8"
+    },
+    {
+      "C": "7873/256",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C7873_256_N192_2048bits.json",
+      "sha256": "934c3ceb003a161749beda2524308b18af53d46d3a15e161acd22898ab5fc204"
+    },
+    {
+      "C": "15553/512",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C15553_512_N192_2048bits.json",
+      "sha256": "579f99a430e3279b35d308b88cc8dcb969197a86f6bcc3aca75ac3cb54de0da8"
+    },
+    {
+      "C": "31299/1024",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C31299_1024_N192_2048bits.json",
+      "sha256": "e4415f64fa2213de230447f6e47a88745ae09edbae6526e5eab4dfa6d8b801bc"
+    },
+    {
+      "C": "62791/2048",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C62791_2048_N192_2048bits.json",
+      "sha256": "6aac32329ca185995a87c3bb310c3477ee8d5c85f9310abd9026703a7fddefd1"
+    },
+    {
+      "C": "125389/4096",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C125389_4096_N192_2048bits.json",
+      "sha256": "09232f0988407a3de535f6bada4a55535a297cc46c97073585ceb603556ad875"
+    },
+    {
+      "C": "250971/8192",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C250971_8192_N192_2048bits.json",
+      "sha256": "a8dde35c5887ed257937e531ff5fc56e3c3bb6583de71aacebd93e8137456879"
+    },
+    {
+      "C": "501749/16384",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C501749_16384_N192_2048bits.json",
+      "sha256": "f639b3be0eb550412d822d241bc72290ee7c69cad8a64ae6cc14804d59b0d36f"
+    },
+    {
+      "C": "1003691/32768",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C1003691_32768_N192_2048bits.json",
+      "sha256": "1f9e574d15850d0113632a42cbaa8bc861e71148562e4da02a06e7088929fd8b"
+    },
+    {
+      "C": "2007189/65536",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C2007189_65536_N192_2048bits.json",
+      "sha256": "f7ac6386b06de4cf05f4f48c3b43df9915f1dc61490c549dcbde3dbcaada84ff"
+    },
+    {
+      "C": "4014571/131072",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/C4014571_131072_N192_2048bits.json",
+      "sha256": "a6918197623be2ec72be4b42fd2559a91fc7f49162b3327f95dba323d18a6efe"
+    }
+  ],
+  "kind": "character",
+  "parameter": 5,
+  "Conrey_label": 2,
+  "modes": 192,
+  "bits": 2048,
+  "scope": "Finite-family search only; no monotonicity or minimum-full-support bracket."
+}

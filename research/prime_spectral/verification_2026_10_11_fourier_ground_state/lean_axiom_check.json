@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+    "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/research/prime_spectral/verification_2026_10_11_fourier_ground_state/WeilGroundFourierAxiomAudit.lean"
+  ],
+  "exit_code": 0,
+  "source_sha256": "f63df195e40ce208a2d6e700a4aa4781cf9cb8ad456229bc6cc8c9276a81340f",
+  "audit_sha256": "62d82a63f91ccc0096237a6ea7fd67381c9031b9381be1ca8d6509eac33183a0",
+  "log_sha256": "d228acaf980cd8ca09e7685ccacdd766d3554eb16c1f1a4d75a87d55f5d23c80",
+  "completed_at_utc": "2026-10-11T06:41:19.339750+00:00"
+}

@@ -1,0 +1,52 @@
+import Reinmann.XiGreenGram
+import Reinmann.XiAlgebraicRows
+import Reinmann.XiGreenModel
+
+#print axioms Reinmann.XiGreenGram.confluent_zero_left
+#print axioms Reinmann.XiGreenGram.confluent_zero_right
+#print axioms Reinmann.XiGreenGram.confluent_interior_cancel
+#print axioms Reinmann.XiGreenGram.reflected_derivative
+#print axioms Reinmann.XiGreenGram.raw_balance
+#print axioms Reinmann.XiGreenGram.gram_hermitian
+#print axioms Reinmann.XiGreenGram.conj_delta
+#print axioms Reinmann.XiGreenGram.gram_balance
+#print axioms Reinmann.XiGreenGram.raw_at_reflection
+#print axioms Reinmann.XiGreenGram.gram_reflected_partner
+#print axioms Reinmann.XiAlgebraicRows.higherJet_row_zero_hasSum
+#print axioms Reinmann.XiAlgebraicRows.xiRow_single
+#print axioms Reinmann.XiAlgebraicRows.realization_row_zero_hasSum
+#print axioms Reinmann.XiAlgebraicRows.constantRow_single
+#print axioms Reinmann.XiAlgebraicRows.realize_derivativeExpansion
+#print axioms Reinmann.XiAlgebraicRows.derivativeExpansion_single
+#print axioms Reinmann.XiAlgebraicRows.coordinates_spectral
+#print axioms Reinmann.XiAlgebraicRows.xiRow_coordinates_zero
+#print axioms Reinmann.XiGreenModel.metric_basis
+#print axioms Reinmann.XiGreenModel.metric_zero_left
+#print axioms Reinmann.XiGreenModel.metric_zero_right
+#print axioms Reinmann.XiGreenModel.spectralExpansion_single_basis
+#print axioms Reinmann.XiGreenModel.boundary_basis
+#print axioms Reinmann.XiGreenModel.basis_green
+#print axioms Reinmann.XiGreenModel.actionDefect_add_left
+#print axioms Reinmann.XiGreenModel.actionDefect_add_right
+#print axioms Reinmann.XiGreenModel.actionDefect_smul_left
+#print axioms Reinmann.XiGreenModel.actionDefect_smul_right
+#print axioms Reinmann.XiGreenModel.boundary_add_left
+#print axioms Reinmann.XiGreenModel.boundary_add_right
+#print axioms Reinmann.XiGreenModel.boundary_smul_left
+#print axioms Reinmann.XiGreenModel.boundary_smul_right
+#print axioms Reinmann.XiGreenModel.expansion_green_identity
+#print axioms Reinmann.XiGreenModel.arithmeticMetric_hermitian
+#print axioms Reinmann.XiGreenModel.arithmeticMetric_symmetric
+#print axioms Reinmann.XiGreenModel.arithmeticMetric_jets
+#print axioms Reinmann.XiGreenModel.coherent_partner_pairing
+#print axioms Reinmann.XiGreenModel.zero_has_nonzero_cross_pairing
+#print axioms Reinmann.XiGreenModel.isotropic_zero_packet_bounds
+#print axioms Reinmann.XiGreenModel.every_xi_zero_has_unit_absolute_mass
+#print axioms Reinmann.XiGreenModel.every_strip_zero_has_unit_absolute_mass
+#print axioms Reinmann.XiGreenModel.action_defect_zero
+#print axioms Reinmann.XiGreenModel.paired_residual_norm
+#print axioms Reinmann.XiGreenModel.riemannHypothesis_of_green_paired_budget
+#print axioms Reinmann.XiGreenModel.green_paired_budget_of_riemannHypothesis
+#print axioms Reinmann.XiGreenModel.green_paired_budget_iff_riemannHypothesis
+#print axioms Reinmann.XiGreenModel.fock_coherent_jet_hasSum
+#print axioms Reinmann.XiGreenModel.fock_coherent_jet_pairing

@@ -1,0 +1,194 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
+import Reinmann.FockJetSummability
+import Reinmann.XiGreenModel
+import Reinmann.PseudoHermitianPacketNorm
+import Mathlib.Analysis.Normed.Lp.lpSpace
+
+/-!
+# Unchecked normed realization of the same arithmetic coefficient domain
+
+Requires FockJetSummability.lean.draft to pass verification and be promoted
+first. This file has not been compiled and is outside the verified module tree.
+It embeds the entire existing algebraic Xi domain into genuine square-summable
+weighted coefficients and transports its one fixed Green form and action.
+No closedness on the full Hilbert domain, boundedness of this form or paired
+RH budget is asserted. The ordinary-residual existence theorem is a candidate,
+not a claimed verified result.
+-/
+
+noncomputable section
+open Complex
+open scoped ComplexConjugate lp
+
+namespace Reinmann.FockNormedArithmetic
+open FockEigenvectors XiAnnihilator XiAlgebraicJetSpace FockJetSummability
+
+local instance : Fact (1 ≤ (2 : ℝ≥0∞)) := ⟨by norm_num⟩
+
+abbrev SquareCoefficients := ℓ²(ℕ, ℂ)
+
+def weightedCoefficients : Coeff →ₗ[ℂ] Coeff where
+  toFun c n := (Real.sqrt (n.factorial : ℝ) : ℂ) * c n
+  map_add' := by intro c d; ext n; simp [mul_add]
+  map_smul' := by intro a c; ext n; simp [smul_eq_mul]; ring
+
+theorem weighted_square (c : Coeff) (n : ℕ) :
+    ‖weightedCoefficients c n‖ ^ 2 = (n.factorial : ℝ) * ‖c n‖ ^ 2 := by
+  change ‖(Real.sqrt (n.factorial : ℝ) : ℂ) * c n‖ ^ 2 = _
+  rw [norm_mul, mul_pow, Complex.norm_real, Real.norm_eq_abs,
+    abs_of_nonneg (Real.sqrt_nonneg _), Real.sq_sqrt (Nat.cast_nonneg _)]
+
+theorem weightedCoefficients_injective : Function.Injective weightedCoefficients := by
+  intro c d h
+  ext n
+  have hn : 0 < (n.factorial : ℝ) := by exact_mod_cast Nat.factorial_pos n
+  have hs : (Real.sqrt (n.factorial : ℝ) : ℂ) ≠ 0 := by
+    exact_mod_cast (ne_of_gt (Real.sqrt_pos.mpr hn))
+  exact mul_left_cancel₀ hs (congrFun h n)
+
+theorem weighted_jet_mem (s : ℂ) (p : ℕ) :
+    Memℓp (weightedCoefficients (higherJet s p)) 2 := by
+  have hp : (2 : ℝ≥0∞).toReal = 2 := by norm_num
+  apply (memℓp_gen_iff (by norm_num : 0 < (2 : ℝ≥0∞).toReal)).mpr
+  simpa only [hp, Real.rpow_two, weighted_square] using higherJet_fock_summable s p
+
+theorem weighted_core_mem {c : Coeff} (hc : c ∈ core) :
+    Memℓp (weightedCoefficients c) 2 := by
+  induction hc using Submodule.span_induction with
+  | mem x hx =>
+    rcases hx with ⟨⟨s, p⟩, rfl⟩
+    exact weighted_jet_mem s p
+  | zero => simpa only [map_zero] using (zero_memℓp : Memℓp (0 : Coeff) 2)
+  | add x y hx hy hx' hy' => simpa only [map_add] using hx'.add hy'
+  | smul a x hx hx' => simpa only [map_smul] using hx'.const_smul a
+
+def coreEmbedding : core →ₗ[ℂ] SquareCoefficients where
+  toFun c := ⟨weightedCoefficients (c : Coeff), weighted_core_mem c.property⟩
+  map_add' := by
+    intro c d
+    apply lp.ext
+    change weightedCoefficients ((c : Coeff) + (d : Coeff)) = _
+    exact map_add weightedCoefficients _ _
+  map_smul' := by
+    intro a c
+    apply lp.ext
+    change weightedCoefficients (a • (c : Coeff)) = _
+    exact map_smul weightedCoefficients _ _
+
+theorem coreEmbedding_injective : Function.Injective coreEmbedding := by
+  intro c d h
+  apply Subtype.ext
+  apply weightedCoefficients_injective
+  exact congrArg (fun x : SquareCoefficients => (x : Coeff)) h
+
+def arithmeticEmbedding : arithmeticDomain →ₗ[ℂ] SquareCoefficients :=
+  coreEmbedding.comp arithmeticDomain.subtype
+
+theorem arithmeticEmbedding_injective : Function.Injective arithmeticEmbedding := by
+  intro c d h
+  apply Subtype.ext
+  exact coreEmbedding_injective h
+
+def fockDomain : Submodule ℂ SquareCoefficients := arithmeticEmbedding.range
+
+def fockEquiv : arithmeticDomain ≃ₗ[ℂ] fockDomain :=
+  LinearEquiv.ofInjective arithmeticEmbedding arithmeticEmbedding_injective
+
+theorem fock_norm_sq (x : arithmeticDomain) :
+    ‖fockEquiv x‖ ^ 2 =
+      ∑' n, (n.factorial : ℝ) * ‖((x : core) : Coeff) n‖ ^ 2 := by
+  change ‖arithmeticEmbedding x‖ ^ 2 = _
+  have h := lp.norm_rpow_eq_tsum (by norm_num : 0 < (2 : ℝ≥0∞).toReal)
+    (arithmeticEmbedding x)
+  have hp : (2 : ℝ≥0∞).toReal = 2 := by norm_num
+  have he : ∀ n, arithmeticEmbedding x n = weightedCoefficients ((x : core) : Coeff) n :=
+    fun _ => rfl
+  simpa only [hp, Real.rpow_two, he, weighted_square] using h
+
+def fockSpectral : fockDomain →ₗ[ℂ] fockDomain :=
+  fockEquiv.toLinearMap.comp (arithmeticSpectral.comp fockEquiv.symm.toLinearMap)
+
+def fockMetric : AdditiveScalarForm fockDomain where
+  η x y := XiGreenModel.arithmeticMetric.η (fockEquiv.symm x) (fockEquiv.symm y)
+  smul_left := by intro a x y; rw [map_smul, XiGreenModel.arithmeticMetric.smul_left]
+  smul_right := by intro a x y; rw [map_smul, XiGreenModel.arithmeticMetric.smul_right]
+  add_left := by intro x y z; rw [map_add, XiGreenModel.arithmeticMetric.add_left]
+  add_right := by intro x y z; rw [map_add, XiGreenModel.arithmeticMetric.add_right]
+
+theorem fockSpectral_equiv (x : arithmeticDomain) :
+    fockSpectral (fockEquiv x) = fockEquiv (arithmeticSpectral x) := by
+  simp [fockSpectral]
+
+theorem fockMetric_equiv (x y : arithmeticDomain) :
+    fockMetric.η (fockEquiv x) (fockEquiv y) = XiGreenModel.arithmeticMetric.η x y := by
+  simp [fockMetric]
+
+theorem fockMetric_hermitian (x y : fockDomain) :
+    conj (fockMetric.η y x) = fockMetric.η x y :=
+  XiGreenModel.arithmeticMetric_hermitian _ _
+
+theorem fockMetric_symmetric (x y : fockDomain) :
+    fockMetric.η (fockSpectral x) y = fockMetric.η x (fockSpectral y) := by
+  change XiGreenModel.arithmeticMetric.η (fockEquiv.symm (fockSpectral x)) (fockEquiv.symm y) =
+    XiGreenModel.arithmeticMetric.η (fockEquiv.symm x) (fockEquiv.symm (fockSpectral y))
+  simp only [fockSpectral, LinearMap.comp_apply, LinearEquiv.coe_coe,
+    fockEquiv.symm_apply_apply]
+  exact XiGreenModel.arithmeticMetric_symmetric _ _
+
+theorem every_xi_zero_has_fock_unit_mass {s : ℂ} (hz : xiCompleted s = 0) :
+    ∃ x : fockDomain, x ≠ 0 ∧ ‖fockMetric.η x x‖ = 1 := by
+  obtain ⟨x, hx, hm⟩ := XiGreenModel.every_xi_zero_has_unit_absolute_mass hz
+  refine ⟨fockEquiv x, ?_, ?_⟩
+  · intro h
+    apply hx
+    apply fockEquiv.injective
+    simpa using h
+  · rwa [fockMetric_equiv]
+
+theorem every_xi_zero_has_fock_unit_mass_small_residual {s : ℂ}
+    (hz : xiCompleted s = 0) {τ : ℝ} (hτ : 0 < τ) :
+    ∃ x : fockDomain, x ≠ 0 ∧ ‖fockMetric.η x x‖ = 1 ∧
+      ‖fockSpectral x - spectralParam s • x‖ < τ := by
+  let v := fockEquiv (XiAlgebraicJetForm.coherentState s hz)
+  have heigen : fockSpectral v = spectralParam s • v := by
+    dsimp [v]
+    rw [fockSpectral_equiv, XiAlgebraicJetForm.coherentState_eigen, map_smul]
+  have hv : v ≠ 0 := by
+    intro h
+    have hzero : XiAlgebraicJetForm.coherentState s hz = 0 := by
+      apply fockEquiv.injective
+      simpa only [v, map_zero] using h
+    exact jetState_nonzero s 0 _ hzero
+  by_cases hm : fockMetric.η v v = 0
+  · obtain ⟨w, hB⟩ := XiGreenModel.zero_has_nonzero_cross_pairing hz
+    have hBF : fockMetric.η v (fockEquiv w) ≠ 0 := by
+      dsimp [v]
+      rwa [fockMetric_equiv]
+    obtain ⟨x, hx, hmass, hr⟩ := PacketMass.exists_unit_mass_small_residual
+      fockMetric fockMetric_hermitian fockSpectral heigen hm hBF hτ
+    exact ⟨x, hx, by rw [hmass, norm_one], hr⟩
+  · let q := ‖fockMetric.η v v‖
+    let x := PacketMass.normalize q v
+    have hq : 0 < q := norm_pos_iff.mpr hm
+    have hs : (Real.sqrt q : ℂ) ≠ 0 := by
+      exact_mod_cast (ne_of_gt (Real.sqrt_pos.mpr hq))
+    have hx : x ≠ 0 := smul_ne_zero (inv_ne_zero hs) hv
+    have he : fockSpectral x = spectralParam s • x := by
+      simp only [x, PacketMass.normalize, map_smul, heigen, smul_comm]
+    refine ⟨x, hx, XiAlgebraicMass.absolute_normalized_mass fockMetric v hm, ?_⟩
+    rw [he, sub_self, norm_zero]
+    exact hτ
+
+/-- The normed realization preserves the paired obstruction exactly. -/
+theorem fock_paired_residual_norm_of_unit_mass (s : ℂ) (x : fockDomain)
+    (hm : ‖fockMetric.η x x‖ = 1) :
+    ‖fockMetric.toScalarHomogeneousForm.defect x
+      (fockSpectral x - spectralParam s • x)‖ = 2 * |s.re - 1 / 2| :=
+  PacketMass.paired_residual_norm_of_unit_mass fockMetric fockSpectral x s hm
+    (fockMetric_symmetric x x)
+
+end Reinmann.FockNormedArithmetic

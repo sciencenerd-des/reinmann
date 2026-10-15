@@ -1,0 +1,28 @@
+safe-verify: shortcut scan passed for 96 Lean file(s).
+'Reinmann.ScalarHomogeneousForm.defect_eq_of_eigenpair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ScalarHomogeneousForm.eigenvalue_conj_eq_of_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ScalarHomogeneousForm.isotropic_of_nonreal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.norm_spectralParam_sub_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ScalarHomogeneousForm.critical_distance_mass_eq_defect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.ScalarHomogeneousForm.critical_distance_le_of_defect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.AdditiveScalarForm.skew_mass_eq_defect_sub_residual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.AdditiveScalarForm.critical_distance_le_of_residual_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.riemannHypothesis_of_localForm_eigendata' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.riemannHypothesis_of_localForm_submodule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.riemannHypothesis_of_pseudoHermitian_via_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.riemannHypothesis_of_localForm_approximation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.swapForm_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.swapForm_nondegenerate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.action_form_symmetric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.eigenvector_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.eigenvalue_I' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.eigenvector_isotropic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PseudoHermitianIsotropy.eigenvalue_nonreal' depends on axioms: [propext, Classical.choice, Quot.sound]

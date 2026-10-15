@@ -1,0 +1,39 @@
+import Reinmann.XiAlgebraicJetSpace
+import Reinmann.XiAlgebraicJetForm
+import Reinmann.XiAlgebraicMass
+
+#print axioms Reinmann.XiAlgebraicJetSpace.higherJet_diagonal
+#print axioms Reinmann.XiAlgebraicJetSpace.jets_at_parameter_linearIndependent
+#print axioms Reinmann.XiAlgebraicJetSpace.shifted_jet_zero
+#print axioms Reinmann.XiAlgebraicJetSpace.shifted_jet_succ
+#print axioms Reinmann.XiAlgebraicJetSpace.shifted_power_kills_jet
+#print axioms Reinmann.XiAlgebraicJetSpace.jet_mem_maxGenEigenspace
+#print axioms Reinmann.XiAlgebraicJetSpace.span_jets_le_maxGenEigenspace
+#print axioms Reinmann.XiAlgebraicJetSpace.parameter_spans_independent
+#print axioms Reinmann.XiAlgebraicJetSpace.jetFamily_linearIndependent
+#print axioms Reinmann.XiAlgebraicJetSpace.realize_injective
+#print axioms Reinmann.XiAlgebraicJetSpace.realize_single
+#print axioms Reinmann.XiAlgebraicJetSpace.coordinatesEquiv_coe
+#print axioms Reinmann.XiAlgebraicJetSpace.jet_mem_core
+#print axioms Reinmann.XiAlgebraicJetSpace.coordinates_jet
+#print axioms Reinmann.XiAlgebraicJetSpace.derivative_mem_core
+#print axioms Reinmann.XiAlgebraicJetSpace.derivative_mem_arithmeticDomain
+#print axioms Reinmann.XiAlgebraicJetSpace.jetState_nonzero
+#print axioms Reinmann.XiAlgebraicJetSpace.coherent_state_eigen
+#print axioms Reinmann.XiAlgebraicJetForm.pairing_hermitian
+#print axioms Reinmann.XiAlgebraicJetForm.pairing_single
+#print axioms Reinmann.XiAlgebraicJetForm.gram_hermitian
+#print axioms Reinmann.XiAlgebraicJetForm.iteratedDeriv_conj_function
+#print axioms Reinmann.XiAlgebraicJetForm.rawGram_zero_left_conj
+#print axioms Reinmann.XiAlgebraicJetForm.gram_zero_left
+#print axioms Reinmann.XiAlgebraicJetForm.arithmeticForm_hermitian
+#print axioms Reinmann.XiAlgebraicJetForm.arithmeticForm_jets
+#print axioms Reinmann.XiAlgebraicJetForm.coherentState_eigen
+#print axioms Reinmann.XiAlgebraicJetForm.coherentState_mass
+#print axioms Reinmann.XiAlgebraicJetForm.coherent_jet_partner_pairing
+#print axioms Reinmann.XiAlgebraicJetForm.zero_has_nonzero_arithmetic_cross_pairing
+#print axioms Reinmann.XiAlgebraicMass.absolute_normalized_mass
+#print axioms Reinmann.XiAlgebraicMass.isotropic_zero_has_packet_mass_bounds
+#print axioms Reinmann.XiAlgebraicMass.every_xi_zero_has_unit_absolute_mass
+#print axioms Reinmann.XiAlgebraicMass.every_strip_zero_has_unit_absolute_mass
+#print axioms Reinmann.XiAlgebraicMass.riemannHypothesis_of_arithmetic_unit_mass_paired_budget

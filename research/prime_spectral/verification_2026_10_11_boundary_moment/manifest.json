@@ -1,0 +1,48 @@
+{
+  "captured_at_utc": "2026-10-12T11:48:36.066357+00:00",
+  "status": "numerical certificates and targeted Lean build passed; separate axiom audit incomplete after timeout",
+  "checks": {
+    "python_tests": 33,
+    "rectangle_cells": 1024,
+    "point_checks": 16,
+    "targeted_lean_build": "passed; see lean_build.log",
+    "lean_axiom_audit": {
+      "status": "incomplete_timeout",
+      "seconds": 90
+    }
+  },
+  "runtime": {
+    "python": "3.12.11",
+    "python-flint": "0.8.0",
+    "mpmath": "1.4.1",
+    "numpy": "2.5.4"
+  },
+  "source_sha256": {
+    "experiments/prime_spectral/boundary_moment_adjoint.py": "b1254f336492146236ee035444f15bb1a999486365435abcfa581c07fbcacff3",
+    "experiments/prime_spectral/test_boundary_moment_adjoint.py": "78fb35b9810e67f110ab2fe910eba718164ca94cbab166c98f8c37a420c53aff",
+    "Reinmann/WeilAdjointPairing.lean": "22eac478b5a34bf225b4fb00722a90d392e22d64a6f18f9c79562e2800511397",
+    "research/prime_spectral/BOUNDARY_MOMENT_ADJOINT_2026_10_12.md": "55a547962c0aff02eb1c07c65f595712086fbf63deed01180bd5dd13ae7acad6"
+  },
+  "artifact_sha256": {
+    "adjoint_regression.log": "9c7d0acd05f747c7c22b8ca6c222245b1d1f0609efdee1a0241559f780db1af8",
+    "axiom_audit.lean": "8413c51328c62d5995cd736e09e57070ce59f06a694bf79e9f72571f59e17c8d",
+    "boundary_moment_N16_M128.json": "e6695d93ce05ae62b4eeeb041c4ace1613124fddf3c602b4b3a1f02fb75095a0",
+    "boundary_moment_N16_M128_cover16x8.json": "b8cd1c1eb85288aa708004c89ad94e7377343b67295a5b515272b7017ea32218",
+    "boundary_moment_N32_M256.json": "970f50fddd9a4fa9cabb59a0c3c64cf2e517fdd76b4e2dfe3ba14c39ae86a97e",
+    "boundary_moment_N32_M256_cover16x8.json": "70719307f93b3a78b1049afed56d7ec49d959017004194d39d91069b6963dac4",
+    "canonical_regression.log": "abcb5f8f4eea59b9ea05969ea0b860530645068f0f926a6bbbd5ec2d0bb4ba19",
+    "generation_N16_M128.log": "b0f712764b500bd16adee8445df8fef97a0ddb1c5f5b3848d8dd25ade644a622",
+    "generation_N16_M128_cover16x8.log": "b0f712764b500bd16adee8445df8fef97a0ddb1c5f5b3848d8dd25ade644a622",
+    "generation_N32_M256.log": "b0f712764b500bd16adee8445df8fef97a0ddb1c5f5b3848d8dd25ade644a622",
+    "generation_N32_M256_cover16x8.log": "b0f712764b500bd16adee8445df8fef97a0ddb1c5f5b3848d8dd25ade644a622",
+    "lean_axiom_status.json": "80d4a70dd6fdd6bde2f403efa07eedd29b6c35cfb1e5f0be815dc69a6be3c739",
+    "lean_axioms.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lean_build.log": "3cf7a716125eb76ac1906b51a86667755b807fc41d2a0b3995e75ac2c780ead3",
+    "lean_compile.log": "964e1ddf04b0cfd1dcda729b3d9c624e253d16f54fe4e3691369af9c3dbb7185",
+    "matrix_C2_N32_M256.json": "b7a01c56517f077832dd9f27b8a3665363419c573fd7d05998eda19cd61fd696",
+    "matrix_C3_N32_M256.json": "6e180251ae68d2a7aab741845af7d77b6e883efbbc7bac03b45ce296301fb765",
+    "tests.log": "02624d15c2a5f9fff46a8fdc9502cb036ed21927282420f6b4024b9c5e1d795c"
+  },
+  "rh_proved": false,
+  "trust_boundary": "Written operator arguments plus Arb; abstract Lean lemmas build, full Weil instance is not formalized."
+}

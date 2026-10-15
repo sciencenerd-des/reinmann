@@ -1,0 +1,11 @@
+coefficient generation 160 4096
+coefficients complete seconds 1.8924633749993518
+rank 10 {'rank': 10, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9122033750172704
+rank 20 {'rank': 20, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9189129160367884
+rank 30 {'rank': 30, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9226462499937043
+rank 40 {'rank': 40, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9424532080302015
+rank 50 {'rank': 50, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9460101250442676
+rank 60 {'rank': 60, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9493515000212938
+rank 70 {'rank': 70, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9520210830378346
+rank 80 {'rank': 80, 'positive': 81, 'negative': 0, 'unresolved': 0} unresolved working cells 0 seconds 1.9540041660075076
+result None

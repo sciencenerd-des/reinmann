@@ -1,0 +1,15 @@
+{
+  "status": "recorded_before_new_q17_window_trials",
+  "recorded_utc": "2026-10-13T16:25:49.497543+00:00",
+  "origin": "User prediction supplied before this research round",
+  "target_C": 140,
+  "prediction_interval_C": [
+    126,
+    154
+  ],
+  "assumed_offset_b": 0.163,
+  "assumed_gamma": 105.15528687608719,
+  "assumed_resolution_ratio": 0.5,
+  "degree_one_resolution": "T_star=2*pi*C/q; r=T_star/gamma",
+  "scope": "Exploratory prediction from negative-window upper bounds, not a zero-exclusion theorem or a validated statistical model."
+}

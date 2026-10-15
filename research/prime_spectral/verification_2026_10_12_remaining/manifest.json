@@ -1,0 +1,46 @@
+{
+  "status": "verified_bounded_research_results_with_explicit_open_theorems",
+  "verified_at_utc": "2026-10-12T13:45:54.831378+00:00",
+  "branch": "codex/xi-eigenvector-reduction",
+  "tests": {
+    "passed": 15,
+    "log": "remaining_tests.log"
+  },
+  "results": {
+    "D1": "C3 degree32 full residual projector bound <0.425",
+    "D2": "N3(0.1)=4; proposed exact staircase at this threshold refuted; asymptotic open",
+    "D3": "written complete-packet bound with explicit all-zero tail; universal ordinate-only region open",
+    "D4": "DH off-line zero, finite gates, 6400 positive solid minors, and negative full-form C31 trial; first negative minor and smallest full negative window open",
+    "D5": "prior precise C3.2 bounded self-adjoint norm robustness note retained",
+    "D6": "written infinite-index translation obstruction and Schur inertia theorem; effective induction open"
+  },
+  "artifacts_sha256": {
+    "research/prime_spectral/verification_2026_10_12_remaining/ritz_C3_N32.json": "e88bc3ecbaddbe0affb4b5b823cde59553fc3fdb14948ba28515ae66075321e3",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_toeplitz_rank80_shift80.json": "fef542270ccd6ab837a98ca5d56e73ef0edbcfea7c6a7a98d0fc810f1fdd5a90",
+    "research/prime_spectral/verification_2026_10_12_remaining/C3_N32_full_cluster.json": "2e4678fa89ff6b0570e45eb10a408e13a11675948a49359b357e5dbde5c01e6f",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_weil_C31_N60.json": "b3c298d07fac4b051abfdc78e8347fc5b7a56be06b23bec8403914f261ceadbf",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_zero_and_finite_gates.json": "dccb47be2b796952273f9dc7b4789fa070cc51c9575fee7057c91c3d7f15cecf",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_toeplitz_scan.log": "7bc24920e83315913364986668a4c2b782e8b2561fbe9fb9f21849377d80e3f9",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_tests.log": "52526977a1c9b4db16de5b98029a6d191b4a7d39079a8d50914cecac44bf0823",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_weil_C31_N60.log": "27cdc1f4e18010980d8232602abf8bd841567fae924e43840644bb51334cc315",
+    "research/prime_spectral/verification_2026_10_12_remaining/remaining_tests.log": "f0c1f596a2a790319b03fd9d2a5347894ef66479d384a897ad8e7cb7f2507e96",
+    "research/prime_spectral/verification_2026_10_12_remaining/C3_N32_full_cluster.log": "51773ca290109b41a9f841d8199f55b9f3488899a70330c02487f688a9841329",
+    "research/prime_spectral/verification_2026_10_12_remaining/dh_zero_and_gates.log": "18f5f145f28652e5427839b503bb67db3bb1c4f81bc768a0b8fb0db70d1a4c2a",
+    "experiments/prime_spectral/refine_cluster.py": "cfee92da4003c703fbda4ff97247723a513db71a54135a41684e8d0fc5af4734",
+    "experiments/prime_spectral/dh_weil_certificate.py": "8762e4d754d2dc5bf09ee7ee3f4c1daab5769af53c2f2a93d4814a8bb417d89b",
+    "experiments/prime_spectral/dh_toeplitz_scan.py": "d87eb1be29ebd658df190644e5099d07a6c8e0dc7558802ebcbbf9b714a3bdca",
+    "experiments/prime_spectral/dh_zero_and_gates.py": "66daade31ee82afe19dd16353384121b7c380f8da147535157030944eedb04b2",
+    "experiments/prime_spectral/window_packet_bound.py": "d572c5abfdb2506a8d842a47c4b2acd05ef0c8f81ccd2a1a192851703bb16b03",
+    "experiments/prime_spectral/test_refine_cluster.py": "d7cf110d06655fb578f45350a3768c852c72c37199f8edbf1c42247dad4b904b",
+    "experiments/prime_spectral/test_dh_research_controls.py": "43cd2337f9d0088e88438e547222649680189290c90d7b2059d675310a88c315",
+    "experiments/prime_spectral/test_window_packet_bound.py": "127a2ed3f0488e68d95e547288caef921cc7fa367e1f24f9507434a8f49810b6",
+    "research/prime_spectral/DIRECTIONS_OUTCOME_2026_10_12.md": "8fd7817b7e7d801061b1c987ac839660c6a34375027375169dfca10c3738d590",
+    "research/prime_spectral/DH_FALSIFICATION_2026_10_12.md": "fe6a2b5e40ac5826897f96c88738eba7799cb88b12ceae1c05bb10d2eb578949",
+    "research/prime_spectral/WINDOW_PACKET_THEOREM_2026_10_12.md": "8a4bad5db7c359b0b494c811a0d50e12cd700de0f0e3bf113fe0a8a5228185cb",
+    "research/prime_spectral/INERTIA_INDUCTION_OBSTRUCTION_2026_10_12.md": "8332a5c7ae4a70fe36df857d87fcd7b134cc73ea58845bf5c8164d7d172e62f9",
+    "README.md": "aa37b646f7030a10b557c2c3b972afe453cbc645a7070cd421edeb8e2a7957be",
+    "research/RESEARCH_STATUS_2026_10_11.md": "8f242d8ebcb640119653228d3635cfd10b7c520936509ef570af02f00a057bf3"
+  },
+  "dependency_scope": "Existing containing-support full comparison and analytic operator/domain arguments retained. No fresh full comparison regeneration or new Lean validation in this batch.",
+  "novelty_scope": "No novelty claim; DH negative-window transition is an independently assembled replication of prior computational work."
+}

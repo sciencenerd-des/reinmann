@@ -1,0 +1,50 @@
+safe-verify: shortcut scan passed for 110 Lean file(s).
+'Reinmann.XiAlgebraicJetSpace.higherJet_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.jets_at_parameter_linearIndependent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.shifted_jet_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.shifted_jet_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.shifted_power_kills_jet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.jet_mem_maxGenEigenspace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.span_jets_le_maxGenEigenspace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.parameter_spans_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.jetFamily_linearIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.realize_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.realize_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.coordinatesEquiv_coe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.jet_mem_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.coordinates_jet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.derivative_mem_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.derivative_mem_arithmeticDomain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.jetState_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetSpace.coherent_state_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.pairing_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.pairing_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.gram_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.iteratedDeriv_conj_function' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.rawGram_zero_left_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.gram_zero_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.arithmeticForm_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.arithmeticForm_jets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.coherentState_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.coherentState_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.coherent_jet_partner_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicJetForm.zero_has_nonzero_arithmetic_cross_pairing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAlgebraicMass.absolute_normalized_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiAlgebraicMass.isotropic_zero_has_packet_mass_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAlgebraicMass.every_xi_zero_has_unit_absolute_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAlgebraicMass.every_strip_zero_has_unit_absolute_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.XiAlgebraicMass.riemannHypothesis_of_arithmetic_unit_mass_paired_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

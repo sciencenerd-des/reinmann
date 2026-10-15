@@ -1,0 +1,34 @@
+{
+  "status": "exact_synthetic_checks_passed",
+  "sympy_version": "1.14.0",
+  "cases": [
+    {
+      "polynomial": "16*z**4 - 32*z**3 + 28*z**2 - 12*z + 3",
+      "degree": 4,
+      "jet_order_through": 3,
+      "matrix_dimension": 12,
+      "entries_compared": 144,
+      "reflected_entries": 48,
+      "nonreflected_entries": 96,
+      "hermitian_matrix": true,
+      "green_identity_with_nonzero_boundary": true,
+      "input_is_riemann_xi": false
+    },
+    {
+      "polynomial": "256*z**8 - 1024*z**7 + 1856*z**6 - 1984*z**5 + 1376*z**4 - 640*z**3 + 200*z**2 - 40*z + 5",
+      "degree": 8,
+      "jet_order_through": 3,
+      "matrix_dimension": 12,
+      "entries_compared": 144,
+      "reflected_entries": 48,
+      "nonreflected_entries": 96,
+      "hermitian_matrix": true,
+      "green_identity_with_nonzero_boundary": true,
+      "input_is_riemann_xi": false
+    }
+  ],
+  "entries_compared": 288,
+  "scope": "Synthetic polynomial diagnostics only; no Xi certificate or RH proof.",
+  "rh_proved": false,
+  "lean_construction_verified": false
+}

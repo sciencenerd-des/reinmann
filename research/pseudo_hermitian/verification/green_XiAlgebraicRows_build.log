@@ -1,0 +1,43 @@
+⚠ [3435/3449] Replayed Reinmann.PseudoHermitianLocal
+warning: Reinmann/PseudoHermitianLocal.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3442/3449] Replayed Reinmann.XiAnnihilator
+warning: Reinmann/XiAnnihilator.lean:167:2: Try `simp at hm` instead of `simpa using hm`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3445/3449] Replayed Reinmann.XiHigherJetDomain
+warning: Reinmann/XiHigherJetDomain.lean:82:2: Try `simp at h` instead of `simpa using h`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Reinmann/XiHigherJetDomain.lean:165:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiHigherJetDomain.lean:210:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiHigherJetDomain.lean:210:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3447/3449] Replayed Reinmann.XiHigherJetCoupling
+warning: Reinmann/XiHigherJetCoupling.lean:106:4: Try `simp at hd` instead of `simpa using hd`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3448/3449] Replayed Reinmann.XiAlgebraicJetSpace
+warning: Reinmann/XiAlgebraicJetSpace.lean:130:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Reinmann/XiAlgebraicJetSpace.lean:144:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3449/3449] Built Reinmann.XiAlgebraicRows (1927s)
+warning: Reinmann/XiAlgebraicRows.lean:76:39: This simp argument is unused:
+  higherJet_apply_lt s (by omega : 0 < p + 1)
+
+Hint: Omit it from the simp argument list.
+  simp [constantRow, realize_single,̵ ̵h̵i̵g̵h̵e̵r̵J̵e̵t̵_̵a̵p̵p̵l̵y̵_̵l̵t̵ ̵s̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵ ̵:̵ ̵0̵ ̵<̵ ̵p̵ ̵+̵ ̵1̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (3449 jobs).

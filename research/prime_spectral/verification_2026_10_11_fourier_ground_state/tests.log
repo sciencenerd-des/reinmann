@@ -1,0 +1,14 @@
+test_both_full_comparison_sectors_replay (test_full_ground_fourier.FullGroundFourierTests.test_both_full_comparison_sectors_replay) ... ok
+test_complement_and_provenance_tampering_rejected (test_full_ground_fourier.FullGroundFourierTests.test_complement_and_provenance_tampering_rejected) ... ok
+test_exact_unit_trial_saturates_sharp_phase_distance (test_full_ground_fourier.FullGroundFourierTests.test_exact_unit_trial_saturates_sharp_phase_distance) ... ok
+test_full_strip_functional_and_normalized_profile (test_full_ground_fourier.FullGroundFourierTests.test_full_strip_functional_and_normalized_profile) ... ok
+test_invalid_energy_inputs_rejected (test_full_ground_fourier.FullGroundFourierTests.test_invalid_energy_inputs_rejected) ... ok
+test_lower_bound_monotonicity_and_negative_ground_allowed (test_full_ground_fourier.FullGroundFourierTests.test_lower_bound_monotonicity_and_negative_ground_allowed) ... ok
+test_missing_independent_integral_replay_rejected (test_full_ground_fourier.FullGroundFourierTests.test_missing_independent_integral_replay_rejected) ... ok
+test_saved_genuine_ground_bounds_and_origin_protection (test_full_ground_fourier.FullGroundFourierTests.test_saved_genuine_ground_bounds_and_origin_protection) ... ok
+test_wider_frequency_band_improves_full_state_error (test_full_ground_fourier.FullGroundFourierTests.test_wider_frequency_band_improves_full_state_error) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.273s
+
+OK

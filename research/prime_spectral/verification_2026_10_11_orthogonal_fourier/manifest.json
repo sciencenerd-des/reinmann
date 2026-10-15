@@ -1,0 +1,46 @@
+{
+  "captured_at_utc": "2026-10-11T07:35:52.393127+00:00",
+  "status": "ten tests and whole-strip scalar certificate passed",
+  "scope": "Written operator/Hilbert-space inputs plus Arb enclosure; new orthogonal theorem not Lean-formalized",
+  "checks": {
+    "new_tests": 10,
+    "independent_complex_integrals": 4,
+    "positive_height_rectangles_per_strip": 8192,
+    "zero_height_intervals_per_strip": 512,
+    "strip_heights": [
+      "0",
+      "2/5",
+      "49/100"
+    ],
+    "infinite_real_frequency_tail": "analytic bound included",
+    "scalar_lean_axiom_audit": "five original theorems passed; exact hashes checked",
+    "source_compilation": "Python py_compile passed",
+    "links_whitespace": "passed",
+    "git_diff_check": "passed"
+  },
+  "source_sha256": {
+    "experiments/prime_spectral/orthogonal_fourier_transfer.py": "8462640b169fbb6f0836c05d3c1711b6a4ee64f121ad2ec0a4c5aa27cc52386e",
+    "experiments/prime_spectral/test_orthogonal_fourier_transfer.py": "1c85a724c7ec4619da30a02b3280bbb18ca5f5439a05332337d80c998276a0ef",
+    "research/prime_spectral/ORTHOGONAL_FOURIER_TRANSFER_2026_10_11.md": "6043af15f619e3a079f20ff2403379ed3478aedc973c58a0877f32c99e6bf4b8",
+    "research/prime_spectral/FULL_GROUND_FOURIER_2026_10_11.md": "556ea30067deb3b4addea289e5d0c43638fd54b59742678f202e2fe73a692086",
+    "research/RESEARCH_STATUS_2026_10_11.md": "bfee8ee31b1ba59749bcc718e6fc6a2845e17287bd4b16dd5446d1471f3e9a0f"
+  },
+  "dependency_sha256": {
+    "research/prime_spectral/verification_2026_10_11_fourier_ground_state/manifest.json": "b4ab7a7e781f8335ddbcabe79fd42962fd1e49b9917112dc477a2a192cab00eb",
+    "research/prime_spectral/verification_2026_10_11_fourier_ground_state/full_ground_fourier.json": "a660af014ed3e13754dd705b4b5c18034222d8e0d8cbec9b223bbd9f623757e3"
+  },
+  "artifact_sha256": {
+    "research/prime_spectral/verification_2026_10_11_orthogonal_fourier/generation.log": "6cde96123e74de4b84d83de8551e315e606c4b47ae99832e233d423166c16714",
+    "research/prime_spectral/verification_2026_10_11_orthogonal_fourier/orthogonal_transfer.json": "f31cbdf3ab04fe1393b0badbbe90dec6833ffbc0c58b48d26f32bab98d58bef4",
+    "research/prime_spectral/verification_2026_10_11_orthogonal_fourier/tests.log": "48b676de58f576210e08fc8a0a0351b873c8efdaf34ffeda66eeee2fc137d902"
+  },
+  "remaining": [
+    "Actual full operator-domain adjoint correction and entire residual",
+    "Support-dependent arithmetic candidate estimate",
+    "Growing-support Xi identification"
+  ],
+  "rh_proved": false,
+  "novelty_claim": false,
+  "documentation_refreshed_at_utc": "2026-10-11T09:09:34.594934+00:00",
+  "documentation_refresh_scope": "Linked the now-implemented adjoint test; numerical/test sources unchanged"
+}

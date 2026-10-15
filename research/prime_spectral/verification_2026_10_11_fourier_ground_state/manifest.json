@@ -1,0 +1,169 @@
+{
+  "captured_at_utc": "2026-10-11T07:35:51.367268+00:00",
+  "status": "19 numerical tests, five certificate replays, scalar Lean compilation and five-theorem standard-axiom audit passed",
+  "scope": "Written full-operator analysis plus Arb arithmetic; not a formal operator proof",
+  "checks": {
+    "baseline_adaptive_integrals": 4,
+    "near_comparison_adaptive_integrals": 8,
+    "band128_comparison_adaptive_integrals": 8,
+    "initial_unit_tests_passed": 7,
+    "final_unit_tests": 9,
+    "scalar_lean": "passed, exit code 0; one unused-variable warning",
+    "baseline_unit_tests": 10,
+    "local_links": "passed",
+    "python_compilation": "passed",
+    "git_diff_check": "passed",
+    "scalar_lean_axioms": "passed: five theorems, only propext/Classical.choice/Quot.sound",
+    "green_canonical_build": "passed; separate queue",
+    "green_standard_axiom_audit": "48 theorems; passed and source/log hashes checked"
+  },
+  "source_sha256": {
+    "Reinmann/WeilGroundFourier.lean": "f63df195e40ce208a2d6e700a4aa4781cf9cb8ad456229bc6cc8c9276a81340f",
+    "experiments/prime_spectral/full_ground_fourier.py": "4616c909cdc9220e03770b3e97fbe3c15643b3bd00e644b90049a37068625483",
+    "experiments/prime_spectral/test_full_ground_fourier.py": "0086d7db3cde51935e78aaa06012f8ee962d5f48318f76a06026d5f953a7df81",
+    "research/prime_spectral/FULL_GROUND_FOURIER_2026_10_11.md": "556ea30067deb3b4addea289e5d0c43638fd54b59742678f202e2fe73a692086",
+    "research/prime_spectral/FORM_CORE_REAL_ZERO_TRANSFER_2026_10_11.md": "459d9aba7f658fa9a211f24374f89cda869ef51b3e4dde3b69666cb6511bb220",
+    "research/RESEARCH_STATUS_2026_10_11.md": "bfee8ee31b1ba59749bcc718e6fc6a2845e17287bd4b16dd5446d1471f3e9a0f"
+  },
+  "numerical_artifact_sha256": {
+    "band128_three_lower_operator.json": "925699c043f80e8134189fcb2b683a1fc61df48d8b3944d713c073079fdea3f9",
+    "band128_three_replay.json": "25f75172c0820e9450ce8cbaaf3e169bddc158a95f91ad914c2ca88c5f24032b",
+    "band128_two_lower_operator.json": "dd8d925f67c9dd826fb91fa11100bbbe94590a15111d1cfe10baf237d3ddb5a6",
+    "band128_two_replay.json": "8874a78ac9a3ecc0e00ebbdb33f61836ca2444c1de9f44c6d8edfd651c2f56a8",
+    "baseline_replay.json": "89df2a9575a2594d8350a228f63da45e2db64a89b8bf699897d4756fc9646df2",
+    "full_ground_fourier.json": "a660af014ed3e13754dd705b4b5c18034222d8e0d8cbec9b223bbd9f623757e3",
+    "full_ground_fourier_band128.json": "a660af014ed3e13754dd705b4b5c18034222d8e0d8cbec9b223bbd9f623757e3",
+    "full_ground_fourier_band64.json": "b5b214d49da20499749339fb1d2c2fc0712a987eef00d52aaaf15e24df86fb76",
+    "near_three_lower_operator.json": "80fee82ca123fed65317ec38103d521de2dea12710c97e9d360362fae5f038ad",
+    "near_three_replay.json": "f39718f085c6d948ba22607d1015bd97e4ee110033c1a2b8ebdd2073e6a29196",
+    "near_two_lower_operator.json": "2f8a5952c11ddb4494cc62f53342c0eb8cf52f0f2e4b2a7e5c9a287ebe6b0b3d",
+    "near_two_replay.json": "debf39304abdb94a25cb9a4802c577e93174329bb21bce527ddd57432aa42525",
+    "sine_difference_identity.json": "da57af77207e43dbb8231f85a6b31bc61b369cabaa11a61ef1af1f39fbc65dfd"
+  },
+  "remaining": [
+    "Growing-support energy/gap ratio and normalization control",
+    "Arithmetic comparison with Xi-producing candidate",
+    "Formal Hilbert-space and Fourier-integral bridge",
+    "Formalization and independent analytic review of the written closed geometric Weil form identity"
+  ],
+  "rh_proved": false,
+  "green_tracker_snapshot": {
+    "record_kind": "canonical check execution tracker, not a completion certificate",
+    "source_sha256": {
+      "Reinmann/XiGreenGram.lean": "e8df9adb726a4a9f08f2d679fbafba82953c71e279e3a1d604bc4b97258d7016",
+      "Reinmann/XiAlgebraicRows.lean": "9fd5da0ec8d5095970704f37e7b648065139c75b6a3635591a760e76dc04cb57",
+      "Reinmann/XiGreenModel.lean": "98a19626e714c87291d6a566252a6fe2d1a3f31d8aca49333fb90693def46b61"
+    },
+    "started_at_utc": "2026-10-10T19:07:37.009685+00:00",
+    "checks": [
+      {
+        "label": "lake build Reinmann.XiGreenGram",
+        "command": [
+          "lake",
+          "build",
+          "Reinmann.XiGreenGram"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_XiGreenGram_build.log",
+        "status": "passed",
+        "pid": 72143,
+        "exit_code": 0,
+        "log_sha256": "6034afa557750bc609d77f1069faee926398896ccfd9cab8f17e1f575cb900cb"
+      },
+      {
+        "label": "lake build Reinmann.XiAlgebraicRows",
+        "command": [
+          "lake",
+          "build",
+          "Reinmann.XiAlgebraicRows"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_XiAlgebraicRows_build.log",
+        "status": "passed",
+        "pid": 84862,
+        "exit_code": 0,
+        "log_sha256": "16f16b8a4103b701f87fa876875e6df04c41e878a69e38d2df40878206315257"
+      },
+      {
+        "label": "lake build Reinmann.XiGreenModel",
+        "command": [
+          "lake",
+          "build",
+          "Reinmann.XiGreenModel"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_XiGreenModel_build.log",
+        "status": "passed",
+        "pid": 97286,
+        "exit_code": 0,
+        "log_sha256": "49c211ea960d0006d0fd0b3ae1e19e1a661a14c90dc7e10206c62655437c62dc"
+      },
+      {
+        "label": "lake build",
+        "command": [
+          "lake",
+          "build"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_full_build.log",
+        "status": "passed",
+        "pid": 8262,
+        "exit_code": 0,
+        "log_sha256": "5fc799f2d5beca735d487d0ad8c09c8cfdc40cf8533c8c0496296cd81e8ecd2a"
+      },
+      {
+        "label": "safe-verify canonical Green audit",
+        "command": [
+          "bash",
+          "scripts/safe-verify.sh",
+          "research/pseudo_hermitian/green_model_axiom_audit.lean"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_canonical_axiom_audit.log",
+        "status": "passed",
+        "pid": 17450,
+        "exit_code": 0,
+        "log_sha256": "bb66551e5a81bb4ff24f2b488d936021a9582c0bb70edbe024ecb101a6a8fc86"
+      },
+      {
+        "label": "git diff --check",
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "log": "research/pseudo_hermitian/verification/green_diff_check.log",
+        "status": "passed",
+        "pid": 21146,
+        "exit_code": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "status": "requested_checks_completed",
+    "full_goal_complete": false,
+    "rh_proved": false,
+    "updated_at_utc": "2026-10-10T21:20:20.164128+00:00",
+    "root_imports_added_after_target_checks": [
+      "XiGreenGram",
+      "XiAlgebraicRows",
+      "XiGreenModel"
+    ]
+  },
+  "scalar_lean_compilation": {
+    "source": "Reinmann/WeilGroundFourier.lean",
+    "binary": "leanprover--lean4---v4.30.0/bin/lean",
+    "method": "direct compiler with existing dependency LEAN_PATH and -o .lake/build/lib/lean/Reinmann/WeilGroundFourier.olean",
+    "exit_code": 0,
+    "log_sha256": "c1a44ed600bfa0ccf2c3b5722bd9d2376f2fc3120c129ee910240d2fd8bbae8a",
+    "olean_sha256": "2a4f2eceb1ef60b47a66102b2c1a6923c1105f42abc1ed8417d00018d32adb8d",
+    "canonical_root_integration": false
+  },
+  "scalar_lean_axiom_check": {
+    "command": [
+      "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean",
+      "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/research/prime_spectral/verification_2026_10_11_fourier_ground_state/WeilGroundFourierAxiomAudit.lean"
+    ],
+    "exit_code": 0,
+    "source_sha256": "f63df195e40ce208a2d6e700a4aa4781cf9cb8ad456229bc6cc8c9276a81340f",
+    "audit_sha256": "62d82a63f91ccc0096237a6ea7fd67381c9031b9381be1ca8d6509eac33183a0",
+    "log_sha256": "d228acaf980cd8ca09e7685ccacdd766d3554eb16c1f1a4d75a87d55f5d23c80",
+    "completed_at_utc": "2026-10-11T06:41:19.339750+00:00"
+  },
+  "documentation_refreshed_at_utc": "2026-10-11T09:09:34.571232+00:00",
+  "documentation_refresh_scope": "Updated linked research results and table rendering; numerical/test sources unchanged"
+}

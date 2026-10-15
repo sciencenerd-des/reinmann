@@ -1,0 +1,15 @@
+test_exaggerated_finite_margin_cannot_verify (test_window_positivity.WindowPositivityTests.test_exaggerated_finite_margin_cannot_verify) ... ok
+test_fourier_constant_and_linear_normalizations (test_window_positivity.WindowPositivityTests.test_fourier_constant_and_linear_normalizations) ... ok
+test_insufficient_high_frequency_envelope_rejected (test_window_positivity.WindowPositivityTests.test_insufficient_high_frequency_envelope_rejected) ... ok
+test_invalid_compression_rejected (test_window_positivity.WindowPositivityTests.test_invalid_compression_rejected) ... ok
+test_omitted_space_allowance_cannot_be_zeroed (test_window_positivity.WindowPositivityTests.test_omitted_space_allowance_cannot_be_zeroed) ... ok
+test_pole_constant_and_linear_normalizations (test_window_positivity.WindowPositivityTests.test_pole_constant_and_linear_normalizations) ... ok
+test_prime_or_parity_removal_cannot_verify (test_window_positivity.WindowPositivityTests.test_prime_or_parity_removal_cannot_verify) ... ok
+test_saved_full_certificate_rechecks (test_window_positivity.WindowPositivityTests.test_saved_full_certificate_rechecks) ... ok
+test_schur_certificate_closes_when_linear_allowance_fails (test_window_positivity.WindowPositivityTests.test_schur_certificate_closes_when_linear_allowance_fails) ... ok
+test_schur_determinant_cannot_be_fabricated (test_window_positivity.WindowPositivityTests.test_schur_determinant_cannot_be_fabricated) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.487s
+
+OK

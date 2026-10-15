@@ -1,0 +1,16 @@
+test_asymptotic_sequence_against_independent_sine_integrals (test_boundary_moment_adjoint.BoundaryMomentTests.test_asymptotic_sequence_against_independent_sine_integrals) ... ok
+test_entire_saved_rectangle_and_points_replay (test_boundary_moment_adjoint.BoundaryMomentTests.test_entire_saved_rectangle_and_points_replay) ... ok
+test_full_tail_expansion_reconstructs_actual_omitted_rows (test_boundary_moment_adjoint.BoundaryMomentTests.test_full_tail_expansion_reconstructs_actual_omitted_rows) ... ok
+test_geometric_tail_dominates_all_admissible_sequence_extremes (test_boundary_moment_adjoint.BoundaryMomentTests.test_geometric_tail_dominates_all_admissible_sequence_extremes) ... ok
+test_ground_pairing_bound_against_complex_finite_geometry (test_boundary_moment_adjoint.BoundaryMomentTests.test_ground_pairing_bound_against_complex_finite_geometry) ... ok
+test_invalid_inputs_rejected (test_boundary_moment_adjoint.BoundaryMomentTests.test_invalid_inputs_rejected) ... ok
+test_larger_matrix_against_direct_geometric_entries (test_boundary_moment_adjoint.BoundaryMomentTests.test_larger_matrix_against_direct_geometric_entries) ... ok
+test_nonzero_constant_correction_has_explicit_boundary_tail (test_boundary_moment_adjoint.BoundaryMomentTests.test_nonzero_constant_correction_has_explicit_boundary_tail) ... ok
+test_regular_kernel_integral_representation (test_boundary_moment_adjoint.BoundaryMomentTests.test_regular_kernel_integral_representation) ... ok
+test_source_dependency_and_artifact_hashes (test_boundary_moment_adjoint.BoundaryMomentTests.test_source_dependency_and_artifact_hashes) ... ok
+test_stable_trial_pairing_matches_independent_target_coordinates (test_boundary_moment_adjoint.BoundaryMomentTests.test_stable_trial_pairing_matches_independent_target_coordinates) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 19.811s
+
+OK

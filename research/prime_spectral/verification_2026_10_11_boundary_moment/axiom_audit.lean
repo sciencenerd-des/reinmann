@@ -1,0 +1,7 @@
+import Reinmann.WeilAdjointPairing
+#print axioms Reinmann.WeilAdjointPairing.pairing_le_of_decomposition
+#print axioms Reinmann.WeilAdjointPairing.pairing_le_of_unit_trial
+#print axioms Reinmann.WeilAdjointPairing.orthogonal_remainder_sq
+#print axioms Reinmann.WeilAdjointPairing.pairing_le_min
+#print axioms Reinmann.WeilAdjointPairing.residual_pairing_identity
+#print axioms Reinmann.WeilAdjointPairing.adjoint_pairing_le

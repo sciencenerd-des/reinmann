@@ -1,0 +1,14 @@
+test_attribution_phase_and_dominance (test_control_calibration.CalibrationChecks.test_attribution_phase_and_dominance) ... ok
+test_closed_entries_against_original_integrals (test_control_calibration.CalibrationChecks.test_closed_entries_against_original_integrals) ... ok
+test_complete_symbol_panel_replay (test_control_calibration.CalibrationChecks.test_complete_symbol_panel_replay) ... ok
+test_correlation_basis_phase (test_control_calibration.CalibrationChecks.test_correlation_basis_phase) ... ok
+test_epstein_genus_coefficients (test_control_calibration.CalibrationChecks.test_epstein_genus_coefficients) ... ok
+test_final_negative_witnesses_reassembled (test_control_calibration.CalibrationChecks.test_final_negative_witnesses_reassembled) ... ok
+test_removable_point_images (test_control_calibration.CalibrationChecks.test_removable_point_images) ... ok
+test_shifted_fourier_transform_against_direct_integration (test_control_calibration.CalibrationChecks.test_shifted_fourier_transform_against_direct_integration) ... ok
+test_snapshot_mathematical_functions_unchanged (test_control_calibration.CalibrationChecks.test_snapshot_mathematical_functions_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 23.254s
+
+OK

@@ -1,0 +1,269 @@
+{
+  "status": "descriptive_seven_control_calibration_from_certified_negative_trials",
+  "controls": [
+    {
+      "name": "dh5",
+      "label": "DH5",
+      "gamma_degree": 1,
+      "parameter": 5,
+      "lowest_off_line_height": 85.6993484853776,
+      "offset_b": 0.3085171824566374,
+      "atlas_height": 340,
+      "positive_finite_evidence_C": "4014571/131072",
+      "negative_certificate_C": "1003691/32768",
+      "negative_C_float": 30.630218505859375,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 38.49106777434318,
+      "resolution_ratio": 0.44914072807578803
+    },
+    {
+      "name": "q13_label2",
+      "label": "DH13(2)",
+      "gamma_degree": 1,
+      "parameter": 13,
+      "lowest_off_line_height": 31.434205006363342,
+      "offset_b": 0.08362155597259124,
+      "atlas_height": 160,
+      "positive_finite_evidence_C": "138241/4096",
+      "negative_certificate_C": "17281/512",
+      "negative_C_float": 33.751953125,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 16.31305968950878,
+      "resolution_ratio": 0.5189588757280952
+    },
+    {
+      "name": "epstein5",
+      "label": "Epstein5",
+      "gamma_degree": 2,
+      "parameter": 5,
+      "lowest_off_line_height": 15.668249531278473,
+      "offset_b": 0.43296969748541414,
+      "atlas_height": 120,
+      "positive_finite_evidence_C": "81205/4096",
+      "negative_certificate_C": "20303/1024",
+      "negative_C_float": 19.8271484375,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 6.255974927695954,
+      "resolution_ratio": 0.39927720803827976
+    },
+    {
+      "name": "q17_label3",
+      "label": "DH17(3)",
+      "gamma_degree": 1,
+      "parameter": 17,
+      "lowest_off_line_height": 105.15528687608719,
+      "offset_b": 0.16330618481335835,
+      "atlas_height": 160,
+      "positive_finite_evidence_C": "34237/256",
+      "negative_certificate_C": "68481/512",
+      "negative_C_float": 133.751953125,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 49.434606275386635,
+      "resolution_ratio": 0.4701105169694354
+    },
+    {
+      "name": "q7_label3",
+      "label": "DH7(3)",
+      "gamma_degree": 1,
+      "parameter": 7,
+      "lowest_off_line_height": 31.58036054105471,
+      "offset_b": 0.5356987160930835,
+      "atlas_height": 160,
+      "positive_finite_evidence_C": "852533/65536",
+      "negative_certificate_C": "426333/32768",
+      "negative_C_float": 13.010650634765625,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 11.678332700743734,
+      "resolution_ratio": 0.36979732025420714
+    },
+    {
+      "name": "q13_label6",
+      "label": "DH13(6)",
+      "gamma_degree": 1,
+      "parameter": 13,
+      "lowest_off_line_height": 25.608746414146342,
+      "offset_b": 0.36217405807444913,
+      "atlas_height": 160,
+      "positive_finite_evidence_C": "691375/32768",
+      "negative_certificate_C": "1382897/65536",
+      "negative_C_float": 21.101333618164062,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 10.19873764242639,
+      "resolution_ratio": 0.398252123610103
+    },
+    {
+      "name": "epstein6",
+      "label": "Epstein6",
+      "gamma_degree": 2,
+      "parameter": 6,
+      "lowest_off_line_height": 15.117578533057195,
+      "offset_b": 0.30374912855615155,
+      "atlas_height": 120,
+      "positive_finite_evidence_C": "520653/16384",
+      "negative_certificate_C": "1041423/32768",
+      "negative_C_float": 31.781707763671875,
+      "modes": 192,
+      "bits": 2048,
+      "resolution_height": 7.230408965133205,
+      "resolution_ratio": 0.478278247361022
+    }
+  ],
+  "fits": [
+    {
+      "model": "r=a+k*b",
+      "coefficients": [
+        0.5413131248574574,
+        -0.32208451613105393
+      ],
+      "r_RMSE": 0.018263934026509117,
+      "leave_one_out": [
+        {
+          "name": "dh5",
+          "predicted_r": 0.4407438421535229,
+          "observed_upper_bound_r": 0.44914072807578803,
+          "C_relative_error_percent": -1.8695445318974158
+        },
+        {
+          "name": "q13_label2",
+          "predicted_r": 0.5095341217213236,
+          "observed_upper_bound_r": 0.5189588757280952,
+          "C_relative_error_percent": -1.8160887977007212
+        },
+        {
+          "name": "epstein5",
+          "predicted_r": 0.4026975189640871,
+          "observed_upper_bound_r": 0.39927720803827976,
+          "C_relative_error_percent": 1.7205893483415613
+        },
+        {
+          "name": "q17_label3",
+          "predicted_r": 0.496721816892022,
+          "observed_upper_bound_r": 0.4701105169694354,
+          "C_relative_error_percent": 5.6606476481607215
+        },
+        {
+          "name": "q7_label3",
+          "predicted_r": 0.367773903163257,
+          "observed_upper_bound_r": 0.36979732025420714,
+          "C_relative_error_percent": -0.5471692140871176
+        },
+        {
+          "name": "q13_label6",
+          "predicted_r": 0.4296944254373756,
+          "observed_upper_bound_r": 0.398252123610103,
+          "C_relative_error_percent": 7.895074492573273
+        },
+        {
+          "name": "epstein6",
+          "predicted_r": 0.4376527529589416,
+          "observed_upper_bound_r": 0.478278247361022,
+          "C_relative_error_percent": -16.26672629680793
+        }
+      ],
+      "sample_size": 7,
+      "scope": "Descriptive fit to finite-family negative-support upper bounds, not independent minimum-support measurements. No statistical confidence interval or universal theorem."
+    },
+    {
+      "model": "r=a+k*b+d*(degree-1)",
+      "coefficients": [
+        0.5403439276580891,
+        -0.34091656252156816,
+        0.02401362490106921
+      ],
+      "r_RMSE": 0.014935105827432864,
+      "leave_one_out": [
+        {
+          "name": "dh5",
+          "predicted_r": 0.43161892864111784,
+          "observed_upper_bound_r": 0.44914072807578803,
+          "C_relative_error_percent": -3.9011824890023306
+        },
+        {
+          "name": "q13_label2",
+          "predicted_r": 0.5040410792193716,
+          "observed_upper_bound_r": 0.5189588757280952,
+          "C_relative_error_percent": -2.8745623606098003
+        },
+        {
+          "name": "epstein5",
+          "predicted_r": 0.4365672557558361,
+          "observed_upper_bound_r": 0.39927720803827976,
+          "C_relative_error_percent": 19.551017716810826
+        },
+        {
+          "name": "q17_label3",
+          "predicted_r": 0.49158605580493975,
+          "observed_upper_bound_r": 0.4701105169694354,
+          "C_relative_error_percent": 4.568189406598755
+        },
+        {
+          "name": "q7_label3",
+          "predicted_r": 0.3351038666117266,
+          "observed_upper_bound_r": 0.36979732025420714,
+          "C_relative_error_percent": -9.381748255674616
+        },
+        {
+          "name": "q13_label6",
+          "predicted_r": 0.4227039496929148,
+          "observed_upper_bound_r": 0.398252123610103,
+          "C_relative_error_percent": 6.139785485927662
+        },
+        {
+          "name": "epstein6",
+          "predicted_r": 0.4409881996434659,
+          "observed_upper_bound_r": 0.478278247361022,
+          "C_relative_error_percent": -14.985563891129583
+        }
+      ],
+      "sample_size": 7,
+      "scope": "Descriptive fit to finite-family negative-support upper bounds, not independent minimum-support measurements. No statistical confidence interval or universal theorem."
+    }
+  ],
+  "q17_prediction_assessment": {
+    "status": "recorded_before_new_q17_window_trials",
+    "recorded_utc": "2026-10-13T16:25:49.497543+00:00",
+    "origin": "User prediction supplied before this research round",
+    "target_C": 140,
+    "prediction_interval_C": [
+      126,
+      154
+    ],
+    "assumed_offset_b": 0.163,
+    "assumed_gamma": 105.15528687608719,
+    "assumed_resolution_ratio": 0.5,
+    "degree_one_resolution": "T_star=2*pi*C/q; r=T_star/gamma",
+    "scope": "A certified negative endpoint lies in the forecast band. Positive finite evidence does not certify the minimum full onset or an exclusion law.",
+    "observed_negative_C": 133.751953125,
+    "negative_endpoint_in_prediction_interval": true,
+    "negative_endpoint_error_percent": -4.462890625000004,
+    "original_bracketing_linear_interpolation_C": 141.1420639058457
+  },
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_13_calibration/dh5_refined_atlas.json": "dcd26428e3a43e075379f9b7ea9d5a2f52a18e82531fa505d3dc0a238e06667b",
+    "research/prime_spectral/verification_2026_10_13_calibration/character5_label2_windows/search_N192_2048bits.json": "a4f2500d3f8d4f9a8909f5f2da50a50541204bc84831b34c1998c2319cb679e4",
+    "research/prime_spectral/verification_2026_10_13_calibration/q13_label2_refined_atlas.json": "3717343ca036a8c4ca1df736e643b896f2121ca0f7680b8bfcfae288418a2c4b",
+    "research/prime_spectral/verification_2026_10_13_calibration/character13_label2_windows/search_N192_2048bits.json": "4103443ac7804c9a6d97dcc3714cf3bcf5b44d1b47f4468b650d48cb252c0259",
+    "research/prime_spectral/verification_2026_10_13_calibration/epstein5_refined_atlas.json": "14e9c73088e381ca853f6ece799c4c7cf81ef5f18d39bd0e7d717df156ba4760",
+    "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/search_N192_2048bits.json": "bba9f944893a4d6727ee82b08f0ea135589c8cd5a341e724b2a7067b9c3464bc",
+    "research/prime_spectral/verification_2026_10_13_calibration/q17_label3_refined_atlas.json": "729b3bfcb4a44e43731a3dca010ce697ebc4e5c4bec7ab11182c4e88c3f42db1",
+    "research/prime_spectral/verification_2026_10_13_calibration/character17_label3_windows/search_N192_2048bits.json": "1c64307bbe3083b745b7ca2ab5cf44b0487154f833cc146d50f1e1336b28687f",
+    "research/prime_spectral/verification_2026_10_13_calibration/q7_label3_refined_atlas.json": "f0fc485e82e65ee49327057527b1a780837ba6b72e765ca734d592bfc604f7ed",
+    "research/prime_spectral/verification_2026_10_13_calibration/character7_label3_windows/search_N192_2048bits.json": "b12b7ad149ff2ec78ed1ca095d037b8a23aac68f7b45f1c5729061366be9d303",
+    "research/prime_spectral/verification_2026_10_13_calibration/q13_label6_refined_atlas.json": "013c37736520a97920ba9e9cf4d483b1a6fb3fd34f3570ab6e54f1806bc8ba69",
+    "research/prime_spectral/verification_2026_10_13_calibration/character13_label6_windows/search_N192_2048bits.json": "327878190dba0ae5086b558a9338091d22e982c9af85a42f3e568c04a71e7473",
+    "research/prime_spectral/verification_2026_10_13_calibration/epstein6_refined_atlas.json": "af9b16e2e693430b27270f4978dff9915ed68302a967914fdf22d0088a1fe303",
+    "research/prime_spectral/verification_2026_10_13_calibration/epstein6_label0_windows/search_N192_2048bits.json": "b2f8467743e9c4e70e9e8ffeb6a19768fd50b646ebaeb048f00b8d1987a17e27",
+    "research/prime_spectral/verification_2026_10_13_calibration/q17_prediction.json": "ade040e6439bce87e000822544bac504481ba32d32b4fac864df1de450d35e9f",
+    "research/prime_spectral/verification_2026_10_13_calibration/zero_attribution.json": "19d0b6fcce8ecc4dfa6f4557e76de183efbcd4114377006b7858204fbc461d2e"
+  },
+  "source_sha256": {
+    "build_control_calibration.py": "883bb57a2c270b4eef4ab6069bf43340159cdc243abb71b9f8d9b8a8fbbabe88"
+  },
+  "scope": "Seven finite-family negative upper bounds at common N=192, not seven minimum-window measurements. No universal Phi, small-offset asymptotic or zeta zero-exclusion claim."
+}

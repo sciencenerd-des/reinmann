@@ -1,0 +1,24 @@
+{
+  "status": "exact_separation_inputs_for_DH_shift_one_asymptotic_checked",
+  "first_two_critical_line_brackets": [
+    {
+      "lo": "81/16",
+      "hi": "41/8"
+    },
+    {
+      "lo": "143/16",
+      "hi": "9"
+    }
+  ],
+  "circle_radius_in_folded_variable": 64,
+  "algebraic_separation": "(41/8)^2 < 64 < (143/16)^2",
+  "positive_prefactor": "A=-1/(a B\u2032(a))>0 from a simple first real crossing of B(w)=F(-w), B(0)=1",
+  "written_conclusion": "D_(r,1)(F)=A a^(-r)+O(64^(-r)); eventual positivity only, without explicit last exceptional rank",
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_12_sector/atlas_H340.json": "f02849efb7cb282b922e856ec82ce0c9a0bc0b7250c7b624c1ac34c4d33af9bd",
+    "research/prime_spectral/verification_2026_10_12_sector/line_brackets_H340.json": "357ed5d417aef2898271c997d4b88b1bf543c898679617bb9aa610ffe50aa181",
+    "research/prime_spectral/verification_2026_10_12_sector/atlas_replay.json": "be7de191bb6394e034c2894d77eabdf0d28106c7c34d1ef15fe466bb59701e98",
+    "paper/dh_controls_paper.tex": "d775993f022a749b7b5fd4781002e8336608d10bc891ced0fab17b49f5fabd9a"
+  },
+  "scope": "Exact atlas inputs and rational separation plus written dominant-pole proof. No new minor scan, quantitative coefficient bound, other-shift conclusion or Lean theorem."
+}

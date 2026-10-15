@@ -1,0 +1,79 @@
+{
+  "status": "finite_family_search_with_certified_negative_endpoint",
+  "positive_finite_evidence_C": "81205/4096",
+  "negative_certificate_C": "20303/1024",
+  "records": [
+    {
+      "C": "19",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C19_N192_2048bits.json",
+      "sha256": "927c3d91d4ecd89ac8ba05c68b48bed5b1897e4fcee5481f9e88753a8280e52d"
+    },
+    {
+      "C": "159/8",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C159_8_N192_2048bits.json",
+      "sha256": "3a57101d79fcb57305c6a30ee0be7f0994a1f81a29c6d6a190afc3cf97d6f835"
+    },
+    {
+      "C": "311/16",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C311_16_N192_2048bits.json",
+      "sha256": "1482178504cc4230f732b72f33c81bfec2dfd06f903420c1973c634f1b304c9c"
+    },
+    {
+      "C": "629/32",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C629_32_N192_2048bits.json",
+      "sha256": "5c454b929757f259d7868982ddc88f1167c8f4e6f3f95b55d3518814dcf5798a"
+    },
+    {
+      "C": "1265/64",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C1265_64_N192_2048bits.json",
+      "sha256": "d0fcb47ba853465dd47f3be1f776612ed8f53f17eb5b7eeaed787716fdfb1a0f"
+    },
+    {
+      "C": "2537/128",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C2537_128_N192_2048bits.json",
+      "sha256": "826d9653e999951d0acc961924e2730a5649d6fb509442b156bc42155cc140de"
+    },
+    {
+      "C": "5081/256",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C5081_256_N192_2048bits.json",
+      "sha256": "e264bb04a95349533667a223fdbf586e800766378b11694453a70918c2768a96"
+    },
+    {
+      "C": "10155/512",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C10155_512_N192_2048bits.json",
+      "sha256": "e6146c0f3b8cefac35ec9fa0bdde2c4485e0dac1c063f72603873d238e597394"
+    },
+    {
+      "C": "20303/1024",
+      "status": "negative_full_form_trial",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C20303_1024_N192_2048bits.json",
+      "sha256": "c4b18f690b33e7bad0073f9b25a0756a61fbb64e8a37013bbf43cd4bc0fc537e"
+    },
+    {
+      "C": "40599/2048",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C40599_2048_N192_2048bits.json",
+      "sha256": "a50c547f191c9e39f4b88570cbac17f0ef0878f607e4b4dd5567ba0e4634fa96"
+    },
+    {
+      "C": "81205/4096",
+      "status": "positive_finite_sections_only",
+      "file": "research/prime_spectral/verification_2026_10_13_calibration/epstein5_label0_windows/C81205_4096_N192_2048bits.json",
+      "sha256": "081b0279468d2a936101d18b2e33a1d7445c7080221b506cdbdb43638a970e9a"
+    }
+  ],
+  "kind": "epstein",
+  "parameter": 5,
+  "Conrey_label": 0,
+  "modes": 192,
+  "bits": 2048,
+  "scope": "Finite-family search only; no monotonicity or minimum-full-support bracket."
+}

@@ -70,8 +70,9 @@ theorem order3DetExpr_geometric_zero (a r : ℝ) :
   unfold order3DetExpr; ring
 
 /-- Frontier witness: factorial data `(0!,1!,2!,3!,4!) = (1,1,2,6,24)` gives a
-*negative* order-`3` determinant.  This is why the rung is genuinely open —
-positivity is not automatic and must be earned, not assumed. -/
+*negative* order-`3` determinant. Positivity is not automatic for general data.
+This example does not show Xi rank-three positivity is mathematically open;
+the classical finite-PF baseline concerns a specific Xi sequence. -/
 theorem order3DetExpr_factorial_neg : order3DetExpr 1 1 2 6 24 < 0 := by
   unfold order3DetExpr; norm_num
 

@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
 import Mathlib.Algebra.Field.GeomSum
 import Mathlib.Data.Real.Basic
 import Mathlib.Data.Real.Sqrt
@@ -112,5 +117,16 @@ theorem weighted_moment_remainder {ι : Type*} (s : Finset ι)
       simp only [Finset.sum_add_distrib, div_eq_mul_inv, Finset.sum_mul,
         Finset.mul_sum]
       rw [Finset.sum_comm]
+
+/-- Exact arithmetic correction to the intermediate inequality in Corollary 8.1.
+This checks the decimal arithmetic, not the external forcing certificate. -/
+theorem rounded_forcing_energy_bound :
+    (94900466 / 10 ^ 19 : ℝ) ^ 2 < 90061 / 10 ^ 27 := by
+  norm_num
+
+/-- The manuscript's coarser intermediate rounding does not imply that bound. -/
+theorem coarse_forcing_rounding_exceeds_energy_bound :
+    (949005 / 10 ^ 17 : ℝ) ^ 2 > 90061 / 10 ^ 27 := by
+  norm_num
 
 end Reinmann.WeilRankTail

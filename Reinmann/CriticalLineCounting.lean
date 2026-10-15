@@ -17,8 +17,10 @@ strictly inside each consecutive interval.
 * `exists_injective_critical_zeros_of_alternating`: `n` sign changes ⇒ an injective
   family of `n` critical-line `ζ`-zeros.
 
-Unconditional, on-line lower bounds on the number of critical-line zeros (Hardy's
-method, quantified). Not RH-equivalent.
+The lower bound is conditional on the displayed sign-change samples. This
+does not prove Hardy's existence of arbitrarily many sign changes or his
+infinitude theorem. The implications themselves are unconditional and are
+not RH-equivalent.
 -/
 
 noncomputable section

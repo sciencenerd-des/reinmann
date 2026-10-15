@@ -70,7 +70,10 @@ by an existing classical theorem, whereas the Hankel route demanded the opposite
   approximants.  This is the Edrei–ASW payload: a *universal* classical theorem
   about sequences, provable without RH.  The RH-hard hypothesis is establishing
   `XiToeplitzTotalPositive` for Ξ's coefficients (the all-order minors); the
-  `2×2` rung is closed (CNV), the frontier is order `≥ 3`.
+  finite ranks through 43 have a classical sector baseline, not yet formalized
+  here. The RH-equivalent frontier is positivity at every rank. Strictness of
+  fixed-rank contiguous minors is a separate, weaker question; see
+  `research/STRICT_FINITE_PF_FROM_REAL_ZEROS_2026_10_06.md`.
 -/
 
 noncomputable section

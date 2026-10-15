@@ -1,3 +1,8 @@
+/-
+Copyright (c) 2026 Biswajit Mondal. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Biswajit Mondal
+-/
 import Mathlib.Analysis.InnerProductSpace.Basic
 import Mathlib.Algebra.Order.BigOperators.Ring.Finset
 import Mathlib.Topology.Algebra.InfiniteSum.Real
@@ -77,7 +82,7 @@ theorem cumulative_galerkin_budget (u g : ℕ → H) (N : ℕ)
 
 /-- The finite estimate at every rank, under explicit endpoint-energy bounds. -/
 theorem uniform_galerkin_budget (u g : ℕ → H) (Eu Eg : ℝ)
-    (hEu : 0 ≤ Eu) (hEg : 0 ≤ Eg)
+    (hEu : 0 ≤ Eu) (_hEg : 0 ≤ Eg)
     (hu : ∀ i, inner ℝ (u (i + 1) - u i) (u i) = 0)
     (hg : ∀ i, inner ℝ (g (i + 1) - g i) (g i) = 0)
     (hug : ∀ i, inner ℝ (u (i + 1) - u i) (g i) = 0)

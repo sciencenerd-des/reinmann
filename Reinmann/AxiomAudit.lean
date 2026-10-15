@@ -24,7 +24,15 @@ import Reinmann.TuranRouteKill
 import Reinmann.EffectiveAssembly
 import Reinmann.FinitePFBaseline
 import Reinmann.QuasiRHInputs
+import Reinmann.FinitePFStrict
+import Reinmann.AnalyticPFLimit
+import Reinmann.XiTaylorIdentification
 import Reinmann.TuranDeficit
+import Reinmann.WeilRankTail
+import Reinmann.CoupledRankEnergy
+import Reinmann.FiniteShiftChains
+import Reinmann.SupportTranslation
+import Reinmann.SupportPrimeForm
 import Reinmann.CurvatureControls
 import Reinmann.CoupledRankEnergy
 import Reinmann.WeilRankTail
@@ -205,6 +213,122 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.rank_lower_bound_of_cumulative_budget
 
 #print axioms Reinmann.boundary_ratio_le_one_iff
+
+-- Exact signed tail algebra and coupled rank energy. The infinite-series
+-- result has explicit energy hypotheses, not an unproved Weil specialization.
+#print axioms Reinmann.WeilRankTail.paired_displacement
+#print axioms Reinmann.WeilRankTail.geometric_remainder
+#print axioms Reinmann.WeilRankTail.geometric_remainder_abs
+#print axioms Reinmann.WeilRankTail.paired_even_tail
+#print axioms Reinmann.WeilRankTail.denominator_remainder
+#print axioms Reinmann.WeilRankTail.weighted_moment_remainder
+
+-- Actual support decomposition and the uniform prime integral form.
+-- Boundary traces are not erased and the full Weil gap is not assumed.
+#print axioms Reinmann.SupportTranslation.memLp_translate
+#print axioms Reinmann.SupportTranslation.integrable_energy
+#print axioms Reinmann.SupportTranslation.integrable_real_inner
+#print axioms Reinmann.SupportTranslation.ae_support_Ioc_of_Icc
+#print axioms Reinmann.SupportTranslation.translated_interval_partition
+#print axioms Reinmann.SupportTranslation.energy_disintegration
+#print axioms Reinmann.SupportTranslation.correlation_disintegration
+#print axioms Reinmann.SupportTranslation.chain_bound_one
+#print axioms Reinmann.SupportTranslation.chain_bound_two
+#print axioms Reinmann.SupportTranslation.chain_bound_three
+#print axioms Reinmann.SupportTranslation.chain_bound_five
+#print axioms Reinmann.SupportTranslation.translation_bound
+#print axioms Reinmann.SupportTranslation.translation_two
+#print axioms Reinmann.SupportTranslation.translation_three
+#print axioms Reinmann.SupportTranslation.translation_five
+#print axioms Reinmann.SupportTranslation.translation_disjoint
+#print axioms Reinmann.SupportPrimeForm.correlation_neg
+#print axioms Reinmann.SupportPrimeForm.paired_correlation
+#print axioms Reinmann.SupportPrimeForm.complex_correlation
+#print axioms Reinmann.SupportPrimeForm.complexCorrelation_translate
+#print axioms Reinmann.SupportPrimeForm.integrable_complex_product
+#print axioms Reinmann.SupportPrimeForm.complexCorrelation_re
+#print axioms Reinmann.SupportPrimeForm.complexCorrelation_neg
+#print axioms Reinmann.SupportPrimeForm.paired_complexCorrelation
+#print axioms Reinmann.SupportPrimeForm.powers_complete
+#print axioms Reinmann.SupportPrimeForm.powers_subset_range
+#print axioms Reinmann.SupportPrimeForm.mem_active_iff
+#print axioms Reinmann.SupportPrimeForm.complexPrimeForm_eq
+#print axioms Reinmann.SupportPrimeForm.allowance_eq
+#print axioms Reinmann.SupportPrimeForm.primeForm_eq_prime_power_sum
+#print axioms Reinmann.SupportPrimeForm.weight_nonneg
+#print axioms Reinmann.SupportPrimeForm.chainConstant_nonneg
+#print axioms Reinmann.SupportPrimeForm.support_guard
+#print axioms Reinmann.SupportPrimeForm.allowed_chain
+#print axioms Reinmann.SupportPrimeForm.logarithmic_support_guard
+#print axioms Reinmann.SupportPrimeForm.individual_bound
+#print axioms Reinmann.SupportPrimeForm.primeForm_bound
+#print axioms Reinmann.SupportPrimeForm.complexPrimeForm_bound
+#print axioms Reinmann.SupportPrimeForm.correlation_zero_of_cutoff_le
+#print axioms Reinmann.WeilRankTail.rounded_forcing_energy_bound
+#print axioms Reinmann.WeilRankTail.coarse_forcing_rounding_exceeds_energy_bound
+#print axioms Reinmann.CoupledRankEnergy.galerkin_increment_orthogonal
+#print axioms Reinmann.CoupledRankEnergy.energy_increment
+#print axioms Reinmann.CoupledRankEnergy.pairing_increment
+#print axioms Reinmann.CoupledRankEnergy.cumulative_pairing_budget
+#print axioms Reinmann.CoupledRankEnergy.cumulative_galerkin_budget
+#print axioms Reinmann.CoupledRankEnergy.uniform_galerkin_budget
+#print axioms Reinmann.CoupledRankEnergy.absolute_rank_summability
+#print axioms Reinmann.FiniteShiftChains.weighted_edge
+#print axioms Reinmann.FiniteShiftChains.chain_two
+#print axioms Reinmann.FiniteShiftChains.chain_three
+#print axioms Reinmann.FiniteShiftChains.chain_five
+#print axioms Reinmann.FiniteShiftChains.l2_energy
+#print axioms Reinmann.FiniteShiftChains.integrated_chain_two
+#print axioms Reinmann.FiniteShiftChains.integrated_chain_three
+#print axioms Reinmann.FiniteShiftChains.integrated_chain_five
+
+-- Strictness from explicit positive-factor extraction; analytic Xi inputs
+-- are hypotheses rather than axioms. The determinant transport is proved.
+#print axioms Reinmann.FinitePFStrict.rowStep_det_expansion
+#print axioms Reinmann.FinitePFStrict.chosenRow_monotone
+#print axioms Reinmann.FinitePFStrict.chosen_det_nonneg
+#print axioms Reinmann.FinitePFStrict.orderedNonneg_rowStep
+#print axioms Reinmann.FinitePFStrict.rowStep_det_lower
+#print axioms Reinmann.FinitePFStrict.int_contig_rows_strict
+#print axioms Reinmann.FinitePFStrict.contig_rowStep_lower
+#print axioms Reinmann.FinitePFStrict.orderedNonneg_rowSteps
+#print axioms Reinmann.FinitePFStrict.rowSteps_contig_lower
+#print axioms Reinmann.FinitePFStrict.intToeplitz_linearFactor
+#print axioms Reinmann.FinitePFStrict.intToeplitz_linearFactors
+#print axioms Reinmann.FinitePFStrict.orderedNonneg_intToeplitz
+#print axioms Reinmann.FinitePFStrict.intToeplitz_contig_zero
+#print axioms Reinmann.FinitePFStrict.extracted_factors_contig_positive
+#print axioms Reinmann.FinitePFStrict.linearFactors_contig_positive
+#print axioms Reinmann.FinitePFStrict.linearFactors_contig_lower
+#print axioms Reinmann.FinitePFStrict.xi_contig_positive_of_factor_extraction
+#print axioms Reinmann.polynomial_derivatives_locallyUniformLimit
+#print axioms Reinmann.differentiable_centeredXi
+#print axioms Reinmann.differentiable_criticalXi
+#print axioms Reinmann.criticalXi_real
+#print axioms Reinmann.complex_deriv_eq_real_deriv
+#print axioms Reinmann.complex_iteratedDeriv_eq_real_iteratedDeriv
+#print axioms Reinmann.criticalXi_iteratedDeriv
+#print axioms Reinmann.centeredXi_even_deriv
+#print axioms Reinmann.xiMomentCoeff_eq_centeredXi_taylor
+#print axioms Reinmann.centeredXi_even
+#print axioms Reinmann.centeredXi_odd_deriv
+#print axioms Reinmann.hasSum_centeredXi_even
+#print axioms Reinmann.foldedXi_eq_tsum
+#print axioms Reinmann.foldedXi_sq
+#print axioms Reinmann.complex_sqrt_sq
+#print axioms Reinmann.foldedXi_eq_sqrt
+#print axioms Reinmann.hasSum_foldedXi
+#print axioms Reinmann.foldedXiSeries_radius
+#print axioms Reinmann.foldedXi_hasFPowerSeries
+#print axioms Reinmann.differentiable_foldedXi
+#print axioms Reinmann.foldedXi_taylor
+#print axioms Reinmann.foldedXi_neg_square
+#print axioms Reinmann.foldedXi_neg_square_zero_iff
+#print axioms Reinmann.foldedXi_conj
+#print axioms Reinmann.finitePF_xi_of_folded_locallyUniformLimit
+#print axioms Reinmann.polynomial_coeff_tendsto_of_locallyUniformLimit
+#print axioms Reinmann.finitePF_of_coefficientwise_limit
+#print axioms Reinmann.finitePF_of_real_polynomial_locallyUniformLimit
 
 -- Curvature controls, coupled rank energy, and the Weil omitted-mode algebra.
 #print axioms Reinmann.realZeroControl_turan

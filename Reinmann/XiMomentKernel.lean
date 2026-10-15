@@ -10,7 +10,7 @@ import Mathlib.Data.Nat.Factorial.Basic
 # The Moment-Kernel Mechanism for the Pólya-Frequency Frontier
 
 This file isolates, and *verifies*, the precise analytic mechanism that governs
-the open order-`≥3` Toeplitz (Pólya-frequency) minors of `XiToeplitzPositivity`.
+the unbounded-order Toeplitz (Pólya-frequency) target of `XiToeplitzPositivity`.
 
 **Correctness note (2026-06-06).** `Ξ` is now **Riemann's `ξ`** (see
 `JensenProgram`), so Pólya's positive-kernel representation below genuinely applies
@@ -18,7 +18,7 @@ the open order-`≥3` Toeplitz (Pólya-frequency) minors of `XiToeplitzPositivit
 states that representation as a **named external classical input** (true, not RH,
 not an axiom); the CNV/Pólya facts cited are external and **not formalized here**.
 
-## The genuine obstruction (why order `≥ 3` is RH)
+## The unbounded-order obstruction
 
 Riemann's **Pólya integral representation** (classical, elementary, NOT RH):
 `Ξ(t) = 2∫₀^∞ Φ(u) cos(ut) du` with `Φ > 0`.  Expanding `cos` gives the Taylor
@@ -38,9 +38,12 @@ The factorial weights `(2n)!` carry the entire fight:
 
 a product of a `≤1` moment factor and a `>1` factorial-slack factor.  Order 1 is
 free; order 2 (Turán) is the slack winning narrowly (why CNV needed the explicit
-`Φ`); order `≥ 3` is the same battle at higher order and is genuinely open,
-because the integral representation *structurally* yields Hankel (not Toeplitz)
-positivity.
+`Φ`). The integral representation *structurally* yields Hankel (not Toeplitz)
+positivity. Fixed rank three is not RH-equivalent: the classical sector
+baseline already gives nonnegativity through rank 43, and finite real-zero
+extraction gives strict contiguous minors at those ranks. See
+`research/STRICT_FINITE_PF_FROM_REAL_ZEROS_2026_10_06.md`. Those analytic inputs
+remain unformalized; establishing all orders is the RH-equivalent problem.
 
 ## What is verified here (honest, non-RH content)
 
@@ -59,7 +62,7 @@ positivity.
 
 None of this proves RH.  It is the verified anatomy of exactly where the open
 analysis lives: defeating moment log-convexity by the factorial slack at order
-`≥ 3`.
+unbounded rank.
 -/
 
 noncomputable section

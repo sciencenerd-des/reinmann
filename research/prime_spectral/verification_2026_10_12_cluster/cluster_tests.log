@@ -1,0 +1,14 @@
+test_all_saved_full_clusters_replay (test_full_cluster_certificate.FullClusterTests.test_all_saved_full_clusters_replay) ... ok
+test_block_residual_does_not_use_tiny_internal_gap (test_full_cluster_certificate.FullClusterTests.test_block_residual_does_not_use_tiny_internal_gap) ... ok
+test_both_parity_formulas_match_adaptive_geometric_entries (test_full_cluster_certificate.FullClusterTests.test_both_parity_formulas_match_adaptive_geometric_entries) ... ok
+test_complement_parity_rank_and_provenance_tampering_rejected (test_full_cluster_certificate.FullClusterTests.test_complement_parity_rank_and_provenance_tampering_rejected) ... ok
+test_energy_bound_with_negative_cluster_floor_is_sharp (test_full_cluster_certificate.FullClusterTests.test_energy_bound_with_negative_cluster_floor_is_sharp) ... ok
+test_invalid_energy_and_gap_fail_closed (test_full_cluster_certificate.FullClusterTests.test_invalid_energy_and_gap_fail_closed) ... ok
+test_projected_residual_is_insufficient (test_full_cluster_certificate.FullClusterTests.test_projected_residual_is_insufficient) ... ok
+test_rank_proposal_is_only_an_exact_staircase (test_full_cluster_certificate.FullClusterTests.test_rank_proposal_is_only_an_exact_staircase) ... ok
+test_small_rayleigh_witness_recomputes_in_actual_form (test_full_cluster_certificate.FullClusterTests.test_small_rayleigh_witness_recomputes_in_actual_form) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.759s
+
+OK

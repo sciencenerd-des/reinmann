@@ -1,0 +1,69 @@
+{
+  "captured_at_utc": "2026-10-12T12:17:14.841777+00:00",
+  "status": "five full cluster blocks, an actual full rank-four residual and projector angle, independent comparison replay, arithmetic control and 17 tests passed",
+  "runtime": {
+    "python": "3.12.11",
+    "python-flint": "0.8.0",
+    "mpmath": "1.4.1"
+  },
+  "checks": {
+    "full_cluster_blocks": 5,
+    "python_tests": 17,
+    "independent_frequency_integrals": 4,
+    "independent_geometric_normalization": true,
+    "C3p2_rayleigh_public_upper": "8.112e-9",
+    "source_and_input_hashes": "verified",
+    "local_report_links": "verified",
+    "python_compilation": "passed",
+    "git_diff_check": "passed",
+    "C3_rank_four_projection_distance_public_upper": "0.531",
+    "actual_full_residual": "both parities, complete prefix through mode 256, analytic infinite tails and Gram normalization verified"
+  },
+  "source_sha256": {
+    "experiments/prime_spectral/full_cluster_certificate.py": "61e9873b97ff84956c1b4b79b0e1a54dc7f182285d9327fff718176e533dac81",
+    "experiments/prime_spectral/test_full_cluster_certificate.py": "ff66a1c0d0982e607377cb3c6bb41e0de8e1ddaca5a6a7f6ce4af1ef9b0df718",
+    "experiments/prime_spectral/cluster_comparison_replay.py": "a94fd6eb5ee3a08fa46e54e5ae7484fd3d36564a88db15dd833100b581778080",
+    "experiments/prime_spectral/compare_cluster_ranks.py": "1e212bf64972d197503962f1c8eac85ccd42515ccdae1c94645c59affbd163ee",
+    "experiments/prime_spectral/davenport_heilbronn_control.py": "066e7beb2583b4b8da45fd60996c1c96ae1974c3acf64a3b18fbce0594d7ea25",
+    "experiments/prime_spectral/test_davenport_heilbronn_control.py": "91edc65ed767b471a63bf92a165e27eff2b0bde6ba143bb05d9fa1c51c49d750",
+    "research/prime_spectral/CLUSTER_PROGRAM_2026_10_12.md": "f2d1e3bb500b0e358a87a2aad7296617d03c4ea31e3d7016a22dbe5cd9c1874c",
+    "research/prime_spectral/ROBUSTNESS_OBSTRUCTION_C3P2_2026_10_12.md": "4e6fa5efed24599f533ecf38de99661345ae6f9c6a75d8812a46ecd862a2e786",
+    "research/RESEARCH_STATUS_2026_10_11.md": "647c5c9f7f431fcb3ce16eb253c31e56e973a6c67613fab6e6dd900f93f03a73",
+    "README.md": "969146d5ff8a7721dcdd6b8e61bd21de56d9778b084d7249520a0faa8a438b1b",
+    "experiments/prime_spectral/full_cluster_residual.py": "e65d7a2b590d9ac286a10010d0da3fccc1b45067b886fd20b60f304300df5ec3",
+    "experiments/prime_spectral/test_full_cluster_residual.py": "c4fd4d6f09f07b6cda99e5d4a8fe911e3eb966eae8fd516412a59e9f9340a46c"
+  },
+  "artifact_sha256": {
+    "C3_rank_four_full_residual.json": "833fde2d6b2a43bcea8057d2bdb1d2e7854425957325a773b8abfd3b26de0e38",
+    "C3p2_lower_operator.json": "b2f516b483f540f713602ab8379400ab4260fe7bca67fcc9d786f74d546c9bf0",
+    "C3p2_replay.json": "c572dead481aa2fe3351cdf44d507e1562ccc3b190f660b675ee233758fe4990",
+    "alternative_generation.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "alternative_rank_four.json": "60704b4a9ff7f9e0e1f73d447f1e3194eaa9fd45c59996bb179a1deedeffd78c",
+    "cluster_generation.log": "356ee2f6b79728bf0a47d97a4ef3647eb62dae7b1a7fa37faaaf2e28bdf1b981",
+    "cluster_tests.log": "ff9fdfedcbb291e60c185a828c61f27d6a9ea63fd9298e1bcd4cc3c1021d9046",
+    "comparison_replay.log": "059c90d93717753744a7dd4fb27a9efe72f94d41c3b7d65ec84a8ccaab11493f",
+    "comparison_replay_512.log": "4a24c088cdf8c546d64e6c48e3430a9c1e006c3219412f13b0297e75c649eefe",
+    "dh_arithmetic_control.json": "79d530fd8a3b85b6da2fd991d32081914d3913081c4ab8e4d4e950284b521e2a",
+    "dh_tests.log": "7f9ef57d464faaefbb86a9871f9ef0dc8aa00c0e496f7e14e378619fb62b2e5c",
+    "full_clusters.json": "c7a81c297001842f07782b02382e4058e1b46be8c8718e43b2b99d6519ad7dd9",
+    "full_residual_generation.log": "b6981f4b327db3bb2879fc5b2d49707358b2f1b2a983dca79f2e64809fe3f8ec",
+    "full_residual_tests.log": "ad33221bdf12d9f7291cbfc4082f3ad1d942409d7f3cb1497212de2511f0f9a0",
+    "ritz_C16_5.json": "e69290dfd1197062ac54eeef1aadff2c9938054d75e512762367e8bb1f714e91",
+    "ritz_C2.json": "50f1ef7c1416cc5be6c15cbbbd3df1144c73238306f54ebc07ac60639cb00eb5",
+    "ritz_C3.json": "c1153c7fc9a09a72768d682fa17fffed8b90f55086443a3ae27e1a6c529952de",
+    "ritz_generation.log": "52301fa0e29fbdacdac825e95c60026a117e4d3e91c96ec5b4cae2a9541c7260"
+  },
+  "historical_failures": {
+    "comparison_replay.log": "256-bit independent integration radius did not meet 1e-48; resolved by 512-bit wrapper with the same radius requirement"
+  },
+  "remaining": [
+    "Improve the second odd C3 residual column; growing-support cluster family and effective-block arithmetic sign identity",
+    "All-support prime-side counting theorem with specified threshold",
+    "Explicit zero-free region from window positivity",
+    "First failing DH Toeplitz minor and first negative Weil window; all-hypothesis control run",
+    "Exact growing-support induction identity"
+  ],
+  "rh_proved": false,
+  "counting_law_proved": false,
+  "trust_boundary": "Written closed form, support min--max and infinite comparison proof plus FLINT/Arb; no new Lean full-operator theorem."
+}

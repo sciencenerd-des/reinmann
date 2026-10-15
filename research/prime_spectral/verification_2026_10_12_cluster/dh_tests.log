@@ -1,0 +1,9 @@
+test_closed_form_first_obstructions_and_zeta_control (test_davenport_heilbronn_control.DavenportHeilbronnTests.test_closed_form_first_obstructions_and_zeta_control) ... ok
+test_independent_radical_normalization (test_davenport_heilbronn_control.DavenportHeilbronnTests.test_independent_radical_normalization) ... ok
+test_log_derivative_convolution_identity (test_davenport_heilbronn_control.DavenportHeilbronnTests.test_log_derivative_convolution_identity) ... ok
+test_reject_unnormalized_series (test_davenport_heilbronn_control.DavenportHeilbronnTests.test_reject_unnormalized_series) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.011s
+
+OK

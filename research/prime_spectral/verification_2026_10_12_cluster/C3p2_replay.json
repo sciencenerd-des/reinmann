@@ -1,0 +1,29 @@
+{
+  "status": "verified_full_window_certificate",
+  "public_lower": "9e-13",
+  "C": "[3.20000380862408773910874011788218588433196803510826596363146203032815685602382764959259320587021060380363546249757764406069595738580102392678940838574805 +/- 5.59e-153]",
+  "independent_adaptive_integral_entries": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "independent_geometric_constant_check": true,
+  "block_method": "linear",
+  "certificate_sha256": "b2f516b483f540f713602ab8379400ab4260fe7bca67fcc9d786f74d546c9bf0",
+  "verifier_sha256": "fced27867e232b9a6fc6abca984315ef2807e77e90e9ecf59c754cab6c3849c4",
+  "independent_integral_bits": 512,
+  "wrapper_sha256": "a94fd6eb5ee3a08fa46e54e5ae7484fd3d36564a88db15dd833100b581778080"
+}

@@ -1,0 +1,20 @@
+test_DH_finite_gates_survive_the_negative_control (test_dh_research_controls.DHResearchControls.test_DH_finite_gates_survive_the_negative_control) ... ok
+test_DH_normalization_and_small_minors (test_dh_research_controls.DHResearchControls.test_DH_normalization_and_small_minors) ... ok
+test_divided_difference_assembly_against_direct_DH_integrals (test_dh_research_controls.DHResearchControls.test_divided_difference_assembly_against_direct_DH_integrals) ... ok
+test_gamma_change_kernel_matches_independent_digamma_transform (test_dh_research_controls.DHResearchControls.test_gamma_change_kernel_matches_independent_digamma_transform) ... ok
+test_negative_LDL_witness_not_just_a_negative_diagonal (test_dh_research_controls.DHResearchControls.test_negative_LDL_witness_not_just_a_negative_diagonal) ... ok
+test_off_line_zero_Rouche_certificate_replay (test_dh_research_controls.DHResearchControls.test_off_line_zero_Rouche_certificate_replay) ... ok
+test_saved_negative_witness_recomputed_from_full_geometric_matrix (test_dh_research_controls.DHResearchControls.test_saved_negative_witness_recomputed_from_full_geometric_matrix) ... ok
+test_solid_minor_detects_positive_coefficient_nonreal_root_polynomial (test_dh_research_controls.DHResearchControls.test_solid_minor_detects_positive_coefficient_nonreal_root_polynomial) ... ok
+test_full_threshold_and_residual_replay (test_refine_cluster.RefinedClusterTests.test_full_threshold_and_residual_replay) ... ok
+test_high_degree_matrix_cells_against_independent_integration (test_refine_cluster.RefinedClusterTests.test_high_degree_matrix_cells_against_independent_integration) ... ok
+test_alias_and_zero_weights_fail_closed (test_window_packet_bound.WindowPacketTests.test_alias_and_zero_weights_fail_closed) ... ok
+test_all_height_tail_dominates_known_integer_sequence (test_window_packet_bound.WindowPacketTests.test_all_height_tail_dominates_known_integer_sequence) ... ok
+test_domain_rejections (test_window_packet_bound.WindowPacketTests.test_domain_rejections) ... ok
+test_packet_bound_with_exact_exponential_samples (test_window_packet_bound.WindowPacketTests.test_packet_bound_with_exact_exponential_samples) ... ok
+test_transform_box_convolution_and_removable_center (test_window_packet_bound.WindowPacketTests.test_transform_box_convolution_and_removable_center) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 5.979s
+
+OK

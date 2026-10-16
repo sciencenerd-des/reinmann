@@ -231,12 +231,45 @@ $\Lambda_0=\texttt{completedRiemannZeta}\textsubscript{\texttt{0}}$ satisfies
 $\Lambda = \code{completedRiemannZeta} = \Lambda_0 - 1/s - 1/(1-s)$.
 
 \begin{proposition}[Wrong target]\label{prop:wrong}
-The zeros of $\Lambda_0$ are not the nontrivial zeros of $\zeta$. Indeed, at a
-nontrivial zero $\rho$ one has $\Lambda(\rho)=0$ but
-$\Lambda_0(\rho) = \tfrac1\rho + \tfrac1{1-\rho}\neq 0$. On the critical line,
-$\Lambda_0(\tfrac12+it) = \bigl(1 - 2\,\Xib(t)\bigr)/(t^2+\tfrac14)$, whose zeros
-form the level set $\{\Xib = \tfrac12\}$, unrelated to RH.
+The zeros of $\Lambda_0$ are not the nontrivial zeros of $\zeta$; in fact
+$\Lambda_0$ has no zeros on the critical line at all. At a nontrivial zero
+$\rho$ one has $\Lambda(\rho)=0$ but
+$\Lambda_0(\rho) = \tfrac1\rho + \tfrac1{1-\rho}=\tfrac1{\rho(1-\rho)}\neq 0$.
+On the critical line,
+\begin{equation}\label{eq:lambda0-line}
+ \Lambda_0(\tfrac12+it)=\frac{1-2\,\Xib(t)}{t^2+\tfrac14}
+ \;\ge\;\frac{1-2\,\xi(\tfrac12)}{t^2+\tfrac14}>0
+ \qquad(t\in\R),
+\end{equation}
+with $\xi(\tfrac12)=0.4971207781\ldots<\tfrac12$.
 \end{proposition}
+
+\begin{proof}
+Since $\Lambda=\Lambda_0-1/(s(1-s))$ and $\xi(s)=\tfrac12s(s-1)\Lambda(s)$,
+one has $\Lambda_0(s)=(1-2\xi(s))/(s(1-s))$, and $s(1-s)=t^2+\tfrac14$ at
+$s=\tfrac12+it$. Pólya's kernel is positive~\cite{Polya1926}, so
+$\Xib(t)=2\int_0^\infty\Phi(u)\cos(tu)\,du$ obeys
+$\lvert\Xib(t)\rvert\le2\int_0^\infty\Phi=\Xib(0)=\xi(\tfrac12)$. The certified
+coefficient $\mu_0=\xi(\tfrac12)$ (Section~\ref{sec:numerics}) lies in a
+ball around $0.4971207781$, strictly below $\tfrac12$.
+\end{proof}
+
+Thus the level set $\{\Xib=\tfrac12\}$ named by the naive target is empty on
+the real line, and every zero of $\Lambda_0$ lies off the critical line.
+Figure~\ref{fig:lambda0} shows the gap. It is small: the minimum of
+$1-2\Xib(t)$ is $0.00576$, at $t=0$.
+
+\begin{figure}[htbp]\centering
+  \includegraphics[width=\linewidth]{rh_reduction_lambda0.pdf}
+  \caption{The Mathlib target trap. (a) $\Xib(t)=\xi(\tfrac12+it)$ crosses
+  zero at the zeta zeros (dots) but never reaches the level $\tfrac12$; the
+  inset magnifies the gap $\tfrac12-\xi(\tfrac12)\approx0.0029$ at $t=0$.
+  (b) $\Lambda_0(\tfrac12+it)$ on a logarithmic scale, with the lower bound
+  of~\eqref{eq:lambda0-line} dashed. At each zeta zero
+  $\Lambda_0=1/(t^2+\tfrac14)$, which is nonzero. Curves are mpmath
+  evaluations at 30 digits.}
+  \label{fig:lambda0}
+\end{figure}
 
 The remedy is to multiply $\Lambda$ by $s(s-1)/2$ away from $s=0,1$, where
 the factor is nonzero, and extend analytically across those two points.
@@ -547,8 +580,11 @@ The figure generator is \code{paper/generate_reduction_figures.py}.
   and the stronger classical Jensen threshold $(n+2)/(n+1)$.
   Right: the moment ratio $H_n=R_n/s_n$ compared with its equivalent
   thresholds $1/s_n$ and $(n+2)/((n+1)s_n)$, and the moment-convexity
-  upper bound $1$. Curves use coefficient-ball midpoints; only the plain
-  log-concavity claim is part of the reported minor certificate.}
+  upper bound $1$. Since $(n+2)/((n+1)s_n)=(2n+1)/(2n+3)$ exactly, the
+  shaded band $(2n+1)/(2n+3)\le H_n\le1$ is the order-two Jensen (Turán)
+  condition. Its width is $2/(2n+3)$. It is a theorem~\cite{CNV1986}, not an
+  RH-strength statement. Curves use coefficient-ball midpoints; only the
+  plain log-concavity claim is part of the reported minor certificate.}
   \label{fig:turan}
 \end{figure}
 

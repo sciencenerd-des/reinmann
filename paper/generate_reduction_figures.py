@@ -50,6 +50,15 @@ def main():
                  label=r"Classical Jensen: $(n+2)/(n+1)$")
     axes[0].axhline(1, color="#666666", linestyle=":", label="Log-concavity: 1")
     axes[0].set(xlabel="Index n", ylabel="Coefficient ratio", title="Ordinary coefficients")
+    # (n+2)/((n+1)s_n) = (2n+1)/(2n+3) exactly, so the d=2 Jensen (Turan)
+    # condition is the band (2n+1)/(2n+3) <= H_n <= 1, of width 2/(2n+3).
+    # It is a theorem (Csordas-Norfolk-Varga 1986), not an RH-strength band.
+    axes[1].fill_between(ns, [(2*n+1)/(2*n+3) for n in ns], 1, color="#40805b",
+                         alpha=0.12, lw=0, label="Turán ($d=2$) corridor")
+    k = 6
+    axes[1].annotate(r"Turán corridor, width $2/(2n+3)$", xy=(k, 1 - 1/(2*k+3)), xytext=(22, 0.70),
+                     fontsize=8, color="#40805b",
+                     arrowprops=dict(arrowstyle="->", color="#40805b", lw=0.8))
     axes[1].plot(ns, [float(r/s) for r, s in zip(ratios, slack)],
                  label=r"$H_n=R_n/s_n$", color="#2455a4")
     axes[1].plot(ns, [float(1/s) for s in slack], ":", color="#666666",

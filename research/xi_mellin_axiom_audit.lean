@@ -1,0 +1,39 @@
+-- Axiom audit for XiCenterPositive and XiMellinRemainder (2026-10-17).
+-- Run: lake env lean research/xi_mellin_axiom_audit.lean
+import Reinmann.XiMellinRemainder
+#print axioms Reinmann.theta_center_term_bound
+#print axioms Reinmann.theta_center_tail_bounds
+#print axioms Reinmann.thetaCenterUpper_mellinConvergent
+#print axioms Reinmann.thetaCenterUpper_eq
+#print axioms Reinmann.thetaCenterUpper_eq_zero
+#print axioms Reinmann.thetaCenterKernel_split
+#print axioms Reinmann.thetaCenterLower_mellinConvergent
+#print axioms Reinmann.completedRiemannZeta₀_center_eq_mellin
+#print axioms Reinmann.thetaCenterUpper_mellin_eq_integral
+#print axioms Reinmann.thetaCenterUpper_weighted_norm_bound_halfPlane
+#print axioms Reinmann.thetaCenterUpper_weighted_norm_bound
+#print axioms Reinmann.thetaCenterUpper_mellin_tail_norm_le
+#print axioms Reinmann.thetaUpperMellinRemainder_norm_le
+#print axioms Reinmann.thetaUpperMellinRemainder_eq_sub
+#print axioms Reinmann.completedRiemannZeta₀_center_norm_le
+#print axioms Reinmann.xiCompleted_center_re_pos
+#print axioms Reinmann.foldedXi_zero_eq_center
+#print axioms Reinmann.xiMomentCoeff_zero_cast
+#print axioms Reinmann.xiMomentCoeff_zero_pos
+#print axioms Reinmann.foldedXi_zero_re_pos
+#print axioms Reinmann.FinitePFStrict.linearFactors_zero
+#print axioms Reinmann.FinitePFStrict.xi_contig_positive_of_factor_extraction_without_center
+#print axioms Reinmann.thetaMellinCutoff_locallyIntegrable
+#print axioms Reinmann.thetaMellinCutoff_top
+#print axioms Reinmann.thetaMellinCutoff_zero
+#print axioms Reinmann.differentiable_thetaMellinCutoff
+#print axioms Reinmann.thetaUpperMellinRemainder_eq_cutoff
+#print axioms Reinmann.differentiable_thetaUpperMellinRemainder
+#print axioms Reinmann.thetaUpperMellinRemainder_iteratedDeriv_bound
+#print axioms Reinmann.thetaCenterLower_mellinConvergent_all
+#print axioms Reinmann.thetaUpperMellinRemainder_neighbor_derivatives_bound
+#print axioms Reinmann.completedRiemannZeta₀_eq_paired_mellin
+#print axioms Reinmann.xiMellinRemainder_eq_sub
+#print axioms Reinmann.differentiable_xiMellinRemainder
+#print axioms Reinmann.xiMellinRemainder_norm_le
+#print axioms Reinmann.xiMellinRemainder_iteratedDeriv_bound

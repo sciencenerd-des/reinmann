@@ -6,37 +6,69 @@
 \graphicspath{{figures/}}
 \geometry{margin=1in}
 
-\title{\textbf{The Hyperbolic Entropic Flow: A Dynamical Framework for Deforming Jensen Polynomials towards the Riemann Hypothesis}}
+\title{\textbf{Heat-Flow Transport of Tur\'an Discriminants for Riemann's $\Xi$-Function: the Hyperbolic Entropic Flow, Corrected}}
 \author{\textbf{Biswajit Mondal} \\ \small{Developer and Researcher in Mathematical Physics}}
-\date{June 9, 2026}
+\date{June 9, 2026; revised October 16, 2026}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
 \newtheorem{definition}{Definition}
-\newtheorem{conjecture}{Conjecture}
+\newtheorem{conjecture}{Question}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-We establish the formal mathematical foundations of the \textit{Hyperbolic Entropic Flow} (HEF) framework, a non-circular dynamical approach to the Riemann Hypothesis (RH). HEF deforms the Taylor coefficients of the Riemann $\Xi$-function under the de Bruijn-Newman diffusion equation. We construct a global weighted entropy functional $\mathcal{H}_d(t)$ over the discriminant surface of the deformed Jensen polynomials. Using Limit Theory, we prove that $\mathcal{H}_d(t)$ converges absolutely to a finite real limit for all degrees $d \ge 1$ and decay weights $\alpha > 0$. Using Differential Calculus, we prove that the continuous time-evolution of this entropy is dual to a discrete spatial transport equation along the polynomial offset index $n$. Finally, we show that establishing the global monotonicity of this entropic flow ($d\mathcal{H}_d/dt \ge 0$) provides a complete, dual proof pathway to the Riemann Hypothesis, protected from local degenerate crossings by the Dyson stiffness of GUE spacing statistics.
+We deform the Taylor coefficients of Riemann's $\Xi$-function under the de
+Bruijn--Newman heat flow. We follow the evolution of the degree-two Jensen
+(Tur\'an) discriminants of the factorial-normalized coefficients. The main
+result is an exact transport identity:
+$\partial_t\log(\bar\Delta(n,t)+1)=-\Delta^2\rho_n(t)$. Here $\bar\Delta$ is
+the normalized Tur\'an discriminant and $\rho_n=M_{n+1}/M_n$ is the ratio of
+consecutive kernel moments. We also record a normalization trap. For the raw
+kernel moments the quadratic discriminant is negative at every index and
+every time, by the Cauchy--Schwarz inequality. A weighted logarithmic
+``entropy'' of the Tur\'an discriminants is well defined when they are
+positive, which at $t=0$ is a classical theorem, and when they decay at most
+polynomially. Its derivative follows from the transport identity. Degree two
+alone cannot reach the Riemann Hypothesis (RH), and we state precisely what
+additional input would be needed.
 \end{abstract}
 
+\paragraph{Correction notice.} This version replaces the June 2026 draft.
+That draft built its Jensen polynomials from raw kernel moments $b_m$,
+treating them as if they were Taylor coefficients of $\Xi$. For those
+moments the quadratic discriminant is negative for every $n$ and $t$
+(Proposition~\ref{prop:trap}), so its entropy functional was undefined. The
+draft also substituted $b_{n+1}/b_n=-\rho_n$ although $b_m>0$, which reversed
+the sign of its transport law. It further asserted that monotonicity of the
+functional is equivalent to RH, and that ``Dyson stiffness'' of GUE spacings
+protects that monotonicity. Both assertions are withdrawn. The first fails
+logically (Section~\ref{sec:scope}); the second is a statistical heuristic,
+not an argument. The draft's claim that the GORZ threshold grows like
+$e^{Cd}$ was unsupported and has been removed.
+
 \section{Introduction}
-The Riemann Hypothesis (RH) asserts that the non-trivial zeros of the Riemann zeta function $\zeta(s)$ lie on the critical line $\operatorname{Re}(s) = 1/2$. By George Pólya's 1927 criterion, this is equivalent to proving the \textit{hyperbolicity} (all real roots) of the family of Jensen polynomials associated with the Taylor coefficients $b_m$ of the Riemann $\Xi$-function at the origin:
-\begin{equation}
-J^{d,n}(X) = \sum_{k=0}^{d} \binom{d}{k} b_{n+k} X^k
-\end{equation}
-for all degrees $d \ge 1$ and offsets $n \ge 0$.
+RH is equivalent to the hyperbolicity (all roots real) of every Jensen
+polynomial attached to the factorial-normalized Taylor coefficients of
+$\Xi$~\cite{Polya1927,Jensen1913}. Griffin, Ono, Rolen and Zagier proved
+that for each fixed degree $d$ these polynomials are hyperbolic for all
+sufficiently large shifts $n$~\cite{GORZ2019}. Degree two, the Tur\'an
+inequalities, holds for every shift~\cite{CNV1986}. Degree three is due to
+Dimitrov and Lucas~\cite{DimitrovLucas2011}.
 
-In 2019, Griffin, Ono, Rolen, and Zagier (GORZ) proved that for any fixed degree $d$, $J^{d,n}(X)$ is hyperbolic for all sufficiently large $n$ by showing that the normalized polynomials converge uniformly to the Hermite polynomials $H_d(X)$. However, the threshold $n_0(d)$ above which hyperbolicity holds grows exponentially with $d$:
-\begin{equation}
-n_0(d) \approx e^{C \cdot d}
-\end{equation}
-This exponential growth leaves a massive, computationally and analytically inaccessible finite-strip gap where local non-hyperbolic crossings (complex roots) could theoretically occur, preventing a complete proof of RH.
-
-To resolve this uniformity barrier, we propose the \textbf{Hyperbolic Entropic Flow (HEF)}. Instead of studying static polynomials, we deform the coefficients under the de Bruijn-Newman heat flow. This paper details the complete mathematical framework of HEF to base future work upon.
+We study how these discriminants move under the de Bruijn--Newman heat
+flow~\cite{deBruijn1950,Newman1976}. Increasing the flow time makes zeros
+real; RH is the statement that the de Bruijn--Newman constant satisfies
+$\Lambda\le0$. It is known that $0\le\Lambda\le0.2$
+\cite{RodgersTao2020,Polymath2019,PlattTrudgian2021}. Our contribution is
+modest and exact: a closed transport law for the order-two discriminants, a
+correct normalization, and a sharp statement of what such a law can and
+cannot give.
 
 \begin{figure}[ht]
 \centering
@@ -53,51 +85,50 @@ regime, not a certificate.}
 \label{fig:hermite}
 \end{figure}
 
-\section{The Deformed Coefficient Dynamics}
-Let $\Xi(z) = \sum_{m=0}^{\infty} \frac{(-1)^m b_m}{(2m)!} z^{2m}$ be the Riemann $\Xi$-function, defined via the Jacobi theta Fourier kernel $\Phi(u)$:
+\section{The heat flow and its coefficients}
+We use de Bruijn's normalization, in which $\Lambda$ is defined. Let
 \begin{equation}
-\Xi(z) = 2 \int_{0}^{\infty} \Phi(u) \cos(uz) \, du
+\Phi(u)=\sum_{k\ge1}\bigl(2\pi^2k^4e^{9u}-3\pi k^2e^{5u}\bigr)
+       \exp\bigl(-\pi k^2e^{4u}\bigr),\qquad u\ge0,
 \end{equation}
-where the kernel $\Phi(u)$ is strictly positive and rapidly decaying on $[0, \infty)$. We deform this kernel under the de Bruijn-Newman diffusion flow parameter $t \in \mathbb{R}$:
+and
 \begin{equation}
-H_t(z) = 2 \int_{0}^{\infty} \Phi(u) e^{t u^2} \cos(uz) \, du
+H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,\qquad
+H_0(z)=\tfrac18\,\Xi(z/2).
 \end{equation}
-where $H_0(z) = \Xi(z)$. 
+The kernel is positive~\cite{Polya1926} and decays double-exponentially, so
+every moment
+\begin{equation}
+M_m(t)=\int_0^\infty e^{tu^2}\Phi(u)\,u^{2m}\,du>0
+\end{equation}
+is finite for every real $t$. Expanding the cosine,
+\[
+H_t(z)=\sum_{m\ge0}\frac{(-1)^mM_m(t)}{(2m)!}z^{2m}=F_t(-z^2),\qquad
+F_t(x)=\sum_{m\ge0}\mu_m(t)x^m,\quad \mu_m=\frac{M_m}{(2m)!}>0 .
+\]
+Put $\gamma_m=m!\,\mu_m$ and define the Jensen polynomials
+$J^{d,n}_t(X)=\sum_{j=0}^d\binom dj\gamma_{n+j}(t)X^j$. All zeros of $H_t$
+are real exactly when all zeros of $F_t$ are real (and then negative, since
+$\mu_m>0$). By the Jensen--Pólya theory~\cite{Polya1927,Jensen1913}, this
+holds exactly when every $J^{d,n}_t$ is hyperbolic. By the definition of
+$\Lambda$, it holds exactly when $t\ge\Lambda$.
 
-\subsection{The Coefficient Heat Equation}
-The deformed Taylor coefficients $b_m(t) = (-1)^m H_t^{(2m)}(0)$ satisfy the first-order differential relation:
-\begin{equation}
-\frac{\partial}{\partial t} b_m(t) = b_{m+1}(t)
-\end{equation}
-
+\begin{lemma}[Moment flow]\label{lem:moment}
+$\partial_tM_m(t)=M_{m+1}(t)$ for all $m\ge0$ and $t\in\mathbb R$.
+\end{lemma}
 \begin{proof}
-By differentiating $H_t(z)$ with respect to $t$, we obtain:
-\begin{equation}
-\frac{\partial}{\partial t} H_t(z) = 2 \int_{0}^{\infty} u^2 \Phi(u) e^{t u^2} \cos(uz) \, du
-\end{equation}
-Since $\partial_z^2 \cos(uz) = -u^2 \cos(uz)$, this is exactly the backward heat equation:
-\begin{equation}
-\frac{\partial}{\partial t} H_t(z) = - \frac{\partial^2}{\partial z^2} H_t(z)
-\end{equation}
-Evaluating the $2m$-th derivative at $z=0$:
-\begin{equation}
-\frac{\partial}{\partial t} H_t^{(2m)}(0) = - H_t^{(2m+2)}(0)
-\end{equation}
-Multiplying both sides by $(-1)^m$:
-\begin{equation}
-\frac{\partial}{\partial t} \left[ (-1)^m H_t^{(2m)}(0) \right] = (-1)^{m+1} H_t^{(2m+2)}(0)
-\end{equation}
-since $(-1)^{m+1} = -(-1)^m$. This yields the correct forward flow relation:
-\begin{equation}
-\frac{\partial}{\partial t} b_m(t) = b_{m+1}(t)
-\end{equation}
+Differentiate under the integral; double-exponential decay of $\Phi$
+justifies dominated convergence locally uniformly in $t$.
 \end{proof}
 
-Using the Taylor series expansion in $t$, we can express the deformed coefficients $b_m(t)$ at any time $t$ using the physical coefficients $b_m(0)$:
-\begin{equation}
-b_m(t) = \sum_{k=0}^{\infty} \frac{t^k}{k!} b_{m+k}(0)
-\end{equation}
-This series converges rapidly due to the factorial decay of the $\Xi$-coefficients.
+\begin{lemma}[Coefficient flow]\label{lem:gamma}
+$\partial_t\gamma_m=2(2m+1)\,\gamma_{m+1}$.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{lem:moment}, $\partial_t\gamma_m=m!\,M_{m+1}/(2m)!$, while
+$\gamma_{m+1}=(m+1)!\,M_{m+1}/(2m+2)!$. Their ratio is
+$(2m+2)(2m+1)/(m+1)=2(2m+1)$.
+\end{proof}
 
 \begin{figure}[ht]
 \centering
@@ -105,118 +136,203 @@ This series converges rapidly due to the factorial decay of the $\Xi$-coefficien
 \caption{The deformation in kernel form, computed from the theta series for
 $\Phi$. (a) The deformed kernels $\Phi(u)e^{tu^2}$; the values of $t$ are
 enlarged for visibility. Positive $t$ moves weight to larger $u$ and so
-raises the higher moments that drive $\partial_tb_m=b_{m+1}$. (b) $\Phi$ is
+raises the higher moments, as $\partial_tM_m=M_{m+1}$ records. (b) $\Phi$ is
 positive and decays double-exponentially, which is what makes every moment
 finite for every $t$.}
 \label{fig:kernel}
 \end{figure}
 
-\section{The Hyperbolic Entropy Functional}
-For a fixed degree $d \ge 1$ and flow time $t$, we define the deformed Jensen polynomials:
-\begin{equation}
-J^{d,n}_t(X) = \sum_{k=0}^{d} \binom{d}{k} b_{n+k}(t) X^k
-\end{equation}
-Let $\bar{\Delta}(d, n, t)$ represent the normalized discriminant of $J^{d,n}_t(X)$. For $d=2$ (quadratic), the normalized discriminant is:
-\begin{equation}
-\bar{\Delta}(2, n, t) = \frac{b_{n+1}(t)^2 - b_n(t)b_{n+2}(t)}{|b_n(t)b_{n+2}(t)|} = R_n(t) - 1
-\end{equation}
-where $R_n(t)$ is the Turán ratio.
+\section{Two discriminants, one of them always negative}
 
-We define the \textbf{Hyperbolic Entropy Functional} $\mathcal{H}_d(t)$ as:
-\begin{equation}
-\mathcal{H}_d(t) = \sum_{n=0}^{\infty} e^{-\alpha n} \log \bar{\Delta}(d, n, t)
-\end{equation}
-where $\alpha > 0$ is the convergence weight factor.
+\begin{proposition}[The raw-moment trap]\label{prop:trap}
+For every $n\ge0$ and $t\in\mathbb R$, $M_{n+1}(t)^2<M_n(t)M_{n+2}(t)$.
+Consequently the quadratic $M_n+2M_{n+1}X+M_{n+2}X^2$ has two nonreal roots
+for every $n$ and $t$.
+\end{proposition}
+\begin{proof}
+Apply the Cauchy--Schwarz inequality to $u^{2n}$ and $u^{2n+4}$ in
+$L^2(e^{tu^2}\Phi(u)\,du)$. Equality would force $u^2$ to be constant on the
+support of $\Phi$, which is $[0,\infty)$.
+\end{proof}
 
-\begin{theorem}[Absolute Convergence]
-For any decay factor $\alpha > 0$ and degree $d \ge 1$, the infinite series $\mathcal{H}_d(t)$ converges absolutely to a finite real limit.
+The correct object uses the factorial normalization. Define the
+\emph{normalized Tur\'an discriminant}
+\begin{equation}
+\bar\Delta(n,t)=\frac{\gamma_{n+1}(t)^2}{\gamma_n(t)\gamma_{n+2}(t)}-1,
+\qquad
+\operatorname{disc}J^{2,n}_t=4\gamma_n\gamma_{n+2}\,\bar\Delta(n,t).
+\end{equation}
+Thus $J^{2,n}_t$ is hyperbolic if and only if $\bar\Delta(n,t)\ge0$. A direct
+computation gives
+\begin{equation}\label{eq:corridor}
+\bar\Delta(n,t)+1=\frac{2n+3}{2n+1}\cdot\frac{M_{n+1}^2}{M_nM_{n+2}} ,
+\end{equation}
+so by Proposition~\ref{prop:trap} the Tur\'an condition is the band
+$\frac{2n+1}{2n+3}\le M_{n+1}^2/(M_nM_{n+2})<1$, of width $2/(2n+3)$. In
+particular $-1<\bar\Delta(n,t)<\frac{2}{2n+1}\le2$. Two facts are known:
+\begin{itemize}
+\item $\bar\Delta(n,0)>0$ for every $n\ge0$. These are the Tur\'an
+inequalities for $\Xi$, proved by Csordas, Norfolk and Varga~\cite{CNV1986}.
+\item $\bar\Delta(n,t)\ge0$ for every $n$ when $t\ge\Lambda$, since then
+$F_t$ lies in the Laguerre--Pólya class.
+\end{itemize}
+
+\section{The transport identity}
+
+\begin{theorem}[Tur\'an transport]\label{thm:transport}
+Let $\rho_n(t)=M_{n+1}(t)/M_n(t)$ and
+$\Delta^2\rho_n=\rho_{n+2}-2\rho_{n+1}+\rho_n$. For all $n\ge0$ and
+$t\in\mathbb R$,
+\begin{equation}\label{eq:transport}
+\frac{\partial}{\partial t}\log\bigl(\bar\Delta(n,t)+1\bigr)=-\Delta^2\rho_n(t),
+\qquad\text{equivalently}\qquad
+\frac{\partial\bar\Delta}{\partial t}=-(\bar\Delta+1)\,\Delta^2\rho_n .
+\end{equation}
 \end{theorem}
 
 \begin{proof}
-By the GORZ limit theorem, as $n \to \infty$, the normalized coefficients of $\widehat{J}^{d,n}_t(X)$ converge uniformly on compact subsets of $\mathbb{R}$ to those of the Hermite polynomials $H_d(X)$. Because the roots of the Hermite polynomials are all real and distinct, their discriminant is strictly positive:
-\begin{equation}
-\lim_{n \to \infty} \bar{\Delta}(d, n, t) = \bar{\Delta}_{Hermite}(d) > 0
-\end{equation}
-Since $\log(x)$ is continuous for all $x > 0$, we have:
-\begin{equation}
-\lim_{n \to \infty} \log \bar{\Delta}(d, n, t) = \log \bar{\Delta}_{Hermite}(d) = C_d
-\end{equation}
-where $C_d$ is a finite real constant.
-Therefore, there exists a positive integer $M_0$ and a constant $M > 0$ such that for all $n \ge M_0$:
-\begin{equation}
-\left| \log \bar{\Delta}(d, n, t) \right| \le M
-\end{equation}
-Multiplying by the exponential weight:
-\begin{equation}
-\left| e^{-\alpha n} \log \bar{\Delta}(d, n, t) \right| \le M e^{-\alpha n}
-\end{equation}
-Since the geometric series $\sum_{n=0}^{\infty} e^{-\alpha n}$ converges to $\frac{1}{1 - e^{-\alpha}}$ for all $\alpha > 0$, the comparison test guarantees that the series $\mathcal{H}_d(t)$ converges absolutely.
+By Lemma~\ref{lem:moment},
+$\partial_t\rho_n=(M_{n+2}M_n-M_{n+1}^2)/M_n^2=\rho_n(\rho_{n+1}-\rho_n)$,
+so $\partial_t\log\rho_n=\rho_{n+1}-\rho_n$. By~\eqref{eq:corridor},
+$\log(\bar\Delta+1)=\log\frac{2n+3}{2n+1}+\log\rho_n-\log\rho_{n+1}$, whose
+first term is independent of $t$. Differentiating,
+$(\rho_{n+1}-\rho_n)-(\rho_{n+2}-\rho_{n+1})=-\Delta^2\rho_n$.
 \end{proof}
 
-\section{Monotonicity \& Discrete Transport Dynamics}
-By applying the chain rule of differential calculus to $\mathcal{H}_d(t)$, the time derivative of the global entropy is:
-\begin{equation}
-\frac{d\mathcal{H}_d}{dt} = \sum_{n=0}^{\infty} e^{-\alpha n} \frac{1}{\bar{\Delta}(d, n, t)} \frac{\partial \bar{\Delta}(d, n, t)}{\partial t}
-\end{equation}
+\begin{remark}
+The identity concerns the kernel moments only, so it holds for any positive
+kernel with finite moments, not just for $\Xi$. Its value is that it turns
+the time evolution of every Tur\'an discriminant into a convexity statement
+about a single sequence. Central finite differences at step $10^{-8}$,
+computed with 40-digit quadrature, agree with~\eqref{eq:transport} to a
+relative error below $10^{-19}$ for $0\le n\le5$ at $t=0$.
+\end{remark}
 
-\begin{theorem}[Discrete Transport Duality]
-Under the de Bruijn-Newman heat flow, the continuous time evolution of the discriminant is governed by the second discrete spatial difference of the consecutive coefficient ratio sequence $\rho_n(t) = \mu_{n+1}(t)/\mu_n(t)$:
-\begin{equation}
-\frac{\partial \bar{\Delta}(2, n, t)}{\partial t} = (\bar{\Delta}(2, n, t) + 1) \Delta^2 \rho_n(t)
-\end{equation}
-where $\Delta^2 \rho_n(t) = \rho_{n+2}(t) + \rho_n(t) - 2\rho_{n+1}(t)$.
-\end{theorem}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{hef_turan_transport.pdf}
+\caption{(a) The normalized Tur\'an discriminant $\bar\Delta(n,0)$ of the
+factorial-normalized coefficients is positive and decays roughly like
+$0.57/n$. The raw-moment discriminant is negative for every $n$
+(Proposition~\ref{prop:trap}); its absolute value is dashed. (b)
+$\bar\Delta(n,t)$ for $t\in[-0.4,0.4]$, from quadrature of the moments: each
+increases with $t$. (c) $-\Delta^2\rho_n(0)>0$ for $0\le n\le196$, the sign
+that makes (b) increasing through Theorem~\ref{thm:transport}. Panels (a)
+and (c) use midpoints of certified coefficient balls and are not
+certificates. Tur\'an ratios are invariant under the rescaling
+$z\mapsto z/2$, and the sign of $\Delta^2\rho_n$ is invariant too.}
+\label{fig:turan}
+\end{figure}
 
+\paragraph{Observation.} Using midpoints of certified enclosures of the
+first 201 coefficients, $\Delta^2\rho_n(0)<0$ for every $0\le n\le196$. By
+Theorem~\ref{thm:transport}, each of these Tur\'an discriminants is
+increasing in $t$ at $t=0$.
+
+\begin{conjecture}\label{q:concave}
+Is $\Delta^2\rho_n(t)<0$ for all $n\ge0$ and all $t\ge0$? Equivalently, is
+the moment-ratio sequence of $e^{tu^2}\Phi(u)$ strictly concave? An
+affirmative answer would make every Tur\'an ratio nondecreasing along the
+forward flow. It concerns degree two only, so it would not bear on RH.
+\end{conjecture}
+
+\section{The entropy functional, correctly defined}
+
+\begin{definition}
+Let $T^+=\{t:\bar\Delta(n,t)>0\ \text{for all}\ n\}$. For $\alpha>0$ and
+$t\in T^+$, put
+$\displaystyle\mathcal H_\alpha(t)=\sum_{n\ge0}e^{-\alpha n}\log\bar\Delta(n,t)$.
+\end{definition}
+
+\begin{proposition}[Convergence]\label{prop:conv}
+Let $t\in T^+$, and suppose $\bar\Delta(n,t)\ge c\,(n+1)^{-K}$ for some
+$c,K>0$ and all $n$. Then the series for $\mathcal H_\alpha(t)$ converges
+absolutely.
+\end{proposition}
 \begin{proof}
-For $d=2$, the normalized discriminant is $\bar{\Delta}(2,n,t) = \frac{b_{n+1}^2}{b_n b_{n+2}} - 1$. Let $r_n(t) = b_{n+1}(t)/b_n(t) = -\rho_n(t)$ be the negative ratio sequence. Differentiating $r_n$ with respect to $t$ and applying the correct forward heat flow relation $\partial_t b_m = b_{m+1}$:
-\begin{equation}
-\frac{\partial r_n}{\partial t} = \frac{b_{n+2}b_n - b_{n+1}^2}{b_n^2} = r_n(r_{n+1} - r_n)
-\end{equation}
-Substituting this into the time derivative of the discriminant $\bar{\Delta}(2, n, t) = \frac{r_n}{r_{n+1}} - 1$:
-\begin{equation}
-\frac{\partial \bar{\Delta}}{\partial t} = \frac{\frac{\partial r_n}{\partial t} r_{n+1} - r_n \frac{\partial r_{n+1}}{\partial t}}{r_{n+1}^2} = \frac{r_n(r_{n+1}-r_n)r_{n+1} - r_n r_{n+1}(r_{n+2}-r_{n+1})}{r_{n+1}^2}
-\end{equation}
-Factoring out $\frac{r_n}{r_{n+1}}$ yields:
-\begin{equation}
-\frac{\partial \bar{\Delta}}{\partial t} = \frac{r_n}{r_{n+1}} (2r_{n+1} - r_n - r_{n+2}) = -\frac{r_n}{r_{n+1}} (r_{n+2} + r_n - 2r_{n+1})
-\end{equation}
-Substituting $r_k = -\rho_k$ and noting that $\bar{\Delta}(2, n, t) + 1 = \frac{\rho_n}{\rho_{n+1}}$, we simplify to the second difference of the positive ratio sequence:
-\begin{equation}
-\frac{\partial \bar{\Delta}(2, n, t)}{\partial t} = \frac{\rho_n}{\rho_{n+1}} (\rho_{n+2} + \rho_n - 2\rho_{n+1}) = (\bar{\Delta}(2, n, t) + 1) \Delta^2 \rho_n(t)
-\end{equation}
+From $\bar\Delta<2$ and the hypothesis,
+$\lvert\log\bar\Delta(n,t)\rvert\le\log2+\lvert\log c\rvert+K\log(n+1)$.
+The series $\sum e^{-\alpha n}\log(n+1)$ converges.
 \end{proof}
 
-Thus, we obtain the unified \textbf{HEF Transport Equation}:
+At $t=0$ the positivity hypothesis is the Csordas--Norfolk--Varga theorem.
+For the polynomial lower bound we have only evidence:
+$n\,\bar\Delta(n,0)$ increases from $0.28$ at $n=10$ to $0.57$ at $n=197$.
+Effective forms of the GORZ asymptotics should prove a bound of the form
+$\bar\Delta(n,0)\ge c/(n+1)$; we have not carried this out. On any
+interval of $T^+$ where the lower bound holds uniformly and the
+differentiated series converges locally uniformly,
+Theorem~\ref{thm:transport} gives
 \begin{equation}
-\frac{d\mathcal{H}_2}{dt} = \sum_{n=0}^{\infty} e^{-\alpha n} \left( \frac{\bar{\Delta}(2, n, t) + 1}{\bar{\Delta}(2, n, t)} \right) \Delta^2 \rho_n(t)
+\frac{d\mathcal H_\alpha}{dt}
+=-\sum_{n\ge0}e^{-\alpha n}\,\frac{\bar\Delta(n,t)+1}{\bar\Delta(n,t)}\,
+\Delta^2\rho_n(t).
 \end{equation}
 
-\section{The Unified Entropic Monotonicity Theorem}
-Proving the Riemann Hypothesis is equivalent to establishing the following:
-
-\begin{theorem}
-The global entropy functional $\mathcal{H}_d(t)$ satisfies the monotonicity inequality:
-\begin{equation}
-\frac{d\mathcal{H}_d}{dt} \ge 0 \quad (\forall t \in \mathbb{R})
-\end{equation}
-\end{theorem}
-
-If this theorem holds:
+\section{What this framework can and cannot give}\label{sec:scope}
 \begin{enumerate}
-\item Since the GORZ limit guarantees $\mathcal{H}_d(\infty) = \text{Constant} > -\infty$, the monotonicity forces the physical entropy $\mathcal{H}_d(0)$ to be strictly finite and positive.
-\item If $\mathcal{H}_d(0) > -\infty$, then no individual term $\log \bar{\Delta}(d, n, 0)$ can equal $-\infty$.
-\item Thus, the discriminants are strictly positive ($\Delta(d,n) > 0$) for all $d, n$, establishing the hyperbolicity of the Jensen polynomials, which proves the Riemann Hypothesis.
+\item \textbf{Degree two is not RH-strength.} At $t=0$ every Tur\'an
+discriminant is already positive by~\cite{CNV1986}. A statement about
+$\mathcal H_\alpha$ alone therefore adds nothing toward RH, which needs all
+degrees $d$ simultaneously.
+\item \textbf{The direction of monotonicity.} If
+$d\mathcal H_\alpha/dt\ge0$ on $[0,\infty)$, integration bounds
+$\mathcal H_\alpha(0)$ from \emph{above} by later values. It cannot keep
+$\mathcal H_\alpha(0)$ away from $-\infty$. Transporting positivity from
+$t\ge\Lambda$, where it holds, back to $t=0$ needs backward-in-time
+control. That is either $d\mathcal H/dt\le0$ on $[0,\Lambda]$, or a bound
+on $\lvert d\mathcal H/dt\rvert$ there. This is exactly as hard as the
+original problem unless it can be made uniform in $d$.
+\item \textbf{The open input.} An RH-relevant version would need transport
+identities for the degree-$d$ discriminants of $J^{d,n}_t$, together with
+backward control uniform in $d$. We do not know such identities for
+$d\ge3$; finding them is the natural next step.
+\item \textbf{Withdrawn heuristics.} Statistical properties of zeta zeros
+(pair correlation, GUE spacing) are averaged statements. They give no
+deterministic sign information about any individual
+$\Delta^2\rho_n(t)$, and they are not used here.
 \end{enumerate}
 
-\subsection{Dyson Stiffness and Spacing Protection}
-The monotonicity is physically protected by the Dyson stiffness of the zeros. Because the zeros of $\zeta(s)$ follow GUE statistics (a determinantal point process), they exhibit strong level repulsion. This repulsion prevents the local clustering or gaps that would cause the ratio convexity operator $\Delta^2 \rho_n(t)$ to collapse to zero or cross sign boundaries, protecting the system from local crossings.
+\section{Conclusion}
+Corrected, the Hyperbolic Entropic Flow is a bookkeeping device for an exact
+identity: under the de Bruijn--Newman flow, the logarithm of each
+factorial-normalized Tur\'an ratio moves at minus the second difference of
+the kernel moment ratios. The identity, its numerical confirmation and the
+raw-moment trap are solid. The observed concavity of moment ratios
+(Question~\ref{q:concave}) is a clean, kernel-only conjecture. Extending the
+transport law to higher-degree discriminants is the open problem that would
+connect this framework to RH. Nothing here proves RH or reduces it to a
+statement shown to be more tractable.
 
-\section{Conclusion \& Future Research Directions}
-The HEF framework provides a complete, self-contained reformulative duality for the Riemann Hypothesis. By mapping the zero-free region onto the Lyapunov stability of the discriminant surface, it offers several concrete directions for future work:
-\begin{enumerate}
-\item \textbf{Entropy Dissipation Inequalities}: Prove the monotonicity $d\mathcal{H}_d/dt \ge 0$ directly from the PDE properties of the heat kernel using entropy-dissipation methods.
-\item \textbf{Determinantal Point Process Bounds}: Utilize the logarithmic stiffness of GUE eigenvalues to establish a lower bound on the ratio convexity operator $\Delta^2 \rho_n(t)$.
-\item \textbf{Effective GORZ Bounds}: Use the converged Hermite limits to analytically calculate the transition threshold $n_0(d)$, closing the remaining finite-strip gap.
-\end{enumerate}
+\begin{thebibliography}{99}
+\bibitem{Jensen1913} J.~L.~W.~V.~Jensen, \emph{Recherches sur la théorie
+des équations}, Acta Math.\ 36 (1913), 181--195.
+\bibitem{Polya1926} G.~Pólya, \emph{Bemerkung über die Integraldarstellung
+der Riemannschen $\xi$-Funktion}, Acta Math.\ 48 (1926), 305--317.
+\bibitem{Polya1927} G.~Pólya, \emph{Über die algebraisch-funktionentheoretischen
+Untersuchungen von J.~L.~W.~V.~Jensen}, Kgl.\ Danske Vid.\ Sel.\ Math.-Fys.\
+Medd.\ 7 (1927), 3--33.
+\bibitem{deBruijn1950} N.~G.~de Bruijn, \emph{The roots of trigonometric
+integrals}, Duke Math.\ J.\ 17 (1950), 197--226.
+\bibitem{Newman1976} C.~M.~Newman, \emph{Fourier transforms with only real
+zeros}, Proc.\ Amer.\ Math.\ Soc.\ 61 (1976), 245--251.
+\bibitem{CNV1986} G.~Csordas, T.~S.~Norfolk, R.~S.~Varga, \emph{The Riemann
+hypothesis and the Turán inequalities}, Trans.\ Amer.\ Math.\ Soc.\ 296
+(1986), 521--541.
+\bibitem{DimitrovLucas2011} D.~K.~Dimitrov, F.~R.~Lucas, \emph{Higher order
+Turán inequalities for the Riemann $\xi$-function}, Proc.\ Amer.\ Math.\
+Soc.\ 139 (2011), 1013--1022.
+\bibitem{GORZ2019} M.~Griffin, K.~Ono, L.~Rolen, D.~Zagier, \emph{Jensen
+polynomials for the Riemann zeta function and other sequences}, Proc.\ Natl.\
+Acad.\ Sci.\ USA 116 (2019), 11103--11110.
+\bibitem{Polymath2019} D.~H.~J.~Polymath, \emph{Effective approximation of
+heat flow evolution of the Riemann $\xi$ function, and a new upper bound for
+the de Bruijn--Newman constant}, Res.\ Math.\ Sci.\ 6 (2019), 31.
+\bibitem{RodgersTao2020} B.~Rodgers, T.~Tao, \emph{The de Bruijn--Newman
+constant is non-negative}, Forum Math.\ Pi 8 (2020), e6.
+\bibitem{PlattTrudgian2021} D.~Platt, T.~Trudgian, \emph{The Riemann
+hypothesis is true up to $3\cdot10^{12}$}, Bull.\ London Math.\ Soc.\ 53
+(2021), 792--797.
+\end{thebibliography}
 
 \end{document}

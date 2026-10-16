@@ -38,6 +38,38 @@ Every Xi zero has a nonzero actual-domain cross-pairing, explicit isotropic
 packet mass bounds and a state of unit absolute mass. Action symmetry and the
 relative paired budget for this algebraic form remain unproved.
 
+## Candidate comparison matrix (as of 16 October 2026)
+
+The five priorities are defined in the table under "Construction milestone and
+remaining obligations" below. Key: **L** = Lean-checked (standard axioms only);
+**W** = written argument, not formalized or independently reviewed; **✗** = fails
+for this candidate; **open** = not established; **partial** = established only
+in a restricted case.
+
+| Candidate form (notes; Lean modules) | P1 action, space, domain | P2 state for every zero | P3 mass | P4 symmetry | P4 paired residual budget | P5 Xi identification |
+| --- | --- | --- | --- | --- | --- | --- |
+| Natural Fock pairing ([FOCK_CANDIDATE](FOCK_CANDIDATE.md); `FockEigenvectors`, `XiAnnihilator`) | L (row domain, invariance, membership); W (Hilbert domain) | L (unit-mass eigenstates) | L | ✗ (diagonal defect `2\|Re s-1/2\|`; cross-state symmetry fails) | ✗ (equivalent to RH for this pairing) | L (zero transfer) |
+| Divided-difference form ([XI_DIVIDED_DIFFERENCE](XI_DIVIDED_DIFFERENCE.md); `XiDividedDifference`, `XiJordanDomain`) | L (same domain) | W (via approximate packets) | exact non-isotropy needs criticality and simplicity; approximate packets W, generic bounds L | W | open | L (kernel identities, Jordan obstruction) |
+| Xi kernel packets ([APPROXIMATE_PACKET_MASS](APPROXIMATE_PACKET_MASS.md); `XiKernelPackets`) | L (injective realization intertwining the action) | partial (L for a hypothetical *simple* off-critical zero) | L (unit-mass packet for every residual tolerance) | open | open; the norm-product criterion is not necessary (`PseudoHermitianNormProductObstruction`) | W (Fock transfer and pairing compatibility) |
+| Fixed algebraic jet form ([ALGEBRAIC_JET_MASS](ALGEBRAIC_JET_MASS.md); `XiAlgebraicJetSpace`, `XiAlgebraicJetForm`, `XiAlgebraicMass`) | L | L (every zero, all jet orders, no simplicity) | L (isotropic packet bounds, unit mass) | open | open (named `ArithmeticUnitMassPairedBudget`) | L (all-order reflection and conjugation; `XiHigherJet*`) |
+| Green recurrence form ([GREEN_RECURRENCE_MODEL](GREEN_RECURRENCE_MODEL.md); `XiGreenGram`, `XiAlgebraicRows`, `XiGreenModel`) | L (same space, action and domain as the algebraic jet form) | L | L (same-form all-zero masses) | **L** (Green identity and actual-domain symmetry) | **open, and Lean-proved equivalent to RH** (`green_paired_budget_iff_riemannHypothesis`) | L (entries built from actual Xi derivatives) |
+
+**Reading the matrix.** The Green recurrence form is the first candidate with
+P1–P3 and P4 symmetry all Lean-checked for one fixed form. The only missing
+acceptance condition is the arbitrarily small *relative paired residual
+budget* at every zero. Lean proves that this budget is *equivalent* to RH
+(`GreenUnitMassPairedBudget ↔ RiemannHypothesis`). The construction is
+therefore a verified reformulation of RH, not a reduction to something weaker.
+Any further progress must prove the budget by an argument that does not
+already presuppose RH. The
+Green modules are built by the root `Reinmann.lean` (full build of 3,560 jobs
+on 16 October 2026; recorded source hashes unchanged since the 11 October
+canonical checks). A fresh run of `green_model_axiom_audit.lean` on 17 October
+2026 audits 48 theorems, all using only `propext`, `Classical.choice` and
+`Quot.sound`.
+
+The dated sections below are kept as the historical validation record.
+
 Branch: `codex/xi-eigenvector-reduction`.
 Base: `f62bb7f7d32f572d5d92300693b3ca4962ce942b`.
 The managed worktree contains a hash-recorded copy of the current manuscript
@@ -262,7 +294,7 @@ the explicit operator domain and the mass estimate for the same form.
 Preserve the full objective: a valid arithmetic realization and the mass
 estimates it needs, not merely the existence of a nonsymmetric eigenvector model.
 
-## Current continuation: Green recurrence verification pending
+## Green recurrence verification (completed 2026-10-11; historical notes)
 
 The [universal Green recurrence implementation](GREEN_RECURRENCE_MODEL.md)
 now defines a second fixed arithmetic Gram form on the same all-parameter jet

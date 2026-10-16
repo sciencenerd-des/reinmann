@@ -101,6 +101,4 @@ import Reinmann.FiniteShiftChains
 import Reinmann.SupportTranslation
 import Reinmann.SupportPrimeForm
 import Reinmann.CurvatureControls
-import Reinmann.CoupledRankEnergy
-import Reinmann.WeilRankTail
 import Reinmann.WeilWindowHypotheses

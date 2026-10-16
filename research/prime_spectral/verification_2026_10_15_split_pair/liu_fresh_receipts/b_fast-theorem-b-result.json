@@ -1,0 +1,46 @@
+{
+  "verdict": "INDEPENDENT_REPRODUCTION_PASS",
+  "mode": "FAST_VERIFY",
+  "finishedAt": "2026-10-15T16:31:30.641856+00:00",
+  "theorem": {
+    "name": "B",
+    "form": "Full classical complex Weil form, pole and all applicable prime powers retained",
+    "domain": "C_c^infinity((-17/16,17/16);C)",
+    "bound": "Q(f) >= 2^(-49162) ||f||_2^2"
+  },
+  "countsObserved": {
+    "moments": 1024,
+    "primeCenters": 13,
+    "orderedShiftPairs": 169,
+    "matrixIntervals": 151200,
+    "tailCoordinates": 896,
+    "tailParityZeros": 448,
+    "targetCoordinates": 100352,
+    "gramRows": 448
+  },
+  "exactScalarAssertions": 56,
+  "appendixESpecialization": {
+    "scaleBitsBothSectors": 3353,
+    "everyResidualRowStrictlyBelowPowerTwo": 2848,
+    "paidDiagonalPowerTwo": 2873
+  },
+  "driverManifestSHA256": "fa3fde4b2a4bc25477925fd21906e0f70ef39ce22fd8f1e9a99da9ba273515c7",
+  "analyticAdmissionSHA256": "e2b70cd3b4126f9a2a2a6f11508e1760444b21caf2b467db809d300facea519a",
+  "analyticSourceSHA256": "548bf8341c767f4d0746ecdd2038b96881a7f41b165267807ade0ff3ad06f404",
+  "scalarReceiptSHA256": "37aeca0c9d336a39b3a2153245ff782dfc76c7e8d088057d46f28c58b89767db",
+  "scientificReceiptsSHA256": {
+    "verify-moments": "e68c0590d98d8d3a5804d7c3eaf428274307a936b777d476de6809f32287773b",
+    "verify-tails": "a6e3c84438b8ce6c73ab90a66f9a965e0977edd75a579ee8e51a5ce1e03c6963",
+    "verify-matrices": "5fe9f89e7816a4936bd03367172e70ce9238d1c12f3de22b30ab501fcc55e2c8",
+    "verify0": "ed3fafd5b21989df3ef8f2552b80ed9725aec4e8d3abbdbaa370835175e5213c",
+    "verify1": "119d57c2ede3cf74f26db0990b5a9a781ea82ec2da028f6a5db7fc47a52283d1"
+  },
+  "activeUnresolvedAnalyticNodes": [],
+  "historicalDerivedScientificInputs": [],
+  "evidenceScope": "Clean-root reproduction using admitted pre-existing independent arithmetic implementations and separately reviewed analytic transfer; not a new arithmetic rewrite.",
+  "externalHumanReproduction": false,
+  "formalProofVerification": false,
+  "RHproved": false,
+  "TheoremAIncluded": false,
+  "overallJournalReadiness": "Requires separate priority, Theorem A availability, authorship and artifact gates."
+}

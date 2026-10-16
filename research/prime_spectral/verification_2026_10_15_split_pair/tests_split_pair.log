@@ -1,0 +1,8 @@
+test_complement_identity_and_condensation (test_split_pair_round.SplitPairChecks.test_complement_identity_and_condensation) ... ok
+test_nonzero_residue_vandermonde_formula (test_split_pair_round.SplitPairChecks.test_nonzero_residue_vandermonde_formula) ... ok
+test_rank664_boundary_by_direct_determinants (test_split_pair_round.SplitPairChecks.test_rank664_boundary_by_direct_determinants) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.040s
+
+OK

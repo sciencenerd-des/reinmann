@@ -1,0 +1,27 @@
+{
+  "observedAt": "2026-10-15T16:12:33.939640+00:00",
+  "pythonExecutable": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/python312-layout/bin/python3.12",
+  "pythonVersion": "3.12.11 (main, Aug 18 2025, 19:02:39) [Clang 20.1.4 ]",
+  "implementation": "CPython",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "optimize": 0,
+  "isolated": true,
+  "noSite": true,
+  "assertions": true,
+  "scientificDependencies": "Python standard library only",
+  "inheritedEnvironmentKeys": [
+    "OMP_NUM_THREADS",
+    "OPENBLAS_NUM_THREADS",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONHASHSEED",
+    "PYTHONNOUSERSITE"
+  ],
+  "implicitPYTHONPATH": false,
+  "networkPolicy": "Scientific workers deny socket/process audit events.",
+  "determinism": "Integer/rational arithmetic and fixed Decimal contexts; timestamps and durations are non-scientific metadata. -I ignores Python environment variables; algorithms do not depend on randomized hash order.",
+  "sourceManifestSHA256": "c9b0a1fd4db32a17889cd2860ac41e5fe7ce9c2839a0d6d2658f5eb9129486b2",
+  "engineSHA256": {
+    "run.py": "eed13da745b339ea6fd33d6ea588b83f7a02c92bbcfac58044163eaf53f06cd2",
+    "stage.py": "9e2f5d76572c615273c6e7cad7c54935d6aba1e5d7aca1a967fbe247b63eefa5"
+  }
+}

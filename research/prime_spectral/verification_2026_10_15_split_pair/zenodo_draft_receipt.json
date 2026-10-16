@@ -1,0 +1,24 @@
+{
+  "status": "checked_files_uploaded_to_unpublished_draft",
+  "id": 23401370,
+  "submitted": false,
+  "state": "unsubmitted",
+  "reserved_doi": "10.5281/zenodo.23401370",
+  "draft_url": "https://zenodo.org/deposit/23401370",
+  "publication": "Human author must press Publish; no publish action called.",
+  "files": [
+    {
+      "name": "dh_controls_paper.pdf",
+      "bytes": 177456,
+      "sha256": "a41d9797350ffb5b0fee1b6d0d299e199cf8c6ace9a68fab73fc7b8205a611d0",
+      "server_md5": "29fc2dfe427562fcbc3bb81174dc87b3"
+    },
+    {
+      "name": "dh-controls-2026-10-15.tar.gz",
+      "bytes": 55653458,
+      "sha256": "cda3f0db300333a1018b86c85018e195b232a52b25306e282fcaabcc16bcc54e",
+      "server_md5": "32c511f7f893ee3d26502820e0207c07"
+    }
+  ],
+  "transport": "Initial archive connection failed; retry with fresh connection and 300-second read timeout succeeded. No scientific artifact changed."
+}

@@ -1,0 +1,85 @@
+{
+  "status": "frozen_Liu_A_retained_and_B_clean_full_fast_reproduced",
+  "frozen_commit": "b6cd2183c1e79c6c27a34267812a7b2d73ed1b59",
+  "archive_sha256": "7f8e47d265326cbfa4da95197c98bc226fe6cbfd8a22e6896955c18d8cdb376d",
+  "immutable_members_rechecked": 292,
+  "theorem_A": {
+    "epsilon": "2^-151",
+    "half_width": "1",
+    "clean_proposal_regeneration": false,
+    "source_and_matrix_reconstruction": true,
+    "full_residual_replay": true,
+    "counts": {
+      "coefficient_contributions": 126877696,
+      "projection_G_cells": 1983872,
+      "quadrature_nodes": 45056,
+      "res_lower_cells": 1983872,
+      "res_multiply_accumulate_terms": 1864839680,
+      "res_rows": 2816
+    },
+    "exact_scalar_relations": 72,
+    "independent_Schur_check": true
+  },
+  "theorem_B": {
+    "epsilon": "2^-49162",
+    "half_width": "17/16",
+    "runs": [
+      {
+        "mode": "FULL_REBUILD",
+        "counts": {
+          "moments": 1024,
+          "primeCenters": 13,
+          "orderedShiftPairs": 169,
+          "matrixIntervals": 151200,
+          "tailCoordinates": 896,
+          "tailParityZeros": 448,
+          "targetCoordinates": 100352,
+          "gramRows": 448
+        },
+        "exact_scalar_assertions": 56
+      },
+      {
+        "mode": "FAST_VERIFY",
+        "counts": {
+          "moments": 1024,
+          "primeCenters": 13,
+          "orderedShiftPairs": 169,
+          "matrixIntervals": 151200,
+          "tailCoordinates": 896,
+          "tailParityZeros": 448,
+          "targetCoordinates": 100352,
+          "gramRows": 448
+        },
+        "exact_scalar_assertions": 56
+      }
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython 3.12.11 macOS arm64, -I -S -B",
+    "adaptation": "Private byte-identical zipped standard library at the original audit-allowlisted root; no scientific or driver code change, audit bypass or modified acceptance gate.",
+    "stdlib_members_checked": 686,
+    "stdlib_zip_sha256": "271a818eab7cc302c43d64df17f120df0a46decbc1c6e2d7013953d8f3c4bed5",
+    "original_macOS_preflight_failed": "Windows-only Lib/DLLs allowlist rejected dataclasses.py; failed run preserved."
+  },
+  "analytic_review": "Both analytic-source.md files read, with explicit complex normalization, whole-complement/cross bounds, source-error payment, positive congruences and legal-domain return checked in writing; classical external theorems remain dependencies.",
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_environment.json": "e255e9868521052da3ad6dfef71a4ace62b377b5012ba1b1033a4dd33ce269f0",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_execution-manifest.json": "d3614c5d3c04e01bf1e3975800da8a1f3ef7d8f743bd8206617aae16a63a584b",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_external-a-result.json": "6635d08495eedffe98539eb5b19bd0230ec00c3b001e343b3243dc6a7706a677",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_external-a-scalars.json": "c28c4df7e1b6d2d968fa37fbff9593490cbda7589c6cd29afd2056bf80d22471",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_projection.json": "4eff99a0351212d105c06376f52760dd10a46fb4d110c25975b688aa4821266a",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_res.json": "8a9483cecbead8bcd387981075c413988214261a8bc88b42fdd32da45ab2ec02",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_result.json": "0cc543770a06d7ce3c2b6937e8464138c6a8a46a4987a3366046bc04a002af6f",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/a_source.json": "1d816abac2fa73f20e19a3fe391ffb422a4a8604aea18f655be41c5fcd80e1b5",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/b_environment.json": "10f3dede90806b72f84c83707e954de5d244bc8eb730adf3058f9f4864d55a10",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/b_fast-theorem-b-result.json": "be9912c3316df0bb3875f1a89f92daefc75b057a34c930e5e82b242668271578",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/b_release-execution.json": "de2a0fcdb197c219ddac96840cff69dc34567ee5a0abfa348a4b537e22c28859",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/b_scalar-receipt.json": "5d74628bda506cfd036ada35ccb2583893de8aa5b9caf563c5063d84807e74ed",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/b_theorem-b-result.json": "b588e3e73196872a767bc7a0c5b91243f7dc1e75edcc3b25b295dbeeb6f2218e",
+    "research/prime_spectral/verification_2026_10_15_split_pair/liu_fresh_receipts/b_verification-summary.json": "693b9955ce8c2f0baf6ef00f9c1eb1e89fd1084e687bcd7b7c7d6a1bcac64bac"
+  },
+  "source_sha256": {
+    "audit_liu_frozen_release.py": "32c929d73034c0e5d8322feaf39f1f137a0bf3676ae90e613f8aff78c4f7c271"
+  },
+  "scope": "Re-execution of frozen author-supplied arithmetic implementations and recorded analytic review. Not a new arithmetic implementation, external human review, formal proof or RH proof."
+}

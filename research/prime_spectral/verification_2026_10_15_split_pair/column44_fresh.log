@@ -1,0 +1,12 @@
+small determinant size 8 unresolved 0
+small determinant size 16 unresolved 0
+small determinant size 24 unresolved 0
+small determinant size 32 unresolved 0
+small determinant size 40 unresolved 0
+direct rank 520 sign 1
+direct rank 521 sign 1
+direct rank 663 sign 1
+direct rank 664 sign -1
+direct rank 1099 sign -1
+direct rank 1400 sign 1
+negative ranks [664, 665, 666] [1097, 1098, 1099] seconds 6.903045708022546

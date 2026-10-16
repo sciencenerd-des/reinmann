@@ -1,0 +1,91 @@
+{
+  "active_unresolved_nodes": [],
+  "bindings": {
+    "analytic_admission": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/analytic-admission.json",
+      "sha256": "9de52447bcfc111cd25e62bb89e477a55b3caccc153e2a6724fd16424161a179"
+    },
+    "analytic_source": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/analytic-source.md",
+      "sha256": "c35de70a42f385e2b58b1e320dc97f6bd00d7bab7ec0f910b757a76dacf9ae0a"
+    },
+    "finalization_manifest": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/finalization-manifest.json",
+      "sha256": "3858330fa30190ae32367285d6451fd7e578164abe2f5c2df67fbc53bab950ef"
+    },
+    "finalizer": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/finalize_a.py",
+      "sha256": "36990fa257dcc1b075c592112188867978041c56dee1589c87b6621cb34fc189"
+    },
+    "full_frozen_manifest": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-full/frozen-manifest.json",
+      "sha256": "a4bc83a5b9e4ac65207d93a6dd43a90fe90e58e4af258bd17ca4753e7e1b0429"
+    },
+    "full_result": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-full/result.json",
+      "sha256": "0cc543770a06d7ce3c2b6937e8464138c6a8a46a4987a3366046bc04a002af6f"
+    },
+    "scalar_engine": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/scalar_a.py",
+      "sha256": "27eda7018f669b19c525300f8bab80777f95bf106b8843f3dd08e2ae4f2e3bac"
+    },
+    "scalar_receipt": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-scalars.json",
+      "sha256": "c28c4df7e1b6d2d968fa37fbff9593490cbda7589c6cd29afd2056bf80d22471"
+    },
+    "source_admission": {
+      "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/manifest.json",
+      "sha256": "ebad6d5faf0eff7c838b4e4ad3e73973440bbf3ccf60ae26d951445f55a029ef"
+    },
+    "stage_receipts": {
+      "preflight": {
+        "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-full/preflight.json",
+        "sha256": "7197fee31ee52a25fb3febc620500cdf402ec4ee8b4201a7b2d370d98c3de13e"
+      },
+      "projection": {
+        "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-full/projection.json",
+        "sha256": "4eff99a0351212d105c06376f52760dd10a46fb4d110c25975b688aa4821266a"
+      },
+      "res": {
+        "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-full/res.json",
+        "sha256": "8a9483cecbead8bcd387981075c413988214261a8bc88b42fdd32da45ab2ec02"
+      },
+      "source": {
+        "path": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction-a/external-a-full/source.json",
+        "sha256": "1d816abac2fa73f20e19a3fe391ffb422a4a8604aea18f655be41c5fcd80e1b5"
+      }
+    }
+  },
+  "fresh_scalar_checks": 72,
+  "full_run_counts": {
+    "coefficient_contributions": 126877696,
+    "projection_G_cells": 1983872,
+    "quadrature_nodes": 45056,
+    "res_lower_cells": 1983872,
+    "res_multiply_accumulate_terms": 1864839680,
+    "res_rows": 2816
+  },
+  "full_run_id": "20261015T161232.851430Z",
+  "limitations": {
+    "RH_proved": false,
+    "clean_proposal_regeneration": false,
+    "expensive_arithmetic_rerun_here": false,
+    "external_integrity_anchor": "The release inventory must pin finalization-manifest.json.",
+    "formal_proof_verification": false,
+    "human_review": false
+  },
+  "observed_at": "2026-10-15T16:34:59.490421+00:00",
+  "schema": "THEOREM_A_RETAINED_REPRODUCTION_V1",
+  "scope": "Frozen full complex Weil form on C_c^infinity((-1,1)); epsilon=2^-151. Reviewed analytic transfer, exact recomputed scalars, and complete retained-data reproduction form the admitted chain.",
+  "status": "THEOREM_A_RETAINED_REPRODUCTION_PASS",
+  "theorem": {
+    "complexValued": true,
+    "coreDimension": 2816,
+    "coreLower": "2^-150",
+    "epsilon": "2^-151",
+    "fullWeilForm": true,
+    "id": "Theorem A",
+    "sourceAllowance": "2^-170",
+    "supportHalfWidth": "1"
+  }
+}

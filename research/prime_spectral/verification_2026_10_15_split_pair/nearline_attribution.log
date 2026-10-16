@@ -1,0 +1,4 @@
+nearline_mixture refined line disks 50
+nearline_mixture refined line disks 100
+nearline_mixture complete refined atlas 123
+nearline_mixture even negative quartet gamma [31.43362168 +/- 4.48e-9] finite sum [-1.151829682e-14 +/- 1.82e-24] geometric [-7.379560248e-18 +/- 2.90e-29]

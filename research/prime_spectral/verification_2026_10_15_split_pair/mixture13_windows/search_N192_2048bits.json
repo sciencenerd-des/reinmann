@@ -1,0 +1,87 @@
+{
+  "status": "finite_family_search_with_certified_negative_endpoint",
+  "positive_finite_evidence_C": "37",
+  "negative_certificate_C": "593/16",
+  "records": [
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C16_N192_2048bits.json",
+      "C": "16",
+      "status": "positive_finite_sections_only",
+      "sha256": "ad3646ca3518e55ffba16551efdb49abc0b8e2bf09a1edacd380b69401cbe880"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C32_N192_2048bits.json",
+      "C": "32",
+      "status": "positive_finite_sections_only",
+      "sha256": "a93db4b38d85ab39cccc22ffb7d3dac264607e98a6ad1591c76499e3cd9e6410"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C64_N192_2048bits.json",
+      "C": "64",
+      "status": "negative_full_form_trial",
+      "sha256": "c65b5cd044b4403ae4fa69c42f39eae516b62dd49d3c3a8b22491316fc3a1920"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C48_N192_2048bits.json",
+      "C": "48",
+      "status": "negative_full_form_trial",
+      "sha256": "8466aeb86841d7f27b75550c39b3c07c23cf90fff85624c2d442ec08a4b3afd4"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C40_N192_2048bits.json",
+      "C": "40",
+      "status": "negative_full_form_trial",
+      "sha256": "2a1c4559f63410c0272fced4da6fe422b369e5bbf98542f909c925e3c2f00928"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C36_N192_2048bits.json",
+      "C": "36",
+      "status": "positive_finite_sections_only",
+      "sha256": "137b27a7cc3767175a970c1dbbac650019425dc311330d3e7295377b4441300d"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C38_N192_2048bits.json",
+      "C": "38",
+      "status": "negative_full_form_trial",
+      "sha256": "3e6e4496c1c82ac2b1db0d6bc869b0708c9aa5a59b262a5005ffd4948860ded8"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C37_N192_2048bits.json",
+      "C": "37",
+      "status": "positive_finite_sections_only",
+      "sha256": "3422c296d0033978a4dbbeb799c450758f972fe5fe1272e219fe03ea91106969"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C75_2_N192_2048bits.json",
+      "C": "75/2",
+      "status": "negative_full_form_trial",
+      "sha256": "8124e627d8f2e93063f51ca2edbec1c0445a9ddb17f9ce662062c2eb803d6d57"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C149_4_N192_2048bits.json",
+      "C": "149/4",
+      "status": "negative_full_form_trial",
+      "sha256": "b025154305bd9078dc1da7b079430d7178b5c9ad3bc401ca164f5707d2b4fdc9"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C297_8_N192_2048bits.json",
+      "C": "297/8",
+      "status": "negative_full_form_trial",
+      "sha256": "af1180874fa37ca9377845ca3e67d26a640eab1c43460589de6f69e1e33c72e5"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_windows/C593_16_N192_2048bits.json",
+      "C": "593/16",
+      "status": "negative_full_form_trial",
+      "sha256": "7f7946e87691d4057bfc107c6eddf34e7161597d5778f57b70f63ce3d0a09cdd"
+    }
+  ],
+  "modes": 192,
+  "bits": 2048,
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_H160/atlas.json": "90bf2f330dc9bec73b52ef7abceb6718ca82e2b7b662d335dbc9614fe98005ad",
+    "research/prime_spectral/verification_2026_10_15_split_pair/near_line_mixture_definition.json": "7cec7cfe196ac00bbd77c379655039c17c06c1f7999ef31deae37ec83daac22f",
+    "research/prime_spectral/verification_2026_10_15_split_pair/near_line_forecast.json": "666b3f5de024b0f6ea88eaf29eb1edb9f0c2c69db0f9d357704d6acc68d24e6b"
+  },
+  "scope": "Positive finite sections do not bound the first full negative support from below."
+}

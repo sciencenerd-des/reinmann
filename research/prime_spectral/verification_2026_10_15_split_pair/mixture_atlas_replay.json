@@ -1,0 +1,28 @@
+{
+  "folder": "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_H160",
+  "status": "all_contours_and_root_gates_replayed",
+  "height": 160,
+  "global_count": 123,
+  "critical_line_count": 113,
+  "right_off_line_count": 5,
+  "contour_bits": 320,
+  "root_gate_bits": 640,
+  "original_segments": 5452,
+  "replayed_segments": 5814,
+  "winding_ball": {
+    "lo": "8655355533852671/70368744177664",
+    "hi": "8655355533852673/70368744177664"
+  },
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_H160/atlas.json": "90bf2f330dc9bec73b52ef7abceb6718ca82e2b7b662d335dbc9614fe98005ad",
+    "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_H160/winding.json": "b2fec95fa38f58e90988f5184b28fc5d2b6953124a4d130afb08b384e4b67594",
+    "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_H160/line_roots.json": "af4266f6dd91870fe895a8e1bfd844ee1b614656fbedac46dfac97904196b7c8",
+    "research/prime_spectral/verification_2026_10_15_split_pair/mixture13_H160/offline_disks.json": "bc26ff714f75a0e18c2c171e66e07a9795cbfa92344e3cea8b1a0d7fd96438c7"
+  },
+  "source_sha256": {
+    "near_line_window_calibration.py": "7f86645f994f60998d7898958102afcd604871df5fa526f6c52c7e93d317730b",
+    "near_line_mixture_control.py": "f2a5e0de193fc744b1c7f2570ec0efcb1c6a21277615d7b4e6e5595c4200f856",
+    "replay_control_atlases.py": "119e6d4f4d9c8b10c56a6f5a94362a9a5aa7fad22c597f7c51bbf3c8d1125f74",
+    "character_zero_atlas.py": "8a918f78c685a864e860d436eb2b654673d5f46a7968e28e60a2e8bb88230dab"
+  }
+}

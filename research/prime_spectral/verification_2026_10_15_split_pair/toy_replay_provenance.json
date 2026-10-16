@@ -1,0 +1,6 @@
+{
+  "status": "user_supplied_toy_replayed_as_diagnostic",
+  "original_file": "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/split_pair_toy.py",
+  "snapshot_sha256": "80ace2408cf79478798537be5c4269ded1a37ef6c21547be065420a4b60722f3",
+  "scope": "Finite toy diagnostic; DH certificates use the actual completed function."
+}

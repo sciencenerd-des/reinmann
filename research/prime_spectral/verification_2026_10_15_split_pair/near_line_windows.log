@@ -1,0 +1,13 @@
+mixture13_H160 123 zeros; 5814 segments; 118 root gates
+16 positive_finite_sections_only seconds 3.406078084022738
+32 positive_finite_sections_only seconds 4.470506541954819
+64 negative_full_form_trial seconds 1.6414065000135452
+48 negative_full_form_trial seconds 2.3657293749856763
+40 negative_full_form_trial seconds 2.3499360000132583
+36 positive_finite_sections_only seconds 4.445893249998335
+38 negative_full_form_trial seconds 3.386455334024504
+37 positive_finite_sections_only seconds 4.561434040952008
+75/2 negative_full_form_trial seconds 3.655526083020959
+149/4 negative_full_form_trial seconds 3.5919934589765035
+297/8 negative_full_form_trial seconds 3.92331879097037
+593/16 negative_full_form_trial seconds 4.163761208008509

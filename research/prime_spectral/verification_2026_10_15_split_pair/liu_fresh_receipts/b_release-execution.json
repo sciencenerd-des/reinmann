@@ -1,0 +1,43 @@
+{
+  "mode": "FULL_REBUILD",
+  "startedAt": "2026-10-15T16:12:33.737495+00:00",
+  "finishedAt": "2026-10-15T16:18:17.527662+00:00",
+  "seconds": 343.7877219999791,
+  "python": "3.12.11 (main, Aug 18 2025, 19:02:39) [Clang 20.1.4 ]",
+  "executable": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/python312-layout/bin/python3.12",
+  "commands": [
+    {
+      "command": [
+        "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/python312-layout/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction/run.py",
+        "FULL_REBUILD",
+        "--output",
+        "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction/external-b-full",
+        "--jobs",
+        "2"
+      ],
+      "startedAt": "2026-10-15T16:12:33.737684+00:00",
+      "finishedAt": "2026-10-15T16:18:17.340553+00:00",
+      "seconds": 343.60066612501396,
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/python312-layout/bin/python3.12",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction/scalar.py",
+        "--output",
+        "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/liu_audit/extracted/w200-pub-2026-09-14/reproduction/external-b-full/scalar-receipt.json"
+      ],
+      "startedAt": "2026-10-15T16:18:17.340875+00:00",
+      "finishedAt": "2026-10-15T16:18:17.523018+00:00",
+      "seconds": 0.18215624999720603,
+      "exitCode": 0
+    }
+  ]
+}

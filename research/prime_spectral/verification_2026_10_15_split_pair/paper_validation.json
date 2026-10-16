@@ -1,0 +1,33 @@
+{
+  "status": "final_pdf_built_and_visually_inspected",
+  "pages": 15,
+  "source_sha256": {},
+  "input_sha256": {
+    "paper/dh_controls_paper.tex": "686e032de4e9f778e9b588a890f38c96ea62c956b636e08f8ce1567e3660c751",
+    "paper/dh_controls_paper.pdf": "a41d9797350ffb5b0fee1b6d0d299e199cf8c6ace9a68fab73fc7b8205a611d0"
+  },
+  "checks": [
+    "All 15 rendered pages inspected in three contact sheets",
+    "New theorem, extended-column figure and small-offset subsection inspected at page resolution",
+    "No clipping, overlaps, missing glyphs or unresolved references observed"
+  ],
+  "render_tool": "pdftoppm 90 dpi PNG; working renders in tmp/pdfs/oct15-final, not redistributed",
+  "rendered_page_sha256": {
+    "page-01.png": "2ea9419382b100eea4c6d1662b8386c9082ee1ccaf169ae591f073e1e4049be6",
+    "page-02.png": "ea913552e1cd7b9cf41911c56674b6856664af85269f9e8be2d12d6db5bf040b",
+    "page-03.png": "3673d0044db603e63953d0f4ee0a652c4dba9e9482b4591d63e3163a91ed0401",
+    "page-04.png": "36e9d47cef64a35a2ba0cf79cbaf298c49d099ed13a941d21c883832c50f0623",
+    "page-05.png": "a31bfe70ee83c81b2cd1eb609203cd39f0d46d72f1b30bab364cfd0a3a840919",
+    "page-06.png": "42a2e82d463d8ee92af3f6d6cf5ed5f468be41df8c25b7742a73da458ef4a728",
+    "page-07.png": "4ae197c7ca900850538a475287137370c993f78e44483c48c0290fbcb3e73e6e",
+    "page-08.png": "a81a256df22a19e09dfe99399ff58e76dc0955e6ed614aefb27dd84392646d8a",
+    "page-09.png": "20661f6bcbabcf90b9f8bd4f060cdf554b33d7770fe0bc15e594978a5faa1ddd",
+    "page-10.png": "1341c9d05057ba4fe7055579c0cdb2658cafa146d19a471b680fa7e1237cd4ed",
+    "page-11.png": "0ac4606987e2fd650ae4c645552e272219a85eb6c35e8bbe04953adbb6dd059d",
+    "page-12.png": "e592e5c4b8c2397113edd52842282728e3cf23f821fd98cb2afb16f686e54274",
+    "page-13.png": "11d6c5e4d327314158a69893a7ae5a7de8e2677ff7721bf965c02a15285d392b",
+    "page-14.png": "076dcfa64445f86087370946339df5241381f06d2e2e54638012437712842351",
+    "page-15.png": "8d06d1c033507732d763f2bcfe2f9b2a5a5029b3b4a9497ecd87ec96564c231c"
+  },
+  "scope": "Visual and build check, not analytic proof review."
+}

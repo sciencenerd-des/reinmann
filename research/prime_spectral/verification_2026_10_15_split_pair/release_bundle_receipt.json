@@ -1,0 +1,18 @@
+{
+  "status": "fresh_extraction_manifest_and_eight_tests_passed",
+  "bundle_file": "tmp/release/dh-controls-2026-10-15.tar.gz",
+  "bundle_sha256": "cda3f0db300333a1018b86c85018e195b232a52b25306e282fcaabcc16bcc54e",
+  "bundle_bytes": 55653458,
+  "archive_members": 472,
+  "manifest_artifacts": 470,
+  "hash_declarations_checked": 1217,
+  "fresh_extraction_tests": {
+    "split_pair": 3,
+    "near_line": 3,
+    "bundle_gate": 2
+  },
+  "paper_pages": 15,
+  "publication": "Both PDF and supplement uploaded and server-checksum verified; draft remains unsubmitted.",
+  "zenodo_draft_id": 23401370,
+  "submitted": false
+}

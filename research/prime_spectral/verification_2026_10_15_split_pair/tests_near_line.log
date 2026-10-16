@@ -1,0 +1,8 @@
+test_entries_against_independent_geometric_integral (test_near_line_control.NearLineChecks.test_entries_against_independent_geometric_integral) ... ok
+test_negative_witness_reassembled_at_higher_precision (test_near_line_control.NearLineChecks.test_negative_witness_reassembled_at_higher_precision) ... ok
+test_normalization_and_functional_equation (test_near_line_control.NearLineChecks.test_normalization_and_functional_equation) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.607s
+
+OK

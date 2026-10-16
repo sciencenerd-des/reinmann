@@ -1,0 +1,5 @@
+mixture_path refined line disks 50
+mixture_path refined line disks 100
+mixture_path complete refined atlas 123
+b008 even negative quartet gamma [31.43354158 +/- 1.64e-9] finite sum [-2.072475275e-16 +/- 2.29e-26] geometric [-2.150907074e-19 +/- 3.21e-29]
+b008 finite attribution complete

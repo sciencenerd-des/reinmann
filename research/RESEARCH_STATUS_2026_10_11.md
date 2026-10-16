@@ -10,6 +10,10 @@ Verification completed 13 October: all 26 selected Python tests passed, both fin
 
 Later 13 October: the [calibration and symbol round](prime_spectral/CALIBRATION_AND_SYMBOL_ROUND_2026_10_13.md) adds seven complete control atlases with higher-precision replay, seven common-degree negative witnesses and finite attribution. The q=17 negative endpoint C=133.751953125 is within the earlier 140±10% forecast. The certified oscillatory-symbol comparison improves costs but leaves full polynomial counts 8464 at e² and 25974 at 9.5 for floor 0.5, so it does not close a new full-window certificate. A [separate controls paper](../paper/dh_controls_paper.pdf) is drafted. Further Toeplitz scans, D6, arithmetic ablations and the D2 exact-count search are retired at the user's direction. The historical rows below retain their original evidence dates.
 
+Later 15 October: the [split-pair and audit round](prime_spectral/SPLIT_PAIR_AND_LIU_AUDIT_2026_10_15.md) locates the first negative rank in DH column 44 at 664 and proves infinite sign changes by the classical split-pair mechanism. A complete small-offset mixture atlas and negative witness at C=37.0625 are added, but do not determine the b→0 limit. Liu frozen commit b6cd218 passes A retained source/matrix/residual replay and B clean FULL/FAST replay, with all frozen source unchanged. The detailed runtime adaptation and analytic-inspection scope are recorded. The rows below remain historical where explicitly dated.
+
+Follow-up 15 October: the [second-band and collision-path round](prime_spectral/SECOND_BAND_AND_COLLISION_PATH_2026_10_15.md) confirms the locally recorded second DH band at1536–1972 and finds no earlier failure in the requested nearby-shift strip. Three complete mixture atlases reach offset0.004; the measured common-degree r rises to0.659726, with small N256 endpoint changes. No b-to-zero limit is established. The paper adds Liu related work; reviewer shortlist and requests are unsent. Public release now explicitly waits for a human read. The two new Lean projects are scoped for after publication, not claimed complete.
+
 | Claim / component | Evidence level | Open obligation |
 |---|---|---|
 | Correct entire xi target and ordinary versus classical Jensen coefficients | Lean source definitions and prior targeted validation | Complete analytic instances of the classical bridges |
@@ -52,9 +56,9 @@ The canonical Green queue completed its requested builds and audit independently
 ## Next acceptance criteria
 
 1. Calibration: externally review and archive the separate controls paper and compact certificate set. Preserve the distinction between certified negative upper bounds and minimum supports.
-2. D1: the actual-comb refinement has been measured and fails the requested cost goal. A different comparison architecture must first demonstrate manageable infinite-complement cost, then supply the outer gap, projector distance and exact compressed-block positivity. No Liu verification is available.
-3. D3, background: jointly control the localized filter tail, complex ordered partial sums and geometric diagonal. Local zero counting and seven empirical points do not supply universal Φ or a zeta zero-exclusion law.
-4. Toeplitz theory only: retain the passing grid and fixed-shift masking lemma. No further grid search or first-failing-minor search is scheduled.
+2. D1: the actual-comb refinement has been measured and fails the requested cost goal. A different comparison architecture must first demonstrate manageable infinite-complement cost, then supply the outer gap, projector distance and exact compressed-block positivity. The frozen Liu A and B certificate replays passed on 15 October; analytic dependencies remain written and human review remains pending. The laboratory's own comparison is stopped.
+3. D3, background: jointly control the localized filter tail, complex ordered partial sums and geometric diagonal. Local zero counting and the small-offset calibration do not supply universal Φ or a zeta zero-exclusion law. The universal-Φ task remains stopped; one b≈0.03 upper bound does not settle the offset limit.
+4. Toeplitz: retain the passing grid, fixed-shift masking lemma and targeted shift-44 first failure at rank 664. The split-pair theorem explains infinite oscillation in this column. No broad grid or globally first-minor search is scheduled.
 5. D5: retain the precise operator-norm robustness statement at multiplicative C=3.2; it is not an impossibility theorem for exact arithmetic proofs.
 6. D2 exact counting, D6 induction and arithmetic ablations are retired. Approximate slope-two counting remains prior art and may be used as background in a future independently specified certificate.
 

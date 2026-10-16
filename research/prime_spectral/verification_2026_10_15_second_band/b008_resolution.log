@@ -1,0 +1,8 @@
+b008 163/4 N 256 positive_finite_sections_only
+b008 41 N 256 positive_finite_sections_only
+b008 329/8 N 256 positive_finite_sections_only
+b008 659/16 N 256 positive_finite_sections_only
+b008 1319/32 N 256 positive_finite_sections_only
+b008 2639/64 N 256 positive_finite_sections_only
+b008 5279/128 N 256 negative_full_form_trial
+b008 N256 negative 5279/128 positive finite 2639/64

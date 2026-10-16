@@ -1,0 +1,14 @@
+{
+  "status": "descriptive_forecast_recorded_before_mixture_window_trials",
+  "recorded_utc": "2026-10-15T16:24:17.680453+00:00",
+  "offset_b": 0.030000000000000027,
+  "gamma": 31.43362168447675,
+  "r_prediction": 0.5316505893735258,
+  "C_prediction": 34.57675284267167,
+  "model": "prior seven-control r=a+k*b; no fitted confidence interval",
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_13_calibration/calibration_dataset.json": "18a2b80f3b84c604c012448c75aa3cb5c0dce3c35fbfd39770db53eabfc826af",
+    "research/prime_spectral/verification_2026_10_15_split_pair/near_line_mixture_definition.json": "7cec7cfe196ac00bbd77c379655039c17c06c1f7999ef31deae37ec83daac22f"
+  },
+  "scope": "Extrapolative model prediction; the lowest off-line zero still requires complete atlas validation. Other off-line pairs may dominate the first witness."
+}

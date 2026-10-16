@@ -1,0 +1,23 @@
+{
+  "status": "revised_pdf_verified_supplement_update_unresolved",
+  "id": 23401370,
+  "submitted": false,
+  "state": "unsubmitted",
+  "draft_url": "https://zenodo.org/deposit/23401370",
+  "reserved_doi": "10.5281/zenodo.23401370",
+  "files": [
+    {
+      "name": "dh-controls-2026-10-15.tar.gz",
+      "bytes": 110250385,
+      "server_md5": "c0ef7a2af51321fb4bf0be8c9b15ab82"
+    },
+    {
+      "name": "dh_controls_paper.pdf",
+      "bytes": 246143,
+      "server_md5": "85f9f13a5572b18a8151a9ce9bd1b38e"
+    }
+  ],
+  "local_manifest_sha256": "70fea1ce102f3406dea3fceb83ed31040fc969493d4ad3344fb4dbeb8b318dea",
+  "failure": "Large archive transfer produced no receipt; later metadata write returned HTTP 504; the final bounded file-transfer attempt returned HTTP 502. Local supplement is fully verified; remote supplement remains the prior revision.",
+  "publication_gate": "Human read pending; no Publish or external contact."
+}

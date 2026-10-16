@@ -1,0 +1,36 @@
+19 2 off pairs found 0 first None
+19 8 off pairs found 12 first [0.260567713671943 +/- 4.65e-16]
+19 14 off pairs found 6 first [0.444392358618899 +/- 5.25e-16]
+23 5 off pairs found 0 first None
+23 15 off pairs found 7 first [0.204717719575011 +/- 1.64e-16]
+23 17 off pairs found 0 first None
+29 2 off pairs found 1 first [0.079496136582039 +/- 4.68e-16]
+29 3 off pairs found 2 first [0.168467370684469 +/- 5.98e-16]
+29 18 off pairs found 1 first [0.183069856876590 +/- 3.87e-16]
+29 19 off pairs found 0 first None
+31 3 off pairs found 10 first [0.309689458343826 +/- 1.15e-16]
+31 6 off pairs found 2 first [0.060013985726507 +/- 1.80e-16]
+31 12 off pairs found 12 first [0.692214118496986 +/- 3.31e-16]
+31 22 off pairs found 0 first None
+31 23 off pairs found 2 first [0.355182532145445 +/- 2.63e-16]
+37 2 off pairs found 2 first [0.260387963756366 +/- 1.92e-16]
+37 5 off pairs found 8 first [0.366630035803084 +/- 2.69e-16]
+37 6 off pairs found 3 first [0.219105143864333 +/- 2.19e-16]
+37 8 off pairs found 4 first [0.228734216041827 +/- 1.99e-16]
+37 13 off pairs found 2 first [0.111146722581544 +/- 5.66e-16]
+37 18 off pairs found 7 first [0.496976264555854 +/- 5.81e-16]
+41 3 off pairs found 11 first [0.526373403248768 +/- 3.57e-16]
+41 6 off pairs found 3 first [0.211191274193515 +/- 3.12e-16]
+41 11 off pairs found 0 first None
+41 12 off pairs found 0 first None
+41 13 off pairs found 11 first [0.189212998240242 +/- 1.53e-16]
+41 22 off pairs found 13 first [0.267999832703246 +/- 3.44e-16]
+41 27 off pairs found 1 first [0.267864439656520 +/- 2.93e-16]
+43 3 off pairs found 12 first [0.172757675087028 +/- 4.40e-16]
+43 5 off pairs found 0 first None
+43 7 off pairs found 7 first [0.171177358125910 +/- 3.83e-16]
+43 8 off pairs found 0 first None
+43 12 off pairs found 4 first [0.197811347664294 +/- 5.35e-16]
+43 19 off pairs found 15 first [0.199859450627700 +/- 5.03e-16]
+43 32 off pairs found 14 first [0.864880286969311 +/- 3.71e-16]
+no candidate with lowest observed offset in [0.02,0.05]

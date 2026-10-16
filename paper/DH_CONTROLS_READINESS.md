@@ -1,38 +1,38 @@
-# DH-controls draft readiness — 13 October 2026
+# DH-controls preprint readiness — 16 October 2026
 
-Title: **How sensitive are finite RH criteria? Certified Davenport–Heilbronn controls**.
+**How sensitive are finite RH criteria? Certified Davenport–Heilbronn controls**, Biswajit Mondal. No affiliation or contact information has been invented.
 
-Author: Biswajit Mondal. No affiliation or contact information has been invented.
+Files: [source](dh_controls_paper.tex), [PDF](dh_controls_paper.pdf), [reproduction guide](DH_CONTROLS_REPRODUCTION.md), [round report](../research/prime_spectral/SPLIT_PAIR_AND_LIU_AUDIT_2026_10_15.md).
 
-Files: [source](dh_controls_paper.tex), [PDF](dh_controls_paper.pdf), [round report](../research/prime_spectral/CALIBRATION_AND_SYMBOL_ROUND_2026_10_13.md).
+An unpublished [Zenodo draft](https://zenodo.org/deposit/23401370) reserves DOI `10.5281/zenodo.23401370`. A reserved DOI is not evidence of publication. The author must press Publish. No external message, commit or merge is authorized by draft preparation.
 
-Suggested arXiv primary category: math.NT. The mathematical content may also interest math.CA. MSC 2020: 11M26, 11M41, 15B05. These are draft metadata, not a submission.
+The draft is being revised with the second-band and collision-path results; the new revision receipt binds its exact uploaded files. The preceding receipt remains historical.
 
-## Included and checked
+## Included evidence
 
-- Complete classical DH atlas to height 340, global steepest folded angle and written PF435 sector argument, using the preceding round's replay.
-- Passing 18,291-cell solid-minor grid through rank 520, with 24 complementary-minor checks. No new scan.
-- Seven common-degree negative-window upper bounds, complete finite atlases for the additional controls, the recorded q=17 forecast test and exact witnesses.
-- Interval finite-atlas attribution with the physical Fourier phase checked by direct integration.
-- Elementary fixed-shift masking lemma, explicitly without a novelty claim.
-- Direct dominant-pole argument that the classical DH shift-one ladder is eventually strictly positive, using the certified first-zero separation; no explicit last exceptional rank or other-shift conclusion.
-- Explicit credit to the previously known zero centers, Bombieri–Ghosh, Balanzario–Sánchez-Ortiz, and the teal-sea/zeta-lab C≈31 observation.
-- Nine new numerical tests, a separate higher-precision replay of all seven new atlases, source/input hash verification, and final PDF build and visual inspection recorded with the supplement.
+- Complete DH atlas to height 340, global steepest folded angle and written PF435 sector argument.
+- Historical 18,291-cell passing solid-minor grid, with complementary checks; no new broad grid.
+- Shift-44 first negative rank 664 and negative band 664–1099, returning positive at 1100–1400. Fresh 1,451-coefficient Dirichlet-L evaluation overlaps all 721 shared old coefficients; all 880 extended-column signs and both boundaries receive a higher-precision determinant replay. Both paths share FLINT/Arb.
+- Classical split-pair Schur/residue asymptotic with nonzero leading constant and infinite sign changes, alongside the eventual-positive DH shift-one result. No novelty claim for classical finite-pole asymptotics.
+- Locally pre-registered second-band forecast confirmed at ranks 1536–1972, using rigorous positive-coefficient enclosures through 2050. Nearby shifts 40–48 have no earlier failure in the 1,620 requested cells.
+- Three complete replayed collision-path atlases at offsets 0.015,0.008,0.004, common N192 negative endpoints39.5625,41.28125,42.90625 and N256 changes below 0.05. Four-point growth is descriptive, not an asymptotic law.
+- Seven common-degree negative-window upper bounds, complete additional atlases, recorded conductor-17 forecast and finite attribution.
+- Held-out exact rational conductor-13 mixture with lowest offset approximately 0.03, complete replayed atlas and exact negative witnesses at C=37.0625 (N192) and C=37 (N256). The b→0 conclusion is inconclusive and the original seven-point fit is not refitted.
+- Six new scientific tests and two stale-bundle acceptance tests, including independent geometric integration and higher-precision negative-witness reconstruction. Prior finite Lean results remain unchanged; no new Lean build is claimed.
+- Fresh Liu frozen A retained source/matrix/residual replay and B clean FULL/FAST replay, with unchanged upstream source and explicit macOS runtime-layout adaptation. These are separate computational audit receipts, not new RH mathematics.
 
-The analytic functional equations, genus decompositions, explicit formulas, argument principle, entire-function product and sector theorem are written dependencies. The interval backend is FLINT/Arb. The two finite Lean targets and six-theorem audit come from the preceding round; this draft does not formalize its analytic or numerical arguments in Lean.
+## Review and limits
 
-## Claims deliberately limited
+A separate AI agent reviewed the split-pair theorem and revised paper wording, repeated the cached targeted column at 33,024 bits and independently reassembled the mixture witnesses. Its source/data hashes and review limitations are in the new supplement. This is AI review, not external human peer review.
 
-PF435 is sufficient; the solid grid does not prove PF520 or locate the globally first negative minor. Negative windows are certified upper bounds on detection support. Positive finite sections do not establish full positivity or a minimum-support bracket. The seven-point fits are descriptive; leave-one-out errors reach 16–20%. The q7 control has an off-line zero with real part greater than one.
+The written analytic dependencies and Arb backend remain separate from the finite Lean proofs. PF435 is sufficient, the solid grid does not prove PF520, and rank 664 is first among the explicitly tested DH contiguous cells, not globally first. Negative supports are upper bounds; positive finite sections are not lower bounds for full positivity. Fits remain descriptive, with prior leave-one-out errors of 16–20%. Finite-atlas attribution has no negligible infinite-tail certificate. No universal Phi, 12C exclusion law or RH proof is established.
 
-The finite sums identify the largest negative quartet within each atlas, without an independently negligible infinite tail. The data do not prove a universal Φ, a 12C zero-exclusion law, Liu's claimed window, or RH.
+The author now requires a human read of §§3–4 and §6 before publication. No human has yet reviewed or been contacted. The shortlist and request are prepared in HUMAN_REVIEW_REQUEST.md. The AI review does not satisfy this gate. Human analytic/numerical review also remains appropriate before a journal submission. The author controls title/metadata acceptance, public release and submission destination. Suggested arXiv category math.NT and MSC 11M26, 11M41, 15B05 are metadata suggestions, not a submission.
 
-## Remaining before submission
+## Final artifact gate
 
-1. Independent analytic and numerical review, especially the regularized Epstein contour target, genus normalization, sector-theorem hypotheses and full geometric quotient.
-2. A stable public archive of the source and compact certificates with its permanent identifier inserted into the paper. No archive or DOI has been fabricated.
-3. Author approval of final title, metadata, references and submission destination.
+The new second-band round adds three substantive tests and a separate technical AI delta review. No human review or public post is claimed.
 
-Primary reading this round included Zhu v2 §7, the original teal-sea/zeta-lab report and the complete Balanzario–Sánchez-Ortiz article through its author-uploaded copy; the round builds on the repository's earlier prior-art audit. The draft does not claim that this reading proves novelty.
+The current round's manifest binds this revised source/PDF, numerical records and reproduction sources. Historical manifests bind historical paper revisions and are not reused as the current paper's gate. The final release receipt records bundle verification, PDF rendering and uploads. Failed exploratory commands remain diagnostics; they are not counted as successful certificates.
 
-No commit, merge or submission was performed.
+The 16 October revision includes two reproducible, data-checked explanatory figures. The original supplied PDFs are preserved. The folded zero on the negative real axis and the corresponding reciprocal pole on the positive real axis are distinguished in the caption; attribution percentages state their denominator. A new figure-revision manifest binds the updated PDF separately from the earlier frozen scientific revision. Human review remains pending.

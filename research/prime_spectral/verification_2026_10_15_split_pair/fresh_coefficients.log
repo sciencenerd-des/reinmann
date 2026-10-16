@@ -1,0 +1,8 @@
+fresh L-series coefficients 1450 16384
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/dh_split_pair_coefficients.py", line 54, in <module>
+    a=p.parse_args();run(a.count,a.bits)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/dh_split_pair_coefficients.py", line 35, in run
+    raise ArithmeticError('positive coefficient gate failed')
+ArithmeticError: positive coefficient gate failed

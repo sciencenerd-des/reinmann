@@ -1,0 +1,66 @@
+{
+  "status": "N256_finite_family_endpoint_resolved",
+  "key": "b008",
+  "modes": 256,
+  "bits": 4096,
+  "positive_finite_evidence_C": "2639/64",
+  "negative_certificate_C": "5279/128",
+  "records": [
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C165_4_N256_4096bits.json",
+      "sha256": "fae257e157f5074bcad8e02ad7568c9007fff621330ba1177e6d44edf89acebd",
+      "C": "165/4",
+      "status": "negative_full_form_trial"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C163_4_N256_4096bits.json",
+      "sha256": "35e847a68ac069b6b487c872f14c33e3e2b934bc345d68d9a40b7b3058ea9ed1",
+      "C": "163/4",
+      "status": "positive_finite_sections_only"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C41_N256_4096bits.json",
+      "sha256": "3bbc41c2711fb668542bd1060df80a38fcdc3b74b23159ee6d7620ffb5a82cd1",
+      "C": "41",
+      "status": "positive_finite_sections_only"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C329_8_N256_4096bits.json",
+      "sha256": "1bc770e019b5ae705fff88f775f7f93cb85748d9872d5e70d2fcd08039a921e9",
+      "C": "329/8",
+      "status": "positive_finite_sections_only"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C659_16_N256_4096bits.json",
+      "sha256": "c398124b633c0e6a88ec26066c8e9bdb1528128c877cab3059885ad4ffe55b64",
+      "C": "659/16",
+      "status": "positive_finite_sections_only"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C1319_32_N256_4096bits.json",
+      "sha256": "0807b7814d9d3f65b9c239fd592701ecdf28eea408d914795ec9009c9af2bf07",
+      "C": "1319/32",
+      "status": "positive_finite_sections_only"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C2639_64_N256_4096bits.json",
+      "sha256": "b443b0a71526b63e9506878a144f35303bc88fae9464f68026692c8781b1027d",
+      "C": "2639/64",
+      "status": "positive_finite_sections_only"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_15_second_band/b008/windows/C5279_128_N256_4096bits.json",
+      "sha256": "1f5a8ac16526b9f08192249486705da666db05abefea1281629bca406a2f825c",
+      "C": "5279/128",
+      "status": "negative_full_form_trial"
+    }
+  ],
+  "N192_to_N256_negative_endpoint_difference": "5/128",
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_15_second_band/b008/window_search.json": "5681210182033c87377799ccb7d99815206c370e55833ab5fd19f1bd1ec9f867"
+  },
+  "source_sha256": {
+    "mixture_path_resolution.py": "fba885ba286f8421df31b1c78552f57c2bbafed790256822620d01cdbeda0277"
+  },
+  "scope": "Finite-family resolution sensitivity; positive endpoint does not certify a full positive window or bound minimum support."
+}

@@ -1,0 +1,28 @@
+{
+  "status": "fresh_extraction_and_eleven_tests_passed",
+  "bundle_file": "tmp/release-round2/dh-controls-2026-10-15.tar.gz",
+  "bundle_sha256": "600dbc7ca8e88b22afbee01637785bea4c4c2d693e2d4097f06b277dd1003c50",
+  "bundle_bytes": 110250385,
+  "archive_members": 609,
+  "manifest_artifacts": 607,
+  "hash_declarations_checked": 1386,
+  "fresh_extraction_tests": {
+    "previous_split_pair": 3,
+    "previous_mixture": 3,
+    "bundle_gate": 2,
+    "new_second_band_and_path": 3
+  },
+  "paper_pages": 17,
+  "human_review_packet": {
+    "status": "focused_human_review_packet_prepared_unsent",
+    "file": "tmp/review-round2/dh-controls-human-review-packet.zip",
+    "bytes": 1720382,
+    "sha256": "8e0596cd2edd7cf1bdd18ab7667e61e2c0014547c039e62757318511af006cfe",
+    "members": 26,
+    "human_review": "Pending; no person contacted."
+  },
+  "publication": "Live files checked against revised receipt. Required human review remains pending; no publication action taken by this session.",
+  "zenodo_draft_id": 23401370,
+  "submitted": false,
+  "live_state": "unsubmitted"
+}

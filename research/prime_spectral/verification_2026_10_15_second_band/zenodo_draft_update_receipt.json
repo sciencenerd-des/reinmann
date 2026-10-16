@@ -1,0 +1,25 @@
+{
+  "status": "revised_files_verified_on_unpublished_draft",
+  "id": 23401370,
+  "submitted": false,
+  "state": "unsubmitted",
+  "draft_url": "https://zenodo.org/deposit/23401370",
+  "reserved_doi": "10.5281/zenodo.23401370",
+  "files": [
+    {
+      "name": "dh_controls_paper.pdf",
+      "bytes": 201925,
+      "sha256": "821c5e23aab977d949e8553ca5eeca074b2371857a4cc3948508aad086adfbc7",
+      "server_md5": "2f64cfb98b0e5afc64181116054d7535"
+    },
+    {
+      "name": "dh-controls-2026-10-15.tar.gz",
+      "bytes": 110250385,
+      "sha256": "600dbc7ca8e88b22afbee01637785bea4c4c2d693e2d4097f06b277dd1003c50",
+      "server_md5": "c0ef7a2af51321fb4bf0be8c9b15ab82"
+    }
+  ],
+  "local_manifest_sha256": "62ccdea1a98167b332e7f849246615be43e62071f530cdc6d74015702959d47f",
+  "transport": "Initial Python upload TLS connection failed. TLS-verified HTTP/1.1 curl with bounded automatic retries succeeded; artifact bytes unchanged.",
+  "publication_gate": "Required human read has not occurred. No publish endpoint called; author controls publication."
+}

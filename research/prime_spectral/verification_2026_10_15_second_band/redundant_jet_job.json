@@ -1,0 +1,9 @@
+{
+  "status": "redundant_full_jet_job_cancelled_after_rigorous_tail_certificate_succeeded",
+  "recorded_utc": "2026-10-15T17:33:12.874423+00:00",
+  "reason": "Positive-coefficient Cauchy bounds through2050 resolve all second-band determinants. No accepted output from cancelled jet run.",
+  "stopped_processes": 2,
+  "source_sha256": {
+    "dh_second_band_coefficients.py": "25d580716fab809921aa3ff88f538710c61fdba770bec61736bf1e1c784ea6dc"
+  }
+}

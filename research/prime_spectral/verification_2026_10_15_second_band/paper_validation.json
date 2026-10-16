@@ -1,0 +1,34 @@
+{
+  "status": "revised_pdf_built_and_visually_inspected",
+  "pages": 17,
+  "input_sha256": {
+    "paper/dh_controls_paper.tex": "e2113814e3a45c6e0113c17d8abb624f00146a2e170d0a2bb45bc8a600abcd4b",
+    "paper/dh_controls_paper.pdf": "821c5e23aab977d949e8553ca5eeca074b2371857a4cc3948508aad086adfbc7"
+  },
+  "checks": [
+    "All17 pages inspected in contact sheets",
+    "Forecast/tail proof, both-band figure, collision-path table/figure and bibliography inspected at page resolution",
+    "No clipping, overlaps, missing glyphs or unresolved references observed"
+  ],
+  "render_tool": "pdftoppm 90dpi PNG; working renders not redistributed",
+  "rendered_page_sha256": {
+    "page-01.png": "d4275a24489415068a54b929c43db47df8c76898d74303ec2dafe03e60a7d24b",
+    "page-02.png": "1106e179242280d794a860fa570b80b080df4240f85030985906da5115903838",
+    "page-03.png": "9d5c3620b76537a5c840334b12b6f419b6349cc4316e7ae27790da3366bf25d9",
+    "page-04.png": "753379a787790ee40da335af1fc6992667a6b682236b0cfaa0b1b9711a7dd1d2",
+    "page-05.png": "861bedf27f4b86581bc677617e80f32351832d0666470c6894e52f60b6b2d16c",
+    "page-06.png": "396d7d26bd4f90d19c28eafa7e166f264adb587ddbcc776aedde906ab6c3998c",
+    "page-07.png": "3f74e129a8b60b7d8ead5b24af5e5ded29584e1d2fcac81d148af2b31f785965",
+    "page-08.png": "02020fbca4ab19b2518f2a4392fa149aac8edf73a29b6fe0858a63bb0872ab59",
+    "page-09.png": "b1ee3c4dd18ead8708cbe2c5469af2b5c264ff06df6c553e00cd9257dc83a81d",
+    "page-10.png": "78826aa3f34084447d41a1246ce3e5a9fa1fe66b24e5aebdf36119c9cac2aa20",
+    "page-11.png": "49719011559e8c17c8b33bc28bbcb0067378c6e7d4b89617fef6a8c9367ad940",
+    "page-12.png": "b089aa64198dc1864f4606507c8fc08713c6f7d0089f681492fdfcf2f9d8573a",
+    "page-13.png": "9f7d281ca0f87ddd8e5afc8736faf20749b8ce1d84994c992d3f894c305ff092",
+    "page-14.png": "cebbc4b628ceff624fb35cf48c7a73755fbb7c7ac867c63eada1c2cde84aa0ae",
+    "page-15.png": "576616646705198e724b240aacff8b5582646673f69ecb3213879eac6a982eb4",
+    "page-16.png": "fa7470cad38ec77d5bce9b75ddfcea4fbe88af1a33ccf17b3dec29d0d41d6ff4",
+    "page-17.png": "6035406d5cddb83d4befd4b6ed761fd388eb04670dff3ab2f3af89f8077cee16"
+  },
+  "scope": "Build and visual review; required external human mathematical read remains pending."
+}

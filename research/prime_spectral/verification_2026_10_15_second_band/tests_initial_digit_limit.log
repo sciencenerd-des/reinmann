@@ -1,0 +1,17 @@
+.E.
+======================================================================
+ERROR: test_positive_tail_enclosures_against_fresh_radius_value (__main__.NewRoundChecks.test_positive_tail_enclosures_against_fresh_radius_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/test_second_band_and_path.py", line 22, in test_positive_tail_enclosures_against_fresh_radius_value
+    upper=Fraction(record['hi']);lo=Fraction(record['lo'])
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/fractions.py", line 241, in __new__
+    numerator = int(m.group('num') or '0')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 9864 digits; use sys.set_int_max_str_digits() to increase the limit
+
+----------------------------------------------------------------------
+Ran 3 tests in 50.492s
+
+FAILED (errors=1)

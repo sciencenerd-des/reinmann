@@ -1,0 +1,61 @@
+{
+  "status": "preregistered_before_new_coefficients_or_scans",
+  "recorded_utc": "2026-10-15T17:26:49.425870+00:00",
+  "second_band_forecast": {
+    "shift": 44,
+    "negative_entry_rank_interval": [
+      1535,
+      1539
+    ],
+    "last_negative_rank_interval": [
+      1970,
+      1974
+    ],
+    "nominal_band": [
+      1537,
+      1972
+    ],
+    "evaluation_ranks": [
+      1401,
+      2000
+    ],
+    "basis": "Measured asymptotic period 872.66973123454 and first negative band 664..1099; nominal ranks supplied by user. No finite asymptotic remainder bound."
+  },
+  "nearby_shift_scan": {
+    "shifts": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "ranks": [
+      521,
+      700
+    ],
+    "rule": "Report every negative and unresolved cell; do not describe global first failure. Compare all contiguous minors actually tested, including historical grid."
+  },
+  "mixture_path": {
+    "targets_b": [
+      "3/200",
+      "1/125",
+      "1/250"
+    ],
+    "fixed_conductor": 13,
+    "labels": [
+      2,
+      6
+    ],
+    "rule": "Exact rational parameters fixed before window trials. Require complete atlas and disjoint root disks well below pair separation. Keep common N192 and precision checks; finite positive sections do not lower-bound full detection support."
+  },
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_15_split_pair/split_pair_asymptotic.json": "c79112ffc5aaa21213f341573ae89860f09c89a3b1437e00933c6dda4e22f530",
+    "research/prime_spectral/verification_2026_10_15_split_pair/column44_rank521-1400_32768bits.json": "68824bd90920e3f30f75d6a63fe7bda2585723795bfc1a31d56bc7d1e7a27b1c",
+    "research/prime_spectral/verification_2026_10_15_split_pair/dh_coefficients_1450_32768bits.json": "2b6a28d04cbdb0eddf3af391dbd0c1d483f47797553be6fe3958bd0f95a552e2"
+  },
+  "scope": "Private pre-registration record. File timestamp and hashes are local evidence, not an independent public timestamp."
+}

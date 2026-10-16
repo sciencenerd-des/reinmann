@@ -1,0 +1,34 @@
+{
+  "status": "preregistered_second_band_forecast_tested",
+  "observed_band": [
+    1536,
+    1972
+  ],
+  "forecast_passes": [
+    true,
+    true
+  ],
+  "nominal_errors": [
+    -1,
+    0
+  ],
+  "leading_cosine_signs_matching": 600,
+  "leading_cosine_signs_compared": 600,
+  "entry_displacement_from_first_band": 872,
+  "last_negative_displacement_from_first_band": 873,
+  "nearby_cells": 1620,
+  "first_negative_nearby_cell": {
+    "rank": 664,
+    "shift": 44
+  },
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_15_second_band/preregistered_forecast.json": "3573621a6018433771cacc270b2aa8845c2a85696ec86ce65edd6c200d9134d0",
+    "research/prime_spectral/verification_2026_10_15_second_band/shifts44-44_ranks1401-2000_33024bits.json": "d36b1f359a91efff183946961ccc666d7938408538b3219cecde2c8365c1ee7c",
+    "research/prime_spectral/verification_2026_10_15_second_band/shifts40-48_ranks521-700_33024bits.json": "a74edbc9c74a3c31733af15f69041d8eacb1a63a0e3e3787bc9622dfaf5b91d8",
+    "research/prime_spectral/verification_2026_10_15_split_pair/split_pair_asymptotic.json": "c79112ffc5aaa21213f341573ae89860f09c89a3b1437e00933c6dda4e22f530"
+  },
+  "source_sha256": {
+    "assess_second_band_forecast.py": "c425426df9dc88bb5c6b4566fcc836367b5f60ee56af3e859a75aac94e6aba0d"
+  },
+  "scope": "Locally preregistered forecast, not independently public timestamped. Confirms these finite band predictions, not an all-rank quantitative remainder theorem or globally first failing minor."
+}

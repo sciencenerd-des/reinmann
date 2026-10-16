@@ -1,0 +1,33 @@
+{
+  "status": "figure_revision_pdf_built_and_visually_inspected",
+  "pages": 19,
+  "compiler": "Tectonic; successful PDF build. Underfull hbox warnings only.",
+  "render_check": "All 19 rendered pages inspected in contact sheet; figure pages 16 and 19 inspected at full render resolution. Captions, inset, legends and page boundaries are visible without clipping.",
+  "input_sha256": {
+    "paper/dh_controls_paper.tex": "b658d197ab9adbf07f2537028ca6dd99bfc3178de47fa6781fdeba0b3eeaac73",
+    "paper/dh_controls_paper.pdf": "ea0908b5320226842791f9b732993c67138bc9c7762197cb45f3a2bc60224ed5",
+    "research/prime_spectral/verification_2026_10_16_figures/independent_figure_ai_review.md": "42df76b8b80a5db840c76c5de864f9a7f9f48bdbdbcdf7f707a27b77e60f39e8"
+  },
+  "rendered_pages_sha256": {
+    "page-01.png": "445490246e2252237aef4c54bb7c52d791831e637a3f1f65d5161330071924d0",
+    "page-02.png": "f29e14c9a6726eea9e73f8fb96682c3dcb91163f235577fa6dd4d7e0b4bf3f3e",
+    "page-03.png": "4bbd29f9bba780737f29d092caa6422a0e47e1abc9e46df9b17852927a8da077",
+    "page-04.png": "9d0e36fe998ed8fed149b4a72d2d17a2c56617cbbdec758ec55a40ca982c7fd7",
+    "page-05.png": "cbdc56e27aa754be0b9cdfc029099729097b4ed0127189051ada09e887cbbc01",
+    "page-06.png": "ff825a0c79c8242e10ea4113013d507454b8ceb49f40b9200186ee41cc402cb6",
+    "page-07.png": "94dd886a77f8bc6bde42768ebdbaf1d3e3cdfc83324ff8b432f173935997e448",
+    "page-08.png": "1a9c64f3946098191d7a909bac5113f908f0d9fe8def47459e9296672ec00b72",
+    "page-09.png": "8e55f836d3e60c74d4c4092a251989ae32b81a7f43d7fa4ba218fd221ce4fab3",
+    "page-10.png": "2fe7da1de79ca828ecaa66392333a35b55f76d31b15d264a06b80509cc897703",
+    "page-11.png": "5ecc9fed1d46902a2ccd9a01d2d5e7143944d549909ec57f803697038c491d3a",
+    "page-12.png": "7642f6a2bf56d2d487919b598c1738a0842c14c76b0afd2da65d12f9a3f129ee",
+    "page-13.png": "9fcdac8f5cf714ce7a6e87d80dfe0569d77c99449aea743553aefc8eb3ab2f9f",
+    "page-14.png": "44cd450030391b59ebf3b146a0502274190bd0480c761f464beb2f0647e29b4e",
+    "page-15.png": "4e1ed1146516c810f517dd83cd2532cef1940f0c0528b7657854c7fa3d91db20",
+    "page-16.png": "c84d78287d40902661eb92ae776ef4212c6f429b8a4eb68627fffabced18579e",
+    "page-17.png": "b778738ee166edcd6759efe9c856537a3ba89f2a958fa2ca6fe7f8c55cd96eb3",
+    "page-18.png": "cd9a3df064666d441b00ada2f52d0922ca71904dc1ad6e6c1e749fcbec9ea285",
+    "page-19.png": "20d638dcdd8da5729d1d26dc2ca8e2476af43a2690e7a1d30c0ac0ad9d0ddc22"
+  },
+  "scope": "Authoring/layout and data-caption checks only; earlier scientific inputs and eleven-test suite unchanged. AI technical review is not the required human read. No publication."
+}

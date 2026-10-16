@@ -22,37 +22,41 @@
 \DeclareMathOperator{\Ima}{Im}
 \title{\bfseries How sensitive are finite RH criteria?\\Certified Davenport--Heilbronn controls}
 \author{Biswajit Mondal}
-\date{Working draft, October 13, 2026}
+\date{October 16, 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
 Finite positivity tests related to the Riemann Hypothesis require calibration
-against functions with known off-line zeros. We study the classical
-Davenport--Heilbronn function, additional character combinations, and two
-Epstein zeta functions. An argument-principle computation certifies the complete
-Davenport--Heilbronn zero atlas through height 340: 235 critical-line zeros and
-seven reflected off-line pairs in the upper half-plane. A leading-term
-Dirichlet-series bound proves that the zero at height \(85.69934849\) has the
-largest folded angular deviation among all zeros. Schoenberg's sufficient
-sector theorem consequently gives \(\PF_{435}\) for the ordinary folded
-Taylor coefficients. Nevertheless, all 18,291 contiguous minors at ranks
-430--520 and shifts 0--200 are positive at 32,768-bit precision. The isolated
-quadratic factor first has a negative shift-one minor at rank 436.
-An elementary masking lemma explains why such a factor need not force failure
-in a fixed-shift ladder; a dominant-pole argument proves eventual positivity
-of the full Davenport--Heilbronn shift-one ladder.
-We also give certified negative geometric-form trials
-for seven controls, including a conductor-17 test of a prediction recorded
-before its new window search, and finite-zero-sum attribution diagnostics.
-The window data are negative-support upper bounds, not certified minimum
-supports. Neither the fitted calibration nor the finite Toeplitz grid yields
-a universal zero-free region or a proof of the Riemann Hypothesis.
+against functions with known off-line zeros. We study Davenport--Heilbronn
+character combinations and two Epstein zeta functions. An interval-certified
+Davenport--Heilbronn atlas through height 340 contains 235 critical-line zeros
+and seven reflected off-line pairs. A global angular comparison and
+Schoenberg's sector theorem give \(\PF_{435}\) for the ordinary folded
+Taylor coefficients. All 18,291 tested solid minors at ranks 430--520 and
+shifts 0--200 are positive. A targeted calculation finds negative shift-44
+bands at ranks 664--1099 and 1536--1972. The second band meets a forecast
+recorded before the new computation. Nearby shifts 40--48 reveal no earlier
+failure in the tested strip. A classical split-pair asymptotic explains
+infinite sign changes, while a dominant-pole argument gives eventual
+positivity at shift one. We also certify negative geometric-form witnesses
+for seven controls and test a recorded conductor-17 forecast. A rational
+mixture path decreases the lowest off-line offset from 0.03 to 0.004; its
+common-degree normalized support upper bound rises from 0.5699 to 0.6597.
+Larger-degree checks show only small endpoint changes. This finite path
+does not determine the small-offset limit. All window endpoints are support
+upper bounds; positive finite sections give no full-window lower bounds.
+Finite-atlas attribution has no negligible infinite-tail bound. These
+results establish neither a universal zero-free region nor the Riemann
+Hypothesis.
 \end{abstract}
 \noindent\textbf{Keywords:} Davenport--Heilbronn function; Weil quadratic form;
 Toeplitz minors; total positivity; interval arithmetic; negative controls;
 zero detection.
 
 \noindent\textbf{MSC 2020:} 11M26, 11M41, 15B05.
+
+\noindent\textbf{Supplement identifier:} \url{https://doi.org/10.5281/zenodo.23401370}
+(reserved for the author-controlled archival draft at preparation).
 
 \section{Introduction}
 An all-orders positivity criterion can characterize the Riemann Hypothesis
@@ -71,10 +75,11 @@ these zero locations.
 Our main result is a reproducible calibration for one specified family of
 Toeplitz minors. We certify the steepest folded Davenport--Heilbronn zero and
 the resulting \(\PF_{435}\) sufficient guarantee, then test the requested
-grid beyond the isolated quadratic's first negative minor. Every tested
-full-function minor is positive. This is a failure of sharpness for the
-specified solid grid. It does not locate the globally first negative minor,
-and does not prove \(\PF_{520}\).
+grid beyond the isolated quadratic's first negative minor. Every full-function minor in that grid is positive. This is a failure of sharpness for the
+specified solid grid. A subsequent targeted shift-44 calculation finds a
+negative minor at rank 664. This is the first negative member of that column and the first failure
+among the explicitly listed DH contiguous minors tested in this study.
+It is not globally first and does not prove \(\PF_{520}\).
 
 The window experiments address a different finite criterion. We construct
 rational trial functions with negative Weil-type quadratic form directly
@@ -86,7 +91,20 @@ upper bounds from a theorem about the minimum negative support.
 Bombieri's fixed-support spectral analysis \cite{bombieri2000} is direct
 prior art for this finite-to-infinite distinction.
 
-The contributions of this draft are:
+A separate reproducibility check concerns finite zeta windows rather than
+these negative controls. We replayed Liu's frozen release
+\cite{liuFrozen2026}, commit \code{b6cd218}: Theorem A at \(L=1\)
+passed retained-factor verification with fresh source, matrix and all-row
+residual reconstruction; Theorem B at \(L=17/16\) passed a clean rebuild
+and a second verification pass. All frozen source remained unchanged.
+A byte-identical private standard-library zip adapted the original
+Windows-oriented import allowlist to macOS; no acceptance gate was bypassed.
+This is computational re-execution of the supplied implementation, rather
+than an independent arithmetic backend or human peer review. Full receipts
+and the runtime adaptation are in the supplement. It is a fixed-window
+result and does not supply an all-support estimate.
+
+The contributions of this preprint are:
 \begin{itemize}
 \item a complete interval-certified Davenport--Heilbronn atlas through height
 340 and a global steepest-angle reduction;
@@ -95,11 +113,17 @@ identity checking selected high-rank cells;
 \item a common-degree seven-control window calibration, a recorded
 conductor-17 prediction test, and enclosed finite-atlas quartet contributions;
 \item an elementary fixed-shift masking lemma and a direct eventual-positivity
-argument for the classical Davenport--Heilbronn shift-one ladder.
+argument for the classical Davenport--Heilbronn shift-one ladder;
+\item a split-pair asymptotic argument with nonzero leading coefficient and
+a targeted negative shift-44 minor at rank 664, followed by a second-band
+forecast test;
+\item three further complete small-offset mixture atlases and negative
+witnesses, with a common-degree collision-path calibration.
 \end{itemize}
 These are calibration results. The analytic reductions use classical
 functional equations, factorization and sector theorems; the numerical
-enclosures use Arb. They have not undergone independent external review.
+enclosures use Arb. An independent AI-agent review checked the split-pair argument and selected
+numerical certificates. Independent external human review remains pending.
 
 \section{Normalizations and the finite tests}\label{sec:normalization}
 \subsection{Character combinations and Epstein controls}
@@ -305,6 +329,30 @@ tridiagonal determinant gives
 Equation~\eqref{eq:ratio} makes rank 436 its first negative shift-one minor.
 The angular rank scale is \(\pi|\gamma|/(2|b|)\), retaining the offset \(b\).
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/dh_folded_wedge_verified.pdf}
+\caption{The folded zeros \(w=(\rho-\tfrac12)^2\) of the classical
+Davenport--Heilbronn completion on log-radial axes. The horizontal axis is
+\(|w|\); the vertical axis is the angular deviation \(\psi\) from the
+negative real axis. The scales differ by orders of magnitude (the disk
+\(|w|\le64\), the steepest pair at \(|w|\approx7344\), a \(0.41^\circ\)
+wedge), so linear polar axes would hide them. Critical-line zeros lie at
+\(\psi=0\). The steepest off-line zero, \(\psi=0.0071999\ldots\), lies
+between \(\pi/437\) and \(\pi/436\) (inset). It therefore sits inside the
+Schoenberg wedge that gives \(\PF_{435}\) (Theorem~\ref{thm:pf}) but not the
+one for \(\PF_{436}\). For \(|w|>340^2+1\), the dashed envelope is
+\(\psi\le2\arctan((|w|-1)^{-1/2})\), using \(|b|<1\). Pale shading marks the radius range \(|w|\le340^2\) covered by the atlas.
+Inside \(|w|\le64\), the only folded zero is \(w=-\gamma_1^2\).
+The corresponding positive pole \(a=\gamma_1^2\) of \(1/F(-z)\) drives
+the eventual shift-one positivity (Proposition~\ref{prop:dhmask}).
+Writing \(w_0\) for the steepest folded pair, the 43 critical-line zeros
+with \(|w|<|w_0|\) place the split pair at shift
+\(44\), where the targeted column fails. Data: the certified atlas of
+Theorem~\ref{thm:atlas} (ball midpoints).}
+\label{fig:foldedwedge}
+\end{figure}
+
 \begin{proposition}[Certified solid grid]\label{prop:grid}
 For the full folded Davenport--Heilbronn function,
 \(D_{r,s}>0\) for every \(430\le r\le520\) and \(0\le s\le200\).
@@ -414,6 +462,184 @@ It does not give an explicit last exceptional rank, prove positivity at
 every rank, or control other shifts. It shows directly how a nearer real
 zero can dominate this particular DH ladder.
 
+\section{A split pair and the targeted failing column}\label{sec:splitpair}
+The complementary determinant in \eqref{eq:complement} is the
+Jacobi--Trudi determinant for a rectangular Schur function of the inverse
+zeros. Its finite-product expansion is classical Widom--Schur theory;
+see Alexandersson \cite{alexandersson2012}, Theorem 1 and Section 3.2.
+For the entire function, the following residue argument states the
+additional analytic step explicitly. No novelty of this mechanism is claimed.
+
+\begin{theorem}[Split-pair oscillation]\label{thm:splitpair}
+Let \(s\ge2\) and let \(B\) be real entire with \(B(0)=1\).
+Suppose its zeros of smallest
+modulus are \(s-1\) distinct simple zeros
+\(a_1,\ldots,a_{s-1}\), followed by exactly one simple nonreal conjugate
+pair \(a,\bar a\). Suppose
+\[
+ \max_j|a_j|<|a|<R,
+\]
+and there are no further zeros in \(|z|\le R\).
+Assume the inner set is conjugation invariant and
+\(P=\prod_{j<s}a_j^{-1}>0\).
+Write \(h_n=[z^n]1/B(z)\), \(\lambda_j=a_j^{-1}\),
+\(\lambda=a^{-1}=|\lambda|e^{i\phi}\), with \(0<\phi<\pi\),
+and \(d_r=\det(h_{r+i-j})_{0\le i,j<s}\).
+Then for some \(0<\rho<1\),
+\begin{equation}\label{eq:splitasymptotic}
+ \frac{d_r}{(P|\lambda|)^r}
+ =2|K|\cos(r\phi+\arg K)+O(\rho^r),
+ \qquad K\ne0.
+\end{equation}
+Consequently \(d_r\) is strictly positive infinitely often and strictly
+negative infinitely often.
+\end{theorem}
+\begin{proof}
+For each of the \(s+1\) stated poles put
+\(c_j=-1/(a_jB'(a_j))\), using the same notation for the conjugate pair.
+Subtract their principal parts from \(1/B\). Cauchy's estimate on
+\(|z|=R\) gives
+\[
+ h_n=\sum_{j=1}^{s+1}c_j\lambda_j^n+O(R^{-n}).
+\]
+Each pole contributes a rank-one matrix to the determinant.
+Cauchy--Binet gives the coefficient of
+\((\prod_{j\in I}\lambda_j)^r\), for an \(s\)-element pole set \(I\), as
+\begin{equation}\label{eq:splitconstant}
+ K_I=(-1)^{s(s-1)/2}
+ \frac{\displaystyle\prod_{j\in I}c_j
+       \displaystyle\prod_{\substack{i<j\\i,j\in I}}(\lambda_j-\lambda_i)^2}
+      {\displaystyle\prod_{j\in I}\lambda_j^{s-1}}.
+\end{equation}
+Every factor is nonzero, since the poles are nonzero, distinct and simple.
+The two dominant sets contain all inner poles and one member of the pair;
+their constants are \(K,\bar K\).
+Every other all-pole product is smaller in modulus by at least
+\(|\lambda|/\min_{j<s}|\lambda_j|<1\).
+
+For completeness, expand the determinant by columns, choosing \(k\ge1\)
+remainder columns. The other \(s-k\) rank-one columns must come from
+distinct poles; repeated choices vanish by alternation.
+Their largest possible product is the product of the \(s-k\) largest
+inverse-pole moduli. After division by \((P|\lambda|)^r\), the resulting
+exponential rate is at most \((R|\lambda|)^{-kr}\).
+All column-offset factors and remainder constants are fixed because \(s\)
+is fixed. Thus one may take
+\[
+ \rho=\max\left\{\frac{|\lambda|}{\min_{j<s}|\lambda_j|},
+                  \frac1{R|\lambda|}\right\}<1.
+\]
+This proves \eqref{eq:splitasymptotic}.
+
+If \(\phi/(2\pi)\) is irrational, its rotation orbit is dense and visits
+arcs with cosine bounded above and below by nonzero constants.
+If it is rational, the orbit has at least three points; its cosine
+values sum to zero and cannot all vanish, so it also contains both signs.
+The decaying error therefore preserves both signs along infinite
+subsequences.
+\end{proof}
+
+\begin{proposition}[The DH shift-44 failure]\label{prop:shift44}
+The classical folded DH function has
+\(D_{r,44}\ge0\) for \(1\le r\le435\),
+\(D_{r,44}>0\) for \(436\le r\le663\), and
+\(D_{r,44}<0\) for \(664\le r\le1099\), and
+\(D_{r,44}>0\) for \(1100\le r\le1400\).
+In particular, rank 664 is the first negative rank of this column.
+The column also takes both signs infinitely often.
+\end{proposition}
+\begin{proof}[Proof and computer-assisted inputs]
+For the height-85.6993 zero, the modulus of the folded zero is
+\(\gamma^2+b^2\). The complete atlas encloses exactly 43 critical-line
+zeros below \(\sqrt{\gamma^2+b^2}\), with strict gaps on both sides.
+Every earlier folded zero is simple and negative real. All other off-line
+pairs and all zeros above the atlas lie farther away.
+Theorem~\ref{thm:splitpair} applies to \(B(z)=F(-z)\), \(s=44\).
+The leading constant in \eqref{eq:splitconstant} is nonzero by the simple
+disjoint root disks; its interval evaluation also excludes zero.
+Its phase is approximately \(3.0787871477\), and
+\(2\pi/\phi=872.6697312345\ldots\).
+These are asymptotic diagnostics, rather than finite-rank error bounds.
+
+Theorem~\ref{thm:pf} covers ranks through 435. The preceding grid covers
+436--520 at shift 44. For ranks 521--677, reciprocal coefficients are
+computed from the existing 32,768-bit ordinary coefficient enclosures.
+Condensation in the complementary determinant size through 44 has no
+unresolved divisor. It resolves every rank through 663 positive and
+664--677 negative. Direct \(44\times44\) determinants independently
+check ranks 520, 521, 663, 664 and 677 using the same coefficient input.
+
+A fresh calculation through coefficient 1450 uses conjugate Dirichlet-\(L\)
+jets, separately from the earlier four-Hurwitz-jet evaluation, at the same
+32,768-bit precision. All 721 shared coefficients overlap. With these
+1,451 ordinary coefficient enclosures, the complementary calculation
+resolves every rank 521--1400: positive through 663, negative at 664--1099,
+and positive again at 1100--1400. A 33,024-bit determinant replay checks all
+880 signs and direct \(44\times44\) determinants at both band boundaries.
+The two coefficient paths and all determinant replays share FLINT/Arb;
+this is not an independent arithmetic backend.
+\end{proof}
+The first negative rank is specific to this column. Other shifts and
+non-solid minors may fail earlier, so no globally first-failure claim is
+made. The new calculations cover the fixed shift-44 column and the
+requested shifts 40--48 strip.
+
+\paragraph{A recorded second-band forecast.}
+Before computing the new cells, we recorded entry ranks 1535--1539 and
+last-negative ranks 1970--1974, using the previously measured scale
+\(2\pi/\phi=872.6697312345\ldots\). This was a local pre-registration,
+not an independently time-stamped public registration. The new interval
+calculation resolves the entire column through rank 2000: the second
+negative band is exactly 1536--1972, with positive ranks 1401--1535 and
+1973--2000. The two endpoint errors relative to the nominal forecast
+\((1537,1972)\) are \((-1,0)\). No phase or frequency was refitted.
+The first-to-second band entry displacement is 872 ranks and the
+last-negative displacement is 873, consistent with the noninteger
+oscillation scale. This is a quantitative forecast check, not a uniform
+finite-rank remainder theorem.
+
+The additional coefficients are enclosed without a new high-order jet.
+The positive-theta lemma gives \(\mu_n\ge0\), hence for every real \(R>0\),
+\[
+ 0\le\mu_n\le F(R)R^{-n}.
+\]
+We retain the first 1,451 evaluated coefficient balls and append these
+bounds at \(R=2^{20}\) through index 2050. An outward enclosure of
+\(F(R)=\Lambda(1/2+\sqrt R)/\Lambda(1/2)\) suffices for all 600 additional
+bounds. All second-band signs resolve with these broad enclosures.
+The written positive-coefficient lemma is an explicit analytic dependency;
+the tail intervals are not claimed to be fresh coefficient evaluations.
+A higher-precision replay and direct determinants check both band edges.
+
+The requested neighboring strip contains 1,620 cells: shifts 40--48 and
+ranks 521--700. Every cell resolves; only shift 44 has negative members,
+starting at rank 664. Together with the historical ranks 430--520,
+shifts 0--200 grid and the targeted shift-44 column through rank 2000,
+rank 664 at shift 44 is the first failure among the DH contiguous minors
+\emph{tested in this study}. Earlier ranks at other untested shifts and
+non-solid minors remain open. No claim about a globally first failure is
+made.
+
+For a first isolated off-line pair, the split shift is the number of
+preceding folded zeros plus one. When a strict gap identifies that count
+with critical-line ordinates below \(\sqrt{\gamma^2+b^2}\), it is
+\(s_*=N_{\rm line}(\sqrt{\gamma^2+b^2})+1\).
+The rank oscillation scale is \(2\pi/\phi\sim\pi\gamma/|b|\).
+Height alone does not determine the first negative rank: the leading
+phase, residue amplitudes and finite-rank correction also matter.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.92\linewidth]{figures/dh_second_band_column.pdf}
+\caption{The targeted DH shift-44 column, with certified negative bands
+664--1099 and 1536--1972. Dotted lines delimit the pre-recorded second-band
+entry and last-negative intervals. The first band uses evaluated ordinary
+coefficients; the second also uses rigorous positive-coefficient tail
+bounds. The previously fixed leading cosine is an asymptotic diagnostic,
+with no finite-rank remainder bound.}
+\label{fig:splitcolumn}
+\end{figure}
+
 \section{Seven-control window calibration}\label{sec:calibration}
 We compare the finite-family negative endpoints at common degree \(N=192\)
 and 2,048-bit arithmetic. Table~\ref{tab:calibration} reports the lowest
@@ -462,6 +688,11 @@ Adding a degree term reduces it to 0.0149, but the largest absolute
 leave-one-out error in the implied \(C\) rises from 16.3\% to 19.6\%.
 Seven support upper bounds therefore do not establish a universal
 10\%-accurate exchange law.
+In particular, the fitted intercept \(r(0)\approx0.54\) is an
+extrapolation into an untested regime. It does not establish bounded
+detection cost as an isolated off-line pair approaches the critical line.
+The offset limit requires separate controls and uniform cancellation and
+tail estimates; a linear continuation of the present fit is not assumed.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.9\linewidth]{figures/dh_controls_calibration.pdf}
@@ -471,6 +702,110 @@ The fits are descriptive. They do not provide confidence intervals for
 unknown minimum supports or a zero-free region for zeta. The conductor-17
 prediction was supplied before the new window trials.}
 \label{fig:calibration}
+\end{figure}
+
+\subsection{A held-out small-offset mixture}\label{sec:smalloffset}
+To probe a smaller offset while keeping the conductor and gamma factor
+fixed, we form the explicit rational mixture
+\begin{equation}\label{eq:mixture}
+ H_t=(1-t)H_{13,2}+tH_{13,6},\qquad
+ t=\frac{30142204300589527246625322252726073}{10^{37}}.
+\end{equation}
+The subscripts denote the conductor and Conrey label in
+\eqref{eq:character}. This is a mixture of two controls, rather than a single
+character-label control. Each summand has the same root-number-one
+functional equation and first Dirichlet coefficient one, so the mixture
+preserves these normalizations. We selected \(t\) to place a zero near
+\(\Rea s=0.53\), then fixed the exact rational parameter before window
+trials. A complete atlas through height 160, independently replayed with
+320-bit contours and 640-bit local disks, contains 113 critical-line zeros
+and five reflected off-line pairs, for 123 upper-half-plane zeros.
+The lowest off-line zero is
+\(0.53+31.4336216845i\) to the displayed precision.
+
+Before these window trials, the unchanged seven-control fit predicted
+\(C=34.5767528427\). At common degree 192, the section at \(C=37\) is
+positive, whereas an exact rational witness at
+\(C=593/16=37.0625\) has enclosed quotient approximately
+\(-7.37956\times10^{-18}\). The resulting
+\(r=0.5698713\) is 7.19\% above the recorded forecast, within the earlier
+16--20\% leave-one-out errors. At degree 256, both \(C=37\) and
+\(C=37.0625\) already admit negative witnesses. This illustrates why a
+positive finite section cannot supply a full-window lower bound.
+The original seven-point regression is not refitted using this probe.
+
+This experiment does not separate the proposed behaviours as \(b\to0\).
+One finite-offset support upper bound cannot establish or exclude
+unbounded detection cost, and the mixture retains other off-line pairs.
+The data show a modest increase in difficulty at the tested offset, rather
+than a limiting law. In its finite-atlas attribution, the lowest quartet
+contributes approximately \(-1.11965\times10^{-13}\), more than 100 times
+the magnitude of the next individual negative quartet. The finite total
+is approximately \(-1.15183\times10^{-14}\), substantially different from
+the geometric quotient. The omitted terms remain material; dominance
+within the atlas does not prove an isolated-pair detection theorem.
+
+\subsection{Following the collision path}\label{sec:collisionpath}
+We next fix three rational parameters targeting offsets 0.015, 0.008 and
+0.004, using the same two conductor-13 components. Each complete atlas
+through height 160 again contains 113 line zeros and five reflected
+off-line pairs. All three atlases receive a separate higher-precision
+replay. The ordinates of their lowest off-line zeros stay near 31.43354.
+Their simple off-line disks have radius \(10^{-80}\), far below the smallest
+reflected-pair separation, which exceeds 0.0079. No unresolved collision
+or uncounted pair is passed over by a sampled zero search.
+
+Table~\ref{tab:collisionpath} compares exact negative-support upper bounds.
+The new trials use 4,096-bit arithmetic at common degree 192. Increasing
+the retained degree to 256 lowers each new negative endpoint by less than
+0.05 in \(C\), much less than the observed change across the path.
+These degree checks compare finite-family resolution; their positive
+sections remain evidence only.
+\begin{table}[ht]
+\centering
+\caption{One conductor-13 mixture path. Offsets and normalized coordinates
+are rounded; the negative cutoffs are exact. \(C_{256}\) is another
+negative-support upper bound. At offset 0.03 it is the earlier single trial,
+rather than a newly bisected endpoint.}
+\label{tab:collisionpath}
+\begin{tabular}{rrrr}
+\toprule
+\(b\) & \(C_{192}\) & \(C_{256}\) & \(r_{192}\)\\
+\midrule
+0.030 & 37.0625 & 37 & 0.569871\\
+0.015 & 39.5625 & 39.515625 & 0.608312\\
+0.008 & 41.28125 & 41.2421875 & 0.634740\\
+0.004 & 42.90625 & 42.875 & 0.659726\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The measured coordinate rises by 15.77\% as the offset decreases by a
+factor of 7.5. A descriptive fit to the four degree-192 upper bounds is
+\(C\approx37.30+2.89\log(0.03/b)\), with residuals recorded in the
+supplement. This resembles logarithmic growth over the tested range;
+it does not establish divergence, a bounded limit, or an asymptotic rate
+for minimum negative support. All four points lie on one mixture path,
+other off-line pairs remain, and no full positive-support lower bound is
+available. The original seven-control regression is unchanged.
+
+The degree-192 endpoint quotients for the three new controls are
+approximately \(-1.8864\times10^{-19}\),
+\(-2.1509\times10^{-19}\), and \(-1.9304\times10^{-21}\).
+Their sizes depend on the selected trial and endpoint; monotonicity in
+\(b\) is not asserted. Finite-atlas attribution identifies the lowest
+quartet as the largest individual negative contributor in each case.
+The finite totals still differ materially from the geometric quotients,
+so this is not an isolated-pair detection theorem.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.85\linewidth]{figures/dh_mixture_collision_path.pdf}
+\caption{Measured negative-support upper bounds on one rational mixture
+path, with the off-line offset decreasing to the right. The connecting
+lines are guides, not fitted limiting laws. The two retained degrees
+have close endpoints over this tested range. Neither curve supplies a
+full-support lower bound or determines the \(b\to0\) limit.}
+\label{fig:collisionpath}
 \end{figure}
 
 \section{Finite-zero-sum attribution}
@@ -497,6 +832,22 @@ automatically give the tail decay needed to promote that evidence to an
 independent full spectral certificate.
 \input{dh_controls_attribution_table.tex}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{figures/dh_attribution_bars_verified.pdf}
+\caption{The attribution records of Table~\ref{tab:attribution} on a
+logarithmic scale; signs are printed above the bars. In every control the
+dominant off-line quartet (negative) and the critical-line sum over the
+atlas (positive) have a relative magnitude mismatch below 16\%, measured against the
+critical-line sum (below 3.5\% in five of the seven) and largely cancel. The
+finite total \(P_H\) is negative, yet it exceeds the certified quotient
+\(Q\) in magnitude by factors from \(258\) (DH5) to \(12\,563\) (Epstein5).
+Under the written explicit formula, \(Q-P_H\) is the omitted zero sum
+above the atlas height; it is not independently enclosed here. The finite sum is therefore mechanism evidence, not
+a spectral certificate.}
+\label{fig:attributionbars}
+\end{figure}
+
 \section{Reproduction and limits of inference}
 The code uses Python 3.12, python-flint 0.8.0, and Arb/FLINT interval
 arithmetic. Discovery Newton steps and floating-point pilot scans select
@@ -505,16 +856,39 @@ Rayleigh quotients, and frequency panels are checked with outward
 enclosures. The supplement records source hashes, input hashes, exact
 rational trial coefficients, pivot intervals, and replay commands.
 Regenerable full matrix arrays are omitted from compact records; the initial
-generator is preserved by hash. Public archival release and external
-analytic review are pending.
+generator is preserved by hash. The paper and compact supplement have a reserved archival identifier;
+publication is controlled by the author. External human analytic review
+remains pending.
 
 The classical atlas uses \code{dh_zero_atlas.py} and
 \code{replay_dh_atlas.py}. The existing solid grid and complementary checks
-use \code{dh_high_rank_scan.py} and \code{replay_dh_high_rank.py}; no further
-Toeplitz grid is generated for this paper. New control atlases use
+use \code{dh_high_rank_scan.py} and \code{replay_dh_high_rank.py}. The
+subsequent targeted column and nearby strip are recorded separately. New control atlases use
 \code{character_zero_atlas.py} and \code{epstein_zero_atlas.py}.
 The geometric calibration and finite attribution use
 \code{control_window_calibration.py} and \code{control_zero_attribution.py}.
+The targeted column uses \code{dh_split_pair_column.py};
+\code{dh_split_pair_asymptotic.py} checks its modulus ordering and leading
+constant, and \code{dh_split_pair_coefficients.py} supplies the separate
+Dirichlet-\(L\) coefficient evaluation. The full targeted record is
+\code{column44_rank521-1400_32768bits.json}, with
+\code{column44_extended_replay.json} from
+\code{replay_dh_split_pair_extended.py}.
+The small-offset mixture uses \code{near_line_mixture_control.py},
+\code{near_line_window_calibration.py} and \code{near_line_attribution.py};
+its exact definition, complete atlas, recorded forecast and window records
+are retained separately from the seven-control fit.
+The second-band forecast, coefficient bounds and nearby strip use
+\code{assess_second_band_forecast.py},
+\code{dh_cauchy_coefficient_extension.py} and
+\code{dh_targeted_followup_scan.py}. The collision path uses
+\code{near_line_mixture_path.py}, \code{mixture_path_resolution.py} and
+\code{attribute_mixture_path.py}. The current supplement is checked with
+\code{verify_second_band_round.py}; older full-paper manifests bind
+historical manuscript revisions.
+The initial column record is
+\code{column44_rank521-677_32768bits.json}; its coefficient input is the
+existing \code{dh_rank430-520_shift0-200_32768bits_coefficients.json}.
 
 The finite Schur inertia identity after completion of the square and the
 actual quadratic Toeplitz determinant formula are checked in Lean 4.
@@ -528,8 +902,8 @@ The data support testing a calibrated detector. They do not establish
 \emph{positivity at \(C\) excludes every off-line zero below approximately
 \(12C\)}. Such an implication additionally requires a uniform theorem over
 offsets, multiplicities, local zero configurations, and the infinite tail.
-The present offsets are bounded away from zero; their fitted curve does
-not determine the small-offset limit. Likewise, the solid-grid result does
+The mixture path reaches offset 0.004, but its four finite support upper
+bounds do not determine the small-offset limit. Likewise, the solid-grid result does
 not characterize all minors of a given rank. These controls provide no
 independent confirmation of a new zeta window-positivity record and no route
 to RH by themselves.
@@ -539,10 +913,14 @@ Two finite criteria show different sensitivities. The Toeplitz grid remains
 positive after the isolated factor becomes negative, and
 Lemma~\ref{lem:mask} demonstrates an exact fixed-shift masking mechanism.
 Proposition~\ref{prop:dhmask} proves eventual positivity for the classical
-Davenport--Heilbronn shift-one ladder itself.
+Davenport--Heilbronn shift-one ladder itself. At shift 44, the first negative
+member occurs at rank 664, and the split-pair theorem gives infinite sign
+changes. Thus the shift, folded-modulus ordering, phase and rank all matter.
 The window family produces negative rational witnesses at reproducible
 cutoffs, with a conductor-17 negative endpoint inside its forecast range.
-The shared feature is that resolution and the zero configuration must be
+The small-offset path shows measured growth with stable endpoints across
+the two retained degrees, without deciding a limiting law. The shared
+feature is that resolution and the zero configuration must be
 accounted for before interpreting a finite sign.
 
 The near-term mathematical target is a quantitative detector with a proved
@@ -551,6 +929,14 @@ certificate whose full comparison cost is measured, including the
 infinite complement. Calibration of either target requires controls such
 as those used here. Neither replaces the missing all-support arithmetic
 estimate.
+
+\paragraph{Assistance and review.} AI assistance was used for code,
+calculations and drafting. A separate AI agent reviewed the split-pair
+argument, replayed the targeted initial column at higher precision and
+reassembled the small-offset negative witness. This is not human peer review;
+the author remains responsible for the manuscript. External human review
+of the atlas/sector and split-pair arguments is required before the
+author-controlled publication step.
 
 \appendix
 \section{Entry formulas and removable-point contour images}
@@ -625,6 +1011,11 @@ and the Rouché inequalities are the numerical inputs to the finite zero
 counts.
 
 \begin{thebibliography}{99}
+\bibitem{alexandersson2012}
+P. Alexandersson, Schur polynomials, banded Toeplitz matrices and Widom's
+formula, \emph{Electron. J. Combin.} \textbf{19}(4) (2012), P22.
+\href{https://doi.org/10.37236/2651}{doi:10.37236/2651};
+\url{https://arxiv.org/abs/1208.5607}.
 \bibitem{dh1936}
 H. Davenport and H. Heilbronn,
 On the zeros of certain Dirichlet series,
@@ -650,6 +1041,14 @@ O. M. Katkova,
 Multiple positivity and the Riemann zeta-function,
 arXiv:math/0505174 (2005), especially Theorem B.
 \url{https://arxiv.org/abs/math/0505174}.
+\bibitem{liuFrozen2026}
+V.~Liu, \emph{Certified Weil Positivity Beyond the Unit Window}, frozen
+computational release v1.0-mcom-submission, commit
+\code{b6cd2183c1e79c6c27a34267812a7b2d73ed1b59}, 2026.
+\url{https://github.com/luciferyu666/certified-weil-positivity/releases/tag/v1.0-mcom-submission}.
+External preprint and supplied implementation; computational replay is
+reported separately from human review.
+
 \bibitem{teal2026}
 \texttt{teal-sea/zeta-lab},
 Truncated Weil form: first positivity failure on Davenport--Heilbronn is at

@@ -1,0 +1,33 @@
+{
+  "status": "local_figure_revision_and_fresh_extraction_verified",
+  "archive": {
+    "file": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/release-figures-2026-10-16/dh-controls-2026-10-15.tar.gz",
+    "sha256": "daf6b993965e98e85b1bbd58ab4bcf8b1a54e8c511a0f1a2654db07907da17ac",
+    "bytes": 110588805,
+    "members": 628
+  },
+  "compact_review_packet": {
+    "status": "compact_human_review_packet_all_members_verified",
+    "file": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/review-figures-2026-10-16/dh-controls-human-review-packet.zip",
+    "bytes": 551882,
+    "sha256": "1ba4e6f8c056a804c5b482f4371ddc963a7b68f4bcb9ed8c92c255e4fd96a41b",
+    "members": 27,
+    "human_review": "pending; no request sent"
+  },
+  "manifest_sha256": "70fea1ce102f3406dea3fceb83ed31040fc969493d4ad3344fb4dbeb8b318dea",
+  "pdf_sha256": "ea0908b5320226842791f9b732993c67138bc9c7762197cb45f3a2bc60224ed5",
+  "pdf_pages": 19,
+  "checks": [
+    "successful Tectonic build",
+    "all pages rendered and visually inspected",
+    "independent narrow AI figure/caption review",
+    "current 626-artifact manifest verified",
+    "all 628 archive members verified",
+    "fresh extracted manifest verified",
+    "prior scientific artifacts unchanged",
+    "git diff --check passed"
+  ],
+  "scope": "No new scientific search or theorem; earlier eleven-test suite unchanged. Reviewer shortlist/request and Liu note unsent. Human read pending; no publication.",
+  "remote_update": "revised_pdf_verified_supplement_update_unresolved",
+  "remote_receipt_sha256": "71f8ea0948fea89e0a363e7ea180576aae2bd70a40b88fc36e42908c317cf8e1"
+}

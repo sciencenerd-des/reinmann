@@ -924,6 +924,21 @@ $\norm{p}\in[1,\bar\nu]$ for a certified $\bar\nu$. The unit ground origin
 satisfies $u_0>0.5753$, which fixes the orientation consistently across
 subcells.
 
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{weil_cell_geometry.pdf}
+\caption{Geometry of the uniform certificate. (a) The real cell
+$[\log17,\log19]$ (red), split into 32 subcells, sits at the centre of the
+Cauchy disk $\lvert L-c_\ast\rvert\le R_\ast=\frac14$. The ratio
+$q=\delta/R_\ast<0.223$ drives the degree-64 Taylor remainder of
+Lemma~\ref{lem:cauchy}. The boundary rectangles are drawn schematically; the
+certificate uses its own cover. (b) The certified enclosure of the lowest
+even eigenvalue on each subcell, drawn as boxes in $C=e^L$, including the
+isolation radius of Lemma~\ref{lem:isolation}. All 32 boxes lie in the
+uniform range $[2.259\times10^{-26},1.380\times10^{-24}]$, far below the
+certified ground gap.}
+\label{fig:cellgeometry}
+\end{figure}
+
 \subsection{Enclosures of the moments}
 
 \begin{lemma}[Linear functionals of the exact ground]\label{lem:functional}
@@ -1034,6 +1049,20 @@ Theorem~\ref{thm:main-tail} gives $\norm{Q_MAc}^2<(9.49005\times10^{-12})^2<9.00
 This is the energy of the \emph{direct} far-block response. It is not the
 change of the ground state when the rank is increased. The following
 problems remain open.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{weil_scale_bar.pdf}
+\caption{The scales in this paper on one logarithmic line. The certified
+ground gap ($>4.04\times10^{-23}$) and the direct far-block energy
+($<9.01\times10^{-23}$) are comparable. The omitted-mode forcing
+($<9.49\times10^{-12}$) is about $2.3\times10^{11}$ times larger than the
+gap. This is why a residual-based Davis--Kahan bound cannot control the
+profile response of the intermediate block
+(Problem~\ref{prob:intermediate}). The validation errors of
+Section~\ref{sec:certificate} lie twenty orders of magnitude below the
+eigenvalue.}
+\label{fig:scalebar}
+\end{figure}
 
 \begin{problem}[Intermediate block]\label{prob:intermediate}
 Control the Schur complement obtained by eliminating the modes

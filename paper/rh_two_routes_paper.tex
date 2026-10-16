@@ -499,6 +499,25 @@ The strict contiguous ladder implies the full P\'olya frequency condition
 \Lean{XiToeplitzTotalPositive}.
 \end{corollary}
 
+\begin{figure}[htbp]\centering
+\includegraphics[width=\linewidth]{two_routes_fekete_grids.pdf}
+\caption{The index surgery behind
+Theorems~\ref{thm:allorders}--\ref{thm:dichotomy}, on the lower-triangular
+Toeplitz array $T(r,c)=\mu_{r-c}$ (zero when $r<c$). (a) Gap-shrinking: rows
+$\{1,2,5\}$ (blue) have dispersion $2$. Inserting $s=3$ (orange) and applying
+Theorem~\ref{thm:threeterm} to the four rows expresses the target minor,
+times a positive order-two divisor, through $M_0$ on rows $\{2,3,5\}$
+(dispersion $1$) and $M_{\rm last}$ on rows $\{1,2,3\}$ (dispersion $0$, a
+ladder rung). (b) Dominance failure: $r_1=2<c_1=3$ forces a $2\times2$ zero
+block in a $3\times3$ minor, so every permutation term vanishes. (c) Reversal
+symmetry: reversing both index orders and transposing carries the
+contiguous-row minor (rows $5,6,7$; columns $0,2,3$) to the initial-column
+minor on rows $R_j=7-c_{2-j}=4,5,7$. Both matrices list the same entries.
+The underlying identities are classical, going back to Fekete; see
+\cite{Cryer1976,Pinkus}. The contribution here is their formalization.}
+\label{fig:fekete}
+\end{figure}
+
 \begin{corollary}[Sharpest reduction, and RH-strength labeling;
 \Lean{riemannHypothesis\_of\_strictLadder}]\label{cor:rhstrength}
 Given the classical scaffolding, the strict contiguous ladder implies RH.

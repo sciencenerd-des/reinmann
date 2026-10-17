@@ -27,13 +27,16 @@ now compiles and passes the full axiom audit; the zero-free rectangle is still o
 The [finite-product split-pair theorem](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md)
 now derives the actual reciprocal coefficients, a nonzero leading coefficient,
 an exponential remainder and both determinant signs at unbounded ranks.
-The entire-function extension remains outside this formalization.
+The [Jacobi bridge and evaluator components](research/prime_spectral/FORMAL_TARGET_A_JACOBI_AND_EVALUATOR_2026_10_18.md)
+now identify these reciprocal minors with the original coefficient minors.
+Finite-theta tails, quadrature rules and a closed-grid cover are source-checked.
+The entire-function determinant extension and actual Xi tile certificates remain open.
 
-> **Current research status (updated 17 October 2026):**
+> **Current research status (updated 18 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
 > records the evidence and open assumptions for the active tracks. It supersedes
 > older priority and novelty claims below. The active outputs are the human-reviewed
-> controls release and the low-rectangle evaluator; logarithmic forecasting is closed.
+> controls release and formal targets A and B; logarithmic forecasting is closed.
 > D1 comparison engineering, broad Toeplitz scans, D2 exact counts, D6 induction
 > and arithmetic ablations remain stopped.
 > [`ARCHITECTURE.md`](ARCHITECTURE.md) supplies the broader module inventory and
@@ -62,13 +65,16 @@ proved before they can be classified as sufficient conditions for RH.
   determinant expansion, nonzero Vandermonde coefficient, root-order gap,
   exponential remainder and both signs at unbounded ranks. Finite geometric
   sums cover rational and irrational phases together. Quadratic and cubic
-  controls instantiate the result. See
-  [`FORMAL_TARGET_A`](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md).
+  controls instantiate the result. The Jacobi bridge now transfers the conclusion
+  to original coefficient minors, with the sign cancellation proved. See
+  [`FORMAL_TARGET_A`](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md) and
+  [the Jacobi round](research/prime_spectral/FORMAL_TARGET_A_JACOBI_AND_EVALUATOR_2026_10_18.md).
 - **Uniform low-rectangle tail.** Lean proves the actual Xi truncation error
   is at most (19981/50)e<sup>−T</sup> for T ≥ 1 throughout
   0 ≤ Re(s) ≤ 1, |Im(s)| ≤ 14.1. The full build and 244-theorem axiom audit pass.
-  Finite-theta tails, quadrature and nonvanishing remain open; this is not a
-  zero-free rectangle certificate. See
+  The new source-checked components add Gaussian finite-theta tails, midpoint
+  quadrature with variation, and a closed-grid cover. Actual Xi center enclosures
+  and positive tile margins remain open; there is no zero-free rectangle certificate. See
   [`XI_LOW_RECTANGLE_STATUS`](research/prime_spectral/XI_LOW_RECTANGLE_STATUS_2026_10_17.md).
 - **Sine-type model obstruction.** An explicit fixed-bandwidth negative witness
   works for every b > 0 in a finite perturbation of the cosine lattice. The proposed

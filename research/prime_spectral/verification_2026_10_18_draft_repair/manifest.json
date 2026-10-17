@@ -1,0 +1,24 @@
+{
+  "status": "complete_draft_supplement_repaired_and_verified_unpublished",
+  "id": 23401370,
+  "recorded_at_utc": "2026-10-17T21:24:05.796787+00:00",
+  "files": 74,
+  "archive_sha256": "1a899aba7d560e41692fce94c6ad0352e75822545db128462af8607be272293c",
+  "archive_bytes": 145540103,
+  "publication_condition_satisfied": false,
+  "scope": "Completed upload repair and standalone mathematical draft, not completed human review, publication, entire-function Lean extension, Xi rectangle certificate or RH proof.",
+  "artifacts_sha256": {
+    "research/prime_spectral/DH_DRAFT_REPAIR_2026_10_18.md": "35658f87a859230ee672ad435e29007f95bfd30f9ff0c99c399239aba763e108",
+    "research/prime_spectral/SPLIT_PAIR_MIXED_REMAINDER_2026_10_18.md": "b21f479a85e06d75c901349d2c8d4d16814b662f4efa1ea5bee94f7c88f3c598",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/DH_SUPPLEMENT_PARTS.json": "d26d712cf1790319713b22f86924e6d0dc38104f98b93b3b2967884d1b236978",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/DH_SUPPLEMENT_README.txt": "6ae6a1c25820acfe5031b5dc6955a23562806fc6d5e53a07276d366bd21a8ee4",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/complete_split_verification.json": "cd88ac7de510faa1f13cf5c281429f6e41674617ad371c2ac962632855f72c2f",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/draft_cleanup_verification.json": "0b8b34ba0de67f9571d6a21207bb5e12a9d7920d18ea2f40652dd8047ff73c42",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/human_review_status.json": "b56c9507a8a3881f181d5ef086ddf78242fbe3ae25eea1e46002f2263bd7f412",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/local_scientific_archive_validation.json": "557aacc9e5df98bd265849ba935780b1a5cc125070dbe48e72a81c68de750e95",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/reassembly_check.log": "1c5c63727987dd02cd2fe67360c2a660351af6eeb5160f097b9e4d5e3191e4b4",
+    "research/prime_spectral/verification_2026_10_18_draft_repair/zenodo_verified_files.png": "3f8821a36fe004f07d79fb26710668a3436d140fa820d9745f55bc9d32204238",
+    "research/prime_spectral/verification_2026_10_18_jacobi/manifest.json": "d8f37dce76fa0793c8281b4e84578972b8be0777fa63d2db5f4ccd999e864c00",
+    "scripts/reassemble_dh_supplement.py": "b69219973fed91949244ba07988aa77a46c75950a2544bdadfec53b90a482760"
+  }
+}

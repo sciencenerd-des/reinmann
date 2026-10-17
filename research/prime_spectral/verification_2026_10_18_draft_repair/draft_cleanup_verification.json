@@ -1,0 +1,388 @@
+{
+  "id": 23401370,
+  "submitted": false,
+  "state": "unsubmitted",
+  "status": "obsolete_archive_removed_after_complete_supplement_verification",
+  "removed_file": {
+    "filename": "dh-controls-2026-10-15.tar.gz",
+    "bytes": 110250385,
+    "md5": "c0ef7a2af51321fb4bf0be8c9b15ab82"
+  },
+  "recoverable_local_backup": "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/tmp/release-round2/dh-controls-2026-10-15.tar.gz",
+  "backup_sha256": "600dbc7ca8e88b22afbee01637785bea4c4c2d693e2d4097f06b277dd1003c50",
+  "remaining_files": 74,
+  "unexpected_files_preserved": [],
+  "files": [
+    {
+      "filename": "dh_controls_paper.pdf",
+      "bytes": 246143,
+      "server_md5": "85f9f13a5572b18a8151a9ce9bd1b38e"
+    },
+    {
+      "filename": "DH_SUPPLEMENT_README.txt",
+      "bytes": 1212,
+      "server_md5": "b1465725f41ee85d707c5d3b511e89f9"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part02",
+      "bytes": 2097152,
+      "server_md5": "40605df2eee3103d48f038d5144ce9a7"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part08",
+      "bytes": 2097152,
+      "server_md5": "ea08b76aae5929fcd7acdb2b0c60f16c"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part09",
+      "bytes": 2097152,
+      "server_md5": "5ec77845f2bcf604e19d91c76444a934"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part14",
+      "bytes": 2097152,
+      "server_md5": "269fab58568f6ec692ebcb2f6ab0d60d"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part16",
+      "bytes": 2097152,
+      "server_md5": "9721167c119e07211d6afd79b9867327"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part41",
+      "bytes": 2097152,
+      "server_md5": "60f4de04754558b3ee7eac44b4501562"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part32",
+      "bytes": 2097152,
+      "server_md5": "d774dc1dd59b754a84353c25dbb5389f"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part46",
+      "bytes": 2097152,
+      "server_md5": "945332674b1d75b55535d503b75c5913"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part03",
+      "bytes": 2097152,
+      "server_md5": "ca862ad95b4b01cf16598d280ca7d118"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part38",
+      "bytes": 2097152,
+      "server_md5": "a81ea444a7af83bf06d572414ab93844"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part15",
+      "bytes": 2097152,
+      "server_md5": "1b545c77521f0486e4c9993a83a41c88"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part24",
+      "bytes": 2097152,
+      "server_md5": "2777a3975533997454a73b9d7f859c10"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part12",
+      "bytes": 2097152,
+      "server_md5": "cb0a3a9162c254046f015275692c56e6"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part35",
+      "bytes": 2097152,
+      "server_md5": "666eb01145d0c29647f3c9b36a39453e"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part01",
+      "bytes": 2097152,
+      "server_md5": "e09e638b1e03a1311b25d8803ed90b69"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part28",
+      "bytes": 2097152,
+      "server_md5": "bd2d2f9834c8be4c3caa5fbab525060b"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part06",
+      "bytes": 2097152,
+      "server_md5": "0d5aea5b253cb291cf6d1000c41edb9e"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part04",
+      "bytes": 2097152,
+      "server_md5": "73b03e51a4ef1174b18b0534ef69c9a1"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part31",
+      "bytes": 2097152,
+      "server_md5": "693c4ac8f09e885e4fc954e462094f6e"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part05",
+      "bytes": 2097152,
+      "server_md5": "e1a304b4c7989a5dda71af2285dcb58d"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part11",
+      "bytes": 2097152,
+      "server_md5": "ae76eefc0ac088b652d5de6b36d01758"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part29",
+      "bytes": 2097152,
+      "server_md5": "656efbf5e3d9cbd7e6eb89a8f68bc68d"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part07",
+      "bytes": 2097152,
+      "server_md5": "ffce22fb1a82ad443411e83732092bff"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part44",
+      "bytes": 2097152,
+      "server_md5": "e05fb054eea35cdfb292fed2edb92975"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part10",
+      "bytes": 2097152,
+      "server_md5": "0388c9c1571b897503026f6ac68e91a7"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part13",
+      "bytes": 2097152,
+      "server_md5": "0693695f034c38fa6a87d85417076c88"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part37",
+      "bytes": 2097152,
+      "server_md5": "34399e473db5e7b5ef98d7d44cccb033"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part17",
+      "bytes": 2097152,
+      "server_md5": "895461f8b9b4abf98d74cc14f6e7e05c"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part22",
+      "bytes": 2097152,
+      "server_md5": "27983a6fa87a404ccdf19f80c65c10d0"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part19",
+      "bytes": 2097152,
+      "server_md5": "2088b6f4b14b786610110a9cc98f8c72"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part21",
+      "bytes": 2097152,
+      "server_md5": "422cee6cc6705de66d8e776a06199a4b"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part20",
+      "bytes": 2097152,
+      "server_md5": "9d188f60ba289cfed1be5071849b8b59"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part36",
+      "bytes": 2097152,
+      "server_md5": "f53df3e2caec3356eec79931300f4839"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part18",
+      "bytes": 2097152,
+      "server_md5": "856325580a3c6603db27f8a64078dfe4"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part23",
+      "bytes": 2097152,
+      "server_md5": "5ad6a03665155db0cb5a61a456090be0"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part25",
+      "bytes": 2097152,
+      "server_md5": "c82aaecb0cc30ce9272239131d557b57"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part27",
+      "bytes": 2097152,
+      "server_md5": "224cebcb9b5d8826460fbdc6630b599f"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part26",
+      "bytes": 2097152,
+      "server_md5": "398adeba2cef23d4862773148380a9b7"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part33",
+      "bytes": 2097152,
+      "server_md5": "ad3b5b991f9f10ae4bf6bc8e1ebfccf1"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part43",
+      "bytes": 2097152,
+      "server_md5": "492278684470e02ef8ae2c4a71e1ae06"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part40",
+      "bytes": 2097152,
+      "server_md5": "6c37f9ff0ce7b58491e70868523ceee7"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part30",
+      "bytes": 2097152,
+      "server_md5": "cf48c8c14ea4ca29bf57c1055b71c3b2"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part34",
+      "bytes": 2097152,
+      "server_md5": "044c4121549e845504fd2b8672d0e25a"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part61",
+      "bytes": 2097152,
+      "server_md5": "e2c4da105c35cbaa24eae2bc1764a85f"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part39",
+      "bytes": 2097152,
+      "server_md5": "0dac18842d68b0bad4bfd4065475d0e9"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part45",
+      "bytes": 2097152,
+      "server_md5": "40a8f6e632d0e7e425a5fe345b2b139c"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part42",
+      "bytes": 2097152,
+      "server_md5": "72e9d3e7d48504df84de297c2b6aec5e"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part65",
+      "bytes": 2097152,
+      "server_md5": "a9ae076674f25c126b4212b4a70b0ea5"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part56",
+      "bytes": 2097152,
+      "server_md5": "5fe3e79eabcc17fcf2077a8a92f77e65"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part48",
+      "bytes": 2097152,
+      "server_md5": "527495711e1f399ef7b413946fbde802"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part53",
+      "bytes": 2097152,
+      "server_md5": "491b82fc765bf7012b9289e3119e0b9f"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part47",
+      "bytes": 2097152,
+      "server_md5": "bf3363f6299c4dd5f74cddcb05168038"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part54",
+      "bytes": 2097152,
+      "server_md5": "1fdc421a888c705e754c4c23c63dfc2b"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part50",
+      "bytes": 2097152,
+      "server_md5": "dbbf21a1ea8c6257512f3266a52c4b8a"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part57",
+      "bytes": 2097152,
+      "server_md5": "7e5ee08f6138c016e301a60e82494113"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part67",
+      "bytes": 2097152,
+      "server_md5": "104b513c7d1c26db4199338b9b9d3092"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part52",
+      "bytes": 2097152,
+      "server_md5": "8b103a84d15400926fb1f40b08363725"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part63",
+      "bytes": 2097152,
+      "server_md5": "5c0ccc84eb59e30bcbb4c4e06f51f7e4"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part60",
+      "bytes": 2097152,
+      "server_md5": "4b4f1aa50e825eedeb7d27276ab2f35e"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part62",
+      "bytes": 2097152,
+      "server_md5": "0cd10e196315e25421b9023e2ea91564"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part64",
+      "bytes": 2097152,
+      "server_md5": "0682d2f949c34f37e6bd48950b48648b"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part70",
+      "bytes": 836615,
+      "server_md5": "0ec73220cc30f50adebc0fc2f9155427"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part69",
+      "bytes": 2097152,
+      "server_md5": "62bd7ff50f38c520fe4f2e5c581aa8a4"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part55",
+      "bytes": 2097152,
+      "server_md5": "3287103adc87a49a384f2023f9a2815d"
+    },
+    {
+      "filename": "DH_SUPPLEMENT_PARTS.json",
+      "bytes": 13661,
+      "server_md5": "7c3095c112badf7c9c2cbe400b853320"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part68",
+      "bytes": 2097152,
+      "server_md5": "b4067b02a4264550fdb4f52e08a0fa52"
+    },
+    {
+      "filename": "reassemble_dh_supplement.py",
+      "bytes": 1633,
+      "server_md5": "419c4fc3c3a79a130ae24a749d86e689"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part66",
+      "bytes": 2097152,
+      "server_md5": "6fc6d9382e982e727e91155a6de51952"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part59",
+      "bytes": 2097152,
+      "server_md5": "8b4fe1c11b212ce979686e3aa7113e10"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part49",
+      "bytes": 2097152,
+      "server_md5": "28ea30681f3f5f83fc49172ab91c0d02"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part58",
+      "bytes": 2097152,
+      "server_md5": "91732fb24451c0a4d1e808fa8c9d12c2"
+    },
+    {
+      "filename": "dh-controls-supplement-2026-10-17.tar.gz.part51",
+      "bytes": 2097152,
+      "server_md5": "bc4a8fc034da41d69e92c97110b381cf"
+    }
+  ],
+  "publication_gate": "Human substantive review pending. No publication action."
+}

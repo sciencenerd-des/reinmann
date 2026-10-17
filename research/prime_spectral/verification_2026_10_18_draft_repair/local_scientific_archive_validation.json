@@ -1,0 +1,10 @@
+{
+  "status": "all_archive_members_and_fresh_extracted_files_checksum_verified",
+  "archive": "/Users/biswajitmondal/Developer/Maths/reinmann/tmp/final-mechanism/dh-final-mechanism-2026-10-17.tar.gz",
+  "sha256": "1a899aba7d560e41692fce94c6ad0352e75822545db128462af8607be272293c",
+  "bytes": 145540103,
+  "members": 1005,
+  "manifest_sha256": "768964365f64f18c0343db90fd945dad8f679b52aaedbcd51620415a7944232f",
+  "fresh_extract": "/Users/biswajitmondal/Developer/Maths/reinmann/tmp/final-mechanism/capsule-replay-qy2sz744",
+  "scope": "Local scientific supplement; no upload or publication."
+}

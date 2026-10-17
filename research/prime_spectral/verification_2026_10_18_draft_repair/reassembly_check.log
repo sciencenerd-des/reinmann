@@ -1,0 +1,4 @@
+All 70 downloaded part files passed individual size and SHA256 checks.
+Reassembled bytes: 145540103
+Reassembled SHA256: 1a899aba7d560e41692fce94c6ad0352e75822545db128462af8607be272293c
+Portable reassemble_dh_supplement.py also verified the downloaded part directory and completed archive.

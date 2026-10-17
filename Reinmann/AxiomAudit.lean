@@ -5,6 +5,7 @@ Authors: Biswajit Mondal
 -/
 import Reinmann.WeilWindowAudit
 import Reinmann.XiMellinRectangle
+import Reinmann.FiniteProductSplitPairControl
 import Reinmann.ProofArchitecture
 import Reinmann.RHReductionCapstone
 import Reinmann.RHTheoremTargets
@@ -369,3 +370,46 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.xiMellinRemainder_norm_le_rectangle
 #print axioms Reinmann.xiMellinTruncation_error_le_rectangle
 #print axioms Reinmann.xiMellinTruncation_error_le_low_rectangle
+
+-- Actual finite-product split-pair theorem; no entire-function or RH claim.
+#print axioms Reinmann.SplitPairCoefficients.residue_ne_zero
+#print axioms Reinmann.SplitPairCoefficients.basisDivisor_factor
+#print axioms Reinmann.SplitPairCoefficients.polynomial_residue_identity
+#print axioms Reinmann.SplitPairCoefficients.factor_mul_geometric
+#print axioms Reinmann.SplitPairCoefficients.inverse_eq_residue_sum
+#print axioms Reinmann.SplitPairCoefficients.reciprocal_coefficient
+#print axioms Reinmann.SplitPairCoefficients.residue_conjugate
+#print axioms Reinmann.SplitPairDeterminant.rowCoefficient_zero
+#print axioms Reinmann.SplitPairDeterminant.row_expansion
+#print axioms Reinmann.SplitPairDeterminant.coefficient_row_expansion
+#print axioms Reinmann.SplitPairDeterminant.coefficient_eq_fiber
+#print axioms Reinmann.SplitPairDeterminant.subset_expansion
+#print axioms Reinmann.SplitPairDeterminant.coefficient_eq_vandermonde
+#print axioms Reinmann.SplitPairDeterminant.coefficient_ne_zero
+#print axioms Reinmann.SplitPairDeterminant.coefficient_conjugate
+#print axioms Reinmann.SplitPairDeterminant.moment_im_eq_zero
+#print axioms Reinmann.SplitPairModulusOrder.boundary_product_gap
+#print axioms Reinmann.SplitPairOscillation.norm_geometric_block
+#print axioms Reinmann.SplitPairOscillation.real_square
+#print axioms Reinmann.SplitPairOscillation.real_sum_le
+#print axioms Reinmann.SplitPairOscillation.real_square_sum_ge
+#print axioms Reinmann.SplitPairOscillation.exists_negative_phase
+#print axioms Reinmann.SplitPairOscillation.exists_positive_phase
+#print axioms Reinmann.SplitPairOscillation.perturbed_phase_both_signs
+#print axioms Reinmann.SplitPairOscillation.finite_geometric_tail_tendsto
+#print axioms Reinmann.SplitPairOscillation.finite_split_sum_both_signs
+#print axioms Reinmann.SplitPairOscillation.norm_finite_geometric_tail_le
+#print axioms Reinmann.SplitPairOscillation.exists_geometric_rate
+#print axioms Reinmann.FiniteProductSplitPair.minor_eq_rankMinor
+#print axioms Reinmann.FiniteProductSplitPair.minor_eq_moment
+#print axioms Reinmann.FiniteProductSplitPair.leading_ne_zero
+#print axioms Reinmann.FiniteProductSplitPair.base_conjugate
+#print axioms Reinmann.FiniteProductSplitPair.leading_conjugate
+#print axioms Reinmann.FiniteProductSplitPair.minor_subset_expansion
+#print axioms Reinmann.FiniteProductSplitPair.finite_product_split_pair
+#print axioms Reinmann.FiniteProductSplitPair.exponential_remainder_bound
+#print axioms Reinmann.FiniteProductSplitPair.minor_im_eq_zero
+#print axioms Reinmann.FiniteProductSplitPair.finite_product_split_pair_of_boundary
+#print axioms Reinmann.FiniteProductSplitPair.finite_product_split_pair_of_root_order
+#print axioms Reinmann.FiniteProductSplitPair.quadratic_control_both_signs
+#print axioms Reinmann.FiniteProductSplitPair.cubic_control_both_signs

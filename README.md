@@ -24,8 +24,10 @@ also misses both fixed forecast tolerances at offsets 0.0005 and 0.00025.
 The logarithmic fit remains descriptive; forecasting is closed.
 The [uniform actual-Xi Mellin truncation tail](research/prime_spectral/XI_LOW_RECTANGLE_STATUS_2026_10_17.md)
 now compiles and passes the full axiom audit; the zero-free rectangle is still open.
-The split-pair finite-product formalization remains deferred pending go-ahead to
-start before publication.
+The [finite-product split-pair theorem](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md)
+now derives the actual reciprocal coefficients, a nonzero leading coefficient,
+an exponential remainder and both determinant signs at unbounded ranks.
+The entire-function extension remains outside this formalization.
 
 > **Current research status (updated 17 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
@@ -56,6 +58,12 @@ proved before they can be classified as sufficient conditions for RH.
 
 ### Latest results
 
+- **Finite-product split-pair theorem.** Lean proves the actual reciprocal
+  determinant expansion, nonzero Vandermonde coefficient, root-order gap,
+  exponential remainder and both signs at unbounded ranks. Finite geometric
+  sums cover rational and irrational phases together. Quadratic and cubic
+  controls instantiate the result. See
+  [`FORMAL_TARGET_A`](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md).
 - **Uniform low-rectangle tail.** Lean proves the actual Xi truncation error
   is at most (19981/50)e<sup>−T</sup> for T ≥ 1 throughout
   0 ≤ Re(s) ≤ 1, |Im(s)| ≤ 14.1. The full build and 244-theorem axiom audit pass.

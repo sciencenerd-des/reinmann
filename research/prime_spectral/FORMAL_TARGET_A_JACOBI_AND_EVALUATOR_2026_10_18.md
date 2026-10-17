@@ -87,7 +87,13 @@ Forecasting remains closed.
 
 ## Validation
 
-Development and final validation receipts are kept separately. The final
-validation receipt and round manifest, once generated, bind the checked source,
-build and axiom audit. A successful earlier build is not evidence that later
-source edits compile. No publication is performed by these formal modules.
+Commit 83a728a passed the full GitHub Actions build (3588 jobs) and the audit of
+all 313 public theorems: 0 sorry and 0 custom axioms. This is the final pushed
+source, including all five new modules and 28 new audited public theorems:
+https://github.com/sciencenerd-des/reinmann/actions/runs/39069341977 .
+
+Development and final validation receipts are kept separately. `validation.json`
+binds the successful CI logs to hashes of the checked Lean sources. The round
+manifest preserves the previous scientific closure and its historical versions
+of the three intentionally updated integration files. No publication is
+performed by these formal modules.

@@ -1,0 +1,34 @@
+'Reinmann.ToeplitzComplement.jacobi_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.toeplitz_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.toeplitz_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.toeplitz_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.toeplitz_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.complementary_minor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.minor_rescale_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.complementary_minor_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzComplement.finite_product_original_minor_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.ToeplitzComplement.finite_product_original_both_signs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.SplitPairCauchyTail.coefficient_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.SplitPairCauchyTail.coefficient_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.SplitPairCauchyTail.normalized_coefficient_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.SplitPairCauchyTail.normalized_coefficient_tendsto_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.SplitPairCauchyTail.finite_pole_coefficient_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.theta_shifted_term_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.thetaFinite_error_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.thetaFinite_error_le_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.thetaFinite_weighted_error_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.thetaFinite_integrated_error_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.integral_tile_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.integral_midpoint_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.variation_of_deriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.tile_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.unit_grid_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.rectangle_grid_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.EnclosureRules.rectangle_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.SplitPairCauchyTail.simple_pole_analytic_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]

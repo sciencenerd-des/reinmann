@@ -1,0 +1,20 @@
+{
+  "status": "all_28_new_theorems_kernel_source_checked",
+  "source_sha256": {
+    "Reinmann/ToeplitzComplement.lean": "b47755576373fda4eadb4a2b7f61237d956d55070cb066287d81506bdf5dc1da",
+    "Reinmann/ToeplitzComplementSigned.lean": "0fbfbe9f62b6d93e707d4de23ac277bc82ebf20db6aa3b795e23c986d171d8b3",
+    "Reinmann/SplitPairCauchyTail.lean": "b8de491b079a9692b79b7e17376b26ab7edbb343f848808adc1be693c58a8f2e",
+    "Reinmann/XiFiniteTheta.lean": "72560094e970ae798885d478b0fd0ae6e500ea97418ee455c388fff746a826f4",
+    "Reinmann/EnclosureRules.lean": "47415862d7e3e5257b223ce127b71878c180edf423afcbea55304a601cfad496",
+    "Reinmann.lean": "3ebb44b9704d6b2971ea55c76dc8bbb8a797b842f04ac7a1dd239ed63180f848",
+    "Reinmann/AxiomAudit.lean": "ac9a8e093f529f9c425432f2530baf6dee1d6d0ca6907549b5718540fe7bd2d2"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "new_public_theorems": 28,
+  "individual_module_CI": "pending",
+  "scope": "Combined source check and axiom reports; separate module imports and full project audit to be validated by CI."
+}

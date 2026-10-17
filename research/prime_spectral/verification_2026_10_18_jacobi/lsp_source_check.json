@@ -1,0 +1,1410 @@
+{
+  "status": "complete",
+  "version": 4,
+  "diagnostics": [
+    {
+      "fullRange": {
+        "end": {
+          "character": 39,
+          "line": 193
+        },
+        "start": {
+          "character": 37,
+          "line": 193
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'i^n) +'\nshould be written as\n  'i ^ n)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 39,
+          "line": 193
+        },
+        "start": {
+          "character": 37,
+          "line": 193
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 39,
+          "line": 167
+        },
+        "start": {
+          "character": 35,
+          "line": 167
+        }
+      },
+      "message": "'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 39,
+          "line": 167
+        },
+        "start": {
+          "character": 35,
+          "line": 167
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 39,
+          "line": 167
+        },
+        "start": {
+          "character": 35,
+          "line": 167
+        }
+      },
+      "message": "this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+      "range": {
+        "end": {
+          "character": 39,
+          "line": 167
+        },
+        "start": {
+          "character": 35,
+          "line": 167
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 478
+        },
+        "start": {
+          "character": 0,
+          "line": 478
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.jacobi_block' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 478
+        },
+        "start": {
+          "character": 0,
+          "line": 478
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 479
+        },
+        "start": {
+          "character": 0,
+          "line": 479
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.toeplitz_mul' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 479
+        },
+        "start": {
+          "character": 0,
+          "line": 479
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 480
+        },
+        "start": {
+          "character": 0,
+          "line": 480
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.toeplitz_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 480
+        },
+        "start": {
+          "character": 0,
+          "line": 480
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 481
+        },
+        "start": {
+          "character": 0,
+          "line": 481
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.toeplitz_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 481
+        },
+        "start": {
+          "character": 0,
+          "line": 481
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 482
+        },
+        "start": {
+          "character": 0,
+          "line": 482
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.toeplitz_det' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 482
+        },
+        "start": {
+          "character": 0,
+          "line": 482
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 483
+        },
+        "start": {
+          "character": 0,
+          "line": 483
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.complementary_minor' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 483
+        },
+        "start": {
+          "character": 0,
+          "line": 483
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 36,
+          "line": 361
+        },
+        "start": {
+          "character": 34,
+          "line": 361
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  't-v‖ ≤'\nshould be written as\n  't - v‖'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 36,
+          "line": 361
+        },
+        "start": {
+          "character": 34,
+          "line": 361
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 46,
+          "line": 427
+        },
+        "start": {
+          "character": 44,
+          "line": 427
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '(n+1)) (j'\nshould be written as\n  '(n + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 46,
+          "line": 427
+        },
+        "start": {
+          "character": 44,
+          "line": 427
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 62,
+          "line": 427
+        },
+        "start": {
+          "character": 60,
+          "line": 427
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '(m+1)) :'\nshould be written as\n  '(m + 1))'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 62,
+          "line": 427
+        },
+        "start": {
+          "character": 60,
+          "line": 427
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 29,
+          "line": 401
+        },
+        "start": {
+          "character": 27,
+          "line": 401
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'c-v‖ ≤'\nshould be written as\n  'c - v‖'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 29,
+          "line": 401
+        },
+        "start": {
+          "character": 27,
+          "line": 401
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 46,
+          "line": 401
+        },
+        "start": {
+          "character": 44,
+          "line": 401
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '‖z-c‖ ≤'\nshould be written as\n  '‖z - c‖'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 46,
+          "line": 401
+        },
+        "start": {
+          "character": 44,
+          "line": 401
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 16,
+          "line": 402
+        },
+        "start": {
+          "character": 14,
+          "line": 402
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'z-f c‖'\nshould be written as\n  'z - f'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 16,
+          "line": 402
+        },
+        "start": {
+          "character": 14,
+          "line": 402
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 30,
+          "line": 402
+        },
+        "start": {
+          "character": 28,
+          "line": 402
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '‖z-c‖) (hmargin'\nshould be written as\n  '‖z - c‖)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 30,
+          "line": 402
+        },
+        "start": {
+          "character": 28,
+          "line": 402
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 5155,
+          "line": 402
+        },
+        "start": {
+          "character": 49,
+          "line": 402
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'K*ρ < ‖v‖)'\nshould be written as\n  'K * ρ'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 5155,
+          "line": 402
+        },
+        "start": {
+          "character": 49,
+          "line": 402
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 18,
+          "line": 373
+        },
+        "start": {
+          "character": 16,
+          "line": 373
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '((a+b)/2)-v‖'\nshould be written as\n  '((a + b)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 18,
+          "line": 373
+        },
+        "start": {
+          "character": 16,
+          "line": 373
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 21,
+          "line": 373
+        },
+        "start": {
+          "character": 19,
+          "line": 373
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '((a+b)/2)-v‖'\nshould be written as\n  'b) / 2)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 21,
+          "line": 373
+        },
+        "start": {
+          "character": 19,
+          "line": 373
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 24,
+          "line": 373
+        },
+        "start": {
+          "character": 22,
+          "line": 373
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '((a+b)/2)-v‖ ≤'\nshould be written as\n  '2) - v‖'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 24,
+          "line": 373
+        },
+        "start": {
+          "character": 22,
+          "line": 373
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 484
+        },
+        "start": {
+          "character": 0,
+          "line": 484
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.minor_rescale_neg' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 484
+        },
+        "start": {
+          "character": 0,
+          "line": 484
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 485
+        },
+        "start": {
+          "character": 0,
+          "line": 485
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.complementary_minor_signed' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 485
+        },
+        "start": {
+          "character": 0,
+          "line": 485
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 22,
+          "line": 466
+        },
+        "start": {
+          "character": 20,
+          "line": 466
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 22,
+          "line": 466
+        },
+        "start": {
+          "character": 20,
+          "line": 466
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 34,
+          "line": 466
+        },
+        "start": {
+          "character": 32,
+          "line": 466
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '(m+1) →'\nshould be written as\n  '(m + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 34,
+          "line": 466
+        },
+        "start": {
+          "character": 32,
+          "line": 466
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 22,
+          "line": 467
+        },
+        "start": {
+          "character": 20,
+          "line": 467
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '(n+1) →'\nshould be written as\n  '(n + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 22,
+          "line": 467
+        },
+        "start": {
+          "character": 20,
+          "line": 467
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 34,
+          "line": 467
+        },
+        "start": {
+          "character": 32,
+          "line": 467
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  '(m+1) →'\nshould be written as\n  '(m + 1)'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 34,
+          "line": 467
+        },
+        "start": {
+          "character": 32,
+          "line": 467
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 44,
+          "line": 468
+        },
+        "start": {
+          "character": 42,
+          "line": 468
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'j)-values'\nshould be written as\n  'j) - values'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 44,
+          "line": 468
+        },
+        "start": {
+          "character": 42,
+          "line": 468
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 12,
+          "line": 470
+        },
+        "start": {
+          "character": 10,
+          "line": 470
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'z-f (gridCenter'\nshould be written as\n  'z - f'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 12,
+          "line": 470
+        },
+        "start": {
+          "character": 10,
+          "line": 470
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 2082,
+          "line": 470
+        },
+        "start": {
+          "character": 40,
+          "line": 470
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'K*‖z-gridCenter'\nshould be written as\n  'K * ‖z'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 2082,
+          "line": 470
+        },
+        "start": {
+          "character": 40,
+          "line": 470
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 45,
+          "line": 470
+        },
+        "start": {
+          "character": 43,
+          "line": 470
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'K*‖z-gridCenter'\nshould be written as\n  '‖z - gridCenter'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 45,
+          "line": 470
+        },
+        "start": {
+          "character": 43,
+          "line": 470
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 36,
+          "line": 471
+        },
+        "start": {
+          "character": 32,
+          "line": 471
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'j+K*(1/(n'\nshould be written as\n  'j + K'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 36,
+          "line": 471
+        },
+        "start": {
+          "character": 32,
+          "line": 471
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 39,
+          "line": 471
+        },
+        "start": {
+          "character": 37,
+          "line": 471
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'j+K*(1/(n :'\nshould be written as\n  '(1 / (n'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 39,
+          "line": 471
+        },
+        "start": {
+          "character": 37,
+          "line": 471
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 51,
+          "line": 471
+        },
+        "start": {
+          "character": 45,
+          "line": 471
+        }
+      },
+      "message": "missing space in the source\n\nThis part of the code\n  'ℝ)+2*H/m) <'\nshould be written as\n  'ℝ) + 2'\n\n\nNote: This linter can be disabled with `set_option linter.style.whitespace false`",
+      "range": {
+        "end": {
+          "character": 51,
+          "line": 471
+        },
+        "start": {
+          "character": 45,
+          "line": 471
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 486
+        },
+        "start": {
+          "character": 0,
+          "line": 486
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.finite_product_original_minor_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 486
+        },
+        "start": {
+          "character": 0,
+          "line": 486
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 487
+        },
+        "start": {
+          "character": 0,
+          "line": 487
+        }
+      },
+      "message": "'Reinmann.ToeplitzComplement.finite_product_original_both_signs' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 487
+        },
+        "start": {
+          "character": 0,
+          "line": 487
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 488
+        },
+        "start": {
+          "character": 0,
+          "line": 488
+        }
+      },
+      "message": "'Reinmann.SplitPairCauchyTail.coefficient_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 488
+        },
+        "start": {
+          "character": 0,
+          "line": 488
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 489
+        },
+        "start": {
+          "character": 0,
+          "line": 489
+        }
+      },
+      "message": "'Reinmann.SplitPairCauchyTail.coefficient_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 489
+        },
+        "start": {
+          "character": 0,
+          "line": 489
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 490
+        },
+        "start": {
+          "character": 0,
+          "line": 490
+        }
+      },
+      "message": "'Reinmann.SplitPairCauchyTail.normalized_coefficient_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 490
+        },
+        "start": {
+          "character": 0,
+          "line": 490
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 491
+        },
+        "start": {
+          "character": 0,
+          "line": 491
+        }
+      },
+      "message": "'Reinmann.SplitPairCauchyTail.normalized_coefficient_tendsto_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 491
+        },
+        "start": {
+          "character": 0,
+          "line": 491
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 492
+        },
+        "start": {
+          "character": 0,
+          "line": 492
+        }
+      },
+      "message": "'Reinmann.SplitPairCauchyTail.finite_pole_coefficient_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 492
+        },
+        "start": {
+          "character": 0,
+          "line": 492
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 493
+        },
+        "start": {
+          "character": 0,
+          "line": 493
+        }
+      },
+      "message": "'Reinmann.theta_shifted_term_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 493
+        },
+        "start": {
+          "character": 0,
+          "line": 493
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 494
+        },
+        "start": {
+          "character": 0,
+          "line": 494
+        }
+      },
+      "message": "'Reinmann.thetaFinite_error_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 494
+        },
+        "start": {
+          "character": 0,
+          "line": 494
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 495
+        },
+        "start": {
+          "character": 0,
+          "line": 495
+        }
+      },
+      "message": "'Reinmann.thetaFinite_error_le_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 495
+        },
+        "start": {
+          "character": 0,
+          "line": 495
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 52,
+          "line": 453
+        },
+        "start": {
+          "character": 48,
+          "line": 453
+        }
+      },
+      "message": "'ring' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+      "range": {
+        "end": {
+          "character": 52,
+          "line": 453
+        },
+        "start": {
+          "character": 48,
+          "line": 453
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 52,
+          "line": 453
+        },
+        "start": {
+          "character": 48,
+          "line": 453
+        }
+      },
+      "message": "this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+      "range": {
+        "end": {
+          "character": 52,
+          "line": 453
+        },
+        "start": {
+          "character": 48,
+          "line": 453
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 9,
+          "line": 446
+        },
+        "start": {
+          "character": 6,
+          "line": 446
+        }
+      },
+      "message": "Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+      "range": {
+        "end": {
+          "character": 9,
+          "line": 446
+        },
+        "start": {
+          "character": 6,
+          "line": 446
+        }
+      },
+      "severity": 2,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 496
+        },
+        "start": {
+          "character": 0,
+          "line": 496
+        }
+      },
+      "message": "'Reinmann.thetaFinite_weighted_error_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 496
+        },
+        "start": {
+          "character": 0,
+          "line": 496
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 497
+        },
+        "start": {
+          "character": 0,
+          "line": 497
+        }
+      },
+      "message": "'Reinmann.thetaFinite_integrated_error_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 497
+        },
+        "start": {
+          "character": 0,
+          "line": 497
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 498
+        },
+        "start": {
+          "character": 0,
+          "line": 498
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.integral_tile_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 498
+        },
+        "start": {
+          "character": 0,
+          "line": 498
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 499
+        },
+        "start": {
+          "character": 0,
+          "line": 499
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.integral_midpoint_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 499
+        },
+        "start": {
+          "character": 0,
+          "line": 499
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 500
+        },
+        "start": {
+          "character": 0,
+          "line": 500
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.variation_of_deriv' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 500
+        },
+        "start": {
+          "character": 0,
+          "line": 500
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 501
+        },
+        "start": {
+          "character": 0,
+          "line": 501
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.tile_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 501
+        },
+        "start": {
+          "character": 0,
+          "line": 501
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 502
+        },
+        "start": {
+          "character": 0,
+          "line": 502
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.unit_grid_cover' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 502
+        },
+        "start": {
+          "character": 0,
+          "line": 502
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 503
+        },
+        "start": {
+          "character": 0,
+          "line": 503
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.rectangle_grid_cover' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 503
+        },
+        "start": {
+          "character": 0,
+          "line": 503
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 504
+        },
+        "start": {
+          "character": 0,
+          "line": 504
+        }
+      },
+      "message": "'Reinmann.EnclosureRules.rectangle_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 504
+        },
+        "start": {
+          "character": 0,
+          "line": 504
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    },
+    {
+      "fullRange": {
+        "end": {
+          "character": 6,
+          "line": 505
+        },
+        "start": {
+          "character": 0,
+          "line": 505
+        }
+      },
+      "message": "'Reinmann.SplitPairCauchyTail.simple_pole_analytic_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "range": {
+        "end": {
+          "character": 6,
+          "line": 505
+        },
+        "start": {
+          "character": 0,
+          "line": 505
+        }
+      },
+      "severity": 3,
+      "source": "Lean 4"
+    }
+  ],
+  "server_pid": 84866,
+  "processing": [],
+  "errors": 0,
+  "axiom_reports": 28
+}

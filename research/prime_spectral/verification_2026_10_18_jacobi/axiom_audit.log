@@ -1,0 +1,12 @@
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	﻿2026-10-17T21:05:56.3325882Z ##[group]Run bash scripts/verify_axiom_clean.sh
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:56.3326111Z [36;1mbash scripts/verify_axiom_clean.sh[0m
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:56.3375600Z shell: /usr/bin/bash -e {0}
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:56.3375742Z ##[endgroup]
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:56.3463456Z == Check 1: source grep for sorry / admit / axiom in Reinmann/*.lean ==
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:57.3702246Z OK: no sorry/admit in Reinmann/*.lean
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:57.3702520Z OK: no project-declared axioms in Reinmann/*.lean
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:57.3702710Z 
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:57.3702865Z == Check 2: #print axioms on the reduction chain (AxiomAudit.lean) ==
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:59.8618200Z OK: all 313 audited theorems depend only on [propext, Classical.choice, Quot.sound]
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:59.8618568Z 
+build-and-verify	Verify axiom-clean (0 sorry, 0 custom axioms)	2026-10-17T21:05:59.8618858Z AXIOM-CLEAN: 0 sorry, 0 custom axioms. Reduction chain verified.

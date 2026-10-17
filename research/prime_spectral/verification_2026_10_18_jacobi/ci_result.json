@@ -1,0 +1,107 @@
+{
+  "conclusion": "success",
+  "headSha": "83a728a9ea47ae1b59ffce4415215da5bad12eaa",
+  "jobs": [
+    {
+      "completedAt": "2026-10-17T21:06:02Z",
+      "conclusion": "success",
+      "databaseId": 117503496785,
+      "name": "build-and-verify",
+      "startedAt": "2026-10-17T21:03:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-17T21:03:52Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-17T21:03:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:04:15Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "startedAt": "2026-10-17T21:03:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:04:16Z",
+          "conclusion": "success",
+          "name": "Install elan (Lean toolchain manager)",
+          "number": 3,
+          "startedAt": "2026-10-17T21:04:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:04:29Z",
+          "conclusion": "success",
+          "name": "Lean / lake versions",
+          "number": 4,
+          "startedAt": "2026-10-17T21:04:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:05:26Z",
+          "conclusion": "success",
+          "name": "Cache mathlib build artifacts",
+          "number": 5,
+          "startedAt": "2026-10-17T21:04:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:05:37Z",
+          "conclusion": "success",
+          "name": "Fetch cached mathlib",
+          "number": 6,
+          "startedAt": "2026-10-17T21:05:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:05:56Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 7,
+          "startedAt": "2026-10-17T21:05:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:05:59Z",
+          "conclusion": "success",
+          "name": "Verify axiom-clean (0 sorry, 0 custom axioms)",
+          "number": 8,
+          "startedAt": "2026-10-17T21:05:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:05:59Z",
+          "conclusion": "success",
+          "name": "Post Cache mathlib build artifacts",
+          "number": 15,
+          "startedAt": "2026-10-17T21:05:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:06:00Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 16,
+          "startedAt": "2026-10-17T21:05:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-17T21:06:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-17T21:06:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/sciencenerd-des/reinmann/actions/runs/39069341977/job/117503496785"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/sciencenerd-des/reinmann/actions/runs/39069341977"
+}

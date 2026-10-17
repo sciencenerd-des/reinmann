@@ -1,0 +1,29 @@
+{
+  "validated_commit": "83a728a9ea47ae1b59ffce4415215da5bad12eaa",
+  "validation_environment": "GitHub Actions ubuntu-latest; pinned project Lean/Mathlib; strict lake build and scripts/verify-axioms.sh",
+  "ci_url": "https://github.com/sciencenerd-des/reinmann/actions/runs/39069341977",
+  "checks": [
+    {
+      "name": "full_project_build",
+      "exit_code": 0,
+      "log": "research/prime_spectral/verification_2026_10_18_jacobi/full_build.log",
+      "sha256": "eac093eda6bc21cac8f08010ec5959556b3d13b2c7b52402af19098fbbbf94be"
+    },
+    {
+      "name": "313_theorem_axiom_audit",
+      "exit_code": 0,
+      "log": "research/prime_spectral/verification_2026_10_18_jacobi/axiom_audit.log",
+      "sha256": "10dec8676c0d4996ab2e2b56438c6dbaabcd0634c09e05ebcf22735ddf1a7ca6"
+    }
+  ],
+  "source_sha256": {
+    "Reinmann.lean": "3ebb44b9704d6b2971ea55c76dc8bbb8a797b842f04ac7a1dd239ed63180f848",
+    "Reinmann/AxiomAudit.lean": "ac9a8e093f529f9c425432f2530baf6dee1d6d0ca6907549b5718540fe7bd2d2",
+    "Reinmann/ToeplitzComplement.lean": "b47755576373fda4eadb4a2b7f61237d956d55070cb066287d81506bdf5dc1da",
+    "Reinmann/ToeplitzComplementSigned.lean": "0fbfbe9f62b6d93e707d4de23ac277bc82ebf20db6aa3b795e23c986d171d8b3",
+    "Reinmann/SplitPairCauchyTail.lean": "b8de491b079a9692b79b7e17376b26ab7edbb343f848808adc1be693c58a8f2e",
+    "Reinmann/XiFiniteTheta.lean": "72560094e970ae798885d478b0fd0ae6e500ea97418ee455c388fff746a826f4",
+    "Reinmann/EnclosureRules.lean": "47415862d7e3e5257b223ce127b71878c180edf423afcbea55304a601cfad496"
+  },
+  "scope": "Successful pushed-source build; no completed genus-zero extension or Xi numerical rectangle certificate."
+}

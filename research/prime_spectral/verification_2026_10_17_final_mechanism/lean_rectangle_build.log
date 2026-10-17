@@ -1,0 +1,6 @@
+⚠ [3447/3448] Replayed Reinmann.XiMellinRemainder
+warning: Reinmann/XiMellinRemainder.lean:166:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+✔ [3448/3448] Built Reinmann.XiMellinRectangle (44s)
+Build completed successfully (3448 jobs).

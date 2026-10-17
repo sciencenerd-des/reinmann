@@ -95,6 +95,7 @@ import Reinmann.AnalyticPFLimit
 import Reinmann.XiTaylorIdentification
 import Reinmann.XiCenterPositive
 import Reinmann.XiMellinRemainder
+import Reinmann.XiMellinRectangle
 import Reinmann.TuranDeficit
 import Reinmann.WeilRankTail
 import Reinmann.WeilWindowAudit

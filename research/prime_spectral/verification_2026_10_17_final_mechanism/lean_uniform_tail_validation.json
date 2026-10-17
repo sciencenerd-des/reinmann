@@ -1,0 +1,19 @@
+{
+  "status": "uniform_actual_Xi_truncation_bound_compiled_full_build_and_axiom_audit_passed",
+  "full_build_jobs": 3563,
+  "audited_theorems": 244,
+  "custom_axioms": 0,
+  "sorry": 0,
+  "low_rectangle_height": "141/10",
+  "constant": "19981/50",
+  "scope": "Uniform Mellin integral truncation tail only. Finite-theta tail, quadrature, subdivision and nonvanishing remain open; ZetaNoLowStripZero is not discharged.",
+  "files_sha256": {
+    "Reinmann/XiMellinRectangle.lean": "6e6200482183e01a06357e7668c09ede4f2b8694a39ec11cba7a65abed5ebca2",
+    "Reinmann.lean": "8b560df83cb99c3abafec33fd349de48a433f65af884c5b86323a1a8be71cb48",
+    "Reinmann/AxiomAudit.lean": "a21de137490741854667832bb86609df1f5cf6b1326d1f1bb5e24221ff57f33d",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/lean_rectangle_direct.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/lean_rectangle_build.log": "97654790bd48b6f6c5ba3d05c311f2844ecddc9737fec5a8ebb0509906ba3d46",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/lean_full_build.log": "ccae42bce95fc34242caa283d8977e823bfdea264d6014f3f901e27cabe8c6ec",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/lean_axiom_audit.log": "5600b4b4c87150302d43f35f5d41e726e7bb80fdcdadfa17be17d7f8d8a84db4"
+  }
+}

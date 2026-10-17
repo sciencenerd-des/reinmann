@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
 import Reinmann.WeilWindowAudit
+import Reinmann.XiMellinRectangle
 import Reinmann.ProofArchitecture
 import Reinmann.RHReductionCapstone
 import Reinmann.RHTheoremTargets
@@ -362,3 +363,9 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.xi_finitePF43_of_classical
 #print axioms Reinmann.xi_finitePF58_of_quasiRH
 #print axioms Reinmann.forall_angleBound_iff_riemannHypothesis
+
+-- Uniform actual-Xi Mellin truncation error; no zero-exclusion claim.
+#print axioms Reinmann.norm_mul_norm_sub_one_le_rectangle
+#print axioms Reinmann.xiMellinRemainder_norm_le_rectangle
+#print axioms Reinmann.xiMellinTruncation_error_le_rectangle
+#print axioms Reinmann.xiMellinTruncation_error_le_low_rectangle

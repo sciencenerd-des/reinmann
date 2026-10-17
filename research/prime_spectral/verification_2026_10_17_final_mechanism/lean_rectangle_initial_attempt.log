@@ -1,0 +1,11 @@
+Reinmann/XiMellinRectangle.lean:23:4: error: linarith failed to find a contradiction
+case h
+s : ℂ
+H : ℝ
+hl : 0 ≤ s.re
+hu : s.re ≤ 1
+hi : |s.im| ≤ H
+hH : 0 ≤ H
+a✝ : H ^ 2 < s.im ^ 2
+⊢ False
+failed

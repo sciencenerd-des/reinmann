@@ -475,105 +475,69 @@ in \lean{HorizontalCritical.lean}.
 \end{proof}
 
 \begin{remark}
-This is currently the sharpest next target in the development. It avoids the
-false global convexity assumption and focuses on local real/imaginary
-oscillation between hypothetical same-height zeros. 
-
-Specifically, this componentwise critical exclusion can be established by linking the argument principle for the derivative to the global Weierstrass product representation. If two adjacent same-height zeros $x + i\gamma$ and $y + i\gamma$ existed, the winding number $N = 2$ of $\zeta(s)$ around a thin rectangle enclosing the segment $[x, y]$ would require the derivative $\zeta'(s)$ to have winding number $N' = 1$, placing a zero of $\zeta'(s)$ close to the segment. This topologically requires the horizontal phase derivative $\theta'(\sigma) = \operatorname{Im}(\zeta'/\zeta)$ to change sign (cross zero) inside $(x, y)$.
-
-However, the Weierstrass product (after grouping each non-trivial zero $\rho_j = \beta_j + i\gamma_j$ with its conjugate $\bar{\rho}_j$ to cancel the conditionally convergent $1/\rho$ terms) represents the horizontal phase derivative exactly as:
-\[
-  \theta'(\sigma) = \sum_{\gamma_j > 0} \left( \frac{\gamma_j - \gamma}{(\sigma - \beta_j)^2 + (\gamma - \gamma_j)^2} - \frac{\gamma_j + \gamma}{(\sigma - \beta_j)^2 + (\gamma + \gamma_j)^2} \right) + \frac{\gamma}{(\sigma - 1)^2 + \gamma^2} - \frac{1}{2}\operatorname{Im}\psi\left(\frac{\sigma + i\gamma}{2} + 1\right),
-\]
-where $\psi(z) = \Gamma'(z)/\Gamma(z)$ is the digamma function. Empirically, the sign of $\theta'(\sigma)$ is governed by the relative distances to the nearest zeros above and below $\gamma$. Let $P(\sigma, \gamma)$ be the sum over zeros above $\gamma$, and $N(\sigma, \gamma)$ be the sum over zeros below $\gamma$ (plus conjugate terms). For $\theta'(\sigma)$ to vanish, the positive contribution $P(\sigma, \gamma)$ must balance the negative offset $N(\sigma, \gamma) - \frac{\gamma}{(\sigma-1)^2+\gamma^2} + \frac{1}{2}\operatorname{Im}\psi \approx N(\sigma, \gamma) + 0.785$. Our numerical bounds exploration shows that while $P(\sigma, \gamma)$ can reach up to $3.22$, $N(\sigma, \gamma)$ simultaneously grows and dominates whenever the adjacent zeros are close, meaning they are tightly coupled. Under Montgomery's GUE pair correlation statistics, these zeros are never spaced such that the two terms cancel out, ensuring that $\theta'(\sigma)$ does not cross zero on $(x, y)$.
-
-The topological requirement that $\theta'(\sigma)$ must cross zero contradicts this analytic constraint of sign constancy. Thus, the two componentwise critical points cannot both exist, showing that same-height zeros cannot occur and proving RH.
+The conditional critical-exclusion criterion does not establish its own
+hypothesis. Componentwise Rolle points need not coincide, and a same-height
+pair does not by itself force a zero of the complex derivative on the
+horizontal segment. No checked theorem in this paper supplies the missing
+zeta-specific exclusion estimate.
 \end{remark}
 
-\section{Step-by-step conditional reduction to phase bounds}
+\section{Status of the proposed phase hypothesis}
 
-This section presents a rigorous, step-by-step mathematical reduction of the Riemann Hypothesis to the paired Weierstrass sum non-vanishing bound, detailing each logical and analytical link.
+Write \(\theta'(\sigma)=\im(\zetaR'/\zetaR)(\sigma+i\gamma)\)
+where the denominator is nonzero. The proposed hypothesis \((H_\theta)\)
+asks for an appropriate nonvanishing or sign bound on these horizontal
+segments. It remains an analytic research target. A proof that this bound
+implies componentwise critical exclusion would itself require a valid
+zeta-specific argument; no such bridge is established here. We do not claim
+that Lean has proved an equivalence between this phase hypothesis and RH.
 
-\subsection{Step 1: One-sided reduction via functional equation}
-By the functional equation of the Riemann zeta function, the zeros of $\zetaR(s)$ in the open critical strip $0 < \re(s) < 1$ are symmetric under reflection across the critical line $\sigma = 1/2$. Specifically, $\zetaR(s) = 0 \iff \zetaR(1-s) = 0$. Consequently, the non-existence of any zero in the open right half of the critical strip ($1/2 < \re(s) < 1$) is logically equivalent to the Riemann Hypothesis:
+An earlier draft asserted that two zeros in a thin rectangle force exactly
+one derivative zero there and hence a horizontal phase crossing. This is not
+a general argument-principle consequence. For example,
 \[
-  \mathrm{RH} \iff \forall s \in \mathbb{C}, \left( \frac{1}{2} < \re(s) < 1 \implies \zetaR(s) \neq 0 \right).
+ f(z)=e^{iz}z(z-1),\qquad
+ \im\frac{f'(x)}{f(x)}=1\quad(0<x<1),
 \]
-This step is verified as an unconditional equivalence in \lean{RiemannSpine.lean} under the theorem \lean{riemannHypothesis\_iff\_rightHalfStripZeroFree}.
+has two zeros at the endpoints and no phase-derivative zero between them.
+The assertion \(N(f')=N(f)-1\) on an arbitrary thin rectangle also needs
+additional hypotheses. This example does not settle a zeta-specific question;
+it identifies a missing implication in the proposed argument.
 
-\subsection{Step 2: Topological zero-crossing via winding numbers}
-Suppose there exist two adjacent zeros on a horizontal slice $x + i\gamma$ and $y + i\gamma$ in the open critical strip ($0 < x < y < 1$). Under our hypothesis, there are no other zeros at height $\gamma$ on the segment. Let $R_\epsilon$ be a thin rectangle enclosing the segment $[x, y]$ with vertices $x - i\epsilon, y - i\epsilon, y + i\epsilon, x + i\epsilon$. For sufficiently small $\epsilon > 0$, the winding number of $\zetaR(s)$ around $\partial R_\epsilon$ is exactly $N = 2$.
-By the relation between the zeros of an analytic function and its derivative, the winding number of the derivative $\zetaR'(s)$ around $\partial R_\epsilon$ must be:
-\[
-  N' = N - 1 = 1.
-\]
-This forces $\zetaR'(s)$ to have exactly one zero $s_0 = \sigma_0 + i t_0$ inside $R_\epsilon$. In the limit as $\epsilon \to 0$, $t_0 \to \gamma$. Along the horizontal segment, the logarithmic derivative $\zetaR'(s)/\zetaR(s)$ must vanish at $s_0$, which topologically requires the horizontal phase derivative $\theta'(\sigma) = \im(\zetaR'/\zetaR)(\sigma + i\gamma)$ to change sign (cross zero) at some intermediate coordinate:
-\[
-  \exists \sigma \in (x, y), \quad \theta'(\sigma) = 0.
-\]
+Zero-product formulas must specify their convergence, constants and
+archimedean terms. Finite phase samples or finite zero sums give no uniform
+nonvanishing bound without a controlled remainder. GUE or pair-correlation
+statistics do not imply a pointwise prohibition on a cancellation at every
+height. The earlier numerical constants are therefore not used as rigorous
+analytic bounds, and the preceding formal reductions remain conditional at
+precisely their named exclusion hypotheses.
 
-\subsection{Step 3: Weierstrass sum representation and conjugate pairing}
-Using the Hadamard product for $\zetaR(s)$, we express the logarithmic derivative as a sum over non-trivial zeros $\rho = \beta_j + i\gamma_j$. To eliminate the conditionally convergent terms $1/\rho$, we pair each positive imaginary zero $\rho_j$ with its conjugate $\bar{\rho}_j$, yielding the exact horizontal phase derivative representation:
-\[
-  \theta'(\sigma) = \sum_{\gamma_j > 0} \left( \frac{\gamma_j - \gamma}{(\sigma - \beta_j)^2 + (\gamma - \gamma_j)^2} - \frac{\gamma_j + \gamma}{(\sigma - \beta_j)^2 + (\gamma + \gamma_j)^2} \right) + \frac{\gamma}{(\sigma - 1)^2 + \gamma^2} - \frac{1}{2}\im\psi\left(\frac{\sigma + i\gamma}{2} + 1\right),
-\]
-where $\psi(z) = \Gamma'(z)/\Gamma(z)$ is the digamma function. For large height $\gamma$, the pole term is $O(1/\gamma)$, while the Gamma term acts as a constant downward pressure:
-\[
-  - \frac{1}{2}\im\psi\left(\frac{\sigma + i\gamma}{2} + 1\right) \approx - \frac{\pi}{4} \approx -0.785398.
-\]
-Let $P(\sigma, \gamma)$ be the sum over zeros above $\gamma$ ($\gamma_j > \gamma$), and let $N(\sigma, \gamma)$ be the sum over zeros below $\gamma$ plus the conjugate terms. The phase derivative is thus $\theta'(\sigma) = P(\sigma, \gamma) - N(\sigma, \gamma) + E(\sigma, \gamma)$. For $\theta'(\sigma)$ to cross zero, the positive term $P(\sigma, \gamma)$ must balance the negative offset:
-\[
-  P(\sigma, \gamma) = N(\sigma, \gamma) - E(\sigma, \gamma) \approx N(\sigma, \gamma) + 0.785.
-\]
+\section{Unproved operator and flow proposals}
 
-\subsection{Step 4: Level spacing statistics and ratio coupling}
-Our quantitative numerical bounds exploration establishes that $P(\sigma, \gamma)$ and $N(\sigma, \gamma)$ are tightly coupled through the zero density. Let $R(\sigma, \gamma) = P / (N - E)$. While $P(\sigma, \gamma)$ can reach values up to $3.22$ when a zero is close, the denominator $N - E$ simultaneously scales up, keeping the ratio $R(\sigma, \gamma)$ bounded away from $1$ (empirical minimum distance $|R-1| \approx 0.0034$ at Zero \#13). Because the local sums scale up to $10^2$, this ratio bound translates to a large absolute protection margin:
-\[
-  |\theta'(\sigma)| = |P(\sigma, \gamma) - N(\sigma, \gamma) + E(\sigma, \gamma)| \ge 0.327.
-\]
-Under GUE level spacing statistics, the spacing $\gamma_{j+1} - \gamma_j \approx 2\pi / \log(\gamma)$ ensures that this cancellation is analytically impossible, proving that $\theta'(\sigma)$ has constant sign.
+The files \leanpath{SpectralPhaseBounds.lean.draft},
+\leanpath{TopologicalFlow.lean.draft} and
+\leanpath{DynamicalRepulsion.lean.draft} record proposals outside the active
+Lean proof surface. They do not prove the phase hypothesis or RH.
 
-\subsection{Step 5: Contradiction and critical pair exclusion}
-By IVT, the sign constancy of $\theta'(\sigma)$ on $(x, y) \setminus \{1/2\}$ forces the tangent phase of the derivative $\psi(\sigma) = \arg(\zetaR'(\sigma + i\gamma))$ to rotate monotonically by $2\pi$ across the segment. This forces the componentwise critical points to satisfy a strict topological ordering:
-\[
-  c_{\re, 1} < c_{\im} < c_{\re, 2}.
-\]
-However, the conjugate reflection symmetry about the critical line $\sigma = 1/2$ (proven in \lean{ConjugateSymmetryComplete.lean}) requires the critical points to pair symmetrically about $1/2$, which contradicts the strict monotonic order. This contradiction rules out the existence of same-height zeros off the critical line, completing the step-by-step reduction of the Riemann Hypothesis.
+For the first-order expression \(-i\,d/d\sigma+\theta'(\sigma)\),
+self-adjointness requires a specified operator domain and a proved boundary
+condition analysis. Conjugation symmetry alone does not supply it, and a
+zero of a real potential does not force nonreal spectrum. Likewise, a
+winding count for a function is not a saddle-point theorem for its derivative.
+The proposed heat-flow argument needs a correctly normalized evolution,
+control of the infinite interaction sum and collisions, and a justified
+limiting statement. None of these obligations is discharged by the displayed
+heuristics in earlier drafts.
 
-\section{Alternative analytical pathways to same-height repulsion}
-
-To address the open mathematical gap of proving the non-vanishing horizontal phase derivative $\theta'(\sigma)$, we develop three alternative analytical formulations. All are represented as conditional proof drafts in the repository to establish their logical pathways.
-
-\subsection{Spectral operator formulation (Functional Analysis)}
-Rather than estimating the Weierstrass sum directly, the first method maps the horizontal phase derivative to the eigenvalue spectrum of a parameterized family of differential operators. We define the family of operators $T_\gamma$ acting on the Hilbert space $L^2(0, 1)$ of square-integrable functions by:
-\[
-  T_\gamma f = -i \frac{d}{d\sigma} f + \theta'(\sigma) f,
-\]
-with domain $D(T_\gamma) = \{ f \in L^2(0, 1) : f \text{ is } C^1, \, f(0) = f(1) = 0 \}$. 
-
-Under the global conjugate reflection symmetry of $\zetaR(s)$, the operator $T_\gamma$ is unitarily equivalent to a self-adjoint operator, ensuring its eigenvalues must be purely real. If the phase derivative $\theta'(\sigma)$ crosses zero at some point $\sigma_0 \in (0, 1)$, it introduces a complex singularity into the resolvent operator $(T_\gamma - \lambda I)^{-1}$, which forces the spectrum to contain non-real components. This contradicts the self-adjointness of $T_\gamma$, ruling out horizontal zero-crossings of the phase derivative. This structure is formalized in \leanpath{SpectralPhaseBounds.lean.draft}.
-
-\subsection{Complex dynamics and flow lines (Differential Topology)}
-The second method models $\zetaR(s) = u(\sigma, t) + i v(\sigma, t)$ as a two-dimensional vector field $\vec{V}(\sigma, t) = (u, v)$ on the critical strip. Along the horizontal slice $t = \gamma$, the phase derivative $\theta'(\sigma) = \im(\zetaR'/\zetaR)$ is the angular velocity of the field.
-
-If two same-height zeros $x + i\gamma$ and $y + i\gamma$ existed, they would represent two singular points of $\vec{V}$ of index $+1$. By Poincaré-Hopf index theory, any thin rectangular domain enclosing this segment must have a total index sum of $+2$, forcing the derivative field $\zetaR'(s)$ to have a saddle point (index $-1$) near the segment. In the limit, this requires $\theta'(\sigma)$ to cross zero on the segment $(x, y)$. However, the global conjugate symmetry makes the segment $[x, y]$ an invariant manifold of the flow, which topologically restricts saddle points of index $-1$ to lie exclusively on the critical line $\sigma = 1/2$. Consequently, $\theta'(\sigma)$ cannot cross zero off the critical line. This topological framework is formalized in \leanpath{TopologicalFlow.lean.draft}.
-
-\subsection{The Dynamical Repulsion Principle (Dyson's Brownian Motion \& Hermite Limits)}
-The third method models the zeros $\rho_k(t) = \beta_k(t) + i \gamma_k(t)$ of the deformed completed Riemann $\Xi$-function under the de Bruijn-Newman heat flow. As a system of interacting particles, their drift is governed by Dyson's Brownian motion equations:
-\[
-  \frac{d\beta_k}{dt} = \sum_{j \neq k} \frac{2(\beta_k - \beta_j)}{(\beta_k - \beta_j)^2 + (\gamma_k - \gamma_j)^2}.
-\]
-Suppose there exists a same-height pair of off-line zeros at time $t_0 \ge 0$. Let $\beta_1(t_0) = 1/2 + \Delta_1 > 1/2$ be the maximum real part (the outermost boundary) of any zero in the critical strip. Due to conjugate reflection and functional equation symmetries, this zero must pair with a symmetric zero $\beta_2(t_0) = 1/2 - \Delta_1$.
-Evaluating the net force on $\beta_1$ at time $t_0$, we find that same-height zeros contribute a positive repulsive force $2/(\beta_1 - \beta_2) > 0$. For any symmetric pair at another height $\gamma_j \neq \gamma_1$, their combined force is:
-\[
-  F_{\text{pair}} = \frac{4\Delta_1 (\Delta_1^2 - \Delta_j^2 + d^2)}{[(\Delta_1 - \Delta_j)^2 + d^2][(\Delta_1 + \Delta_j)^2 + d^2]},
-\]
-where $d = \gamma_1 - \gamma_j \neq 0$ and $\Delta_j = \beta_j - 1/2$. Since $\beta_1$ is the outermost zero, $\Delta_1 \ge |\Delta_j|$, ensuring $\Delta_1^2 - \Delta_j^2 \ge 0$, which forces $F_{\text{pair}} > 0$.
-Consequently, the net force is strictly positive, forcing the outermost real part $\beta_1(t)$ to be strictly increasing:
-\[
-  \frac{d\beta_1}{dt} > 0 \quad (\forall t \ge t_0).
-\]
-This strictly increasing behavior prevents $\beta_1(t)$ from ever converging to $1/2$, which directly contradicts the Hermite limit $\lim_{t \to \infty} \beta_k(t) = 1/2$ of the deformed coefficients under the de Bruijn-Newman flow. This contradiction rules out the existence of off-line zeros at any time $t \ge 0$, providing a complete dynamical repulsion pathway. This structure is formalized in \leanpath{DynamicalRepulsion.lean.draft}.
+The defensible outputs are finite calibration and formalization of stated
+reductions. The universal Toeplitz ladder, all-window Weil positivity and
+Green-form paired budget retain RH-level obligations. In particular,
+\leanpath{XiGreenModel.lean} contains
+\lean{green\_paired\_budget\_iff\_riemannHypothesis}; the Toeplitz equivalence
+in \leanpath{RHReductionCapstone.lean} explicitly takes classical bridge
+hypotheses. These distinctions must be retained when comparing tracks.
+Neither finite experiments nor a new presentation of an RH-level hypothesis
+constitutes a route to RH by itself.
 
 \section{Verification methodology}
 
@@ -674,11 +638,11 @@ Convexity sufficient condition &
 Componentwise critical exclusion sufficient condition &
 \leanpath{riemannHypothesis_of_componentwiseCriticalExclusion},
 \leanpath{HorizontalCritical.lean} \\
-Spectral operator self-adjointness and zero-crossing exclusion &
+Unproved spectral proposal (inactive draft) &
 \leanpath{SpectralPhaseBounds.lean.draft} \\
-Topological flow line and saddle point exclusion &
+Unproved topological proposal (inactive draft) &
 \leanpath{TopologicalFlow.lean.draft} \\
-Dynamical repulsion and outermost zero outward force &
+Unproved dynamical proposal (inactive draft) &
 \leanpath{DynamicalRepulsion.lean.draft} \\
 \hline
 \end{tabular}

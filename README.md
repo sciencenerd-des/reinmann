@@ -5,7 +5,24 @@ not prove the Riemann Hypothesis. The project imports mathlib's formal
 `RiemannHypothesis : Prop` target and verifies only reductions and supporting
 lemmas that Lean can check.
 
-> **Current research status (updated 12 October 2026):**
+The near-term outputs are **calibration and formalization**, not an RH proof.
+The universal Toeplitz ladder retains the classical bridge hypotheses in
+`RHReductionCapstone.lean`; positivity on every Weil window is an RH criterion,
+not a consequence of the finite certificates. The Green-form paired budget is
+explicitly equivalent to RH in `XiGreenModel.lean`. The same-height paper's
+proposed phase hypothesis `(H_θ)` and its zeta-specific exclusion bridge remain
+unproved; inactive `.lean.draft` files are not checked proofs. A scope correction
+removes earlier unsupported claims based on winding counts, GUE statistics,
+operator self-adjointness and heat-flow heuristics.
+
+The [DH controls paper](paper/dh_controls_paper.pdf) measures finite detection
+sensitivity. Its human-review request was sent on 17 October 2026; review and
+publication remain pending. The [held-out logarithmic forecast test](research/prime_spectral/LOG_FORECAST_RESULTS_2026_10_17.md)
+adds offsets0.002 and0.001; the measured plain-L exponent does not meet either
+registered forecast tolerance. The split-pair finite-product theorem and certified
+low-zero rectangle are [post-publication formal targets](research/prime_spectral/POST_PUBLICATION_FORMAL_TARGETS_2026_10_15.md).
+
+> **Current research status (updated 17 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
 > records the evidence and open assumptions for the active tracks. It supersedes
 > older priority and novelty claims below. The immediate target is a certified

@@ -1,0 +1,13 @@
+{
+  "status": "same_height_scope_corrected_pdf_and_html_built",
+  "pages": 11,
+  "compiler": "Tectonic success; underfull box warnings only",
+  "visual_check": "All11 pages rendered and contact sheet inspected; no page-boundary clipping. Corrected phase and unproved-proposal sections visible.",
+  "input_sha256": {
+    "paper/rh_same_height_fiber_framework.tex": "e5275b4d0bf8bdc8242994e2f641bd07df5b57a4db570b14749bb00e30c76d76",
+    "paper/rh_same_height_fiber_framework.pdf": "7a9cfbe1dcc72ab7d3daba4bce98e8cdef4cf4b23e7a185ba6268773174f93be",
+    "paper/rh_same_height_fiber_framework.html": "d10201e9b6d366b6f400b14a9e49aafbc84c0b9cb2ddf5dfcdbf0d2c3d5b0b4f",
+    "research/STRATEGIC_SCOPE_CORRECTION_2026_10_17.md": "0a5b7c7cd98f53730546dcd6c147f9674a2f12423a97d6c80e268ee523dbd11f"
+  },
+  "scope": "Editorial correction of unsupported mathematical assertions; no Lean theorem added or build claimed."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "canonical_single_L_control_design_fixed_before_measurement_and_targets",
+  "recorded_utc": "2026-10-16T19:11:05.245164+00:00",
+  "control": "real primitive even quadratic Conrey(13,12)",
+  "reason": "A real character gives an actual single-L parity decomposition; complex label2 probe is a symmetrized restriction and is retained as a secondary control. Gamma parity differs from DH mixtures, so conductor-only transfer is an empirical hypothesis.",
+  "C_grid": [
+    16,
+    20,
+    24,
+    28,
+    32
+  ],
+  "modes": [
+    96,
+    128
+  ],
+  "primary_fit": "N128 ground eigenvalue across both parities; log-linear OLS in C; secondary N96 and per-parity slopes",
+  "forecast_rule": "1373/32+(2/kappa13)*log((1/250)/b)",
+  "targets": [
+    "1/500",
+    "1/1000"
+  ],
+  "new_mixture_computation_started": false
+}

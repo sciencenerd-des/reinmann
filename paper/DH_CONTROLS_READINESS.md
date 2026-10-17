@@ -27,7 +27,7 @@ A separate AI agent reviewed the split-pair theorem and revised paper wording, r
 
 The written analytic dependencies and Arb backend remain separate from the finite Lean proofs. PF435 is sufficient, the solid grid does not prove PF520, and rank 664 is first among the explicitly tested DH contiguous cells, not globally first. Negative supports are upper bounds; positive finite sections are not lower bounds for full positivity. Fits remain descriptive, with prior leave-one-out errors of 16–20%. Finite-atlas attribution has no negligible infinite-tail certificate. No universal Phi, 12C exclusion law or RH proof is established.
 
-The author now requires a human read of §§3–4 and §6 before publication. No human has yet reviewed or been contacted. The shortlist and request are prepared in HUMAN_REVIEW_REQUEST.md. The AI review does not satisfy this gate. Human analytic/numerical review also remains appropriate before a journal submission. The author controls title/metadata acceptance, public release and submission destination. Suggested arXiv category math.NT and MSC 11M26, 11M41, 15B05 are metadata suggestions, not a submission.
+The author now requires a human read of §§3–4 and §6 before publication. The prepared request was sent to David Platt on 17 October 2026 with the PDF and checklist. His substantive read remains pending. The shortlist and sent text are in HUMAN_REVIEW_REQUEST.md. The AI review does not satisfy this gate. Human analytic/numerical review also remains appropriate before a journal submission. The author controls title/metadata acceptance, public release and submission destination. Suggested arXiv category math.NT and MSC 11M26, 11M41, 15B05 are metadata suggestions, not a submission.
 
 ## Final artifact gate
 

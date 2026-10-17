@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Biswajit Mondal" />
-  <meta name="dcterms.date" content="2026-06-06" />
+  <meta name="dcterms.date" content="2026-10-17" />
   <title>A Lean-Verified Same-Height Fiber Framework for the Riemann Hypothesis</title>
   <style>
     /* Default styles provided by pandoc.
@@ -191,7 +191,7 @@
 <h1 class="title">A Lean-Verified Same-Height Fiber Framework for the
 Riemann Hypothesis</h1>
 <p class="author">Biswajit Mondal</p>
-<p class="date">2026-06-06</p>
+<p class="date">2026-10-17</p>
 <div class="abstract">
 <div class="abstract-title">Abstract</div>
 <p>The Riemann Hypothesis asserts that every nontrivial zero of the
@@ -608,59 +608,67 @@ class="math display">\[\texttt{riemannHypothesis\_of\_componentwiseCriticalExclu
 in <code>HorizontalCritical.lean</code>. ◻</p>
 </div>
 <div class="remark">
-<p><strong>Remark 16</strong>. <em>This is currently the sharpest next
-target in the development. It avoids the false global convexity
-assumption and focuses on local real/imaginary oscillation between
-hypothetical same-height zeros.</em></p>
-<p><em>Specifically, this componentwise critical exclusion can be
-established by linking the argument principle for the derivative to the
-global Weierstrass product representation. If two adjacent same-height
-zeros <span class="math inline">\(x + i\gamma\)</span> and <span
-class="math inline">\(y + i\gamma\)</span> existed, the winding number
-<span class="math inline">\(N = 2\)</span> of <span
-class="math inline">\(\zeta(s)\)</span> around a thin rectangle
-enclosing the segment <span class="math inline">\([x, y]\)</span> would
-require the derivative <span
-class="math inline">\(\zeta&#39;(s)\)</span> to have winding number
-<span class="math inline">\(N&#39; = 1\)</span>, placing a zero of <span
-class="math inline">\(\zeta&#39;(s)\)</span> close to the segment. This
-topologically requires the horizontal phase derivative <span
-class="math inline">\(\theta&#39;(\sigma) =
-\operatorname{Im}(\zeta&#39;/\zeta)\)</span> to change sign (cross zero)
-inside <span class="math inline">\((x, y)\)</span>.</em></p>
-<p><em>However, the Weierstrass product (after grouping each non-trivial
-zero <span class="math inline">\(\rho_j = \beta_j + i\gamma_j\)</span>
-with its conjugate <span class="math inline">\(\bar{\rho}_j\)</span> to
-cancel the conditionally convergent <span
-class="math inline">\(1/\rho\)</span> terms) represents the horizontal
-phase derivative exactly as: <span
-class="math display">\[\theta&#39;(\sigma) = \sum_{\gamma_j &gt; 0}
-\left( \frac{\gamma_j - \gamma}{(\sigma - \beta_j)^2 + (\gamma -
-\gamma_j)^2} - \frac{\gamma_j + \gamma}{(\sigma - \beta_j)^2 + (\gamma +
-\gamma_j)^2} \right) + \frac{\gamma}{(\sigma - 1)^2 + \gamma^2} -
-\frac{1}{2}\operatorname{Im}\psi\left(\frac{\sigma + i\gamma}{2} +
-1\right),\]</span> where <span class="math inline">\(\psi(z) =
-\Gamma&#39;(z)/\Gamma(z)\)</span> is the digamma function. Because of
-the positive gap <span class="math inline">\(|\gamma_0 - \gamma| \ge
-\delta &gt; 0\)</span> to all other zeros <span
-class="math inline">\(\gamma_0 \neq \gamma\)</span> (since the only
-zeros at height <span class="math inline">\(\gamma\)</span> are <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(y\)</span>, whose terms are purely real), and the
-dominant negative Gamma term, the sign of the phase derivative is
-governed by the relative distances to the nearest zeros above and below
-<span class="math inline">\(\gamma\)</span>. Under Montgomery’s GUE pair
-correlation statistics, these zeros are never close enough to balance
-each other out, ensuring that <span
-class="math inline">\(\theta&#39;(\sigma)\)</span> does not cross zero
-on <span class="math inline">\((x, y)\)</span>.</em></p>
-<p><em>The topological requirement that <span
-class="math inline">\(\theta&#39;(\sigma)\)</span> must cross zero
-contradicts the analytic constraint that <span
-class="math inline">\(\theta&#39;(\sigma)\)</span> is strictly negative.
-Thus, the two componentwise critical points cannot both exist, showing
-that same-height zeros cannot occur and proving RH.</em></p>
+<p><strong>Remark 16</strong>. <em>The conditional critical-exclusion
+criterion does not establish its own hypothesis. Componentwise Rolle
+points need not coincide, and a same-height pair does not by itself
+force a zero of the complex derivative on the horizontal segment. No
+checked theorem in this paper supplies the missing zeta-specific
+exclusion estimate.</em></p>
 </div>
+<h1 id="status-of-the-proposed-phase-hypothesis">Status of the proposed
+phase hypothesis</h1>
+<p>Write <span
+class="math inline">\(\theta&#39;(\sigma)=\operatorname{Im}(\zeta&#39;/\zeta)(\sigma+i\gamma)\)</span>
+where the denominator is nonzero. The proposed hypothesis <span
+class="math inline">\((H_\theta)\)</span> asks for an appropriate
+nonvanishing or sign bound on these horizontal segments. It remains an
+analytic research target. A proof that this bound implies componentwise
+critical exclusion would itself require a valid zeta-specific argument;
+no such bridge is established here. We do not claim that Lean has proved
+an equivalence between this phase hypothesis and RH.</p>
+<p>An earlier draft asserted that two zeros in a thin rectangle force
+exactly one derivative zero there and hence a horizontal phase crossing.
+This is not a general argument-principle consequence. For example, <span
+class="math display">\[f(z)=e^{iz}z(z-1),\qquad
+\operatorname{Im}\frac{f&#39;(x)}{f(x)}=1\quad(0&lt;x&lt;1),\]</span>
+has two zeros at the endpoints and no phase-derivative zero between
+them. The assertion <span
+class="math inline">\(N(f&#39;)=N(f)-1\)</span> on an arbitrary thin
+rectangle also needs additional hypotheses. This example does not settle
+a zeta-specific question; it identifies a missing implication in the
+proposed argument.</p>
+<p>Zero-product formulas must specify their convergence, constants and
+archimedean terms. Finite phase samples or finite zero sums give no
+uniform nonvanishing bound without a controlled remainder. GUE or
+pair-correlation statistics do not imply a pointwise prohibition on a
+cancellation at every height. The earlier numerical constants are
+therefore not used as rigorous analytic bounds, and the preceding formal
+reductions remain conditional at precisely their named exclusion
+hypotheses.</p>
+<h1 id="unproved-operator-and-flow-proposals">Unproved operator and flow
+proposals</h1>
+<p>The files , and record proposals outside the active Lean proof
+surface. They do not prove the phase hypothesis or RH.</p>
+<p>For the first-order expression <span
+class="math inline">\(-i\,d/d\sigma+\theta&#39;(\sigma)\)</span>,
+self-adjointness requires a specified operator domain and a proved
+boundary condition analysis. Conjugation symmetry alone does not supply
+it, and a zero of a real potential does not force nonreal spectrum.
+Likewise, a winding count for a function is not a saddle-point theorem
+for its derivative. The proposed heat-flow argument needs a correctly
+normalized evolution, control of the infinite interaction sum and
+collisions, and a justified limiting statement. None of these
+obligations is discharged by the displayed heuristics in earlier
+drafts.</p>
+<p>The defensible outputs are finite calibration and formalization of
+stated reductions. The universal Toeplitz ladder, all-window Weil
+positivity and Green-form paired budget retain RH-level obligations. In
+particular, contains
+<code>green_paired_budget_iff_riemannHypothesis</code>; the Toeplitz
+equivalence in explicitly takes classical bridge hypotheses. These
+distinctions must be retained when comparing tracks. Neither finite
+experiments nor a new presentation of an RH-level hypothesis constitutes
+a route to RH by itself.</p>
 <h1 id="verification-methodology">Verification methodology</h1>
 <p>The Lean repository uses a strict verification harness,
 <code>safe-verify.sh</code>. Before invoking Lean, the harness scans
@@ -773,6 +781,21 @@ zeta product lower bound</td>
 <td style="text-align: left;">Componentwise critical exclusion
 sufficient condition</td>
 <td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Unproved spectral proposal (inactive
+draft)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Unproved topological proposal (inactive
+draft)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Unproved dynamical proposal (inactive
+draft)</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>

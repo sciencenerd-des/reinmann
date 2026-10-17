@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/plain_l13_decay.py", line 66, in <module>
+    for C in [16,20,24,28,32]:measure(C,N)
+                              ^^^^^^^^^^^^
+  File "/Users/biswajitmondal/.codex/worktrees/xi-eigenvector-reduction/reinmann/experiments/prime_spectral/plain_l13_decay.py", line 52, in measure
+    if any(not v>0 for v in values):raise ArithmeticError('positive finite eigenvalues unresolved')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ArithmeticError: positive finite eigenvalues unresolved

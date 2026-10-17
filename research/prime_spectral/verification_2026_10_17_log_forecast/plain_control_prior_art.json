@@ -1,0 +1,10 @@
+{
+  "status": "plain_control_external_zero_verification_context_only",
+  "source": "https://arxiv.org/pdf/1305.3087",
+  "version": "1305.3087v1",
+  "theorem": "7.1",
+  "page": 14,
+  "conductor": 13,
+  "height": "100000000/13",
+  "scope": "Published finite-height GRH verification for primitive conductor13 characters. Not global zero-freeness, not rerun here, not used to validate finite eigenvalues or a spectral tail. Even q / odd q refers to conductor parity, not character parity."
+}

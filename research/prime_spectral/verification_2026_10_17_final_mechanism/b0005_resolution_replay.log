@@ -1,0 +1,7 @@
+b0005 1533/32 N 256 positive_finite_sections_only
+b0005 1541/32 N 256 positive_finite_sections_only
+b0005 1545/32 N 256 positive_finite_sections_only
+b0005 1547/32 N 256 positive_finite_sections_only
+b0005 3095/64 N 256 positive_finite_sections_only
+b0005 N256 negative 387/8
+PASS b0005 4352bit fresh witness

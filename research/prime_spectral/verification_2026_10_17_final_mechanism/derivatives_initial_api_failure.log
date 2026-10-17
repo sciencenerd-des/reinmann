@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/final_log_mechanism.py", line 92, in <module>
+    elif a.action=='derivatives':witness_decay()
+                                 ^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/final_log_mechanism.py", line 78, in witness_decay
+    jet=transform_jet(acb(0,gamma),length,v,sector['parity']);D=abs(jet[1])**2
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/final_log_mechanism.py", line 60, in transform_jet
+    return length.sqrt()*w.sinh()*value
+                         ^^^^^^
+AttributeError: 'flint.types.acb_series.acb_series' object has no attribute 'sinh'. Did you mean: 'sin'?

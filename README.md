@@ -19,14 +19,21 @@ The [DH controls paper](paper/dh_controls_paper.pdf) measures finite detection
 sensitivity. Its human-review request was sent on 17 October 2026; review and
 publication remain pending. The [held-out logarithmic forecast test](research/prime_spectral/LOG_FORECAST_RESULTS_2026_10_17.md)
 adds offsets0.002 and0.001; the measured plain-L exponent does not meet either
-registered forecast tolerance. The split-pair finite-product theorem and certified
-low-zero rectangle are [post-publication formal targets](research/prime_spectral/POST_PUBLICATION_FORMAL_TARGETS_2026_10_15.md).
+registered forecast tolerance. The [final matched-mixture test](research/prime_spectral/FINAL_LOG_MECHANISM_RESULTS_2026_10_17.md)
+also misses both fixed forecast tolerances at offsets 0.0005 and 0.00025.
+The logarithmic fit remains descriptive; forecasting is closed.
+The [uniform actual-Xi Mellin truncation tail](research/prime_spectral/XI_LOW_RECTANGLE_STATUS_2026_10_17.md)
+now compiles and passes the full axiom audit; the zero-free rectangle is still open.
+The split-pair finite-product formalization remains deferred pending go-ahead to
+start before publication.
 
 > **Current research status (updated 17 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
 > records the evidence and open assumptions for the active tracks. It supersedes
-> older priority and novelty claims below. The immediate target is a certified
-> full-operator spectral cluster, followed by prime-side counting and Fourier convergence.
+> older priority and novelty claims below. The active outputs are the human-reviewed
+> controls release and the low-rectangle evaluator; logarithmic forecasting is closed.
+> D1 comparison engineering, broad Toeplitz scans, D2 exact counts, D6 induction
+> and arithmetic ablations remain stopped.
 > [`ARCHITECTURE.md`](ARCHITECTURE.md) supplies the broader module inventory and
 > reduction map; its counts and validation claims must be read with their dates.
 > The executable research roadmap is
@@ -49,6 +56,16 @@ proved before they can be classified as sufficient conditions for RH.
 
 ### Latest results
 
+- **Uniform low-rectangle tail.** Lean proves the actual Xi truncation error
+  is at most (19981/50)e<sup>−T</sup> for T ≥ 1 throughout
+  0 ≤ Re(s) ≤ 1, |Im(s)| ≤ 14.1. The full build and 244-theorem axiom audit pass.
+  Finite-theta tails, quadrature and nonvanishing remain open; this is not a
+  zero-free rectangle certificate. See
+  [`XI_LOW_RECTANGLE_STATUS`](research/prime_spectral/XI_LOW_RECTANGLE_STATUS_2026_10_17.md).
+- **Sine-type model obstruction.** An explicit fixed-bandwidth negative witness
+  works for every b > 0 in a finite perturbation of the cosine lattice. The proposed
+  general log(1/b) support lower bound needs stronger hypotheses. See
+  [`SINE_TYPE_LOG_COST_OBSTRUCTION`](research/prime_spectral/SINE_TYPE_LOG_COST_OBSTRUCTION_2026_10_17.md).
 - **Davenport–Heilbronn controls.** A complete certified atlas to height
   340 gives a PF<sub>435</sub> sector guarantee. All 18,291 solid minors at
   ranks 430–520 are positive. Seven controls give certified negative Weil

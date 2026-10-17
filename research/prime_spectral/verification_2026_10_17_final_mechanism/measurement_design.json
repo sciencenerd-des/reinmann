@@ -1,0 +1,41 @@
+{
+  "status": "final_mechanism_design_fixed_before_measurements_and_future_targets",
+  "recorded_utc": "2026-10-17T16:02:54.121625+00:00",
+  "matched_controls": [
+    "b001",
+    "b002"
+  ],
+  "C_grid": [
+    32,
+    34,
+    36,
+    38,
+    40,
+    42
+  ],
+  "modes_primary": 192,
+  "modes_sensitivity": 128,
+  "sensitivity_C": [
+    32,
+    38,
+    42
+  ],
+  "bits": 1024,
+  "primary_kappa": "OLS negative slope of log lowest finite eigenvalue vs C for fixed b001 mixture, common N192; both parity blocks must be positive",
+  "kappa_prime": "OLS negative slope of log normalized squared transform derivative at the lowest pair height, across all six saved N192 negative witnesses b030,b015,b008,b004,b002,b001; display adjacent slopes and transform value as diagnostics",
+  "prediction": "Anchor C=6015/128 at b=1/1000; slope=2/(kappa-kappa_prime) if positive. If nonpositive or unresolved, explicitly mark mechanism unavailable and use the six-point descriptive model only as fallback, with no mechanism-success claim. No target parameter or trial before fixed forecast JSON.",
+  "targets": [
+    "1/2000",
+    "1/4000"
+  ],
+  "acceptance_absolute_C": 0.25,
+  "window_protocol": "Complete replayed H160 atlas before each target search. Common N1924096bit trials; start48 and56, expand high to at most128 if needed; bisect to width<=1/32; N256 sensitivity and4352bit witness reconstruction.",
+  "stop_rule": "If either final mechanism forecast misses its fixed tolerance, or the mechanism is undefined, stop mechanism forecasting and retain log law as descriptive only. No refit or further held-out target.",
+  "source_sha256": {
+    "final_log_mechanism.py": "cbc1f0d9056a2ad4c1cc1e199fd264827474be0f95bfcc28b91ab7448666f997",
+    "near_line_window_calibration.py": "7f86645f994f60998d7898958102afcd604871df5fa526f6c52c7e93d317730b",
+    "near_line_mixture_control.py": "f2a5e0de193fc744b1c7f2570ec0efcb1c6a21277615d7b4e6e5595c4200f856",
+    "control_window_calibration.py": "d65148238ca1dcde7d2dd27de2421befd4bb68949af805c8fc031b37d7126371",
+    "control_zero_attribution.py": "ac49b24bede4c8e2ec25563cb4d991fe1d607dd5d4cf3e9b02806ffcbee29361"
+  }
+}

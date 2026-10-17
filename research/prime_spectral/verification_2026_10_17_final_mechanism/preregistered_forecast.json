@@ -1,0 +1,214 @@
+{
+  "status": "final_forecast_fixed_before_target_selection_or_search",
+  "recorded_utc": "2026-10-17T16:08:36.116467+00:00",
+  "kappa": 1.0975310108891705,
+  "kappa_prime": 0.3603024675237778,
+  "kappa_minus_kappa_prime": 0.7372285433653927,
+  "mechanism_slope": 2.7128629486728104,
+  "anchor": {
+    "b": "1/1000",
+    "C": "6015/128"
+  },
+  "targets": [
+    {
+      "key": "b0005",
+      "b": "1/2000",
+      "mechanism_C": 48.8726008041181,
+      "descriptive_C": 48.86821859994401
+    },
+    {
+      "key": "b00025",
+      "b": "1/4000",
+      "mechanism_C": 50.753014108236194,
+      "descriptive_C": 50.82072298760485
+    }
+  ],
+  "acceptance_absolute_C": 0.25,
+  "matched_spectrum_fits": {
+    "b001_N192": {
+      "negative_log_slope": 1.0975310108891705,
+      "intercept": 10.838867712687545,
+      "adjacent_negative_log_slopes": [
+        1.316397248363291,
+        1.0764846609223362,
+        1.0204256232269238,
+        0.9504987181510725,
+        1.2863802995349864
+      ],
+      "rows": [
+        [
+          32,
+          3.563878778976645e-11
+        ],
+        [
+          34,
+          2.5616205682050345e-12
+        ],
+        [
+          36,
+          2.975035179037229e-13
+        ],
+        [
+          38,
+          3.865108330955458e-14
+        ],
+        [
+          40,
+          5.7752258683535666e-15
+        ],
+        [
+          42,
+          4.407915319253045e-16
+        ]
+      ]
+    },
+    "b001_N128": {
+      "negative_log_slope": 1.125841040487145,
+      "intercept": 11.980214600804072,
+      "adjacent_negative_log_slopes": [
+        1.1355175493990288,
+        1.1092527394953446
+      ],
+      "rows": [
+        [
+          32,
+          3.6631580448083584e-11
+        ],
+        [
+          38,
+          4.026814479821246e-14
+        ],
+        [
+          42,
+          4.764224810095503e-16
+        ]
+      ]
+    },
+    "b002_N192": {
+      "negative_log_slope": 1.1050317835442858,
+      "intercept": 11.096615411163313,
+      "adjacent_negative_log_slopes": [
+        1.3165809880674377,
+        1.077088400813853,
+        1.0223273894126432,
+        0.9556684785905052,
+        1.326041188752832
+      ],
+      "rows": [
+        [
+          32,
+          3.563518486016283e-11
+        ],
+        [
+          34,
+          2.560420524558023e-12
+        ],
+        [
+          36,
+          2.970053017819268e-13
+        ],
+        [
+          38,
+          3.8439870335701945e-14
+        ],
+        [
+          40,
+          5.684585729543924e-15
+        ],
+        [
+          42,
+          4.0078741726608087e-16
+        ]
+      ]
+    },
+    "b002_N128": {
+      "negative_log_slope": 1.1341154150226498,
+      "intercept": 12.257581474330923,
+      "adjacent_negative_log_slopes": [
+        1.1363915210033824,
+        1.1302135190556797
+      ],
+      "rows": [
+        [
+          32,
+          3.662793517788018e-11
+        ],
+        [
+          38,
+          4.00535519897142e-14
+        ],
+        [
+          42,
+          4.3577173436754266e-16
+        ]
+      ]
+    }
+  },
+  "saved_derivative_fit": {
+    "negative_log_slope": 0.3603024675237778,
+    "intercept": -11.007742329300923,
+    "adjacent_negative_log_slopes": [
+      0.42040311130893715,
+      0.4901875922506964,
+      0.32294600887555064,
+      0.2840224675516169,
+      0.2811559151917065
+    ],
+    "rows": [
+      [
+        37.0625,
+        3.10812375253292e-11
+      ],
+      [
+        39.5625,
+        1.086554272186139e-11
+      ],
+      [
+        41.28125,
+        4.679010423825737e-12
+      ],
+      [
+        42.90625,
+        2.7684826082467046e-12
+      ],
+      [
+        44.765625,
+        1.6326347153373593e-12
+      ],
+      [
+        46.9921875,
+        8.730031474917229e-13
+      ]
+    ]
+  },
+  "six_point_descriptive_fit": {
+    "slope": 2.816868397392245,
+    "intercept": 27.457476669998933
+  },
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/measurement_design.json": "2b0be8711dc1ac261bce9480550f75ea26486ac390edac9b45aa470496f71db2",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/saved_witness_derivatives.json": "0cd0b3d3ddecaa7ce471f8cc8be1549ffe2a55ebe926ab1d2d08957d9d7e2fb4",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C32_N192_1024bits.json": "bf51f165287a50973665192e030d472ef0f6bade92da24358533a490a5fba44b",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C34_N192_1024bits.json": "83bda0a9774ebb9b0f8e1f3853a3ec67a25a025669e5ce8dc0bc460c62a3166c",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C36_N192_1024bits.json": "f742e13996733cde044ed02c749b46e601f668315d3fd712f5be67ae83569512",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C38_N192_1024bits.json": "757611cc3a15d44f29bb5562872eee0c07a564a2635beb82527f059d2b473498",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C40_N192_1024bits.json": "3b0bca35264c916301e07fb24e71a2ddfdad4ce94cbc07c9d34697d3cbf8e95e",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C42_N192_1024bits.json": "79936f7d15920a56016d08ee2c7c9da6240f25c291331fc7963d45858e5f1d40",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C32_N128_1024bits.json": "430174651eba8e37adafd16c6980d78db0fddc63eddc911eb96cfa9abefd0ff8",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C38_N128_1024bits.json": "810dace92a170244b07b33e1426984cd0e72377810df1a063ac1000d2707b8b4",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b001_C42_N128_1024bits.json": "632ade097f64fd7d1138c18225fef56493447bfb0d071a3687e2803d2a44ecf6",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C32_N192_1024bits.json": "2440bfeff97f2fff33384bd5f5b54892ead89655806a478bd5dd70a0fcb04b3d",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C34_N192_1024bits.json": "fd313de3d026b72164f8861120fe5d5c8eb992764bd4509c400c780821252d02",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C36_N192_1024bits.json": "83355f5a36b582ee6918e64516b2d76dfbcf9158576b263e2a86d843648ce30f",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C38_N192_1024bits.json": "b8e6bb4a69824456f0d3dc3ea413666cda6a54f41639cede762b70962c11c0fd",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C40_N192_1024bits.json": "453c174933e260ad9eec0b38a3f2bf993c0ba91a86841386aa3cb09bc689b3af",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C42_N192_1024bits.json": "e8aadec8244ed7a2d4d4fa11e02e10c4e1ee55fe250c7a9cba436a0eb0ecccfc",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C32_N128_1024bits.json": "36fa41dc52042cb54a18c47905caaf7430e0d2b561bb8ebe271f86fd557c6a7c",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C38_N128_1024bits.json": "5c4a8e712f4f912729da7f929115cf59eaf0f146192c9ad5dd87d347d1b6a636",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/mixture_b002_C42_N128_1024bits.json": "a27c178672f4559e6642fa63c7a437da5cbab27ee1c3591bba3ab9cd96710c3c"
+  },
+  "source_sha256": {
+    "experiments/prime_spectral/freeze_final_log_forecast.py": "3ba651f90c42e1a84e04495989048d93636ef40a25ef702713c9a28238298fb8"
+  },
+  "scope": "Predeclared finite-family OLS diagnostics, not rigorous asymptotic exponents. Saved witnesses vary with b and C; neither fit isolates a universal operator mechanism. The 0.25 C tolerance and stop rule are unchanged."
+}

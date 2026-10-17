@@ -1,0 +1,11 @@
+{
+  "status": "final_forecast_plot_generated_from_bound_inputs",
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/forecast_assessment.json": "606c42092abf79d6e34b39a80efaf65de3577c121594f84638269e081cd9609e",
+    "research/prime_spectral/verification_2026_10_17_final_mechanism/preregistered_forecast.json": "d8dc2a26b3d9981b8df6dab574b9ef708ae993a03065ec697b16ba735f535616"
+  },
+  "source_sha256": {
+    "plot_final_log_forecast.py": "284a2446c8fe0e0a4fcfbc10798437060e80dbfb5de266fe4a7d3bfee4492481"
+  },
+  "scope": "Finite spectra, saved-witness fits and negative-support upper bounds only. Connecting lines are visual guides."
+}

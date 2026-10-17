@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-10-16T19:07:10.795927+00:00",
+  "status": "measurement_design_fixed_before_new_mixture_computation",
+  "plain_control": "primitive odd Conrey(13,2), single Euler-product L-function restricted to real parity sectors; symmetrized log derivative, not H13,2 mixture",
+  "C_grid": [
+    16,
+    20,
+    24,
+    28,
+    32
+  ],
+  "modes": [
+    96,
+    128
+  ],
+  "bits": 768,
+  "fit": "least-squares log(lambda_min(C)) against C, primary N128 each parity and global minimum; report adjacent slopes, N96 sensitivity, lambda_2 and lambda_3 slopes. No fitted value is a theorem.",
+  "forecast_anchor": {
+    "b": "1/250",
+    "C": "1373/32",
+    "modes": 192
+  },
+  "forecast_rule": "C_pred(b)=1373/32+(2/kappa13)*log((1/250)/b), with kappa13 measured by the primary finite-control global-ground fit; no new mixture windows or parameter selection until fixed forecast file exists.",
+  "targets": [
+    "1/500",
+    "1/1000"
+  ],
+  "descriptive_fit_forecasts": [
+    45.1,
+    47.1
+  ],
+  "scope": "One conductor and normalization; same-height and gamma effects and retained-family bias may invalidate the proposed mechanism."
+}

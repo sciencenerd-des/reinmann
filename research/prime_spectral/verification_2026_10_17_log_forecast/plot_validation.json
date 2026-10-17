@@ -1,0 +1,20 @@
+{
+  "status": "forecast_plot_generated_from_bound_inputs",
+  "input_sha256": {
+    "research/prime_spectral/verification_2026_10_17_log_forecast/forecast_assessment.json": "9949cb8963a9bd7ebe535400eae50c9fc59684482430a1e963a424370db8f345",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C16_N96_768bits.json": "253198c5aeb13e5c371b14b716f1ca08fb51ad02ce9cb291181417050ee03ff3",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C20_N96_768bits.json": "073d000cff6e1c851b715935c0c8f8ca49a82bbecc4a1f87e6197ea991ced45a",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C24_N96_768bits.json": "00c97ee749aa3c34c09fbc70d984bf1fa896c6e2dcfec8a134724494792717af",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C28_N96_768bits.json": "92d779b9b2e6936216615bd99d5195c3373b4e5788d16fe96509166cf5f75016",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C32_N96_768bits.json": "0a9a2714007f00731cf1dc7e3bf26d687e0d3d03d7c655e177430031ae4410dd",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C16_N128_768bits.json": "bc523842f815057d41a49e120c9a98f6ab8f45af01a4497b8b27488a5fee7a95",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C20_N128_768bits.json": "c593df6df974b7ed28c031b8aabde7c77cbba7064fb8b71ba022efd76af30783",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C24_N128_768bits.json": "43b54b4cb10704182936824895bab5232712d555228dfa7eb39e547995a7878c",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C28_N128_768bits.json": "eef4659c7c629737823924277d4c4b9ec909a288b02a657fcfd70bdad8fbafa7",
+    "research/prime_spectral/verification_2026_10_17_log_forecast/plain_quadratic_L13_C32_N128_768bits.json": "add93f04551d8af6d4839d5d43951d2f485602f80b402b3b7d3c153629da46d8"
+  },
+  "source_sha256": {
+    "plot_log_forecast.py": "04b909aef62c52298b6229127d03acd42ec54bf504b59be9ec1adcbfd80800d9"
+  },
+  "scope": "Finite eigenvalues and negative-support upper bounds. Connecting lines are guides; no fitted universal law or full-support bracket."
+}

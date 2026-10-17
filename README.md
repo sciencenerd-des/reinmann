@@ -5,7 +5,24 @@ not prove the Riemann Hypothesis. The project imports mathlib's formal
 `RiemannHypothesis : Prop` target and verifies only reductions and supporting
 lemmas that Lean can check.
 
-> **Current research status (updated 16 October 2026):**
+The near-term outputs are **calibration and formalization**, not an RH proof.
+The universal Toeplitz ladder retains the classical bridge hypotheses in
+`RHReductionCapstone.lean`; positivity on every Weil window is an RH criterion,
+not a consequence of the finite certificates. The Green-form paired budget is
+explicitly equivalent to RH in `XiGreenModel.lean`. The same-height paper's
+proposed phase hypothesis `(H_θ)` and its zeta-specific exclusion bridge remain
+unproved; inactive `.lean.draft` files are not checked proofs. A scope correction
+removes earlier unsupported claims based on winding counts, GUE statistics,
+operator self-adjointness and heat-flow heuristics.
+
+The [DH controls paper](paper/dh_controls_paper.pdf) measures finite detection
+sensitivity. Its human-review request was sent on 17 October 2026; review and
+publication remain pending. The [held-out logarithmic forecast test](research/prime_spectral/LOG_FORECAST_RESULTS_2026_10_17.md)
+adds offsets0.002 and0.001; the measured plain-L exponent does not meet either
+registered forecast tolerance. The split-pair finite-product theorem and certified
+low-zero rectangle are [post-publication formal targets](research/prime_spectral/POST_PUBLICATION_FORMAL_TARGETS_2026_10_15.md).
+
+> **Current research status (updated 17 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
 > records the evidence and open assumptions for the active tracks. It supersedes
 > older priority and novelty claims below. The immediate target is a certified
@@ -19,15 +36,15 @@ lemmas that Lean can check.
 
 ## Research tracks at a glance
 
-Every track ends in a statement that is equivalent to RH or at least as
-strong. Lean checks the reductions; the open inputs are carried as named
-`Prop` hypotheses, never as axioms.
+The established capstones retain RH-level obligations. Lean checks the
+reductions with explicit named inputs; proposed analytic bridges must be
+proved before they can be classified as sufficient conditions for RH.
 
 | Track | Manuscript (`paper/`) | Lean capstone (`Reinmann/`) | Open obligation |
 |---|---|---|---|
-| 1. Same-height fibers | `rh_same_height_fiber_framework.tex` | `riemannHypothesis_iff_noSameImaginaryPartCollision` (`RiemannSpine`), `riemannHypothesis_of_all_fiber_card_le_one` (`FiberCentroid`) | Sign constancy of the horizontal phase derivative, (H<sub>θ</sub>); numerical evidence only |
+| 1. Same-height fibers | `rh_same_height_fiber_framework.tex` | `riemannHypothesis_iff_noSameImaginaryPartCollision` (`RiemannSpine`), `riemannHypothesis_of_all_fiber_card_le_one` (`FiberCentroid`) | Componentwise critical exclusion remains open. The proposed phase condition (H<sub>θ</sub>) also needs a valid zeta-specific exclusion bridge; no Lean equivalence for it is claimed |
 | 2. Pólya frequency / Toeplitz and Jensen | `rh_reduction_paper.tex`, `rh_two_routes_paper.tex`, `hef_companion_paper.tex` | `riemannHypothesis_of_strictLadder` (`ToeplitzFullPF`), `riemannHypothesis_of_hpss_route` (`EffectiveAssembly`) | Strict contiguous ladder at unbounded rank (RH-strength), plus the classical scaffolding bridges. Fixed rank is classical (PF43; PF58 under quasi-RH) |
-| 3. Semilocal Weil operator and controls | `weil_infinite_rank_tail_paper.tex`, `dh_controls_paper.tex` | `WeilRankTail`, `CoupledRankEnergy`, `WeilWindowHypotheses`, `WeilSchurInertia` | Window positivity for every support (RH-equivalent); intermediate-block Schur control. Certified windows reach C ≈ 5 here. Liu's claimed C ≈ 8.37 replays from its frozen release (audit not yet merged) |
+| 3. Semilocal Weil operator and controls | `weil_infinite_rank_tail_paper.tex`, `dh_controls_paper.tex` | `WeilRankTail`, `CoupledRankEnergy`, `WeilWindowHypotheses`, `WeilSchurInertia` | All-support positivity remains a classical RH criterion after genuine-form identification; Lean checks conditional assembly and a supplied cofinal family. Own full-window certificates reach C ≈ 4.9998. Liu frozen A/B replays are merged computational audits, not a new analytic proof or own window record |
 | 4. Pseudo-Hermitian / Fock-space jets | none yet; see [`research/pseudo_hermitian/RESEARCH_OBJECTIVE.md`](research/pseudo_hermitian/RESEARCH_OBJECTIVE.md) | `PseudoHermitian*`, `XiAlgebraicJet*`, `XiGreenModel` | The Green form has Lean-checked symmetry and all-zero masses; its paired residual budget is Lean-proved *equivalent* to RH (`green_paired_budget_iff_riemannHypothesis`) |
 
 ### Latest results

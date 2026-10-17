@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Biswajit Mondal" />
-  <meta name="dcterms.date" content="2026-06-06" />
+  <meta name="dcterms.date" content="2026-10-17" />
   <title>A Lean-Verified Same-Height Fiber Framework for the Riemann Hypothesis</title>
   <style>
     /* Default styles provided by pandoc.
@@ -191,7 +191,7 @@
 <h1 class="title">A Lean-Verified Same-Height Fiber Framework for the
 Riemann Hypothesis</h1>
 <p class="author">Biswajit Mondal</p>
-<p class="date">2026-06-06</p>
+<p class="date">2026-10-17</p>
 <div class="abstract">
 <div class="abstract-title">Abstract</div>
 <p>The Riemann Hypothesis asserts that every nontrivial zero of the
@@ -431,6 +431,29 @@ this is encapsulated by the module
 <code>ZeroFiberFiniteness.lean</code>.</em></p>
 </div>
 <h1 id="verified-main-reductions">Verified main reductions</h1>
+<p>Figure <a href="#fig:fibers" data-reference-type="ref"
+data-reference="fig:fibers">1</a> illustrates the objects of this
+section.</p>
+<figure id="fig:fibers" data-latex-placement="ht">
+<embed src="same_height_fibers.pdf" />
+<figcaption>Same-height fibers. (a) The first ten nontrivial zeros, all
+on <span class="math inline">\(\operatorname{Re}s=\tfrac12\)</span>, so
+each nonempty fiber is a single point. The red pair is the configuration
+that Theorem <a href="#thm:fiber-unique" data-reference-type="ref"
+data-reference="thm:fiber-unique">5</a> shows to be exactly what RH
+excludes: an off-line zero at height <span
+class="math inline">\(\gamma\)</span> forces its mirror image at the
+same height, giving a fiber with two real parts and positive energy
+<span class="math inline">\(E(\gamma)\)</span> (Theorem <a
+href="#thm:energy" data-reference-type="ref"
+data-reference="thm:energy">7</a>). (b) Horizontal slices <span
+class="math inline">\(\sigma\mapsto\log\lvert\zeta(\sigma+i\gamma)\rvert\)</span>,
+<span class="math inline">\(0.02\le\sigma\le0.98\)</span>, at the first
+four zero heights, computed with mpmath; each vanishes only at <span
+class="math inline">\(\sigma=\tfrac12\)</span>. The plot illustrates
+known data and is not evidence for heights beyond those
+shown.</figcaption>
+</figure>
 <h2 id="same-height-uniqueness">Same-height uniqueness</h2>
 <div id="thm:fiber-unique" class="theorem">
 <p><strong>Theorem 5</strong> (Fiber uniqueness criterion). <em>RH is
@@ -581,7 +604,23 @@ class="math inline">\(m=0.82\)</span>, high-precision evaluation gives
 class="math display">\[\frac{|\zeta(x+i\gamma)|^2+|\zeta(y+i\gamma)|^2}{2}
     \approx 2.9997768238141877056.\]</span> Thus the midpoint value is
 larger than the endpoint average. The convexity route is therefore too
-strong.</p>
+strong. Figure <a href="#fig:convexity" data-reference-type="ref"
+data-reference="fig:convexity">2</a> shows the failure: on <span
+class="math inline">\([0.66,0.98]\)</span> the slice rises above its
+chord on a whole subinterval, which no convex function can do.</p>
+<figure id="fig:convexity" data-latex-placement="ht">
+<embed src="same_height_convexity.pdf" />
+<figcaption>The falsified global convexity target at <span
+class="math inline">\(\gamma=0.5\)</span>, computed with mpmath. (a)
+<span class="math inline">\(f(x)=\lvert\zeta(x+0.5i)\rvert^2\)</span>
+and its chord on <span class="math inline">\([0.66,0.98]\)</span>. (b)
+The difference <span
+class="math inline">\(f(x)-\mathrm{chord}(x)\)</span>; a convex function
+would keep it <span class="math inline">\(\le0\)</span>. It is positive
+on roughly <span class="math inline">\([0.81,0.98)\)</span>, including
+the reported midpoint <span
+class="math inline">\(x=0.82\)</span>.</figcaption>
+</figure>
 <h2 id="horizontal-critical-point-criteria">Horizontal critical-point
 criteria</h2>
 <p>The failed convexity experiment motivates a local alternative. If a
@@ -608,59 +647,125 @@ class="math display">\[\texttt{riemannHypothesis\_of\_componentwiseCriticalExclu
 in <code>HorizontalCritical.lean</code>. ◻</p>
 </div>
 <div class="remark">
-<p><strong>Remark 16</strong>. <em>This is currently the sharpest next
-target in the development. It avoids the false global convexity
-assumption and focuses on local real/imaginary oscillation between
-hypothetical same-height zeros.</em></p>
-<p><em>Specifically, this componentwise critical exclusion can be
-established by linking the argument principle for the derivative to the
-global Weierstrass product representation. If two adjacent same-height
-zeros <span class="math inline">\(x + i\gamma\)</span> and <span
-class="math inline">\(y + i\gamma\)</span> existed, the winding number
-<span class="math inline">\(N = 2\)</span> of <span
-class="math inline">\(\zeta(s)\)</span> around a thin rectangle
-enclosing the segment <span class="math inline">\([x, y]\)</span> would
-require the derivative <span
-class="math inline">\(\zeta&#39;(s)\)</span> to have winding number
-<span class="math inline">\(N&#39; = 1\)</span>, placing a zero of <span
-class="math inline">\(\zeta&#39;(s)\)</span> close to the segment. This
-topologically requires the horizontal phase derivative <span
-class="math inline">\(\theta&#39;(\sigma) =
-\operatorname{Im}(\zeta&#39;/\zeta)\)</span> to change sign (cross zero)
-inside <span class="math inline">\((x, y)\)</span>.</em></p>
-<p><em>However, the Weierstrass product (after grouping each non-trivial
-zero <span class="math inline">\(\rho_j = \beta_j + i\gamma_j\)</span>
-with its conjugate <span class="math inline">\(\bar{\rho}_j\)</span> to
-cancel the conditionally convergent <span
-class="math inline">\(1/\rho\)</span> terms) represents the horizontal
-phase derivative exactly as: <span
-class="math display">\[\theta&#39;(\sigma) = \sum_{\gamma_j &gt; 0}
-\left( \frac{\gamma_j - \gamma}{(\sigma - \beta_j)^2 + (\gamma -
-\gamma_j)^2} - \frac{\gamma_j + \gamma}{(\sigma - \beta_j)^2 + (\gamma +
-\gamma_j)^2} \right) + \frac{\gamma}{(\sigma - 1)^2 + \gamma^2} -
-\frac{1}{2}\operatorname{Im}\psi\left(\frac{\sigma + i\gamma}{2} +
-1\right),\]</span> where <span class="math inline">\(\psi(z) =
-\Gamma&#39;(z)/\Gamma(z)\)</span> is the digamma function. Because of
-the positive gap <span class="math inline">\(|\gamma_0 - \gamma| \ge
-\delta &gt; 0\)</span> to all other zeros <span
-class="math inline">\(\gamma_0 \neq \gamma\)</span> (since the only
-zeros at height <span class="math inline">\(\gamma\)</span> are <span
-class="math inline">\(x\)</span> and <span
-class="math inline">\(y\)</span>, whose terms are purely real), and the
-dominant negative Gamma term, the sign of the phase derivative is
-governed by the relative distances to the nearest zeros above and below
-<span class="math inline">\(\gamma\)</span>. Under Montgomery’s GUE pair
-correlation statistics, these zeros are never close enough to balance
-each other out, ensuring that <span
-class="math inline">\(\theta&#39;(\sigma)\)</span> does not cross zero
-on <span class="math inline">\((x, y)\)</span>.</em></p>
-<p><em>The topological requirement that <span
-class="math inline">\(\theta&#39;(\sigma)\)</span> must cross zero
-contradicts the analytic constraint that <span
-class="math inline">\(\theta&#39;(\sigma)\)</span> is strictly negative.
-Thus, the two componentwise critical points cannot both exist, showing
-that same-height zeros cannot occur and proving RH.</em></p>
+<p><strong>Remark 16</strong>. <em>The conditional critical-exclusion
+criterion does not establish its own hypothesis. Componentwise Rolle
+points need not coincide, and a same-height pair does not by itself
+force a zero of the complex derivative on the horizontal segment. No
+checked theorem in this paper supplies the missing zeta-specific
+exclusion estimate.</em></p>
 </div>
+<h1 id="status-of-the-proposed-phase-hypothesis">Status of the proposed
+phase hypothesis</h1>
+<p>Write <span
+class="math inline">\(\theta&#39;(\sigma)=\operatorname{Im}(\zeta&#39;/\zeta)(\sigma+i\gamma)\)</span>
+where the denominator is nonzero. The proposed hypothesis <span
+class="math inline">\((H_\theta)\)</span> asks for an appropriate
+nonvanishing or sign bound on these horizontal segments. It remains an
+analytic research target. A proof that this bound implies componentwise
+critical exclusion would itself require a valid zeta-specific argument;
+no such bridge is established here. We do not claim that Lean has proved
+an equivalence between this phase hypothesis and RH.</p>
+<p>An earlier draft asserted that two zeros in a thin rectangle force
+exactly one derivative zero there and hence a horizontal phase crossing.
+This is not a general argument-principle consequence. For example, <span
+class="math display">\[f(z)=e^{iz}z(z-1),\qquad
+\operatorname{Im}\frac{f&#39;(x)}{f(x)}=1\quad(0&lt;x&lt;1),\]</span>
+has two zeros at the endpoints and no phase-derivative zero between
+them. The assertion <span
+class="math inline">\(N(f&#39;)=N(f)-1\)</span> on an arbitrary thin
+rectangle also needs additional hypotheses. This example does not settle
+a zeta-specific question; it identifies a missing implication in the
+proposed argument.</p>
+<p>Zero-product formulas must specify their convergence, constants and
+archimedean terms. Finite phase samples or finite zero sums give no
+uniform nonvanishing bound without a controlled remainder. GUE or
+pair-correlation statistics do not imply a pointwise prohibition on a
+cancellation at every height. The earlier numerical constants are
+therefore not used as rigorous analytic bounds, and the preceding formal
+reductions remain conditional at precisely their named exclusion
+hypotheses.</p>
+<h1 id="a-further-formulation-of-same-height-repulsion">A further
+formulation of same-height repulsion</h1>
+<p>This section records one further formulation of the open gap, the
+non-vanishing of the horizontal phase derivative <span
+class="math inline">\(\theta&#39;(\sigma)\)</span>. It exists only as a
+conditional proof draft. Earlier versions of this paper contained two
+more formulations, and both have been withdrawn.</p>
+<p><em>A spectral operator <span
+class="math inline">\(T_\gamma=-i\,d/d\sigma+\theta&#39;(\sigma)\)</span>
+on <span class="math inline">\(L^2(0,1)\)</span>.</em> The gauge
+identity <span
+class="math inline">\(T_\gamma=e^{-i\Theta}(-i\,d/d\sigma)e^{i\Theta}\)</span>,
+with <span class="math inline">\(\Theta&#39;=\theta&#39;\)</span>, shows
+that the spectrum does not depend on the sign of <span
+class="math inline">\(\theta&#39;\)</span>. With Dirichlet conditions at
+both ends the operator is symmetric but not self-adjoint, and its
+closure has spectrum <span class="math inline">\(\mathbb C\)</span>.
+With periodic conditions the spectrum is <span
+class="math inline">\(\{2\pi k+\int_0^1\theta&#39;\}\)</span>. Either
+way, a zero of <span class="math inline">\(\theta&#39;\)</span> cannot
+be detected spectrally.</p>
+<p><em>A heat-flow force argument.</em> For <span
+class="math inline">\(\partial_tH=-\partial_z^2H\)</span>, a simple zero
+moves by <span class="math inline">\(\dot z_k=2\sum_{j\ne
+k}(z_k-z_j)^{-1}\)</span>. In <span
+class="math inline">\(s=\tfrac12+iz\)</span> this reads <span
+class="math inline">\(\dot\beta_k=-2\sum_{j\ne
+k}(\beta_k-\beta_j)/\lvert s_k-s_j\rvert^2\)</span>. Conjugate partners
+therefore attract, and the outermost off-line zero moves <em>toward</em>
+the critical line, as de Bruijn’s strip theorem requires. The withdrawn
+argument had the opposite sign.</p>
+<h2 id="complex-dynamics-and-flow-lines-differential-topology">Complex
+dynamics and flow lines (Differential Topology)</h2>
+<p>The remaining formulation models <span class="math inline">\(\zeta(s)
+= u(\sigma, t) + i v(\sigma, t)\)</span> as a two-dimensional vector
+field <span class="math inline">\(\vec{V}(\sigma, t) = (u, v)\)</span>
+on the critical strip. Along the horizontal slice <span
+class="math inline">\(t = \gamma\)</span>, the phase derivative <span
+class="math inline">\(\theta&#39;(\sigma) =
+\operatorname{Im}(\zeta&#39;/\zeta)\)</span> is the angular velocity of
+the field.</p>
+<p>If two same-height zeros <span class="math inline">\(x +
+i\gamma\)</span> and <span class="math inline">\(y + i\gamma\)</span>
+existed, they would be two singular points of <span
+class="math inline">\(\vec{V}\)</span> of index <span
+class="math inline">\(+1\)</span>. A thin rectangle enclosing the
+segment <span class="math inline">\([x,y]\)</span> and no other zero
+would then carry total index <span class="math inline">\(+2\)</span>.
+That much is the argument principle. The draft continued with three
+further claims, and none of them is established:</p>
+<ol>
+<li><p><em>A saddle of <span class="math inline">\(\zeta&#39;\)</span>
+near the segment.</em> Two zeros of <span
+class="math inline">\(\zeta\)</span> in a small region do not force a
+zero of <span class="math inline">\(\zeta&#39;\)</span> in that region.
+A Gauss–Lucas type localization applies to polynomials and their full
+zero sets, not to a thin rectangle.</p></li>
+<li><p><em>A sign change of <span
+class="math inline">\(\theta&#39;(\sigma)\)</span> on <span
+class="math inline">\((x,y)\)</span>.</em> This is the open hypothesis
+(H<span class="math inline">\(_\theta\)</span>) of Section 7 restated;
+it does not follow from the index count.</p></li>
+<li><p><em>Saddles confined to <span
+class="math inline">\(\sigma=\tfrac12\)</span>.</em> This is false as
+stated. Conjugate symmetry reflects across the real axis, not across the
+critical line. The zeros of <span
+class="math inline">\(\zeta&#39;\)</span> are not confined to <span
+class="math inline">\(\sigma=\tfrac12\)</span>: by Speiser’s theorem RH
+is equivalent to <span class="math inline">\(\zeta&#39;\)</span> having
+no zeros in <span
+class="math inline">\(0&lt;\sigma&lt;\tfrac12\)</span> <span
+class="citation" data-cites="Speiser1935"></span>, and Levinson and
+Montgomery showed that the zeros of <span
+class="math inline">\(\zeta&#39;\)</span> have real parts exceeding
+<span class="math inline">\(\tfrac12\)</span> on average <span
+class="citation" data-cites="LevinsonMontgomery1974"></span>. For <span
+class="math inline">\(\xi&#39;\)</span>, confinement to the critical
+line follows from RH, so it cannot be used to prove it.</p></li>
+</ol>
+<p>The topological formulation is therefore recorded only as the index
+count above. The draft contains placeholders and is not a
+formalization.</p>
 <h1 id="verification-methodology">Verification methodology</h1>
 <p>The Lean repository uses a strict verification harness,
 <code>safe-verify.sh</code>. Before invoking Lean, the harness scans
@@ -773,6 +878,11 @@ zeta product lower bound</td>
 <td style="text-align: left;">Componentwise critical exclusion
 sufficient condition</td>
 <td style="text-align: left;">,</td>
+</tr>
+<tr>
+<td style="text-align: left;">Topological flow line (index count only;
+draft with placeholders)</td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>

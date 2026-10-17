@@ -1,0 +1,25 @@
+b001 parameter fixed 34593206931885831054047931228728137606966297712879/10000000000000000000000000000000000000000000000000000 gamma [31.43353554102716 +/- 4.14e-15]
+q 13 line height 32.0 count 15
+q 13 line height 64.0 count 38
+q 13 line height 96.0 count 60
+q 13 line height 128.0 count 85
+q 13 line height 160.0 count 113
+q 13 contour side 0 leaves 69
+q 13 contour side 1 leaves 591
+q 13 contour side 2 leaves 638
+q 13 contour side 3 leaves 5452
+complete_certified_control_zero_atlas 13 count 123 off-line pairs 5
+atlas_H160 123 zeros; 5814 segments; 118 root gates
+b001 40 N 192 positive_finite_sections_only
+b001 50 N 192 negative_full_form_trial
+b001 45 N 192 positive_finite_sections_only
+b001 95/2 N 192 negative_full_form_trial
+b001 185/4 N 192 positive_finite_sections_only
+b001 375/8 N 192 positive_finite_sections_only
+b001 755/16 N 192 negative_full_form_trial
+b001 1505/32 N 192 negative_full_form_trial
+b001 3005/64 N 192 positive_finite_sections_only
+b001 6015/128 N 192 negative_full_form_trial
+b001 12025/256 N 192 positive_finite_sections_only
+b001 12025/256 N 256 negative_full_form_trial
+b001 6015/128 N 256 negative_full_form_trial

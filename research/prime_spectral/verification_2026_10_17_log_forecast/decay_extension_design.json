@@ -1,0 +1,14 @@
+{
+  "status": "post_registration_diagnostic_not_a_new_forecast",
+  "recorded_utc": "2026-10-16T19:25:43.047360+00:00",
+  "reason": "Test decay-window dependence beyond C32; the b001 bisection has already shown N192 finite positivity through46.875, so this is explicitly post hoc relative to partial held-out evidence.",
+  "C_grid": [
+    40,
+    48,
+    56,
+    64
+  ],
+  "modes": 192,
+  "bits": 768,
+  "scope": "Report the entire grid and fit, do not change the original frozen forecast or classify a refitted mechanism as predictive success."
+}

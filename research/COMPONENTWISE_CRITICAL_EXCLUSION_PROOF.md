@@ -1,3 +1,5 @@
+> **Status correction, 17 October 2026:** The proof claims below are withdrawn. The asserted derivative-zero count and phase-crossing implication do not follow from the argument principle, and GUE statistics do not give a pointwise bound. This file is retained as a historical unsuccessful proposal, not a proof of critical-pair exclusion or RH. See the corrected same-height paper and `STRATEGIC_SCOPE_CORRECTION_2026_10_17.md`.
+
 # Exclusion of Componentwise Critical Pairs Between Same-Height Zeros
 
 This document provides a mathematical proof/exposition showing that the two componentwise critical points $c_{\text{re}}$ and $c_{\text{im}}$ of the horizontal slice $x \mapsto \zeta(x + i\gamma)$ cannot both exist in the open interval $(x, y)$ between two adjacent hypothetical same-height zeros $x + i\gamma$ and $y + i\gamma$ of the Riemann zeta function.

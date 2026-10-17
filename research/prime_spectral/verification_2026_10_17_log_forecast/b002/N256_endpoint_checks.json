@@ -1,0 +1,19 @@
+{
+  "records": [
+    {
+      "file": "research/prime_spectral/verification_2026_10_17_log_forecast/b002/windows/C11455_256_N256_4096bits.json",
+      "sha256": "05bc0eadcd432a2642bc7a305fd13b0e008dd071da7093fd7626327ec389006e",
+      "C": "11455/256",
+      "modes": 256,
+      "status": "negative_full_form_trial"
+    },
+    {
+      "file": "research/prime_spectral/verification_2026_10_17_log_forecast/b002/windows/C2865_64_N256_4096bits.json",
+      "sha256": "2ace627830fafdf90f6360807a79fae97592091fb8b5bbb965417602f44d84ba",
+      "C": "2865/64",
+      "modes": 256,
+      "status": "negative_full_form_trial"
+    }
+  ],
+  "scope": "Retained-degree sensitivity only."
+}

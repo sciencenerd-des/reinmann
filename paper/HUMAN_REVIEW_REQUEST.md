@@ -1,6 +1,6 @@
-# Human review packet — unsent
+# Human review request — sent 17 October 2026
 
-The author requested a human read before publication. No reviewer has been contacted and no human approval is implied. Start with one computational number theorist; a second specialist can review the Schur asymptotic if needed. Availability is unknown. Names below are suggestions based on public research profiles, checked 15 October 2026.
+The author requested a human read before publication. The prepared request was sent to David Platt with the current PDF and checklist on 17 October 2026. No human read or approval is inferred. Start with one computational number theorist; a second specialist can review the Schur asymptotic if needed. Availability is unknown. Names below are suggestions based on public research profiles, checked 15 October 2026.
 
 | Suggested reviewer | Best fit for this request | Public profile / contact source |
 |---|---|---|
@@ -11,7 +11,7 @@ The author requested a human read before publication. No reviewer has been conta
 
 These are scope recommendations, not claims that any person has agreed to review. Do not send a bulk request to the shortlist.
 
-## Draft email
+## Sent email text
 
 Subject: Focused check of a Davenport–Heilbronn controls preprint
 

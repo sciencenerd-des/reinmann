@@ -7,13 +7,13 @@
       "name": "full_project_build",
       "exit_code": 0,
       "log": "research/prime_spectral/verification_2026_10_18_jacobi/full_build.log",
-      "sha256": "eac093eda6bc21cac8f08010ec5959556b3d13b2c7b52402af19098fbbbf94be"
+      "sha256": "e7daa3d1d4fcb7ce2613d8e574ff8dc3c64be9d7afaef94707a83d08313909ea"
     },
     {
       "name": "313_theorem_axiom_audit",
       "exit_code": 0,
       "log": "research/prime_spectral/verification_2026_10_18_jacobi/axiom_audit.log",
-      "sha256": "10dec8676c0d4996ab2e2b56438c6dbaabcd0634c09e05ebcf22735ddf1a7ca6"
+      "sha256": "6b9897ecddfbfc035c0696bd7c75ebb0f4e606a8a6fd99ad7bdad4155ff7a3d6"
     }
   ],
   "source_sha256": {
@@ -25,5 +25,6 @@
     "Reinmann/XiFiniteTheta.lean": "72560094e970ae798885d478b0fd0ae6e500ea97418ee455c388fff746a826f4",
     "Reinmann/EnclosureRules.lean": "47415862d7e3e5257b223ce127b71878c180edf423afcbea55304a601cfad496"
   },
-  "scope": "Successful pushed-source build; no completed genus-zero extension or Xi numerical rectangle certificate."
+  "scope": "Successful pushed-source build; no completed genus-zero extension or Xi numerical rectangle certificate.",
+  "log_normalization": "CI step extraction preserves line text and timestamps except trailing whitespace, which is stripped."
 }

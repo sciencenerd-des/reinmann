@@ -5,133 +5,133 @@ build-and-verify	Build	2026-10-17T21:05:37.2814734Z ##[endgroup]
 build-and-verify	Build	2026-10-17T21:05:38.4384036Z ⚠ [3481/3577] Replayed Reinmann.PseudoHermitianLocal
 build-and-verify	Build	2026-10-17T21:05:38.4403750Z warning: Reinmann/PseudoHermitianLocal.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:38.4430156Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:38.4459839Z 
-build-and-verify	Build	2026-10-17T21:05:38.4509732Z 
+build-and-verify	Build	2026-10-17T21:05:38.4459839Z
+build-and-verify	Build	2026-10-17T21:05:38.4509732Z
 build-and-verify	Build	2026-10-17T21:05:38.4540148Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:38.4568825Z ⚠ [3482/3577] Replayed Reinmann.PseudoHermitianIsotropy
 build-and-verify	Build	2026-10-17T21:05:38.4572109Z warning: Reinmann/PseudoHermitianIsotropy.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:38.4577416Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:38.4610330Z 
-build-and-verify	Build	2026-10-17T21:05:38.4610641Z 
+build-and-verify	Build	2026-10-17T21:05:38.4610330Z
+build-and-verify	Build	2026-10-17T21:05:38.4610641Z
 build-and-verify	Build	2026-10-17T21:05:38.4611316Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:38.4612629Z ⚠ [3484/3577] Replayed Reinmann.XiAnnihilator
 build-and-verify	Build	2026-10-17T21:05:38.4657542Z warning: Reinmann/XiAnnihilator.lean:167:2: Try `simp at hm` instead of `simpa using hm`
-build-and-verify	Build	2026-10-17T21:05:38.4679842Z 
+build-and-verify	Build	2026-10-17T21:05:38.4679842Z
 build-and-verify	Build	2026-10-17T21:05:38.4710108Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 build-and-verify	Build	2026-10-17T21:05:38.4710894Z ⚠ [3490/3577] Replayed Reinmann.XiKernelPackets
 build-and-verify	Build	2026-10-17T21:05:38.4740688Z warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
-build-and-verify	Build	2026-10-17T21:05:38.4770071Z 
+build-and-verify	Build	2026-10-17T21:05:38.4770071Z
 build-and-verify	Build	2026-10-17T21:05:38.4800222Z Note: This linter can be disabled with `set_option linter.flexible false`
 build-and-verify	Build	2026-10-17T21:05:38.4830057Z info: Reinmann/XiKernelPackets.lean:102:2: `have hz : (x.1 - y.1) * (s - t) = 0 := by linear_combination h1 - t * h0` uses `h0`!
 build-and-verify	Build	2026-10-17T21:05:38.4860472Z warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
-build-and-verify	Build	2026-10-17T21:05:38.4890309Z 
+build-and-verify	Build	2026-10-17T21:05:38.4890309Z
 build-and-verify	Build	2026-10-17T21:05:38.4919900Z Note: This linter can be disabled with `set_option linter.flexible false`
 build-and-verify	Build	2026-10-17T21:05:38.4940385Z info: Reinmann/XiKernelPackets.lean:102:2: `have hz : (x.1 - y.1) * (s - t) = 0 := by linear_combination h1 - t * h0` uses `h1`!
 build-and-verify	Build	2026-10-17T21:05:38.4942112Z warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
-build-and-verify	Build	2026-10-17T21:05:38.4943044Z 
+build-and-verify	Build	2026-10-17T21:05:38.4943044Z
 build-and-verify	Build	2026-10-17T21:05:38.4943325Z Note: This linter can be disabled with `set_option linter.flexible false`
 build-and-verify	Build	2026-10-17T21:05:38.4943926Z info: Reinmann/XiKernelPackets.lean:104:2: `have hy : x.2 = y.2 := by linear_combination h0 - hx` uses `h0`!
 build-and-verify	Build	2026-10-17T21:05:38.4944774Z ⚠ [3491/3577] Replayed Reinmann.XiHigherJetDomain
 build-and-verify	Build	2026-10-17T21:05:38.4945297Z warning: Reinmann/XiHigherJetDomain.lean:82:2: Try `simp at h` instead of `simpa using h`
-build-and-verify	Build	2026-10-17T21:05:38.4945709Z 
+build-and-verify	Build	2026-10-17T21:05:38.4945709Z
 build-and-verify	Build	2026-10-17T21:05:38.4946007Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 build-and-verify	Build	2026-10-17T21:05:38.4946677Z warning: Reinmann/XiHigherJetDomain.lean:165:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-build-and-verify	Build	2026-10-17T21:05:38.4947126Z 
+build-and-verify	Build	2026-10-17T21:05:38.4947126Z
 build-and-verify	Build	2026-10-17T21:05:38.4947428Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 build-and-verify	Build	2026-10-17T21:05:38.4948050Z warning: Reinmann/XiHigherJetDomain.lean:210:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-build-and-verify	Build	2026-10-17T21:05:38.4948476Z 
+build-and-verify	Build	2026-10-17T21:05:38.4948476Z
 build-and-verify	Build	2026-10-17T21:05:38.4948776Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 build-and-verify	Build	2026-10-17T21:05:38.4949390Z warning: Reinmann/XiHigherJetDomain.lean:210:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-build-and-verify	Build	2026-10-17T21:05:38.4950208Z 
+build-and-verify	Build	2026-10-17T21:05:38.4950208Z
 build-and-verify	Build	2026-10-17T21:05:38.4950510Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 build-and-verify	Build	2026-10-17T21:05:38.4951085Z ⚠ [3492/3577] Replayed Reinmann.XiHigherJetCoupling
 build-and-verify	Build	2026-10-17T21:05:38.4951611Z warning: Reinmann/XiHigherJetCoupling.lean:106:4: Try `simp at hd` instead of `simpa using hd`
-build-and-verify	Build	2026-10-17T21:05:38.4952032Z 
+build-and-verify	Build	2026-10-17T21:05:38.4952032Z
 build-and-verify	Build	2026-10-17T21:05:38.4952326Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 build-and-verify	Build	2026-10-17T21:05:38.4952852Z ⚠ [3495/3577] Replayed Reinmann.XiAlgebraicJetSpace
 build-and-verify	Build	2026-10-17T21:05:38.4953331Z warning: Reinmann/XiAlgebraicJetSpace.lean:130:2: try 'simp' instead of 'simpa'
-build-and-verify	Build	2026-10-17T21:05:38.4953745Z 
+build-and-verify	Build	2026-10-17T21:05:38.4953745Z
 build-and-verify	Build	2026-10-17T21:05:38.4954037Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 build-and-verify	Build	2026-10-17T21:05:38.4954593Z warning: Reinmann/XiAlgebraicJetSpace.lean:144:12: try 'simp' instead of 'simpa'
-build-and-verify	Build	2026-10-17T21:05:38.4954984Z 
+build-and-verify	Build	2026-10-17T21:05:38.4954984Z
 build-and-verify	Build	2026-10-17T21:05:38.4955275Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 build-and-verify	Build	2026-10-17T21:05:38.4955798Z ⚠ [3496/3577] Replayed Reinmann.XiAlgebraicJetForm
 build-and-verify	Build	2026-10-17T21:05:38.4956276Z warning: Reinmann/XiAlgebraicJetForm.lean:39:6: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4956715Z   mul_assoc
-build-and-verify	Build	2026-10-17T21:05:38.4956919Z 
+build-and-verify	Build	2026-10-17T21:05:38.4956919Z
 build-and-verify	Build	2026-10-17T21:05:38.4957127Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4957549Z   simp [pairing, Finsupp.sum_smul_index, Finsupp.mul_sum, map_mul,
 build-and-verify	Build	2026-10-17T21:05:38.4958541Z   ̵  ̵ ̵ ̵ ̵ ̵mul_a̵s̵s̵o̵c̵,̵ ̵m̵u̵l_̵l̵eft_comm, mul_comm]
-build-and-verify	Build	2026-10-17T21:05:38.4958854Z 
+build-and-verify	Build	2026-10-17T21:05:38.4958854Z
 build-and-verify	Build	2026-10-17T21:05:38.4959146Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:38.4959800Z warning: Reinmann/XiAlgebraicJetForm.lean:69:44: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4960257Z   Complex.conj_conj
-build-and-verify	Build	2026-10-17T21:05:38.4960481Z 
+build-and-verify	Build	2026-10-17T21:05:38.4960481Z
 build-and-verify	Build	2026-10-17T21:05:38.4960781Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4961405Z   simp [gram, map_div₀, map_add, map_ofNat, C̵o̵m̵p̵l̵e̵x̵.̵c̵o̵n̵j̵_̵c̵o̵n̵j̵,̵ ̵add_comm]
-build-and-verify	Build	2026-10-17T21:05:38.4961799Z 
+build-and-verify	Build	2026-10-17T21:05:38.4961799Z
 build-and-verify	Build	2026-10-17T21:05:38.4962088Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:38.4962610Z ⚠ [3498/3577] Replayed Reinmann.XiGreenGram
 build-and-verify	Build	2026-10-17T21:05:38.4963380Z warning: Reinmann/XiGreenGram.lean:20:29: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
 build-and-verify	Build	2026-10-17T21:05:38.4964472Z Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
 build-and-verify	Build	2026-10-17T21:05:38.4965114Z For theorem statements, either add missing decidability assumptions or use `open Classical in`.
-build-and-verify	Build	2026-10-17T21:05:38.4965553Z 
+build-and-verify	Build	2026-10-17T21:05:38.4965553Z
 build-and-verify	Build	2026-10-17T21:05:38.4965861Z Note: This linter can be disabled with `set_option linter.style.openClassical false`
 build-and-verify	Build	2026-10-17T21:05:38.4966407Z warning: Reinmann/XiGreenGram.lean:131:42: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4966839Z   map_mul
-build-and-verify	Build	2026-10-17T21:05:38.4967039Z 
+build-and-verify	Build	2026-10-17T21:05:38.4967039Z
 build-and-verify	Build	2026-10-17T21:05:38.4967244Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4967746Z   simp only [hp, hq, if_true, if_false, map_m̵u̵l̵,̵ ̵m̵a̵p̵_̵zero, map_natCast,
 build-and-verify	Build	2026-10-17T21:05:38.4968198Z   ̵  ̵ ̵ ̵ ̵ ̵Complex.conj_conj] at h hc ⊢
-build-and-verify	Build	2026-10-17T21:05:38.4968457Z 
+build-and-verify	Build	2026-10-17T21:05:38.4968457Z
 build-and-verify	Build	2026-10-17T21:05:38.4968730Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:38.4969243Z warning: Reinmann/XiGreenGram.lean:131:51: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4969765Z   map_zero
-build-and-verify	Build	2026-10-17T21:05:38.4969973Z 
+build-and-verify	Build	2026-10-17T21:05:38.4969973Z
 build-and-verify	Build	2026-10-17T21:05:38.4970176Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4970666Z   simp only [hp, hq, if_true, if_false, map_mul, map_z̵e̵r̵o̵,̵ ̵m̵a̵p̵_̵natCast,
 build-and-verify	Build	2026-10-17T21:05:38.4971192Z   ̵  ̵ ̵ ̵ ̵ ̵Complex.conj_conj] at h hc ⊢
-build-and-verify	Build	2026-10-17T21:05:38.4971592Z 
+build-and-verify	Build	2026-10-17T21:05:38.4971592Z
 build-and-verify	Build	2026-10-17T21:05:38.4971877Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:38.4972619Z warning: Reinmann/XiGreenGram.lean:131:61: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4973037Z   map_natCast
-build-and-verify	Build	2026-10-17T21:05:38.4973246Z 
+build-and-verify	Build	2026-10-17T21:05:38.4973246Z
 build-and-verify	Build	2026-10-17T21:05:38.4973447Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4974038Z   simp only [hp, hq, if_true, if_false, map_mul, map_zero, m̵a̵p̵_̵n̵a̵t̵C̵a̵s̵t̵,̵Complex.conj_conj] at h hc ⊢
-build-and-verify	Build	2026-10-17T21:05:38.4974471Z 
+build-and-verify	Build	2026-10-17T21:05:38.4974471Z
 build-and-verify	Build	2026-10-17T21:05:38.4974758Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:38.4975292Z warning: Reinmann/XiGreenGram.lean:132:6: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4975716Z   Complex.conj_conj
-build-and-verify	Build	2026-10-17T21:05:38.4975937Z 
+build-and-verify	Build	2026-10-17T21:05:38.4975937Z
 build-and-verify	Build	2026-10-17T21:05:38.4976139Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4976581Z   simp only [hp, hq, if_true, if_false, map_mul, map_zero, map_natCast,̵
 build-and-verify	Build	2026-10-17T21:05:38.4977072Z   ̵ ̵ ̵ ̵ ̵ ̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵c̵o̵n̵j̵_̵c̵o̵n̵j̵] at h hc ⊢
-build-and-verify	Build	2026-10-17T21:05:38.4977381Z 
+build-and-verify	Build	2026-10-17T21:05:38.4977381Z
 build-and-verify	Build	2026-10-17T21:05:38.4977669Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:38.4978176Z ⚠ [3499/3577] Replayed Reinmann.XiAlgebraicRows
 build-and-verify	Build	2026-10-17T21:05:38.4978639Z warning: Reinmann/XiAlgebraicRows.lean:76:39: This simp argument is unused:
 build-and-verify	Build	2026-10-17T21:05:38.4979109Z   higherJet_apply_lt s (by omega : 0 < p + 1)
-build-and-verify	Build	2026-10-17T21:05:38.4979392Z 
+build-and-verify	Build	2026-10-17T21:05:38.4979392Z
 build-and-verify	Build	2026-10-17T21:05:38.4979689Z Hint: Omit it from the simp argument list.
 build-and-verify	Build	2026-10-17T21:05:38.4980312Z   simp [constantRow, realize_single,̵ ̵h̵i̵g̵h̵e̵r̵J̵e̵t̵_̵a̵p̵p̵l̵y̵_̵l̵t̵ ̵s̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵ ̵:̵ ̵0̵ ̵<̵ ̵p̵ ̵+̵ ̵1̵)̵]
-build-and-verify	Build	2026-10-17T21:05:38.4980769Z 
+build-and-verify	Build	2026-10-17T21:05:38.4980769Z
 build-and-verify	Build	2026-10-17T21:05:38.4981053Z Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 build-and-verify	Build	2026-10-17T21:05:41.4472601Z ✔ [3558/3583] Built Reinmann.SplitPairModulusOrder (3.0s)
 build-and-verify	Build	2026-10-17T21:05:42.0512250Z ⚠ [3561/3583] Built Reinmann.SplitPairCauchyTail (3.6s)
 build-and-verify	Build	2026-10-17T21:05:42.0570317Z warning: Reinmann/SplitPairCauchyTail.lean:47:35: 'ring' tactic does nothing
-build-and-verify	Build	2026-10-17T21:05:42.0571345Z 
+build-and-verify	Build	2026-10-17T21:05:42.0571345Z
 build-and-verify	Build	2026-10-17T21:05:42.0630312Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
 build-and-verify	Build	2026-10-17T21:05:42.0690133Z warning: Reinmann/SplitPairCauchyTail.lean:47:35: this tactic is never executed
-build-and-verify	Build	2026-10-17T21:05:42.0707495Z 
+build-and-verify	Build	2026-10-17T21:05:42.0707495Z
 build-and-verify	Build	2026-10-17T21:05:42.0780388Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
 build-and-verify	Build	2026-10-17T21:05:42.0810468Z warning: Reinmann/SplitPairCauchyTail.lean:73:37: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:42.0869751Z 
+build-and-verify	Build	2026-10-17T21:05:42.0869751Z
 build-and-verify	Build	2026-10-17T21:05:42.0899996Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:42.0950114Z   'i^n) +'
 build-and-verify	Build	2026-10-17T21:05:42.0998825Z should be written as
 build-and-verify	Build	2026-10-17T21:05:42.1029914Z   'i ^ n)'
-build-and-verify	Build	2026-10-17T21:05:42.1049735Z 
-build-and-verify	Build	2026-10-17T21:05:42.1059831Z 
+build-and-verify	Build	2026-10-17T21:05:42.1049735Z
+build-and-verify	Build	2026-10-17T21:05:42.1059831Z
 build-and-verify	Build	2026-10-17T21:05:42.1090039Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:42.1561214Z ✔ [3563/3588] Built Reinmann.SplitPairDeterminant (3.7s)
 build-and-verify	Build	2026-10-17T21:05:42.6581001Z ✔ [3570/3588] Built Reinmann.SplitPairOscillation (4.2s)
@@ -142,241 +142,241 @@ build-and-verify	Build	2026-10-17T21:05:45.9714686Z ⚠ [3575/3588] Replayed Rei
 build-and-verify	Build	2026-10-17T21:05:45.9715235Z info: Reinmann/WeilWindowAudit.lean:4:0: 'Reinmann.WeilWindow.energy_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9715812Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9716075Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9716197Z 
-build-and-verify	Build	2026-10-17T21:05:45.9716204Z 
+build-and-verify	Build	2026-10-17T21:05:45.9716197Z
+build-and-verify	Build	2026-10-17T21:05:45.9716204Z
 build-and-verify	Build	2026-10-17T21:05:45.9716377Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9716928Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9717825Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.energy_nonneg`.
-build-and-verify	Build	2026-10-17T21:05:45.9718103Z 
+build-and-verify	Build	2026-10-17T21:05:45.9718103Z
 build-and-verify	Build	2026-10-17T21:05:45.9718271Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9718846Z info: Reinmann/WeilWindowAudit.lean:5:0: 'Reinmann.WeilWindow.supported_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9719364Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9719739Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9719854Z 
-build-and-verify	Build	2026-10-17T21:05:45.9719858Z 
+build-and-verify	Build	2026-10-17T21:05:45.9719854Z
+build-and-verify	Build	2026-10-17T21:05:45.9719858Z
 build-and-verify	Build	2026-10-17T21:05:45.9720020Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9720542Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9721111Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.supported_mono`.
-build-and-verify	Build	2026-10-17T21:05:45.9721394Z 
+build-and-verify	Build	2026-10-17T21:05:45.9721394Z
 build-and-verify	Build	2026-10-17T21:05:45.9721565Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9722149Z info: Reinmann/WeilWindowAudit.lean:6:0: 'Reinmann.WeilWindow.publicLower_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9722698Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9722958Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9723077Z 
-build-and-verify	Build	2026-10-17T21:05:45.9723080Z 
+build-and-verify	Build	2026-10-17T21:05:45.9723077Z
+build-and-verify	Build	2026-10-17T21:05:45.9723080Z
 build-and-verify	Build	2026-10-17T21:05:45.9723250Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9723807Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9724410Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.publicLower_pos`.
-build-and-verify	Build	2026-10-17T21:05:45.9724712Z 
+build-and-verify	Build	2026-10-17T21:05:45.9724712Z
 build-and-verify	Build	2026-10-17T21:05:45.9724885Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9725521Z info: Reinmann/WeilWindowAudit.lean:7:0: 'Reinmann.WeilWindow.cutoff_support_dictionary' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9726101Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9726365Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9726485Z 
-build-and-verify	Build	2026-10-17T21:05:45.9726488Z 
+build-and-verify	Build	2026-10-17T21:05:45.9726485Z
+build-and-verify	Build	2026-10-17T21:05:45.9726488Z
 build-and-verify	Build	2026-10-17T21:05:45.9726659Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9727216Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9728010Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.cutoff_support_dictionary`.
-build-and-verify	Build	2026-10-17T21:05:45.9728339Z 
+build-and-verify	Build	2026-10-17T21:05:45.9728339Z
 build-and-verify	Build	2026-10-17T21:05:45.9728513Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9729148Z info: Reinmann/WeilWindowAudit.lean:8:0: 'Reinmann.WeilWindow.cutoff_between_three_four' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9729832Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9730094Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9730214Z 
-build-and-verify	Build	2026-10-17T21:05:45.9730217Z 
+build-and-verify	Build	2026-10-17T21:05:45.9730214Z
+build-and-verify	Build	2026-10-17T21:05:45.9730217Z
 build-and-verify	Build	2026-10-17T21:05:45.9730387Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9730943Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9731574Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.cutoff_between_three_four`.
-build-and-verify	Build	2026-10-17T21:05:45.9731907Z 
+build-and-verify	Build	2026-10-17T21:05:45.9731907Z
 build-and-verify	Build	2026-10-17T21:05:45.9732079Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9732701Z info: Reinmann/WeilWindowAudit.lean:9:0: 'Reinmann.WeilWindow.prime_powers_below_four' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9733273Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9733534Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9733774Z 
-build-and-verify	Build	2026-10-17T21:05:45.9733777Z 
+build-and-verify	Build	2026-10-17T21:05:45.9733774Z
+build-and-verify	Build	2026-10-17T21:05:45.9733777Z
 build-and-verify	Build	2026-10-17T21:05:45.9733948Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9734498Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9735116Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.prime_powers_below_four`.
-build-and-verify	Build	2026-10-17T21:05:45.9735442Z 
+build-and-verify	Build	2026-10-17T21:05:45.9735442Z
 build-and-verify	Build	2026-10-17T21:05:45.9735613Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9736238Z info: Reinmann/WeilWindowAudit.lean:10:0: 'Reinmann.WeilWindow.active_prime_powers' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9736797Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9737058Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9737176Z 
-build-and-verify	Build	2026-10-17T21:05:45.9737179Z 
+build-and-verify	Build	2026-10-17T21:05:45.9737176Z
+build-and-verify	Build	2026-10-17T21:05:45.9737179Z
 build-and-verify	Build	2026-10-17T21:05:45.9737348Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9737914Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9738532Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.active_prime_powers`.
-build-and-verify	Build	2026-10-17T21:05:45.9738848Z 
+build-and-verify	Build	2026-10-17T21:05:45.9738848Z
 build-and-verify	Build	2026-10-17T21:05:45.9739019Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9769979Z info: Reinmann/WeilWindowAudit.lean:11:0: 'Reinmann.WeilWindow.linear_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9770682Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9770953Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9771082Z 
-build-and-verify	Build	2026-10-17T21:05:45.9771087Z 
+build-and-verify	Build	2026-10-17T21:05:45.9771082Z
+build-and-verify	Build	2026-10-17T21:05:45.9771087Z
 build-and-verify	Build	2026-10-17T21:05:45.9771257Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9771831Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9772421Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.linear_block_lower`.
-build-and-verify	Build	2026-10-17T21:05:45.9772713Z 
+build-and-verify	Build	2026-10-17T21:05:45.9772713Z
 build-and-verify	Build	2026-10-17T21:05:45.9772879Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9773464Z info: Reinmann/WeilWindowAudit.lean:12:0: 'Reinmann.WeilWindow.schur_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9773994Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9774488Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9774608Z 
-build-and-verify	Build	2026-10-17T21:05:45.9774612Z 
+build-and-verify	Build	2026-10-17T21:05:45.9774608Z
+build-and-verify	Build	2026-10-17T21:05:45.9774612Z
 build-and-verify	Build	2026-10-17T21:05:45.9774777Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9775313Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9775885Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.schur_block_lower`.
-build-and-verify	Build	2026-10-17T21:05:45.9776176Z 
+build-and-verify	Build	2026-10-17T21:05:45.9776176Z
 build-and-verify	Build	2026-10-17T21:05:45.9776339Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9776905Z info: Reinmann/WeilWindowAudit.lean:13:0: 'Reinmann.WeilWindow.schur_can_close_when_linear_allowance_fails' depends on axioms: [propext,
 build-and-verify	Build	2026-10-17T21:05:45.9777394Z  Classical.choice,
 build-and-verify	Build	2026-10-17T21:05:45.9777585Z  Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9777805Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9778080Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9778205Z 
-build-and-verify	Build	2026-10-17T21:05:45.9778209Z 
+build-and-verify	Build	2026-10-17T21:05:45.9778205Z
+build-and-verify	Build	2026-10-17T21:05:45.9778209Z
 build-and-verify	Build	2026-10-17T21:05:45.9778386Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9778952Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9779745Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.schur_can_close_when_linear_allowance_fails`.
-build-and-verify	Build	2026-10-17T21:05:45.9780378Z 
+build-and-verify	Build	2026-10-17T21:05:45.9780378Z
 build-and-verify	Build	2026-10-17T21:05:45.9780559Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9781241Z info: Reinmann/WeilWindowAudit.lean:14:0: 'Reinmann.WeilWindow.WindowBlockHypotheses.two_block' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9781861Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9782138Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9782257Z 
-build-and-verify	Build	2026-10-17T21:05:45.9782260Z 
+build-and-verify	Build	2026-10-17T21:05:45.9782257Z
+build-and-verify	Build	2026-10-17T21:05:45.9782260Z
 build-and-verify	Build	2026-10-17T21:05:45.9782441Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9842365Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9843181Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.WindowBlockHypotheses.two_block`.
-build-and-verify	Build	2026-10-17T21:05:45.9843557Z 
+build-and-verify	Build	2026-10-17T21:05:45.9843557Z
 build-and-verify	Build	2026-10-17T21:05:45.9843744Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9844491Z info: Reinmann/WeilWindowAudit.lean:15:0: 'Reinmann.WeilWindow.WindowBlockHypotheses.bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9845106Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9845376Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9845501Z 
-build-and-verify	Build	2026-10-17T21:05:45.9845506Z 
+build-and-verify	Build	2026-10-17T21:05:45.9845501Z
+build-and-verify	Build	2026-10-17T21:05:45.9845506Z
 build-and-verify	Build	2026-10-17T21:05:45.9845679Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9846250Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9846900Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.WindowBlockHypotheses.bound`.
-build-and-verify	Build	2026-10-17T21:05:45.9847248Z 
+build-and-verify	Build	2026-10-17T21:05:45.9847248Z
 build-and-verify	Build	2026-10-17T21:05:45.9847419Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9848104Z info: Reinmann/WeilWindowAudit.lean:16:0: 'Reinmann.WeilWindow.WindowBlockHypotheses.schur_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9848729Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9848996Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9849116Z 
-build-and-verify	Build	2026-10-17T21:05:45.9849119Z 
+build-and-verify	Build	2026-10-17T21:05:45.9849116Z
+build-and-verify	Build	2026-10-17T21:05:45.9849119Z
 build-and-verify	Build	2026-10-17T21:05:45.9849291Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9850106Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9850981Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.WindowBlockHypotheses.schur_bound`.
-build-and-verify	Build	2026-10-17T21:05:45.9851352Z 
+build-and-verify	Build	2026-10-17T21:05:45.9851352Z
 build-and-verify	Build	2026-10-17T21:05:45.9851523Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9852165Z info: Reinmann/WeilWindowAudit.lean:17:0: 'Reinmann.WeilWindow.certificate_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9852739Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9853007Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9853128Z 
-build-and-verify	Build	2026-10-17T21:05:45.9853131Z 
+build-and-verify	Build	2026-10-17T21:05:45.9853128Z
+build-and-verify	Build	2026-10-17T21:05:45.9853131Z
 build-and-verify	Build	2026-10-17T21:05:45.9853303Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9853863Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9854484Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.certificate_arithmetic`.
-build-and-verify	Build	2026-10-17T21:05:45.9854806Z 
+build-and-verify	Build	2026-10-17T21:05:45.9854806Z
 build-and-verify	Build	2026-10-17T21:05:45.9854978Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9855644Z info: Reinmann/WeilWindowAudit.lean:18:0: 'Reinmann.WeilWindow.certified_exp_six_fifths_of_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9856241Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9856507Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9856732Z 
-build-and-verify	Build	2026-10-17T21:05:45.9856735Z 
+build-and-verify	Build	2026-10-17T21:05:45.9856732Z
+build-and-verify	Build	2026-10-17T21:05:45.9856735Z
 build-and-verify	Build	2026-10-17T21:05:45.9856911Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9857465Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9858125Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.certified_exp_six_fifths_of_blocks`.
-build-and-verify	Build	2026-10-17T21:05:45.9858505Z 
+build-and-verify	Build	2026-10-17T21:05:45.9858505Z
 build-and-verify	Build	2026-10-17T21:05:45.9858675Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9859319Z info: Reinmann/WeilWindowAudit.lean:19:0: 'Reinmann.WeilWindow.schur_certificate_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9890340Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9890730Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9890879Z 
-build-and-verify	Build	2026-10-17T21:05:45.9890886Z 
+build-and-verify	Build	2026-10-17T21:05:45.9890879Z
+build-and-verify	Build	2026-10-17T21:05:45.9890886Z
 build-and-verify	Build	2026-10-17T21:05:45.9891135Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9891683Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9892327Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.schur_certificate_arithmetic`.
-build-and-verify	Build	2026-10-17T21:05:45.9892679Z 
+build-and-verify	Build	2026-10-17T21:05:45.9892679Z
 build-and-verify	Build	2026-10-17T21:05:45.9892861Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9893524Z info: Reinmann/WeilWindowAudit.lean:20:0: 'Reinmann.WeilWindow.window_bound_weaken' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9894113Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9894391Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9894516Z 
-build-and-verify	Build	2026-10-17T21:05:45.9894520Z 
+build-and-verify	Build	2026-10-17T21:05:45.9894516Z
+build-and-verify	Build	2026-10-17T21:05:45.9894520Z
 build-and-verify	Build	2026-10-17T21:05:45.9894701Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9895267Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9895871Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.window_bound_weaken`.
-build-and-verify	Build	2026-10-17T21:05:45.9896176Z 
+build-and-verify	Build	2026-10-17T21:05:45.9896176Z
 build-and-verify	Build	2026-10-17T21:05:45.9896350Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9896970Z info: Reinmann/WeilWindowAudit.lean:21:0: 'Reinmann.WeilWindow.certified_exp_six_fifths_of_schur_blocks' depends on axioms: [propext,
 build-and-verify	Build	2026-10-17T21:05:45.9897476Z  Classical.choice,
 build-and-verify	Build	2026-10-17T21:05:45.9897848Z  Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9898065Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9898444Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9898564Z 
-build-and-verify	Build	2026-10-17T21:05:45.9898568Z 
+build-and-verify	Build	2026-10-17T21:05:45.9898564Z
+build-and-verify	Build	2026-10-17T21:05:45.9898568Z
 build-and-verify	Build	2026-10-17T21:05:45.9898732Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9899237Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9899953Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.certified_exp_six_fifths_of_schur_blocks`.
-build-and-verify	Build	2026-10-17T21:05:45.9900307Z 
+build-and-verify	Build	2026-10-17T21:05:45.9900307Z
 build-and-verify	Build	2026-10-17T21:05:45.9900469Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9901080Z info: Reinmann/WeilWindowAudit.lean:22:0: 'Reinmann.WeilWindow.window_bound_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9901663Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9901950Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9902076Z 
-build-and-verify	Build	2026-10-17T21:05:45.9902079Z 
+build-and-verify	Build	2026-10-17T21:05:45.9902076Z
+build-and-verify	Build	2026-10-17T21:05:45.9902079Z
 build-and-verify	Build	2026-10-17T21:05:45.9902238Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9902613Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9903097Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.window_bound_restrict`.
-build-and-verify	Build	2026-10-17T21:05:45.9903412Z 
+build-and-verify	Build	2026-10-17T21:05:45.9903412Z
 build-and-verify	Build	2026-10-17T21:05:45.9903524Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9903997Z info: Reinmann/WeilWindowAudit.lean:23:0: 'Reinmann.WeilWindow.smaller_windows_of_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9904380Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9904592Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9904670Z 
-build-and-verify	Build	2026-10-17T21:05:45.9904672Z 
+build-and-verify	Build	2026-10-17T21:05:45.9904670Z
+build-and-verify	Build	2026-10-17T21:05:45.9904672Z
 build-and-verify	Build	2026-10-17T21:05:45.9904785Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9905121Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9905774Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.smaller_windows_of_certificate`.
-build-and-verify	Build	2026-10-17T21:05:45.9906104Z 
+build-and-verify	Build	2026-10-17T21:05:45.9906104Z
 build-and-verify	Build	2026-10-17T21:05:45.9906270Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9906904Z info: Reinmann/WeilWindowAudit.lean:24:0: 'Reinmann.WeilWindow.window_nonnegative_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9907493Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9907768Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9907885Z 
-build-and-verify	Build	2026-10-17T21:05:45.9907888Z 
+build-and-verify	Build	2026-10-17T21:05:45.9907885Z
+build-and-verify	Build	2026-10-17T21:05:45.9907888Z
 build-and-verify	Build	2026-10-17T21:05:45.9908055Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9908568Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9909174Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.window_nonnegative_of_bound`.
-build-and-verify	Build	2026-10-17T21:05:45.9909492Z 
+build-and-verify	Build	2026-10-17T21:05:45.9909492Z
 build-and-verify	Build	2026-10-17T21:05:45.9909781Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9910396Z info: Reinmann/WeilWindowAudit.lean:25:0: 'Reinmann.WeilWindow.all_windows_of_cofinal_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9910954Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9911222Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9911342Z 
-build-and-verify	Build	2026-10-17T21:05:45.9911345Z 
+build-and-verify	Build	2026-10-17T21:05:45.9911342Z
+build-and-verify	Build	2026-10-17T21:05:45.9911345Z
 build-and-verify	Build	2026-10-17T21:05:45.9911519Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9912073Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9912860Z Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.all_windows_of_cofinal_bounds`.
-build-and-verify	Build	2026-10-17T21:05:45.9913194Z 
+build-and-verify	Build	2026-10-17T21:05:45.9913194Z
 build-and-verify	Build	2026-10-17T21:05:45.9913360Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9913719Z warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9913993Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9914109Z 
-build-and-verify	Build	2026-10-17T21:05:45.9914111Z 
+build-and-verify	Build	2026-10-17T21:05:45.9914109Z
+build-and-verify	Build	2026-10-17T21:05:45.9914111Z
 build-and-verify	Build	2026-10-17T21:05:45.9914273Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9914812Z warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
 build-and-verify	Build	2026-10-17T21:05:45.9915294Z Please, add a module doc-string before ``.
-build-and-verify	Build	2026-10-17T21:05:45.9915481Z 
+build-and-verify	Build	2026-10-17T21:05:45.9915481Z
 build-and-verify	Build	2026-10-17T21:05:45.9915642Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9916298Z ⚠ [3579/3588] Replayed Reinmann.CurvatureControls
 build-and-verify	Build	2026-10-17T21:05:45.9916613Z warning: Reinmann/CurvatureControls.lean:1:1: * '-/':
 build-and-verify	Build	2026-10-17T21:05:45.9916905Z Copyright too short!
-build-and-verify	Build	2026-10-17T21:05:45.9917019Z 
-build-and-verify	Build	2026-10-17T21:05:45.9917022Z 
+build-and-verify	Build	2026-10-17T21:05:45.9917019Z
+build-and-verify	Build	2026-10-17T21:05:45.9917022Z
 build-and-verify	Build	2026-10-17T21:05:45.9917187Z Note: This linter can be disabled with `set_option linter.style.header false`
 build-and-verify	Build	2026-10-17T21:05:45.9917766Z info: Reinmann/CurvatureControls.lean:47:0: 'Reinmann.realZeroControl_turan' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:45.9918561Z info: Reinmann/CurvatureControls.lean:48:0: 'Reinmann.realZeroControl_scaled_deficit_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -385,211 +385,211 @@ build-and-verify	Build	2026-10-17T21:05:45.9920512Z info: Reinmann/CurvatureCont
 build-and-verify	Build	2026-10-17T21:05:45.9921345Z info: Reinmann/CurvatureControls.lean:51:0: 'Reinmann.curvature_negative_of_half_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
 build-and-verify	Build	2026-10-17T21:05:46.1699796Z ⚠ [3580/3588] Built Reinmann.EnclosureRules (4.1s)
 build-and-verify	Build	2026-10-17T21:05:46.1700275Z warning: Reinmann/EnclosureRules.lean:24:34: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1700528Z 
+build-and-verify	Build	2026-10-17T21:05:46.1700528Z
 build-and-verify	Build	2026-10-17T21:05:46.1700614Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1700864Z   't-v‖ ≤'
 build-and-verify	Build	2026-10-17T21:05:46.1701037Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1701277Z   't - v‖'
-build-and-verify	Build	2026-10-17T21:05:46.1701375Z 
-build-and-verify	Build	2026-10-17T21:05:46.1701380Z 
+build-and-verify	Build	2026-10-17T21:05:46.1701375Z
+build-and-verify	Build	2026-10-17T21:05:46.1701380Z
 build-and-verify	Build	2026-10-17T21:05:46.1701572Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1702003Z warning: Reinmann/EnclosureRules.lean:36:16: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1702252Z 
+build-and-verify	Build	2026-10-17T21:05:46.1702252Z
 build-and-verify	Build	2026-10-17T21:05:46.1702327Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1702552Z   '((a+b)/2)-v‖'
 build-and-verify	Build	2026-10-17T21:05:46.1702733Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1702930Z   '((a + b)'
-build-and-verify	Build	2026-10-17T21:05:46.1703028Z 
-build-and-verify	Build	2026-10-17T21:05:46.1703032Z 
+build-and-verify	Build	2026-10-17T21:05:46.1703028Z
+build-and-verify	Build	2026-10-17T21:05:46.1703032Z
 build-and-verify	Build	2026-10-17T21:05:46.1703212Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1703641Z warning: Reinmann/EnclosureRules.lean:36:19: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1703879Z 
+build-and-verify	Build	2026-10-17T21:05:46.1703879Z
 build-and-verify	Build	2026-10-17T21:05:46.1703958Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1704162Z   '((a+b)/2)-v‖'
 build-and-verify	Build	2026-10-17T21:05:46.1704335Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1704515Z   'b) / 2)'
-build-and-verify	Build	2026-10-17T21:05:46.1704616Z 
-build-and-verify	Build	2026-10-17T21:05:46.1704618Z 
+build-and-verify	Build	2026-10-17T21:05:46.1704616Z
+build-and-verify	Build	2026-10-17T21:05:46.1704618Z
 build-and-verify	Build	2026-10-17T21:05:46.1704799Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1705221Z warning: Reinmann/EnclosureRules.lean:36:22: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1705463Z 
+build-and-verify	Build	2026-10-17T21:05:46.1705463Z
 build-and-verify	Build	2026-10-17T21:05:46.1705537Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1705750Z   '((a+b)/2)-v‖ ≤'
 build-and-verify	Build	2026-10-17T21:05:46.1705927Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1706123Z   '2) - v‖'
-build-and-verify	Build	2026-10-17T21:05:46.1706462Z 
-build-and-verify	Build	2026-10-17T21:05:46.1706465Z 
+build-and-verify	Build	2026-10-17T21:05:46.1706462Z
+build-and-verify	Build	2026-10-17T21:05:46.1706465Z
 build-and-verify	Build	2026-10-17T21:05:46.1706644Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1707065Z warning: Reinmann/EnclosureRules.lean:64:27: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1707301Z 
+build-and-verify	Build	2026-10-17T21:05:46.1707301Z
 build-and-verify	Build	2026-10-17T21:05:46.1707379Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1707578Z   'c-v‖ ≤'
 build-and-verify	Build	2026-10-17T21:05:46.1707740Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1707936Z   'c - v‖'
-build-and-verify	Build	2026-10-17T21:05:46.1708064Z 
-build-and-verify	Build	2026-10-17T21:05:46.1708077Z 
+build-and-verify	Build	2026-10-17T21:05:46.1708064Z
+build-and-verify	Build	2026-10-17T21:05:46.1708077Z
 build-and-verify	Build	2026-10-17T21:05:46.1708256Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1708675Z warning: Reinmann/EnclosureRules.lean:64:44: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1708912Z 
+build-and-verify	Build	2026-10-17T21:05:46.1708912Z
 build-and-verify	Build	2026-10-17T21:05:46.1708991Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1709189Z   '‖z-c‖ ≤'
 build-and-verify	Build	2026-10-17T21:05:46.1709357Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1709550Z   '‖z - c‖'
-build-and-verify	Build	2026-10-17T21:05:46.1709745Z 
-build-and-verify	Build	2026-10-17T21:05:46.1709748Z 
+build-and-verify	Build	2026-10-17T21:05:46.1709745Z
+build-and-verify	Build	2026-10-17T21:05:46.1709748Z
 build-and-verify	Build	2026-10-17T21:05:46.1709943Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1710363Z warning: Reinmann/EnclosureRules.lean:65:14: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1710605Z 
+build-and-verify	Build	2026-10-17T21:05:46.1710605Z
 build-and-verify	Build	2026-10-17T21:05:46.1710683Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1710880Z   'z-f c‖'
 build-and-verify	Build	2026-10-17T21:05:46.1711042Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1711218Z   'z - f'
-build-and-verify	Build	2026-10-17T21:05:46.1711313Z 
-build-and-verify	Build	2026-10-17T21:05:46.1711316Z 
+build-and-verify	Build	2026-10-17T21:05:46.1711313Z
+build-and-verify	Build	2026-10-17T21:05:46.1711316Z
 build-and-verify	Build	2026-10-17T21:05:46.1711493Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1712064Z warning: Reinmann/EnclosureRules.lean:65:28: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1712306Z 
+build-and-verify	Build	2026-10-17T21:05:46.1712306Z
 build-and-verify	Build	2026-10-17T21:05:46.1712380Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1712584Z   '‖z-c‖) (hmargin'
 build-and-verify	Build	2026-10-17T21:05:46.1712767Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1712964Z   '‖z - c‖)'
-build-and-verify	Build	2026-10-17T21:05:46.1713060Z 
-build-and-verify	Build	2026-10-17T21:05:46.1713066Z 
+build-and-verify	Build	2026-10-17T21:05:46.1713060Z
+build-and-verify	Build	2026-10-17T21:05:46.1713066Z
 build-and-verify	Build	2026-10-17T21:05:46.1713242Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1713671Z warning: Reinmann/EnclosureRules.lean:65:49: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1713914Z 
+build-and-verify	Build	2026-10-17T21:05:46.1713914Z
 build-and-verify	Build	2026-10-17T21:05:46.1713991Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1714197Z   'K*ρ < ‖v‖)'
 build-and-verify	Build	2026-10-17T21:05:46.1714369Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1714565Z   'K * ρ'
-build-and-verify	Build	2026-10-17T21:05:46.1714657Z 
-build-and-verify	Build	2026-10-17T21:05:46.1714660Z 
+build-and-verify	Build	2026-10-17T21:05:46.1714657Z
+build-and-verify	Build	2026-10-17T21:05:46.1714660Z
 build-and-verify	Build	2026-10-17T21:05:46.1714839Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1715269Z warning: Reinmann/EnclosureRules.lean:90:44: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1715514Z 
+build-and-verify	Build	2026-10-17T21:05:46.1715514Z
 build-and-verify	Build	2026-10-17T21:05:46.1715588Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1715771Z   '(n+1)) (j'
 build-and-verify	Build	2026-10-17T21:05:46.1715944Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1716122Z   '(n + 1))'
-build-and-verify	Build	2026-10-17T21:05:46.1716219Z 
-build-and-verify	Build	2026-10-17T21:05:46.1716222Z 
+build-and-verify	Build	2026-10-17T21:05:46.1716219Z
+build-and-verify	Build	2026-10-17T21:05:46.1716222Z
 build-and-verify	Build	2026-10-17T21:05:46.1716399Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1716829Z warning: Reinmann/EnclosureRules.lean:90:60: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1717071Z 
+build-and-verify	Build	2026-10-17T21:05:46.1717071Z
 build-and-verify	Build	2026-10-17T21:05:46.1717149Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1717326Z   '(m+1)) :'
 build-and-verify	Build	2026-10-17T21:05:46.1717491Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1717666Z   '(m + 1))'
-build-and-verify	Build	2026-10-17T21:05:46.1717761Z 
-build-and-verify	Build	2026-10-17T21:05:46.1717764Z 
+build-and-verify	Build	2026-10-17T21:05:46.1717761Z
+build-and-verify	Build	2026-10-17T21:05:46.1717764Z
 build-and-verify	Build	2026-10-17T21:05:46.1717948Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1718384Z warning: Reinmann/EnclosureRules.lean:116:48: this tactic is never executed
-build-and-verify	Build	2026-10-17T21:05:46.1718638Z 
+build-and-verify	Build	2026-10-17T21:05:46.1718638Z
 build-and-verify	Build	2026-10-17T21:05:46.1718821Z Note: This linter can be disabled with `set_option linter.unreachableTactic false`
 build-and-verify	Build	2026-10-17T21:05:46.1719316Z warning: Reinmann/EnclosureRules.lean:109:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
-build-and-verify	Build	2026-10-17T21:05:46.1719840Z 
+build-and-verify	Build	2026-10-17T21:05:46.1719840Z
 build-and-verify	Build	2026-10-17T21:05:46.1720033Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
 build-and-verify	Build	2026-10-17T21:05:46.1720604Z warning: Reinmann/EnclosureRules.lean:116:48: 'ring' tactic does nothing
-build-and-verify	Build	2026-10-17T21:05:46.1720849Z 
+build-and-verify	Build	2026-10-17T21:05:46.1720849Z
 build-and-verify	Build	2026-10-17T21:05:46.1721017Z Note: This linter can be disabled with `set_option linter.unusedTactic false`
 build-and-verify	Build	2026-10-17T21:05:46.1721433Z warning: Reinmann/EnclosureRules.lean:129:20: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1721678Z 
+build-and-verify	Build	2026-10-17T21:05:46.1721678Z
 build-and-verify	Build	2026-10-17T21:05:46.1721755Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1721965Z   '(n+1) →'
 build-and-verify	Build	2026-10-17T21:05:46.1722133Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1722317Z   '(n + 1)'
-build-and-verify	Build	2026-10-17T21:05:46.1722406Z 
-build-and-verify	Build	2026-10-17T21:05:46.1722409Z 
+build-and-verify	Build	2026-10-17T21:05:46.1722406Z
+build-and-verify	Build	2026-10-17T21:05:46.1722409Z
 build-and-verify	Build	2026-10-17T21:05:46.1722592Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1723013Z warning: Reinmann/EnclosureRules.lean:129:32: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1723261Z 
+build-and-verify	Build	2026-10-17T21:05:46.1723261Z
 build-and-verify	Build	2026-10-17T21:05:46.1723337Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1723534Z   '(m+1) →'
 build-and-verify	Build	2026-10-17T21:05:46.1723701Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1723879Z   '(m + 1)'
-build-and-verify	Build	2026-10-17T21:05:46.1723977Z 
-build-and-verify	Build	2026-10-17T21:05:46.1723980Z 
+build-and-verify	Build	2026-10-17T21:05:46.1723977Z
+build-and-verify	Build	2026-10-17T21:05:46.1723980Z
 build-and-verify	Build	2026-10-17T21:05:46.1724162Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1724582Z warning: Reinmann/EnclosureRules.lean:130:20: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1724829Z 
+build-and-verify	Build	2026-10-17T21:05:46.1724829Z
 build-and-verify	Build	2026-10-17T21:05:46.1724903Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1725099Z   '(n+1) →'
 build-and-verify	Build	2026-10-17T21:05:46.1725262Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1725437Z   '(n + 1)'
-build-and-verify	Build	2026-10-17T21:05:46.1725641Z 
-build-and-verify	Build	2026-10-17T21:05:46.1725648Z 
+build-and-verify	Build	2026-10-17T21:05:46.1725641Z
+build-and-verify	Build	2026-10-17T21:05:46.1725648Z
 build-and-verify	Build	2026-10-17T21:05:46.1725827Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1726248Z warning: Reinmann/EnclosureRules.lean:130:32: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1726496Z 
+build-and-verify	Build	2026-10-17T21:05:46.1726496Z
 build-and-verify	Build	2026-10-17T21:05:46.1726574Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1726770Z   '(m+1) →'
 build-and-verify	Build	2026-10-17T21:05:46.1726932Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1727107Z   '(m + 1)'
-build-and-verify	Build	2026-10-17T21:05:46.1727200Z 
-build-and-verify	Build	2026-10-17T21:05:46.1727208Z 
+build-and-verify	Build	2026-10-17T21:05:46.1727200Z
+build-and-verify	Build	2026-10-17T21:05:46.1727208Z
 build-and-verify	Build	2026-10-17T21:05:46.1727388Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1727813Z warning: Reinmann/EnclosureRules.lean:131:42: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1728055Z 
+build-and-verify	Build	2026-10-17T21:05:46.1728055Z
 build-and-verify	Build	2026-10-17T21:05:46.1728129Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1728310Z   'j)-values'
 build-and-verify	Build	2026-10-17T21:05:46.1728485Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1728663Z   'j) - values'
-build-and-verify	Build	2026-10-17T21:05:46.1728769Z 
-build-and-verify	Build	2026-10-17T21:05:46.1728776Z 
+build-and-verify	Build	2026-10-17T21:05:46.1728769Z
+build-and-verify	Build	2026-10-17T21:05:46.1728776Z
 build-and-verify	Build	2026-10-17T21:05:46.1728953Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1729378Z warning: Reinmann/EnclosureRules.lean:133:10: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1729715Z 
+build-and-verify	Build	2026-10-17T21:05:46.1729715Z
 build-and-verify	Build	2026-10-17T21:05:46.1729793Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1729979Z   'z-f (gridCenter'
 build-and-verify	Build	2026-10-17T21:05:46.1730160Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1730337Z   'z - f'
-build-and-verify	Build	2026-10-17T21:05:46.1730431Z 
-build-and-verify	Build	2026-10-17T21:05:46.1730433Z 
+build-and-verify	Build	2026-10-17T21:05:46.1730431Z
+build-and-verify	Build	2026-10-17T21:05:46.1730433Z
 build-and-verify	Build	2026-10-17T21:05:46.1730617Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1731036Z warning: Reinmann/EnclosureRules.lean:133:40: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1731283Z 
+build-and-verify	Build	2026-10-17T21:05:46.1731283Z
 build-and-verify	Build	2026-10-17T21:05:46.1731357Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1731570Z   'K*‖z-gridCenter'
 build-and-verify	Build	2026-10-17T21:05:46.1731751Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1731946Z   'K * ‖z'
-build-and-verify	Build	2026-10-17T21:05:46.1732040Z 
-build-and-verify	Build	2026-10-17T21:05:46.1732043Z 
+build-and-verify	Build	2026-10-17T21:05:46.1732040Z
+build-and-verify	Build	2026-10-17T21:05:46.1732043Z
 build-and-verify	Build	2026-10-17T21:05:46.1732219Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1732646Z warning: Reinmann/EnclosureRules.lean:133:43: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1732890Z 
+build-and-verify	Build	2026-10-17T21:05:46.1732890Z
 build-and-verify	Build	2026-10-17T21:05:46.1732966Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1733169Z   'K*‖z-gridCenter'
 build-and-verify	Build	2026-10-17T21:05:46.1733349Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1733554Z   '‖z - gridCenter'
-build-and-verify	Build	2026-10-17T21:05:46.1733660Z 
-build-and-verify	Build	2026-10-17T21:05:46.1733663Z 
+build-and-verify	Build	2026-10-17T21:05:46.1733660Z
+build-and-verify	Build	2026-10-17T21:05:46.1733663Z
 build-and-verify	Build	2026-10-17T21:05:46.1733841Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1734381Z warning: Reinmann/EnclosureRules.lean:134:32: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1734629Z 
+build-and-verify	Build	2026-10-17T21:05:46.1734629Z
 build-and-verify	Build	2026-10-17T21:05:46.1734702Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1734884Z   'j+K*(1/(n'
 build-and-verify	Build	2026-10-17T21:05:46.1735054Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1735230Z   'j + K'
-build-and-verify	Build	2026-10-17T21:05:46.1735321Z 
-build-and-verify	Build	2026-10-17T21:05:46.1735324Z 
+build-and-verify	Build	2026-10-17T21:05:46.1735321Z
+build-and-verify	Build	2026-10-17T21:05:46.1735324Z
 build-and-verify	Build	2026-10-17T21:05:46.1735498Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1735927Z warning: Reinmann/EnclosureRules.lean:134:37: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1736171Z 
+build-and-verify	Build	2026-10-17T21:05:46.1736171Z
 build-and-verify	Build	2026-10-17T21:05:46.1736248Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1736426Z   'j+K*(1/(n :'
 build-and-verify	Build	2026-10-17T21:05:46.1736600Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1736780Z   '(1 / (n'
-build-and-verify	Build	2026-10-17T21:05:46.1736872Z 
-build-and-verify	Build	2026-10-17T21:05:46.1736875Z 
+build-and-verify	Build	2026-10-17T21:05:46.1736872Z
+build-and-verify	Build	2026-10-17T21:05:46.1736875Z
 build-and-verify	Build	2026-10-17T21:05:46.1737058Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:46.1737490Z warning: Reinmann/EnclosureRules.lean:134:45: missing space in the source
-build-and-verify	Build	2026-10-17T21:05:46.1737738Z 
+build-and-verify	Build	2026-10-17T21:05:46.1737738Z
 build-and-verify	Build	2026-10-17T21:05:46.1737815Z This part of the code
 build-and-verify	Build	2026-10-17T21:05:46.1738020Z   'ℝ)+2*H/m) <'
 build-and-verify	Build	2026-10-17T21:05:46.1738189Z should be written as
 build-and-verify	Build	2026-10-17T21:05:46.1738385Z   'ℝ) + 2'
-build-and-verify	Build	2026-10-17T21:05:46.1738478Z 
-build-and-verify	Build	2026-10-17T21:05:46.1738481Z 
+build-and-verify	Build	2026-10-17T21:05:46.1738478Z
+build-and-verify	Build	2026-10-17T21:05:46.1738481Z
 build-and-verify	Build	2026-10-17T21:05:46.1738662Z Note: This linter can be disabled with `set_option linter.style.whitespace false`
 build-and-verify	Build	2026-10-17T21:05:48.5810787Z ✔ [3581/3588] Built Reinmann.FiniteProductSplitPair (2.6s)
 build-and-verify	Build	2026-10-17T21:05:49.0790378Z ✔ [3582/3588] Built Reinmann.XiCenterPositive (3.2s)
@@ -597,7 +597,7 @@ build-and-verify	Build	2026-10-17T21:05:50.9842898Z ✔ [3583/3588] Built Reinma
 build-and-verify	Build	2026-10-17T21:05:51.0843527Z ✔ [3584/3588] Built Reinmann.ToeplitzComplementSigned (2.5s)
 build-and-verify	Build	2026-10-17T21:05:51.9855621Z ⚠ [3585/3588] Built Reinmann.XiMellinRemainder (2.0s)
 build-and-verify	Build	2026-10-17T21:05:51.9856073Z warning: Reinmann/XiMellinRemainder.lean:166:100: This line exceeds the 100 character limit, please shorten it!
-build-and-verify	Build	2026-10-17T21:05:51.9856348Z 
+build-and-verify	Build	2026-10-17T21:05:51.9856348Z
 build-and-verify	Build	2026-10-17T21:05:51.9856482Z Note: This linter can be disabled with `set_option linter.style.longLine false`
 build-and-verify	Build	2026-10-17T21:05:54.3901455Z ✔ [3586/3588] Built Reinmann.XiMellinRectangle (2.4s)
 build-and-verify	Build	2026-10-17T21:05:56.2910683Z ✔ [3587/3588] Built Reinmann (1.8s)

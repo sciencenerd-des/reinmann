@@ -1072,9 +1072,9 @@
     "research/prime_spectral/verification_2026_10_17_log_forecast/same_height_html_before_scope_correction.html": "52a34819bcbb164544030fda39b6f0aec59c03879af3c4888f4d82bbd128804d",
     "research/prime_spectral/verification_2026_10_17_log_forecast/same_height_html_build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "research/prime_spectral/verification_2026_10_17_log_forecast/same_height_validation.json": "069838f725366b35acf575ba92122b271ee583ef5e84dcb948c6187850c22bc4",
-    "research/prime_spectral/verification_2026_10_18_jacobi/axiom_audit.log": "10dec8676c0d4996ab2e2b56438c6dbaabcd0634c09e05ebcf22735ddf1a7ca6",
+    "research/prime_spectral/verification_2026_10_18_jacobi/axiom_audit.log": "6b9897ecddfbfc035c0696bd7c75ebb0f4e606a8a6fd99ad7bdad4155ff7a3d6",
     "research/prime_spectral/verification_2026_10_18_jacobi/ci_result.json": "c449e085c0caa959167405205fbb8b75cca5f7616f5172ba6978cb1ab5650342",
-    "research/prime_spectral/verification_2026_10_18_jacobi/full_build.log": "eac093eda6bc21cac8f08010ec5959556b3d13b2c7b52402af19098fbbbf94be",
+    "research/prime_spectral/verification_2026_10_18_jacobi/full_build.log": "e7daa3d1d4fcb7ce2613d8e574ff8dc3c64be9d7afaef94707a83d08313909ea",
     "research/prime_spectral/verification_2026_10_18_jacobi/historical_aba0f38/README.md": "62e585e25ae25519d00df255f8d2f4acb107658bced85041cc369600b04c81c6",
     "research/prime_spectral/verification_2026_10_18_jacobi/historical_aba0f38/Reinmann/AxiomAudit.lean": "b0cc0ab0604eb883cbe0490acf0c07a2eeb929d60c864f11e9e3f8b847c1f1f2",
     "research/prime_spectral/verification_2026_10_18_jacobi/historical_aba0f38/Reinmann.lean": "5db7f81ac7141535ad5d4c65f9b1a8c745b9c8c3305d480240f7447920caff5d",
@@ -1082,7 +1082,7 @@
     "research/prime_spectral/verification_2026_10_18_jacobi/lsp_source_check.json": "9b409ef7c74a57a5fc74eefaa9058fa7008fd2ad8192a2ba1c6eacb41512901c",
     "research/prime_spectral/verification_2026_10_18_jacobi/prior_art.json": "2727aabb1ed8749e6ad5437a1905f889e2018475474dd0af91f140a73e4cf3ec",
     "research/prime_spectral/verification_2026_10_18_jacobi/source_check_validation.json": "e10d1ef833ecc6bdf88a75e09fc4c195c443fc094c2038d37fca88e42735e3a9",
-    "research/prime_spectral/verification_2026_10_18_jacobi/validation.json": "163d8429f76b677eb1fed72986af76a3dd02a269a1fedbf249d22d8c04c9574a",
+    "research/prime_spectral/verification_2026_10_18_jacobi/validation.json": "28377a9c9add1874513f9089c52604ae333119643ce4d63e9ed4dfb49595f233",
     "scripts/reassemble_dh_supplement.py": "b69219973fed91949244ba07988aa77a46c75950a2544bdadfec53b90a482760",
     "scripts/verify_axiom_clean.sh": "45e6f0b3884f36de5d45bdfbe3a4812dea8b819ea17f7affa3a436c9e9f547a0"
   }

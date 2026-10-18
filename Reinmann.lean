@@ -125,3 +125,9 @@ import Reinmann.AnalyticToeplitzJacobi
 import Reinmann.GammaHeightMajorant
 
 import Reinmann.GammaReflectionMajorant
+
+-- Finite Euler--Maclaurin components; the actual zeta identity remains open.
+import Reinmann.BernoulliQuadrature
+import Reinmann.BernoulliBernsteinBounds
+import Reinmann.EulerMaclaurinCell
+import Reinmann.EulerMaclaurinTail

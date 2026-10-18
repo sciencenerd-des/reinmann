@@ -3,6 +3,10 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.BernoulliQuadrature
+import Reinmann.BernoulliBernsteinBounds
+import Reinmann.EulerMaclaurinCell
+import Reinmann.EulerMaclaurinTail
 import Reinmann.GammaReflectionMajorant
 import Reinmann.AnalyticSplitPair
 import Reinmann.AnalyticToeplitzJacobi
@@ -522,3 +526,27 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.GammaReflectionMajorant.gamma_half_norm_sq_le_exp
 #print axioms Reinmann.GammaReflectionMajorant.gamma_half_norm_le_sqrt_exp
 #print axioms Reinmann.GammaReflectionMajorant.gamma_one_norm_sq
+
+-- Exact finite Bernoulli quadrature and actual periodic-integral bounds.
+#print axioms Reinmann.BernoulliQuadrature.kernel_hasDerivAt
+#print axioms Reinmann.BernoulliQuadrature.kernel_continuous
+#print axioms Reinmann.BernoulliQuadrature.kernel_zero
+#print axioms Reinmann.BernoulliQuadrature.kernel_one
+#print axioms Reinmann.BernoulliQuadrature.kernel_at_zero
+#print axioms Reinmann.BernoulliQuadrature.kernel_at_one
+#print axioms Reinmann.BernoulliQuadrature.integration_step
+#print axioms Reinmann.BernoulliQuadrature.finite_quadrature
+#print axioms Reinmann.BernoulliBernsteinBounds.abs_aeval_le_of_bernstein
+#print axioms Reinmann.BernoulliBernsteinBounds.bernoulli_twelve_bernstein
+#print axioms Reinmann.BernoulliBernsteinBounds.bernoulli_twelve_coefficients
+#print axioms Reinmann.BernoulliBernsteinBounds.bernoulli_twelve_abs_le
+#print axioms Reinmann.BernoulliBernsteinBounds.bernoulli_twelve_periodic_abs_le
+#print axioms Reinmann.EulerMaclaurinCell.powerDerivative_hasDerivAt
+#print axioms Reinmann.EulerMaclaurinCell.powerDerivative_zero
+#print axioms Reinmann.EulerMaclaurinCell.finite_cell
+#print axioms Reinmann.EulerMaclaurinTail.periodicTwelve_measurable
+#print axioms Reinmann.EulerMaclaurinTail.periodicTwelve_abs_le
+#print axioms Reinmann.EulerMaclaurinTail.integrand_norm_le
+#print axioms Reinmann.EulerMaclaurinTail.integrand_integrable
+#print axioms Reinmann.EulerMaclaurinTail.integral_norm_le
+#print axioms Reinmann.EulerMaclaurinTail.remainder_norm_le

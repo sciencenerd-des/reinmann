@@ -3,6 +3,9 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.EulerMaclaurinFinite
+import Reinmann.EulerMaclaurinZeta
+import Reinmann.EulerMaclaurinAnalytic
 import Reinmann.BernoulliQuadrature
 import Reinmann.BernoulliBernsteinBounds
 import Reinmann.EulerMaclaurinCell
@@ -550,3 +553,36 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.EulerMaclaurinTail.integrand_integrable
 #print axioms Reinmann.EulerMaclaurinTail.integral_norm_le
 #print axioms Reinmann.EulerMaclaurinTail.remainder_norm_le
+
+-- Finite summation, actual zeta identity and Mellin analytic continuation.
+#print axioms Reinmann.EulerMaclaurinFinite.power_zero
+#print axioms Reinmann.EulerMaclaurinFinite.signed_powerDerivative
+#print axioms Reinmann.EulerMaclaurinFinite.normalized_cell
+#print axioms Reinmann.EulerMaclaurinFinite.one_cell
+#print axioms Reinmann.EulerMaclaurinFinite.kernel_fract
+#print axioms Reinmann.EulerMaclaurinFinite.kernel_periodic_twelve
+#print axioms Reinmann.EulerMaclaurinFinite.cellTail_eq
+#print axioms Reinmann.EulerMaclaurinFinite.power_intervalIntegrable
+#print axioms Reinmann.EulerMaclaurinFinite.tail_intervalIntegrable
+#print axioms Reinmann.EulerMaclaurinFinite.finite_sum
+#print axioms Reinmann.EulerMaclaurinZeta.cpow_tendsto_zero
+#print axioms Reinmann.EulerMaclaurinZeta.power_tendsto_zero
+#print axioms Reinmann.EulerMaclaurinZeta.correction_tendsto_zero
+#print axioms Reinmann.EulerMaclaurinZeta.hasSum_power
+#print axioms Reinmann.EulerMaclaurinZeta.integral_power
+#print axioms Reinmann.EulerMaclaurinZeta.zeta_eq_model_add_remainder
+#print axioms Reinmann.EulerMaclaurinZeta.zeta_error_le
+#print axioms Reinmann.EulerMaclaurinAnalytic.cutoff_locallyIntegrable
+#print axioms Reinmann.EulerMaclaurinAnalytic.cutoff_top
+#print axioms Reinmann.EulerMaclaurinAnalytic.cutoff_zero
+#print axioms Reinmann.EulerMaclaurinAnalytic.integral_eq_mellin
+#print axioms Reinmann.EulerMaclaurinAnalytic.integral_differentiableAt
+#print axioms Reinmann.EulerMaclaurinAnalytic.power_differentiableAt
+#print axioms Reinmann.EulerMaclaurinAnalytic.correction_differentiableAt
+#print axioms Reinmann.EulerMaclaurinAnalytic.model_differentiableAt
+#print axioms Reinmann.EulerMaclaurinAnalytic.remainder_differentiableAt
+#print axioms Reinmann.EulerMaclaurinAnalytic.zeta_eq_model_add_remainder_upper
+#print axioms Reinmann.EulerMaclaurinAnalytic.zeta_error_le_upper
+#print axioms Reinmann.EulerMaclaurinAnalytic.hard_disk_domain
+#print axioms Reinmann.EulerMaclaurinAnalytic.hard_disk_identity
+#print axioms Reinmann.EulerMaclaurinAnalytic.hard_disk_error_le

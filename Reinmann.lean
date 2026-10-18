@@ -131,3 +131,8 @@ import Reinmann.BernoulliQuadrature
 import Reinmann.BernoulliBernsteinBounds
 import Reinmann.EulerMaclaurinCell
 import Reinmann.EulerMaclaurinTail
+
+-- Actual zeta EM identity, continued to the upper half-strip and hard disk.
+import Reinmann.EulerMaclaurinFinite
+import Reinmann.EulerMaclaurinZeta
+import Reinmann.EulerMaclaurinAnalytic

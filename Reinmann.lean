@@ -141,3 +141,7 @@ import Reinmann.EulerMaclaurinAnalytic
 import Reinmann.StirlingCell
 import Reinmann.StirlingSum
 import Reinmann.StirlingGamma
+
+-- Actual Gamma/zeta ordinary-jet remainder bounds on the whole hard unit disk.
+import Reinmann.StirlingAnalytic
+import Reinmann.ZetaJetRemainder

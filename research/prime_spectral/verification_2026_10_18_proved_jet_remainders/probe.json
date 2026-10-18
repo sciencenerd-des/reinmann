@@ -1,0 +1,72 @@
+{
+  "status": "external_hard_tile_with_Lean_proved_analytic_jet_errors",
+  "centre": [
+    "1/2",
+    "14"
+  ],
+  "jet_degree": 16,
+  "precision_bits": 192,
+  "zeta_terms": 20,
+  "zeta_N": 21,
+  "zeta_corrections": 6,
+  "gamma_shift": 12,
+  "gamma_retained_corrections": 6,
+  "zeta_each_ordinary_coefficient_error": "1e-7",
+  "zeta_error_theorem": "Reinmann.ZetaJetRemainder.zeta_coefficient_error_le",
+  "Gamma_each_ordinary_coefficient_error": "4e-14",
+  "Gamma_error_theorem": "Reinmann.StirlingAnalytic.gamma_coefficient_error_le",
+  "unit_disk_radius": 1,
+  "tile_radius": "1/16",
+  "Xi_majorant": 1000,
+  "row": {
+    "seconds": 0.0007950839353725314,
+    "timings_seconds": [
+      0.0015610409900546074,
+      0.0008323329966515303,
+      0.0007950839353725314,
+      0.000790499965660274,
+      0.0008138749981299043,
+      0.0007786250207573175,
+      0.0007777089485898614
+    ],
+    "ordinary_jet": [
+      "[0.000201294 +/- 6.72e-10] + [+/- 2.27e-10]j",
+      "[+/- 4.39e-10] + [0.001608969 +/- 7.88e-10]j",
+      "[-0.00087860 +/- 2.10e-9] + [+/- 5.09e-10]j",
+      "[+/- 5.25e-10] + [-0.000196215 +/- 8.24e-10]j",
+      "[2.003e-5 +/- 9.46e-10] + [+/- 5.28e-10]j",
+      "[+/- 5.29e-10] + [3.13e-7 +/- 6.23e-10]j",
+      "[1.36e-7 +/- 6.41e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [1.2e-8 +/- 5.79e-10]j",
+      "[+/- 5.67e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.87e-10]j",
+      "[+/- 5.31e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.29e-10]j",
+      "[+/- 5.29e-10] + [+/- 5.29e-10]j"
+    ],
+    "all_17_overlap_builtin_reference": true,
+    "all_17_component_radii_below_1e_8": true,
+    "all_17_complex_radii_below_1e_8": true,
+    "maximum_complex_radius": "[7.46889788439026160948545540930804189495644608221650271797e-10 +/- 1.20e-67]",
+    "maximum_component_radius": "5.28130834204221244476684660185128450393676757812500000000e-10",
+    "centre_component_radius": "2.26851413522022316016091281198896467685699462890625000000e-10"
+  },
+  "centre_modulus_lower": "0.000201294216822134330868721008300781250000000000000000000000",
+  "derivative_upper": "[0.00172111293716666941588961047099679888084946929810985504161 +/- 4.56e-60]",
+  "tile_margin_lower": "[9.37246582492174923756203538634813199469081688681340598991e-5 +/- 9.60e-63]",
+  "Lean_finite_exp_log_jet_arithmetic_certified": false,
+  "Lean_complete_hard_tile_certified": false,
+  "Lean_complete_hard_tile_seconds": null,
+  "source_sha256": {
+    "experiments/prime_spectral/xi_proved_remainders_probe.py": "aad10b521abf53794c119c8abc8a092198c33c251822fc9f827ac938b037e332",
+    "experiments/prime_spectral/xi_evaluator_comparison.py": "f982f760360cc934efe98c93a85ee2afb79db5f963587acb225135917a34b25a",
+    "Reinmann/StirlingAnalytic.lean": "0e985834383c27dfb5e3ea1e4c09d157f0a77b95015caa8c9923d2d0b28739b3",
+    "Reinmann/StirlingGamma.lean": "89c57438ba0408744607faccb600f15ef4162a861957c5e5ecd48ada0c8a761b",
+    "Reinmann/ZetaJetRemainder.lean": "4d70d6bb785b055e0c4f10c26aa1cc7431e5f1492e0a92f7a062346b55a4e782",
+    "Reinmann/XiLocalCauchy.lean": "d89f76ca0a9ae79953dd5e4558fd286e929b2679c4c58a74e7e63006bd47f065"
+  }
+}

@@ -6,6 +6,8 @@ Authors: Biswajit Mondal
 import Reinmann.StirlingCell
 import Reinmann.StirlingSum
 import Reinmann.StirlingGamma
+import Reinmann.StirlingAnalytic
+import Reinmann.ZetaJetRemainder
 import Reinmann.EulerMaclaurinFinite
 import Reinmann.EulerMaclaurinZeta
 import Reinmann.EulerMaclaurinAnalytic
@@ -621,3 +623,40 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.StirlingGamma.corr_zero_eq
 #print axioms Reinmann.StirlingGamma.Gamma_add_nat
 #print axioms Reinmann.StirlingGamma.Gamma_eq_shift
+
+-- Holomorphic Stirling remainder and rational Gamma/zeta jet error bounds.
+#print axioms Reinmann.StirlingAnalytic.tailIntegrand_eq
+#print axioms Reinmann.StirlingAnalytic.integrand_hasDerivAt
+#print axioms Reinmann.StirlingAnalytic.derivIntegrand_measurable
+#print axioms Reinmann.StirlingAnalytic.derivIntegrand_norm_le
+#print axioms Reinmann.StirlingAnalytic.tail_hasDerivAt
+#print axioms Reinmann.StirlingAnalytic.tail_differentiableAt
+#print axioms Reinmann.StirlingAnalytic.hard_disk_shift_re
+#print axioms Reinmann.StirlingAnalytic.hard_disk_tail_norm_le
+#print axioms Reinmann.StirlingAnalytic.shiftedTail_differentiableAt
+#print axioms Reinmann.StirlingAnalytic.shiftedTail_diffContOnCl
+#print axioms Reinmann.StirlingAnalytic.shiftedTail_coefficient_le
+#print axioms Reinmann.StirlingAnalytic.relativeError_norm_le
+#print axioms Reinmann.StirlingAnalytic.hard_disk_factors_ne
+#print axioms Reinmann.StirlingAnalytic.gamma_identity
+#print axioms Reinmann.StirlingAnalytic.gammaApprox_eq
+#print axioms Reinmann.StirlingAnalytic.gamma_norm_le_one
+#print axioms Reinmann.StirlingAnalytic.gammaApprox_norm_le_two
+#print axioms Reinmann.StirlingAnalytic.gammaError_norm_le
+#print axioms Reinmann.StirlingAnalytic.corr_zero_differentiableAt
+#print axioms Reinmann.StirlingAnalytic.mainTerm_differentiableAt
+#print axioms Reinmann.StirlingAnalytic.gammaApprox_differentiableAt
+#print axioms Reinmann.StirlingAnalytic.gamma_factor_differentiableAt
+#print axioms Reinmann.StirlingAnalytic.gammaError_diffContOnCl
+#print axioms Reinmann.StirlingAnalytic.gammaError_coefficient_le
+#print axioms Reinmann.StirlingAnalytic.gamma_coefficient_error_le
+#print axioms Reinmann.ZetaJetRemainder.hard_disk_norm_le
+#print axioms Reinmann.ZetaJetRemainder.rising_norm_le
+#print axioms Reinmann.ZetaJetRemainder.hard_disk_re_lower
+#print axioms Reinmann.ZetaJetRemainder.remainder_norm_le
+#print axioms Reinmann.ZetaJetRemainder.zetaError_norm_le
+#print axioms Reinmann.ZetaJetRemainder.hard_disk_ne_one
+#print axioms Reinmann.ZetaJetRemainder.zetaError_differentiableAt
+#print axioms Reinmann.ZetaJetRemainder.zetaError_diffContOnCl
+#print axioms Reinmann.ZetaJetRemainder.zetaError_coefficient_le
+#print axioms Reinmann.ZetaJetRemainder.zeta_coefficient_error_le

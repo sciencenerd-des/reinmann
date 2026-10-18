@@ -3,6 +3,13 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.CertifiedTaylorModel
+import Reinmann.CertifiedComplexInputs
+import Reinmann.CertifiedTaylorComposition
+import Reinmann.CertifiedHorner
+import Reinmann.HardTileLogInputs
+import Reinmann.HardTileGammaLog
+import Reinmann.HardTileGammaLogJet
 import Reinmann.StirlingCell
 import Reinmann.StirlingSum
 import Reinmann.StirlingGamma
@@ -660,3 +667,85 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.ZetaJetRemainder.zetaError_diffContOnCl
 #print axioms Reinmann.ZetaJetRemainder.zetaError_coefficient_le
 #print axioms Reinmann.ZetaJetRemainder.zeta_coefficient_error_le
+
+-- Rational Taylor arithmetic, scalar inputs, and the actual shifted Log jet.
+#print axioms Reinmann.CertifiedTaylorModel.size_nonneg
+#print axioms Reinmann.CertifiedTaylorModel.norm_value_le
+#print axioms Reinmann.CertifiedTaylorModel.contains_exact
+#print axioms Reinmann.CertifiedTaylorModel.contains_zero
+#print axioms Reinmann.CertifiedTaylorModel.contains_add
+#print axioms Reinmann.CertifiedTaylorModel.contains_mul
+#print axioms Reinmann.CertifiedTaylorModel.contains_round
+#print axioms Reinmann.CertifiedTaylorModel.contains_sum
+#print axioms Reinmann.CertifiedTaylorModel.coefficient_add
+#print axioms Reinmann.CertifiedTaylorModel.coefficient_mul
+#print axioms Reinmann.CertifiedTaylorModel.coefficient_scale
+#print axioms Reinmann.CertifiedTaylorModel.sound_add
+#print axioms Reinmann.CertifiedTaylorModel.sound_mul
+#print axioms Reinmann.CertifiedTaylorModel.sound_scale
+#print axioms Reinmann.CertifiedTaylorModel.sound_round
+#print axioms Reinmann.CertifiedTaylorModel.contains_inflate
+#print axioms Reinmann.CertifiedTaylorModel.sound_perturb
+#print axioms Reinmann.CertifiedTaylorModel.norm_le_of_contains
+#print axioms Reinmann.CertifiedTaylorModel.centre_contains
+#print axioms Reinmann.CertifiedComplexInputs.log_partial_bound
+#print axioms Reinmann.CertifiedComplexInputs.log_enclosure
+#print axioms Reinmann.CertifiedComplexInputs.log_mul_enclosure
+#print axioms Reinmann.CertifiedComplexInputs.log_pow_enclosure
+#print axioms Reinmann.CertifiedComplexInputs.log_recenter
+#print axioms Reinmann.CertifiedComplexInputs.log_scaled_enclosure
+#print axioms Reinmann.CertifiedComplexInputs.exponential_coefficient
+#print axioms Reinmann.CertifiedComplexInputs.exp_series_error
+#print axioms Reinmann.CertifiedComplexInputs.exp_series_contains
+#print axioms Reinmann.CertifiedComplexInputs.log_series_error
+#print axioms Reinmann.CertifiedComplexInputs.log_series_contains
+#print axioms Reinmann.CertifiedComplexInputs.exp_phase_reduce
+#print axioms Reinmann.CertifiedComplexInputs.gamma_log_centre_reduce
+#print axioms Reinmann.CertifiedComplexInputs.gamma_log_centre_norm
+#print axioms Reinmann.CertifiedTaylorComposition.coefficient_deriv
+#print axioms Reinmann.CertifiedTaylorComposition.coefficient_exp_succ
+#print axioms Reinmann.CertifiedTaylorComposition.coefficient_log_succ
+#print axioms Reinmann.CertifiedTaylorComposition.coefficient_inv_succ
+#print axioms Reinmann.CertifiedTaylorComposition.exp_coefficients_sound
+#print axioms Reinmann.CertifiedTaylorComposition.inv_coefficients_sound
+#print axioms Reinmann.CertifiedTaylorComposition.log_coefficients_sound
+#print axioms Reinmann.CertifiedHorner.horner_eq_sum
+#print axioms Reinmann.CertifiedHorner.horner_contains
+#print axioms Reinmann.CertifiedHorner.exp_horner_eq
+#print axioms Reinmann.CertifiedHorner.log_horner_eq
+#print axioms Reinmann.HardTileGammaLog.log_polynomial
+#print axioms Reinmann.HardTileGammaLog.log_two_contains
+#print axioms Reinmann.HardTileGammaLog.gamma_log_contains
+#print axioms Reinmann.HardTileGammaLog.gamma_log_radius
+#print axioms Reinmann.HardTileGammaLogJet.shifted_analytic
+#print axioms Reinmann.HardTileGammaLogJet.shifted_value
+#print axioms Reinmann.HardTileGammaLogJet.shifted_nonzero
+#print axioms Reinmann.HardTileGammaLogJet.shifted_slit
+#print axioms Reinmann.HardTileGammaLogJet.shifted_coefficient
+#print axioms Reinmann.HardTileGammaLogJet.affine_sound
+#print axioms Reinmann.HardTileGammaLogJet.inverse_sound
+#print axioms Reinmann.HardTileGammaLogJet.log_sound
+#print axioms Reinmann.HardTileGammaLogJet.log_radius
+
+-- Positive-real scalar logarithms, including every prime up to 19 and log pi.
+#print axioms Reinmann.HardTileLogInputs.log_2
+#print axioms Reinmann.HardTileLogInputs.log_3
+#print axioms Reinmann.HardTileLogInputs.log_4
+#print axioms Reinmann.HardTileLogInputs.log_5
+#print axioms Reinmann.HardTileLogInputs.log_6
+#print axioms Reinmann.HardTileLogInputs.log_7
+#print axioms Reinmann.HardTileLogInputs.log_8
+#print axioms Reinmann.HardTileLogInputs.log_9
+#print axioms Reinmann.HardTileLogInputs.log_10
+#print axioms Reinmann.HardTileLogInputs.log_11
+#print axioms Reinmann.HardTileLogInputs.log_12
+#print axioms Reinmann.HardTileLogInputs.log_13
+#print axioms Reinmann.HardTileLogInputs.log_14
+#print axioms Reinmann.HardTileLogInputs.log_15
+#print axioms Reinmann.HardTileLogInputs.log_16
+#print axioms Reinmann.HardTileLogInputs.log_17
+#print axioms Reinmann.HardTileLogInputs.log_18
+#print axioms Reinmann.HardTileLogInputs.log_19
+#print axioms Reinmann.HardTileLogInputs.log_20
+#print axioms Reinmann.HardTileLogInputs.log_21
+#print axioms Reinmann.HardTileLogInputs.log_pi

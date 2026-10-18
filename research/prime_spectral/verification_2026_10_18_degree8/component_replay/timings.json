@@ -1,0 +1,53 @@
+{
+  "status": "component_proofs_replayed",
+  "lean_version": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "mathlib": "v4.30.0",
+  "rows": [
+    {
+      "module": "CertifiedTaylorModel",
+      "seconds": 22.77699208399281,
+      "returncode": 0,
+      "source_sha256": "2e140d97ead0404d2587c51b847d13af2979b9d0afbc96e7ace793e83b9e9745"
+    },
+    {
+      "module": "CertifiedTaylorComposition",
+      "seconds": 21.571838792064227,
+      "returncode": 0,
+      "source_sha256": "325273a32d79580021df4ad0da46fdb880557113e07870601a54604b98c171f8"
+    },
+    {
+      "module": "CertifiedComplexInputs",
+      "seconds": 21.201202083029784,
+      "returncode": 0,
+      "source_sha256": "8941f230d690db34724bcca45743b978ef69c10393f0e597e912c531fb7732b9"
+    },
+    {
+      "module": "CertifiedHorner",
+      "seconds": 22.568843667046167,
+      "returncode": 0,
+      "source_sha256": "dcd74ecdd1049c01a3a9dd6b926a385aacfa4283453820795cccb5637612463b"
+    },
+    {
+      "module": "HardTileLogInputs",
+      "seconds": 21.582476958050393,
+      "returncode": 0,
+      "source_sha256": "8e1f73e4e5d753043844d889567772c11cd44d164251712a7e7587045899ba66"
+    },
+    {
+      "module": "HardTileGammaLog",
+      "seconds": 25.196583749959245,
+      "returncode": 0,
+      "source_sha256": "1a36ebff1828a6ecefe3f9d4833b386a263a75596c80ee3213b546d094d11b5e"
+    },
+    {
+      "module": "HardTileGammaLogJet",
+      "seconds": 18.276233333046548,
+      "returncode": 0,
+      "source_sha256": "23d7801cfd87433dac7012e08637141d57bdd57aadb79fefdfac6e429f2390a3"
+    }
+  ],
+  "timing_scope": "fresh component elaboration with built dependencies",
+  "complete_hard_tile_certified": false,
+  "complete_hard_tile_seconds": null,
+  "thirty_five_tiles_seconds": null
+}

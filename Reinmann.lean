@@ -145,3 +145,12 @@ import Reinmann.StirlingGamma
 -- Actual Gamma/zeta ordinary-jet remainder bounds on the whole hard unit disk.
 import Reinmann.StirlingAnalytic
 import Reinmann.ZetaJetRemainder
+
+-- Rational degree-eight models and certified hard-centre logarithm inputs.
+import Reinmann.CertifiedTaylorModel
+import Reinmann.CertifiedComplexInputs
+import Reinmann.CertifiedTaylorComposition
+import Reinmann.CertifiedHorner
+import Reinmann.HardTileLogInputs
+import Reinmann.HardTileGammaLog
+import Reinmann.HardTileGammaLogJet

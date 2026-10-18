@@ -1,0 +1,160 @@
+{
+  "status": "external_Arb_calibration_only",
+  "centre": [
+    "1/2",
+    "14"
+  ],
+  "degree": 8,
+  "tile_radius": "1/16",
+  "unit_circle_majorant": 1000,
+  "zeta_coefficient_error": "1e-7",
+  "Gamma_coefficient_error": "4e-14",
+  "Lean_complete_tile_certified": false,
+  "rows": [
+    {
+      "precision_bits": 64,
+      "median_seconds": 0.0001638750545680523,
+      "all_nine_overlap_independent_reference": true,
+      "maximum_complex_radius_before_rounding": "[7.46888908941922351e-10 +/- 3.86e-28]",
+      "dyadic_centres": [
+        [
+          "54035/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "13497/8388608"
+        ],
+        [
+          "-235847/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "-52671/268435456"
+        ],
+        [
+          "5377/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "21/67108864"
+        ],
+        [
+          "9/67108864",
+          "0"
+        ],
+        [
+          "0",
+          "3/268435456"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "each_disk_error_after_rounding": "1e-7",
+      "derivative_upper": "[0.00172347709392296819 +/- 4.15e-21]",
+      "tile_margin_lower": "[9.34787429072040147e-5 +/- 2.25e-23]"
+    },
+    {
+      "precision_bits": 80,
+      "median_seconds": 0.000152332941070199,
+      "all_nine_overlap_independent_reference": true,
+      "maximum_complex_radius_before_rounding": "[7.4688890894192235136517e-10 +/- 2.63e-33]",
+      "dyadic_centres": [
+        [
+          "54035/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "13497/8388608"
+        ],
+        [
+          "-235847/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "-52671/268435456"
+        ],
+        [
+          "5377/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "21/67108864"
+        ],
+        [
+          "9/67108864",
+          "0"
+        ],
+        [
+          "0",
+          "3/268435456"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "each_disk_error_after_rounding": "1e-7",
+      "derivative_upper": "[0.0017234770939227461414623 +/- 2.28e-26]",
+      "tile_margin_lower": "[9.3478742907217892525795e-5 +/- 2.00e-28]"
+    },
+    {
+      "precision_bits": 96,
+      "median_seconds": 0.00014962500426918268,
+      "all_nine_overlap_independent_reference": true,
+      "maximum_complex_radius_before_rounding": "[7.468889089419223513651724276e-10 +/- 7.69e-39]",
+      "dyadic_centres": [
+        [
+          "54035/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "13497/8388608"
+        ],
+        [
+          "-235847/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "-52671/268435456"
+        ],
+        [
+          "5377/268435456",
+          "0"
+        ],
+        [
+          "0",
+          "21/67108864"
+        ],
+        [
+          "9/67108864",
+          "0"
+        ],
+        [
+          "0",
+          "3/268435456"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "each_disk_error_after_rounding": "1e-7",
+      "derivative_upper": "[0.001723477093922746141462278646 +/- 3.03e-31]",
+      "tile_margin_lower": "[9.347874290721789252579508460e-5 +/- 1.46e-33]"
+    }
+  ],
+  "source_sha256": {
+    "experiments/prime_spectral/xi_degree8_probe.py": "2b525c4311ef196da0c5b5276eeaff61c26cc1cd495d5ff3eb71b67e9adea3a5",
+    "experiments/prime_spectral/xi_evaluator_comparison.py": "f982f760360cc934efe98c93a85ee2afb79db5f963587acb225135917a34b25a"
+  }
+}

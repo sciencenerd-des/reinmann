@@ -1,0 +1,59 @@
+{
+  "status": "kernel_only_exp_log_compatible",
+  "pin": "5a59804aa7c499f81ffd5eedf2a2cc5f9e8766d1",
+  "lean": "v4.30.0",
+  "mathlib": "v4.30.0",
+  "archive_sha256": "ee0dc3770c7cd56f0e91f201841e82f7b44a994d64ade3fdebec14c0326d25a5",
+  "proof_sha256": "56ae5d8e988dc314244cd1d54fa4e00e8a4e1b5bd46f4421632470f759fc416f",
+  "proof_seconds": 5.384030915913172,
+  "modules": [
+    {
+      "module": "LeanCert.Core.Interval",
+      "seconds": 26.173583417083137,
+      "exit_code": 0,
+      "source_sha256": "3b7e7c4200cbb10a35444d56bb6217ba17af1c1b5e565ecdb9fe87e683589565"
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.Basic",
+      "seconds": 37.83816345909145,
+      "exit_code": 0,
+      "source_sha256": "067b8a4c5dc76279bc46c9abb0deec8efa16285561aaebc5ca612406de28ac66"
+    },
+    {
+      "module": "LeanCert.Core.Expr",
+      "seconds": 25.41684416704811,
+      "exit_code": 0,
+      "source_sha256": "36ae80ed286893741c7c35456202ba284743c552740db8521816dae4510a3c57"
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.LogReduction",
+      "seconds": 20.47212391695939,
+      "exit_code": 0,
+      "source_sha256": "03786dfa62342728b81de5fa708ebb4e840cfb51dddc8ffd5cf416ea2286b7e0"
+    },
+    {
+      "module": "LeanCert.Core.DerivativeIntervals",
+      "seconds": 5.493789833039045,
+      "exit_code": 0,
+      "source_sha256": "d50d7a368033ed7905a92445700ceb8e95ec41e31c08b7ed49bf585d68fcf0f9"
+    },
+    {
+      "module": "LeanCert.Core.Taylor",
+      "seconds": 6.505283124977723,
+      "exit_code": 0,
+      "source_sha256": "2c3d2aef304c46b10ca430c224d00abaa876daca6f8c94cce66b5fbc7cee354e"
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.Taylor",
+      "seconds": 15.622247958905064,
+      "exit_code": 0,
+      "source_sha256": "9f5d55776c9b353656498a97b0569cac6621456c550427c8ca5d5a57da8db252"
+    }
+  ],
+  "axiom_audit": [
+    "'LeanCertCompatibility.exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LeanCertCompatibility.log_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "project_dependency_files_changed": false,
+  "scope": "Thin rational Taylor interval API only; does not certify arbitrary LeanCert tactics or a Xi rectangle."
+}

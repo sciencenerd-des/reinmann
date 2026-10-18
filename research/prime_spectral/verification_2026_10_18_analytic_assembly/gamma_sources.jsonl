@@ -1,0 +1,3 @@
+{"download_url":"https://raw.githubusercontent.com/openai/math/main/lean/OAI/NumberTheory/CubicMoment/Estimates/GammaElementaryGrowth.lean","name":"GammaElementaryGrowth.lean","sha":"362a26a92faefda3dcc04466bb6bb2e99c71d7a5"}
+{"download_url":"https://raw.githubusercontent.com/openai/math/main/lean/OAI/NumberTheory/CubicMoment/Estimates/GammaInverseGrowth.lean","name":"GammaInverseGrowth.lean","sha":"97b6683dcbf4d4cb13465bb69b10cd04dbf118da"}
+{"download_url":"https://raw.githubusercontent.com/openai/math/main/lean/OAI/NumberTheory/CubicMoment/Estimates/GammaQuotientGrowth.lean","name":"GammaQuotientGrowth.lean","sha":"4523b8875536d993ee5b45b2d081fd2d86b59167"}

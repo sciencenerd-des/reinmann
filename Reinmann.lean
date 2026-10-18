@@ -118,3 +118,8 @@ import Reinmann.XiFirstTile
 import Reinmann.SplitPairMixedRows
 import Reinmann.SplitPairPatchedRemainder
 import Reinmann.SplitPairCoefficientIdentity
+
+-- Standalone entire split-pair assembly and explicit Gamma recurrence bounds.
+import Reinmann.AnalyticSplitPair
+import Reinmann.AnalyticToeplitzJacobi
+import Reinmann.GammaHeightMajorant

@@ -3,6 +3,9 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.AnalyticSplitPair
+import Reinmann.AnalyticToeplitzJacobi
+import Reinmann.GammaHeightMajorant
 import Reinmann.XiAdaptiveTiles
 import Reinmann.XiLocalCauchy
 import Reinmann.XiFirstTile
@@ -490,3 +493,21 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.SplitPairCoefficientIdentity.actual_remainder_with_coefficients
 #print axioms Reinmann.XiLocalCauchy.taylor_coefficient_bound
 #print axioms Reinmann.SplitPairCoefficientIdentity.actual_reciprocal_coefficient_error
+
+-- Analytic oscillation, actual Taylor Jacobi bridge and Gamma height bounds.
+#print axioms Reinmann.AnalyticSplitPair.finite_split_sum_with_error_both_signs
+#print axioms Reinmann.AnalyticSplitPair.moment_split_pair_perturbed
+#print axioms Reinmann.AnalyticSplitPair.normalized_determinant_error_tendsto
+#print axioms Reinmann.AnalyticSplitPair.derivative_conjugate
+#print axioms Reinmann.AnalyticSplitPair.entire_split_pair
+#print axioms Reinmann.AnalyticSplitPair.entire_split_pair_of_boundary
+#print axioms Reinmann.AnalyticToeplitzJacobi.coefficient_mul
+#print axioms Reinmann.AnalyticToeplitzJacobi.taylorSeries_mul
+#print axioms Reinmann.AnalyticToeplitzJacobi.taylorSeries_reciprocal
+#print axioms Reinmann.AnalyticToeplitzJacobi.reciprocalMinor_eq_original
+#print axioms Reinmann.AnalyticToeplitzJacobi.entire_original_both_signs
+#print axioms Reinmann.GammaHeightMajorant.gamma_norm_le_real
+#print axioms Reinmann.GammaHeightMajorant.gamma_shift_norm
+#print axioms Reinmann.GammaHeightMajorant.gamma_norm_le_shift_product
+#print axioms Reinmann.GammaHeightMajorant.gamma_norm_le_height
+#print axioms Reinmann.GammaHeightMajorant.xi_norm_le_gamma_product

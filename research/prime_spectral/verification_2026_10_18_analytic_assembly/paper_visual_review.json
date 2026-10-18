@@ -1,0 +1,7 @@
+{
+  "status": "layout_checked_after_repair",
+  "pdf_sha256": "3ba2d2c8331e16b0a45c835635f47a8fd2dec0ef20dfe9bb2927578d35dd0511",
+  "pages_rendered_and_inspected": 5,
+  "renderer": "pdftoppm -scale-to 1400 -png",
+  "scope": "Visual layout review and extracted text check by Codex, not substantive human mathematical review."
+}

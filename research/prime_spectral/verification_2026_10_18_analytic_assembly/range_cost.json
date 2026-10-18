@@ -1,0 +1,58 @@
+{
+  "status": "external_range_quadrature_cost_pilot",
+  "domain": [
+    "1",
+    "4"
+  ],
+  "centre": [
+    "1/2",
+    "14"
+  ],
+  "theta_terms": 1,
+  "moment_component": 0,
+  "target_integral_width": "1/100000000",
+  "rows": [
+    {
+      "panels": 128,
+      "interval": "[+/- 6.71e-3]",
+      "width": "0.0032633756491122767329216003417968750000000000000",
+      "target_met": false,
+      "seconds": 0.006218708003871143,
+      "linear_count_projection": "[41771208.308637142181396484375000000000000000000 +/- 8.86e-41]"
+    },
+    {
+      "panels": 512,
+      "interval": "[0.005 +/- 4.92e-4]",
+      "width": "0.00079936039855965645983815193176269531250000000000",
+      "target_met": false,
+      "seconds": 0.0010187079897150397,
+      "linear_count_projection": "[40927252.406254410743713378906250000000000000000 +/- 8.77e-41]"
+    },
+    {
+      "panels": 2048,
+      "interval": "[0.005 +/- 1.93e-4]",
+      "width": "0.00019880032687069615349173545837402343750000000000",
+      "target_met": false,
+      "seconds": 0.0032591669587418437,
+      "linear_count_projection": "[40714306.943118572235107421875000000000000000000 +/- 8.75e-41]"
+    },
+    {
+      "panels": 8192,
+      "interval": "[0.0051 +/- 3.13e-5]",
+      "width": "4.9635806306014274014160037040710449218750000000e-5",
+      "target_met": false,
+      "seconds": 0.01348770793993026,
+      "linear_count_projection": "[40661652.525886893272399902343750000000000000000 +/- 8.74e-41]"
+    },
+    {
+      "panels": 32768,
+      "interval": "[0.0051 +/- 1.27e-5]",
+      "width": "1.2405629902900727756787091493606567382812500000e-5",
+      "target_met": false,
+      "seconds": 0.05560224992223084,
+      "linear_count_projection": "[40650768.065825104713439941406250000000000000000 +/- 8.74e-41]"
+    }
+  ],
+  "source_sha256": "63ad4e1403b3a4cad75d573d78081a8dddc92b6882b851a8afab251b3eb09f50",
+  "scope": "Only the first theta term and central real Mellin component on [1,4]. Extrapolation is descriptive engineering evidence, not a lower bound on all methods, a certified Xi tile, or a Lean runtime."
+}

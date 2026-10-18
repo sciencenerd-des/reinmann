@@ -136,3 +136,8 @@ import Reinmann.EulerMaclaurinTail
 import Reinmann.EulerMaclaurinFinite
 import Reinmann.EulerMaclaurinZeta
 import Reinmann.EulerMaclaurinAnalytic
+
+-- Complex Stirling formula with explicit order-12 remainder (Gamma evaluator, E1).
+import Reinmann.StirlingCell
+import Reinmann.StirlingSum
+import Reinmann.StirlingGamma

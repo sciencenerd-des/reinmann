@@ -3,6 +3,9 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.StirlingCell
+import Reinmann.StirlingSum
+import Reinmann.StirlingGamma
 import Reinmann.EulerMaclaurinFinite
 import Reinmann.EulerMaclaurinZeta
 import Reinmann.EulerMaclaurinAnalytic
@@ -586,3 +589,35 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.EulerMaclaurinAnalytic.hard_disk_domain
 #print axioms Reinmann.EulerMaclaurinAnalytic.hard_disk_identity
 #print axioms Reinmann.EulerMaclaurinAnalytic.hard_disk_error_le
+
+-- Complex Stirling formula with explicit order-12 remainder.
+#print axioms Reinmann.StirlingCell.add_ne_zero_of_re_pos
+#print axioms Reinmann.StirlingCell.logChain_hasDerivAt
+#print axioms Reinmann.StirlingCell.log_cell
+#print axioms Reinmann.StirlingSum.one_cell
+#print axioms Reinmann.StirlingSum.cellTail_eq
+#print axioms Reinmann.StirlingSum.logChain_zero_continuousOn
+#print axioms Reinmann.StirlingSum.logChain_zero_intervalIntegrable
+#print axioms Reinmann.StirlingSum.tailIntegrand_norm_le
+#print axioms Reinmann.StirlingSum.tailIntegrand_measurable
+#print axioms Reinmann.StirlingSum.majorant_integral
+#print axioms Reinmann.StirlingSum.tailIntegrand_integrableOn
+#print axioms Reinmann.StirlingSum.tail_norm_le
+#print axioms Reinmann.StirlingSum.tailIntegrand_intervalIntegrable
+#print axioms Reinmann.StirlingSum.finite_sum
+#print axioms Reinmann.StirlingGamma.GammaSeq_eq_exp
+#print axioms Reinmann.StirlingGamma.integral_logChain
+#print axioms Reinmann.StirlingGamma.seqLog_formula
+#print axioms Reinmann.StirlingGamma.tendsto_log_stirling
+#print axioms Reinmann.StirlingGamma.tendsto_div_nat
+#print axioms Reinmann.StirlingGamma.tendsto_log_one_add
+#print axioms Reinmann.StirlingGamma.tendsto_nat_mul_log_one_add
+#print axioms Reinmann.StirlingGamma.tendsto_inv_add_nat
+#print axioms Reinmann.StirlingGamma.tendsto_corr
+#print axioms Reinmann.StirlingGamma.tendsto_seqLog
+#print axioms Reinmann.StirlingGamma.Gamma_eq
+#print axioms Reinmann.StirlingGamma.Gamma_eq_exp_main_add
+#print axioms Reinmann.StirlingGamma.kernel_zero_eq
+#print axioms Reinmann.StirlingGamma.corr_zero_eq
+#print axioms Reinmann.StirlingGamma.Gamma_add_nat
+#print axioms Reinmann.StirlingGamma.Gamma_eq_shift

@@ -1,0 +1,20 @@
+{
+  "status": "formalization_release_files_verified",
+  "source_commit": "7376a2336c3fe9cceaa137b247962dde3ecfc6a3",
+  "audited_declarations": 364,
+  "files": {
+    "formal-split-pair.pdf": {
+      "bytes": 105865,
+      "sha256": "afd4f7274f77973c719a557490dc194d7981dca705f94c77451c7c6144a83b00"
+    },
+    "formal-split-pair-source-7376a23.tar.gz": {
+      "bytes": 480445,
+      "sha256": "2de1542c9a119695abdda37a8fb8d5e93bfd50ddc198505b7879efba4cf9b105"
+    },
+    "README_RELEASE.txt": {
+      "bytes": 1532,
+      "sha256": "22269cd146bcdeb6a3334ec6764d3695d231816727f5c68e7565c8c8ec758b27"
+    }
+  },
+  "scope": "Standalone simple-zero isolated-pair theorem; no RH proof, formal DH atlas or zero-free rectangle."
+}

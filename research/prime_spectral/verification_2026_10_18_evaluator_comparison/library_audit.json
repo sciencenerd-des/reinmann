@@ -1,0 +1,93 @@
+{
+  "Mathlib_version": "v4.30.0",
+  "Mathlib_Stirling_file_scope": "Real factorial asymptotics and real bounds, not a complex log-Gamma remainder.",
+  "OpenAI_code_search_terms": [
+    "EulerMaclaurin",
+    "Maclaurin",
+    "periodicBernoulli",
+    "Stirling path:lean/OAI/NumberTheory"
+  ],
+  "OpenAI_search_results": {
+    "oai_em_search": {
+      "total_count": 0,
+      "files": []
+    },
+    "oai_maclaurin_search": {
+      "total_count": 0,
+      "files": []
+    },
+    "oai_bernoulli_search": {
+      "total_count": 0,
+      "files": []
+    },
+    "oai_gamma_stirling_search": {
+      "total_count": 14,
+      "files": [
+        {
+          "path": "lean/OAI/NumberTheory/TwoPoint/Halasz/HalaszLogMean.lean",
+          "blob": "9c32fd78a082dd3b6fc8c4d5c2f9f8f7945d9f7e"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/Ostmann/Conclusion/BadFraction.lean",
+          "blob": "cc161925bf740e3f29ea052f93fc8bba8fd4d78a"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/TwoPointCorrelations/HalaszLogMean.lean",
+          "blob": "07ced41dd94728ba8f30ca778f2bf859c82ff5e8"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/SiegelZeros/Characters/MangoldtMass.lean",
+          "blob": "c3c53a379e7561dde2d7fd9f3d65adfd8413ef00"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/Ostmann/Construction/FactorialExponential.lean",
+          "blob": "3cc21678a5974744aedb8f6d7a4f5c3f165d626b"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/JointDickman/Arithmetic/LogarithmicReduction.lean",
+          "blob": "2d0aef469b2cf10b5827f76019e34318c5db1461"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/Ostmann/Characters/FactorialContradictionBounds.lean",
+          "blob": "53c14fa20e0ddca4fd8fd81280c543d6b5c2ffa0"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/CubicMoment/Estimates/GammaLeftLine.lean",
+          "blob": "e8f3ca57097e72e52c6df30b1a60d948d36303e8"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/EgyptianFractions/ChebyshevLowerSharp.lean",
+          "blob": "e074b49f1daa8bb08fbbb2e992b4663e2e4e0756"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/CubicMoment/Estimates/HeckeCompletedOrder.lean",
+          "blob": "bf4a34ac2329870dcab38388f9459198723b2e2b"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/CubicMoment/Angular/AngularDualContour.lean",
+          "blob": "9afe7031ff9cbe4cd24b00b13adc9c3a267455ee"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/CubicMoment/Estimates/HeckeDualContour.lean",
+          "blob": "ff10932ebfea624aaeffe4a1e41abccd77fc1723"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/CubicMoment/Transform/MetaplecticGammaRecurrence.lean",
+          "blob": "0fa523258195917a2b675b92060e2569190273a2"
+        },
+        {
+          "path": "lean/OAI/NumberTheory/CubicMoment/Transform/MetaplecticTransformContour.lean",
+          "blob": "7b4aad110a968179a6619668320dd2cab16090dc"
+        }
+      ]
+    }
+  },
+  "reused_GammaBetaComparison_blob": "9d30e92d96e42bc7b996799d87acab1bf3ead172",
+  "OpenAI_license": "Apache-2.0",
+  "finding": "No ready-to-use explicit zeta Euler-Maclaurin or complex Stirling remainder identified in this audit. HeckeCompletedOrder and the two dual-contour files package vertical-growth statements as hypotheses; they do not discharge the evaluator obligation.",
+  "scope": "Scoped code search and relevant file inspection, not a claim to have read every file in either library.",
+  "primary_algorithm_sources": [
+    "https://arxiv.org/abs/1309.2877",
+    "https://dlmf.nist.gov/5.11#ii"
+  ]
+}

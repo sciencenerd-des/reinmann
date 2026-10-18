@@ -12,7 +12,8 @@
 \newcommand{\coeff}{[z^n]}
 \title[Split-pair oscillation and the Toeplitz--Jacobi bridge]{Finite and analytic split-pair oscillation\\and the Toeplitz--Jacobi bridge}
 \author{Biswajit Mondal}
-\date{18 October 2026\\Working formalization draft; not peer reviewed}
+\date{18 October 2026\\Unreviewed formalization preprint}
+\keywords{Toeplitz minors, total positivity, entire functions, pole asymptotics, formal verification, Lean}
 \begin{document}
 \begin{abstract}
 We give a Lean formalization of a pole-dominance criterion for sign oscillation of contiguous Toeplitz minors. A conjugate pair at the boundary of a selected set of inverse zero moduli produces two dominant terms; a finite geometric-sum argument gives both signs at arbitrarily large ranks. Repeated-pole cancellation and an ordered subset-product estimate control determinant perturbations from an analytic remainder. For an entire function, the remainder and its coefficient identity are constructed from actual simple poles of the reciprocal. A complementary determinant identity then transfers oscillation to minors of the original ordinary Taylor coefficients, with an explicit sign convention. The theorem is standalone: it assumes simple selected zeros and an isolated boundary pair, and does not replace the general total-positivity bridges used in RH reductions. We do not prove RH or a low zero-free rectangle.
@@ -20,7 +21,7 @@ We give a Lean formalization of a pole-dominance criterion for sign oscillation 
 \maketitle
 
 \section{Scope and coefficient conventions}
-The algebraic and analytic mechanisms here are classical. Edrei's proof already relates minors of a sequence to complementary minors of its reciprocal and uses pole information in total-positivity arguments \cite{edrei}. Toeplitz determinants and Schur functions have a broader classical and modern literature; see, for example, \cite{bumpdiaconis}. Our contribution is an explicit, checked assembly of the finite determinant expansion, its analytic perturbation bound, and the bridge for actual Taylor coefficients. We make no claim to a new total-positivity characterization.
+The algebraic and analytic mechanisms here are classical. Aissen, Schoenberg and Whitney's work on totally positive sequences \cite{asw} provides the finite polynomial background. Edrei's proof already relates minors of a sequence to complementary minors of its reciprocal and uses pole information in total-positivity arguments \cite{edrei}. Toeplitz determinants and Schur functions have a broader classical and modern literature; see, for example, \cite{bumpdiaconis}. Our contribution is an explicit, checked assembly of the finite determinant expansion, its analytic perturbation bound, and the bridge for actual Taylor coefficients. We make no claim to a new total-positivity characterization.
 
 Let $F$ be entire, with $F(0)=1$, and write
 \[
@@ -173,7 +174,7 @@ This corollary is a mathematical specialization of the checked theorem; the libr
 \section{The complementary determinant bridge}
 For a formal series $f$ with $f_0=1$, finite lower-triangular Toeplitz matrices satisfy
 $T_N(f)T_N(g)=I$ whenever $fg=1$; the boundary terms are exact ordinary convolution.
-A block-coordinate proof of Jacobi's complementary determinant identity then gives the signed complementary-minor formula. It does not require either selected minor to be invertible.
+A block-coordinate proof of the classical Jacobi complementary determinant identity then gives the signed complementary-minor formula. For matrix background see \cite{hornjohnson}; \cite{bapat} states the inverse-minor identity explicitly and studies extensions. It does not require either selected minor to be invertible.
 
 For the actual analytic functions here, the formal convolution is not an additional hypothesis. Leibniz's rule, with the identity
 $\binom ni i!(n-i)!=n!$, proves that ordinary Taylor series respect multiplication. The function identity $F(z)F(z)^{-1}=1$ in a neighborhood of zero therefore gives
@@ -199,32 +200,68 @@ Module in \texttt{Reinmann/} & Declaration or role\\
 \end{tabular}
 \end{center}
 \begingroup\raggedright
-The repository is \url{https://github.com/sciencenerd-des/reinmann}.
-The source snapshot and SHA256 bindings for this draft are recorded in
-\path{research/prime_spectral/verification_2026_10_18_analytic_assembly/}.
-Run \texttt{lake build} and \texttt{bash scripts/verify\_axiom\_clean.sh}.
-For the evidence closure, run \texttt{python3} on
-\path{experiments/prime_spectral/verify_analytic_assembly_round.py}.
-The immutable manifest binds this draft, the new source modules, the receipts, and the preceding evidence closure. The axiom audit checks for project axioms and unfinished proofs, and checks the audited declarations against
-\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.\par\endgroup
+The checked theorem snapshot is the public repository commit
+\path{7376a2336c3fe9cceaa137b247962dde3ecfc6a3}; Appendix~\ref{app:repro}
+gives its toolchain, checks and release-file bindings. The 16 new declarations
+in the analytic assembly are included in the snapshot's 364-declaration axiom audit.
+\par\endgroup
 
-\section{Limits and a separate evaluator experiment}
+\section{Scope limits and the motivating DH instance}
 The isolated boundary hypothesis excludes general cross-boundary modulus ties and the simple-pole hypothesis excludes repeated selected zeros. These are substantive restrictions. The theorem remains separate from the repository's general PF-to-RH bridges; imposing these restrictions there would weaken their scope. No hypothesis in Theorem~\ref{thm:entire} is discharged for an unknown off-line zeta zero by this formalization.
 
-A separate low-height evaluator program has a Lean-certified tile centered at $1/2$, radius $1/100$. At $1/2+14i$, the current round certifies one real integration panel for 17 weighted first-theta-term integrands, in both real and imaginary components. It does not certify a complete Xi jet or a hard tile. Its measured elaboration time was 18.9 seconds, including 15.6 seconds of import overhead. A complete hard-tile time and a 35-tile runtime remain unmeasured.
+The published computational study \emph{How sensitive are finite RH criteria? Certified Davenport--Heilbronn controls} \cite{dhcontrols} motivates this formalization. Its external interval certificates locate negative bands at shift 44 for the classical Davenport--Heilbronn control. That computational instance is distinct from a Lean instantiation of Theorem~\ref{thm:entire}: the latter would need a Lean-certified zero atlas, including coverage, simplicity, conjugation and modulus separation. Such an atlas has not been formalized. No DH numerical receipt is substituted for a Lean theorem hypothesis.
 
-External Arb experiments suggest a unit-circle majorant of approximately $0.004543$ near that hard center. They are reproducible experiments, not Lean proofs of a strip bound. A first-theta-term range-quadrature pilot has width $1.24\cdot10^{-5}$ with 32,768 panels on $[1,4]$, against a target $10^{-8}$. This is a reason to change the quadrature rule before scaling the present implementation, not an impossibility theorem.
+The separate low-height Xi evaluator program has a certified small tile at $1/2$ and some additional evaluator components. It does not yet provide a Lean-certified tile at $1/2+14i$, a complete zero-free rectangle, or a proof of \texttt{ZetaNoLowStripZero (141/10)}. Those developments are outside the claims of this preprint.
 
-The auxiliary Gamma module proves
-\[
- |\Gamma(w)|\le
- \frac{\Gamma(\Repart w+n)}{\prod_{k=0}^{n-1}|w+k|}
- \quad(\Im w\ne0,\ \Repart w+n>0).
-\]
-It retains every denominator factor from the recurrence. The resulting Xi bound still displays $|\zeta(s)|$ and needs further proved numerical enclosures to become a uniform small strip majorant. Neither this component nor the panel proves
-\texttt{ZetaNoLowStripZero (141/10)}. The present paper is therefore limited to split-pair oscillation and its Toeplitz--Jacobi bridge.
+\appendix
+\section{Reproducing the formal theorem snapshot}\label{app:repro}
+The reproducibility pin is the full Git commit
+\begin{quote}\small\ttfamily
+7376a2336c3fe9cceaa137b247962dde3ecfc6a3
+\end{quote}
+in \url{https://github.com/sciencenerd-des/reinmann}. It uses
+\texttt{leanprover/lean4:v4.30.0} and Mathlib \texttt{v4.30.0}; the exact dependency
+resolution is recorded in \texttt{lake-manifest.json}. The release supplement
+includes the full active Lean source tree and dependency configuration at that
+commit, the axiom-audit script, this revised manuscript, and SHA256 file bindings.
+The manuscript revision is separate from the pinned theorem-source snapshot.
+
+From the extracted source snapshot, or from a checkout at that commit, run
+\begin{quote}\small\ttfamily\raggedright
+lake exe cache get\par
+lake build\par
+bash scripts/verify\_axiom\_clean.sh
+\end{quote}
+The full build passes. The source scan finds no unfinished proofs or project-declared
+axioms; all 364 audited declarations depend only on \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}. The public
+\href{https://github.com/sciencenerd-des/reinmann/actions/runs/39113141784}{GitHub Actions run 39113141784}
+repeats the build and axiom audit for this exact commit and completed successfully.
+Kernel checking establishes the stated propositions and their dependencies; it
+does not certify novelty, the adequacy of mathematical hypotheses, or an unproved
+numerical application.
+
+The author used AI assistance for proof development, implementation and manuscript
+preparation. This preprint has not completed external human peer review.
 
 \begin{thebibliography}{9}
+\bibitem{asw}
+M. Aissen, I. J. Schoenberg and A. M. Whitney,
+On the generating functions of totally positive sequences I,
+\emph{Journal d'Analyse Math\'ematique} \textbf{2} (1952), 93--103.
+\href{https://doi.org/10.1007/BF02786970}{doi:10.1007/BF02786970}.
+\bibitem{hornjohnson}
+R. A. Horn and C. R. Johnson, \emph{Matrix Analysis}, second edition,
+Cambridge University Press, 2013.
+\href{https://doi.org/10.1017/CBO9781139020411}{doi:10.1017/CBO9781139020411}.
+\bibitem{bapat}
+R. B. Bapat, Outer inverses: Jacobi type identities and nullities of submatrices,
+\emph{Linear Algebra and its Applications} \textbf{361} (2003), 107--120.
+\href{https://doi.org/10.1016/S0024-3795(02)00317-8}{doi:10.1016/S0024-3795(02)00317-8}.
+\bibitem{dhcontrols}
+B. Mondal, \emph{How sensitive are finite RH criteria? Certified Davenport--Heilbronn controls},
+unreviewed preprint, 2026.
+\href{https://doi.org/10.5281/zenodo.23401370}{doi:10.5281/zenodo.23401370}.
 \bibitem{edrei}
 A. Edrei, Proof of a conjecture of Schoenberg on the generating function of a totally positive sequence, \emph{Canadian Journal of Mathematics} \textbf{5} (1953), 86--94.
 \href{https://doi.org/10.4153/CJM-1953-010-3}{doi:10.4153/CJM-1953-010-3}.

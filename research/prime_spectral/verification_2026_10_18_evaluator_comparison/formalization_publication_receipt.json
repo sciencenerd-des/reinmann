@@ -1,0 +1,36 @@
+{
+  "id": 23449490,
+  "status": "published_and_public_files_verified",
+  "files": [
+    {
+      "name": "formal-split-pair.pdf",
+      "bytes": 105865,
+      "sha256": "afd4f7274f77973c719a557490dc194d7981dca705f94c77451c7c6144a83b00",
+      "download_sha256": "afd4f7274f77973c719a557490dc194d7981dca705f94c77451c7c6144a83b00"
+    },
+    {
+      "name": "formal-split-pair-source-7376a23.tar.gz",
+      "bytes": 480445,
+      "sha256": "2de1542c9a119695abdda37a8fb8d5e93bfd50ddc198505b7879efba4cf9b105",
+      "download_sha256": "2de1542c9a119695abdda37a8fb8d5e93bfd50ddc198505b7879efba4cf9b105"
+    },
+    {
+      "name": "README_RELEASE.txt",
+      "bytes": 1532,
+      "sha256": "22269cd146bcdeb6a3334ec6764d3695d231816727f5c68e7565c8c8ec758b27",
+      "download_sha256": "22269cd146bcdeb6a3334ec6764d3695d231816727f5c68e7565c8c8ec758b27"
+    },
+    {
+      "name": "FORMAL_SPLIT_PAIR_RELEASE.json",
+      "bytes": 724,
+      "sha256": "5b0e259c2a16b75ec91afffb432572ec1ca5b47e4642a1ecc125e9e7c24826a2",
+      "download_sha256": "5b0e259c2a16b75ec91afffb432572ec1ca5b47e4642a1ecc125e9e7c24826a2"
+    }
+  ],
+  "reserved_doi": "10.5281/zenodo.23449490",
+  "source_commit": "7376a2336c3fe9cceaa137b247962dde3ecfc6a3",
+  "doi": "10.5281/zenodo.23449490",
+  "record_url": "https://zenodo.org/records/23449490",
+  "public_files_verified": true,
+  "anonymous_public_file_downloads_verified": true
+}

@@ -3,6 +3,7 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.GammaReflectionMajorant
 import Reinmann.AnalyticSplitPair
 import Reinmann.AnalyticToeplitzJacobi
 import Reinmann.GammaHeightMajorant
@@ -511,3 +512,13 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.GammaHeightMajorant.gamma_norm_le_shift_product
 #print axioms Reinmann.GammaHeightMajorant.gamma_norm_le_height
 #print axioms Reinmann.GammaHeightMajorant.xi_norm_le_gamma_product
+
+-- Reflection anchors and the one-sided Beta comparison.
+#print axioms Reinmann.GammaReflectionMajorant.beta_norm_le_real
+#print axioms Reinmann.GammaReflectionMajorant.gamma_real_shift_ratio_bound
+#print axioms Reinmann.GammaReflectionMajorant.gamma_norm_le_shifted_anchor
+#print axioms Reinmann.GammaReflectionMajorant.gamma_reflection_norm_product
+#print axioms Reinmann.GammaReflectionMajorant.gamma_half_norm_sq
+#print axioms Reinmann.GammaReflectionMajorant.gamma_half_norm_sq_le_exp
+#print axioms Reinmann.GammaReflectionMajorant.gamma_half_norm_le_sqrt_exp
+#print axioms Reinmann.GammaReflectionMajorant.gamma_one_norm_sq

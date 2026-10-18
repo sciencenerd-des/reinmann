@@ -1,0 +1,235 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Repart}{\operatorname{Re}}
+\newcommand{\coeff}{[z^n]}
+\title[Split-pair oscillation and the Toeplitz--Jacobi bridge]{Finite and analytic split-pair oscillation\\and the Toeplitz--Jacobi bridge}
+\author{Biswajit Mondal}
+\date{18 October 2026\\Working formalization draft; not peer reviewed}
+\begin{document}
+\begin{abstract}
+We give a Lean formalization of a pole-dominance criterion for sign oscillation of contiguous Toeplitz minors. A conjugate pair at the boundary of a selected set of inverse zero moduli produces two dominant terms; a finite geometric-sum argument gives both signs at arbitrarily large ranks. Repeated-pole cancellation and an ordered subset-product estimate control determinant perturbations from an analytic remainder. For an entire function, the remainder and its coefficient identity are constructed from actual simple poles of the reciprocal. A complementary determinant identity then transfers oscillation to minors of the original ordinary Taylor coefficients, with an explicit sign convention. The theorem is standalone: it assumes simple selected zeros and an isolated boundary pair, and does not replace the general total-positivity bridges used in RH reductions. We do not prove RH or a low zero-free rectangle.
+\end{abstract}
+\maketitle
+
+\section{Scope and coefficient conventions}
+The algebraic and analytic mechanisms here are classical. Edrei's proof already relates minors of a sequence to complementary minors of its reciprocal and uses pole information in total-positivity arguments \cite{edrei}. Toeplitz determinants and Schur functions have a broader classical and modern literature; see, for example, \cite{bumpdiaconis}. Our contribution is an explicit, checked assembly of the finite determinant expansion, its analytic perturbation bound, and the bridge for actual Taylor coefficients. We make no claim to a new total-positivity characterization.
+
+Let $F$ be entire, with $F(0)=1$, and write
+\[
+ F(z)=\sum_{k\ge0}\alpha_k z^k,\qquad
+ \frac1{F(z)}=\sum_{k\ge0}h_k z^k
+\]
+near zero. These are \emph{ordinary} coefficients:
+$\alpha_k=F^{(k)}(0)/k!$. They are not the classical Jensen coefficients $k!\alpha_k$.
+Set $\mu_k=(-1)^k\alpha_k$, so $\sum\mu_kz^k=F(-z)$, and extend $\mu_k=0$ for $k<0$. Define
+\[
+ T_{r,s}(\mu)=\det(\mu_{s+i-j})_{0\le i,j<r},\qquad
+ D_s(n)=\det(h_{n+i+s-1-j})_{0\le i,j<s}.
+\]
+Here $r$ is the determinant size and $s$ the shift. Throughout the oscillation statements $s\ge1$. The complementary identity proved below is
+\begin{equation}\label{eq:jacobi}
+ D_s(n)=T_{n+s-1,s}(\mu).
+\end{equation}
+Thus a fixed, small reciprocal determinant controls original minors of increasing size. In the formal code the index is $n+(s-1)$, with natural-number subtraction.
+
+The analytic theorem uses only a finite zero atlas in one closed disk. A genus-zero entire function satisfying the hypotheses is an application. We do not formalize a general infinite canonical-product factorization, nor allow arbitrary multiple poles or arbitrary ties at the selected modulus boundary.
+
+\section{Finite pole sums and oscillation}
+Take distinct complex numbers $z_1,\ldots,z_m$ and nonzero residues $c_1,\ldots,c_m$. Put
+\[
+ u_k=\sum_{\ell=1}^m c_\ell z_\ell^k,\qquad
+ M_s(n)=(u_{n+i+s-1-j})_{0\le i,j<s}.
+\]
+For each subset $I$ of size $s$, put
+\[
+ Z_I=\prod_{\ell\in I}z_\ell,\qquad
+ A_I=\det\left(\sum_{\ell\in I}c_\ell z_\ell^{i+s-1-j}\right)_{i,j<s}.
+\]
+Multilinearity, followed by cancellation of repeated pole choices, gives the exact expansion
+\begin{equation}\label{eq:subset}
+ \det M_s(n)=\sum_{|I|=s} A_I Z_I^n.
+\end{equation}
+If $I=\{\ell_1,\ldots,\ell_s\}$, the coefficient is
+\begin{equation}\label{eq:leading}
+ A_I=(-1)^{s(s-1)/2}
+       \left(\prod_{j=1}^s c_{\ell_j}\right)
+       \prod_{i<j}(z_{\ell_j}-z_{\ell_i})^2.
+\end{equation}
+In particular it is nonzero. The squared Vandermonde makes this formula independent of the chosen enumeration.
+
+\begin{lemma}[Finite dominant conjugate pair]\label{lem:finite}
+Suppose conjugation permutes both the $z_\ell$ and their $c_\ell$ by the same permutation $\sigma$. Let $S$ have size $s$, let $S'=\sigma(S)\ne S$, and suppose
+\[
+ \Im Z_S\ne0,\qquad
+ |Z_I|<|Z_S|\quad (|I|=s,\ I\notin\{S,S'\}).
+\]
+If a complex sequence $E_n$ satisfies $E_n/|Z_S|^n\longrightarrow0$, then
+$\Repart(\det M_s(n)+E_n)$ has both signs for arbitrarily large $n$.
+\end{lemma}
+
+\begin{proof}
+Conjugation gives $A_{S'}Z_{S'}^n=\overline{A_SZ_S^n}$.
+After division by $|Z_S|^n$, all other terms tend to zero. The remaining expression is
+$2\Repart(A_Sw^n)$, where $w=Z_S/|Z_S|$ lies on the unit circle and is nonreal.
+Finite geometric sums bound the partial sums of $w^n$ and $w^{2n}$ independently of their length. Consequently the mean of $\Repart(A_Sw^n)$ tends to zero, while the mean of its square tends to $|A_S|^2/2>0$. These bounds force values of both signs bounded away from zero arbitrarily far out, and a term tending to zero cannot remove them. The Lean proof uses these elementary geometric-sum bounds; it needs no irrational-rotation theorem.
+\end{proof}
+
+This argument proves unbounded occurrences of both signs. It does not identify the first failing rank, or prove a finite-rank period formula.
+
+\section{Analytic-error rows}
+A naive entrywise estimate can repeat the largest pole modulus in several rows and lose the required decay. The proof instead cancels repeated poles before estimating mixed terms.
+
+Assume $s\ge1$, $|S|=s$, and numbers $d>0$, $0\le\rho<d$ satisfy
+\[
+ |z_\ell|\ge d\quad(\ell\in S),\qquad
+ |z_\ell|\le d\quad(\ell\notin S).
+\]
+Write $D=\prod_{\ell\in S}|z_\ell|$. If a distinct pole subset $I$ is missing $k$ entries, so $|I|+k=s$, then
+\begin{equation}\label{eq:ordered}
+ \left(\prod_{\ell\in I}|z_\ell|\right)d^k\le D.
+\end{equation}
+Indeed, divide every modulus by $d$: selected factors are at least one and all other factors at most one. This proves the comparison without requiring an ordering among moduli within $S$.
+
+\begin{lemma}[Mixed-row determinant bound]\label{lem:mixed}
+Suppose $|e_k|\le C\rho^k$, $|c_\ell|\le C$, $C\ge0$, and
+$B\ge1$ bounds both $\rho$ and every $|z_\ell|$. Set
+$K=CB^{2s-2}$. Then
+\[
+ \frac{\left|\det(u_{n+i+s-1-j}+e_{n+i+s-1-j})_{i,j<s}
+                   -\det M_s(n)\right|}{D^n}
+ \le (m+1)^s s!K^s\left(\frac{\rho}{d}\right)^n.
+\]
+\end{lemma}
+
+\begin{proof}
+Expand each row into its $m$ pole contributions and one error contribution. Subtracting the pure pole determinant leaves only choices with an error row. Two occurrences of the same pole give proportional rows, hence zero determinant, even if other rows are errors. For a surviving choice, \eqref{eq:ordered} bounds the product of distinct pole weights; the error rows contribute powers of $\rho$. At least one such row supplies the factor $\rho/d$, and additional error rows cannot increase it. The bounded offsets in the coefficient indices contribute at most $K$ per row. Leibniz's formula bounds the determinant by $s!$ times the product of its row weights, and there are at most $(m+1)^s$ choices.
+\end{proof}
+
+Since $\rho/d<1$, this establishes the normalized determinant limit required in Lemma~\ref{lem:finite}. It is a proved consequence of coefficient bounds, rather than an assumed determinant asymptotic.
+
+\section{Entire-function assembly}
+Let $a_1,\ldots,a_m$ be distinct nonzero simple zeros of $F$, closed under conjugation. Assume every zero in $|z|\le R$ is on this list, where $R>0$. The list may contain additional zeros outside that disk. Subtracting the actual principal parts constructs a remainder analytic on a neighborhood of the closed disk:
+\[
+ \frac1{F(z)}
+   =\sum_{\ell=1}^m\frac{1/F'(a_\ell)}{z-a_\ell}+H(z)
+\]
+away from the poles. Removable single-pole germs are patched into one analytic remainder. Local equality near zero gives the actual coefficient identity
+\[
+ h_k=\sum_{\ell=1}^m c_\ell z_\ell^k+e_k,\qquad
+ z_\ell=a_\ell^{-1},\qquad
+ c_\ell=-\frac1{a_\ell F'(a_\ell)},\qquad
+ |e_k|\le C_0R^{-k}.
+\]
+The Cauchy bound and this identity are proved in Lean. The residues are not freely chosen model data at this stage.
+
+\begin{theorem}[Isolated boundary pair]\label{thm:entire}
+Let $F$ be entire, $F(0)=1$, and
+$F(\overline z)=\overline{F(z)}$. Suppose the zero list and disk above are given.
+Let $\sigma$ be its conjugation permutation, and let $S$ have size $s$.
+Assume there are indices $p\in S$ and $q\notin S$ such that
+\[
+ \sigma(p)=q,\quad
+ \sigma(S)=(S\setminus\{p\})\cup\{q\},\quad
+ |a_p|<R,\quad
+ \Im\prod_{\ell\in S}a_\ell^{-1}\ne0.
+\]
+Assume also the boundary order and its isolated tie:
+\[
+ |a_y^{-1}|\le |a_x^{-1}|
+       \quad(x\in S,\ y\notin S),
+\]
+with equality only when $x=p$ and $y=q$.
+Then for every $M\in\N$ there are $r_-,r_+\ge M$ such that
+\[
+ T_{r_-,s}(\mu)<0,\qquad T_{r_+,s}(\mu)>0,
+ \qquad \mu_k=(-1)^kF^{(k)}(0)/k!.
+\]
+\end{theorem}
+
+\begin{proof}
+Set $d=|a_p^{-1}|$ and $\rho=R^{-1}$; then $\rho<d$.
+The boundary assumptions give the top-subset modulus conditions of Lemma~\ref{lem:mixed}. They also imply that $S$ and $\sigma(S)$ are the only size-$s$ subsets attaining the maximal product modulus. Every other subset has a strict gap, proved by the finite subset-exchange argument. Conjugation symmetry differentiates to
+$F'(\overline z)=\overline{F'(z)}$, giving the required residue symmetry. Simplicity makes every residue nonzero, and distinct zeros make the Vandermonde nonzero.
+The actual coefficient identity and Lemma~\ref{lem:mixed} give a normalized error tending to zero, so Lemma~\ref{lem:finite} applies to $D_s(n)$. Finally \eqref{eq:jacobi} transfers both signs to the original minors. Real-type symmetry makes these minors real. The Lean statement uses their real parts, avoiding a separate real-valued coefficient interface.
+\end{proof}
+
+\begin{corollary}[Finite products]
+Theorem~\ref{thm:entire} applies to
+$F(z)=\prod_{\ell=1}^m(1-z/a_\ell)$ with distinct nonzero conjugation-stable zeros, whenever the stated isolated boundary conditions hold and $R>|a_p|$ covers the needed zeros.
+\end{corollary}
+\begin{proof}
+This polynomial is entire, has constant coefficient one, has precisely the listed simple zeros, and has the stated conjugation symmetry. The analytic theorem then applies.
+\end{proof}
+This corollary is a mathematical specialization of the checked theorem; the library also contains the earlier finite pole-sum theorem. We do not claim a separate new formal instantiation of arbitrary product notation in this round.
+
+\section{The complementary determinant bridge}
+For a formal series $f$ with $f_0=1$, finite lower-triangular Toeplitz matrices satisfy
+$T_N(f)T_N(g)=I$ whenever $fg=1$; the boundary terms are exact ordinary convolution.
+A block-coordinate proof of Jacobi's complementary determinant identity then gives the signed complementary-minor formula. It does not require either selected minor to be invertible.
+
+For the actual analytic functions here, the formal convolution is not an additional hypothesis. Leibniz's rule, with the identity
+$\binom ni i!(n-i)!=n!$, proves that ordinary Taylor series respect multiplication. The function identity $F(z)F(z)^{-1}=1$ in a neighborhood of zero therefore gives
+\[
+ \operatorname{Taylor}(F)\operatorname{Taylor}(1/F)=1.
+\]
+Applying the signed complementary identity to $f(z)=F(-z)$ gives \eqref{eq:jacobi}. The explicit rescaling cancels the determinant sign. Omitting it would give the wrong coefficient convention.
+
+\section{Checked declarations and reproducibility}
+The project uses Lean and Mathlib v4.30.0. The main declarations in this assembly are:
+\begin{center}\footnotesize
+\begin{tabular}{p{.31\textwidth}p{.61\textwidth}}
+\toprule
+Module in \texttt{Reinmann/} & Declaration or role\\
+\midrule
+\texttt{SplitPairDeterminant} & \texttt{subset\_expansion}, \texttt{coefficient\_eq\_vandermonde}\\
+\texttt{SplitPairMixedRows} & \texttt{coefficient\_determinant\_bound}\\
+\texttt{SplitPairPatchedRemainder} & Patches the removable pole germs\\
+\texttt{SplitPairCoefficientIdentity} & \texttt{actual\_reciprocal\_coefficient\_error}\\
+\texttt{AnalyticSplitPair} & \texttt{entire\_split\_pair\_of\_boundary}\\
+\texttt{AnalyticToeplitzJacobi} & \texttt{reciprocalMinor\_eq\_original},\newline \texttt{entire\_original\_both\_signs}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begingroup\raggedright
+The repository is \url{https://github.com/sciencenerd-des/reinmann}.
+The source snapshot and SHA256 bindings for this draft are recorded in
+\path{research/prime_spectral/verification_2026_10_18_analytic_assembly/}.
+Run \texttt{lake build} and \texttt{bash scripts/verify\_axiom\_clean.sh}.
+For the evidence closure, run \texttt{python3} on
+\path{experiments/prime_spectral/verify_analytic_assembly_round.py}.
+The immutable manifest binds this draft, the new source modules, the receipts, and the preceding evidence closure. The axiom audit checks for project axioms and unfinished proofs, and checks the audited declarations against
+\texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.\par\endgroup
+
+\section{Limits and a separate evaluator experiment}
+The isolated boundary hypothesis excludes general cross-boundary modulus ties and the simple-pole hypothesis excludes repeated selected zeros. These are substantive restrictions. The theorem remains separate from the repository's general PF-to-RH bridges; imposing these restrictions there would weaken their scope. No hypothesis in Theorem~\ref{thm:entire} is discharged for an unknown off-line zeta zero by this formalization.
+
+A separate low-height evaluator program has a Lean-certified tile centered at $1/2$, radius $1/100$. At $1/2+14i$, the current round certifies one real integration panel for 17 weighted first-theta-term integrands, in both real and imaginary components. It does not certify a complete Xi jet or a hard tile. Its measured elaboration time was 18.9 seconds, including 15.6 seconds of import overhead. A complete hard-tile time and a 35-tile runtime remain unmeasured.
+
+External Arb experiments suggest a unit-circle majorant of approximately $0.004543$ near that hard center. They are reproducible experiments, not Lean proofs of a strip bound. A first-theta-term range-quadrature pilot has width $1.24\cdot10^{-5}$ with 32,768 panels on $[1,4]$, against a target $10^{-8}$. This is a reason to change the quadrature rule before scaling the present implementation, not an impossibility theorem.
+
+The auxiliary Gamma module proves
+\[
+ |\Gamma(w)|\le
+ \frac{\Gamma(\Repart w+n)}{\prod_{k=0}^{n-1}|w+k|}
+ \quad(\Im w\ne0,\ \Repart w+n>0).
+\]
+It retains every denominator factor from the recurrence. The resulting Xi bound still displays $|\zeta(s)|$ and needs further proved numerical enclosures to become a uniform small strip majorant. Neither this component nor the panel proves
+\texttt{ZetaNoLowStripZero (141/10)}. The present paper is therefore limited to split-pair oscillation and its Toeplitz--Jacobi bridge.
+
+\begin{thebibliography}{9}
+\bibitem{edrei}
+A. Edrei, Proof of a conjecture of Schoenberg on the generating function of a totally positive sequence, \emph{Canadian Journal of Mathematics} \textbf{5} (1953), 86--94.
+\href{https://doi.org/10.4153/CJM-1953-010-3}{doi:10.4153/CJM-1953-010-3}.
+\bibitem{bumpdiaconis}
+D. Bump and P. Diaconis, Toeplitz minors, \emph{Journal of Combinatorial Theory, Series A} \textbf{97} (2002), 252--271.
+\href{https://doi.org/10.1006/jcta.2001.3214}{doi:10.1006/jcta.2001.3214}.
+\end{thebibliography}
+\end{document}

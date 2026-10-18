@@ -1,0 +1,7 @@
+{
+  "status": "layout_checked_after_references_and_reproducibility_revision",
+  "pdf_sha256": "afd4f7274f77973c719a557490dc194d7981dca705f94c77451c7c6144a83b00",
+  "pages_rendered_and_inspected": 5,
+  "renderer": "pdftoppm -scale-to 1400 -png",
+  "substantive_external_human_review_completed": false
+}

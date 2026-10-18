@@ -1,0 +1,24 @@
+⚠ [3437/3438] Replayed Reinmann.GammaHeightMajorant
+warning: Reinmann/GammaHeightMajorant.lean:51:18: missing space in the source
+
+This part of the code
+  's.re+n) :'
+should be written as
+  's.re + n)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/GammaHeightMajorant.lean:67:26: missing space in the source
+
+This part of the code
+  's.re+n) :'
+should be written as
+  's.re + n)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/GammaHeightMajorant.lean:98:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+✔ [3438/3438] Built Reinmann.GammaReflectionMajorant (33s)
+Build completed successfully (3438 jobs).

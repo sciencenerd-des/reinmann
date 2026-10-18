@@ -123,3 +123,5 @@ import Reinmann.SplitPairCoefficientIdentity
 import Reinmann.AnalyticSplitPair
 import Reinmann.AnalyticToeplitzJacobi
 import Reinmann.GammaHeightMajorant
+
+import Reinmann.GammaReflectionMajorant

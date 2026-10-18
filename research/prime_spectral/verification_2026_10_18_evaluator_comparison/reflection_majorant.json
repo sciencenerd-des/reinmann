@@ -1,0 +1,18 @@
+{
+  "status": "external_reflection_Beta_majorant",
+  "centre": [
+    "1/2",
+    "14"
+  ],
+  "circle_radius": 1,
+  "arcs": 1024,
+  "bits": 192,
+  "reflection_Beta_Xi_upper": "[0.0124926503601801159775935281970044473377686698687128842941 +/- 3.43e-60]",
+  "shift_product_Xi_upper": "[0.0166544340704481985469615303409303525113676331982513967755 +/- 3.26e-59]",
+  "finite_EM_zeta_upper": "[0.809996200437689132637482757044813884107187152268142644927 +/- 5.06e-60]",
+  "seconds": 0.04494237492326647,
+  "source_sha256": "85cc5e1bf7d92d5f2080f118141cc13b59a22c6cf86d4a90c880801ce06972dd",
+  "zeta_source_sha256": "f982f760360cc934efe98c93a85ee2afb79db5f963587acb225135917a34b25a",
+  "Lean_uniform_numeric_majorant_certified": false,
+  "scope": "Interval arc cover, reflection and Beta comparison with external real Gamma and EM zeta enclosures. No inference divides by an upper Gamma bound. This is not a Lean strip certificate."
+}

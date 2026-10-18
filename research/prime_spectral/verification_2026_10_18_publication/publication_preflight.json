@@ -1,0 +1,96 @@
+{
+  "status": "ready_to_publish_unreviewed_complete_fresh_verification_passed",
+  "id": 23401370,
+  "checked_at_utc": "2026-10-18T04:45:46.615432+00:00",
+  "submitted": false,
+  "files": 76,
+  "default_preview": "dh_controls_paper.pdf",
+  "metadata": {
+    "title": "How sensitive are finite RH criteria? Certified Davenport\u2013Heilbronn controls",
+    "publication_date": "2026-10-18",
+    "description": "<p><strong>Unreviewed preprint: no completed external human peer review is claimed.</strong></p><p>This computational preprint calibrates finite Toeplitz and Weil-form criteria against Davenport\u2013Heilbronn character combinations and Epstein zeta controls. A complete classical DH atlas through height 340 yields a PF435 sufficient sector guarantee. The targeted shift-44 column has certified negative bands 664\u20131099 and 1536\u20131972; the second band satisfies a locally recorded forecast. Nearby shifts 40\u201348 show no earlier failure in the requested tested strip. No globally first failing minor is claimed.</p><p>Seven-control negative-support upper bounds include a conductor-17 forecast test. A further exact rational mixture path lowers the lowest off-line offset from 0.03 to 0.004; common-degree normalized support upper bounds increase from 0.5699 to 0.6597, with small changes at a larger retained degree. Four points on one path do not determine boundedness, divergence or an asymptotic rate as the offset tends to zero. Fits remain descriptive, positive finite sections supply no full-window lower bound, and finite-atlas attribution does not bound the infinite tail.</p><p>The supplement contains editable source, compact certificates and fresh receipts for Liu frozen release b6cd218, with A retained-source/matrix/residual replay and B clean FULL/FAST replay. AI assistance and AI technical review are disclosed. The author explicitly authorized release without a completed human read on 18 October 2026. No universal zero-free region or proof of the Riemann Hypothesis is claimed.</p><p>Two data-checked figures show the folded-zero sector geometry and finite-atlas cancellation, with a reproducible plotting source. The underlying scientific certificates are unchanged. This archival release is an unreviewed preprint.</p><p>The complete supplement consists of an immutable scientific capsule reconstructed from 70 checksum-bound parts, plus dh-controls-publication-update-2026-10-18.tar.gz containing the final PDF, source and release disclosure. Follow DH_SUPPLEMENT_README.txt and RELEASE_README.md; verify the complete base and publication update before numerical replay.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Mondal, Biswajit",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "Davenport\u2013Heilbronn function",
+      "Toeplitz minors",
+      "total positivity",
+      "Weil quadratic form",
+      "validated numerics",
+      "negative controls",
+      "Riemann Hypothesis"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/sciencenerd-des/reinmann",
+        "relation": "isSupplementedBy",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://arxiv.org/abs/1208.5607",
+        "relation": "references",
+        "resource_type": "publication-preprint",
+        "scheme": "url"
+      }
+    ],
+    "version": "1.0.0",
+    "license": "cc-by-4.0",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.23401370",
+      "recid": 23401370
+    }
+  },
+  "fresh_base_receipt_sha256": "3d9bac718c7d84d1666a780c473393f26adcf75727e20a638f3ec375cf40f6b8",
+  "publication_update_archive_sha256": "0bcdd795152f1f4042edd67e877fd4b27e3e164a96cd5fea620c2f77d8c546a0",
+  "final_pdf_sha256": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+  "verified_final_files": [
+    {
+      "filename": "DH_SUPPLEMENT_README.txt",
+      "bytes": 1804,
+      "sha256": "ba24f8552b8867e7d8e55687f5749529d2755e67f8e94134aa4928ac116c88ef",
+      "server_md5": "c005013aeb75a2534f69aeafc7c2fbfb"
+    },
+    {
+      "filename": "dh-controls-publication-update-2026-10-18.tar.gz",
+      "bytes": 463447,
+      "sha256": "0bcdd795152f1f4042edd67e877fd4b27e3e164a96cd5fea620c2f77d8c546a0",
+      "server_md5": "eb448e782a993c636412bac216a9bed7"
+    },
+    {
+      "filename": "dh_controls_paper.pdf",
+      "bytes": 246381,
+      "sha256": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+      "server_md5": "39b864f4e3701c9c708421ad7e73a61c"
+    },
+    {
+      "filename": "DH_PUBLICATION_UPDATE.json",
+      "bytes": 3855,
+      "sha256": "54d7416e44cddc6e68a10be596fbafb713e69f8b4bd7d626e9f01cb11f996f10",
+      "server_md5": "736d26dfef5ba1a14831184c62df9690"
+    },
+    {
+      "filename": "reassemble_dh_supplement.py",
+      "bytes": 1633,
+      "sha256": "b69219973fed91949244ba07988aa77a46c75950a2544bdadfec53b90a482760",
+      "server_md5": "419c4fc3c3a79a130ae24a749d86e689"
+    },
+    {
+      "filename": "DH_SUPPLEMENT_PARTS.json",
+      "bytes": 13661,
+      "sha256": "d26d712cf1790319713b22f86924e6d0dc38104f98b93b3b2967884d1b236978",
+      "server_md5": "7c3095c112badf7c9c2cbe400b853320"
+    }
+  ],
+  "composite_replay_exit_code": 0,
+  "author_waiver_verified": true,
+  "human_review_completed": false
+}

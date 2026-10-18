@@ -1,0 +1,16 @@
+{
+  "status": "publication_verified_on_public_record_without_authentication",
+  "verified_at_utc": "2026-10-18T04:46:40.256170+00:00",
+  "id": 23401370,
+  "doi": "10.5281/zenodo.23401370",
+  "record_url": "https://zenodo.org/records/23401370",
+  "doi_url": "https://doi.org/10.5281/zenodo.23401370",
+  "files": 76,
+  "publication_date": "2026-10-18",
+  "human_review_completed": false,
+  "author_waived_human_read_requirement": true,
+  "release_type": "unreviewed preprint",
+  "public_pdf_sha256": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+  "preflight_sha256": "5d9aad0f623ce7bd633ec49b459aa7a309e517cd57970e6bbbc2e2432ad9501c",
+  "complete_supplement_verified": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "rebuilt_19_page_unreviewed_pdf_rendered_and_visually_inspected",
+  "source_date_epoch": 1792281600,
+  "pages": 19,
+  "pdf_sha256": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+  "pdf_bytes": 246381,
+  "source_sha256": "cb16e9b0d2913233e3dc1739c029f0245adf0af0a793fef5e161dc26b2bb4894",
+  "all_pages_rendered": true,
+  "layout_review": "All 19 pages inspected in contact sheet; no clipping or overlapping text/figures observed. Both validated added figures remain present. Only underfull paragraph warnings in build log.",
+  "claims_scope": "No mathematical edits or new numerical searches. Explicitly unreviewed; human-read prerequisite waived by author."
+}

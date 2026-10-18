@@ -1,0 +1,17 @@
+{
+  "id": 23401370,
+  "submitted": false,
+  "replacement_authorized": true,
+  "files": [
+    {
+      "filename": "dh_controls_paper.pdf",
+      "previous_md5": "85f9f13a5572b18a8151a9ce9bd1b38e",
+      "verified_local_backup": "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/dh_controls_paper.pdf"
+    },
+    {
+      "filename": "DH_SUPPLEMENT_README.txt",
+      "previous_md5": "b1465725f41ee85d707c5d3b511e89f9",
+      "verified_local_backup": "research/prime_spectral/verification_2026_10_18_draft_repair/DH_SUPPLEMENT_README.txt"
+    }
+  ]
+}

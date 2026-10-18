@@ -1,0 +1,56 @@
+--- historical_96d6023/paper/dh_controls_paper.tex
++++ paper/dh_controls_paper.tex
+@@ -22,7 +22,7 @@
+ \DeclareMathOperator{\Ima}{Im}
+ \title{\bfseries How sensitive are finite RH criteria?\\Certified Davenport--Heilbronn controls}
+ \author{Biswajit Mondal}
+-\date{October 16, 2026}
++\date{October 18, 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+@@ -56,7 +56,7 @@
+ \noindent\textbf{MSC 2020:} 11M26, 11M41, 15B05.
+ 
+ \noindent\textbf{Supplement identifier:} \url{https://doi.org/10.5281/zenodo.23401370}
+-(reserved for the author-controlled archival draft at preparation).
++(paper and reproducible scientific supplement).
+ 
+ \section{Introduction}
+ An all-orders positivity criterion can characterize the Riemann Hypothesis
+@@ -123,7 +123,8 @@
+ These are calibration results. The analytic reductions use classical
+ functional equations, factorization and sector theorems; the numerical
+ enclosures use Arb. An independent AI-agent review checked the split-pair argument and selected
+-numerical certificates. Independent external human review remains pending.
++numerical certificates. This is an unreviewed preprint; no completed external
++human review is claimed.
+ 
+ \section{Normalizations and the finite tests}\label{sec:normalization}
+ \subsection{Character combinations and Epstein controls}
+@@ -856,9 +857,9 @@
+ enclosures. The supplement records source hashes, input hashes, exact
+ rational trial coefficients, pivot intervals, and replay commands.
+ Regenerable full matrix arrays are omitted from compact records; the initial
+-generator is preserved by hash. The paper and compact supplement have a reserved archival identifier;
+-publication is controlled by the author. External human analytic review
+-remains pending.
++generator is preserved by hash. The paper and complete supplement are
++archived under the identifier above. The author authorized release as an
++unreviewed preprint; no completed external human analytic review is claimed.
+ 
+ The classical atlas uses \code{dh_zero_atlas.py} and
+ \code{replay_dh_atlas.py}. The existing solid grid and complementary checks
+@@ -934,9 +935,9 @@
+ calculations and drafting. A separate AI agent reviewed the split-pair
+ argument, replayed the targeted initial column at higher precision and
+ reassembled the small-offset negative witness. This is not human peer review;
+-the author remains responsible for the manuscript. External human review
+-of the atlas/sector and split-pair arguments is required before the
+-author-controlled publication step.
++the author remains responsible for the manuscript. The author authorized
++publication as an unreviewed preprint on October 18, 2026. No completed
++external human review of the atlas/sector or split-pair arguments is claimed.
+ 
+ \appendix
+ \section{Entry formulas and removable-point contour images}

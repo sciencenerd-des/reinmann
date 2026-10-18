@@ -7,14 +7,14 @@ This supplement accompanies *How sensitive are finite RH criteria? Certified Dav
 From the extracted supplement root, use Python 3.12 with python-flint 0.8.0, NumPy and mpmath. For example:
 
 ```
-uv run --with python-flint==0.8.0 --with numpy --with mpmath --python 3.12 python experiments/prime_spectral/verify_figure_revision.py
+python3 verify_publication_update.py
 uv run --with python-flint==0.8.0 --with numpy --with mpmath --python 3.12 python experiments/prime_spectral/test_split_pair_round.py
 uv run --with python-flint==0.8.0 --with numpy --with mpmath --python 3.12 python experiments/prime_spectral/test_near_line_control.py
 uv run --with python-flint==0.8.0 --with numpy --with mpmath --python 3.12 python experiments/prime_spectral/test_second_band_and_path.py
 uv run --with python-flint==0.8.0 --with numpy --with mpmath --python 3.12 python experiments/prime_spectral/test_dh_release_bundle.py
 ```
 
-The first command checks the current manifest and declared source/input hashes. The three scientific test scripts perform nine checks, including direct complementary minors, both second-band boundaries, positive-coefficient tail enclosures and fresh exact-witness reconstructions. The bundle script adds two checks: matching contents are accepted and stale contents rejected before upload. The three new-round tests supplement the eight preceding checks. The manifest is an integrity and recorded-outcome check, supplementary to numerical replay. It does not replace the written proof or certify a new independent arithmetic backend.
+The first command checks the immutable scientific base against its original hashes, the declared publication-only replacements and the final release files. Historical full-paper verifiers should be run on the unmodified base archive; after applying the publication update their paper-hash checks intentionally no longer describe the current edition. The three scientific test scripts perform nine checks, including direct complementary minors, both second-band boundaries, positive-coefficient tail enclosures and fresh exact-witness reconstructions. The bundle script adds two checks: matching contents are accepted and stale contents rejected before upload. The three new-round tests supplement the eight preceding checks. The manifest is an integrity and recorded-outcome check, supplementary to numerical replay. It does not replace the written proof or certify a new independent arithmetic backend.
 
 The preceding rounds' historical full-artifact manifests bind their then-current paper, not this revised manuscript. They are not the current paper's acceptance gates. The current verifier checks the preceding immutable scientific artifacts, recursively checks the new input closure, and binds this revised paper separately. The preceding full-paper manifests are historical records; running their old default verifier against this revised paper is not the current acceptance gate.
 
@@ -47,6 +47,6 @@ Compile `paper/dh_controls_paper.tex` with Tectonic from its directory; the tabl
 
 No all-support arithmetic estimate or proof of RH is claimed. Rank 664 at shift 44 is first among the explicitly listed DH contiguous minors tested in this study, not globally first among all minors. The locally recorded second-band forecast passed at ranks1536–1972; it was not independently publicly time-stamped. The four-point collision path is inconclusive about the actual b→0 limit.
 
-Publication remains on hold for the human read requested by the author. The reviewer shortlist/request and Liu repository note are local unsent drafts; no one has been contacted. The post-publication Lean targets are scoped, not implemented in this calibration round.
+The author explicitly authorized publication as an unreviewed preprint on 18 October 2026. A human-review request was sent on 17 October; no completed human read is claimed. No reviewer follow-up or Liu repository note was posted. Formal developments are tracked separately on the GitHub branch and do not change the scientific claims of this calibration paper. For the published edition, first follow `RELEASE_README.md` in the small publication-update archive; it records the final PDF/source update over the immutable scientific capsule.
 
 The 16 October figure revision adds `plot_added_control_figures.py`. It reconstructs the folded-zero wedge and finite-atlas attribution bars from the frozen interval records and verifies their caption numbers. `--output paper/figures` writes the `_verified` figure files, preserving the originally supplied PDFs. Display positions use interval midpoints; the assertions include full root disk radii. No scientific searches or previous certificates are changed.

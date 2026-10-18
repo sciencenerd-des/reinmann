@@ -1,0 +1,45 @@
+{
+  "status": "unreviewed_preprint_publication_update",
+  "doi": "10.5281/zenodo.23401370",
+  "base_manifest": "research/prime_spectral/verification_2026_10_17_final_mechanism/manifest.json",
+  "base_manifest_sha256": "768964365f64f18c0343db90fd945dad8f679b52aaedbcd51620415a7944232f",
+  "base_archive_sha256": "1a899aba7d560e41692fce94c6ad0352e75822545db128462af8607be272293c",
+  "publication_only_replacements": {
+    "paper/dh_controls_paper.tex": {
+      "old_sha256": "b658d197ab9adbf07f2537028ca6dd99bfc3178de47fa6781fdeba0b3eeaac73",
+      "new_sha256": "cb16e9b0d2913233e3dc1739c029f0245adf0af0a793fef5e161dc26b2bb4894",
+      "historical_path": "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/dh_controls_paper.tex"
+    },
+    "paper/dh_controls_paper.pdf": {
+      "old_sha256": "ea0908b5320226842791f9b732993c67138bc9c7762197cb45f3a2bc60224ed5",
+      "new_sha256": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+      "historical_path": "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/dh_controls_paper.pdf"
+    },
+    "paper/zenodo_dh_controls.json": {
+      "old_sha256": "a78fcfc3932f03565347dfb6a7dce26000b55e9e4804f639f91e4d2e4b132e60",
+      "new_sha256": "029b219ee7cc40983bd0ff8652a724e3ee270a0fe61c9ccc57b12001d978aa91",
+      "historical_path": "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/zenodo_dh_controls.json"
+    },
+    "paper/DH_CONTROLS_REPRODUCTION.md": {
+      "old_sha256": "ffbce246ac6d93d93c3ae0ff1c1346a3de254db79c5a4fdcbdecc39d14a72a02",
+      "new_sha256": "ec8ff3a66d89b6e4f5bd4305960de70924625c7d6d9c58adbe160a6499c8f5b9",
+      "historical_path": "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/DH_CONTROLS_REPRODUCTION.md"
+    }
+  },
+  "authorization_file": "research/prime_spectral/verification_2026_10_18_publication/authorization.json",
+  "release_artifacts_sha256": {
+    "RELEASE_README.md": "c59b629a30ea1fb4970e8631b8acde6a47e90269162492adcbea454d7ff8be34",
+    "paper/DH_CONTROLS_REPRODUCTION.md": "ec8ff3a66d89b6e4f5bd4305960de70924625c7d6d9c58adbe160a6499c8f5b9",
+    "paper/dh_controls_paper.pdf": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+    "paper/dh_controls_paper.tex": "cb16e9b0d2913233e3dc1739c029f0245adf0af0a793fef5e161dc26b2bb4894",
+    "paper/zenodo_dh_controls.json": "029b219ee7cc40983bd0ff8652a724e3ee270a0fe61c9ccc57b12001d978aa91",
+    "research/prime_spectral/verification_2026_10_18_publication/authorization.json": "74809e43cb12487bd985e5395cd260648f84cf111b26455af2b3d853f88eca85",
+    "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/DH_CONTROLS_REPRODUCTION.md": "ffbce246ac6d93d93c3ae0ff1c1346a3de254db79c5a4fdcbdecc39d14a72a02",
+    "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/dh_controls_paper.pdf": "ea0908b5320226842791f9b732993c67138bc9c7762197cb45f3a2bc60224ed5",
+    "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/dh_controls_paper.tex": "b658d197ab9adbf07f2537028ca6dd99bfc3178de47fa6781fdeba0b3eeaac73",
+    "research/prime_spectral/verification_2026_10_18_publication/historical_96d6023/paper/zenodo_dh_controls.json": "a78fcfc3932f03565347dfb6a7dce26000b55e9e4804f639f91e4d2e4b132e60",
+    "research/prime_spectral/verification_2026_10_18_publication/manuscript_publication_wording.diff": "a32bd480bc663f72dddb52080ba8fa5d4e2aff20fb966b3b93d8a365883c55bf",
+    "verify_publication_update.py": "cd1aeef06e16c067be0db14e99676d22184881845499c13604eef97fb35076a7"
+  },
+  "scope": "Publication date/review disclosure, metadata and reproduction instructions only. Scientific source/data and mathematical claims unchanged. No human review or RH proof."
+}

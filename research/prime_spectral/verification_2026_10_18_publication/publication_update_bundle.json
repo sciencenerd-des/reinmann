@@ -1,0 +1,12 @@
+{
+  "status": "publication_update_all_members_and_fresh_extracted_composite_verified",
+  "archive": "dh-controls-publication-update-2026-10-18.tar.gz",
+  "bytes": 463447,
+  "sha256": "0bcdd795152f1f4042edd67e877fd4b27e3e164a96cd5fea620c2f77d8c546a0",
+  "members": 13,
+  "pdf_bytes": 246381,
+  "pdf_sha256": "04c109f06e0935e9527ce99a4124ba8bccdfb9289b5e608d8d30a0941fb8ea4c",
+  "reader_sha256": "ba24f8552b8867e7d8e55687f5749529d2755e67f8e94134aa4928ac116c88ef",
+  "base_members": 1005,
+  "replay_exit_code": 0
+}

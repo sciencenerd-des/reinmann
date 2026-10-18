@@ -1,0 +1,815 @@
+{
+  "created": "2026-10-18T04:46:22.537278+00:00",
+  "modified": "2026-10-18T04:46:25.719894+00:00",
+  "id": 23401370,
+  "conceptrecid": "23401369",
+  "doi": "10.5281/zenodo.23401370",
+  "conceptdoi": "10.5281/zenodo.23401369",
+  "doi_url": "https://doi.org/10.5281/zenodo.23401370",
+  "metadata": {
+    "title": "How sensitive are finite RH criteria? Certified Davenport\u2013Heilbronn controls",
+    "doi": "10.5281/zenodo.23401370",
+    "publication_date": "2026-10-18",
+    "description": "<p><strong>Unreviewed preprint: no completed external human peer review is claimed.</strong></p><p>This computational preprint calibrates finite Toeplitz and Weil-form criteria against Davenport\u2013Heilbronn character combinations and Epstein zeta controls. A complete classical DH atlas through height 340 yields a PF435 sufficient sector guarantee. The targeted shift-44 column has certified negative bands 664\u20131099 and 1536\u20131972; the second band satisfies a locally recorded forecast. Nearby shifts 40\u201348 show no earlier failure in the requested tested strip. No globally first failing minor is claimed.</p><p>Seven-control negative-support upper bounds include a conductor-17 forecast test. A further exact rational mixture path lowers the lowest off-line offset from 0.03 to 0.004; common-degree normalized support upper bounds increase from 0.5699 to 0.6597, with small changes at a larger retained degree. Four points on one path do not determine boundedness, divergence or an asymptotic rate as the offset tends to zero. Fits remain descriptive, positive finite sections supply no full-window lower bound, and finite-atlas attribution does not bound the infinite tail.</p><p>The supplement contains editable source, compact certificates and fresh receipts for Liu frozen release b6cd218, with A retained-source/matrix/residual replay and B clean FULL/FAST replay. AI assistance and AI technical review are disclosed. The author explicitly authorized release without a completed human read on 18 October 2026. No universal zero-free region or proof of the Riemann Hypothesis is claimed.</p><p>Two data-checked figures show the folded-zero sector geometry and finite-atlas cancellation, with a reproducible plotting source. The underlying scientific certificates are unchanged. This archival release is an unreviewed preprint.</p><p>The complete supplement consists of an immutable scientific capsule reconstructed from 70 checksum-bound parts, plus dh-controls-publication-update-2026-10-18.tar.gz containing the final PDF, source and release disclosure. Follow DH_SUPPLEMENT_README.txt and RELEASE_README.md; verify the complete base and publication update before numerical replay.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Mondal, Biswajit",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "Davenport\u2013Heilbronn function",
+      "Toeplitz minors",
+      "total positivity",
+      "Weil quadratic form",
+      "validated numerics",
+      "negative controls",
+      "Riemann Hypothesis"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/sciencenerd-des/reinmann",
+        "relation": "isSupplementedBy",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://arxiv.org/abs/1208.5607",
+        "relation": "references",
+        "resource_type": "publication-preprint",
+        "scheme": "url"
+      }
+    ],
+    "version": "1.0.0",
+    "resource_type": {
+      "title": "Preprint",
+      "type": "publication",
+      "subtype": "preprint"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "23401369"
+          }
+        }
+      ]
+    }
+  },
+  "title": "How sensitive are finite RH criteria? Certified Davenport\u2013Heilbronn controls",
+  "links": {
+    "self": "https://zenodo.org/api/records/23401370",
+    "self_html": "https://zenodo.org/records/23401370",
+    "preview_html": "https://zenodo.org/records/23401370?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.23401370",
+    "self_doi": "https://doi.org/10.5281/zenodo.23401370",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23401370",
+    "reserve_doi": "https://zenodo.org/api/records/23401370/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/23401369",
+    "parent_html": "https://zenodo.org/records/23401369",
+    "parent_doi": "https://doi.org/10.5281/zenodo.23401369",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.23401369",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:23401370/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:23401370/sequence/default",
+    "files": "https://zenodo.org/api/records/23401370/files",
+    "media_files": "https://zenodo.org/api/records/23401370/media-files",
+    "thumbnails": {
+      "10": "https://zenodo.org/api/iiif/record:23401370:dh_controls_paper.pdf/full/%5E10,/0/default.jpg",
+      "50": "https://zenodo.org/api/iiif/record:23401370:dh_controls_paper.pdf/full/%5E50,/0/default.jpg",
+      "100": "https://zenodo.org/api/iiif/record:23401370:dh_controls_paper.pdf/full/%5E100,/0/default.jpg",
+      "250": "https://zenodo.org/api/iiif/record:23401370:dh_controls_paper.pdf/full/%5E250,/0/default.jpg",
+      "750": "https://zenodo.org/api/iiif/record:23401370:dh_controls_paper.pdf/full/%5E750,/0/default.jpg",
+      "1200": "https://zenodo.org/api/iiif/record:23401370:dh_controls_paper.pdf/full/%5E1200,/0/default.jpg"
+    },
+    "latest": "https://zenodo.org/api/records/23401370/versions/latest",
+    "latest_html": "https://zenodo.org/records/23401370/latest",
+    "versions": "https://zenodo.org/api/records/23401370/versions",
+    "draft": "https://zenodo.org/api/records/23401370/draft",
+    "access_links": "https://zenodo.org/api/records/23401370/access/links",
+    "access_grants": "https://zenodo.org/api/records/23401370/access/grants",
+    "access_users": "https://zenodo.org/api/records/23401370/access/users",
+    "access_request": "https://zenodo.org/api/records/23401370/access/request",
+    "access": "https://zenodo.org/api/records/23401370/access",
+    "communities": "https://zenodo.org/api/records/23401370/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/23401370/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/23401370/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/23401370/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/23401370/quota-increase",
+    "requests": "https://zenodo.org/api/records/23401370/requests"
+  },
+  "updated": "2026-10-18T04:46:25.719894+00:00",
+  "recid": "23401370",
+  "revision": 3,
+  "files": [
+    {
+      "id": "33eb2c82-de8a-4865-9523-50249507fb35",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part02",
+      "size": 2097152,
+      "checksum": "md5:40605df2eee3103d48f038d5144ce9a7",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part02/content"
+      }
+    },
+    {
+      "id": "9e4f74bb-5e74-4b23-be9a-d32efc423a2c",
+      "key": "DH_PUBLICATION_UPDATE.json",
+      "size": 3855,
+      "checksum": "md5:736d26dfef5ba1a14831184c62df9690",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/DH_PUBLICATION_UPDATE.json/content"
+      }
+    },
+    {
+      "id": "2a21709a-4fb5-4fd2-83da-8b2b1f5ec4a0",
+      "key": "dh_controls_paper.pdf",
+      "size": 246381,
+      "checksum": "md5:39b864f4e3701c9c708421ad7e73a61c",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh_controls_paper.pdf/content"
+      }
+    },
+    {
+      "id": "7dcac6b2-174e-4bc1-b4b5-d1a45b5decab",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part08",
+      "size": 2097152,
+      "checksum": "md5:ea08b76aae5929fcd7acdb2b0c60f16c",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part08/content"
+      }
+    },
+    {
+      "id": "dd5b13ec-066c-44ff-a72c-84332d98f74d",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part09",
+      "size": 2097152,
+      "checksum": "md5:5ec77845f2bcf604e19d91c76444a934",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part09/content"
+      }
+    },
+    {
+      "id": "6efcba7e-07f3-4629-8736-e0421f1c5a8f",
+      "key": "dh-controls-publication-update-2026-10-18.tar.gz",
+      "size": 463447,
+      "checksum": "md5:eb448e782a993c636412bac216a9bed7",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-publication-update-2026-10-18.tar.gz/content"
+      }
+    },
+    {
+      "id": "41205d14-688e-4fbe-8ddd-474f33475522",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part14",
+      "size": 2097152,
+      "checksum": "md5:269fab58568f6ec692ebcb2f6ab0d60d",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part14/content"
+      }
+    },
+    {
+      "id": "4033c1b0-fba2-4261-9978-e77c2e6cc052",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part16",
+      "size": 2097152,
+      "checksum": "md5:9721167c119e07211d6afd79b9867327",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part16/content"
+      }
+    },
+    {
+      "id": "ba29db14-7821-4b4c-9431-e50235900df1",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part41",
+      "size": 2097152,
+      "checksum": "md5:60f4de04754558b3ee7eac44b4501562",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part41/content"
+      }
+    },
+    {
+      "id": "5a800295-4458-48fe-a817-7e12d71efc1d",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part32",
+      "size": 2097152,
+      "checksum": "md5:d774dc1dd59b754a84353c25dbb5389f",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part32/content"
+      }
+    },
+    {
+      "id": "8067b888-87d9-41b0-a48f-863e729a112c",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part46",
+      "size": 2097152,
+      "checksum": "md5:945332674b1d75b55535d503b75c5913",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part46/content"
+      }
+    },
+    {
+      "id": "5ab7440a-3257-452e-bbc6-07b2a6350d73",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part03",
+      "size": 2097152,
+      "checksum": "md5:ca862ad95b4b01cf16598d280ca7d118",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part03/content"
+      }
+    },
+    {
+      "id": "c5ae7b30-492c-4831-80f5-17c2c6d22cf0",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part38",
+      "size": 2097152,
+      "checksum": "md5:a81ea444a7af83bf06d572414ab93844",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part38/content"
+      }
+    },
+    {
+      "id": "9dac5cef-a60e-4207-a949-cb60bf88d800",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part15",
+      "size": 2097152,
+      "checksum": "md5:1b545c77521f0486e4c9993a83a41c88",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part15/content"
+      }
+    },
+    {
+      "id": "2afcfa11-bfd7-4ac4-a188-d5f7e7b0c902",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part24",
+      "size": 2097152,
+      "checksum": "md5:2777a3975533997454a73b9d7f859c10",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part24/content"
+      }
+    },
+    {
+      "id": "f85b050b-d0f2-4b09-9ce2-b519438a19bb",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part12",
+      "size": 2097152,
+      "checksum": "md5:cb0a3a9162c254046f015275692c56e6",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part12/content"
+      }
+    },
+    {
+      "id": "2f46fb99-2181-4c93-b55b-44c05b4be7d8",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part35",
+      "size": 2097152,
+      "checksum": "md5:666eb01145d0c29647f3c9b36a39453e",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part35/content"
+      }
+    },
+    {
+      "id": "4a4549b5-dce1-443f-9d0c-9a7ba66d4f86",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part01",
+      "size": 2097152,
+      "checksum": "md5:e09e638b1e03a1311b25d8803ed90b69",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part01/content"
+      }
+    },
+    {
+      "id": "891b1bc6-f8ae-4d7c-8d0e-91b7b73fb3cb",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part28",
+      "size": 2097152,
+      "checksum": "md5:bd2d2f9834c8be4c3caa5fbab525060b",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part28/content"
+      }
+    },
+    {
+      "id": "a70ebdc8-6ab4-41bd-a5ac-0115d6ee7069",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part06",
+      "size": 2097152,
+      "checksum": "md5:0d5aea5b253cb291cf6d1000c41edb9e",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part06/content"
+      }
+    },
+    {
+      "id": "83792dc5-9173-49b7-bda3-ad4e9f08de62",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part04",
+      "size": 2097152,
+      "checksum": "md5:73b03e51a4ef1174b18b0534ef69c9a1",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part04/content"
+      }
+    },
+    {
+      "id": "3e1c5bfd-057c-4f36-880d-0c0aef2bdfb8",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part31",
+      "size": 2097152,
+      "checksum": "md5:693c4ac8f09e885e4fc954e462094f6e",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part31/content"
+      }
+    },
+    {
+      "id": "679dd7ae-5716-4e47-bf17-cd0391c84033",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part05",
+      "size": 2097152,
+      "checksum": "md5:e1a304b4c7989a5dda71af2285dcb58d",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part05/content"
+      }
+    },
+    {
+      "id": "61961746-0ad7-4cf8-919c-461673290d3d",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part11",
+      "size": 2097152,
+      "checksum": "md5:ae76eefc0ac088b652d5de6b36d01758",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part11/content"
+      }
+    },
+    {
+      "id": "0f710f8a-41bf-4ed5-bc25-aaadf2d47703",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part29",
+      "size": 2097152,
+      "checksum": "md5:656efbf5e3d9cbd7e6eb89a8f68bc68d",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part29/content"
+      }
+    },
+    {
+      "id": "07723885-f689-49f4-9ded-4f9e67777745",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part07",
+      "size": 2097152,
+      "checksum": "md5:ffce22fb1a82ad443411e83732092bff",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part07/content"
+      }
+    },
+    {
+      "id": "8872b3a7-b8e8-444d-b809-d32a6f3f16c7",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part10",
+      "size": 2097152,
+      "checksum": "md5:0388c9c1571b897503026f6ac68e91a7",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part10/content"
+      }
+    },
+    {
+      "id": "50c3e6f6-a443-4450-9554-aab7a8786f60",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part13",
+      "size": 2097152,
+      "checksum": "md5:0693695f034c38fa6a87d85417076c88",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part13/content"
+      }
+    },
+    {
+      "id": "8cf058c8-646b-4484-8ab3-f9b5f9f902a2",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part44",
+      "size": 2097152,
+      "checksum": "md5:e05fb054eea35cdfb292fed2edb92975",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part44/content"
+      }
+    },
+    {
+      "id": "67d048df-9ed5-4497-b9f2-ddd5e11a7a65",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part37",
+      "size": 2097152,
+      "checksum": "md5:34399e473db5e7b5ef98d7d44cccb033",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part37/content"
+      }
+    },
+    {
+      "id": "4985ee62-5f86-4fcf-910e-f8346808ee01",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part17",
+      "size": 2097152,
+      "checksum": "md5:895461f8b9b4abf98d74cc14f6e7e05c",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part17/content"
+      }
+    },
+    {
+      "id": "93875949-80ce-4dd7-84b3-b7c5345ce8d7",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part22",
+      "size": 2097152,
+      "checksum": "md5:27983a6fa87a404ccdf19f80c65c10d0",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part22/content"
+      }
+    },
+    {
+      "id": "da40516d-6862-4c48-913d-ec5a7232212b",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part19",
+      "size": 2097152,
+      "checksum": "md5:2088b6f4b14b786610110a9cc98f8c72",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part19/content"
+      }
+    },
+    {
+      "id": "99a31c3c-dfed-4b88-a870-e08e9323da96",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part21",
+      "size": 2097152,
+      "checksum": "md5:422cee6cc6705de66d8e776a06199a4b",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part21/content"
+      }
+    },
+    {
+      "id": "00a1a980-4797-4c72-8c79-d07b3345cb93",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part20",
+      "size": 2097152,
+      "checksum": "md5:9d188f60ba289cfed1be5071849b8b59",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part20/content"
+      }
+    },
+    {
+      "id": "f79d372c-f30e-4106-8191-16c879b7c5ad",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part36",
+      "size": 2097152,
+      "checksum": "md5:f53df3e2caec3356eec79931300f4839",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part36/content"
+      }
+    },
+    {
+      "id": "f806ba56-9768-406f-b41a-6ec99ff49e69",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part18",
+      "size": 2097152,
+      "checksum": "md5:856325580a3c6603db27f8a64078dfe4",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part18/content"
+      }
+    },
+    {
+      "id": "13caa7ab-e201-4773-a27b-06faf2617b4b",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part23",
+      "size": 2097152,
+      "checksum": "md5:5ad6a03665155db0cb5a61a456090be0",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part23/content"
+      }
+    },
+    {
+      "id": "48d07c0e-078f-47d6-b014-72b84bcf3548",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part25",
+      "size": 2097152,
+      "checksum": "md5:c82aaecb0cc30ce9272239131d557b57",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part25/content"
+      }
+    },
+    {
+      "id": "b80779df-571b-41c9-b224-e68af2b617bc",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part27",
+      "size": 2097152,
+      "checksum": "md5:224cebcb9b5d8826460fbdc6630b599f",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part27/content"
+      }
+    },
+    {
+      "id": "1da0ada9-d12c-47b0-bd49-69157a2d82d9",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part26",
+      "size": 2097152,
+      "checksum": "md5:398adeba2cef23d4862773148380a9b7",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part26/content"
+      }
+    },
+    {
+      "id": "15811fca-7043-452c-8ad7-d065621f72b8",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part33",
+      "size": 2097152,
+      "checksum": "md5:ad3b5b991f9f10ae4bf6bc8e1ebfccf1",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part33/content"
+      }
+    },
+    {
+      "id": "4706a44d-402c-4504-8595-492e4169ed1a",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part43",
+      "size": 2097152,
+      "checksum": "md5:492278684470e02ef8ae2c4a71e1ae06",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part43/content"
+      }
+    },
+    {
+      "id": "ccdf39b7-7000-435e-a690-cfa149e92bcb",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part40",
+      "size": 2097152,
+      "checksum": "md5:6c37f9ff0ce7b58491e70868523ceee7",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part40/content"
+      }
+    },
+    {
+      "id": "f57c432d-d9aa-4299-b65c-4836fbd8c371",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part34",
+      "size": 2097152,
+      "checksum": "md5:044c4121549e845504fd2b8672d0e25a",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part34/content"
+      }
+    },
+    {
+      "id": "a7d17bf8-5546-4673-a19c-524b6b86637e",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part30",
+      "size": 2097152,
+      "checksum": "md5:cf48c8c14ea4ca29bf57c1055b71c3b2",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part30/content"
+      }
+    },
+    {
+      "id": "aee46e9f-032b-49d5-8e1f-be253379ddf3",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part61",
+      "size": 2097152,
+      "checksum": "md5:e2c4da105c35cbaa24eae2bc1764a85f",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part61/content"
+      }
+    },
+    {
+      "id": "6f4db7c0-5520-4bd8-9ad9-7d9a16b0a011",
+      "key": "DH_SUPPLEMENT_README.txt",
+      "size": 1804,
+      "checksum": "md5:c005013aeb75a2534f69aeafc7c2fbfb",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/DH_SUPPLEMENT_README.txt/content"
+      }
+    },
+    {
+      "id": "6c79a126-0ab4-44c9-a74f-0544a9b21a8b",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part39",
+      "size": 2097152,
+      "checksum": "md5:0dac18842d68b0bad4bfd4065475d0e9",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part39/content"
+      }
+    },
+    {
+      "id": "dae33717-63c1-4707-8a9f-19bc74baf6d8",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part56",
+      "size": 2097152,
+      "checksum": "md5:5fe3e79eabcc17fcf2077a8a92f77e65",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part56/content"
+      }
+    },
+    {
+      "id": "b9ef3ea1-53cd-4e23-9c2a-dd7f2ef681af",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part45",
+      "size": 2097152,
+      "checksum": "md5:40a8f6e632d0e7e425a5fe345b2b139c",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part45/content"
+      }
+    },
+    {
+      "id": "006e3a73-3cfb-4f97-aa81-a08559050356",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part42",
+      "size": 2097152,
+      "checksum": "md5:72e9d3e7d48504df84de297c2b6aec5e",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part42/content"
+      }
+    },
+    {
+      "id": "a28d8f1a-165e-4c6b-8af4-75e7a9508018",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part65",
+      "size": 2097152,
+      "checksum": "md5:a9ae076674f25c126b4212b4a70b0ea5",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part65/content"
+      }
+    },
+    {
+      "id": "4521ec64-743f-4723-bed8-71867c51586e",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part48",
+      "size": 2097152,
+      "checksum": "md5:527495711e1f399ef7b413946fbde802",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part48/content"
+      }
+    },
+    {
+      "id": "e1c2ce6a-025f-483d-8dc4-0b2405fddba9",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part53",
+      "size": 2097152,
+      "checksum": "md5:491b82fc765bf7012b9289e3119e0b9f",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part53/content"
+      }
+    },
+    {
+      "id": "8e3d5b37-d70e-493c-8fde-22fcfa497acb",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part47",
+      "size": 2097152,
+      "checksum": "md5:bf3363f6299c4dd5f74cddcb05168038",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part47/content"
+      }
+    },
+    {
+      "id": "ca1d60a6-53a9-4240-84ad-5945887b8805",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part54",
+      "size": 2097152,
+      "checksum": "md5:1fdc421a888c705e754c4c23c63dfc2b",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part54/content"
+      }
+    },
+    {
+      "id": "7689b2d9-33a4-4713-8b45-1066a31fd4da",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part50",
+      "size": 2097152,
+      "checksum": "md5:dbbf21a1ea8c6257512f3266a52c4b8a",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part50/content"
+      }
+    },
+    {
+      "id": "fc4d7fdb-7353-4268-b7c5-2c6145578490",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part57",
+      "size": 2097152,
+      "checksum": "md5:7e5ee08f6138c016e301a60e82494113",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part57/content"
+      }
+    },
+    {
+      "id": "04e473d9-2d50-4dfb-a314-c68cc9e5d500",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part67",
+      "size": 2097152,
+      "checksum": "md5:104b513c7d1c26db4199338b9b9d3092",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part67/content"
+      }
+    },
+    {
+      "id": "20488504-52e4-4b7e-a891-d7df3a0709a1",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part52",
+      "size": 2097152,
+      "checksum": "md5:8b103a84d15400926fb1f40b08363725",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part52/content"
+      }
+    },
+    {
+      "id": "5f2e602f-5a8c-4534-92a9-07e09d63154e",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part63",
+      "size": 2097152,
+      "checksum": "md5:5c0ccc84eb59e30bcbb4c4e06f51f7e4",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part63/content"
+      }
+    },
+    {
+      "id": "76773421-0c85-4c29-887a-3c34bab8f675",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part60",
+      "size": 2097152,
+      "checksum": "md5:4b4f1aa50e825eedeb7d27276ab2f35e",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part60/content"
+      }
+    },
+    {
+      "id": "9a7a16a4-0acc-4ede-b84a-b65d88a8f0dd",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part62",
+      "size": 2097152,
+      "checksum": "md5:0cd10e196315e25421b9023e2ea91564",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part62/content"
+      }
+    },
+    {
+      "id": "e4431c90-1278-4a49-ba14-8ddc91e933d0",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part64",
+      "size": 2097152,
+      "checksum": "md5:0682d2f949c34f37e6bd48950b48648b",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part64/content"
+      }
+    },
+    {
+      "id": "16c73b9f-9994-416b-a035-e4b0b3a1751e",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part70",
+      "size": 836615,
+      "checksum": "md5:0ec73220cc30f50adebc0fc2f9155427",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part70/content"
+      }
+    },
+    {
+      "id": "b5761863-c6c9-49be-85fe-e8d5be634db2",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part69",
+      "size": 2097152,
+      "checksum": "md5:62bd7ff50f38c520fe4f2e5c581aa8a4",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part69/content"
+      }
+    },
+    {
+      "id": "a1dd35f0-1e3d-47d1-bad1-3c486518568c",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part55",
+      "size": 2097152,
+      "checksum": "md5:3287103adc87a49a384f2023f9a2815d",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part55/content"
+      }
+    },
+    {
+      "id": "8178f97e-5c4e-48e5-8a14-4711140d83e3",
+      "key": "DH_SUPPLEMENT_PARTS.json",
+      "size": 13661,
+      "checksum": "md5:7c3095c112badf7c9c2cbe400b853320",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/DH_SUPPLEMENT_PARTS.json/content"
+      }
+    },
+    {
+      "id": "1f90d024-8c62-45ce-a4ff-a755fde113d5",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part68",
+      "size": 2097152,
+      "checksum": "md5:b4067b02a4264550fdb4f52e08a0fa52",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part68/content"
+      }
+    },
+    {
+      "id": "235203f8-44f1-49ec-a0c3-e2ba6e05f001",
+      "key": "reassemble_dh_supplement.py",
+      "size": 1633,
+      "checksum": "md5:419c4fc3c3a79a130ae24a749d86e689",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/reassemble_dh_supplement.py/content"
+      }
+    },
+    {
+      "id": "0fadb4a9-afbc-4c58-bc1f-e8337f3a6282",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part66",
+      "size": 2097152,
+      "checksum": "md5:6fc6d9382e982e727e91155a6de51952",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part66/content"
+      }
+    },
+    {
+      "id": "32701c8a-6526-49e5-807e-482425540f3a",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part59",
+      "size": 2097152,
+      "checksum": "md5:8b4fe1c11b212ce979686e3aa7113e10",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part59/content"
+      }
+    },
+    {
+      "id": "22120969-db3f-4e80-a29b-10d1aae84fc5",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part49",
+      "size": 2097152,
+      "checksum": "md5:28ea30681f3f5f83fc49172ab91c0d02",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part49/content"
+      }
+    },
+    {
+      "id": "dbe1d1f9-a2cc-4ad3-9f7f-7ffed97c46a2",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part58",
+      "size": 2097152,
+      "checksum": "md5:91732fb24451c0a4d1e808fa8c9d12c2",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part58/content"
+      }
+    },
+    {
+      "id": "85771e33-a909-4980-80a3-fc11c0ce291f",
+      "key": "dh-controls-supplement-2026-10-17.tar.gz.part51",
+      "size": 2097152,
+      "checksum": "md5:bc4a8fc034da41d69e92c97110b381cf",
+      "links": {
+        "self": "https://zenodo.org/api/records/23401370/files/dh-controls-supplement-2026-10-17.tar.gz.part51/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1677831"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 0,
+    "unique_downloads": 0,
+    "views": 0,
+    "unique_views": 0,
+    "version_downloads": 0,
+    "version_unique_downloads": 0,
+    "version_unique_views": 0,
+    "version_views": 0
+  },
+  "state": "done",
+  "submitted": true
+}

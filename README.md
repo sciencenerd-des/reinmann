@@ -16,8 +16,10 @@ removes earlier unsupported claims based on winding counts, GUE statistics,
 operator self-adjointness and heat-flow heuristics.
 
 The [DH controls paper](paper/dh_controls_paper.pdf) measures finite detection
-sensitivity. Its human-review request was sent on 17 October 2026; review and
-publication remain pending. The [held-out logarithmic forecast test](research/prime_spectral/LOG_FORECAST_RESULTS_2026_10_17.md)
+sensitivity. It was published on 18 October 2026 as an unreviewed preprint:
+[DOI 10.5281/zenodo.23401370](https://doi.org/10.5281/zenodo.23401370).
+The final PDF and complete supplement were checksum-verified; no completed
+external human review is claimed. The [held-out logarithmic forecast test](research/prime_spectral/LOG_FORECAST_RESULTS_2026_10_17.md)
 adds offsets0.002 and0.001; the measured plain-L exponent does not meet either
 registered forecast tolerance. The [final matched-mixture test](research/prime_spectral/FINAL_LOG_MECHANISM_RESULTS_2026_10_17.md)
 also misses both fixed forecast tolerances at offsets 0.0005 and 0.00025.
@@ -35,8 +37,8 @@ The entire-function determinant extension and actual Xi tile certificates remain
 > **Current research status (updated 18 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
 > records the evidence and open assumptions for the active tracks. It supersedes
-> older priority and novelty claims below. The active outputs are the human-reviewed
-> controls release and formal targets A and B; logarithmic forecasting is closed.
+> older priority and novelty claims below. The active outputs are the unreviewed
+> controls preprint and formal targets A and B; logarithmic forecasting is closed.
 > D1 comparison engineering, broad Toeplitz scans, D2 exact counts, D6 induction
 > and arithmetic ablations remain stopped.
 > [`ARCHITECTURE.md`](ARCHITECTURE.md) supplies the broader module inventory and

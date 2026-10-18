@@ -1,0 +1,51 @@
+{
+  "id": 23401370,
+  "submitted": false,
+  "publication_date": "2026-10-18",
+  "doi": "10.5281/zenodo.23401370",
+  "metadata": {
+    "title": "How sensitive are finite RH criteria? Certified Davenport\u2013Heilbronn controls",
+    "publication_date": "2026-10-18",
+    "description": "<p><strong>Unreviewed preprint: no completed external human peer review is claimed.</strong></p><p>This computational preprint calibrates finite Toeplitz and Weil-form criteria against Davenport\u2013Heilbronn character combinations and Epstein zeta controls. A complete classical DH atlas through height 340 yields a PF435 sufficient sector guarantee. The targeted shift-44 column has certified negative bands 664\u20131099 and 1536\u20131972; the second band satisfies a locally recorded forecast. Nearby shifts 40\u201348 show no earlier failure in the requested tested strip. No globally first failing minor is claimed.</p><p>Seven-control negative-support upper bounds include a conductor-17 forecast test. A further exact rational mixture path lowers the lowest off-line offset from 0.03 to 0.004; common-degree normalized support upper bounds increase from 0.5699 to 0.6597, with small changes at a larger retained degree. Four points on one path do not determine boundedness, divergence or an asymptotic rate as the offset tends to zero. Fits remain descriptive, positive finite sections supply no full-window lower bound, and finite-atlas attribution does not bound the infinite tail.</p><p>The supplement contains editable source, compact certificates and fresh receipts for Liu frozen release b6cd218, with A retained-source/matrix/residual replay and B clean FULL/FAST replay. AI assistance and AI technical review are disclosed. The author explicitly authorized release without a completed human read on 18 October 2026. No universal zero-free region or proof of the Riemann Hypothesis is claimed.</p><p>Two data-checked figures show the folded-zero sector geometry and finite-atlas cancellation, with a reproducible plotting source. The underlying scientific certificates are unchanged. This archival release is an unreviewed preprint.</p><p>The complete supplement consists of an immutable scientific capsule reconstructed from 70 checksum-bound parts, plus dh-controls-publication-update-2026-10-18.tar.gz containing the final PDF, source and release disclosure. Follow DH_SUPPLEMENT_README.txt and RELEASE_README.md; verify the complete base and publication update before numerical replay.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Mondal, Biswajit",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "Davenport\u2013Heilbronn function",
+      "Toeplitz minors",
+      "total positivity",
+      "Weil quadratic form",
+      "validated numerics",
+      "negative controls",
+      "Riemann Hypothesis"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/sciencenerd-des/reinmann",
+        "relation": "isSupplementedBy",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://arxiv.org/abs/1208.5607",
+        "relation": "references",
+        "resource_type": "publication-preprint",
+        "scheme": "url"
+      }
+    ],
+    "version": "1.0.0",
+    "license": "cc-by-4.0",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.23401370",
+      "recid": 23401370
+    }
+  },
+  "status": "unreviewed_preprint_metadata_saved"
+}

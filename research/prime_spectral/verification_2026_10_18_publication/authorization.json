@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-18",
+  "source": "Explicit author instruction in this chat",
+  "instruction": "Waive the requirement and publish as unreviewed",
+  "destination": "Zenodo draft 23401370",
+  "human_review_completed": false,
+  "human_review_prerequisite_waived": true,
+  "scope": "Publish the current DH controls paper as an unreviewed preprint after rebuilding and checking the final PDF and complete supplement. No reviewer follow-ups or Liu note."
+}

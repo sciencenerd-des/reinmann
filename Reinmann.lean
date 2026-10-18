@@ -110,3 +110,11 @@ import Reinmann.SupportTranslation
 import Reinmann.SupportPrimeForm
 import Reinmann.CurvatureControls
 import Reinmann.WeilWindowHypotheses
+
+-- Standalone local evaluator and simple-pole determinant estimates.
+import Reinmann.XiAdaptiveTiles
+import Reinmann.XiLocalCauchy
+import Reinmann.XiFirstTile
+import Reinmann.SplitPairMixedRows
+import Reinmann.SplitPairPatchedRemainder
+import Reinmann.SplitPairCoefficientIdentity

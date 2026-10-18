@@ -1,0 +1,8 @@
+== Check 1: source grep for sorry / admit / axiom in Reinmann/*.lean ==
+OK: no sorry/admit in Reinmann/*.lean
+OK: no project-declared axioms in Reinmann/*.lean
+
+== Check 2: #print axioms on the reduction chain (AxiomAudit.lean) ==
+OK: all 348 audited theorems depend only on [propext, Classical.choice, Quot.sound]
+
+AXIOM-CLEAN: 0 sorry, 0 custom axioms. Reduction chain verified.

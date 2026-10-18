@@ -1,0 +1,22 @@
+{
+  "status": "arb_adaptive_count_pilot_budget_exhausted",
+  "mode": "natural",
+  "quarter": [
+    "1/2",
+    "1",
+    "0",
+    "141/10"
+  ],
+  "bits": 192,
+  "jet_degree": 16,
+  "global_unit_disk_majorant": 1000,
+  "majorant_status": "Proved by XiLocalCauchy.unit_circle_bound and taylor_coefficient_bound; jet and derivative-tail bridge remains external.",
+  "centre_error_budget_relative": "1/8",
+  "tiles": 2498,
+  "attempts": 5000,
+  "pending": 5,
+  "max_depth": 16,
+  "seconds": 4.942666707909666,
+  "source_sha256": "99012daef49ba002e2f6b31718eec815532c9080e63a8ac3a7d7a5a5d24ba868",
+  "scope": "External Arb pilot for cost and geometry. No Lean centre enclosure, local derivative certificate, finite cover proof or zero-free rectangle theorem is supplied by this script."
+}

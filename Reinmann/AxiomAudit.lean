@@ -3,6 +3,12 @@ Copyright (c) 2026 Biswajit Mondal. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
+import Reinmann.XiAdaptiveTiles
+import Reinmann.XiLocalCauchy
+import Reinmann.XiFirstTile
+import Reinmann.SplitPairMixedRows
+import Reinmann.SplitPairPatchedRemainder
+import Reinmann.SplitPairCoefficientIdentity
 import Reinmann.WeilWindowAudit
 import Reinmann.XiMellinRectangle
 import Reinmann.FiniteProductSplitPairControl
@@ -447,3 +453,40 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.EnclosureRules.rectangle_grid_cover
 #print axioms Reinmann.EnclosureRules.rectangle_nonzero
 #print axioms Reinmann.SplitPairCauchyTail.simple_pole_analytic_remainder
+
+-- First actual Xi tile and standalone mixed-row / patched-remainder round.
+#print axioms Reinmann.XiAdaptiveTiles.adaptive_cover_nonzero
+#print axioms Reinmann.XiAdaptiveTiles.rectangle_nonzero_of_quarter
+#print axioms Reinmann.XiAdaptiveTiles.xi_rectangle_nonzero_of_quarter
+#print axioms Reinmann.XiLocalCauchy.mellin_norm_le
+#print axioms Reinmann.XiLocalCauchy.completed_norm_le
+#print axioms Reinmann.XiLocalCauchy.xi_norm_le
+#print axioms Reinmann.XiLocalCauchy.unit_circle_bound
+#print axioms Reinmann.XiLocalCauchy.coefficient_bound
+#print axioms Reinmann.XiFirstTile.finiteIntegrand_eq
+#print axioms Reinmann.XiFirstTile.finiteIntegrand_bound
+#print axioms Reinmann.XiFirstTile.midpoint_sample
+#print axioms Reinmann.XiFirstTile.finiteIntegrand_integrable
+#print axioms Reinmann.XiFirstTile.finite_quadrature
+#print axioms Reinmann.XiFirstTile.centre_enclosure
+#print axioms Reinmann.XiFirstTile.local_derivative
+#print axioms Reinmann.XiFirstTile.first_tile_nonzero
+#print axioms Reinmann.SplitPairMixedRows.normalized_subset_product_bound
+#print axioms Reinmann.SplitPairMixedRows.ordered_subset_product_bound
+#print axioms Reinmann.SplitPairMixedRows.mixed_product_rate
+#print axioms Reinmann.SplitPairMixedRows.row_expansion
+#print axioms Reinmann.SplitPairMixedRows.repeated_pole_zero
+#print axioms Reinmann.SplitPairMixedRows.det_norm_le_row_weights
+#print axioms Reinmann.SplitPairMixedRows.det_geometric_rate
+#print axioms Reinmann.SplitPairMixedRows.choice_weight_bound
+#print axioms Reinmann.SplitPairMixedRows.determinant_difference_expansion
+#print axioms Reinmann.SplitPairMixedRows.determinant_difference_rate
+#print axioms Reinmann.SplitPairMixedRows.mixed_determinant_bound
+#print axioms Reinmann.SplitPairMixedRows.coefficient_determinant_bound
+#print axioms Reinmann.SplitPairPatchedRemainder.patch_finite_germs
+#print axioms Reinmann.SplitPairPatchedRemainder.actual_simple_pole_remainder
+#print axioms Reinmann.SplitPairCoefficientIdentity.principal_coefficient
+#print axioms Reinmann.SplitPairCoefficientIdentity.coefficient_identity
+#print axioms Reinmann.SplitPairCoefficientIdentity.actual_remainder_with_coefficients
+#print axioms Reinmann.XiLocalCauchy.taylor_coefficient_bound
+#print axioms Reinmann.SplitPairCoefficientIdentity.actual_reciprocal_coefficient_error

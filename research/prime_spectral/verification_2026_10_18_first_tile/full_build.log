@@ -1,0 +1,730 @@
+⚠ [3503/3595] Replayed Reinmann.PseudoHermitianLocal
+warning: Reinmann/PseudoHermitianLocal.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3504/3595] Replayed Reinmann.PseudoHermitianIsotropy
+warning: Reinmann/PseudoHermitianIsotropy.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3506/3595] Replayed Reinmann.XiAnnihilator
+warning: Reinmann/XiAnnihilator.lean:167:2: Try `simp at hm` instead of `simpa using hm`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3512/3595] Replayed Reinmann.XiKernelPackets
+warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: Reinmann/XiKernelPackets.lean:102:2: `have hz : (x.1 - y.1) * (s - t) = 0 := by linear_combination h1 - t * h0` uses `h0`!
+warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h1`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: Reinmann/XiKernelPackets.lean:102:2: `have hz : (x.1 - y.1) * (s - t) = 0 := by linear_combination h1 - t * h0` uses `h1`!
+warning: Reinmann/XiKernelPackets.lean:101:2: `simp [realize, zeroState, FockEigenvectors.coherent, smul_eq_mul] at h0 h1` is a flexible tactic modifying `h0`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: Reinmann/XiKernelPackets.lean:104:2: `have hy : x.2 = y.2 := by linear_combination h0 - hx` uses `h0`!
+⚠ [3513/3595] Replayed Reinmann.XiHigherJetDomain
+warning: Reinmann/XiHigherJetDomain.lean:82:2: Try `simp at h` instead of `simpa using h`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Reinmann/XiHigherJetDomain.lean:165:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiHigherJetDomain.lean:210:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiHigherJetDomain.lean:210:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3514/3595] Replayed Reinmann.XiHigherJetCoupling
+warning: Reinmann/XiHigherJetCoupling.lean:106:4: Try `simp at hd` instead of `simpa using hd`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3516/3595] Replayed Reinmann.XiAlgebraicJetSpace
+warning: Reinmann/XiAlgebraicJetSpace.lean:130:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Reinmann/XiAlgebraicJetSpace.lean:144:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3517/3595] Replayed Reinmann.XiAlgebraicJetForm
+warning: Reinmann/XiAlgebraicJetForm.lean:39:6: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [pairing, Finsupp.sum_smul_index, Finsupp.mul_sum, map_mul,
+  ̵  ̵ ̵ ̵ ̵ ̵mul_a̵s̵s̵o̵c̵,̵ ̵m̵u̵l_̵l̵eft_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/XiAlgebraicJetForm.lean:69:44: This simp argument is unused:
+  Complex.conj_conj
+
+Hint: Omit it from the simp argument list.
+  simp [gram, map_div₀, map_add, map_ofNat, C̵o̵m̵p̵l̵e̵x̵.̵c̵o̵n̵j̵_̵c̵o̵n̵j̵,̵ ̵add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3519/3595] Replayed Reinmann.XiGreenGram
+warning: Reinmann/XiGreenGram.lean:20:29: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+warning: Reinmann/XiGreenGram.lean:131:42: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [hp, hq, if_true, if_false, map_m̵u̵l̵,̵ ̵m̵a̵p̵_̵zero, map_natCast,
+  ̵  ̵ ̵ ̵ ̵ ̵Complex.conj_conj] at h hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/XiGreenGram.lean:131:51: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [hp, hq, if_true, if_false, map_mul, map_z̵e̵r̵o̵,̵ ̵m̵a̵p̵_̵natCast,
+  ̵  ̵ ̵ ̵ ̵ ̵Complex.conj_conj] at h hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/XiGreenGram.lean:131:61: This simp argument is unused:
+  map_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [hp, hq, if_true, if_false, map_mul, map_zero, m̵a̵p̵_̵n̵a̵t̵C̵a̵s̵t̵,̵Complex.conj_conj] at h hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/XiGreenGram.lean:132:6: This simp argument is unused:
+  Complex.conj_conj
+
+Hint: Omit it from the simp argument list.
+  simp only [hp, hq, if_true, if_false, map_mul, map_zero, map_natCast,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵C̵o̵m̵p̵l̵e̵x̵.̵c̵o̵n̵j̵_̵c̵o̵n̵j̵] at h hc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3520/3595] Replayed Reinmann.XiAlgebraicRows
+warning: Reinmann/XiAlgebraicRows.lean:76:39: This simp argument is unused:
+  higherJet_apply_lt s (by omega : 0 < p + 1)
+
+Hint: Omit it from the simp argument list.
+  simp [constantRow, realize_single,̵ ̵h̵i̵g̵h̵e̵r̵J̵e̵t̵_̵a̵p̵p̵l̵y̵_̵l̵t̵ ̵s̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵ ̵:̵ ̵0̵ ̵<̵ ̵p̵ ̵+̵ ̵1̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3567/3595] Replayed Reinmann.SplitPairCauchyTail
+warning: Reinmann/SplitPairCauchyTail.lean:47:35: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Reinmann/SplitPairCauchyTail.lean:47:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Reinmann/SplitPairCauchyTail.lean:73:37: missing space in the source
+
+This part of the code
+  'i^n) +'
+should be written as
+  'i ^ n)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [3572/3595] Replayed Reinmann.XiMellinRemainder
+warning: Reinmann/XiMellinRemainder.lean:166:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3575/3595] Replayed Reinmann.EnclosureRules
+warning: Reinmann/EnclosureRules.lean:24:34: missing space in the source
+
+This part of the code
+  't-v‖ ≤'
+should be written as
+  't - v‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:36:16: missing space in the source
+
+This part of the code
+  '((a+b)/2)-v‖'
+should be written as
+  '((a + b)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:36:19: missing space in the source
+
+This part of the code
+  '((a+b)/2)-v‖'
+should be written as
+  'b) / 2)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:36:22: missing space in the source
+
+This part of the code
+  '((a+b)/2)-v‖ ≤'
+should be written as
+  '2) - v‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:64:27: missing space in the source
+
+This part of the code
+  'c-v‖ ≤'
+should be written as
+  'c - v‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:64:44: missing space in the source
+
+This part of the code
+  '‖z-c‖ ≤'
+should be written as
+  '‖z - c‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:65:14: missing space in the source
+
+This part of the code
+  'z-f c‖'
+should be written as
+  'z - f'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:65:28: missing space in the source
+
+This part of the code
+  '‖z-c‖) (hmargin'
+should be written as
+  '‖z - c‖)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:65:49: missing space in the source
+
+This part of the code
+  'K*ρ < ‖v‖)'
+should be written as
+  'K * ρ'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:90:44: missing space in the source
+
+This part of the code
+  '(n+1)) (j'
+should be written as
+  '(n + 1))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:90:60: missing space in the source
+
+This part of the code
+  '(m+1)) :'
+should be written as
+  '(m + 1))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:116:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Reinmann/EnclosureRules.lean:109:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/EnclosureRules.lean:116:48: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Reinmann/EnclosureRules.lean:129:20: missing space in the source
+
+This part of the code
+  '(n+1) →'
+should be written as
+  '(n + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:129:32: missing space in the source
+
+This part of the code
+  '(m+1) →'
+should be written as
+  '(m + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:130:20: missing space in the source
+
+This part of the code
+  '(n+1) →'
+should be written as
+  '(n + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:130:32: missing space in the source
+
+This part of the code
+  '(m+1) →'
+should be written as
+  '(m + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:131:42: missing space in the source
+
+This part of the code
+  'j)-values'
+should be written as
+  'j) - values'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:133:10: missing space in the source
+
+This part of the code
+  'z-f (gridCenter'
+should be written as
+  'z - f'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:133:40: missing space in the source
+
+This part of the code
+  'K*‖z-gridCenter'
+should be written as
+  'K * ‖z'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:133:43: missing space in the source
+
+This part of the code
+  'K*‖z-gridCenter'
+should be written as
+  '‖z - gridCenter'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:134:32: missing space in the source
+
+This part of the code
+  'j+K*(1/(n'
+should be written as
+  'j + K'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:134:37: missing space in the source
+
+This part of the code
+  'j+K*(1/(n :'
+should be written as
+  '(1 / (n'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:134:45: missing space in the source
+
+This part of the code
+  'ℝ)+2*H/m) <'
+should be written as
+  'ℝ) + 2'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [3580/3595] Replayed Reinmann.WeilWindowAudit
+info: Reinmann/WeilWindowAudit.lean:4:0: 'Reinmann.WeilWindow.energy_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.energy_nonneg`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:5:0: 'Reinmann.WeilWindow.supported_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.supported_mono`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:6:0: 'Reinmann.WeilWindow.publicLower_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.publicLower_pos`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:7:0: 'Reinmann.WeilWindow.cutoff_support_dictionary' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.cutoff_support_dictionary`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:8:0: 'Reinmann.WeilWindow.cutoff_between_three_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.cutoff_between_three_four`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:9:0: 'Reinmann.WeilWindow.prime_powers_below_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.prime_powers_below_four`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:10:0: 'Reinmann.WeilWindow.active_prime_powers' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.active_prime_powers`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:11:0: 'Reinmann.WeilWindow.linear_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.linear_block_lower`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:12:0: 'Reinmann.WeilWindow.schur_block_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.schur_block_lower`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:13:0: 'Reinmann.WeilWindow.schur_can_close_when_linear_allowance_fails' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.schur_can_close_when_linear_allowance_fails`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:14:0: 'Reinmann.WeilWindow.WindowBlockHypotheses.two_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.WindowBlockHypotheses.two_block`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:15:0: 'Reinmann.WeilWindow.WindowBlockHypotheses.bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.WindowBlockHypotheses.bound`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:16:0: 'Reinmann.WeilWindow.WindowBlockHypotheses.schur_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.WindowBlockHypotheses.schur_bound`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:17:0: 'Reinmann.WeilWindow.certificate_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.certificate_arithmetic`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:18:0: 'Reinmann.WeilWindow.certified_exp_six_fifths_of_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.certified_exp_six_fifths_of_blocks`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:19:0: 'Reinmann.WeilWindow.schur_certificate_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.schur_certificate_arithmetic`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:20:0: 'Reinmann.WeilWindow.window_bound_weaken' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.window_bound_weaken`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:21:0: 'Reinmann.WeilWindow.certified_exp_six_fifths_of_schur_blocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.certified_exp_six_fifths_of_schur_blocks`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:22:0: 'Reinmann.WeilWindow.window_bound_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.window_bound_restrict`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:23:0: 'Reinmann.WeilWindow.smaller_windows_of_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.smaller_windows_of_certificate`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:24:0: 'Reinmann.WeilWindow.window_nonnegative_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.window_nonnegative_of_bound`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/WeilWindowAudit.lean:25:0: 'Reinmann.WeilWindow.all_windows_of_cofinal_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `#print axioms Reinmann.WeilWindow.all_windows_of_cofinal_bounds`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: Reinmann/WeilWindowAudit.lean:4:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before ``.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [3586/3595] Replayed Reinmann.CurvatureControls
+warning: Reinmann/CurvatureControls.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: Reinmann/CurvatureControls.lean:47:0: 'Reinmann.realZeroControl_turan' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:48:0: 'Reinmann.realZeroControl_scaled_deficit_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:49:0: 'Reinmann.realZeroControl_curvature_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:50:0: 'Reinmann.realZeroControl_discrete_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Reinmann/CurvatureControls.lean:51:0: 'Reinmann.curvature_negative_of_half_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3589/3595] Replayed Reinmann.XiFirstTile
+warning: Reinmann/XiFirstTile.lean:39:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiFirstTile.lean:56:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiFirstTile.lean:144:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiFirstTile.lean:124:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/XiFirstTile.lean:153:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/XiFirstTile.lean:158:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3590/3595] Replayed Reinmann.SplitPairMixedRows
+warning: Reinmann/SplitPairMixedRows.lean:18:0: `normalized_subset_product_bound` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#2)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:36:0: `ordered_subset_product_bound` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#2)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:52:0: `mixed_product_rate` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#2)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:64:0: `row_expansion` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:85:21: unused variable `hw`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Reinmann/SplitPairMixedRows.lean:102:18: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Reinmann/SplitPairMixedRows.lean:136:23: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [β,̵ ̵h̵i̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/SplitPairMixedRows.lean:115:0: `choice_weight_bound` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#2)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:185:0: `determinant_difference_expansion` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:246:22: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [Fintype.card_f̵u̵n̵,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵option]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/SplitPairMixedRows.lean:223:0: `determinant_difference_rate` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:231:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/SplitPairMixedRows.lean:272:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Reinmann/SplitPairMixedRows.lean:248:0: `mixed_determinant_bound` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:258:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/SplitPairMixedRows.lean:294:0: `coefficient_determinant_bound` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairMixedRows.lean:305:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3591/3595] Replayed Reinmann.SplitPairPatchedRemainder
+warning: Reinmann/SplitPairPatchedRemainder.lean:17:0: `patch_finite_germs` does not use the following hypothesis in its type:
+  • [Fintype ι] (#2)
+
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+
+Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+warning: Reinmann/SplitPairPatchedRemainder.lean:57:0: `actual_simple_pole_remainder` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+⚠ [3593/3595] Replayed Reinmann.SplitPairCoefficientIdentity
+warning: Reinmann/SplitPairCoefficientIdentity.lean:37:19: unused variable `hF`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Reinmann/SplitPairCoefficientIdentity.lean:37:43: unused variable `hF0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Reinmann/SplitPairCoefficientIdentity.lean:61:0: `actual_remainder_with_coefficients` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+warning: Reinmann/SplitPairCoefficientIdentity.lean:70:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/SplitPairCoefficientIdentity.lean:80:0: `actual_reciprocal_coefficient_error` does not use the following hypothesis in its type:
+  • [DecidableEq ι] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+✔ [3594/3595] Built Reinmann (42s)
+Build completed successfully (3595 jobs).

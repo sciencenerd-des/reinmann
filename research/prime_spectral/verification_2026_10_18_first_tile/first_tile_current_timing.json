@@ -1,0 +1,12 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "Reinmann/XiFirstTile.lean"
+  ],
+  "source_sha256": "ee378079965aba11600b11afcd22a9b3cb1b00957dad704805ddb213bf035eab",
+  "seconds": 22.558860458084382,
+  "exit_code": 0,
+  "scope": "Warm dependencies; full current first-tile source elaboration. Concurrent compatibility compilation may affect wall time; not a top-edge jet benchmark."
+}

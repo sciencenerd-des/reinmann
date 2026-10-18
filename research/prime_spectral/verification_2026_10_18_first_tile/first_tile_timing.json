@@ -1,0 +1,11 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "Reinmann/XiFirstTile.lean"
+  ],
+  "seconds": 38.577628250001,
+  "exit_code": 0,
+  "scope": "Warm dependencies; full first-tile source elaboration, including genuine centre enclosure and local variation."
+}

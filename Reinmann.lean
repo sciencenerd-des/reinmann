@@ -154,3 +154,12 @@ import Reinmann.CertifiedHorner
 import Reinmann.HardTileLogInputs
 import Reinmann.HardTileGammaLog
 import Reinmann.HardTileGammaLogJet
+
+-- Complete degree-eight Gamma/zeta/Xi hard-tile jet and nonvanishing certificate.
+import Reinmann.CertifiedScalarExp
+import Reinmann.CertifiedTaylorInputs
+import Reinmann.HardTilePowerInputs
+import Reinmann.HardTileFiniteIdentities
+import Reinmann.HardTileFiniteJets
+import Reinmann.TaylorDerivativeTail
+import Reinmann.HardTileXi

@@ -7,7 +7,7 @@
 #   1. Source-level grep for `sorry`/`admit` tokens and project-declared `axiom`s
 #      in the active library (Reinmann/*.lean), ignoring comments and docstrings.
 #   2. Semantic check: run Reinmann/AxiomAudit.lean and confirm every audited
-#      theorem depends on exactly Lean's three foundational axioms
+#      theorem depends only on a subset of Lean's three foundational axioms
 #      [propext, Classical.choice, Quot.sound] — nothing more.
 #
 # Exit 0 iff both checks pass. Intended for local use and CI.
@@ -96,8 +96,28 @@ audit_flat="$(echo "$audit_out" | awk '
   END { if (buf != "") print buf }
 ')"
 
-# Every non-empty line must end with the canonical axiom list.
-bad="$(echo "$audit_flat" | grep 'depends on axioms' | grep -vF "$CANON" || true)"
+# Fewer foundational axioms are valid too. Reject each name outside the
+# allowlist, and fail closed on malformed dependency output.
+bad="$(echo "$audit_flat" | grep 'depends on axioms' | awk '
+  {
+    if ($0 !~ /depends on axioms:[[:space:]]*\[[^]]+\]$/) { print; next }
+    names = $0
+    sub(/^.*depends on axioms:[[:space:]]*\[/, "", names)
+    sub(/\]$/, "", names)
+    gsub(/[[:space:]]/, "", names)
+    n = split(names, a, ",")
+    for (i = 1; i <= n; i++) {
+      if (a[i] != "propext" && a[i] != "Classical.choice" && a[i] != "Quot.sound") {
+        print; break
+      }
+    }
+  }
+')"
+parser_status=$?
+if [[ $parser_status -ne 0 ]]; then
+  echo "FAIL: axiom dependency parser failed"
+  exit 1
+fi
 n_lines="$(echo "$audit_flat" | grep -c 'depends on axioms')"
 
 if [[ -n "$bad" ]]; then

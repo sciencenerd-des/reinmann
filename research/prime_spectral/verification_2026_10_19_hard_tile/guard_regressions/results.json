@@ -1,0 +1,42 @@
+{
+  "status": "actual_guard_allowlist_regressions_passed",
+  "rows": [
+    {
+      "case": "three_standard",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "proper_subset",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "wrapped_subset",
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "case": "native_reduction",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": "sorry_axiom",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": "custom_axiom",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "case": "malformed_output",
+      "expected": 1,
+      "actual": 1
+    }
+  ],
+  "guard_sha256": "e48e5f1c6cf012dae1a418d68a414c1f66307ee72b43d8a9d793fe4e38322620",
+  "scope": "synthetic parser fixtures; not a substitute for the real Lean audit"
+}

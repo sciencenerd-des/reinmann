@@ -1,0 +1,9 @@
+{
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "cpu": "Apple M4 Pro",
+  "physical_cores": 12,
+  "logical_cores": 12,
+  "timing_policy": "Serial source elaboration; compiled dependencies and OS caches retained. No concurrent repository build or audit during timing.",
+  "background_activity": "Ordinary desktop activity not controlled"
+}

@@ -1,0 +1,7 @@
+Reinmann/TaylorDerivativeTail.lean:30:28: warning: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [coefficient, s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

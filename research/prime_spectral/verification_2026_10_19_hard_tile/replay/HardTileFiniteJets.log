@@ -1,0 +1,476 @@
+Reinmann/HardTileFiniteJets.lean:47:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:74:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:116:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1070:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1192:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1314:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1436:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1558:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1680:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1802:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:1924:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:2046:10: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:2168:11: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:2290:11: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:2578:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:2744:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:2910:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:3076:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:3242:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:3408:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:3574:12: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:3740:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:3906:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:4072:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:4238:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:4404:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:4570:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:4736:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:4902:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:5068:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:5234:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:5400:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:5566:13: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:6226:11: warning: unused variable `s`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/HardTileFiniteJets.lean:7478:4: warning: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  simp only [F_gammaInvProd11, F_gammaInvProd10, F_gammaInvProd9, F_gammaInvProd8, F_gammaInvProd7,
+  ̲  ̲ ̲ ̲F_gammaInvProd6, F_gammaInvProd5, F_gammaInvProd4, F_gammaInvProd3, F_gammaInvProd2,
+  ̲  ̲ ̲ ̲F_gammaInvProd1, F_gammaInv0, F_halfVariable, F_variable, F_gammaInv1, F_shift1, F_q1,
+  ̲  ̲ ̲ ̲F_gammaInv2, F_shift2, F_q2, F_gammaInv3, F_shift3, F_q3, F_gammaInv4, F_shift4, F_q4,
+  ̲  ̲ ̲ ̲F_gammaInv5, F_shift5, F_q5, F_gammaInv6, F_shift6, F_q6, F_gammaInv7, F_shift7, F_q7,
+  ̲  ̲ ̲ ̲F_gammaInv8, F_shift8, F_q8, F_gammaInv9, F_shift9, F_q9, F_gammaInv10, F_shift10, F_q10,
+  ̲  ̲ ̲ ̲F_gammaInv11, F_shift11, F_q11, value, Rat.cast_zero, zero_mul, add_zero, R̵a̵t̵.̵c̵a̵s̵t̵_̵n̵e̵g̵,̵ ̵Rat.cast_div,
+  ̲  ̲ ̲ ̲Rat.cast_one, Rat.cast_ofNat, Nat.cast_ofNat, Finset.prod_range_succ, Finset.prod_range_zero,
+  ̲  ̲ ̲ ̲mul_one, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7479:52: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  simp only [F_gammaInvProd11, F_gammaInvProd10, F_gammaInvProd9, F_gammaInvProd8, F_gammaInvProd7,
+  ̲  ̲ ̲ ̲F_gammaInvProd6, F_gammaInvProd5, F_gammaInvProd4, F_gammaInvProd3, F_gammaInvProd2,
+  ̲  ̲ ̲ ̲F_gammaInvProd1, F_gammaInv0, F_halfVariable, F_variable, F_gammaInv1, F_shift1, F_q1,
+  ̲  ̲ ̲ ̲F_gammaInv2, F_shift2, F_q2, F_gammaInv3, F_shift3, F_q3, F_gammaInv4, F_shift4, F_q4,
+  ̲  ̲ ̲ ̲F_gammaInv5, F_shift5, F_q5, F_gammaInv6, F_shift6, F_q6, F_gammaInv7, F_shift7, F_q7,
+  ̲  ̲ ̲ ̲F_gammaInv8, F_shift8, F_q8, F_gammaInv9, F_shift9, F_q9, F_gammaInv10, F_shift10, F_q10,
+  ̲  ̲ ̲ ̲F_gammaInv11, F_shift11, F_q11, value, Rat.cast_zero, zero_mul, add_zero, Rat.cast_neg,
+  ̲  ̲ ̲ ̲Rat.cast_div, Rat.cast_one, Rat.cast_ofNat, Nat.cast_ofNat, Finset.prod_range_succ,
+  ̲  ̲ ̲ ̲Finset.prod_range_zero, m̵u̵l̵_̵o̵n̵e̵,̵ ̵one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Reinmann/HardTileFiniteJets.lean:7649:53: warning: This simp argument is unused:
+  Finset.prod_range_succ
+
+Hint: Omit it from the simp argument list.
+  simp [F_variable, HardTileFiniteIdentities.rising,̵ ̵F̵i̵n̵s̵e̵t̵.̵p̵r̵o̵d̵_̵r̵a̵n̵g̵e̵_̵s̵u̵c̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7653:24: warning: This simp argument is unused:
+  rising1_identity
+
+Hint: Omit it from the simp argument list.
+  simp only [F_rising2, r̵i̵s̵i̵n̵g̵1̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵F_factor1, F_variable, F_q1, HardTileFiniteIdentities.rising,
+  ̲  ̲ ̲ ̲Finset.prod_range_succ,
+  ̵  ̵ ̵ ̵value, Rat.cast_zero, zero_mul, add_zero, Rat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7655:46: warning: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  simp only [F_rising2, rising1_identity, F_factor1, F_variable, F_q1,
+  ̲  ̲ ̲ ̲HardTileFiniteIdentities.rising, Finset.prod_range_succ, value, Rat.cast_zero, zero_mul,
+  ̲  ̲ ̲ ̲a̵d̵d̵_̵z̵e̵r̵o̵,̵ ̵R̵a̵t̵.̵c̵a̵s̵t̵_̵o̵f̵N̵a̵t̵]̵a̲d̲d̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7656:86: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Reinmann/HardTileFiniteJets.lean:7663:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7663:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7670:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7670:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7677:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7677:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7684:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7684:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7691:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7691:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7698:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7698:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7705:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7705:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7712:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7712:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7719:16: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Reinmann/HardTileFiniteJets.lean:7719:16: warning: '(simp only [Finset.prod_range_zero, Nat.cast_zero, add_zero, one_mul] <;> rfl)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Reinmann/HardTileFiniteJets.lean:7724:1007: warning: This simp argument is unused:
+  rising2_identity
+
+Hint: Omit it from the simp argument list.
+  simp only [F_emAfterCorr6, F_emAfterCorr5, F_emAfterCorr4, F_emAfterCorr3, F_emAfterCorr2,
+  ̲  ̲ ̲ ̲F_emAfterCorr1, F_emInitialHalf, F_emInitialIntegral, F_initial20, F_initial19, F_initial18,
+  ̲  ̲ ̲ ̲F_initial17, F_initial16, F_initial15, F_initial14, F_initial13, F_initial12, F_initial11,
+  ̲  ̲ ̲ ̲F_initial10, F_initial9, F_initial8, F_initial7, F_initial6, F_initial5, F_initial4, F_initial3,
+  ̲  ̲ ̲ ̲F_initial2, F_emIntegral, F_emIntegralProduct, F_sminusoneInv, F_sminusone, F_q12, F_emHalf,
+  ̲  ̲ ̲ ̲F_emCorr1, F_emCorrProduct1, F_emCorr2, F_emCorrProduct2, F_emCorr3, F_emCorrProduct3,
+  ̲  ̲ ̲ ̲F_emCorr4, F_emCorrProduct4, F_emCorr5, F_emCorrProduct5, F_emCorr6, F_emCorrProduct6,
+  ̲  ̲ ̲ ̲term1_identity, term2_identity, term3_identity, term4_identity, term5_identity, term6_identity,
+  ̲  ̲ ̲ ̲term7_identity, term8_identity, term9_identity, term10_identity, term11_identity,
+  ̲  ̲ ̲ ̲term12_identity, term13_identity, term14_identity, term15_identity, term16_identity,
+  ̲  ̲ ̲ ̲term17_identity, term18_identity, term19_identity, term20_identity, term21_identity,
+  ̲  ̲ ̲ ̲rising1_identity, rising2̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵ ̵r̵i̵s̵i̵n̵g̵3_identity, rising4_identity, rising5_identity, rising6_identity,
+  ̲  ̲ ̲ ̲rising7_identity, rising8_identity, rising9_identity, rising10_identity, rising11_identity,
+      HardTileFiniteIdentities.emFinite, Finset.sum_range_succ, Finset.sum_range_zero,
+  ̵  ̵ ̵ ̵value,
+  ̲  ̲ ̲ ̲Rat.cast_neg, Rat.cast_div, Rat.cast_one, Rat.cast_zero,
+  ̵  ̵ ̵ ̵zero_mul, add_zero, Rat.cast_ofNat,
+  ̲  ̲ ̲ ̲Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7724:1043: warning: This simp argument is unused:
+  rising4_identity
+
+Hint: Omit it from the simp argument list.
+  simp only [F_emAfterCorr6, F_emAfterCorr5, F_emAfterCorr4, F_emAfterCorr3, F_emAfterCorr2,
+  ̲  ̲ ̲ ̲F_emAfterCorr1, F_emInitialHalf, F_emInitialIntegral, F_initial20, F_initial19, F_initial18,
+  ̲  ̲ ̲ ̲F_initial17, F_initial16, F_initial15, F_initial14, F_initial13, F_initial12, F_initial11,
+  ̲  ̲ ̲ ̲F_initial10, F_initial9, F_initial8, F_initial7, F_initial6, F_initial5, F_initial4, F_initial3,
+  ̲  ̲ ̲ ̲F_initial2, F_emIntegral, F_emIntegralProduct, F_sminusoneInv, F_sminusone, F_q12, F_emHalf,
+  ̲  ̲ ̲ ̲F_emCorr1, F_emCorrProduct1, F_emCorr2, F_emCorrProduct2, F_emCorr3, F_emCorrProduct3,
+  ̲  ̲ ̲ ̲F_emCorr4, F_emCorrProduct4, F_emCorr5, F_emCorrProduct5, F_emCorr6, F_emCorrProduct6,
+  ̲  ̲ ̲ ̲term1_identity, term2_identity, term3_identity, term4_identity, term5_identity, term6_identity,
+  ̲  ̲ ̲ ̲term7_identity, term8_identity, term9_identity, term10_identity, term11_identity,
+  ̲  ̲ ̲ ̲term12_identity, term13_identity, term14_identity, term15_identity, term16_identity,
+  ̲  ̲ ̲ ̲term17_identity, term18_identity, term19_identity, term20_identity, term21_identity,
+  ̲  ̲ ̲ ̲rising1_identity, rising2_identity, rising3_identity, rising4̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵ ̵r̵i̵s̵i̵n̵g̵5_identity, rising6_identity,
+  ̲  ̲ ̲ ̲rising7_identity, rising8_identity, rising9_identity, rising10_identity, rising11_identity,
+      HardTileFiniteIdentities.emFinite, Finset.sum_range_succ, Finset.sum_range_zero,
+  ̵  ̵ ̵ ̵value,
+  ̲  ̲ ̲ ̲Rat.cast_neg, Rat.cast_div, Rat.cast_one, Rat.cast_zero,
+  ̵  ̵ ̵ ̵zero_mul, add_zero, Rat.cast_ofNat,
+  ̲  ̲ ̲ ̲Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7724:1079: warning: This simp argument is unused:
+  rising6_identity
+
+Hint: Omit it from the simp argument list.
+  simp only [F_emAfterCorr6, F_emAfterCorr5, F_emAfterCorr4, F_emAfterCorr3, F_emAfterCorr2,
+  ̲  ̲ ̲ ̲F_emAfterCorr1, F_emInitialHalf, F_emInitialIntegral, F_initial20, F_initial19, F_initial18,
+  ̲  ̲ ̲ ̲F_initial17, F_initial16, F_initial15, F_initial14, F_initial13, F_initial12, F_initial11,
+  ̲  ̲ ̲ ̲F_initial10, F_initial9, F_initial8, F_initial7, F_initial6, F_initial5, F_initial4, F_initial3,
+  ̲  ̲ ̲ ̲F_initial2, F_emIntegral, F_emIntegralProduct, F_sminusoneInv, F_sminusone, F_q12, F_emHalf,
+  ̲  ̲ ̲ ̲F_emCorr1, F_emCorrProduct1, F_emCorr2, F_emCorrProduct2, F_emCorr3, F_emCorrProduct3,
+  ̲  ̲ ̲ ̲F_emCorr4, F_emCorrProduct4, F_emCorr5, F_emCorrProduct5, F_emCorr6, F_emCorrProduct6,
+  ̲  ̲ ̲ ̲term1_identity, term2_identity, term3_identity, term4_identity, term5_identity, term6_identity,
+  ̲  ̲ ̲ ̲term7_identity, term8_identity, term9_identity, term10_identity, term11_identity,
+  ̲  ̲ ̲ ̲term12_identity, term13_identity, term14_identity, term15_identity, term16_identity,
+  ̲  ̲ ̲ ̲term17_identity, term18_identity, term19_identity, term20_identity, term21_identity,
+  ̲  ̲ ̲ ̲rising1_identity, rising2_identity, rising3_identity, rising4_identity, rising5_identity,
+  ̲ r̵i̵s̵i̵n̵g̵6̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵  ̲ ̲rising7_identity, rising8_identity, rising9_identity, rising10_identity, rising11_identity,
+      HardTileFiniteIdentities.emFinite, Finset.sum_range_succ, Finset.sum_range_zero,
+  ̵  ̵ ̵ ̵value,
+  ̲  ̲ ̲ ̲Rat.cast_neg, Rat.cast_div, Rat.cast_one, Rat.cast_zero,
+  ̵  ̵ ̵ ̵zero_mul, add_zero, Rat.cast_ofNat,
+  ̲  ̲ ̲ ̲Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7724:1115: warning: This simp argument is unused:
+  rising8_identity
+
+Hint: Omit it from the simp argument list.
+  simp only [F_emAfterCorr6, F_emAfterCorr5, F_emAfterCorr4, F_emAfterCorr3, F_emAfterCorr2,
+  ̲  ̲ ̲ ̲F_emAfterCorr1, F_emInitialHalf, F_emInitialIntegral, F_initial20, F_initial19, F_initial18,
+  ̲  ̲ ̲ ̲F_initial17, F_initial16, F_initial15, F_initial14, F_initial13, F_initial12, F_initial11,
+  ̲  ̲ ̲ ̲F_initial10, F_initial9, F_initial8, F_initial7, F_initial6, F_initial5, F_initial4, F_initial3,
+  ̲  ̲ ̲ ̲F_initial2, F_emIntegral, F_emIntegralProduct, F_sminusoneInv, F_sminusone, F_q12, F_emHalf,
+  ̲  ̲ ̲ ̲F_emCorr1, F_emCorrProduct1, F_emCorr2, F_emCorrProduct2, F_emCorr3, F_emCorrProduct3,
+  ̲  ̲ ̲ ̲F_emCorr4, F_emCorrProduct4, F_emCorr5, F_emCorrProduct5, F_emCorr6, F_emCorrProduct6,
+  ̲  ̲ ̲ ̲term1_identity, term2_identity, term3_identity, term4_identity, term5_identity, term6_identity,
+  ̲  ̲ ̲ ̲term7_identity, term8_identity, term9_identity, term10_identity, term11_identity,
+  ̲  ̲ ̲ ̲term12_identity, term13_identity, term14_identity, term15_identity, term16_identity,
+  ̲  ̲ ̲ ̲term17_identity, term18_identity, term19_identity, term20_identity, term21_identity,
+  ̲  ̲ ̲ ̲rising1_identity, rising2_identity, rising3_identity, rising4_identity, rising5_identity,
+  ̲  ̲ ̲ ̲rising6_identity, rising7_identity, rising8̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵ ̵r̵i̵s̵i̵n̵g̵9_identity, rising10_identity, rising11_identity,
+      HardTileFiniteIdentities.emFinite, Finset.sum_range_succ, Finset.sum_range_zero,
+  ̵  ̵ ̵ ̵value,
+  ̲  ̲ ̲ ̲Rat.cast_neg, Rat.cast_div, Rat.cast_one, Rat.cast_zero,
+  ̵  ̵ ̵ ̵zero_mul, add_zero, Rat.cast_ofNat,
+  ̲  ̲ ̲ ̲Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7724:1151: warning: This simp argument is unused:
+  rising10_identity
+
+Hint: Omit it from the simp argument list.
+  simp only [F_emAfterCorr6, F_emAfterCorr5, F_emAfterCorr4, F_emAfterCorr3, F_emAfterCorr2,
+  ̲  ̲ ̲ ̲F_emAfterCorr1, F_emInitialHalf, F_emInitialIntegral, F_initial20, F_initial19, F_initial18,
+  ̲  ̲ ̲ ̲F_initial17, F_initial16, F_initial15, F_initial14, F_initial13, F_initial12, F_initial11,
+  ̲  ̲ ̲ ̲F_initial10, F_initial9, F_initial8, F_initial7, F_initial6, F_initial5, F_initial4, F_initial3,
+  ̲  ̲ ̲ ̲F_initial2, F_emIntegral, F_emIntegralProduct, F_sminusoneInv, F_sminusone, F_q12, F_emHalf,
+  ̲  ̲ ̲ ̲F_emCorr1, F_emCorrProduct1, F_emCorr2, F_emCorrProduct2, F_emCorr3, F_emCorrProduct3,
+  ̲  ̲ ̲ ̲F_emCorr4, F_emCorrProduct4, F_emCorr5, F_emCorrProduct5, F_emCorr6, F_emCorrProduct6,
+  ̲  ̲ ̲ ̲term1_identity, term2_identity, term3_identity, term4_identity, term5_identity, term6_identity,
+  ̲  ̲ ̲ ̲term7_identity, term8_identity, term9_identity, term10_identity, term11_identity,
+  ̲  ̲ ̲ ̲term12_identity, term13_identity, term14_identity, term15_identity, term16_identity,
+  ̲  ̲ ̲ ̲term17_identity, term18_identity, term19_identity, term20_identity, term21_identity,
+  ̲  ̲ ̲ ̲rising1_identity, rising2_identity, rising3_identity, rising4_identity, rising5_identity,
+  ̲  ̲ ̲ ̲rising6_identity, rising7_identity, rising8_identity, rising9_identity, r̵i̵s̵i̵n̵g̵1̵0̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵ ̵rising11_identity,
+      HardTileFiniteIdentities.emFinite, Finset.sum_range_succ, Finset.sum_range_zero, value,
+  ̲  ̲ ̲ ̲Rat.cast_neg, Rat.cast_div, Rat.cast_one, Rat.cast_zero, zero_mul, add_zero, Rat.cast_ofNat,
+  ̲  ̲ ̲ ̲Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/HardTileFiniteJets.lean:7727:40: warning: This simp argument is unused:
+  Nat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  simp only [F_emAfterCorr6, F_emAfterCorr5, F_emAfterCorr4, F_emAfterCorr3, F_emAfterCorr2,
+  ̲  ̲ ̲ ̲F_emAfterCorr1, F_emInitialHalf, F_emInitialIntegral, F_initial20, F_initial19, F_initial18,
+  ̲  ̲ ̲ ̲F_initial17, F_initial16, F_initial15, F_initial14, F_initial13, F_initial12, F_initial11,
+  ̲  ̲ ̲ ̲F_initial10, F_initial9, F_initial8, F_initial7, F_initial6, F_initial5, F_initial4, F_initial3,
+  ̲  ̲ ̲ ̲F_initial2, F_emIntegral, F_emIntegralProduct, F_sminusoneInv, F_sminusone, F_q12, F_emHalf,
+  ̲  ̲ ̲ ̲F_emCorr1, F_emCorrProduct1, F_emCorr2, F_emCorrProduct2, F_emCorr3, F_emCorrProduct3,
+  ̲  ̲ ̲ ̲F_emCorr4, F_emCorrProduct4, F_emCorr5, F_emCorrProduct5, F_emCorr6, F_emCorrProduct6,
+  ̲  ̲ ̲ ̲term1_identity, term2_identity, term3_identity, term4_identity, term5_identity, term6_identity,
+  ̲  ̲ ̲ ̲term7_identity, term8_identity, term9_identity, term10_identity, term11_identity,
+  ̲  ̲ ̲ ̲term12_identity, term13_identity, term14_identity, term15_identity, term16_identity,
+  ̲  ̲ ̲ ̲term17_identity, term18_identity, term19_identity, term20_identity, term21_identity,
+  ̲  ̲ ̲ ̲rising1_identity, rising2_identity, rising3_identity, rising4_identity, rising5_identity,
+  ̲  ̲ ̲ ̲rising6_identity, rising7_identity, rising8_identity, rising9_identity, rising10_identity, ̵r̵i̵s̵i̵n̵g̵1̵1̵_̵i̵d̵e̵n̵t̵i̵t̵y̵,̵
+      r̲i̲s̲i̲n̲g̲1̲1̲_̲i̲d̲e̲n̲t̲i̲t̲y̲,̲ ̲HardTileFiniteIdentities.emFinite, Finset.sum_range_succ,
+  ̲  ̲ ̲ ̲Finset.sum_range_zero,
+  ̵  ̵ ̵ ̵value, Rat.cast_neg, Rat.cast_div, Rat.cast_one, Rat.cast_zero, ̲z̲e̲r̲o̲_̲m̲u̲l̲,̲
+      z̵e̵r̵o̵_̵m̵u̵l̵,̵ ̵add_zero, Rat.cast_ofNat,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵f̵N̵a̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

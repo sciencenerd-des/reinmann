@@ -1,0 +1,9 @@
+== Check 1: source grep for sorry / admit / axiom in Reinmann/*.lean ==
+OK: no sorry/admit in Reinmann/*.lean
+OK: no project-declared axioms in Reinmann/*.lean
+
+== Check 2: #print axioms on the reduction chain (AxiomAudit.lean) ==
+FAIL: theorem(s) depend on non-canonical axioms:
+'fixture' depends on axioms:  [propext, Quot.sound]
+
+AXIOM AUDIT FAILED.

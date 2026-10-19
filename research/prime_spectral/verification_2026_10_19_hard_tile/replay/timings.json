@@ -1,0 +1,140 @@
+{
+  "status": "complete_single_hard_tile_proofs_replayed",
+  "centre": [
+    "1/2",
+    "14"
+  ],
+  "radius": "1/16",
+  "degree": 8,
+  "lean_version": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+  "mathlib": "v4.30.0",
+  "rows": [
+    {
+      "module": "CertifiedTaylorModel",
+      "seconds": 12.240799207938835,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "2e140d97ead0404d2587c51b847d13af2979b9d0afbc96e7ace793e83b9e9745"
+    },
+    {
+      "module": "CertifiedComplexInputs",
+      "seconds": 19.148053625016473,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "8941f230d690db34724bcca45743b978ef69c10393f0e597e912c531fb7732b9"
+    },
+    {
+      "module": "CertifiedTaylorComposition",
+      "seconds": 22.0067225410603,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "325273a32d79580021df4ad0da46fdb880557113e07870601a54604b98c171f8"
+    },
+    {
+      "module": "CertifiedHorner",
+      "seconds": 23.714548957999796,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "dcd74ecdd1049c01a3a9dd6b926a385aacfa4283453820795cccb5637612463b"
+    },
+    {
+      "module": "CertifiedScalarExp",
+      "seconds": 33.642761292052455,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "527ca98669e624e792adda21e520c5d88f14ae7ef6baf09261e2347130c9f82d"
+    },
+    {
+      "module": "CertifiedTaylorInputs",
+      "seconds": 32.016480959020555,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "3cb19ec77782ee03549dc6cd814bee79b9c08f98bcdb86d493f1708c7aba5100"
+    },
+    {
+      "module": "HardTileFiniteIdentities",
+      "seconds": 32.59681779099628,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "fffc3599bb1c84a0e4bc92b3d6d8f70e0735b58bc09cbf2e256db1529e8ef52e"
+    },
+    {
+      "module": "TaylorDerivativeTail",
+      "seconds": 23.466973166097887,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "638971ae44fdd620481b997b9855309414df7fe66211e4d72be64cf85014bcf5"
+    },
+    {
+      "module": "EulerMaclaurinAnalytic",
+      "seconds": 34.028283125022426,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "e6b2d20cbe124b50f58c627314a193406f731fb453052c4fbe7606997df1272e"
+    },
+    {
+      "module": "XiLocalCauchy",
+      "seconds": 30.248193874955177,
+      "kind": "shared",
+      "returncode": 0,
+      "source_sha256": "d89f76ca0a9ae79953dd5e4558fd286e929b2679c4c58a74e7e63006bd47f065"
+    },
+    {
+      "module": "StirlingAnalytic",
+      "seconds": 37.64786725002341,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "0e985834383c27dfb5e3ea1e4c09d157f0a77b95015caa8c9923d2d0b28739b3"
+    },
+    {
+      "module": "ZetaJetRemainder",
+      "seconds": 30.825759584084153,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "4d70d6bb785b055e0c4f10c26aa1cc7431e5f1492e0a92f7a062346b55a4e782"
+    },
+    {
+      "module": "HardTileLogInputs",
+      "seconds": 27.285162665997632,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "8e1f73e4e5d753043844d889567772c11cd44d164251712a7e7587045899ba66"
+    },
+    {
+      "module": "HardTileGammaLog",
+      "seconds": 27.34229974995833,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "1a36ebff1828a6ecefe3f9d4833b386a263a75596c80ee3213b546d094d11b5e"
+    },
+    {
+      "module": "HardTileGammaLogJet",
+      "seconds": 31.14363595796749,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "23d7801cfd87433dac7012e08637141d57bdd57aadb79fefdfac6e429f2390a3"
+    },
+    {
+      "module": "HardTileFiniteJets",
+      "seconds": 157.50503733300138,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "af96b146723f399ca684f661f5b5779c3bbc7e3c9597a3b586253e0540025e75"
+    },
+    {
+      "module": "HardTileXi",
+      "seconds": 22.490083165932447,
+      "kind": "centre_specific",
+      "returncode": 0,
+      "source_sha256": "886bcea2f5195515c3d72a551dcf215a70c30a0f1e35d63498ea003270ed3993"
+    }
+  ],
+  "timing_scope": "fresh serial source elaboration with built dependencies",
+  "shared_seconds": 263.1096345401602,
+  "centre_specific_seconds": 334.23984570696484,
+  "complete_single_tile_seconds": 597.349480247125,
+  "conditional_35_centre_projection_seconds": 11961.50423428393,
+  "projection_assumption": "each other centre costs as much as this one; untested",
+  "zero_free_rectangle_certified": false,
+  "RH_proved": false
+}

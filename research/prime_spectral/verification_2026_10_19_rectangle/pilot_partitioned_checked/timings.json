@@ -1,0 +1,75 @@
+{
+  "status": "complete",
+  "jobs": 1,
+  "wall_seconds": 54.87626383290626,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.RectangleModel",
+        "XiRectangle.Cover"
+      ],
+      "seconds": 1.2970432500587776,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_000.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Gamma"
+      ],
+      "seconds": 1.1971422919305041,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_001.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms0"
+      ],
+      "seconds": 1.1803330419352278,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_002.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms1"
+      ],
+      "seconds": 1.1388047920772806,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_003.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms2"
+      ],
+      "seconds": 1.1590428750496358,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_004.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms3"
+      ],
+      "seconds": 1.1415615830337629,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_005.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Zeta"
+      ],
+      "seconds": 34.54507866699714,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_006.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042"
+      ],
+      "seconds": 13.213305457960814,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned_checked/batch_007.log"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiRectangle/Tile042.lean": "e3675b5d56001f853686809066916b1ffc64e1a908cf8990a36239ab517b62f1"
+  }
+}

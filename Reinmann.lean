@@ -163,3 +163,13 @@ import Reinmann.HardTileFiniteIdentities
 import Reinmann.HardTileFiniteJets
 import Reinmann.TaylorDerivativeTail
 import Reinmann.HardTileXi
+
+-- Uniform pole-free evaluator and rational cover rules; numerical tiles are optional.
+import Reinmann.RegularizedEulerMaclaurin
+import Reinmann.UniformXiRemainders
+import Reinmann.RectangleTaylor
+import Reinmann.RectangleTileRules
+import Reinmann.RationalBallCover
+import Reinmann.RectangleFiniteFormulas
+import Reinmann.RectangleLogInputs
+import Reinmann.RectangleModel

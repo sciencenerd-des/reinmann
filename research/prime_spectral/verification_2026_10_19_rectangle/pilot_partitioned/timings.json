@@ -1,0 +1,67 @@
+{
+  "status": "failed",
+  "jobs": 1,
+  "wall_seconds": 236.1585235419916,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.RectangleModel",
+        "XiRectangle.Cover"
+      ],
+      "seconds": 2.9733577920123935,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_000.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Gamma"
+      ],
+      "seconds": 94.50951912498567,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_001.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms0"
+      ],
+      "seconds": 27.40141924994532,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_002.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms1"
+      ],
+      "seconds": 31.722925000009127,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_003.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms2"
+      ],
+      "seconds": 25.501073583960533,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_004.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Terms3"
+      ],
+      "seconds": 23.99565483292099,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_005.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042Zeta"
+      ],
+      "seconds": 30.04998420807533,
+      "returncode": 1,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_partitioned/batch_006.log"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiRectangle/Tile042.lean": "6a81b3c3ae3c1f1015670ad17e3744f6a733f88e87a65ae8ba15877d8cfbc6d3"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "jobs": 1,
+  "wall_seconds": 259.77828437497374,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.RectangleModel",
+        "XiRectangle.Cover"
+      ],
+      "seconds": 25.906784292077646,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_complete/batch_000.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile043"
+      ],
+      "seconds": 233.8702518340433,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_complete/batch_001.log"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiRectangle/Tile043.lean": "354d93ad3ee2eb77dd472b91d2bcf9a6ca8695b61a98d392f1f54573a28346b5"
+  }
+}

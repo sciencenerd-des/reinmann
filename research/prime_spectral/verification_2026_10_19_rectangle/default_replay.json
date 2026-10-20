@@ -1,0 +1,24 @@
+{
+  "root_audit_targets": 1619,
+  "rows": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/main_build.log",
+      "returncode": 0,
+      "active_seconds": 3.1503067910671234
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/axiom_guard.log",
+      "returncode": 0,
+      "active_seconds": 9.939650250016712
+    }
+  ],
+  "audit_source_sha256": "590eefdc2d69b7c8464f4743a557bea0c58c9abf74f58580fb7fd3a061940049"
+}

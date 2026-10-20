@@ -1,0 +1,3372 @@
+{
+  "scope": "only completed generated cache files; no source edits",
+  "completed_tiles": [
+    "Tile000",
+    "Tile001",
+    "Tile002",
+    "Tile003",
+    "Tile004",
+    "Tile005",
+    "Tile006",
+    "Tile007",
+    "Tile008",
+    "Tile009",
+    "Tile010",
+    "Tile011",
+    "Tile012",
+    "Tile013",
+    "Tile014",
+    "Tile015",
+    "Tile016",
+    "Tile017",
+    "Tile018",
+    "Tile019"
+  ],
+  "rows": [
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile000.olean",
+      "logical_bytes": 20191232,
+      "allocated_before": 20193280,
+      "allocated_after": 7917568,
+      "sha256_before_and_after": "b4fdcb476ca58fff5e4186a4eaaf5c906a1fb0bb81689fa68e17a8b83fc4cef9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile000Terms0.olean",
+      "logical_bytes": 47903392,
+      "allocated_before": 47906816,
+      "allocated_after": 18706432,
+      "sha256_before_and_after": "27a46fb070b67d661fab8fff367b8fa9d448f36ea8f020c26d2a32a64d2f65cb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile000Terms1.olean",
+      "logical_bytes": 47751760,
+      "allocated_before": 48300032,
+      "allocated_after": 18653184,
+      "sha256_before_and_after": "918c3cb72c7f82ceefb084dc55258e4d454b7dd465aa693c541975ba54356ecd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile000Terms2.olean",
+      "logical_bytes": 41264720,
+      "allocated_before": 41267200,
+      "allocated_after": 16125952,
+      "sha256_before_and_after": "ee4afc6afc48e305229b87d5dda21f25cf6cc972330a0af8d310e79032af80cf",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile000Terms3.olean",
+      "logical_bytes": 41227832,
+      "allocated_before": 41230336,
+      "allocated_after": 16125952,
+      "sha256_before_and_after": "6d337b32f76fb860487172ba0b26cba01a33b4c21bc8eedf2c3ba45f7eeceaa3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile000Zeta.olean",
+      "logical_bytes": 73863440,
+      "allocated_before": 83951616,
+      "allocated_after": 28676096,
+      "sha256_before_and_after": "3d44a93e4cfb78e52d3ca4650e3b48ede08a4c356459593164a242dcb599e346",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001.olean",
+      "logical_bytes": 20212776,
+      "allocated_before": 20213760,
+      "allocated_after": 7917568,
+      "sha256_before_and_after": "e7773c7f7c88a4e5e330badcf3d2598b9cdd374d8eb1412cd851bcff84c4b76d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001Gamma.olean",
+      "logical_bytes": 173404040,
+      "allocated_before": 184614912,
+      "allocated_after": 68595712,
+      "sha256_before_and_after": "226159c51d488ffc53c2f96adc7e4d48c9e7a358976b99790c5814c05f3929f0",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001Terms0.olean",
+      "logical_bytes": 47826568,
+      "allocated_before": 48300032,
+      "allocated_after": 18685952,
+      "sha256_before_and_after": "5f140cb56c81920c77fedcd0ce7a3a231bc6d1bd4ba8d24cce24e5e4ec65c97b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001Terms1.olean",
+      "logical_bytes": 48025264,
+      "allocated_before": 48025600,
+      "allocated_after": 18751488,
+      "sha256_before_and_after": "619d51c05430d98d8abd0b8b1ed4611f9a30bd3d31e37ab82864574d45674972",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001Terms2.olean",
+      "logical_bytes": 41488088,
+      "allocated_before": 42008576,
+      "allocated_after": 16175104,
+      "sha256_before_and_after": "67232c32e078da79da53157c635383fb256f2883e4f03d1864bfdd8bd56e65b3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001Terms3.olean",
+      "logical_bytes": 41389576,
+      "allocated_before": 42434560,
+      "allocated_after": 16793600,
+      "sha256_before_and_after": "d6616cd03b86f2f8159ea665171c665be313ea1b6c0531a7f2237ee8c5fc81fd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile001Zeta.olean",
+      "logical_bytes": 74448240,
+      "allocated_before": 74448896,
+      "allocated_after": 29376512,
+      "sha256_before_and_after": "fff0a7783be39d63c9a5163759006301abaa25b3eff2430598157e346bb1d6fd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002.olean",
+      "logical_bytes": 20162176,
+      "allocated_before": 20164608,
+      "allocated_after": 8404992,
+      "sha256_before_and_after": "50c1706e18116e0d9625b7b8383f3bc3008937dbe1d5a405e44af842023bb4af",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002Gamma.olean",
+      "logical_bytes": 172894168,
+      "allocated_before": 184614912,
+      "allocated_after": 83902464,
+      "sha256_before_and_after": "843257b0c43c69e7a35c84b863127576960bd8366fa21a96db6eb058ec018ef4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002Terms0.olean",
+      "logical_bytes": 47989448,
+      "allocated_before": 48300032,
+      "allocated_after": 18882560,
+      "sha256_before_and_after": "a0daf1f8c49159a6c5784fe68da9cfc81e8d935d017e2a914c7a669a2502befa",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002Terms1.olean",
+      "logical_bytes": 48064016,
+      "allocated_before": 48300032,
+      "allocated_after": 18882560,
+      "sha256_before_and_after": "24543a7b9dbba02f4a52ad107a6da7247898f91e0450b26c6ad216a928413043",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002Terms2.olean",
+      "logical_bytes": 41334808,
+      "allocated_before": 41336832,
+      "allocated_after": 16785408,
+      "sha256_before_and_after": "b3f549a0d425df74f2de99f9941ca048160f4b183ac1a0c251008acd8dd2504d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002Terms3.olean",
+      "logical_bytes": 41251744,
+      "allocated_before": 41254912,
+      "allocated_after": 16740352,
+      "sha256_before_and_after": "e1d840df2d8137a5d4b3cfb75fdc6c94ff5064437db915965a0b9be10080cb0c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile002Zeta.olean",
+      "logical_bytes": 73922960,
+      "allocated_before": 73924608,
+      "allocated_after": 29315072,
+      "sha256_before_and_after": "143e01e675464f1f2b9862955574bb79285e87ec52d390ab01223e6cfd9a4622",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003.olean",
+      "logical_bytes": 20242824,
+      "allocated_before": 20246528,
+      "allocated_after": 8077312,
+      "sha256_before_and_after": "59d5095a396969158a8b5e150208e6d62e567cd79bed01a722c2900d41e28cd3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003Gamma.olean",
+      "logical_bytes": 174038784,
+      "allocated_before": 184614912,
+      "allocated_after": 84729856,
+      "sha256_before_and_after": "8c64e6494b8a8259a8d5662ba4a226c0090c3009c9723402ba5ab871158175a8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003Terms0.olean",
+      "logical_bytes": 48083136,
+      "allocated_before": 48300032,
+      "allocated_after": 19210240,
+      "sha256_before_and_after": "1aa79c05865d8021b41ff6017c0215ca2ca7009e8804809265e4693efd3cf529",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003Terms1.olean",
+      "logical_bytes": 47821592,
+      "allocated_before": 47824896,
+      "allocated_after": 19103744,
+      "sha256_before_and_after": "5ccf9f3e75368374254e4ea0deedcfb0e82c944279941d6c7857f54dcd9bf070",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003Terms2.olean",
+      "logical_bytes": 41208680,
+      "allocated_before": 41209856,
+      "allocated_after": 16969728,
+      "sha256_before_and_after": "a7b22cf750fa3d0b1be99f02601259e533a502ba3f57070a327989d66ea9a3d7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003Terms3.olean",
+      "logical_bytes": 41254120,
+      "allocated_before": 41254912,
+      "allocated_after": 16867328,
+      "sha256_before_and_after": "91a893afc71786109d4069884ffba8429ce4c1fa53bb6816f7759c7a49a4f223",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile003Zeta.olean",
+      "logical_bytes": 74707200,
+      "allocated_before": 83951616,
+      "allocated_after": 29429760,
+      "sha256_before_and_after": "7b13d4ff486e8854eea0c96281f716d658ff74976475e0256105b8b091fcaa89",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004.olean",
+      "logical_bytes": 20271520,
+      "allocated_before": 20275200,
+      "allocated_after": 8396800,
+      "sha256_before_and_after": "58c51dcd717b49b43a6e513c2d9ced0cbe6731bca293fde3a4734e2069209130",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004Gamma.olean",
+      "logical_bytes": 174376112,
+      "allocated_before": 174379008,
+      "allocated_after": 83894272,
+      "sha256_before_and_after": "b84145768a8c1c0b9a71294df69571f8cfb53684d995b13c93fc25c617948e9e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004Terms0.olean",
+      "logical_bytes": 47886752,
+      "allocated_before": 48300032,
+      "allocated_after": 18874368,
+      "sha256_before_and_after": "51e9ec5f8bec1ea1d317aa56b4b2f049fe2705d7800a3e878e4b1c554ada54bc",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004Terms1.olean",
+      "logical_bytes": 47833480,
+      "allocated_before": 48107520,
+      "allocated_after": 18874368,
+      "sha256_before_and_after": "ade908b4f1a540fa3610aa064295556187751b962078b86b9e6e668c77986b73",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004Terms2.olean",
+      "logical_bytes": 41306416,
+      "allocated_before": 41308160,
+      "allocated_after": 16777216,
+      "sha256_before_and_after": "b05e6c1694a9573ff5da38da801102c34e3fcb8fc0ed67884d9818c82a30e1ff",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004Terms3.olean",
+      "logical_bytes": 41739552,
+      "allocated_before": 41742336,
+      "allocated_after": 16777216,
+      "sha256_before_and_after": "e300466edc65d9360035932d0f859f079e1094bcac800a026fd7500ae3f14007",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile004Zeta.olean",
+      "logical_bytes": 74676968,
+      "allocated_before": 83951616,
+      "allocated_after": 29360128,
+      "sha256_before_and_after": "c092de9d1991bf6ca98620a6fd59754be8162d39b8a0503a14a7bd7b45b79167",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005.olean",
+      "logical_bytes": 20250720,
+      "allocated_before": 20254720,
+      "allocated_after": 8388608,
+      "sha256_before_and_after": "4585ae356b499d659472eb9618cd542e33e037af3be382e3e01f9b3379e23eb3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005Gamma.olean",
+      "logical_bytes": 175004888,
+      "allocated_before": 184614912,
+      "allocated_after": 84455424,
+      "sha256_before_and_after": "0aa965e9268bb5f70e412e6b58f830aecb9ee5211178c8186c518225a459a5d6",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005Terms0.olean",
+      "logical_bytes": 48083928,
+      "allocated_before": 48087040,
+      "allocated_after": 18870272,
+      "sha256_before_and_after": "1d4dd8113733831f516fb0303fa76191176c19128ac058423f0fde6e1c3a6a61",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005Terms1.olean",
+      "logical_bytes": 48128888,
+      "allocated_before": 48644096,
+      "allocated_after": 18870272,
+      "sha256_before_and_after": "1e124e6ad25de998ae745b7a7368b2001e7544f23823af02b44c9beea9dc66ac",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005Terms2.olean",
+      "logical_bytes": 41915128,
+      "allocated_before": 41918464,
+      "allocated_after": 16773120,
+      "sha256_before_and_after": "a3c9d01f52092088fca2f8e84dab501ec11d7e8520a1987b11f990855416ce1f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005Terms3.olean",
+      "logical_bytes": 41923960,
+      "allocated_before": 41926656,
+      "allocated_after": 16773120,
+      "sha256_before_and_after": "b71da29d0b0e3b9348f107ab0a963e04f2f8bee85ce8f6f1a77700b91553e8fd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile005Zeta.olean",
+      "logical_bytes": 75032128,
+      "allocated_before": 75034624,
+      "allocated_after": 29356032,
+      "sha256_before_and_after": "ef8a460a104d2d49858157e2e010ac173d9333c0751cf929523be8b45acc1c44",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006.olean",
+      "logical_bytes": 20220536,
+      "allocated_before": 20221952,
+      "allocated_after": 8384512,
+      "sha256_before_and_after": "4584486e5ecee462f9fe61b785f5db048b9d8c1530bf43b567780534fd3f4207",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006Gamma.olean",
+      "logical_bytes": 174291728,
+      "allocated_before": 174292992,
+      "allocated_after": 84930560,
+      "sha256_before_and_after": "9c570aeb4b352a184d65979f47e1dbf805cefdc83ddb4d382bbdb9324a7094c7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006Terms0.olean",
+      "logical_bytes": 48159672,
+      "allocated_before": 48160768,
+      "allocated_after": 19333120,
+      "sha256_before_and_after": "191a2be1b5e895d5c7d90f450cb76730f5bd762dd218a8cd20a71e5b9cc38915",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006Terms1.olean",
+      "logical_bytes": 48787616,
+      "allocated_before": 48791552,
+      "allocated_after": 19578880,
+      "sha256_before_and_after": "67ec7501cb3d4db0a514f5395f8010e44a2fbeb48421f52a16433bc19f8c6d25",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006Terms2.olean",
+      "logical_bytes": 42045592,
+      "allocated_before": 43057152,
+      "allocated_after": 16826368,
+      "sha256_before_and_after": "b74b4b633e8051ca588641fe981ba0c639ab9144b552dc4c46ab663feadb137d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006Terms3.olean",
+      "logical_bytes": 42029544,
+      "allocated_before": 42033152,
+      "allocated_after": 16756736,
+      "sha256_before_and_after": "fb6465a1cd2ffce5b849726f4a0febf61de903fd870b7fd788d85f6a6bea38f9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile006Zeta.olean",
+      "logical_bytes": 74992064,
+      "allocated_before": 83951616,
+      "allocated_after": 29339648,
+      "sha256_before_and_after": "f99f0bb44518375a193e2f0bf37517084348b00b6269058f2bd2b9047e0c6167",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007.olean",
+      "logical_bytes": 20258880,
+      "allocated_before": 20262912,
+      "allocated_after": 8355840,
+      "sha256_before_and_after": "51d34073816ae4facfb353d7bf4e6edd6d0d39ace8de4cbee5bf3b586acba6da",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007Gamma.olean",
+      "logical_bytes": 174433624,
+      "allocated_before": 184614912,
+      "allocated_after": 84885504,
+      "sha256_before_and_after": "fb497014bb3b74d93034d662ea48a691aa48e46c4a3ec9e5c4d79c8803c6aee2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007Terms0.olean",
+      "logical_bytes": 48340896,
+      "allocated_before": 49373184,
+      "allocated_after": 19828736,
+      "sha256_before_and_after": "331c08ed61598b4a1616b5566d2310ed6f79f70a5e62a5c959d51809bebe3621",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007Terms1.olean",
+      "logical_bytes": 48774688,
+      "allocated_before": 49348608,
+      "allocated_after": 19824640,
+      "sha256_before_and_after": "d9b966c4d860fa5a5753aa024e77f5be72728a5a40f5940c74bbd34052c39cb9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007Terms2.olean",
+      "logical_bytes": 41694416,
+      "allocated_before": 41697280,
+      "allocated_after": 16678912,
+      "sha256_before_and_after": "5af4ee714d864697bcc02cef877513678a72fe084a92d217e61b98edff95a181",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007Terms3.olean",
+      "logical_bytes": 41358808,
+      "allocated_before": 41361408,
+      "allocated_after": 16670720,
+      "sha256_before_and_after": "665d9776911684f48b4c3dfb01804214135324897542ac22e8c39d9959055cbc",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile007Zeta.olean",
+      "logical_bytes": 74507848,
+      "allocated_before": 74510336,
+      "allocated_after": 29245440,
+      "sha256_before_and_after": "4e28c6ba8a05bd2d65ee1831abcb449c304e0a8096033d5123954c3c7adafe00",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008.olean",
+      "logical_bytes": 20302200,
+      "allocated_before": 20303872,
+      "allocated_after": 8249344,
+      "sha256_before_and_after": "f082afeebd0cdeef111e34c1f4a0ef8faa1b32ca03e1397a9125e6ada93cf453",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008Gamma.olean",
+      "logical_bytes": 174550448,
+      "allocated_before": 184614912,
+      "allocated_after": 84783104,
+      "sha256_before_and_after": "8f532a25ddeb2a35263147cc482813e5a4550c1f3ed149a78bc35aefe5ad5bad",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008Terms0.olean",
+      "logical_bytes": 48481232,
+      "allocated_before": 49287168,
+      "allocated_after": 19693568,
+      "sha256_before_and_after": "7f22c003564a504e0fdac245ad9e617e6693fa69c816478b548184c2a7340003",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008Terms1.olean",
+      "logical_bytes": 48428760,
+      "allocated_before": 49111040,
+      "allocated_after": 19693568,
+      "sha256_before_and_after": "cb06b0f0c61d5e2c7af0da5b4213a756ca72bf3186ae53927f181a84190f4e09",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008Terms2.olean",
+      "logical_bytes": 41429960,
+      "allocated_before": 41431040,
+      "allocated_after": 16838656,
+      "sha256_before_and_after": "5f7617a4adaa2fcf78fe13aafbbd730328c42218fa2348ff3b300bf426ce8143",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008Terms3.olean",
+      "logical_bytes": 41329336,
+      "allocated_before": 41332736,
+      "allocated_after": 16838656,
+      "sha256_before_and_after": "87ce89b3eb3d871a51f97140cc6ad15dda45f0c0a37261f98ae09d763fdce37e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile008Zeta.olean",
+      "logical_bytes": 74833576,
+      "allocated_before": 74833920,
+      "allocated_after": 29622272,
+      "sha256_before_and_after": "38012b87793a3fd8ef9289b0059b23d74fb5ec08bf63844adcf98340e5190656",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009.olean",
+      "logical_bytes": 20349048,
+      "allocated_before": 20353024,
+      "allocated_after": 8450048,
+      "sha256_before_and_after": "64ee5cf711fba0cafb382dfc1263df83488cf0da6ee66fe73e6ebdfcd5ed505d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009Gamma.olean",
+      "logical_bytes": 174843848,
+      "allocated_before": 184614912,
+      "allocated_after": 83947520,
+      "sha256_before_and_after": "b4f5c95801eac4f9de4c25bb216e8e7a1604e2a137f7dfcfaf8e37bbe54e14a7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009Terms0.olean",
+      "logical_bytes": 48573352,
+      "allocated_before": 48574464,
+      "allocated_after": 19984384,
+      "sha256_before_and_after": "c7175dc081d9c8b5bfca47b917f3c7b4ed4ce100656e8e4479e27dccb624d954",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009Terms1.olean",
+      "logical_bytes": 48127920,
+      "allocated_before": 48128000,
+      "allocated_after": 18931712,
+      "sha256_before_and_after": "3f22038cef58732244478fd781985592cd9c766ed5026a30d95d3c1a333a7bda",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009Terms2.olean",
+      "logical_bytes": 41512896,
+      "allocated_before": 41512960,
+      "allocated_after": 16834560,
+      "sha256_before_and_after": "4b79279138c8491013afcb026b3a69569e8d4900c9a624adc0515469d314740e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009Terms3.olean",
+      "logical_bytes": 42080048,
+      "allocated_before": 42082304,
+      "allocated_after": 16834560,
+      "sha256_before_and_after": "1baec782b4380e17de13d563b1ba67d6989b23e70d523a8604ae56c8fe824fae",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile009Zeta.olean",
+      "logical_bytes": 74904464,
+      "allocated_before": 83951616,
+      "allocated_after": 29413376,
+      "sha256_before_and_after": "f940667d13819796be5b69563311a445541d4e52961be9da0381d71446ebb5dc",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010.olean",
+      "logical_bytes": 20415456,
+      "allocated_before": 20418560,
+      "allocated_after": 8441856,
+      "sha256_before_and_after": "128d8120ec27ea864a3340afe2e116e0f4207778e3619dd55fb74695276babb2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010Gamma.olean",
+      "logical_bytes": 174847432,
+      "allocated_before": 184614912,
+      "allocated_after": 83947520,
+      "sha256_before_and_after": "07564cafc8bfcff94dd34fae331c654ddeb532edfc733041c202d485f974b4c4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010Terms0.olean",
+      "logical_bytes": 48670840,
+      "allocated_before": 48992256,
+      "allocated_after": 19976192,
+      "sha256_before_and_after": "9d933fe26b0792bb288c539ec7d40fcfe8b364661deb71c860f192c13dd2a7dd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010Terms1.olean",
+      "logical_bytes": 48074080,
+      "allocated_before": 48238592,
+      "allocated_after": 18923520,
+      "sha256_before_and_after": "e49c07874eb10a9f48fedb6994a73b2e06c45037add0fe9cf2cb326afdcac5cd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010Terms2.olean",
+      "logical_bytes": 42110112,
+      "allocated_before": 42110976,
+      "allocated_after": 16826368,
+      "sha256_before_and_after": "dec30c32b844bf3e92b551d20d7cf98db025882daba995bc7fc9e9605bd5a6b3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010Terms3.olean",
+      "logical_bytes": 42165976,
+      "allocated_before": 42168320,
+      "allocated_after": 16826368,
+      "sha256_before_and_after": "9ced2b6ac7e2f67435f1c8def801f39763638df8fa32e8e80ccd478d5b4060c2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile010Zeta.olean",
+      "logical_bytes": 75039288,
+      "allocated_before": 75042816,
+      "allocated_after": 29409280,
+      "sha256_before_and_after": "26c89a67aa34cc637f73e7bc5df7409342f15623d1dc11f47b6e606ee453d881",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011.olean",
+      "logical_bytes": 20465048,
+      "allocated_before": 20467712,
+      "allocated_after": 8437760,
+      "sha256_before_and_after": "419592f13f441a40f8e795584b57e7b8a604357c160206acac6ce182637e8275",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011Gamma.olean",
+      "logical_bytes": 174454864,
+      "allocated_before": 184614912,
+      "allocated_after": 83935232,
+      "sha256_before_and_after": "79594a4e1e93750f173009008583438bb13325054a9789cdf99d0c333f448357",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011Terms0.olean",
+      "logical_bytes": 48544752,
+      "allocated_before": 48992256,
+      "allocated_after": 18935808,
+      "sha256_before_and_after": "38b865532b77cc65d7dfca745821283bb98704529fd68cfd0dbeb119cafb1918",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011Terms1.olean",
+      "logical_bytes": 48474960,
+      "allocated_before": 49287168,
+      "allocated_after": 18935808,
+      "sha256_before_and_after": "0ef7f06587ce11773610f178767ec0baeecb7372ae6db144eaf574483f3b1984",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011Terms2.olean",
+      "logical_bytes": 42247552,
+      "allocated_before": 42250240,
+      "allocated_after": 16838656,
+      "sha256_before_and_after": "d7e407f84d8ff068ebb8245b01c7f70fdb2d135b8ff71670b7d65ffeb381162d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011Terms3.olean",
+      "logical_bytes": 41627632,
+      "allocated_before": 41627648,
+      "allocated_after": 16822272,
+      "sha256_before_and_after": "77e83833df44a5f197eb89c138d0e480d74f05a70a63f93202c9f02207808f30",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile011Zeta.olean",
+      "logical_bytes": 75208008,
+      "allocated_before": 75210752,
+      "allocated_after": 29401088,
+      "sha256_before_and_after": "54f24fc6c105b699353866875a1332a49a5db69f6b3700d0dd9552dd05122d48",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012.olean",
+      "logical_bytes": 20399864,
+      "allocated_before": 20402176,
+      "allocated_after": 8421376,
+      "sha256_before_and_after": "187e1660f5a4456d898e5d0b19a2059ee51cf3183fc265412cb96e7ad955c38b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012Gamma.olean",
+      "logical_bytes": 172955824,
+      "allocated_before": 184614912,
+      "allocated_after": 83918848,
+      "sha256_before_and_after": "233f5da8db01b7e091fc406d20f3885a67b9cdb91e65e4c82bb703851d67735d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012Terms0.olean",
+      "logical_bytes": 48498104,
+      "allocated_before": 49381376,
+      "allocated_after": 18915328,
+      "sha256_before_and_after": "74d18f35769dff2170f2a158e7f216102c98a70769f3a2b1f309d1996fd69ecd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012Terms1.olean",
+      "logical_bytes": 48931872,
+      "allocated_before": 49348608,
+      "allocated_after": 19955712,
+      "sha256_before_and_after": "9ef4a948003042427ef40c6f281b00962caa0af5d566c1ede695b1b2fb3d95db",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012Terms2.olean",
+      "logical_bytes": 41912520,
+      "allocated_before": 42008576,
+      "allocated_after": 16388096,
+      "sha256_before_and_after": "1f7b63be3fef0415aefbf492aeb3099a94a9f70827c9ef1aea13379536a06c96",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012Terms3.olean",
+      "logical_bytes": 41609752,
+      "allocated_before": 42229760,
+      "allocated_after": 16384000,
+      "sha256_before_and_after": "4c6bc7c22cb90452278e886f6096ae511bd1cdf59c2284725fe58ec1cb645544",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile012Zeta.olean",
+      "logical_bytes": 74113576,
+      "allocated_before": 83951616,
+      "allocated_after": 29421568,
+      "sha256_before_and_after": "9b99bb8c8a097e31476b0d7c8340e1c731146bc8f2cf0c9c8288c22ef6335d0e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013.olean",
+      "logical_bytes": 20465240,
+      "allocated_before": 20467712,
+      "allocated_after": 8441856,
+      "sha256_before_and_after": "209ba9097e14cbc4a26c98442bcc468df7e56705c5d678120f469fe5a634fad1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013Gamma.olean",
+      "logical_bytes": 174833888,
+      "allocated_before": 184614912,
+      "allocated_after": 83939328,
+      "sha256_before_and_after": "918c42dff8063e6290b3cc8332ef7f44f2c523bc7ce4a88ef1886a3f98678cdb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013Terms0.olean",
+      "logical_bytes": 48436696,
+      "allocated_before": 48590848,
+      "allocated_after": 18907136,
+      "sha256_before_and_after": "51637d883a81614c41cc85382ac43f97455c1f4146e02db50df599a74b779239",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013Terms1.olean",
+      "logical_bytes": 48902528,
+      "allocated_before": 49348608,
+      "allocated_after": 19951616,
+      "sha256_before_and_after": "66ec24f72c346c49c5ec7635ebdece4764ea345ba821a75b7f9f99e590587888",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013Terms2.olean",
+      "logical_bytes": 41594992,
+      "allocated_before": 42008576,
+      "allocated_after": 16797696,
+      "sha256_before_and_after": "8c5297f9987c146cb08251a5b5c412fc611721056aef0473b767df307568a1af",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013Terms3.olean",
+      "logical_bytes": 41918224,
+      "allocated_before": 42143744,
+      "allocated_after": 16789504,
+      "sha256_before_and_after": "c7a46b6f49ab837a5222b8919f18cde6f868eb88caa0278c06c63a9d525281a3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile013Zeta.olean",
+      "logical_bytes": 75206360,
+      "allocated_before": 83951616,
+      "allocated_after": 29810688,
+      "sha256_before_and_after": "2105900f72c64ff5455ad4a85a2dc67457f1806167006f6c1234315517846851",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014.olean",
+      "logical_bytes": 20448568,
+      "allocated_before": 20451328,
+      "allocated_after": 8810496,
+      "sha256_before_and_after": "46e939f83cfda36a0d2f3c8978bcdb3e470a91d7c6c1a5dfabccceab6c7f61df",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014Gamma.olean",
+      "logical_bytes": 174755040,
+      "allocated_before": 184614912,
+      "allocated_after": 84180992,
+      "sha256_before_and_after": "f3d59adb158308d252632d02982a4a4d1feea3c22d63510bf3f94affb741e2c9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014Terms0.olean",
+      "logical_bytes": 48540992,
+      "allocated_before": 49287168,
+      "allocated_after": 19087360,
+      "sha256_before_and_after": "6970e55b521b36d133434a399037b31cab7b83add869e2898a92fd81c8cc3468",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014Terms1.olean",
+      "logical_bytes": 48545560,
+      "allocated_before": 48545792,
+      "allocated_after": 18960384,
+      "sha256_before_and_after": "743950adcad9f7e4fad774493500d41e1a1ffd3b2cdd37eae78c87837fb40876",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014Terms2.olean",
+      "logical_bytes": 41704920,
+      "allocated_before": 42008576,
+      "allocated_after": 16863232,
+      "sha256_before_and_after": "013ccbb11235a936decdf939b57ddad9a92bcd4d94afef4e5a67c05837e24689",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014Terms3.olean",
+      "logical_bytes": 42202440,
+      "allocated_before": 43069440,
+      "allocated_after": 16850944,
+      "sha256_before_and_after": "4e31e8ca361b5d7a8abdd2593c8ef4b071ea7088b6da702dc8a64d5723569dd7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile014Zeta.olean",
+      "logical_bytes": 75122760,
+      "allocated_before": 83951616,
+      "allocated_after": 29401088,
+      "sha256_before_and_after": "9d677bd1647c8f1063ede4639713ab8847d47212651f242d492ddd976fd19abd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015.olean",
+      "logical_bytes": 20464584,
+      "allocated_before": 20467712,
+      "allocated_after": 8404992,
+      "sha256_before_and_after": "f61aad0d08690c4e241831628e44abdbc16e58312975ff5ddadab605416b3728",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015Gamma.olean",
+      "logical_bytes": 175303920,
+      "allocated_before": 184614912,
+      "allocated_after": 83898368,
+      "sha256_before_and_after": "955f30cac376a5781f28b1be2161dc8c781f2d2901a5de2bd24b0f6d96d81300",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015Terms0.olean",
+      "logical_bytes": 48564008,
+      "allocated_before": 49287168,
+      "allocated_after": 19197952,
+      "sha256_before_and_after": "b202708ba305b352175242e2b05ab6d6421514114b09d287f3c1f24c6f04c6b0",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015Terms1.olean",
+      "logical_bytes": 48311664,
+      "allocated_before": 49221632,
+      "allocated_after": 19111936,
+      "sha256_before_and_after": "6e5e633a97c24fd7227c5b97aa1d7a31067464270174005617745cae4e90404a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015Terms2.olean",
+      "logical_bytes": 42240568,
+      "allocated_before": 42242048,
+      "allocated_after": 16871424,
+      "sha256_before_and_after": "710c6169f487b4a6cd4fe102c455f21dfc03ba5d6e479a3fc0b4ea51b1e91a29",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015Terms3.olean",
+      "logical_bytes": 41964648,
+      "allocated_before": 42950656,
+      "allocated_after": 16850944,
+      "sha256_before_and_after": "f8465f0e7699da7f5cc22aeda8c03606e972ba922e589d0df28272fc34c45886",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile015Zeta.olean",
+      "logical_bytes": 75159856,
+      "allocated_before": 83951616,
+      "allocated_after": 29380608,
+      "sha256_before_and_after": "fb9e134089bff11f82ace66af21c2b7274a236d18ded06aadecf1467ba37c2d3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016.olean",
+      "logical_bytes": 20416616,
+      "allocated_before": 20418560,
+      "allocated_after": 8396800,
+      "sha256_before_and_after": "0d0458216ee009d98f210cf7a0a216da603d4d243fb2dd7bcf43e5f7994a5d4d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016Gamma.olean",
+      "logical_bytes": 174607080,
+      "allocated_before": 184614912,
+      "allocated_after": 84934656,
+      "sha256_before_and_after": "6e59ef7632ec941d93dac14bb87540602f4ab01570193271694f1ad4ec866c9d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016Terms0.olean",
+      "logical_bytes": 48638800,
+      "allocated_before": 48640000,
+      "allocated_after": 19206144,
+      "sha256_before_and_after": "a96d665a0815809cb891ee30806e7672eb09fff1118cbd37f90eb149cd7d8dd2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016Terms1.olean",
+      "logical_bytes": 48464072,
+      "allocated_before": 48467968,
+      "allocated_after": 19116032,
+      "sha256_before_and_after": "cee2d1cc4f1202a170f8c3ce006bdd76bff71edc0c105311ef7f89c7b030b1b8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016Terms2.olean",
+      "logical_bytes": 42257608,
+      "allocated_before": 42995712,
+      "allocated_after": 16973824,
+      "sha256_before_and_after": "7775d3b7f9d338c7a44758ebdf9396f417c5653c4b565505c252948d0ed2d2c9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016Terms3.olean",
+      "logical_bytes": 41635760,
+      "allocated_before": 41635840,
+      "allocated_after": 16863232,
+      "sha256_before_and_after": "81594d988428d627b52e3240102db2c6055e27ede48b625267dad6b62c88ca47",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile016Zeta.olean",
+      "logical_bytes": 74832560,
+      "allocated_before": 83951616,
+      "allocated_after": 29396992,
+      "sha256_before_and_after": "d39fa96bd20a44a6f556895f6ab40c4571229cdaf3394d38193d40bc15a739d9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017.olean",
+      "logical_bytes": 20431040,
+      "allocated_before": 20434944,
+      "allocated_after": 8388608,
+      "sha256_before_and_after": "e458e352ffba3aeb4ff32890f483ef1c156b5efdff99cb115ec2c78d4307c7e3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017Gamma.olean",
+      "logical_bytes": 174851696,
+      "allocated_before": 184614912,
+      "allocated_after": 84930560,
+      "sha256_before_and_after": "05c7298332b036d7004038e6a310b3c63ddbda8070dd7b96ae7b2d14b2d6604d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017Terms0.olean",
+      "logical_bytes": 48608648,
+      "allocated_before": 48611328,
+      "allocated_after": 19939328,
+      "sha256_before_and_after": "9f720d86139ace0d6478ad1b25910b978d839791ef8b3a7eaab5adc979c8e760",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017Terms1.olean",
+      "logical_bytes": 48686992,
+      "allocated_before": 48689152,
+      "allocated_after": 19931136,
+      "sha256_before_and_after": "3a76a87063095843d856b7a7468a64fe0d0828fb669bc7e3374451019395084d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017Terms2.olean",
+      "logical_bytes": 41933096,
+      "allocated_before": 42201088,
+      "allocated_after": 17219584,
+      "sha256_before_and_after": "a5944539fe05c31b77f45cf7ad38fb0fe06b74a0ce4dd68e1b950bf36fbff547",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017Terms3.olean",
+      "logical_bytes": 41685744,
+      "allocated_before": 42205184,
+      "allocated_after": 17215488,
+      "sha256_before_and_after": "6d34791aa52432f86f96cfd20805a0f42bbbf3cffe0c5d17d9dfbc82fcfb048d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile017Zeta.olean",
+      "logical_bytes": 74126808,
+      "allocated_before": 83951616,
+      "allocated_after": 29786112,
+      "sha256_before_and_after": "5c55d235e5797b277c82f6ccae78cf82bcce0ec4b7687fdaaa843b4ff9279b17",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018.olean",
+      "logical_bytes": 20390936,
+      "allocated_before": 20393984,
+      "allocated_after": 8810496,
+      "sha256_before_and_after": "406a9417d6573e11a4e896c135cb590fdebcd21d4a3130b663dd6979eee7b1bb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018Gamma.olean",
+      "logical_bytes": 174666064,
+      "allocated_before": 184614912,
+      "allocated_after": 84221952,
+      "sha256_before_and_after": "4b03478e6d09ab4184c7b82e771142cba09d4aef4c01870b93b97a25a4c63757",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018Terms0.olean",
+      "logical_bytes": 48663528,
+      "allocated_before": 48664576,
+      "allocated_after": 19083264,
+      "sha256_before_and_after": "4dd13367fea3e7dd5a54a8f8fddd31e379a17ff4c353b327b347a784676eea98",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018Terms1.olean",
+      "logical_bytes": 48760232,
+      "allocated_before": 48762880,
+      "allocated_after": 19079168,
+      "sha256_before_and_after": "8fdc0d09763b87b6fff2bee96caaced5c2e17cfd842574e231600053edb1a7c2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018Terms2.olean",
+      "logical_bytes": 41679832,
+      "allocated_before": 41680896,
+      "allocated_after": 16945152,
+      "sha256_before_and_after": "d67606ddb65daac16c30d9a6ab887f2025eeefec3e1df9f1d5471f0fa2cf8302",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018Terms3.olean",
+      "logical_bytes": 42281040,
+      "allocated_before": 42418176,
+      "allocated_after": 16830464,
+      "sha256_before_and_after": "5c5e646de2e5a2791c2250d0e2112cc5307beab4d12e34340146997188694983",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile018Zeta.olean",
+      "logical_bytes": 74941696,
+      "allocated_before": 83951616,
+      "allocated_after": 29831168,
+      "sha256_before_and_after": "e70d4f3f48d5bf08986bf324b36f88913b1fab7b241cebe484b63e154c4eb884",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019.olean",
+      "logical_bytes": 20416168,
+      "allocated_before": 20418560,
+      "allocated_after": 8847360,
+      "sha256_before_and_after": "b4fea399325c81794216e939b3a239553066da969fcd10766949f51871b8601d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019Gamma.olean",
+      "logical_bytes": 174418352,
+      "allocated_before": 184614912,
+      "allocated_after": 84340736,
+      "sha256_before_and_after": "99e9427a92a3452e7be7352d4c8455e2e5713ac8d3e0056a377e1a7a2a98221b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019Terms0.olean",
+      "logical_bytes": 48529512,
+      "allocated_before": 49348608,
+      "allocated_after": 19238912,
+      "sha256_before_and_after": "51e94d4146ee8ebd64122beed2ea9035597bc5e0e2bca8c046bd71516c5b2f3f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019Terms1.olean",
+      "logical_bytes": 48750352,
+      "allocated_before": 49238016,
+      "allocated_after": 19169280,
+      "sha256_before_and_after": "18aadb43df7891cc11d47b058d5581a672404a571ff88fb3e0dc0b4674548108",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019Terms2.olean",
+      "logical_bytes": 42000888,
+      "allocated_before": 42004480,
+      "allocated_after": 17047552,
+      "sha256_before_and_after": "1ee53a703c5c1792b3e6cda70a23a8e6744ee068c91aa1d3db5eeb88d79fdaed",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019Terms3.olean",
+      "logical_bytes": 42240496,
+      "allocated_before": 42242048,
+      "allocated_after": 17043456,
+      "sha256_before_and_after": "dbd66796a07f3ac1642f73d4d685920a7af6d4ee3355851963afee25d735f9ae",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/lib/lean/XiRectangle/Tile019Zeta.olean",
+      "logical_bytes": 74843024,
+      "allocated_before": 83951616,
+      "allocated_after": 29519872,
+      "sha256_before_and_after": "ff3fcc8acc4be713cf6f0c73cdb5f95c4bd41d06224d0d35828836f3429666a5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000.c",
+      "logical_bytes": 1124329,
+      "allocated_before": 1126400,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "cc0eb9c80fa9e8fdfdbed67f01f1fcacfc86080ac43aebf995bd94ec061dc4dd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "10c57e8f5306bb5c3d1322227b3d92070fcea115cf9e311bd25f88b88437e03e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "4b141e69585b7525becbcfd71d6a08ca80f83b2096969c23d801d59221f92487",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms0.c",
+      "logical_bytes": 2960755,
+      "allocated_before": 2961408,
+      "allocated_after": 225280,
+      "sha256_before_and_after": "52a27ace41f27f164c3eda6e024ea17679714e8e80a3c2a13321462c9745ce7b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c489b999b84a4888408306127ae6ee08fe9cd8a54ef726599dc44ba1a5a1f982",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms1.c",
+      "logical_bytes": 2913204,
+      "allocated_before": 2916352,
+      "allocated_after": 221184,
+      "sha256_before_and_after": "252b2aa608c11bf98f1cb5e3d124c670c17c74b8eb66df8dfc51bbc212531b7b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c91f2af07aa2ff045916cbc7d57b73903ff874f40d00468b0e3041f8ab6b0c13",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms2.c",
+      "logical_bytes": 2534475,
+      "allocated_before": 2535424,
+      "allocated_after": 192512,
+      "sha256_before_and_after": "88047a5344e28743b30b10f8bfc8d08782fb8f90cdf75b8d3fa4701c960991c4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "7d69ee62b39c0b985075790f87c4c0018ac9df4c66f581de0e16fedce442ce58",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms3.c",
+      "logical_bytes": 2525075,
+      "allocated_before": 2527232,
+      "allocated_after": 192512,
+      "sha256_before_and_after": "415c6b7278f44772871b15744614ca9f7ac18505e01fc74fe06aa95eda882448",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "85244cb4aae1f7580280cce5842c4e812f0f7d4109d74e7b432880dd064ad3d7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Zeta.c",
+      "logical_bytes": 9328267,
+      "allocated_before": 9330688,
+      "allocated_after": 692224,
+      "sha256_before_and_after": "35950a0bd68bebce77a035a05e44a0238657f7e2b1417ff8755112f794f93348",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile000Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "ca70d3ac7d8d5ffea161197fd647320bda8416c6de9078613d78dce88977288e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001.c",
+      "logical_bytes": 1124522,
+      "allocated_before": 1126400,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "8c581cfcea2cbcfc723b9e17d873abbaa2637d9734c680b5eba48b701a3b490f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "682220e404728dc8f135295ad94c906f29e109e32ba0c96ee2e81a3da17091ec",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Gamma.c",
+      "logical_bytes": 7385103,
+      "allocated_before": 7389184,
+      "allocated_after": 548864,
+      "sha256_before_and_after": "2e8fd45d099a7317d2bd482399785ff542ad6e2fa0c140006aa938b309d58012",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "0d8321ad8874b1b16a1d930a623fb6fce733c9780e9636fb7d163425a3bd1fea",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms0.c",
+      "logical_bytes": 2916449,
+      "allocated_before": 2920448,
+      "allocated_after": 225280,
+      "sha256_before_and_after": "086ee546e697da748d872edb2f0b2f12eac1121c65f9bd3176ec8a348da266c0",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "e8d72e26d17fbdbbd6267686a76caece357047a8b2ea77144962361d37e39814",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms1.c",
+      "logical_bytes": 2993843,
+      "allocated_before": 2994176,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "ec159be3a2f2d763e136bbb1ee8586a1f9bda44746ae3f0830e973124f53e010",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "7d9a89cd2d8a89efc9bbc2884f4e238d1be0b2c0a1d4a8d4f02ede99a3fa194e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms2.c",
+      "logical_bytes": 2639116,
+      "allocated_before": 2641920,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "7682a923dfc20cb2c9c00e8eb3c334ab33905c9fc46b17c2d83ae03627b2eb15",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "82c796bdb01a610fd66cc775b8dbad5b84ed372e858ead00cbfbf368b5434886",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms3.c",
+      "logical_bytes": 2593186,
+      "allocated_before": 2596864,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "aef266a97941a26a76191c89c6859799ae7e1dd85a8626e9433a8bc891996d24",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "58bbb4b6130c53c448c51526049c2a11736d0e7416b379b057ded175bb58ee24",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Zeta.c",
+      "logical_bytes": 9524144,
+      "allocated_before": 9527296,
+      "allocated_after": 704512,
+      "sha256_before_and_after": "bfce6f9cf531b60080c4c1a6cb88900e7f409cfecde3d26b2a07afb76fb2d5cf",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile001Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "263cf766cb369f8ae7e3412bcdb56f074da84bed593e96d89209d43fe13a4c55",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002.c",
+      "logical_bytes": 1116055,
+      "allocated_before": 1118208,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "bf9c9de7b9a5a8bbfb03b142b6a65c8f55476f609acc3224c6ae133f97158a6f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b8ef79f623b018c637a8a592762255bb198d7bcef9fbb4ec04825ade5f6d8a68",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Gamma.c",
+      "logical_bytes": 7358306,
+      "allocated_before": 7360512,
+      "allocated_after": 548864,
+      "sha256_before_and_after": "2e6ea3cd21f312c0de86219d526d297146cda0ce66c5274f40d54ccb56a0ee95",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "551945c264a4eaad74fdb3ac10781a7ba95f3b4e6029d942251526ccae5b6c8d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms0.c",
+      "logical_bytes": 2993372,
+      "allocated_before": 2994176,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "4a10fcdda8f6d1f007cc6b22d43b69c1c7315959dfb4fa028e3b7d908b0df957",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "df8d4e5249b4cb4efc5344a6e13bc827f2f128a8f874b91bc57be8e8b25ab0b2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms1.c",
+      "logical_bytes": 3046253,
+      "allocated_before": 3047424,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "90adb43f30b44c724429b882481432f7b4b0be09819b5e91a06dfa0525db3406",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "439449261b800fb41ba1e8aad5d23469258b832d786945d12a886e349670b12b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms2.c",
+      "logical_bytes": 2507650,
+      "allocated_before": 2510848,
+      "allocated_after": 192512,
+      "sha256_before_and_after": "00e6313832447056572479826d4b669961897cafc941bcbe2c70222c2aa12584",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b8f2082d36262418bd75db9b10761b2d31d5aaac7d60512d4f265d923f24af3c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms3.c",
+      "logical_bytes": 2456299,
+      "allocated_before": 2457600,
+      "allocated_after": 188416,
+      "sha256_before_and_after": "8d6bdec9284ba859a2176a5bab213a964667b7673b2630a8d8bef0a6277172bb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "59bc717a9b6f051af34f21120ea74fb454f297e3438449d6e345e44b159a65fd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Zeta.c",
+      "logical_bytes": 9528284,
+      "allocated_before": 9531392,
+      "allocated_after": 704512,
+      "sha256_before_and_after": "aa13249ae9477ec87c82fbf02bb6308c10f288991f41ff1615b390b2c8d53da6",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile002Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c9a4e657caf6e05037d247fbe69485cf82afcbe364525d8eb481a17f3b9bf4d6",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003.c",
+      "logical_bytes": 1126062,
+      "allocated_before": 1126400,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "0613542110b73f0abeb20f4e81660a2b541c005f40938d5a7aab3bf8cbd8f34f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "115332fe523eece45c60bfb519539a51dc436fc08810b9bd5b29b71f22b40d84",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Gamma.c",
+      "logical_bytes": 7436875,
+      "allocated_before": 7438336,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "a0f205b0a460ab2700ebfa832078b084514b27726fc07671655a2dc3ac9aec45",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "1154f3ab9966160978be5f0bbb6ee80a739d16a9dd1f7ebe9e09490b0cabf724",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms0.c",
+      "logical_bytes": 2992815,
+      "allocated_before": 2994176,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "f6e7346b46048f151514f529f11308aaf5ddd31985150335761ce243a1899463",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "5fefb0d18f776a16cb99789b1fe1242498ab4cecbc33fb50d15f5fdc1b6f4937",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms1.c",
+      "logical_bytes": 2837592,
+      "allocated_before": 2838528,
+      "allocated_after": 221184,
+      "sha256_before_and_after": "21c1517013d2e4a202b69c1ca9b3b19e3fba33cc264cd19de1c047f4944d0c8f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "14baa209ff123fadcfaa0b16c1403b0ace9058a2b19649e0d0baef44227eade5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms2.c",
+      "logical_bytes": 2441240,
+      "allocated_before": 2445312,
+      "allocated_after": 188416,
+      "sha256_before_and_after": "58c08c3a9ce141fda3b2b6c34d0150a385e899bec8763f2278fe3451b2f1cbac",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2fe1a76c8bfd42e3b805a7ebde252d766f398ac41553bfbf65caa08ad80c829a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms3.c",
+      "logical_bytes": 2460624,
+      "allocated_before": 2461696,
+      "allocated_after": 188416,
+      "sha256_before_and_after": "a4aaa9b4cee8280ff0db92f9a1ef843f6b65c11782465a74934aeb2714842967",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "07afd1d1b62c13b982449b3cb7bfaa9fbc1897803c788ab6e745a06f2c3b7a65",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Zeta.c",
+      "logical_bytes": 9612261,
+      "allocated_before": 9613312,
+      "allocated_after": 712704,
+      "sha256_before_and_after": "11097fc866ebf5a9b016d3de6256217f0d77fd1797c78c49491203f2200af4a4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile003Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b126371c5feb5fc85301e405b4766fc3f4a1d8e4c6a541efd0082686a6f6aafb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004.c",
+      "logical_bytes": 1125731,
+      "allocated_before": 1126400,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "175216254fded076ca2bac0f129f884e95b461c19cc7172a337d9729c7a7b982",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "baa0370453847129074a22bbff28453c83f277fd2ca9c457a1cb8f831663f9ac",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Gamma.c",
+      "logical_bytes": 7474725,
+      "allocated_before": 7475200,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "d2dbda54e59c69611b14811b9abf73efbfcf9552415c0fd80d6d5ead367d7298",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "a092c8c1acf88f791e173652b726a5e66f7cf76460d78b806d0f2bef66cdb85b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms0.c",
+      "logical_bytes": 2867362,
+      "allocated_before": 2871296,
+      "allocated_after": 221184,
+      "sha256_before_and_after": "af373888b40362f4b3ca75b8ebcfc2daaa6ae2c6f0a13b18868f6ae13d3cf9e2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "cda2ad1dece3efd4c2e06041421482f7d284cf06819cabbd4ce5d837f62f2ce6",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms1.c",
+      "logical_bytes": 2856307,
+      "allocated_before": 2859008,
+      "allocated_after": 221184,
+      "sha256_before_and_after": "ca2d93d4b7d41a47d9567a9f348d4f664f55e21d272bc63438cdf3939b2c5a6f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "ded5b5bff266c6820831356e7ff97c943931ffe3426d7676d764a75f50aac257",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms2.c",
+      "logical_bytes": 2479878,
+      "allocated_before": 2482176,
+      "allocated_after": 192512,
+      "sha256_before_and_after": "c72e9d43c9c90bfcb47434f5938fad3c2f5a88ada06aeaa6802f98944f8d6247",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "30f906ff24efbf6954ff804a9af43723ef136fcd8141d1c3a36bc5cf38137e1f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms3.c",
+      "logical_bytes": 2565925,
+      "allocated_before": 2568192,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "2a87ec87af30602775a600af608f63ad0cf1a621b00ac528770c8dbb653216b4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "30423b9ac80b0e6ee2870d230b3c8f4dba20abe2990231b4ea05a26be222c769",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Zeta.c",
+      "logical_bytes": 9591544,
+      "allocated_before": 9592832,
+      "allocated_after": 708608,
+      "sha256_before_and_after": "000c3ae7cbb7c4cc81a97ab0f4019bd0e3feb16ae5617433f0998f71f9d07261",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile004Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "4f7cd3f4ff81abcefcc106d421f6f945baf51018fd4d6d7578d3035c2f04e3ae",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005.c",
+      "logical_bytes": 1122891,
+      "allocated_before": 1126400,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "a0bb976ac2c1613ace99c38b965ba4f6d560c9e948cb0c03a74c6e8a67eca4c2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "897412ab2f3bc9e0fc8e62409de7e841944dcd40511a1059ee70a9ef0577534b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Gamma.c",
+      "logical_bytes": 7515225,
+      "allocated_before": 7516160,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "436a8c8321233c2ba89f22b095de7e5f96b2f521e7c7cf3f3f1a5e678cb8c016",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "a035a481c166f47f24608a0ecde0ba14b9156c81ff1b39d6e4a47bbc549cbf66",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms0.c",
+      "logical_bytes": 2949081,
+      "allocated_before": 2949120,
+      "allocated_after": 225280,
+      "sha256_before_and_after": "6faed041a7b206a15fc8e13cc8d4bc2d3a397f900f5bc325797cd3ed4be367b9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "843b9b96e18a103adc1ca99c0047cba16d4e5a42b65bae4f6e53a252d3cc1907",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms1.c",
+      "logical_bytes": 2930114,
+      "allocated_before": 2932736,
+      "allocated_after": 225280,
+      "sha256_before_and_after": "47a5de706b71aacc4b6622262bc1a5b014dafe7c4eb162b244b944282d7add67",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "d6064f19e5d9297e50e20d40462bc891562213a368fd29644f9f9319be89dd3c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms2.c",
+      "logical_bytes": 2614534,
+      "allocated_before": 2617344,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "f975d66cda8c8ca97248b1e0a4b2a2b301a4d6ea13707972aff517e49910c6cb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b8de978fbcd691db1b7c91ebf9c03f82ee8bdc6eb4cdad9ceb04d4e46fcfa450",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms3.c",
+      "logical_bytes": 2609699,
+      "allocated_before": 2613248,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "d4990e3b0c63e5cf71a6b399a4964fa3d5f5cce8057fe5caf72a230fd7129df1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c56429aa8dfb7e92b43b4cf41a41c92ba0ddb531fab472bed32f6cfb641c0c6e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Zeta.c",
+      "logical_bytes": 9705048,
+      "allocated_before": 9707520,
+      "allocated_after": 716800,
+      "sha256_before_and_after": "fd0f0b0a1a2d1a35b1e57b2c3fff75faaf9a1058d3b21dce18d9d1aa4521ef4f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile005Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "808b9dbd401ed31e1394c6114b539fd7ac693435a84ab1361c4e36745c1849cf",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006.c",
+      "logical_bytes": 1130666,
+      "allocated_before": 1134592,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "783e62b6bb210bdf6979f6c4b5a7de2909b5bd982da14b5dc205ee4a44fa08f7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "10dac15963634d4a21a807650ef56a9b53d9a81d0d7e0307fb7e8a8295f9c031",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Gamma.c",
+      "logical_bytes": 7462537,
+      "allocated_before": 7462912,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "673b630dc0d947ae3923610b66fc8fac05b83ab37fd73e719b0a9e291e6602a2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "692a219e036a60865a256bb3c4b312c8f1e010d1de352048cb7b92ba76635b0a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms0.c",
+      "logical_bytes": 2973413,
+      "allocated_before": 2973696,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "5bfa26955ac2383d6cc07a8b2fce999baed431d2fa8a8989d9c24e3c5864b0a2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "0e74af4f08b63e3855c226783df3aa3570141313b9ca4915c3f6d6ca9c581654",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms1.c",
+      "logical_bytes": 3094029,
+      "allocated_before": 3096576,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "4daaa5b3572897512737becca03cae3636bb71688e6d5f82c7841a6c1074e160",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "51a0a253d0c74b2af7188fc7adae2b0b2dc6c196c8ec2219c503529b768ded95",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms2.c",
+      "logical_bytes": 2647465,
+      "allocated_before": 2650112,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "9a5900eafe80d39d8255e6a97b18093b3f5fb1a5dba1ed6dcaaf404caf453af8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "db8126dac4a0d0436d969e80e5cde7b6b11d56ca67786cf14b69cfe0e4429ea1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms3.c",
+      "logical_bytes": 2653245,
+      "allocated_before": 2654208,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "0bc57d7e93220315d1ceed4bed4fb781674e91d5c758a9293016559f7f06d9f1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "caca60bf92633ad766e69ca5b1b558261f343fae5a93def64aa294cfd6d07831",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Zeta.c",
+      "logical_bytes": 9739960,
+      "allocated_before": 9740288,
+      "allocated_after": 720896,
+      "sha256_before_and_after": "afd19f2052323d5636d5a36f7b23ed089756e348783b185967a687d8e01929cf",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile006Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "5024889dbec3e5340ebe64ec7d35f41b597ca0b40060a36ed3ee08ad912f60fd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007.c",
+      "logical_bytes": 1136650,
+      "allocated_before": 1138688,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "e34539e303b7ab73e4be793f80c5c3c821fd41695248e7a228e0b0d15ef2d031",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "1a1d6bc7e8a961f9281398cb961f231c35154eb9800f6e59d8e5d7eb627df68a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Gamma.c",
+      "logical_bytes": 7484518,
+      "allocated_before": 7487488,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "7cf0142ae586515219f7f4a2b4b250f6d7eb7035aca752551a216c002c709e96",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "50d1c4b7c70b06e0e53ac7dbc4c7ae4994c530b95034ffdb1ae579cef7a8e21f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms0.c",
+      "logical_bytes": 3001761,
+      "allocated_before": 3002368,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "732207f74cfc39989fbe437827aac759d435b7f84f813c20207b19ea8e269b45",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "fd9193b693e5106756fa39c04ac44b41fbb0e5d9649cd96dea1d3134018d28ce",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms1.c",
+      "logical_bytes": 3098296,
+      "allocated_before": 3100672,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "5a6a8a064a9fdf64f275b5bf698358a6c2dd3db60a8c09494c8b0abe5296469d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "83e87fa0eb96f283ccf04d710553c1386a14a51dc3b816ecdf8aa9cd2e8dda91",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms2.c",
+      "logical_bytes": 2554304,
+      "allocated_before": 2555904,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "6200a035c4edea1d266bfc176f5f7f283f32fe48e028c1e4d4ffaac36ca25734",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "569dc3f597a0cd9c45d28c11f9e8a00f8aaf080110d538ace6d57242921f2953",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms3.c",
+      "logical_bytes": 2499377,
+      "allocated_before": 2502656,
+      "allocated_after": 192512,
+      "sha256_before_and_after": "e600bd7f44e176bc74fe9bb4799655fb11a5ca9a717eff073cf989bce20559dc",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b539d26dec5b372ec2b76ec27f21be087cb0fbe8802a98dcdc2258c64b3ba510",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Zeta.c",
+      "logical_bytes": 9750257,
+      "allocated_before": 9752576,
+      "allocated_after": 720896,
+      "sha256_before_and_after": "7a27664c8d392c181e62d6d3c628e9be1c5d220ea3e8ddd3b02d42fcf902a904",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile007Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "22f3ae30bd9454b5845a0081050e8a19759b82c0fccb69643e348c536a0d0c9c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008.c",
+      "logical_bytes": 1139602,
+      "allocated_before": 1142784,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "ef494b76eaf8515a937d828fc1ce1a7672c933152033e44c396f86fb1279b79f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "94e440df0b9bff027284ee24ea3a754e12a65090663c2843229bc602de56fec7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Gamma.c",
+      "logical_bytes": 7532849,
+      "allocated_before": 7536640,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "969f8b847ab5a8ca2a515ae674a2530a7bb4774c23f593b5fd22892c534e1695",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2eda56945cf45a43aa946d2db3ab33a1f7d79cbf9ee83b11ec2c228b95d38d44",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms0.c",
+      "logical_bytes": 3040214,
+      "allocated_before": 3043328,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "9d3b88f79987e38af3504f92a0cff7f9486325a71d8d35bec9b5bc8521f1c5ee",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "734a59c1ee77cba09c32963ce3bae441e20a6c7a701b20496d454f42b853aac7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms1.c",
+      "logical_bytes": 2990690,
+      "allocated_before": 2994176,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "7385b1834ceab9b823af27220b3434db9ad6d8064555a219d72934be8a55c9a4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "79b5d45e176e0a3779af1a6300b30362f6927e02273b9b901d24d331e9d916f8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms2.c",
+      "logical_bytes": 2528160,
+      "allocated_before": 2531328,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "d797957cf2f8804098712e8f4bf3031320ea8b7a2faeea91f5dbccdd16036d6a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "0d021420835725bc409e6ca09f5426ce82c4d2bcbe72136780c160bc396f2618",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms3.c",
+      "logical_bytes": 2496256,
+      "allocated_before": 2498560,
+      "allocated_after": 192512,
+      "sha256_before_and_after": "668d93b484e816146c57a4ebd65ee9d644a62e3adb2810588e5d85c7ea6d027f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "9ab60752ef5471c8ce8d4b8b65aee63ce2ddd7f27a68d3dee44d958990eb5aee",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Zeta.c",
+      "logical_bytes": 9737405,
+      "allocated_before": 9740288,
+      "allocated_after": 720896,
+      "sha256_before_and_after": "4647b23d53f12feb01bc5608eb442d6ab1623e0a1fe63773036993bab6a39997",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile008Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "79d470498d0af6dc981eac020a01f6bc38bcefb6769ff8bdf8ecf0e99b296075",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009.c",
+      "logical_bytes": 1147071,
+      "allocated_before": 1150976,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "95f51151b7de08c394d2fd71f6a0e86200820a67576219ef77dda7677a1d5ec7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "491440523656db2a9999d4865e3a1f062a983ad0c31031ac9f305bc8db058f9d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Gamma.c",
+      "logical_bytes": 7528819,
+      "allocated_before": 7532544,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "e7e220aaf5496e28d1b187e9bf0decee89b648173f77cc30dbfff46c2e003f3e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "59f842ebe063a66676094ffd5f25bd6a77271786234521bc3f867a091db87916",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms0.c",
+      "logical_bytes": 3058081,
+      "allocated_before": 3059712,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "e55fabe2b9baeb2d2751c024200c8183f2a1a9d31b9254a8cbeb8b555d2f03e8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "83738395e89a1592356e3053c27f420b2ce4e2ae66eb37f1c685631c555096f5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms1.c",
+      "logical_bytes": 2930496,
+      "allocated_before": 2932736,
+      "allocated_after": 225280,
+      "sha256_before_and_after": "9c6acaaf26b6c5339634d248d1497f38bd380fa622f58db39a7300b6d7487eab",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2d7f3fe58d68c0979bae12570255ed58fb8dab1704dd9f79cccd1c2b71ef1591",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms2.c",
+      "logical_bytes": 2540688,
+      "allocated_before": 2543616,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "7c01031c850bd091f860b256947a67d9f9cbb0d1c424ea61c379cfcdf9fe23c8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "203445f3d326761adf9e8ed5f6761860e54510e850eb7e16237c25e27c0aca2f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms3.c",
+      "logical_bytes": 2687676,
+      "allocated_before": 2691072,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "60d4348f01787fabe928feeb11d1e6648704f6fa04f47f167472dd495ce5c154",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "95889687dca809bc2ebda4b9f5781c153065ce6d74e513c1f342615dd5c8698f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Zeta.c",
+      "logical_bytes": 9768387,
+      "allocated_before": 9768960,
+      "allocated_after": 720896,
+      "sha256_before_and_after": "45e6ce00577a80bf4d54dfc212e7446dc0c472f694931e83c62cc01ae47aa6f8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile009Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "39599e7333589958f4a130f4031cf33b570b9cb9cc5fd326b175eaf05c8a4e6e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010.c",
+      "logical_bytes": 1144300,
+      "allocated_before": 1146880,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "900e2c145b94f61bfff15c13b15b647eeed723d83da8eb0f9e66506ef03d2619",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "8ca501f857c76c31c644e9cf7e80ba3bc26fefa7430d24236d0a454ea47075e1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Gamma.c",
+      "logical_bytes": 7493221,
+      "allocated_before": 7495680,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "6d05aa2b1e4b981da0cddbe541f04237b1aed3aef5492b1562aaa02f4b849998",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "7fa19f88ecdf54093acd510bf951f8d8db795fd6cf3076892898711be5d3f84e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms0.c",
+      "logical_bytes": 3071385,
+      "allocated_before": 3072000,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "5b9213fa505fa7fcdf2e5b7dff5561ef45fd1a6a182ba7908a92f66584d2907d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2950999abd3f402e87cbec9508d55b4d46f4e7cc9b03015041caec3f99791875",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms1.c",
+      "logical_bytes": 2956401,
+      "allocated_before": 2957312,
+      "allocated_after": 225280,
+      "sha256_before_and_after": "a96c9773bf68ad0e2aad9bdc933a5e34f9fb865899edc297333dbd80232934a5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b06814d0563001478357a6d2fdf4dc765fb46681681a0f247beda7fcd0d0db94",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms2.c",
+      "logical_bytes": 2697385,
+      "allocated_before": 2699264,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "55360828be1cb5c998f7a960fb2f7a6646226a3ee6fa8deaeac4b15f702d2d8a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "839f1f599e0cf9373e2a56c02ea262b19a11416828a77f53e7f66138a728f5bf",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms3.c",
+      "logical_bytes": 2711108,
+      "allocated_before": 2711552,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "2e5f08bbaa185d87aae46977ccb7607edcaae430e19e1b12c73b37c3ff8c1263",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "3232933e4c299f20fd6a74e4ccf1d410451a956d47a7489b53997e15fd4584c3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Zeta.c",
+      "logical_bytes": 9854745,
+      "allocated_before": 9854976,
+      "allocated_after": 729088,
+      "sha256_before_and_after": "766d64fb510720b51a8cd88bbff6ba229442590d1162d59e4860d970d0788ada",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile010Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b7cd8628563924684a34318a46fb97fc75231731828e46fb68d46c6cda1c7a5f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011.c",
+      "logical_bytes": 1155307,
+      "allocated_before": 1159168,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "9aefcff3e13c42868e3d051dca0b7b649d9ad2adeb3aa1dc04a8743fa4b3e45e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "4548efb1746e571292f65c660acd0b4901761b4a1492b60af360cc2a89cd9092",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Gamma.c",
+      "logical_bytes": 7491322,
+      "allocated_before": 7491584,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "1be042431dcbe58f1d1904d9ba2cbe6b526208cec3a0c9c6252306c8c76c1c1b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "8b2539add97cbb983bced3344ac4708582327bfa03d3337a179564537bbc9258",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms0.c",
+      "logical_bytes": 3035854,
+      "allocated_before": 3039232,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "b8397acc96d14374965730065b392e7f5aaba7479b04cc2569455f9e47718719",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "9f66d161c5828eb4275e3ab261e7b80f712f9d5ce5b0e2477c267543f11420e4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms1.c",
+      "logical_bytes": 3037368,
+      "allocated_before": 3039232,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "693bf9bdf827f1599f04feb644613781d084e2a03d9c6d9c1f50ac4297148490",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "5742e4ac36ac8cb68267343419f5aa3ae56a1c2f59ba3831e05a1b69b516bf5a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms2.c",
+      "logical_bytes": 2731065,
+      "allocated_before": 2732032,
+      "allocated_after": 208896,
+      "sha256_before_and_after": "4757f7278e2f75f1151825a4c34c58af5bc2cc1092ee27e080873e59d9c55a36",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "134e1fc61af176fde698d149b317c2a0db96c4c260ca89904c2ab976506b56e0",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms3.c",
+      "logical_bytes": 2591176,
+      "allocated_before": 2592768,
+      "allocated_after": 196608,
+      "sha256_before_and_after": "4f0ea7c52c47fe11fbeaed6f934750b0e0b1787aaa4f4455b49de410ea092989",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "358775c675c009c167ddfa441aef040144d496af13d4ba22e0d94d4e89a453f5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Zeta.c",
+      "logical_bytes": 9909800,
+      "allocated_before": 9912320,
+      "allocated_after": 733184,
+      "sha256_before_and_after": "d5422262240043d41ce7addcebdd7489deb69934bdeaeaa011e93a5c4c143b1b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile011Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "3fd38f05f80729a13addcec24f8baae959c0f8021206787def9f889fe3951b45",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012.c",
+      "logical_bytes": 1139536,
+      "allocated_before": 1142784,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "97f6fb5e911d35195ba22e3b7babf45d91420e2ff523af7dbd48e97e92f6c5ba",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "f2d8bf7feec8a27b71603b31e9af99a55cc32ee6ab1553c7c72bf6940c12e431",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Gamma.c",
+      "logical_bytes": 7450998,
+      "allocated_before": 7454720,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "4afdd00a675bf2c39d07cc881f07eda938640101a62419080b63cfd7dec88fb1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "538594999ca90e1fb7207158fa4b6f9635a363437d797cc9f00c4eebd581a2ec",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms0.c",
+      "logical_bytes": 3050109,
+      "allocated_before": 3051520,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "8c1ac4c5bf3dba8069f51be14d30cbe91f3168841740f80f5d819c2e4b9cd35f",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "13534bd88ffbec8a422319f4d0b5f2c6ccd82d527dd5b143aca0692e241b3a69",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms1.c",
+      "logical_bytes": 3176647,
+      "allocated_before": 3178496,
+      "allocated_after": 241664,
+      "sha256_before_and_after": "d503da2ad45fd724de2bea79872fe547ab66bd0f4725467f2a3e750a15320797",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c31601f6f7f1e559a80a192e9f0812948450e0a00d77e2e35b5391d80bf9d611",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms2.c",
+      "logical_bytes": 2677431,
+      "allocated_before": 2678784,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "bc4781bef8273d52b91726a4dbe61dcaaafece6ed7876262378defdb062cab44",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2109aef475ab5c4ebe6db76948558364ac8bae7c41f20dc5522381cd2ba0b578",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms3.c",
+      "logical_bytes": 2622518,
+      "allocated_before": 2625536,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "83785f8d26ef60c66e7f28dde7008cca02ef6610731b66edcb27672186e23eac",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "7c425c3e4237ef865bc539e54b50e56b107cfa056ca6652211c16a5e5acbe109",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Zeta.c",
+      "logical_bytes": 9815800,
+      "allocated_before": 9818112,
+      "allocated_after": 724992,
+      "sha256_before_and_after": "35d8f45df7d0b79bb599672b15108ca6392923111526cc85640768c8339de3f7",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile012Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "6ccc0387eb6b87cbffdd44dc189301d46da76bae4ae1d7edc2fdab35a0958603",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013.c",
+      "logical_bytes": 1134045,
+      "allocated_before": 1134592,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "39148de64ca44ef7a874e69ba0a79b6d4417e5990dafd3b5c768836416739f14",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "f619e2ee220d39a771d4ef2c7511561373fadc319b0fbc46d11832476f797f63",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Gamma.c",
+      "logical_bytes": 7509364,
+      "allocated_before": 7512064,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "2c850cb7444937c0fab74b9420f6cbbc7eb14862e0f1303ded89d814c9b194b9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "d1997eb0c11e4cfef96f97b85eb3609016b86b8740d2f6c57b512964f440e6a6",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms0.c",
+      "logical_bytes": 3022255,
+      "allocated_before": 3022848,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "fae589b4fd16e5df2c53a85e2e279b346dd488226058bbab8ab1b920d4f26939",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "232d8595b5ea6ba8e8354528aaa55a371da603796744abcf2dbeb6c0e249d5e9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms1.c",
+      "logical_bytes": 3154890,
+      "allocated_before": 3158016,
+      "allocated_after": 237568,
+      "sha256_before_and_after": "58183092df9fb20811cf2fa39c466fc722dbb5c68e583b7552a4b2685a01c102",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "e336335bcede13485b657e1988393883c0c2025dbe2308dc11d0999266a7a6b8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms2.c",
+      "logical_bytes": 2593058,
+      "allocated_before": 2596864,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "9fe815695e73194dc8c34235a50e5c7e962132b08b0176b7e00368d382dcecdc",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "901498f02aa81048ad71dc5ffb1bdeadb10522516ad55145ca4868e03a92c6fd",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms3.c",
+      "logical_bytes": 2640219,
+      "allocated_before": 2641920,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "bdfee55a0b24751a9e4870ccb6fcec41d9c116f3f8261e0d2642b3a256774cf0",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "8fe94d86a477a9823b1b43ba72c6e1e5ef6bc5db74201a01db804744a74c4966",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Zeta.c",
+      "logical_bytes": 9955878,
+      "allocated_before": 9957376,
+      "allocated_after": 737280,
+      "sha256_before_and_after": "efd65bfd4cc81a47db6519e14282ac0bd3738d29d46aa1dce1e4625396fdabcb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile013Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "fab4e88025b876d6ff63051340728253af561b33b2f4944595a19e9c6d0c297a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014.c",
+      "logical_bytes": 1136320,
+      "allocated_before": 1138688,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "ee561070949e3cff8bb1f666bd55c5c1102fe19997d6193a41714fa06515698c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b40e801093eb9f1e1891d692cd448d66d47a4600a5e61d9f40d318a7b6009088",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Gamma.c",
+      "logical_bytes": 7511095,
+      "allocated_before": 7512064,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "c19839160030b3a36728c4a829bf13fc7f5d0c70c3b34d1a28676c1352a90691",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "70c9b36538b7eb9d104b1ffce6b18119f441b165a9d668a21fce7f1bfd36c17c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms0.c",
+      "logical_bytes": 3049285,
+      "allocated_before": 3051520,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "37d0045a862e1c82f93ee43ba3ca44b9a8ba089996b318c708972017f312647a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2e2b535830500900a1859a38db734baf648a9a2d019eee7b5e3c23627e04ee18",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms1.c",
+      "logical_bytes": 3063602,
+      "allocated_before": 3063808,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "632f90e126ff8c55bd589c4dcba36fd28a40ed765120c8e591d44e8a8c9d29fa",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b57c621bf167bff679041d295d0906593cb2de7dbb0271e04f1497b1caa80fed",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms2.c",
+      "logical_bytes": 2609080,
+      "allocated_before": 2609152,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "7f24fc04578fa2fa42d343104dc7fb5204b8a3549ad4d91c89b19e5e2ed4f66b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c647262b14ad2a6d84051694b72737b0b8b24caec5039a775c6c8df4341c9296",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms3.c",
+      "logical_bytes": 2727459,
+      "allocated_before": 2727936,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "3688844dbd5a63f98f86f79f7af9e12e137f5d14136a46b8ae998d8e80d51436",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "7ac384537f208b85087fd1503feec1c8891abb2b118df1f4b918494e91ba7389",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Zeta.c",
+      "logical_bytes": 9976883,
+      "allocated_before": 9977856,
+      "allocated_after": 737280,
+      "sha256_before_and_after": "8a47966a2011a2906edfea485643d6186af7cecf7a2abc8a20c740aa08dfe48a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile014Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "29f00d72ce4148edc2db86678bc56631274876488ed4040a42ae6c1c3f7b9e88",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015.c",
+      "logical_bytes": 1142161,
+      "allocated_before": 1142784,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "36fb8aaf2b56bed5057cd3e3c67b70d6426f50115bd6784529af0bd787b4a1b4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "751e17a3c6f08abc5a7306911dcb78a3efa3ba7c96ffbd561e0778527a85cecf",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Gamma.c",
+      "logical_bytes": 7491814,
+      "allocated_before": 7495680,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "dfe17e50938b7e4c9c419eb5d98f6a209706809710690c4c629fa3f7a6975cbb",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "a660344df6bb331fe8bd5ddf690ed23d9560967e579bbef9fb175664f56afe37",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms0.c",
+      "logical_bytes": 3048049,
+      "allocated_before": 3051520,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "a8faa3227f3424402e1a7f9cd4aa8bcb1f36d003def6c080f2bd2d0961eefa46",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "a63b5fc06cb46a2944feaaeea143479886454d6d7e5a1072a3c61ec03107a60d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms1.c",
+      "logical_bytes": 3017403,
+      "allocated_before": 3018752,
+      "allocated_after": 229376,
+      "sha256_before_and_after": "c5eb22860223487968c46bcb8a24832f8e2b572017e7c9959ce57f5a65f579f2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "52e4dd8c79b9529e7115dbf75790b7dd19679e37644709b039bddd6ceaeaca24",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms2.c",
+      "logical_bytes": 2741640,
+      "allocated_before": 2744320,
+      "allocated_after": 208896,
+      "sha256_before_and_after": "7de30d7aa52c2c2a823cd32421fce1a2dce09f848f765a75af75b33dc1c6bbf3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "813bc06443fb5265254f9e8cadbf0bcc54a2bf968604576821881c35eebb14f5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms3.c",
+      "logical_bytes": 2648240,
+      "allocated_before": 2650112,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "905d0ee64516f512e5a5563755ff225e78613629452a42857223856a3c309088",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "9de9d7b544a330b8ff1194bf738e9e21a2cec45fd12bc78e7ba967f856bb88df",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Zeta.c",
+      "logical_bytes": 9994420,
+      "allocated_before": 9998336,
+      "allocated_after": 737280,
+      "sha256_before_and_after": "3c9bb8ac81a0a0bd7e66c8fe92e54ecd2b8b9f5f4496de7146113b55f1938b99",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile015Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "f3f75d039e5e2e078eeb50be2ce9e503b07e2dd567d3b2c9035af073e5234422",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016.c",
+      "logical_bytes": 1136935,
+      "allocated_before": 1138688,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "b30be69493319d503e1ba73032a02c9595a3efc8a3a4554031646f9eb02e5ac3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "00aec85b020359c48e29163610d78b920a875bdc3df8add8da89c845874a27f4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Gamma.c",
+      "logical_bytes": 7474972,
+      "allocated_before": 7475200,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "1242d36087523358425cd184f2143b38061cd2291654bc658532747ec8211732",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "ff665ae22eb343653ec4bf8d7f7db736b49e123c9b5fa96d66d0d412b799d169",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms0.c",
+      "logical_bytes": 3067803,
+      "allocated_before": 3067904,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "1cfccfb6f03d261ddeb5b1078abe6681c3d0a3bcc8dd9489d686cbd883241885",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "f2383dcb9f36db5569ea58990fe64444c5cfe4f000ae5cb2fe0f3994b3d0fcfe",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms1.c",
+      "logical_bytes": 3067678,
+      "allocated_before": 3067904,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "5268297d4f3971179c0298cfd0f504c7a11d739f476f3810133b07498a4eef38",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "91e5b9958ff785462913be863d28af683e3c3107ce3bd546cdb6b2853b9c4336",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms2.c",
+      "logical_bytes": 2751117,
+      "allocated_before": 2752512,
+      "allocated_after": 208896,
+      "sha256_before_and_after": "d1975172a64266e420081e6924c54fdfa1dbd36001168a26c8e6e232c60c76ba",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "e3858d982b5f66e4e0a00f34e9456d22a375be82c7ea47745fd9f96f6c5dda7a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms3.c",
+      "logical_bytes": 2632944,
+      "allocated_before": 2633728,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "7e8f81347a888c7d4cef48f905c81c6bddd27d77688ca946b8b26b06948c9e25",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2e1a28381c58c56fdb9d8a423002b635adffafd1fd4fbd9c751007c4cca7f3e8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Zeta.c",
+      "logical_bytes": 9931563,
+      "allocated_before": 9932800,
+      "allocated_after": 733184,
+      "sha256_before_and_after": "1b96516f985e7ffb7eb4e69ea5985d0d69095bad04ac5abb22eafe4dc6cc1eed",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile016Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "61cd6024caca6ef3d4bb6c741c600e39ddb779c5276a54fab3b7fe1d9448ae43",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017.c",
+      "logical_bytes": 1137210,
+      "allocated_before": 1138688,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "65170358c8fd4776f446df9f8d7b5e40925c55cbfb4e3f6cad2ea9229e2f0316",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b0a5c9bcd713ae5ed3730d50cea05af2ad4c7714fb169c3f37e347f642eadda8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Gamma.c",
+      "logical_bytes": 7528033,
+      "allocated_before": 7528448,
+      "allocated_after": 557056,
+      "sha256_before_and_after": "19094914ac20f43d4a5874a734066c34e28d1cda26cd1fc668b194703b7bd324",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "ba0e5e6a4b47d3bed33f28b0c20d23c513e43e23b03ec452668dd483f1712101",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms0.c",
+      "logical_bytes": 3086753,
+      "allocated_before": 3088384,
+      "allocated_after": 237568,
+      "sha256_before_and_after": "bc745ef452a42baf8b51305ce5b35c6b593a53904fdd7019fbbf3283918718aa",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "430fe37263f10d884cb07b6c2ce00e4121c0a26c26b7caca24c440b51a53c0ba",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms1.c",
+      "logical_bytes": 3113485,
+      "allocated_before": 3117056,
+      "allocated_after": 237568,
+      "sha256_before_and_after": "9555cde9df0ec93375dc0b61977aa02328edf24b3b8ea2b7d82d0eb0337fc21d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "3373dcf08be06965985b6f3fe01053195a1c6e6d6991b9604e44bbd12269e54c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms2.c",
+      "logical_bytes": 2686203,
+      "allocated_before": 2686976,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "56b570dc25c5554fd9f59ee1479cd7090ea647bca3bc370e4a5fa7418ad5753a",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "aedb08c0db8a06c29808202a207f43e99872a3fe5e4b5c16d26b63d289f8092d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms3.c",
+      "logical_bytes": 2625920,
+      "allocated_before": 2629632,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "f6aecc8953c4dff93b3005f578ff134a87415b9f5ba2bb09b74cca7ab7e75e7c",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "5633603f317d21b40ed2bc6b6ec8f97051485e3363d8fd5323b2633ff4408267",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Zeta.c",
+      "logical_bytes": 9876592,
+      "allocated_before": 9879552,
+      "allocated_after": 729088,
+      "sha256_before_and_after": "c2e641acb497a2d5cae4703d1b993c3f45dd76738ec8518b1123323cfbb4827d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile017Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "5c0f5ed6553a2948540ca8a039eb00e41499bdec9a05995e6b7b337039e661d8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018.c",
+      "logical_bytes": 1127195,
+      "allocated_before": 1130496,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "bc78cd3de3157cabeda6a87966ff34610f119771c5827e39ff3d52c62c032d41",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "2f647c38c22c3511c6ab42ccfedff730c541b715b87efb8a367d0158eff7129d",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Gamma.c",
+      "logical_bytes": 7467520,
+      "allocated_before": 7471104,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "533d3370a120b5ebc6ec87b74a420db1184f7c34426004b6483c37271bc182c0",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "bd236c03593b380d70a2eec8a4adcda3d9ce6e0fc1c0e790815eb4be97557ac9",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms0.c",
+      "logical_bytes": 3091537,
+      "allocated_before": 3092480,
+      "allocated_after": 237568,
+      "sha256_before_and_after": "d6b1b50131fe56d052fcf178100ee615a07edf3abea4decb0fd6a6dc936736a2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "474a5a7d54dcca979a47ae11fc1d38348cfa4f1da600e3ea4c9a90f6a6228af2",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms1.c",
+      "logical_bytes": 3140089,
+      "allocated_before": 3141632,
+      "allocated_after": 237568,
+      "sha256_before_and_after": "a366f04d77791a0f434c1232a4d7a92dd33f4ea9558f16f5920d1c4d4e482a38",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "cd45b2602a01d9c70c6095fc5eb7a0f347ee11e1094c454a7b045c60b45e9963",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms2.c",
+      "logical_bytes": 2640387,
+      "allocated_before": 2641920,
+      "allocated_after": 200704,
+      "sha256_before_and_after": "af125f762f3a9601d83d4dd15009e2b070a4ee3bda9fff2bdc9a1ea598748ede",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "615760bead909bf3f95bd56ec6022ae1a604c266cc383627f3419a9077b94aa5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms3.c",
+      "logical_bytes": 2777671,
+      "allocated_before": 2781184,
+      "allocated_after": 208896,
+      "sha256_before_and_after": "7c6a164895d7d11a2f6af46e63190087af8055638935c7089190b0fae23e8890",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "c2488e10d1371796d58cc5015826e2754d8e2de29308677a1bd9ea028da93754",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Zeta.c",
+      "logical_bytes": 9957624,
+      "allocated_before": 9961472,
+      "allocated_after": 733184,
+      "sha256_before_and_after": "c602829bb932910f8f157ea833e758ee04f9e46cd08fb9283d572c333f96fe48",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile018Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "21bd6dd55fb16c9c8db7c003bf8c9be4080af315955fa6ad00adf1d457c141c3",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019.c",
+      "logical_bytes": 1131765,
+      "allocated_before": 1134592,
+      "allocated_after": 94208,
+      "sha256_before_and_after": "c2cf604aff3bcf213c9eaf42dbdfb0bc23a40188a4b65796b7e3b858026f6005",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019.setup.json",
+      "logical_bytes": 2111255,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "45c8874fac9d09763bb9ab86ff99c91b9eadc7814ec80835250ac56782eb1bf5",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Gamma.c",
+      "logical_bytes": 7475133,
+      "allocated_before": 7475200,
+      "allocated_after": 552960,
+      "sha256_before_and_after": "4d97013aee307b8ab3f6d555d24c90cf9da94ee76e81ac0fe5ad138ffb274010",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Gamma.setup.json",
+      "logical_bytes": 2110438,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "44579e432bd4e2c1d04aef93e7816edd78f4eb575b3004229f4538584d1e52f8",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms0.c",
+      "logical_bytes": 3076757,
+      "allocated_before": 3080192,
+      "allocated_after": 233472,
+      "sha256_before_and_after": "617fe012f1be99c68ea27ac906c20a99fc65c491a789c5db5c71df24e6480d0b",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms0.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "48a75464618662924475601ec8c095eb96afb7e7b5c837f1efeb8eea6551caf4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms1.c",
+      "logical_bytes": 3126274,
+      "allocated_before": 3129344,
+      "allocated_after": 237568,
+      "sha256_before_and_after": "6e55409f51e88b3dd2981da7e8759dbe039482c9ecf78385a8be7230c80f0891",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms1.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "35e0527d168776a2c8048f8cd2ca4be1bda7f1b3868c9a87f3f6a347c6063cc4",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms2.c",
+      "logical_bytes": 2699754,
+      "allocated_before": 2703360,
+      "allocated_after": 204800,
+      "sha256_before_and_after": "0a86292c09a1c77028e0ce0b900a9d558e2644750074960b982e6170bdcf147e",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms2.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "e0e3d6ffa5592c1486cae72518fbde22c3152d975ba0385a4b0a61f9f89055fc",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms3.c",
+      "logical_bytes": 2766210,
+      "allocated_before": 2768896,
+      "allocated_after": 208896,
+      "sha256_before_and_after": "62430c3da8bf568a89e265d1ac69ce681c08309c5275c4f2835af8bc1d98e3e1",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Terms3.setup.json",
+      "logical_bytes": 2110439,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "b8a12661b1aefb0c4d4e30e54e3f09c842a7bb0fa0400fcd0cc6997df0e45baa",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Zeta.c",
+      "logical_bytes": 9972415,
+      "allocated_before": 9973760,
+      "allocated_after": 737280,
+      "sha256_before_and_after": "9de124bbc4807d9fa464aea60f8a25fc9e186960536b585824716a3766631eca",
+      "mtime_preserved": true
+    },
+    {
+      "file": ".lake/build/ir/XiRectangle/Tile019Zeta.setup.json",
+      "logical_bytes": 2110989,
+      "allocated_before": 2113536,
+      "allocated_after": 139264,
+      "sha256_before_and_after": "e4f2e2038584e13276661edf0255f86af9f2cf2cf0febe6ad6c7cd1e80d1e2b2",
+      "mtime_preserved": true
+    }
+  ],
+  "bytes_saved": 6169546752
+}

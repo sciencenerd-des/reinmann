@@ -1,0 +1,29 @@
+{
+  "status": "failed",
+  "jobs": 2,
+  "wall_seconds": 274.7001628750004,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.RectangleModel",
+        "XiRectangle.Cover"
+      ],
+      "seconds": 38.784520959015936,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_adaptive/batch_000.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile042",
+        "XiRectangle.Tile043"
+      ],
+      "seconds": 235.91454149992205,
+      "returncode": -2,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/pilot_adaptive/batch_001.log"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiRectangle/Tile042.lean": "3e866f1dc7940c06db7fabe4b22e2c67fa12baeb34318360f35fa9085a87bf08",
+    "XiRectangle/Tile043.lean": "13cc6536b702fd16ad93505a92195733dcf4f5bfc9b90e9d9f6a95af41041a09"
+  }
+}

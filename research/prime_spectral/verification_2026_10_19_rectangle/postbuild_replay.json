@@ -1,0 +1,27 @@
+{
+  "full_build_receipt_sha256": "c307c7b54b8cc1da82529fef30bc9adb349057e4aa6694c3cc7fed0f68f5cacd",
+  "audit_source_sha256": "ca68356ffded0608a8b252901baeda49d320c66203c1926e5c9406d6e5ebdfae",
+  "rows": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "XiRectangle"
+      ],
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/rectangle_build.log",
+      "returncode": 0,
+      "active_seconds": 1.2950143750058487
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_19_rectangle/AllNewAxioms.lean"
+      ],
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/all_new_axioms.log",
+      "returncode": 0,
+      "active_seconds": 3.791442958987318
+    }
+  ]
+}

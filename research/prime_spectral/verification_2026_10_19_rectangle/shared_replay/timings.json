@@ -1,0 +1,18 @@
+{
+  "rows": [
+    {
+      "module": "RegularizedEulerMaclaurin",
+      "seconds": 3.1453148749424145,
+      "returncode": 0,
+      "source_sha256": "40738757410f4cfb204da0cbbad483fa528e0828b8e256a81455db5e48d8734a"
+    },
+    {
+      "module": "UniformXiRemainders",
+      "seconds": 4.1303105420665815,
+      "returncode": 0,
+      "source_sha256": "8dad09428e6fefbe6e35ac24c15bf8e8e3e5ba7d75b4f5fa06b14094c5afaa7d"
+    }
+  ],
+  "lean_threads": 2,
+  "shared_only": true
+}

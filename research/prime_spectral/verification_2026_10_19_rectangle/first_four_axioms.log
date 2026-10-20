@@ -1,0 +1,4 @@
+'Reinmann.XiRectangle.Tile000.nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiRectangle.Tile001.nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiRectangle.Tile002.nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiRectangle.Tile003.nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]

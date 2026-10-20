@@ -16,3 +16,8 @@ rev = "v4.30.0"
 
 [[lean_lib]]
 name = "Reinmann"
+
+# Optional numerical rectangle certificate, built in a dedicated CI job.
+[[lean_lib]]
+name = "XiRectangle"
+moreLeanArgs = ["-j3"]

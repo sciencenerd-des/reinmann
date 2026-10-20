@@ -1,0 +1,917 @@
+{
+  "status": "complete",
+  "jobs": 4,
+  "wall_seconds": 6562.027334082988,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.RectangleModel",
+        "XiRectangle.Cover"
+      ],
+      "seconds": 13.044331124983728,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_000.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000Gamma",
+        "XiRectangle.Tile001Gamma",
+        "XiRectangle.Tile002Gamma",
+        "XiRectangle.Tile003Gamma"
+      ],
+      "seconds": 211.13721183303278,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_001.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000Terms0",
+        "XiRectangle.Tile001Terms0",
+        "XiRectangle.Tile002Terms0",
+        "XiRectangle.Tile003Terms0"
+      ],
+      "seconds": 106.49839649989735,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_002.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000Terms1",
+        "XiRectangle.Tile001Terms1",
+        "XiRectangle.Tile002Terms1",
+        "XiRectangle.Tile003Terms1"
+      ],
+      "seconds": 222.84030220797285,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_003.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000Terms2",
+        "XiRectangle.Tile001Terms2",
+        "XiRectangle.Tile002Terms2",
+        "XiRectangle.Tile003Terms2"
+      ],
+      "seconds": 157.9715031669475,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_004.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000Terms3",
+        "XiRectangle.Tile001Terms3",
+        "XiRectangle.Tile002Terms3",
+        "XiRectangle.Tile003Terms3"
+      ],
+      "seconds": 60.30314733402338,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_005.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000Zeta",
+        "XiRectangle.Tile001Zeta",
+        "XiRectangle.Tile002Zeta",
+        "XiRectangle.Tile003Zeta"
+      ],
+      "seconds": 89.2214037500089,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_006.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile000",
+        "XiRectangle.Tile001",
+        "XiRectangle.Tile002",
+        "XiRectangle.Tile003"
+      ],
+      "seconds": 26.081685208017007,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_007.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004Gamma",
+        "XiRectangle.Tile005Gamma",
+        "XiRectangle.Tile006Gamma",
+        "XiRectangle.Tile007Gamma"
+      ],
+      "seconds": 264.3769477920141,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_008.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004Terms0",
+        "XiRectangle.Tile005Terms0",
+        "XiRectangle.Tile006Terms0",
+        "XiRectangle.Tile007Terms0"
+      ],
+      "seconds": 71.65073958400171,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_009.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004Terms1",
+        "XiRectangle.Tile005Terms1",
+        "XiRectangle.Tile006Terms1",
+        "XiRectangle.Tile007Terms1"
+      ],
+      "seconds": 66.47797279199585,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_010.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004Terms2",
+        "XiRectangle.Tile005Terms2",
+        "XiRectangle.Tile006Terms2",
+        "XiRectangle.Tile007Terms2"
+      ],
+      "seconds": 162.87249516695738,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_011.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004Terms3",
+        "XiRectangle.Tile005Terms3",
+        "XiRectangle.Tile006Terms3",
+        "XiRectangle.Tile007Terms3"
+      ],
+      "seconds": 54.71677004103549,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_012.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004Zeta",
+        "XiRectangle.Tile005Zeta",
+        "XiRectangle.Tile006Zeta",
+        "XiRectangle.Tile007Zeta"
+      ],
+      "seconds": 86.06669258303009,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_013.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile004",
+        "XiRectangle.Tile005",
+        "XiRectangle.Tile006",
+        "XiRectangle.Tile007"
+      ],
+      "seconds": 28.32493916596286,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_014.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008Gamma",
+        "XiRectangle.Tile009Gamma",
+        "XiRectangle.Tile010Gamma",
+        "XiRectangle.Tile011Gamma"
+      ],
+      "seconds": 274.22442629095167,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_015.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008Terms0",
+        "XiRectangle.Tile009Terms0",
+        "XiRectangle.Tile010Terms0",
+        "XiRectangle.Tile011Terms0"
+      ],
+      "seconds": 72.0019151250599,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_016.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008Terms1",
+        "XiRectangle.Tile009Terms1",
+        "XiRectangle.Tile010Terms1",
+        "XiRectangle.Tile011Terms1"
+      ],
+      "seconds": 112.61688699992374,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_017.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008Terms2",
+        "XiRectangle.Tile009Terms2",
+        "XiRectangle.Tile010Terms2",
+        "XiRectangle.Tile011Terms2"
+      ],
+      "seconds": 54.80512387503404,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_018.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008Terms3",
+        "XiRectangle.Tile009Terms3",
+        "XiRectangle.Tile010Terms3",
+        "XiRectangle.Tile011Terms3"
+      ],
+      "seconds": 53.82136308308691,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_019.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008Zeta",
+        "XiRectangle.Tile009Zeta",
+        "XiRectangle.Tile010Zeta",
+        "XiRectangle.Tile011Zeta"
+      ],
+      "seconds": 126.03866029204801,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_020.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile008",
+        "XiRectangle.Tile009",
+        "XiRectangle.Tile010",
+        "XiRectangle.Tile011"
+      ],
+      "seconds": 27.197239083005115,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_021.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012Gamma",
+        "XiRectangle.Tile013Gamma",
+        "XiRectangle.Tile014Gamma",
+        "XiRectangle.Tile015Gamma"
+      ],
+      "seconds": 210.02015491598286,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_022.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012Terms0",
+        "XiRectangle.Tile013Terms0",
+        "XiRectangle.Tile014Terms0",
+        "XiRectangle.Tile015Terms0"
+      ],
+      "seconds": 135.46788995806128,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_023.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012Terms1",
+        "XiRectangle.Tile013Terms1",
+        "XiRectangle.Tile014Terms1",
+        "XiRectangle.Tile015Terms1"
+      ],
+      "seconds": 65.95395170804113,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_024.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012Terms2",
+        "XiRectangle.Tile013Terms2",
+        "XiRectangle.Tile014Terms2",
+        "XiRectangle.Tile015Terms2"
+      ],
+      "seconds": 66.30730179196689,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_025.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012Terms3",
+        "XiRectangle.Tile013Terms3",
+        "XiRectangle.Tile014Terms3",
+        "XiRectangle.Tile015Terms3"
+      ],
+      "seconds": 48.85792929097079,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_026.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012Zeta",
+        "XiRectangle.Tile013Zeta",
+        "XiRectangle.Tile014Zeta",
+        "XiRectangle.Tile015Zeta"
+      ],
+      "seconds": 67.39528229204006,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_027.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile012",
+        "XiRectangle.Tile013",
+        "XiRectangle.Tile014",
+        "XiRectangle.Tile015"
+      ],
+      "seconds": 23.60529279196635,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_028.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016Gamma",
+        "XiRectangle.Tile017Gamma",
+        "XiRectangle.Tile018Gamma",
+        "XiRectangle.Tile019Gamma"
+      ],
+      "seconds": 160.5881559579866,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_029.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016Terms0",
+        "XiRectangle.Tile017Terms0",
+        "XiRectangle.Tile018Terms0",
+        "XiRectangle.Tile019Terms0"
+      ],
+      "seconds": 65.1645768750459,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_030.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016Terms1",
+        "XiRectangle.Tile017Terms1",
+        "XiRectangle.Tile018Terms1",
+        "XiRectangle.Tile019Terms1"
+      ],
+      "seconds": 58.185440375003964,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_031.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016Terms2",
+        "XiRectangle.Tile017Terms2",
+        "XiRectangle.Tile018Terms2",
+        "XiRectangle.Tile019Terms2"
+      ],
+      "seconds": 50.46358033292927,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_032.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016Terms3",
+        "XiRectangle.Tile017Terms3",
+        "XiRectangle.Tile018Terms3",
+        "XiRectangle.Tile019Terms3"
+      ],
+      "seconds": 49.759357457980514,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_033.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016Zeta",
+        "XiRectangle.Tile017Zeta",
+        "XiRectangle.Tile018Zeta",
+        "XiRectangle.Tile019Zeta"
+      ],
+      "seconds": 78.06833845796064,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_034.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile016",
+        "XiRectangle.Tile017",
+        "XiRectangle.Tile018",
+        "XiRectangle.Tile019"
+      ],
+      "seconds": 24.353662125067785,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_035.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020Gamma",
+        "XiRectangle.Tile021Gamma",
+        "XiRectangle.Tile022Gamma",
+        "XiRectangle.Tile023Gamma"
+      ],
+      "seconds": 208.2220349580748,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_036.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020Terms0",
+        "XiRectangle.Tile021Terms0",
+        "XiRectangle.Tile022Terms0",
+        "XiRectangle.Tile023Terms0"
+      ],
+      "seconds": 81.26787033397704,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_037.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020Terms1",
+        "XiRectangle.Tile021Terms1",
+        "XiRectangle.Tile022Terms1",
+        "XiRectangle.Tile023Terms1"
+      ],
+      "seconds": 62.04401362501085,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_038.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020Terms2",
+        "XiRectangle.Tile021Terms2",
+        "XiRectangle.Tile022Terms2",
+        "XiRectangle.Tile023Terms2"
+      ],
+      "seconds": 57.3908013330074,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_039.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020Terms3",
+        "XiRectangle.Tile021Terms3",
+        "XiRectangle.Tile022Terms3",
+        "XiRectangle.Tile023Terms3"
+      ],
+      "seconds": 52.114520083065145,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_040.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020Zeta",
+        "XiRectangle.Tile021Zeta",
+        "XiRectangle.Tile022Zeta",
+        "XiRectangle.Tile023Zeta"
+      ],
+      "seconds": 82.30565524997655,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_041.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile020",
+        "XiRectangle.Tile021",
+        "XiRectangle.Tile022",
+        "XiRectangle.Tile023"
+      ],
+      "seconds": 24.263924167025834,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_042.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024Gamma",
+        "XiRectangle.Tile025Gamma",
+        "XiRectangle.Tile026Gamma",
+        "XiRectangle.Tile027Gamma"
+      ],
+      "seconds": 197.44290195801295,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_043.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024Terms0",
+        "XiRectangle.Tile025Terms0",
+        "XiRectangle.Tile026Terms0",
+        "XiRectangle.Tile027Terms0"
+      ],
+      "seconds": 63.509670083993115,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_044.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024Terms1",
+        "XiRectangle.Tile025Terms1",
+        "XiRectangle.Tile026Terms1",
+        "XiRectangle.Tile027Terms1"
+      ],
+      "seconds": 61.81058154103812,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_045.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024Terms2",
+        "XiRectangle.Tile025Terms2",
+        "XiRectangle.Tile026Terms2",
+        "XiRectangle.Tile027Terms2"
+      ],
+      "seconds": 51.98166862502694,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_046.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024Terms3",
+        "XiRectangle.Tile025Terms3",
+        "XiRectangle.Tile026Terms3",
+        "XiRectangle.Tile027Terms3"
+      ],
+      "seconds": 50.384374041925184,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_047.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024Zeta",
+        "XiRectangle.Tile025Zeta",
+        "XiRectangle.Tile026Zeta",
+        "XiRectangle.Tile027Zeta"
+      ],
+      "seconds": 75.10080712498166,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_048.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile024",
+        "XiRectangle.Tile025",
+        "XiRectangle.Tile026",
+        "XiRectangle.Tile027"
+      ],
+      "seconds": 23.359393500024453,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_049.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028Gamma",
+        "XiRectangle.Tile029Gamma",
+        "XiRectangle.Tile030Gamma",
+        "XiRectangle.Tile031Gamma"
+      ],
+      "seconds": 192.0828909999691,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_050.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028Terms0",
+        "XiRectangle.Tile029Terms0",
+        "XiRectangle.Tile030Terms0",
+        "XiRectangle.Tile031Terms0"
+      ],
+      "seconds": 63.80436499998905,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_051.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028Terms1",
+        "XiRectangle.Tile029Terms1",
+        "XiRectangle.Tile030Terms1",
+        "XiRectangle.Tile031Terms1"
+      ],
+      "seconds": 59.72142337495461,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_052.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028Terms2",
+        "XiRectangle.Tile029Terms2",
+        "XiRectangle.Tile030Terms2",
+        "XiRectangle.Tile031Terms2"
+      ],
+      "seconds": 51.55976179102436,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_053.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028Terms3",
+        "XiRectangle.Tile029Terms3",
+        "XiRectangle.Tile030Terms3",
+        "XiRectangle.Tile031Terms3"
+      ],
+      "seconds": 51.257711208076216,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_054.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028Zeta",
+        "XiRectangle.Tile029Zeta",
+        "XiRectangle.Tile030Zeta",
+        "XiRectangle.Tile031Zeta"
+      ],
+      "seconds": 71.54053229105193,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_055.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile028",
+        "XiRectangle.Tile029",
+        "XiRectangle.Tile030",
+        "XiRectangle.Tile031"
+      ],
+      "seconds": 21.59643287502695,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_056.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032Gamma",
+        "XiRectangle.Tile033Gamma",
+        "XiRectangle.Tile034Gamma",
+        "XiRectangle.Tile035Gamma"
+      ],
+      "seconds": 165.040203499957,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_057.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032Terms0",
+        "XiRectangle.Tile033Terms0",
+        "XiRectangle.Tile034Terms0",
+        "XiRectangle.Tile035Terms0"
+      ],
+      "seconds": 62.01969037496019,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_058.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032Terms1",
+        "XiRectangle.Tile033Terms1",
+        "XiRectangle.Tile034Terms1",
+        "XiRectangle.Tile035Terms1"
+      ],
+      "seconds": 50.63602845801506,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_059.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032Terms2",
+        "XiRectangle.Tile033Terms2",
+        "XiRectangle.Tile034Terms2",
+        "XiRectangle.Tile035Terms2"
+      ],
+      "seconds": 47.750362916034646,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_060.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032Terms3",
+        "XiRectangle.Tile033Terms3",
+        "XiRectangle.Tile034Terms3",
+        "XiRectangle.Tile035Terms3"
+      ],
+      "seconds": 48.65019991702866,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_061.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032Zeta",
+        "XiRectangle.Tile033Zeta",
+        "XiRectangle.Tile034Zeta",
+        "XiRectangle.Tile035Zeta"
+      ],
+      "seconds": 78.85715529101435,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_062.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile032",
+        "XiRectangle.Tile033",
+        "XiRectangle.Tile034",
+        "XiRectangle.Tile035"
+      ],
+      "seconds": 23.127963667036965,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_063.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036Gamma",
+        "XiRectangle.Tile037Gamma",
+        "XiRectangle.Tile038Gamma",
+        "XiRectangle.Tile039Gamma"
+      ],
+      "seconds": 191.25339241698384,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_064.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036Terms0",
+        "XiRectangle.Tile037Terms0",
+        "XiRectangle.Tile038Terms0",
+        "XiRectangle.Tile039Terms0"
+      ],
+      "seconds": 65.90077979199123,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_065.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036Terms1",
+        "XiRectangle.Tile037Terms1",
+        "XiRectangle.Tile038Terms1",
+        "XiRectangle.Tile039Terms1"
+      ],
+      "seconds": 61.88918916601688,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_066.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036Terms2",
+        "XiRectangle.Tile037Terms2",
+        "XiRectangle.Tile038Terms2",
+        "XiRectangle.Tile039Terms2"
+      ],
+      "seconds": 50.279816291993484,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_067.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036Terms3",
+        "XiRectangle.Tile037Terms3",
+        "XiRectangle.Tile038Terms3",
+        "XiRectangle.Tile039Terms3"
+      ],
+      "seconds": 54.88404508295935,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_068.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036Zeta",
+        "XiRectangle.Tile037Zeta",
+        "XiRectangle.Tile038Zeta",
+        "XiRectangle.Tile039Zeta"
+      ],
+      "seconds": 75.20583495800383,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_069.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile036",
+        "XiRectangle.Tile037",
+        "XiRectangle.Tile038",
+        "XiRectangle.Tile039"
+      ],
+      "seconds": 24.509213290992193,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_070.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040Gamma",
+        "XiRectangle.Tile041Gamma",
+        "XiRectangle.Tile042Gamma",
+        "XiRectangle.Tile043Gamma"
+      ],
+      "seconds": 188.76323829207104,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_071.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040Terms0",
+        "XiRectangle.Tile041Terms0",
+        "XiRectangle.Tile042Terms0",
+        "XiRectangle.Tile043Terms0"
+      ],
+      "seconds": 64.79539450001903,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_072.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040Terms1",
+        "XiRectangle.Tile041Terms1",
+        "XiRectangle.Tile042Terms1",
+        "XiRectangle.Tile043Terms1"
+      ],
+      "seconds": 56.9740325830644,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_073.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040Terms2",
+        "XiRectangle.Tile041Terms2",
+        "XiRectangle.Tile042Terms2",
+        "XiRectangle.Tile043Terms2"
+      ],
+      "seconds": 48.47637666598894,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_074.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040Terms3",
+        "XiRectangle.Tile041Terms3",
+        "XiRectangle.Tile042Terms3",
+        "XiRectangle.Tile043Terms3"
+      ],
+      "seconds": 47.61446016700938,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_075.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040Zeta",
+        "XiRectangle.Tile041Zeta",
+        "XiRectangle.Tile042Zeta",
+        "XiRectangle.Tile043Zeta"
+      ],
+      "seconds": 72.12784374994226,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_076.log"
+    },
+    {
+      "targets": [
+        "XiRectangle.Tile040",
+        "XiRectangle.Tile041",
+        "XiRectangle.Tile042",
+        "XiRectangle.Tile043"
+      ],
+      "seconds": 22.586840250063688,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_077.log"
+    },
+    {
+      "targets": [
+        "XiRectangle"
+      ],
+      "seconds": 10.816156417015009,
+      "returncode": 0,
+      "log": "research/prime_spectral/verification_2026_10_19_rectangle/parallel/batch_078.log"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiRectangle/Tile000.lean": "f2dbca147f715f7b7db6dfd59db8c24c0ecd418af30c8601d94f89cd0b6f1815",
+    "XiRectangle/Tile001.lean": "afa7345c30eb81729229bf1f13fe92232f9cf2e67c4dada56fdbf9b210a94758",
+    "XiRectangle/Tile002.lean": "0674e4cf2ba699fbeee583eaff281eb5415fe097f7b948bd0a0838c4fea382bc",
+    "XiRectangle/Tile003.lean": "984ede7b11f5a9b909bb546481e69ba507b6ff70717eb5f0a69ca432ef305f11",
+    "XiRectangle/Tile004.lean": "5d2254451045f8d85a6298564c8f5825ceac3d7d67446f7405ef8071b31e2900",
+    "XiRectangle/Tile005.lean": "3b87a76a17f7e07dda2e18309947517d774f92ef416139c5fa3e7c5cb2ef5c6d",
+    "XiRectangle/Tile006.lean": "f3a79f94516b6eba9f4010e9a55a5a8b62c3415d93ba822dcee0dbac284671a5",
+    "XiRectangle/Tile007.lean": "1d401099aed3b5971f099e5cb31d86aea8b3f620bab6ef93a40eb71cab48773b",
+    "XiRectangle/Tile008.lean": "d9d1120dd9827da7665a0b71a72c01670386829d02ad9130b4e245dfedb28f8a",
+    "XiRectangle/Tile009.lean": "2f8142a980940418749beb4cea86fa7dbebdf78738f7190fb7380a3b8286ac84",
+    "XiRectangle/Tile010.lean": "431b3bb10398d4bb1b5d6a52b0f7d6cb03030bf0eba53f2a561f5a851130ad6c",
+    "XiRectangle/Tile011.lean": "5a22bf6a936d9423b4ad9bf8773970bb4647a26cb73657ac3cdaae7ad894b4f1",
+    "XiRectangle/Tile012.lean": "7cb12b141ec848804fc0860ee814d9ad00c0eb16516fc6c648a88972c752ca84",
+    "XiRectangle/Tile013.lean": "a234b5f3023fb05ed8986537a42f08953f6c2e9c7ae43145a4df7d88062e3356",
+    "XiRectangle/Tile014.lean": "4081c71cfc5dc8a2c21262e8b38b7f0c29c3df5393aa68c9037c5fac37afae31",
+    "XiRectangle/Tile015.lean": "2cdbb5478924fe0e7f367fd829932715898a12bce8a9385251c2d800946606ba",
+    "XiRectangle/Tile016.lean": "d7069311d5635991c8c06d5f159cf0d6f913d01e924c9f670d0cbf31489a87bf",
+    "XiRectangle/Tile017.lean": "b23f319ffd340db0832fa3dfb3ef5c58784048e7648fdfb3101631ed76ae59b6",
+    "XiRectangle/Tile018.lean": "a84e688bc6de1d974e354fd727f715317f6a70598d9e568b807221fb546a6ad5",
+    "XiRectangle/Tile019.lean": "f5f77866eedc7d0b478214067d566671f5d6dabbb2d4f57397f5bbcd6562305a",
+    "XiRectangle/Tile020.lean": "44b32c61e03b9d810df115d5ca026b875b2a0aea528099618b87a7e6494dcc2d",
+    "XiRectangle/Tile021.lean": "3783d490304fee3c837299445053e73a909d80d18e1dc39cf36be7cbf392be5b",
+    "XiRectangle/Tile022.lean": "6be78fe228c3cafcc5ea6f1e99ada3848ce3985366f6c6981721d43138dea05e",
+    "XiRectangle/Tile023.lean": "e9b65f9e018bc16c5d4259c88ad3dcf26bc85faf11f2a75f39dec180c1212034",
+    "XiRectangle/Tile024.lean": "f0c40857fe41d8e6f236e47ca25f6bfe629ae026592dc5131fa4a0c2c8ac36cc",
+    "XiRectangle/Tile025.lean": "b5565a982898ea67cf1df6710c2d6b59518212b6161f2645e863e9301adb47a4",
+    "XiRectangle/Tile026.lean": "f49d5232fe7c48f1be5199daaf762e1fad4c2dd16494f37ea4eae708d45773ad",
+    "XiRectangle/Tile027.lean": "736eba2de53e95a6779c5d0c7dffbb9f9e14fe9788a9c769d457d46d2e2776ea",
+    "XiRectangle/Tile028.lean": "fac05c10cd578f86ac515e9ed98ec2cff46e22ca93ee5eb5e540e36259e4fec5",
+    "XiRectangle/Tile029.lean": "d3d640b429108155a98a6c40f8aa6f43724f2b4f5783601c3423984e84595e8f",
+    "XiRectangle/Tile030.lean": "79ce7554852185f14d17c558597285058c692138d7dcd50a3d25b3cf0bd5e6eb",
+    "XiRectangle/Tile031.lean": "d6406a71a7b07d2b716c44d97dcae9a24fe8887d494e24ade6fbbfc13ab28fbd",
+    "XiRectangle/Tile032.lean": "2ddc4285f962e1e3c82efc0d604642577c1ac56ecaf2404fbb027430ed30c425",
+    "XiRectangle/Tile033.lean": "105a52607bd9cc9ae9f0e01cde0c815c0668cf5e537bec6582e0705fab73f5c7",
+    "XiRectangle/Tile034.lean": "98f20c968acd121f6444078d2a422b63d18348ea950e05af3ee47b332176d905",
+    "XiRectangle/Tile035.lean": "05c4888b6b012f733cf4cfec8122ced9c90129bf76dfcd119e5d93c5f0a23ca2",
+    "XiRectangle/Tile036.lean": "3438e2b39c597a72a31f3c8d88fed33f0ed49c851a71cbae96810a81a77e779b",
+    "XiRectangle/Tile037.lean": "fa0d557d4bc6b54034ed6160413d22f2ae2143355e3b9acadf83818994ebb9e9",
+    "XiRectangle/Tile038.lean": "6705761677500801ac5870818c220479596500490d5463b941aef476b103edc9",
+    "XiRectangle/Tile039.lean": "a7435b8fb83b504113a2eee3ea807b28df7494f5586ab0e997a30e84f4de96b0",
+    "XiRectangle/Tile040.lean": "48fdad60bb43e80652b4abd33ced5945721799f031ecea274b92959479dd96e1",
+    "XiRectangle/Tile041.lean": "24f03d136a71f981a094fbb60d9a94e6a842f009d6ce7ad6a219d6a5e6e83d58",
+    "XiRectangle/Tile042.lean": "e3675b5d56001f853686809066916b1ffc64e1a908cf8990a36239ab517b62f1",
+    "XiRectangle/Tile043.lean": "007dc2b48605bf99e8fe23cdb58a207392f1f2f68a11edea6bd24dbb565bbbf8"
+  }
+}

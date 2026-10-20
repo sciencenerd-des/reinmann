@@ -1,0 +1,11 @@
+{
+  "issue": "same-line simp attribute hid regularZeta_one from the theorem-name regex",
+  "declaration": "Reinmann.RegularizedEulerMaclaurin.regularZeta_one",
+  "fix": "recognize attributes and public theorem or lemma declarations; add it to the root audit",
+  "root_audit_targets_before": 1618,
+  "root_audit_targets_after": 1619,
+  "optional_audit_targets_before": 1699,
+  "optional_audit_targets_after": 1700,
+  "mathematical_sources_changed": false,
+  "all_affected_audits_require_replay": true
+}

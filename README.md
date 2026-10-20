@@ -24,20 +24,25 @@ adds offsets0.002 and0.001; the measured plain-L exponent does not meet either
 registered forecast tolerance. The [final matched-mixture test](research/prime_spectral/FINAL_LOG_MECHANISM_RESULTS_2026_10_17.md)
 also misses both fixed forecast tolerances at offsets 0.0005 and 0.00025.
 The logarithmic fit remains descriptive; forecasting is closed.
-The [uniform actual-Xi Mellin truncation tail](research/prime_spectral/XI_LOW_RECTANGLE_STATUS_2026_10_17.md)
-now compiles and passes the full axiom audit; the zero-free rectangle is still open.
+The [actual-Xi closed-rectangle certificate](research/prime_spectral/XI_RECTANGLE_2026_10_20.md)
+now proves nonvanishing on `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`, using 44
+degree-12 tiles. The optional `XiRectangle` library discharges the low-height
+input in its PF43 and PF58 wrappers; their other hypotheses remain explicit.
 The [finite-product split-pair theorem](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md)
 now derives the actual reciprocal coefficients, a nonzero leading coefficient,
 an exponential remainder and both determinant signs at unbounded ranks.
 The [Jacobi bridge and evaluator components](research/prime_spectral/FORMAL_TARGET_A_JACOBI_AND_EVALUATOR_2026_10_18.md)
 now identify these reciprocal minors with the original coefficient minors.
-Finite-theta tails, quadrature rules and a closed-grid cover are source-checked.
-The entire-function determinant extension and actual Xi tile certificates remain open.
+The [standalone entire-function extension](research/prime_spectral/ANALYTIC_SPLIT_PAIR_AND_HARD_TILE_2026_10_18.md)
+also compiles, including the transfer to actual Taylor-coefficient minors. It
+assumes simple selected zeros and strict modulus gaps; it does not replace the
+general PF-to-RH bridges.
 
-> **Current research status (updated 18 October 2026):**
+> **Current research status (updated 20 October 2026):**
 > [`research/RESEARCH_STATUS_2026_10_11.md`](research/RESEARCH_STATUS_2026_10_11.md)
 > records the evidence and open assumptions for the active tracks. It supersedes
-> older priority and novelty claims below. The active outputs are the unreviewed
+> older priority and novelty claims below. The 20 October rectangle report above
+> supersedes earlier Target B status notes. The active outputs are the unreviewed
 > controls preprint and formal targets A and B; logarithmic forecasting is closed.
 > D1 comparison engineering, broad Toeplitz scans, D2 exact counts, D6 induction
 > and arithmetic ablations remain stopped.
@@ -71,13 +76,14 @@ proved before they can be classified as sufficient conditions for RH.
   to original coefficient minors, with the sign cancellation proved. See
   [`FORMAL_TARGET_A`](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md) and
   [the Jacobi round](research/prime_spectral/FORMAL_TARGET_A_JACOBI_AND_EVALUATOR_2026_10_18.md).
-- **Uniform low-rectangle tail.** Lean proves the actual Xi truncation error
-  is at most (19981/50)e<sup>−T</sup> for T ≥ 1 throughout
-  0 ≤ Re(s) ≤ 1, |Im(s)| ≤ 14.1. The full build and 244-theorem axiom audit pass.
-  The new source-checked components add Gaussian finite-theta tails, midpoint
-  quadrature with variation, and a closed-grid cover. Actual Xi center enclosures
-  and positive tile margins remain open; there is no zero-free rectangle certificate. See
-  [`XI_LOW_RECTANGLE_STATUS`](research/prime_spectral/XI_LOW_RECTANGLE_STATUS_2026_10_17.md).
+- **Actual-Xi closed rectangle.** Lean proves `xiCompleted s ≠ 0` throughout
+  `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`. A closed rational cover uses 44 degree-12
+  Taylor certificates, reusable Gamma/zeta remainder bounds and a zeta identity
+  regularized through `s = 1`. The theorem supplies `ZetaNoLowStripZero (141/10)`
+  to optional finite-PF wrappers. The default 1,619-declaration audit and the
+  separate 1,700-declaration audit use only the standard foundational axioms.
+  The bounded numerical replay took 109.37 monotonic minutes with warm dependencies;
+  see [the certificate and reproduction notes](research/prime_spectral/XI_RECTANGLE_2026_10_20.md).
 - **Sine-type model obstruction.** An explicit fixed-bandwidth negative witness
   works for every b > 0 in a finite perturbation of the cosine lattice. The proposed
   general log(1/b) support lower bound needs stronger hypotheses. See
@@ -136,14 +142,27 @@ directly with `lake env lean`.
 With file arguments, the harness still scans every active `.lean` file for
 shortcuts, then runs `lake env lean` on each target file.
 
+Build and audit the optional numerical rectangle library separately, using
+bounded concurrency to limit memory:
+
+```sh
+python3 experiments/prime_spectral/build_xi_rectangle.py --jobs 4 --output tmp/xi-rectangle-replay
+python3 experiments/prime_spectral/verify_xi_rectangle.py --live-audit
+```
+
+Use fewer jobs on a smaller machine. The [rectangle report](research/prime_spectral/XI_RECTANGLE_2026_10_20.md)
+records the proof status, storage cost and measured runtime.
+
 ## Verification boundary
 
-Only `.lean` files under `Reinmann/` are part of the active checked proof
-surface. Draft files live under `research/` and `research/active-lean-drafts/`;
-they are research notes, not verified proof artifacts.
+The default checked proof surface is `Reinmann.lean` and the `.lean` files under
+`Reinmann/`. The optional `XiRectangle.lean` and `XiRectangle/` numerical library
+has a separate build and axiom audit. Drafts and archived experiments under
+`research/` are outside these library import surfaces; their individual status
+is recorded in the dated notes and verification receipts.
 
-The active root module `Reinmann.lean` imports every proof-grade Lean module
-(more than one hundred). The original spine modules are:
+The root module `Reinmann.lean` supplies the default mathematical imports;
+`XiRectangle` is imported separately. The original spine modules are:
 
 - `Reinmann.RiemannSpine`
 - `Reinmann.ConjugateHalfPlane`

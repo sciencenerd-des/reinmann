@@ -1,0 +1,672 @@
+⚠ [2583/2682] Replayed Reinmann.EnclosureRules
+warning: Reinmann/EnclosureRules.lean:24:34: missing space in the source
+
+This part of the code
+  't-v‖ ≤'
+should be written as
+  't - v‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:36:16: missing space in the source
+
+This part of the code
+  '((a+b)/2)-v‖'
+should be written as
+  '((a + b)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:36:19: missing space in the source
+
+This part of the code
+  '((a+b)/2)-v‖'
+should be written as
+  'b) / 2)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:36:22: missing space in the source
+
+This part of the code
+  '((a+b)/2)-v‖ ≤'
+should be written as
+  '2) - v‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:64:27: missing space in the source
+
+This part of the code
+  'c-v‖ ≤'
+should be written as
+  'c - v‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:64:44: missing space in the source
+
+This part of the code
+  '‖z-c‖ ≤'
+should be written as
+  '‖z - c‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:65:14: missing space in the source
+
+This part of the code
+  'z-f c‖'
+should be written as
+  'z - f'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:65:28: missing space in the source
+
+This part of the code
+  '‖z-c‖) (hmargin'
+should be written as
+  '‖z - c‖)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:65:49: missing space in the source
+
+This part of the code
+  'K*ρ < ‖v‖)'
+should be written as
+  'K * ρ'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:90:44: missing space in the source
+
+This part of the code
+  '(n+1)) (j'
+should be written as
+  '(n + 1))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:90:60: missing space in the source
+
+This part of the code
+  '(m+1)) :'
+should be written as
+  '(m + 1))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:116:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Reinmann/EnclosureRules.lean:109:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/EnclosureRules.lean:116:48: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Reinmann/EnclosureRules.lean:129:20: missing space in the source
+
+This part of the code
+  '(n+1) →'
+should be written as
+  '(n + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:129:32: missing space in the source
+
+This part of the code
+  '(m+1) →'
+should be written as
+  '(m + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:130:20: missing space in the source
+
+This part of the code
+  '(n+1) →'
+should be written as
+  '(n + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:130:32: missing space in the source
+
+This part of the code
+  '(m+1) →'
+should be written as
+  '(m + 1)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:131:42: missing space in the source
+
+This part of the code
+  'j)-values'
+should be written as
+  'j) - values'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:133:10: missing space in the source
+
+This part of the code
+  'z-f (gridCenter'
+should be written as
+  'z - f'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:133:40: missing space in the source
+
+This part of the code
+  'K*‖z-gridCenter'
+should be written as
+  'K * ‖z'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:133:43: missing space in the source
+
+This part of the code
+  'K*‖z-gridCenter'
+should be written as
+  '‖z - gridCenter'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:134:32: missing space in the source
+
+This part of the code
+  'j+K*(1/(n'
+should be written as
+  'j + K'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:134:37: missing space in the source
+
+This part of the code
+  'j+K*(1/(n :'
+should be written as
+  '(1 / (n'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/EnclosureRules.lean:134:45: missing space in the source
+
+This part of the code
+  'ℝ)+2*H/m) <'
+should be written as
+  'ℝ) + 2'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [3445/3464] Replayed Reinmann.CertifiedTaylorComposition
+warning: Reinmann/CertifiedTaylorComposition.lean:126:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3448/3464] Replayed Reinmann.CertifiedComplexInputs
+warning: Reinmann/CertifiedComplexInputs.lean:83:50: missing space in the source
+
+This part of the code
+  'e+|a -'
+should be written as
+  'e + |a'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/CertifiedComplexInputs.lean:94:27: missing space in the source
+
+This part of the code
+  '20+|logPartial'
+should be written as
+  '20 + |logPartial'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/CertifiedComplexInputs.lean:98:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/CertifiedComplexInputs.lean:122:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/CertifiedComplexInputs.lean:134:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Reinmann/CertifiedComplexInputs.lean:142:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3449/3464] Replayed Reinmann.CertifiedScalarExp
+warning: Reinmann/CertifiedScalarExp.lean:15:44: missing space in the source
+
+This part of the code
+  'a.centre=b.centre)'
+should be written as
+  'a.centre = b.centre)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/CertifiedScalarExp.lean:15:69: missing space in the source
+
+This part of the code
+  'a.radius=b.radius)'
+should be written as
+  'a.radius = b.radius)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/CertifiedScalarExp.lean:26:12: missing space in the source
+
+This part of the code
+  '|x-(a :'
+should be written as
+  '|x - (a'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [3459/3464] Replayed Reinmann.XiMellinRemainder
+warning: Reinmann/XiMellinRemainder.lean:166:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3461/3464] Replayed Reinmann.RectangleTaylor
+warning: Reinmann/RectangleTaylor.lean:54:32: missing space in the source
+
+This part of the code
+  '⟨0,by omega⟩)'
+should be written as
+  '⟨0, by omega⟩)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:55:18: missing space in the source
+
+This part of the code
+  '⟨0,by omega⟩'
+should be written as
+  '⟨0, by omega⟩'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:56:30: missing space in the source
+
+This part of the code
+  'n+1 < d+1),'
+should be written as
+  'n + 1'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:56:36: missing space in the source
+
+This part of the code
+  'd+1),
+'
+should be written as
+  'd + 1),'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:57:30: missing space in the source
+
+This part of the code
+  '(1/(n+1),0))'
+should be written as
+  '(1 / (n'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:57:33: missing space in the source
+
+This part of the code
+  '(1/(n+1),0))'
+should be written as
+  '(n + 1),'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:57:37: missing space in the source
+
+This part of the code
+  '(1/(n+1),0))
+'
+should be written as
+  '1), 0))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:58:36: missing space in the source
+
+This part of the code
+  '(i+1,0))'
+should be written as
+  '(i + 1,'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:58:39: missing space in the source
+
+This part of the code
+  '(i+1,0))
+'
+should be written as
+  '1, 0))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:59:45: missing space in the source
+
+This part of the code
+  '(i+1)) (CertifiedTaylorModel.get'
+should be written as
+  '(i + 1))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:59:80: missing space in the source
+
+This part of the code
+  '(n-i))))'
+should be written as
+  '(n - i))))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:59:89: missing space in the source
+
+This part of the code
+  '(n+1))
+'
+should be written as
+  '(n + 1))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:60:16: missing space in the source
+
+This part of the code
+  'raw.radius+size'
+should be written as
+  'raw.radius + size'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:60:35: missing space in the source
+
+This part of the code
+  '(raw.centre.1-(b ⟨n+1,hn⟩).centre.1,'
+should be written as
+  '(raw.centre.1 - (b'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:60:41: missing space in the source
+
+This part of the code
+  '⟨n+1,hn⟩).centre.1,'
+should be written as
+  '⟨n + 1,'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:60:44: missing space in the source
+
+This part of the code
+  '⟨n+1,hn⟩).centre.1,'
+should be written as
+  '1, hn⟩).centre.1,'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:61:20: missing space in the source
+
+This part of the code
+  'raw.centre.2-(b ⟨n+1,hn⟩).centre.2)'
+should be written as
+  'raw.centre.2 - (b'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:61:26: missing space in the source
+
+This part of the code
+  '⟨n+1,hn⟩).centre.2)'
+should be written as
+  '⟨n + 1,'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:61:29: missing space in the source
+
+This part of the code
+  '⟨n+1,hn⟩).centre.2)'
+should be written as
+  '1, hn⟩).centre.2)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:61:51: missing space in the source
+
+This part of the code
+  '⟨n+1,hn⟩).radius)'
+should be written as
+  '⟨n + 1,'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTaylor.lean:61:54: missing space in the source
+
+This part of the code
+  '⟨n+1,hn⟩).radius)'
+should be written as
+  '1, hn⟩).radius)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [3462/3464] Replayed Reinmann.RectangleTileRules
+warning: Reinmann/RectangleTileRules.lean:31:28: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [coefficient, s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Reinmann/RectangleTileRules.lean:18:40: missing space in the source
+
+This part of the code
+  '‖z-c‖ ≤'
+should be written as
+  '‖z - c‖'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: Reinmann/RectangleTileRules.lean:65:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/RectangleTileRules.lean:89:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/RectangleTileRules.lean:95:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/RectangleTileRules.lean:101:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: Reinmann/RectangleTileRules.lean:130:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3463/3464] Built XiRectangle.Data (47s)
+warning: XiRectangle/Data.lean:14:17: missing space in the source
+
+This part of the code
+  '(i:Fin count)'
+should be written as
+  '(i : Fin'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: XiRectangle/Data.lean:62:13: missing space in the source
+
+This part of the code
+  '(i:Fin count)'
+should be written as
+  '(i : Fin'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: XiRectangle/Data.lean:110:13: missing space in the source
+
+This part of the code
+  '(i:Fin count)'
+should be written as
+  '(i : Fin'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: XiRectangle/Data.lean:111:29: missing space in the source
+
+This part of the code
+  '(i:Fin count)'
+should be written as
+  '(i : Fin'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [3464/3464] Built XiRectangle.Cover (45s)
+warning: XiRectangle/Cover.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:25:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:37:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:45:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:61:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:69:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:81:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:89:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:109:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:117:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:129:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:137:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:153:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:161:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:173:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:181:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:205:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:213:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:225:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:233:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:249:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:257:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:269:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:277:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:297:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:305:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:313:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:329:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:337:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:349:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:357:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:377:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:385:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:397:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:405:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:421:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:429:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:441:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:449:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:457:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:465:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:481:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:497:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: XiRectangle/Cover.lean:505:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+Build completed successfully (3464 jobs).

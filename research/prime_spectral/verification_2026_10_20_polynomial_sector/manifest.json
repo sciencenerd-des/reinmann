@@ -1,0 +1,43 @@
+{
+  "parent_products_manifest_sha256": "a25778a7ee6d1326656e4e2cbbb55e4661761369e37d258bee3966bd887907e1",
+  "public_declarations_audited": [
+    "Reinmann.QuadraticPF.arbitrary_minor_nonneg_of_tridiagonal",
+    "Reinmann.QuadraticPF.tridiagonal_nonneg",
+    "Reinmann.QuadraticPF.polynomial_coeff",
+    "Reinmann.QuadraticPF.toeplitz_entry",
+    "Reinmann.QuadraticPF.finitePF_quadratic",
+    "Reinmann.QuadraticPF.finitePF_pos_rescale",
+    "Reinmann.QuadraticPF.scaledPolynomial_coeff",
+    "Reinmann.QuadraticPF.finitePF_scaled_quadratic",
+    "Reinmann.QuadraticPF.finitePF_conjugate_pair",
+    "Reinmann.PolynomialSectorPF.finitePF_constant",
+    "Reinmann.PolynomialSectorPF.finitePF_negative_real_factor",
+    "Reinmann.PolynomialSectorPF.finitePF_of_zero_sector",
+    "Reinmann.PolynomialSectorPF.finitePF_of_sector_zero_free",
+    "Reinmann.PolynomialSectorPF.finitePF_of_sector_polynomial_limit"
+  ],
+  "standard_axioms_only": true,
+  "arbitrary_minor_quadratic_criterion_proved": true,
+  "polynomial_sector_sufficiency_proved": true,
+  "sector_polynomial_analytic_limit_proved": true,
+  "simple_zero_or_modulus_gap_assumptions_used": false,
+  "actual_Xi_canonical_product_identified": false,
+  "KatkovaSectorBridge_43_proved": false,
+  "height_increased": false,
+  "RH_proved": false,
+  "artifacts_sha256": {
+    "Reinmann/PolynomialSectorPF.lean": "89d4fe0d9132432df2dba3fe6797a9aa764fe244888395ebf30baca5c8812fa5",
+    "Reinmann/QuadraticPF.lean": "06c923e27998aa2cd9d7ced9d798632d20cd44646de129d7840d8b3ab189abeb",
+    "experiments/prime_spectral/verify_polynomial_sector_pf.py": "3a1d29f3710dd950aaeb6a1b287f55ab7948bdfae5163ecefe567712ba434c6f",
+    "research/prime_spectral/POLYNOMIAL_SECTOR_PF_2026_10_20.md": "36814f8b843d034dcede2913c18e66f775d940b08f328693fcff2638a5b43036",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/Audit.lean": "780ba3ab88fc8d40ba64a675a48d938dd5afac900bc1b4884088ea3da2051d70",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/axioms.log": "d513e3d51b8f66a620493e61d51e5121c3f7e862d6a909e0ebcc2ab60a531ff1",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/build.log.gz": "7d9320e1fa98f651c737ca14cf554147641ccb5a9ad3f8ab2ad6730c96512c92",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/checks.json": "637b29f1e44e8c9acd46358b04f72f9aa8d30bc15f5c6bbd4dfa46b5b42a7094",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/default_build.log.gz": "bb17ee180f5812415ae6cb6e32fa1e7d952d55b58581aeb1f5f0d4a82821b636",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/quadratic_source.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/root_guard.log": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+    "research/prime_spectral/verification_2026_10_20_polynomial_sector/sector_source.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_20_products/manifest.json": "a25778a7ee6d1326656e4e2cbbb55e4661761369e37d258bee3966bd887907e1"
+  }
+}

@@ -1,0 +1,16 @@
+'Reinmann.QuadraticPF.arbitrary_minor_nonneg_of_tridiagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.tridiagonal_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.polynomial_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.toeplitz_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.finitePF_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.finitePF_pos_rescale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.scaledPolynomial_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.finitePF_scaled_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.QuadraticPF.finitePF_conjugate_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PolynomialSectorPF.finitePF_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PolynomialSectorPF.finitePF_negative_real_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PolynomialSectorPF.finitePF_of_zero_sector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PolynomialSectorPF.finitePF_of_sector_zero_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.PolynomialSectorPF.finitePF_of_sector_polynomial_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

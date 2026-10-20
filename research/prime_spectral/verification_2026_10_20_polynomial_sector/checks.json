@@ -1,0 +1,77 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "lake",
+        "build",
+        "Reinmann.PolynomialSectorPF"
+      ],
+      "returncode": 0,
+      "seconds": 1.137252,
+      "log": "research/prime_spectral/verification_2026_10_20_polynomial_sector/build.log.gz",
+      "output_sha256": "95f3e21139beeb4971518a37d57c86c3e30947539c7268c1ca1ea613b7d87808",
+      "output_bytes": 3656
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/QuadraticPF.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.686323,
+      "log": "research/prime_spectral/verification_2026_10_20_polynomial_sector/quadratic_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PolynomialSectorPF.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.496557,
+      "log": "research/prime_spectral/verification_2026_10_20_polynomial_sector/sector_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_polynomial_sector/Audit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.236171,
+      "log": "research/prime_spectral/verification_2026_10_20_polynomial_sector/axioms.log",
+      "output_sha256": "d513e3d51b8f66a620493e61d51e5121c3f7e862d6a909e0ebcc2ab60a531ff1",
+      "output_bytes": 1524
+    },
+    {
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 1.141541,
+      "log": "research/prime_spectral/verification_2026_10_20_polynomial_sector/default_build.log.gz",
+      "output_sha256": "93caf8a4807ff7426b6cfd4cd43e24a4beffcd7ae6ae567a6319ede0f4123875",
+      "output_bytes": 1078187
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "seconds": 5.799183,
+      "log": "research/prime_spectral/verification_2026_10_20_polynomial_sector/root_guard.log",
+      "output_sha256": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+      "output_bytes": 382
+    }
+  ]
+}

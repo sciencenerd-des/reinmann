@@ -1,0 +1,16 @@
+import Reinmann.PolynomialSectorPF
+
+#print axioms Reinmann.QuadraticPF.arbitrary_minor_nonneg_of_tridiagonal
+#print axioms Reinmann.QuadraticPF.tridiagonal_nonneg
+#print axioms Reinmann.QuadraticPF.polynomial_coeff
+#print axioms Reinmann.QuadraticPF.toeplitz_entry
+#print axioms Reinmann.QuadraticPF.finitePF_quadratic
+#print axioms Reinmann.QuadraticPF.finitePF_pos_rescale
+#print axioms Reinmann.QuadraticPF.scaledPolynomial_coeff
+#print axioms Reinmann.QuadraticPF.finitePF_scaled_quadratic
+#print axioms Reinmann.QuadraticPF.finitePF_conjugate_pair
+#print axioms Reinmann.PolynomialSectorPF.finitePF_constant
+#print axioms Reinmann.PolynomialSectorPF.finitePF_negative_real_factor
+#print axioms Reinmann.PolynomialSectorPF.finitePF_of_zero_sector
+#print axioms Reinmann.PolynomialSectorPF.finitePF_of_sector_zero_free
+#print axioms Reinmann.PolynomialSectorPF.finitePF_of_sector_polynomial_limit

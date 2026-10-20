@@ -1,0 +1,11 @@
+{
+  "status": "immutable_checkpoint_chain_replayed_with_historical_root_files",
+  "historical_commit": "bdbc051",
+  "historical_root_sha256": {
+    "Reinmann.lean": "619caa637365db55170e65dc9ea1ea7a406e16f20c41b96c37f98d4559cfdc33",
+    "Reinmann/AxiomAudit.lean": "590eefdc2d69b7c8464f4743a557bea0c58c9abf74f58580fb7fd3a061940049",
+    ".github/workflows/ci.yml": "91ea56b0f84b233c2109aba34b2555dae8a60d0d7f834f063e2bde859a8e8709"
+  },
+  "scope": "Receipt replay only. Current-root build and axiom audit are separate.",
+  "verifier_output_sha256": "e233dc48b06c74d2c29c4e10e5794440e3da950e970c07cee9138646010639a0"
+}

@@ -1,0 +1,3 @@
+'Reinmann.CornerPowerSumCounterexample.powerSum_ge_third' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.CornerPowerSumCounterexample.shift_two_rank_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.CornerPowerSumCounterexample.not_finitePF_three' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,12 @@
+{
+  "status": "exact_rational_bound_optimization_checked",
+  "weights": [
+    "2/7",
+    "5/7"
+  ],
+  "lower_bound": "6/7",
+  "balance_h": "6/7",
+  "proved_range_boundary_h": "1",
+  "boundary_exponent": "11/12",
+  "scope": "Algebra of the stated two-term upper bound only; no proof of its arithmetic premise."
+}

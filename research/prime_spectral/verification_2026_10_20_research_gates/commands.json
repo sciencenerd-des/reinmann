@@ -1,0 +1,53 @@
+[
+  {
+    "command": [
+      "lake",
+      "build",
+      "Reinmann.CornerPowerSumCounterexample",
+      "Reinmann.FiniteHeightPFCalibration"
+    ],
+    "log": "new_modules_build.log",
+    "exit_code": 0,
+    "elapsed_seconds": 2.045385417062789
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "Reinmann/CornerPowerSumCounterexample.lean"
+    ],
+    "log": "corner_fresh_source.log",
+    "exit_code": 0,
+    "elapsed_seconds": 2.8333409579936415
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "Reinmann/FiniteHeightPFCalibration.lean"
+    ],
+    "log": "height_fresh_source.log",
+    "exit_code": 0,
+    "elapsed_seconds": 2.8208980419440195
+  },
+  {
+    "command": [
+      "lake",
+      "build"
+    ],
+    "log": "default_build.log",
+    "exit_code": 0,
+    "elapsed_seconds": 1.3086101249791682
+  },
+  {
+    "command": [
+      "bash",
+      "scripts/verify_axiom_clean.sh"
+    ],
+    "log": "root_guard.log",
+    "exit_code": 0,
+    "elapsed_seconds": 6.768504417035729
+  }
+]

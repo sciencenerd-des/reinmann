@@ -1,0 +1,25 @@
+{
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "bytes": 169005
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean",
+      "sha256": "d98c4a7e074469b429890e1c21b8cc76c410026525a776895293cdc0f9e6ae89",
+      "bytes": 1247
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/lean-toolchain",
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "bytes": 25
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tomoto0/quasi-riemann-hypothesis-7-8-verification/b83a73c6cb626a391e551baafdb7d0cceafaa55a/reports/barrier_analysis.md",
+      "sha256": "21c43333b599e346863c3e1fd08a40fade077a1bb6c3e03600391e347c7734fe",
+      "bytes": 8792
+    }
+  ],
+  "scope": "Pinned primary-source and independent-report readings; the central arithmetic mean-square proposition is not independently reproved here."
+}

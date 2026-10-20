@@ -1,0 +1,336 @@
+{
+  "status": "floating_finite_band_diagnostic_not_certificate",
+  "rows": [
+    {
+      "control": "DH",
+      "C": 4.0,
+      "cutoff_terms": 2,
+      "sum_absolute_comb_weights": 0.6388444377551863,
+      "sum_squared_weights": 0.05185378646955151,
+      "jump_tail_constant": 0.008382032441785842,
+      "max_quadrature_difference": 3.8163916471489756e-17,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 3.1518171372867136e-05,
+          "predicted": 3.2742314225725944e-05,
+          "ratio": 0.9626128182504281
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 8.176123796351004e-06,
+          "predicted": 8.185578556431486e-06,
+          "ratio": 0.9988449490753402
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 2.042793651926555e-06,
+          "predicted": 2.0463946391078715e-06,
+          "ratio": 0.9982403261264962
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 5.113882354225575e-07,
+          "predicted": 5.115986597769679e-07,
+          "ratio": 0.9995886925221772
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.2789020399533027e-07,
+          "predicted": 1.2789966494424197e-07,
+          "ratio": 0.999926028352648
+        }
+      ]
+    },
+    {
+      "control": "DH",
+      "C": 7.38905609893065,
+      "cutoff_terms": 5,
+      "sum_absolute_comb_weights": 4.079976214962351,
+      "sum_squared_weights": 1.2404287110147771,
+      "jump_tail_constant": 0.2948450402750514,
+      "max_quadrature_difference": 2.2898349882893854e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.0011528592120811447,
+          "predicted": 0.0011517384385744194,
+          "ratio": 1.0009731146145584
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.0002879929928577401,
+          "predicted": 0.00028793460964360486,
+          "ratio": 1.0002027655314083
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 7.183504202747803e-05,
+          "predicted": 7.198365241090121e-05,
+          "ratio": 0.9979354981520683
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 1.7993917860247597e-05,
+          "predicted": 1.7995913102725304e-05,
+          "ratio": 0.9998891280222172
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 4.4983583720696365e-06,
+          "predicted": 4.498978275681326e-06,
+          "ratio": 0.9998622123571833
+        }
+      ]
+    },
+    {
+      "control": "DH",
+      "C": 9.5,
+      "cutoff_terms": 7,
+      "sum_absolute_comb_weights": 5.615135024830964,
+      "sum_squared_weights": 1.8210451360889006,
+      "jump_tail_constant": 0.4035113626266623,
+      "max_quadrature_difference": 1.6306400674181987e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.0015650749122646391,
+          "predicted": 0.0015762162602603997,
+          "ratio": 0.9929315866885424
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.0003944712551518022,
+          "predicted": 0.0003940540650650999,
+          "ratio": 1.0010587128104702
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 9.894940299579707e-05,
+          "predicted": 9.851351626627498e-05,
+          "ratio": 1.0044246388317306
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 2.4629862639677278e-05,
+          "predicted": 2.4628379066568745e-05,
+          "ratio": 1.0000602383577304
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 6.156103459793323e-06,
+          "predicted": 6.157094766642186e-06,
+          "ratio": 0.9998389976301431
+        }
+      ]
+    },
+    {
+      "control": "DH",
+      "C": 19.0,
+      "cutoff_terms": 14,
+      "sum_absolute_comb_weights": 10.929831196356782,
+      "sum_squared_weights": 3.2152910549072877,
+      "jump_tail_constant": 0.8369019814467815,
+      "max_quadrature_difference": 1.942890293094024e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.003319209593678017,
+          "predicted": 0.0032691483650264903,
+          "ratio": 1.0153132323962668
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.0008246782512648483,
+          "predicted": 0.0008172870912566226,
+          "ratio": 1.0090435296082572
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 0.00020241155791413795,
+          "predicted": 0.00020432177281415564,
+          "ratio": 0.9906509478960172
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 5.111276365306711e-05,
+          "predicted": 5.108044320353891e-05,
+          "ratio": 1.0006327362783327
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.2768354504155832e-05,
+          "predicted": 1.2770110800884728e-05,
+          "ratio": 0.999862468168344
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 4.0,
+      "cutoff_terms": 2,
+      "sum_absolute_comb_weights": 2.248826344663675,
+      "sum_squared_weights": 0.6425428272299614,
+      "jump_tail_constant": 0.10386541060489146,
+      "max_quadrature_difference": 7.181755190543981e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.0003905553735199705,
+          "predicted": 0.00040572426017535727,
+          "ratio": 0.9626128182504279
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.00010131390699837118,
+          "predicted": 0.00010143106504383932,
+          "ratio": 0.9988449490753399
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 2.5313144862179997e-05,
+          "predicted": 2.535776626095983e-05,
+          "ratio": 0.998240326126496
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 6.336834105518951e-06,
+          "predicted": 6.339441565239957e-06,
+          "ratio": 0.9995886925221769
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.5847431565760208e-06,
+          "predicted": 1.5848603913099893e-06,
+          "ratio": 0.9999260283526478
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 7.38905609893065,
+      "cutoff_terms": 5,
+      "sum_absolute_comb_weights": 5.852468364352817,
+      "sum_squared_weights": 1.8216522035336258,
+      "jump_tail_constant": 0.42208272035802213,
+      "max_quadrature_difference": 9.159339953157541e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.0015479426088867378,
+          "predicted": 0.001648760626398524,
+          "ratio": 0.93885224095143
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.0004102771402036677,
+          "predicted": 0.000412190156599631,
+          "ratio": 0.9953588983983879
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 0.00010256087792044631,
+          "predicted": 0.00010304753914990775,
+          "ratio": 0.9952773134276067
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 2.574271074782704e-05,
+          "predicted": 2.5761884787476937e-05,
+          "ratio": 0.9992557206195093
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 6.441473398064059e-06,
+          "predicted": 6.440471196869234e-06,
+          "ratio": 1.0001556099179998
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 9.5,
+      "cutoff_terms": 7,
+      "sum_absolute_comb_weights": 7.075005628532498,
+      "sum_squared_weights": 2.0158142703636877,
+      "jump_tail_constant": 0.5258515073741964,
+      "max_quadrature_difference": 1.124100812432971e-15,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.0019398982922713846,
+          "predicted": 0.0020541074506804547,
+          "ratio": 0.9443996182520848
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.0005096089483909768,
+          "predicted": 0.0005135268626701137,
+          "ratio": 0.9923705757888391
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 0.00012922199656385252,
+          "predicted": 0.00012838171566752842,
+          "ratio": 1.0065451757826651
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 3.209510983742214e-05,
+          "predicted": 3.2095428916882104e-05,
+          "ratio": 0.9999900584142125
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 8.024217244828893e-06,
+          "predicted": 8.023857229220526e-06,
+          "ratio": 1.0000448681473364
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 19.0,
+      "cutoff_terms": 11,
+      "sum_absolute_comb_weights": 11.664652724944267,
+      "sum_squared_weights": 3.54681739695588,
+      "jump_tail_constant": 0.9078266304264758,
+      "max_quadrature_difference": 1.0200174038743626e-15,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 0.002924738776421955,
+          "predicted": 0.003546197775103421,
+          "ratio": 0.8247534294210813
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 0.0008681181403189058,
+          "predicted": 0.0008865494437758553,
+          "ratio": 0.9792100670906185
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 0.00022273260467438,
+          "predicted": 0.00022163736094396382,
+          "ratio": 1.004941602470592
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 5.521023416868915e-05,
+          "predicted": 5.5409340235990956e-05,
+          "ratio": 0.9964066334943927
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.386417013089352e-05,
+          "predicted": 1.3852335058997739e-05,
+          "ratio": 1.0008543737821367
+        }
+      ]
+    }
+  ],
+  "input": "constant normalized low vector; actual DH log-derivative coefficients before zeta",
+  "scope": "Shared approximation lemma, not an RH discriminator. No infinite tail, Schur complement or positivity bound is certified.",
+  "source_sha256": "53f27576bd81ab9f420bbdbdcbe14dcad75a9731d1422841df90616caa58374a"
+}

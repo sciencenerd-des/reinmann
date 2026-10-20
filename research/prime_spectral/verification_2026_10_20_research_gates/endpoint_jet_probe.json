@@ -1,0 +1,313 @@
+{
+  "status": "floating_finite_band_diagnostic_not_certificate",
+  "rows": [
+    {
+      "control": "DH",
+      "C": 4.0,
+      "corrected_tail_constant": 0.005513859132209923,
+      "max_quadrature_difference": 3.003240017784847e-17,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 2.2510734632167895e-09,
+          "predicted": 2.3005613044184127e-09,
+          "ratio": 0.9784887970137645
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 3.5742422929649666e-11,
+          "predicted": 3.59462703815377e-11,
+          "ratio": 0.9943291070332367
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 5.617177570164972e-13,
+          "predicted": 5.616604747115265e-13,
+          "ratio": 1.0001019874239863
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 8.776481463365647e-15,
+          "predicted": 8.775944917367602e-15,
+          "ratio": 1.0000611382595375
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.3713008252890767e-16,
+          "predicted": 1.3712413933386878e-16,
+          "ratio": 1.0000433417126098
+        }
+      ]
+    },
+    {
+      "control": "DH",
+      "C": 7.38905609893065,
+      "corrected_tail_constant": 0.19120669790293773,
+      "max_quadrature_difference": 5.551115123125783e-17,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 8.777880174888834e-08,
+          "predicted": 7.977765115026022e-08,
+          "ratio": 1.1002931332680885
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 1.2575422641514112e-09,
+          "predicted": 1.246525799222816e-09,
+          "ratio": 1.0088377351960656
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 1.943931329708852e-11,
+          "predicted": 1.94769656128565e-11,
+          "ratio": 0.9980668284518033
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 3.041508992967223e-13,
+          "predicted": 3.043275877008828e-13,
+          "ratio": 0.999419413778766
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 4.7541815450369715e-15,
+          "predicted": 4.755118557826294e-15,
+          "ratio": 0.9998029464927262
+        }
+      ]
+    },
+    {
+      "control": "DH",
+      "C": 9.5,
+      "corrected_tail_constant": 0.2815407339539021,
+      "max_quadrature_difference": 6.955156936494511e-17,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 1.1847252227056382e-07,
+          "predicted": 1.1746794805987565e-07,
+          "ratio": 1.008551900559088
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 1.8552554343458741e-09,
+          "predicted": 1.835436688435557e-09,
+          "ratio": 1.0107978368500468
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 2.8835347465371812e-11,
+          "predicted": 2.8678698256805578e-11,
+          "ratio": 1.0054622147478072
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 4.481422955519689e-13,
+          "predicted": 4.4810466026258716e-13,
+          "ratio": 1.0000839877214391
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 6.999379406360726e-15,
+          "predicted": 7.001635316602924e-15,
+          "ratio": 0.9996778023789886
+        }
+      ]
+    },
+    {
+      "control": "DH",
+      "C": 19.0,
+      "corrected_tail_constant": 0.6313035309644313,
+      "max_quadrature_difference": 9.71445146547012e-17,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 2.764513916720731e-07,
+          "predicted": 2.634003589600932e-07,
+          "ratio": 1.0495482723087604
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 4.173075792825526e-09,
+          "predicted": 4.115630608751456e-09,
+          "ratio": 1.0139578085438277
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 6.333321316039956e-11,
+          "predicted": 6.43067282617415e-11,
+          "ratio": 0.9848613803305383
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 1.0053122100390217e-12,
+          "predicted": 1.004792629089711e-12,
+          "ratio": 1.0005171026680217
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.5694259920853153e-14,
+          "predicted": 1.5699884829526733e-14,
+          "ratio": 0.9996417229339797
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 4.0,
+      "corrected_tail_constant": 0.06832462732183092,
+      "max_quadrature_difference": 2.92300905702092e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 2.7894030616394566e-08,
+          "predicted": 2.8507255986500767e-08,
+          "ratio": 0.9784887970137642
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 4.4289991232851865e-10,
+          "predicted": 4.454258747890745e-10,
+          "ratio": 0.9943291070332365
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 6.960489103540954e-12,
+          "predicted": 6.959779293579289e-12,
+          "ratio": 1.0001019874239863
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 1.0875320003706352e-13,
+          "predicted": 1.0874655146217639e-13,
+          "ratio": 1.0000611382595377
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.699238511311831e-15,
+          "predicted": 1.699164866596506e-15,
+          "ratio": 1.00004334171261
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 7.38905609893065,
+      "corrected_tail_constant": 0.31018707432367754,
+      "max_quadrature_difference": 3.0270924655795284e-16,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 1.1743783066186398e-07,
+          "predicted": 1.2942013265286343e-07,
+          "ratio": 0.9074154712610368
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 2.0054768750782515e-09,
+          "predicted": 2.022189572700991e-09,
+          "ratio": 0.9917353457616652
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 3.139324515915426e-11,
+          "predicted": 3.159671207345299e-11,
+          "ratio": 0.9935605035794317
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 4.927606864742009e-13,
+          "predicted": 4.936986261477029e-13,
+          "ratio": 0.9981001776715065
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 7.715679473966917e-15,
+          "predicted": 7.714041033557858e-15,
+          "ratio": 1.0002123971601826
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 9.5,
+      "corrected_tail_constant": 0.4041075932310783,
+      "max_quadrature_difference": 1.0132953504049524e-15,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 1.4500918436777792e-07,
+          "predicted": 1.686068268190353e-07,
+          "ratio": 0.8600433748949882
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 2.5832812649299365e-09,
+          "predicted": 2.6344816690474266e-09,
+          "ratio": 0.9805652835929569
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 4.1751339178499904e-11,
+          "predicted": 4.116377607886604e-11,
+          "ratio": 1.0142737901039045
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 6.434088814322002e-13,
+          "predicted": 6.431840012322819e-13,
+          "ratio": 1.0003496358732298
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.0052151396404233e-14,
+          "predicted": 1.0049750019254405e-14,
+          "ratio": 1.0002389489435286
+        }
+      ]
+    },
+    {
+      "control": "zeta",
+      "C": 19.0,
+      "corrected_tail_constant": 0.6881780604267286,
+      "max_quadrature_difference": 1.906461100098511e-15,
+      "finite_band_checks": [
+        {
+          "N": 128,
+          "finite_band_energy": 2.42266909537459e-07,
+          "predicted": 2.8713026183766725e-07,
+          "ratio": 0.8437526159274277
+        },
+        {
+          "N": 512,
+          "finite_band_energy": 4.167539644344834e-09,
+          "predicted": 4.486410341213551e-09,
+          "ratio": 0.9289252046475839
+        },
+        {
+          "N": 2048,
+          "finite_band_energy": 7.102363091272566e-11,
+          "predicted": 7.010016158146173e-11,
+          "ratio": 1.0131735692248125
+        },
+        {
+          "N": 8192,
+          "finite_band_energy": 1.0887241208018518e-12,
+          "predicted": 1.0953150247103395e-12,
+          "ratio": 0.993982640829536
+        },
+        {
+          "N": 32768,
+          "finite_band_energy": 1.7140543002740506e-14,
+          "predicted": 1.7114297261099055e-14,
+          "ratio": 1.0015335564902865
+        }
+      ]
+    }
+  ],
+  "input": "Normalized linear vector; two endpoint jump profiles subtracted exactly.",
+  "scope": "No full Schur energy, infinite tail bound or window positivity is certified.",
+  "source_sha256": "4c5714b3ea1903fcd7a493049e88abb1efb8310d395cc478e67d43d405319722",
+  "arithmetic_source_sha256": "53f27576bd81ab9f420bbdbdcbe14dcad75a9731d1422841df90616caa58374a"
+}

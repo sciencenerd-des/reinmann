@@ -62,11 +62,20 @@ proved before they can be classified as sufficient conditions for RH.
 | Track | Manuscript (`paper/`) | Lean capstone (`Reinmann/`) | Open obligation |
 |---|---|---|---|
 | 1. Same-height fibers | `rh_same_height_fiber_framework.tex` | `riemannHypothesis_iff_noSameImaginaryPartCollision` (`RiemannSpine`), `riemannHypothesis_of_all_fiber_card_le_one` (`FiberCentroid`) | Componentwise critical exclusion remains open. The proposed phase condition (H<sub>θ</sub>) also needs a valid zeta-specific exclusion bridge; no Lean equivalence for it is claimed |
-| 2. Pólya frequency / Toeplitz and Jensen | `rh_reduction_paper.tex`, `rh_two_routes_paper.tex`, `hef_companion_paper.tex` | `riemannHypothesis_of_strictLadder` (`ToeplitzFullPF`), `riemannHypothesis_of_hpss_route` (`EffectiveAssembly`) | Strict contiguous ladder at unbounded rank (RH-strength), plus the classical scaffolding bridges. Fixed rank is classical (PF43; PF58 under quasi-RH) |
+| 2. Pólya frequency / Toeplitz and Jensen | `rh_reduction_paper.tex`, `rh_two_routes_paper.tex`, `hef_companion_paper.tex` | `riemannHypothesis_of_strictLadder` (`ToeplitzFullPF`), `riemannHypothesis_of_hpss_route` (`EffectiveAssembly`) | Strict contiguous ladder at unbounded rank remains RH-strength. Target B supplies height 14.1, and the actual folded-Xi sector bridge is proved. Unconditional `XiFinitePFCertified.finitePF43` is CI-verified at `150537b` ([run 39470397281](https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281)); PF58 retains the external seven-eighths input |
 | 3. Semilocal Weil operator and controls | `weil_infinite_rank_tail_paper.tex`, `dh_controls_paper.tex` | `WeilRankTail`, `CoupledRankEnergy`, `WeilWindowHypotheses`, `WeilSchurInertia` | All-support positivity remains a classical RH criterion after genuine-form identification; Lean checks conditional assembly and a supplied cofinal family. Own full-window certificates reach C ≈ 4.9998. Liu frozen A/B replays are merged computational audits, not a new analytic proof or own window record |
 | 4. Pseudo-Hermitian / Fock-space jets | none yet; see [`research/pseudo_hermitian/RESEARCH_OBJECTIVE.md`](research/pseudo_hermitian/RESEARCH_OBJECTIVE.md) | `PseudoHermitian*`, `XiAlgebraicJet*`, `XiGreenModel` | The Green form has Lean-checked symmetry and all-zero masses; its paired residual budget is Lean-proved *equivalent* to RH (`green_paired_budget_iff_riemannHypothesis`) |
 
+The [standing DH gate](research/RH_DH_DISCRIMINATOR_REGISTER.md) records retained failures and missing arithmetic discriminators for the open RH-strength targets. Shared finite prerequisites are not advertised as RH strategies.
+
 ### Latest results
+
+- **Formalization version 2 released.** The unreviewed preprint now includes the
+  actual-Xi evaluator, closed height-14.1 rectangle and unconditional PF43,
+  presented as formalizations of classical facts.
+  [DOI 10.5281/zenodo.23516924](https://doi.org/10.5281/zenodo.23516924) includes
+  the complete pinned source supplement; all public downloads were checksum-verified.
+  The split-pair theorem retains its simple-zero and isolated-tie hypotheses.
 
 - **Finite-product split-pair theorem.** Lean proves the actual reciprocal
   determinant expansion, nonzero Vandermonde coefficient, root-order gap,
@@ -80,8 +89,13 @@ proved before they can be classified as sufficient conditions for RH.
   `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`. A closed rational cover uses 44 degree-12
   Taylor certificates, reusable Gamma/zeta remainder bounds and a zeta identity
   regularized through `s = 1`. The theorem supplies `ZetaNoLowStripZero (141/10)`
-  to optional finite-PF wrappers. The default 1,619-declaration audit and the
-  separate 1,700-declaration audit use only the standard foundational axioms.
+  to `XiFinitePFCertified.finitePF43` without a theorem hypothesis. The default
+  2,608-row audit, separate 1,700-declaration rectangle audit and explicit PF43
+  check use only standard foundational axioms. All fourteen jobs passed in
+  [CI run 39470397281](https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281)
+  at proof source `150537b`. The actual genus-zero identity, inverse-zero
+  summability and fixed-rank sector bridge are proved using the attributed
+  [PNT+ backport](research/prime_spectral/PNT_HADAMARD_BACKPORT_2026_10_20.md).
   The bounded numerical replay took 109.37 monotonic minutes with warm dependencies;
   see [the certificate and reproduction notes](research/prime_spectral/XI_RECTANGLE_2026_10_20.md).
 - **Sine-type model obstruction.** An explicit fixed-bandwidth negative witness

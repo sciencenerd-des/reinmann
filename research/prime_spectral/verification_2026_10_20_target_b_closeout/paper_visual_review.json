@@ -1,0 +1,9 @@
+{
+  "pdf_sha256": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604",
+  "tex_sha256": "874365b7ae1a8f5258beb0633a9254e6cd2cafe7601aa0fd370a9b90654eca0a",
+  "pages_rendered_and_inspected": 7,
+  "layout_status": "All seven rendered pages inspected; no clipping, overlapping text, missing symbols or unresolved references seen.",
+  "external_human_review_completed": false,
+  "ci_run": "39470397281",
+  "publication_status": "Release files being prepared after successful all-job gate."
+}

@@ -12,11 +12,11 @@
 \newcommand{\coeff}{[z^n]}
 \title[Split-pair oscillation and a verified low rectangle]{Split-pair oscillation, the Toeplitz--Jacobi bridge,\\and a Lean-verified low zero-free rectangle}
 \author{Biswajit Mondal}
-\date{20 October 2026\\Unreviewed revision candidate; hosted rectangle check pending}
+\date{21 October 2026\\Unreviewed formalization preprint, version 2}
 \keywords{Toeplitz minors, total positivity, entire functions, pole asymptotics, formal verification, Lean}
 \begin{document}
 \begin{abstract}
-We give a Lean formalization of a pole-dominance criterion for sign oscillation of contiguous Toeplitz minors. A conjugate pair at the boundary of a selected set of inverse zero moduli produces two dominant terms; a finite geometric-sum argument gives both signs at arbitrarily large ranks. Repeated-pole cancellation and an ordered subset-product estimate control determinant perturbations from an analytic remainder. For an entire function, the remainder and its coefficient identity are constructed from actual simple poles of the reciprocal. A complementary determinant identity then transfers oscillation to minors of the original ordinary Taylor coefficients, with an explicit sign convention. The theorem is standalone: it assumes simple selected zeros and an isolated boundary pair, and does not replace the general total-positivity bridges used in RH reductions. Separately, a rational Taylor-model evaluator certifies nonvanishing of the actual completed xi function on the closed rectangle $0\le\Repart s\le1$, $|\Im s|\le14.1$. An attributed backport of finite-order Hadamard factorization, combined with a formal polynomial sector theorem and real polynomial approximants, gives unconditional P\'olya-frequency nonnegativity through rank 43 for the ordinary folded-xi coefficients. These finite conclusions formalize classical facts; they do not prove RH. The hosted rectangle replay is pending for this revision candidate.
+We give a Lean formalization of a pole-dominance criterion for sign oscillation of contiguous Toeplitz minors. A conjugate pair at the boundary of a selected set of inverse zero moduli produces two dominant terms; a finite geometric-sum argument gives both signs at arbitrarily large ranks. Repeated-pole cancellation and an ordered subset-product estimate control determinant perturbations from an analytic remainder. For an entire function, the remainder and its coefficient identity are constructed from actual simple poles of the reciprocal. A complementary determinant identity then transfers oscillation to minors of the original ordinary Taylor coefficients, with an explicit sign convention. The theorem is standalone: it assumes simple selected zeros and an isolated boundary pair, and does not replace the general total-positivity bridges used in RH reductions. Separately, a rational Taylor-model evaluator certifies nonvanishing of the actual completed xi function on the closed rectangle $0\le\Repart s\le1$, $|\Im s|\le14.1$. An attributed backport of finite-order Hadamard factorization, combined with a formal polynomial sector theorem and real polynomial approximants, gives unconditional P\'olya-frequency nonnegativity through rank 43 for the ordinary folded-xi coefficients. These finite conclusions formalize classical facts; they do not prove RH. The full sharded certificate replay and theorem audits pass for the pinned source snapshot.
 \end{abstract}
 \maketitle
 
@@ -336,12 +336,15 @@ built separately: \texttt{XiRectangle} and
 \texttt{Reinmann.XiFinitePFCertified}. The hosted workflow builds shared
 dependencies, 11 shards of four tiles, then assembles and audits the rectangle
 and PF43. The final assembly refuses to rebuild missing tile artifacts.
-At preparation of this revision, the main build and root audit passed but
+All fourteen jobs in
 \href{https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281}{run 39470397281}
-had not completed its rectangle shards and final assembly. This candidate is
-not a published update and makes no claim that the hosted rectangle check
-has passed. Its release gate remains closed until all those jobs succeed and
-the current PDF and complete source supplement have been verified.
+completed successfully for that exact source commit: the main build and root
+audit, shared dependencies, eleven tile shards and final certificate assembly.
+The final job checks the rectangle's 1,700 declarations and the unconditional
+PF43 theorem separately, using only the standard foundational axioms.
+The source supplement includes every numerical tile module, the complete
+pinned proof source and dependency configuration, explicit audit inputs,
+CI receipts and SHA256 file bindings.
 
 The author used AI assistance for proof development, implementation and manuscript
 preparation. This preprint has not completed external human peer review.

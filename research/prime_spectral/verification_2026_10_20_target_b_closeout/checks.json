@@ -1,0 +1,40 @@
+[
+  {
+    "command": [
+      "lake",
+      "build"
+    ],
+    "log": "default_build.log",
+    "exit_code": 0,
+    "seconds": 4.3892152910120785
+  },
+  {
+    "command": [
+      "bash",
+      "scripts/verify_axiom_clean.sh"
+    ],
+    "log": "root_guard.log",
+    "exit_code": 0,
+    "seconds": 17.513528250041418
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "XiRectangle",
+      "Reinmann.XiFinitePFCertified"
+    ],
+    "log": "explicit_build.log",
+    "exit_code": 0,
+    "seconds": 2.0036560830194503
+  },
+  {
+    "command": [
+      "python3",
+      "experiments/prime_spectral/verify_research_gates_round.py"
+    ],
+    "log": "research_round_replay.log",
+    "exit_code": 0,
+    "seconds": 1.7734770000679418
+  }
+]

@@ -68,6 +68,29 @@ canonical checks). A fresh run of `green_model_axiom_audit.lean` on 17 October
 2026 audits 48 theorems, all using only `propext`, `Classical.choice` and
 `Quot.sound`.
 
+## Finite formalization matrix (21 October 2026)
+
+These auxiliary milestones do not discharge an open Green-form budget above.
+All fourteen jobs passed at proof commit
+`150537bf1d94eced1c22db7660f9c32936372831` in
+[CI run 39470397281](https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281):
+main build/guard, shared dependencies, eleven tile shards, and final rectangle
+assembly with explicit PF43 axiom checking. The default guard has 2,608 rows;
+the optional rectangle has its own 1,700-declaration audit.
+
+| Milestone | Status | Remaining boundary |
+| --- | --- | --- |
+| Target A, entire-function split-pair extension | **L, proved** (`SplitPairMixedRows`, `AnalyticSplitPair`, `AnalyticToeplitzJacobi`) | Simple selected zeros and an isolated boundary-pair modulus tie; standalone, no PF-to-RH rewiring |
+| Target B, actual-Xi low rectangle | **L, proved; CI verified** (`XiRectangle.rectangle_nonzero`, `XiRectangle.zetaNoLowStripZero`) | Closed `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`; no height-32 certificate |
+| Actual folded-Xi canonical product and fixed-rank sector bridge | **L, proved; CI verified** (`XiHadamardProduct`) | Attributed PNT+ Hadamard backport discharges inverse-zero summability and normalized genus-zero identity, with multiplicities retained; the angle bound is still needed at each rank |
+| Ordinary-coefficient PF43 | **L, unconditional; CI verified** (`XiFinitePFCertified.finitePF43`) | All ordered minors through rank 43 are nonnegative; no unbounded-rank or strict-positivity conclusion |
+| PF58 | **conditional** (`XiFinitePFCertified.finitePF58`) | Retains `QuasiRiemannHypothesisSevenEighths`; external statement match is not an import into Lean 4.30 |
+
+[Current product/sector scope report](../prime_spectral/PNT_HADAMARD_BACKPORT_2026_10_20.md).
+The root CI coverage now supersedes that report's dated local-only coverage
+paragraph. The [DH gate](../RH_DH_DISCRIMINATOR_REGISTER.md) retains the missing
+arithmetic discriminator for the RH-equivalent Green budget.
+
 The dated sections below are kept as the historical validation record.
 
 Branch: `codex/xi-eigenvector-reduction`.

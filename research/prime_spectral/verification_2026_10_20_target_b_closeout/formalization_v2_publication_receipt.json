@@ -1,0 +1,65 @@
+{
+  "id": 23516924,
+  "previous_id": 23449490,
+  "conceptrecid": "23449489",
+  "status": "published_and_anonymous_public_files_verified",
+  "source_commit": "150537bf1d94eced1c22db7660f9c32936372831",
+  "files": [
+    {
+      "name": "FORMAL_RECTANGLE_RELEASE.json",
+      "bytes": 646,
+      "sha256": "c73d30a69e0bf4e98e8c5ed41a3bcdc2dd1b7f316ef50ed1849e475a4d998577",
+      "download_sha256": "c73d30a69e0bf4e98e8c5ed41a3bcdc2dd1b7f316ef50ed1849e475a4d998577"
+    },
+    {
+      "name": "README_RELEASE.txt",
+      "bytes": 1622,
+      "sha256": "582bf77434ca2abe79e8f29c5ce72cc733d27a8322dd2101fb67a7fc5f972a89",
+      "download_sha256": "582bf77434ca2abe79e8f29c5ce72cc733d27a8322dd2101fb67a7fc5f972a89"
+    },
+    {
+      "name": "formal-split-pair-rectangle-source-150537b.tar.gz",
+      "bytes": 4941095,
+      "sha256": "75b764272ef8d96065da7cde64c43715f32b5d60a1a3a2052c2993631cf175ed",
+      "download_sha256": "75b764272ef8d96065da7cde64c43715f32b5d60a1a3a2052c2993631cf175ed"
+    },
+    {
+      "name": "formal-split-pair-rectangle.pdf",
+      "bytes": 127404,
+      "sha256": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604",
+      "download_sha256": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604"
+    }
+  ],
+  "reserved_doi": "10.5281/zenodo.23516924",
+  "inherited_old_files_backed_up_and_original_public_record_preserved": true,
+  "doi": "10.5281/zenodo.23516924",
+  "record_url": "https://zenodo.org/records/23516924",
+  "public_files": [
+    {
+      "name": "formal-split-pair-rectangle.pdf",
+      "bytes": 127404,
+      "sha256": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604",
+      "anonymous_download_sha256": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604"
+    },
+    {
+      "name": "FORMAL_RECTANGLE_RELEASE.json",
+      "bytes": 646,
+      "sha256": "c73d30a69e0bf4e98e8c5ed41a3bcdc2dd1b7f316ef50ed1849e475a4d998577",
+      "anonymous_download_sha256": "c73d30a69e0bf4e98e8c5ed41a3bcdc2dd1b7f316ef50ed1849e475a4d998577"
+    },
+    {
+      "name": "formal-split-pair-rectangle-source-150537b.tar.gz",
+      "bytes": 4941095,
+      "sha256": "75b764272ef8d96065da7cde64c43715f32b5d60a1a3a2052c2993631cf175ed",
+      "anonymous_download_sha256": "75b764272ef8d96065da7cde64c43715f32b5d60a1a3a2052c2993631cf175ed"
+    },
+    {
+      "name": "README_RELEASE.txt",
+      "bytes": 1622,
+      "sha256": "582bf77434ca2abe79e8f29c5ce72cc733d27a8322dd2101fb67a7fc5f972a89",
+      "anonymous_download_sha256": "582bf77434ca2abe79e8f29c5ce72cc733d27a8322dd2101fb67a7fc5f972a89"
+    }
+  ],
+  "complete_downloaded_source_manifest_verified": true,
+  "unreviewed_preprint": true
+}

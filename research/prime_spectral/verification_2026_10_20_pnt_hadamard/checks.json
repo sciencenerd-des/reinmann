@@ -1,0 +1,883 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "lake",
+        "build",
+        "Reinmann.XiFinitePFCertified"
+      ],
+      "returncode": 0,
+      "seconds": 2.040041,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/build.log.gz",
+      "output_sha256": "fd63e3db4e7bf043306a1a43ef5cbbb0860eaabe4dae5ec10639ff56aa99ca0d",
+      "output_bytes": 3196097
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Algebra/Order/Floor/Ring.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.483305,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_000.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Calculus/Deriv/Polynomial.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.885385,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_001.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/AbsMax.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.889041,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_002.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/Basic.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.803119,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_003.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/BorelCaratheodory.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.075552,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_004.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/CanonicalProduct.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.186349,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_005.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/CartanBound.lean"
+      ],
+      "returncode": 0,
+      "seconds": 3.198477,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_006.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/CartanInverseFactorBound.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.262462,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_007.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/CartanMajorantBound.lean"
+      ],
+      "returncode": 0,
+      "seconds": 5.38241,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_008.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/CartanProductBound.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.724102,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_009.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/Convex.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.274123,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_010.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/Divisor.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.096285,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_011.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorComplement.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.804457,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_012.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorConvergence.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.494627,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_013.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorFiber.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.211652,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_014.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorIndex.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.98794,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_015.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorPartialProductFactor.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.162022,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_016.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorQuotientConvergence.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.703704,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_017.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorQuotientRemovable.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.222755,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_018.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/DivisorUnits.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.920301,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_019.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/ExpPoly.lean"
+      ],
+      "returncode": 0,
+      "seconds": 4.236072,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_020.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/ExpPoly/Growth.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.681199,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_021.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/HadamardFactorization.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.347992,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_022.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/HadamardFactorization/Growth.lean"
+      ],
+      "returncode": 0,
+      "seconds": 3.374867,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_023.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/HadamardFactorization/Order.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.154022,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_024.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/HadamardFactorization/Summability.lean"
+      ],
+      "returncode": 0,
+      "seconds": 3.010547,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_025.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/LocallyUniformLimit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.966721,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_026.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/Norm.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.665172,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_027.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/Trigonometric.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.683804,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_028.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/ValueDistribution/LogCounting/Basic.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.135265,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_029.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/ValueDistribution/LogCounting/Growth.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.863132,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_030.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Complex/WeierstrassFactor.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.562034,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_031.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Meromorphic/DivisorHolomorphic.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.92762,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_032.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/Meromorphic/DivisorSupport.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.776735,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_033.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/CompletedXi.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.985638,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_034.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.192618,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_035.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Exp.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.916227,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_036.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Gamma/GammaStirlingAux.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.001722,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_037.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Gamma/IntegralBounds.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.027183,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_038.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Gamma/StripBounds.lean"
+      ],
+      "returncode": 0,
+      "seconds": 3.471613,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_039.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/GammaBounds.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.552955,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_040.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.039293,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_041.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Log/Dyadic.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.11792,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_042.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Log/ExpGrowth.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.936449,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_043.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Log/PosLog.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.754273,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_044.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Pow/Deriv.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.85307,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_045.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.854369,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_046.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/MeasureTheory/Integral/IntegrableOn.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.820144,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_047.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/MeasureTheory/Integral/IntervalIntegral/Basic.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.875421,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_048.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/AbelSummation.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.942234,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_049.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZeta.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.205076,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_050.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaAbelContinuation.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.471312,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_051.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaAbelKernel.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.404547,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_052.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaConvexity.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.343661,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_053.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaHadamard.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.7175,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_054.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaPartialSum.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.458321,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_055.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaStripBound.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.114383,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_056.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/RiemannZetaValues.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.344552,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_057.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/ZetaFiniteOrder.lean"
+      ],
+      "returncode": 0,
+      "seconds": 7.503588,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_058.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/NumberTheory/LSeries/ZetaFunctionalEquation.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.978567,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_059.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/PNTPlus/Mathlib/Topology/MetricSpace/Annulus.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.785749,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/source_060.log.gz",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/XiHadamardProduct.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.851988,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/xi_product_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/XiFinitePFCertified.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.875282,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/finite_pf_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_pnt_hadamard/Audit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.849482,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/axioms.log",
+      "output_sha256": "ccaa4179fa4f268e9216a05a7f0b80ce3b03bcc1f7e8d26157c188cc016674ad",
+      "output_bytes": 107829
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_pnt_hadamard/TypeCheck.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.703867,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/types.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 1.710343,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/default_build.log.gz",
+      "output_sha256": "93caf8a4807ff7426b6cfd4cd43e24a4beffcd7ae6ae567a6319ede0f4123875",
+      "output_bytes": 1078187
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "seconds": 6.611205,
+      "log": "research/prime_spectral/verification_2026_10_20_pnt_hadamard/root_guard.log",
+      "output_sha256": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+      "output_bytes": 382
+    }
+  ]
+}

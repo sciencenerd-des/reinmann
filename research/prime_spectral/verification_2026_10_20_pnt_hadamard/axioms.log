@@ -1,0 +1,1280 @@
+'analyticOn_zetaAbelContinuationFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'analyticOrderNatAt_completedRiemannZeta₀_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'analyticOrderNatAt_riemannXi_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_entireOfOrderAtMost_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_hadamard_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_hadamard_factorization_no_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_hadamard_factorization_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_hadamard_factorization_reindex_no_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'completedRiemannZeta₀_hadamard_factorization_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_hadamard_factorization_sequence_no_monomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'completedRiemannZeta₀_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_one_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_zero_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'completedRiemannZeta₀_zero_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'existsUnique_riemannXi_hadamard_polynomial_derivative_eval_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'exists_riemannXi_logDeriv_eq_polynomial_derivative_add_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hasProd_inv_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hasProd_le_of_prod_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hasProd_norm_inv_le_exp_of_pointwise_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'hasProd_norm_inv_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'integral_Ioi_rpow_neg_re_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'integral_interval_rpow_neg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'integral_interval_rpow_neg_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isOpen_zetaAbelContinuationDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isPreconnected_zetaAbelContinuationDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'logDeriv_riemannXi_divisorCanonicalProduct_one_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'logDeriv_riemannXi_eq_polynomial_derivative_add_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mem_zetaAbelContinuationDomain_of_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_div_re_le_ten_mul_norm_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_div_riemannZeta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_eulerProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_lt_linear_im_on_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_ratio_le_on_verticalLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_ratio_le_on_vertical_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_riemannZeta_shift_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_zetaAbelContinuationFormula_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_zetaAbelFractKernel_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_div_natCast_cpow_eq_ite_cpow_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_lt_zetaAbelContinuationReLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_sub_zetaAbelContinuationReLower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_entireOfOrderAtMost_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_factorization_no_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_factorization_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_factorization_reindex_no_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_factorization_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_factorization_sequence_no_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_polynomial_derivative_eval_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannXi_hadamard_polynomial_derivative_eval_zero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannZeta_abel_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannZeta_div_riemannZeta_eq_tprod_inv_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannZeta_eq_mul_tprod_inv_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannZeta_eq_zetaAbelContinuationFormula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sum_Icc_zero_floor_eq_sum_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'summable_riemannXi_divisorZeroIndex₀_norm_inv_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'summable_riemannXi_logDerivTerms_divisorZeroIndex₀' depends on axioms: [propext, Classical.choice, Quot.sound]
+'tprod_inv_one_add_real_le_riemannZeta_norm_on_verticalLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'two_mem_zetaAbelContinuationDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'verticalLine_add_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'verticalLine_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+'verticalLine_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelContinuationDomain_re_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelContinuationReLower_lt_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelContinuationReLower_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.GammaBounds.0.integral_exp_neg_rpow_Ioi_one_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.GammaBounds.0.integral_rpow_Ioc_zero_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta.0.hasProd_nnreal_of_coe' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta.0.hasProd_nonneg_of_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta.0.multipliable_norm_eulerFactor_inv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta.0.multipliable_toNNReal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta.0.nnreal_coe_tprod' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta.0.nnreal_tprod_le_coe' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.shift_mem_strip' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaValues.0.exp_one_hundred_twenty_seven_div_fifty_gt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaValues.0.log_four_mul_pi_lt_one_hundred_twenty_seven_div_fifty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaValues.0.twenty_seven_div_fifty_lt_eulerMascheroniConstant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.analyticOnNhd_canonicalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.analyticOrderAt_weierstrassFactor_div_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.analyticOrderNatAt_weierstrassFactor_div_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.borelCaratheodory_zero_closedBall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_apply_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_converges_uniformOn_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_eq_zero_of_mem_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.completedRiemannZeta_ne_zero_of_one_lt_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.completedRiemannZeta₀_bounded_on_closedBall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.completedRiemannZeta₀_order_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.continuousOn_deriv_ofReal_cpow_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.continuousOn_ofReal_cpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.continuousOn_weierstrassFactor_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.deriv_ofReal_cpow_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.deriv_weierstrassFactor_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.deriv_weierstrassFactor_at_one_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.deriv_weierstrassFactor_div_at_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.deriv_weierstrassFactor_div_at_self_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.differentiableOn_canonicalPartialProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.differentiable_canonicalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.differentiable_partialLogSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.differentiable_riemannXi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.differentiable_weierstrassFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.div_sub_one_eq_one_add_one_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.eq_zetaTimesSMinusOne_entire_of_eq_on_compl_singleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.exists_completedRiemannZeta₀_right_halfPlane' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.exists_norm_bound_on_closedBall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.exists_pos_radius_forall_mem_ball_re_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasDerivAt_partialLogSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasDerivAt_weierstrassFactor_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasDerivAt_weierstrassFactor_div_at_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasProdLocallyUniformlyOn_canonicalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasProdLocallyUniformlyOn_weierstrassFactor_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasProdLocallyUniformlyOn_weierstrassFactor_div_of_summable_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.hasProdUniformlyOn_canonicalProduct_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.hasProdUniformlyOn_weierstrassFactor_div_of_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.isPathConnected_halfSpace_re_gt_diff_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.logDeriv_canonicalProduct_one_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.logDeriv_weierstrassFactor_one_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.logTaylor_neg_eq_neg_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.logTaylor_succ_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.log_norm_weierstrassFactor_ge_log_norm_one_sub_nat_mul_max_one_norm_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.log_norm_weierstrassFactor_ge_log_norm_one_sub_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.log_norm_weierstrassFactor_ge_neg_two_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.multipliableLocallyUniformlyOn_canonicalProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.multipliableLocallyUniformlyOn_weierstrassFactor_div' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.multipliableLocallyUniformlyOn_weierstrassFactor_div_of_summable_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.natCast_mul_cpow_neg_eq_cpow_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.ne_neg_nat_of_re_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.neg_log_one_sub_eq_partialLogSum_add_logTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.neg_log_one_sub_eq_tsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.neg_norm_le_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_cos_le_exp_abs_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_inv_pow_le_one_of_one_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_le_of_mem_ball_of_forall_sphere_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_logTail_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_logTail_le_two_mul_norm_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_mul_riemannZeta_le_exp_of_reflected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_one_sub_le_one_add_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_partialLogSum_le_nat_mul_max_one_norm_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_sub_one_le_one_add_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.norm_weierstrassFactor_div_sub_one_le_pow_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.ofReal_cpow_mul_cpow_neg_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.one_le_norm_one_sub_of_norm_gt_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.one_le_one_add_norm_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.one_sub_ne_one_of_norm_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.one_sub_re_ge_one_sub_zetaAbelContinuationReLower_of_re_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.partialLogSum_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.partialLogSum_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.partialLogSum_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.partialLogSum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.reflected_zeta_coefficient_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.riemannXi_eq_mul_completedRiemannZeta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.riemannXi_nontrivial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.riemannXi_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.riemannXi_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.riemannZeta_eq_reflected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.summable_logTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.summable_norm_weierstrassFactor_div_sub_one_of_summable_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.weierstrassFactor_at_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_div_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_div_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_eq_exp_neg_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_ne_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_ne_zero_of_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_sub_one_pow_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.weierstrassFactor_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zetaTimesSMinusOne_entire_continuousAt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zetaTimesSMinusOne_entire_differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zetaTimesSMinusOne_entire_differentiableOn_compl_singleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.zetaTimesSMinusOne_entire_eq_mul_riemannZeta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zetaTimesSMinusOne_entire_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zeta_functional_equation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zeta_minus_pole_entire_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Differentiable.divisor_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Finset.prod_le_exp_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Finset.sum_Icc_one_eq_sum_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Finset.sum_Icc_zero_eq_sum_Icc_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Finset.sum_Icc_zero_eq_sum_range_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Int.fract_abs_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MeromorphicOn.divisor_support_countable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MeromorphicOn.divisor_support_discrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MeromorphicOn.divisor_support_inter_compact_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MeromorphicOn.exists_ball_inter_divisor_support_eq_singleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MeromorphicOn.exists_nonzero_seq_divisor_support_diff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MeromorphicOn.exists_seq_eq_range_divisor_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_subset_closedBall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_union_annulusIoc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_union_annulusIoi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc_union_annulusIoo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIci_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_subset_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_union_annulusIcc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_union_annulusIci' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco_union_annulusIco' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_subset_closedBall' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_union_annulusIoc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_union_annulusIoi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc_union_annulusIoo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoi_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_subset_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_union_annulusIcc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_union_annulusIci' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo_union_annulusIco' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIcc_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIcc_eq_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIcc_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIcc_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIci_eq_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIci_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIco_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIco_eq_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIco_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIco_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoc_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoc_eq_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoc_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoc_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoi_eq_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoi_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoo_eq_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoo_eq_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoo_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoo_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.iUnion_annulusIco_eq_annulusIci' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.iUnion_annulusIoc_eq_annulusIoi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.pairwise_disjoint_on_annulusIco_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.pairwise_disjoint_on_annulusIoc_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.pairwise_disjoint_on_annulusIoo_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.pairwise_disjoint_on_eannulusIco_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.pairwise_disjoint_on_eannulusIoc_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.pairwise_disjoint_on_eannulusIoo_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Polynomial.degree_derivative_le_zero_of_degree_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Polynomial.eval_derivative_eq_eval_derivative_zero_of_degree_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Polynomial.logDeriv_exp_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.dyadicShell_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.dyadicShell_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.dyadic_growth_inv_term_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.dyadic_growth_mass_mul_inv_le_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.dyadic_trailing_inv_term_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.exists_between_self_and_floor_add_one_same_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.exists_nat_le_two_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.exists_norm_le_exp_mul_pow_of_rpow_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.exp_mul_rpow_le_exp_mul_rpow_of_le_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.inv_dyadicRadius_rpow_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.le_exp_of_log_one_add_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.le_exp_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_growth_of_norm_le_exp_mul_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_nonneg_mul_inv_norm_of_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_norm_le_log_one_add_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_norm_le_of_log_one_add_growth_on_sphere' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_one_add_exp_le_add_log_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_one_add_le_add_log_two_of_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.log_two_le_log_two_mul_mul_inv_norm_of_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.lt_two_pow_floor_logb_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.mul_four_le_exp_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.neg_posLog_inv_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.norm_le_exp_mul_rpow_of_exponent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.norm_le_exp_mul_rpow_of_log_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.one_add_abs_two_mul_dyadicRadius_rpow_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.one_add_le_three_mul_one_add_of_le_two_mul_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.one_le_dyadicRadius_succ_of_inv_le_two_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.pow_div_one_sub_le_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.sq_le_exp_const_mul_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.tsum_inv_rpow_le_card_mul_of_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.two_geometric_shift_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.two_mul_le_exp_two_mul_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.two_pow_floor_logb_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.two_rpow_sub_eq_mul_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.two_rpow_sub_pow_eq_mul_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TendstoUniformlyOn.mul_left_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.ae_bound_Ioi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.aestronglyMeasurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.aestronglyMeasurable_param_deriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.eventually_aestronglyMeasurable_param' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.hasDerivAt_in_param' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.hasDerivAt_integral_param_dominated_Ioi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.integrableOn_Ioi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.integral_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.intervalIntegrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.kernel_deriv_norm_bound_on_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaAbelFractKernel.tendsto_integral_Ioi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaPartialSum.abel_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaPartialSum.tendsto_natCast_cpow_zero_of_neg_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZetaPartialSum.tendsto_riemannZeta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'intervalIntegral.integral_congr_Ioc_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'intervalIntegral.tendsto_integral_Ioi_of_ae_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'verticalLine.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelContinuationDomain.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelContinuationFormula.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelContinuationReLower._proof_1' depends on axioms: [propext]
+'zetaAbelContinuationReLower.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaAbelFractKernel.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zetaPartialSum.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.tendsto_deriv_canonicalPartialProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.WeierstrassFactor.0.Complex.eventually_le_norm_div_two_of_summable_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.WeierstrassFactor.0.Complex.summable_scaled_bound_of_summable_inv_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaAbelContinuation.0.isPreconnected_zetaAbelContinuationDomain._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaAbelKernel.0.ZetaAbelFractKernel.ae_on_Ioi_of_all' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaAbelKernel.0.ZetaAbelFractKernel.dist_lt_of_mem_ball_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.StripBounds.norm_lt_linear_im' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.StripBounds.norm_lt_three_add_abs_im' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.StripBounds.one_div_re_le_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.StripBounds.one_le_norm_sub_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.StripBounds.three_sq_add_sq_le_sq_add_abs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity.0.shift_mem_strip._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_sub_fract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_summation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.integral_split_fract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.intervalIntegrable_mul_cpow_id' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.natCast_floor_eq_sub_fract' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.Cφ_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.K_le_four_mul_K_add_one_mul_of_quarter_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.K_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.ae_restrict_norm_phi_le_of_forall_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.exists_radius_Ioc_sum_mul_phi_div_le_Cφ_mul_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.exists_radius_Ioc_sum_mul_phi_div_le_Cφ_mul_sum_avoid' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.four_mul_K_add_one_le_Cφ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.integral_phi_div_le_Cφ_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.integral_phi_le_Cφ_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.integral_phi_le_Cφ_mul_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.integral_phi_le_Cφ_mul_middle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.integral_phi_le_Cφ_mul_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.integral_sqrt_two_div_abs_one_sub_le_K_dyadic_middle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.integral_sum_mul_phi_div_le_Cφ_mul_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.intervalIntegrable_phi_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.intervalIntegrable_phi_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.intervalIntegrable_phi_dyadic_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.intervalIntegrable_phi_dyadic_middle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.intervalIntegrable_phi_dyadic_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.intervalIntegrable_sqrt_two_div_abs_one_sub_Icc' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.intervalIntegrable_sqrt_two_div_abs_one_sub_dyadic_middle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.intervalIntegrable_sum_mul_phi_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.log_two_le_Cφ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.measurable_phi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.phi_eq_zero_of_one_le_abs_one_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.phi_eq_zero_of_two_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.phi_le_log_two_of_le_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.phi_le_log_two_on_dyadic_of_le_quarter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.posLog_log_one_div_abs_one_sub_le_sqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.posLog_one_div_norm_one_sub_le_posLog_one_div_abs_one_sub' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.posLog_one_div_norm_one_sub_le_posLog_one_div_abs_one_sub_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.restrict_volume_Ioc_two_mul_diff_finset_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.CartanBound.volume_Ioc_two_mul_diff_finset_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.volume_Ioc_two_mul_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.φ_le_sqrt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.φ_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.floor_shift_re_in_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.half_bound_re_ge_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.log_one_add_norm_add_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.log_one_add_norm_div_two_add_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_add_one_le_two_mul_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_bound_re_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_bounded_on_compact_of_no_poles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_div_two_add_one_le_three_halves_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_le_Gamma_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_le_four_of_re_half_to_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_le_one_div_add_sqrt_pi_of_re_ge_of_re_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_le_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_mul_log_shift_add_one_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_mul_log_shift_half_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_sq_le_Gamma_re_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.norm_sq_le_norm_sq_Gamma_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gamma.stirling_bound_re_ge_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.add_four_le_add_two_mul_of_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticAt_divisorCanonicalProduct_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticAt_divisorPartialProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticAt_update_limUnder_divisorCanonicalProduct_div_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderAt_divisorCanonicalProduct_at_index' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderAt_divisorCanonicalProduct_eq_fiber_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderAt_finset_prod_weierstrassFactor_divisorZeroIndex₀' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderAt_ne_top_of_exists_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticOrderAt_partialProduct_eq_fiberCard_of_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderAt_prod_fiberFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_comp_add_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_comp_sub_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_divisorCanonicalProduct_eq_analyticOrderNatAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_divisorCanonicalProduct_eq_fiber_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_divisorCanonicalProduct_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_finset_prod_weierstrassFactor_divisorZeroIndex₀' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_hadamardDenom_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.analyticOrderNatAt_prod_fiberFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.bddAbove_norm_divisorCanonicalProduct_div_pow_annulus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.bddAbove_norm_divisorCanonicalProduct_div_pow_puncturedBall' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.card_ball_le_divisorMassClosedBall₀' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.card_subtype_le_divisorMassClosedBall₀_of_norm_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.cartanProductConstant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_card_small_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_majorant_add_two_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_majorant_four_term_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_majorant_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_majorant_pad_two_to_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_majorant_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_rpow_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.cartan_sum_majorant_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.centeredHadamardDenom_center_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.centeredHadamardDenom_center_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.centeredHadamardDenom_eq_hadamardDenom_translate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiableAt_divisorCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiableOn_divisorCanonicalProduct_div_pow_sub' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiableOn_divisorCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiableOn_divisorComplementCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiableOn_divisorPartialProduct_div_pow_sub' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiableOn_update_limUnder_divisorCanonicalProduct_div_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiable_divisorCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiable_divisorComplementPartialProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.differentiable_divisorPartialProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.differentiable_hadamardDenom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.differentiable_weierstrassFactor_divisorZeroIndex₀' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_eq_canonicalProduct_of_equiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_eq_tprod_of_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_eq_zero_at_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_eq_zero_of_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_ne_zero_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_ne_zero_of_forall_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementCanonicalProduct_ne_zero_at' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorComplementFactor_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementFactor_eq_one_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementFactor_eq_weierstrassFactor_of_not_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorComplementPartialProduct_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementPartialProduct_ne_zero_on_ball' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorMassClosedBall₀_le_of_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorMassClosedBall₀_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorPartialProduct_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorPartialProduct_eq_fiber_mul_complement_of_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorPartialProduct_ne_zero_on_ball_punctured' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_dyadicShell_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_dyadicShell_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_fiberFinset_card_eq_analyticOrderNatAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_fiberFinset_card_eq_toNat_divisor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_fiber_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_norm_le_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_val_eq_of_mem_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_val_mem_divisor_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_val_mem_divisor_support'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_val_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisor_hadamardDenom_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisor_hadamardQuotient_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisor_univ_eq_analyticOrderNatAt_int' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.eventually_atTop_subset_fiberFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.eventually_eq_fiber_mul_divisorComplementPartialProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.eventually_eq_punctured_quotient_of_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.eventually_exists_analyticAt_eq_pow_smul_divisorComplementPartialProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.eventually_exists_analyticAt_eq_pow_smul_divisorPartialProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.eventually_exists_ball_eq_punctured_quotient_of_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.exists_analyticAt_divisorCanonicalProduct_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.exists_analyticAt_eq_pow_smul_of_partialProduct_contains_fiber' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.exists_ball_divisorComplementCanonicalProduct_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.exists_ball_eq_divisorCanonicalProduct_div_pow_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.exists_ball_inter_divisor_support_eq_singleton_of_index' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.exists_entire_nonzero_hadamardQuotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.exists_r0_le_norm_divisorZeroIndex₀_val' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.finite_divisorZeroIndex₀_dyadicShell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.finite_divisorZeroIndex₀_subtype_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamardDenom_ne_zero_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamardQuotient_norm_le_exp_on_cartan_circle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hadamardQuotient_norm_le_exp_rpow_of_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_order_centered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_order_centered_reindex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_order_centered_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_order_reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamard_factorization_of_order_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hasProdLocallyUniformlyOn_divisorCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hasProdLocallyUniformlyOn_divisorComplementCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hasProdUniformlyOn_divisorCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.hasProdUniformlyOn_divisorComplementCanonicalProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.jensen_formula_logCounting_eq_circleAverage_sub_log_trailingCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.logDeriv_divisorCanonicalProduct_one_eq_tsum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.logDeriv_divisorCanonicalProduct_one_eq_tsum_of_forall_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.log_two_mul_divisorMassClosedBall₀_le_logCounting_two_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.max_one_norm_div_pow_le_one_add_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset_iff_val_mem_ball' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset_of_val_mem_ball' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.natDegree_le_floor_of_exp_eval_norm_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.natDegree_le_floor_of_growth_exp_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.no_zero_on_sphere_of_forall_val_norm_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.no_zero_on_sphere_of_norm_image_avoid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.norm_div_le_half_of_norm_le_of_two_mul_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.norm_inv_hadamardDenominator_le_exp_on_cartan_circle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.norm_inv_weierstrassFactor_le_exp_far' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.norm_inv_weierstrassFactor_le_exp_near' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.not_mem_divisorZeroIndex₀_fiberFinset_iff_val_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.rpow_div_norm_divisorZeroIndex₀_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.sum_rpow_div_norm_divisorZeroIndex₀_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.summable_norm_inv_pow_divisorZeroIndex₀_of_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.summable_norm_inv_rpow_divisorZeroIndex₀_of_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.tendstoLocallyUniformlyOn_divisorComplementPartialProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.tendstoLocallyUniformlyOn_divisorPartialProduct_div_pow_sub' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.tendstoLocallyUniformlyOn_divisorPartialProduct_univ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.tendstoUniformlyOn_divisorPartialProduct_div_pow_sub' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.tsum_divisorZeroIndex₀_dyadicShell_inv_rpow_le_geometric_of_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.tsum_rpow_div_norm_divisorZeroIndex₀_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.tsum_two_mul_rpow_div_norm_divisorZeroIndex₀_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.val_not_mem_ball_of_not_mem_fiberFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.weierstrassFactor_div_ne_zero_on_ball_of_not_mem_fiberFinset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.weierstrassFactor_div_ne_zero_on_ball_of_val_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.weierstrassFactor_div_ne_zero_on_ball_punctured' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.HasDerivAt.const_mul_ofReal_cpow_neg_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.canonicalProduct.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.riemannXi._proof_1' depends on axioms: [propext]
+'Complex.riemannXi.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.zetaTimesSMinusOne_entire.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Function.locallyFinsuppWithin.logCounting_divisor_eq_circleAverage_sub_const_of_differentiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.logCounting_divisor_le_of_log_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.log_two_mul_massClosedBall₀_le_logCounting' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.massClosedBall₀_divisor_le_of_log_growth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.massClosedBall₀_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Function.locallyFinsuppWithin.mem_support_of_mem_toClosedBall_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.mem_toClosedBall_support_of_mem_support_of_norm_le_abs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.norm_le_abs_of_mem_toClosedBall_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Function.locallyFinsuppWithin.toClosedBall_eval_eq_of_norm_le_abs' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MeasureTheory.IntegrableOn.mono'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIcc.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIci.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIco.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoc.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoi.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.annulusIoo.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.closedBall.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIcc.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIci.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIco.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoc.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoi.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Metric.eannulusIoo.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.cast_inv_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.cpow_neg_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.eulerFactor_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.inv_one_add_rpow_le_inv_norm_one_sub_cpow_neg_vertical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Nat.Primes.inv_one_sub_sq_eq_mul_inv_one_sub_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.multipliable_complex_inv_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.multipliable_inv_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.norm_cast_inv_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.norm_cpow_neg_eq_rpow_neg_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.norm_cpow_neg_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.norm_one_sub_cpow_neg_vertical_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Nat.Primes.one_sub_cpow_neg_vertical_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Gamma.le_one_of_mem_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.half_shift_log_constant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.log_one_add_ge_log_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.log_one_add_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.log_three_le_coef_mul_log_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.log_two_le_mul_log_one_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.sqrt_pi_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiFinitePFCertified.finitePF43' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiFinitePFCertified.finitePF58' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.divisor_multiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.foldedXi_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.foldedXi_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.katkovaSectorBridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.riemannXi_eq_xiCompleted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.summable_inverse_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Set.Ico.eq_1' does not depend on any axioms
+'Stirling.GammaAux.Gamma_iterate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Stirling.GammaAux.norm_shift_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Stirling.GammaAux.norm_sub_real_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Stirling.GammaAux.prod_norm_le_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.AbsMax.0.Complex.norm_le_of_mem_ball_of_forall_sphere_norm_le._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.Basic.0.Complex.exists_pos_radius_forall_mem_ball_re_ge._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.BorelCaratheodory.0.Complex.borelCaratheodory_zero_closedBall._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.differentiableOn_canonicalPartialProduct._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.differentiable_canonicalProduct._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct.0.Complex.logDeriv_weierstrassFactor_one_div._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.neg_log_le_sqrt_two_div' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanMajorantBound.0.Complex.Hadamard.summable_ite_mem_finset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanMajorantBound.0.Complex.Hadamard.tsum_add_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanMajorantBound.0.Complex.Hadamard.tsum_ite_mem_finset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.Convex.0.Complex.isPathConnected_halfSpace_re_gt_diff_singleton._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.WeierstrassFactor.0.Complex.eventually_le_norm_div_two_of_summable_inv_pow._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.WeierstrassFactor.0.Complex.weierstrassFactor.eq_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Meromorphic.DivisorSupport.0.MeromorphicOn.exists_nonzero_seq_divisor_support_diff_zero._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.GammaBounds.0.Real.Gamma.le_Gamma_one_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.abel_formula._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum.0.ZetaPartialSum.cpow_integral._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.ZetaFiniteOrder.0.Complex.zetaTimesSMinusOne_entire_differentiable._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.ZetaFiniteOrder.0.Complex.zetaTimesSMinusOne_entire_differentiableOn_compl_singleton._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.annulusIcc_eq._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.annulusIco_eq._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.annulusIoc_eq._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.annulusIoo_eq._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.eannulusIcc_ofReal._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.eannulusIci_ofReal._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.eannulusIco_ofReal._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.eannulusIoc_ofReal._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.eannulusIoi_ofReal._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus.0.Metric.eannulusIoo_ofReal._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial.0.Polynomial.logDeriv_exp_eval._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_z_norm_eq_re_eval_ge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.mul_conj_div_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Complex.LogBounds.0.Complex.hasDerivAt_partialLogSum._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Complex.LogBounds.0.Complex.logTaylor_succ_neg._abel_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Complex.LogBounds.0.Complex.logTaylor_succ_neg._proof_1_1' depends on axioms: [propext,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Complex.LogBounds.0.Complex.partialLogSum.eq_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_lower_bound._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic.0.Real.dyadicShell_upper_bound._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.log_norm_le_of_log_one_add_growth_on_sphere._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth.0.Real.sq_le_exp_const_mul_rpow._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real.0.Real.log_mul_rpow_neg_le_two_div_mul_rpow_neg._simp_1_7' depends on axioms: [propext]
+'Complex.CartanBound.Cφ.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.K._proof_1' depends on axioms: [propext]
+'Complex.CartanBound.K._proof_2' depends on axioms: [propext]
+'Complex.CartanBound.K.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.CartanBound.φ.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gammaℝ.Stirling.bound_re_ge_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gammaℝ.Stirling.finite_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gammaℝ.Stirling.norm_cpow_pi_neg_half_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Gammaℝ.Stirling.norm_cpow_two_mul_pi_neg_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.comp_add_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.comp_sub_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.differentiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.exists_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.exists_log_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.of_norm_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.EntireOfOrderAtMost.summable_norm_inv_pow_divisorZeroIndex₀' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.cartanProductConstant._proof_1' depends on axioms: [propext]
+'Complex.Hadamard.cartanProductConstant._proof_2' depends on axioms: [propext]
+'Complex.Hadamard.cartanProductConstant._proof_3' depends on axioms: [propext]
+'Complex.Hadamard.cartanProductConstant.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.centeredHadamardDenom.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorCanonicalProduct.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementCanonicalProduct.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementFactor.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorComplementPartialProduct.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorMassClosedBall₀.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorPartialProduct.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_fiberFinset.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_val_mem_divisor_support._simp_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Complex.Hadamard.divisorZeroIndex₀_val_ne_zero._simp_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.hadamardDenom.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Complex.Hadamard.mem_divisorZeroIndex₀_fiberFinset._simp_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Function.locallyFinsuppWithin.massClosedBall₀._proof_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Function.locallyFinsuppWithin.massClosedBall₀.congr_simp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Function.locallyFinsuppWithin.massClosedBall₀.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Real.Stirling.half_shift_log_constant._proof_1' depends on axioms: [propext]
+'Real.Stirling.half_shift_log_constant._proof_2' depends on axioms: [propext]
+'Real.Stirling.half_shift_log_constant.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.zeroIndexEquiv._proof_7' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.integral_phi_div_le_Cφ_mul._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_6' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_8' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.intervalIntegrable_phi_div._simp_1_9' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.log_norm_one_sub_div_ge_neg_phi._simp_1_8' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.neg_log_le_sqrt_two_div._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.posLog_log_one_div_abs_one_sub_le_sqrt._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.posLog_one_div_norm_one_sub_le_posLog_one_div_abs_one_sub_norm._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.restrict_volume_Ioc_two_mul_diff_finset_ne_zero._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound.0.Complex.CartanBound.volume_Ioc_two_mul_ne_zero._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanInverseFactorBound.0.Complex.Hadamard.norm_inv_weierstrassFactor_le_exp_far._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.Divisor.0.Complex.Hadamard.divisorPartialProduct_ne_zero_on_ball_punctured._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement.0.Complex.Hadamard.divisorComplementFactor_def._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement.0.Complex.Hadamard.divisorComplementPartialProduct_def._simp_1_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement.0.Complex.Hadamard.divisorComplementPartialProduct_ne_zero_on_ball._simp_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement.0.Complex.Hadamard.divisorPartialProduct_eq_fiber_mul_complement_of_subset._simp_1_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement.0.Complex.Hadamard.hasProdUniformlyOn_divisorComplementCanonicalProduct_univ._simp_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement.0.Complex.Hadamard.tendstoLocallyUniformlyOn_divisorComplementPartialProduct_univ._simp_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.finite_divisorZeroIndex₀_subtype_norm_le._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.finite_divisorZeroIndex₀_subtype_norm_le._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence.0.Complex.Hadamard.summable_logDerivTerms_divisorZeroIndex₀_of_summable_inv_sq._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorIndex.0.Complex.Hadamard.divisorZeroIndex₀_val_mem_divisor_support'._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorPartialProductFactor.0.Complex.Hadamard.analyticOrderAt_finset_prod_weierstrassFactor_divisorZeroIndex₀._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorPartialProductFactor.0.Complex.Hadamard.analyticOrderAt_partialProduct_eq_fiberCard_of_subset._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientConvergence.0.Complex.Hadamard.bddAbove_norm_divisorCanonicalProduct_div_pow_puncturedBall._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientConvergence.0.Complex.Hadamard.exists_ball_eq_divisorCanonicalProduct_div_pow_eq._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientConvergence.0.Complex.Hadamard.tendstoLocallyUniformlyOn_divisorPartialProduct_div_pow_sub._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientConvergence.0.Complex.Hadamard.tendstoLocallyUniformlyOn_divisorPartialProduct_div_pow_sub._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientRemovable.0.Complex.Hadamard.analyticOrderNatAt_divisorCanonicalProduct_eq_fiber_card._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientRemovable.0.Complex.Hadamard.differentiableOn_divisorPartialProduct_div_pow_sub._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientRemovable.0.Complex.Hadamard.differentiableOn_divisorPartialProduct_div_pow_sub._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_10' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_6' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_7' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_8' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.0.Complex.Hadamard.zero_free_polynomial_growth_is_exp_poly._simp_1_9' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.0.Complex.Hadamard.exists_entire_nonzero_hadamardQuotient._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_pow_eq_complex._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_z_norm_eq_re_eval_ge._proof_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth.0.Complex.Hadamard.exists_z_norm_eq_re_eval_ge._proof_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Summability.0.Complex.Hadamard.exists_r0_le_norm_divisorZeroIndex₀_val._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Summability.0.Complex.Hadamard.exists_r0_le_norm_divisorZeroIndex₀_val._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Summability.0.Complex.Hadamard.exists_r0_le_norm_divisorZeroIndex₀_val._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Summability.0.Complex.Hadamard.exists_r0_le_norm_divisorZeroIndex₀_val._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_6' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_Gamma_le_two_mul_norm_Gamma_add_one._simp_1_7' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_bound_re_ge_one._proof_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.norm_bound_re_ge_one._proof_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_2' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_3' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_4' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_5' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_6' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_7' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds.0.Complex.Gamma.stirling_bound_re_ge_zero._simp_1_8' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ValueDistribution.LogCounting.Basic.0.Function.locallyFinsuppWithin.norm_le_abs_of_mem_toClosedBall_support._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ValueDistribution.LogCounting.Basic.0.Function.locallyFinsuppWithin.toClosedBall_eval_eq_of_norm_le_abs._simp_1_1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ValueDistribution.LogCounting.Growth.0.Function.locallyFinsuppWithin.log_two_mul_massClosedBall₀_le_logCounting._simp_1_1' depends on axioms: [propext]
+'_private.Reinmann.PNTPlus.Mathlib.Analysis.Complex.ValueDistribution.LogCounting.Growth.0.Function.locallyFinsuppWithin.log_two_mul_massClosedBall₀_le_logCounting._simp_1_2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Complex.LogBounds
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.Norm
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.WeierstrassFactor
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.CanonicalProduct
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Meromorphic.DivisorSupport
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorIndex
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.LocallyUniformLimit
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorConvergence
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorUnits
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorFiber
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorComplement
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorPartialProductFactor
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientConvergence
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.DivisorQuotientRemovable
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.Divisor
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Topology.MetricSpace.Annulus
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.ValueDistribution.LogCounting.Basic
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.PosLog
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Exp
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.ExpGrowth
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.ValueDistribution.LogCounting.Growth
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Meromorphic.DivisorHolomorphic
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Log.Dyadic
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Summability
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.AbsMax
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanBound
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanInverseFactorBound
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanMajorantBound
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.CartanProductBound
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.BorelCaratheodory
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.ExpPoly.Growth
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Growth
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.HadamardFactorization.Order
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Calculus.Deriv.Polynomial
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.ZetaFunctionalEquation
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.CompletedXi
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.Basic
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.Trigonometric
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.IntegralBounds
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.GammaBounds
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.GammaStirlingAux
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Gamma.StripBounds
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Real
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZeta
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.Complex.Convex
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.MeasureTheory.Integral.IntegrableOn
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Algebra.Order.Floor.Ring
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.Analysis.SpecialFunctions.Pow.Deriv
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaAbelKernel
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.AbelSummation
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaPartialSum
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaAbelContinuation
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaConvexity
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaStripBound
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.ZetaFiniteOrder
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaValues
+AUDIT_MODULE Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaHadamard
+AUDIT_MODULE Reinmann.XiHadamardProduct
+AUDIT_MODULE Reinmann.XiFinitePFCertified
+'Reinmann.XiHadamardProduct.foldedXi_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.summable_inverse_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.foldedXi_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.katkovaSectorBridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiFinitePFCertified.finitePF43' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiFinitePFCertified.finitePF58' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,65 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "lake",
+        "build",
+        "Reinmann.GenusZeroProductLimits"
+      ],
+      "returncode": 0,
+      "seconds": 1.140076,
+      "log": "research/prime_spectral/verification_2026_10_20_analytic_limits/build.log"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/FinitePFAnalyticLimits.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.418907,
+      "log": "research/prime_spectral/verification_2026_10_20_analytic_limits/analytic_source.log"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/GenusZeroProductLimits.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.537223,
+      "log": "research/prime_spectral/verification_2026_10_20_analytic_limits/product_source.log"
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_analytic_limits/Audit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.334616,
+      "log": "research/prime_spectral/verification_2026_10_20_analytic_limits/axioms.log"
+    },
+    {
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 1.279413,
+      "log": "research/prime_spectral/verification_2026_10_20_analytic_limits/default_build.log"
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "seconds": 5.840269,
+      "log": "research/prime_spectral/verification_2026_10_20_analytic_limits/root_guard.log"
+    }
+  ]
+}

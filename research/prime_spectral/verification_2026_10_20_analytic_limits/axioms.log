@@ -1,0 +1,20 @@
+'Reinmann.FinitePFAnalyticLimits.iteratedDeriv_locallyUniformly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.FinitePFAnalyticLimits.ordinaryCoeff_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.FinitePFAnalyticLimits.finitePF_of_locallyUniformly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.FinitePFAnalyticLimits.polynomial_ordinaryCoeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.FinitePFAnalyticLimits.finitePF_of_polynomial_locallyUniformly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.GenusZeroProductLimits.linearProduct_locallyUniformly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.GenusZeroProductLimits.linearProduct_differentiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.GenusZeroProductLimits.linearProduct_ordinaryCoeff_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

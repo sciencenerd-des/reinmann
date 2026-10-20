@@ -1,0 +1,10 @@
+import Reinmann.GenusZeroProductLimits
+
+#print axioms Reinmann.FinitePFAnalyticLimits.iteratedDeriv_locallyUniformly
+#print axioms Reinmann.FinitePFAnalyticLimits.ordinaryCoeff_tendsto
+#print axioms Reinmann.FinitePFAnalyticLimits.finitePF_of_locallyUniformly
+#print axioms Reinmann.FinitePFAnalyticLimits.polynomial_ordinaryCoeff
+#print axioms Reinmann.FinitePFAnalyticLimits.finitePF_of_polynomial_locallyUniformly
+#print axioms Reinmann.GenusZeroProductLimits.linearProduct_locallyUniformly
+#print axioms Reinmann.GenusZeroProductLimits.linearProduct_differentiable
+#print axioms Reinmann.GenusZeroProductLimits.linearProduct_ordinaryCoeff_tendsto

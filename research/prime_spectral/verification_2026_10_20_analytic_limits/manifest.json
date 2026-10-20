@@ -1,0 +1,33 @@
+{
+  "parent_sector_manifest_sha256": "83c48630f0643c62f026ec17812cfba975c2565002bbb97887bdf12c6425b90b",
+  "public_declarations_audited": [
+    "Reinmann.FinitePFAnalyticLimits.iteratedDeriv_locallyUniformly",
+    "Reinmann.FinitePFAnalyticLimits.ordinaryCoeff_tendsto",
+    "Reinmann.FinitePFAnalyticLimits.finitePF_of_locallyUniformly",
+    "Reinmann.FinitePFAnalyticLimits.polynomial_ordinaryCoeff",
+    "Reinmann.FinitePFAnalyticLimits.finitePF_of_polynomial_locallyUniformly",
+    "Reinmann.GenusZeroProductLimits.linearProduct_locallyUniformly",
+    "Reinmann.GenusZeroProductLimits.linearProduct_differentiable",
+    "Reinmann.GenusZeroProductLimits.linearProduct_ordinaryCoeff_tendsto"
+  ],
+  "standard_axioms_only": true,
+  "actual_Xi_canonical_product_identified": false,
+  "KatkovaSectorBridge_43_proved": false,
+  "height_increased": false,
+  "RH_proved": false,
+  "artifacts_sha256": {
+    "Reinmann/FinitePFAnalyticLimits.lean": "da8c28921e0d4175b0d5fde1f69129c828e53bd694cc9bbb721eebf12bfbf135",
+    "Reinmann/GenusZeroProductLimits.lean": "18062de8cf784c60e222bacbb6754b233b196f67ef739c108df88fd23274010a",
+    "experiments/prime_spectral/verify_analytic_pf_limits.py": "5daaeaa922a083986b81cc58aa6591e43d15b5c9fc4fe73eaaff57b0174dee69",
+    "research/prime_spectral/FINITE_PF_ANALYTIC_LIMITS_2026_10_20.md": "fc78f29920f57b505a540ff50a2d2495403108ab50ff15ede821778d53e8498e",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/Audit.lean": "b6f61e6d0ff8d7a4011a70b23170d409f5491c95b76f5e8c4f625a8c6f418fa4",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/analytic_source.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/axioms.log": "23b35bc0eb86230ae155d34294ba58312f50a6080bf5278d8906614722ef002a",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/build.log": "20f62f3fc0f7ea29c946ca10fa804da6d56bbf71ba01842d5defa1f03bd70c34",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/checks.json": "72da956abf84564f9cafb4e4ef799e80a42e3ffb35b0c6edaa08afcac67ced23",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/default_build.log": "bb4c35b6b44aa330806c66541018e1c6c16d9316df563133ca29b979178ea970",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/product_source.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_20_analytic_limits/root_guard.log": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+    "research/prime_spectral/verification_2026_10_20_sector/manifest.json": "83c48630f0643c62f026ec17812cfba975c2565002bbb97887bdf12c6425b90b"
+  }
+}

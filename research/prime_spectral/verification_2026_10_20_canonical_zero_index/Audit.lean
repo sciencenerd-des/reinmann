@@ -1,0 +1,26 @@
+import Reinmann.XiCanonicalProductSector
+
+#print axioms Reinmann.CanonicalZeroIndex.iteratedDeriv_conj
+#print axioms Reinmann.CanonicalZeroIndex.analyticOrderAt_conj
+#print axioms Reinmann.CanonicalZeroIndex.analyticOrderNatAt_conj
+#print axioms Reinmann.CanonicalZeroIndex.order_ne_top
+#print axioms Reinmann.CanonicalZeroIndex.value_zero
+#print axioms Reinmann.CanonicalZeroIndex.value_ne_zero
+#print axioms Reinmann.CanonicalZeroIndex.exists_value_iff
+#print axioms Reinmann.CanonicalZeroIndex.fiber_card
+#print axioms Reinmann.CanonicalZeroIndex.value_conjugate
+#print axioms Reinmann.CanonicalZeroIndex.conjugate_involutive
+#print axioms Reinmann.XiZeroCorrespondence.xi_ne_zero_of_one_le_re
+#print axioms Reinmann.XiZeroCorrespondence.xi_ne_zero_of_re_nonpos
+#print axioms Reinmann.XiZeroCorrespondence.xi_zero_iff
+#print axioms Reinmann.XiZeroCorrespondence.folded_zero_strip
+#print axioms Reinmann.XiZeroCorrespondence.folded_zero_iff
+#print axioms Reinmann.XiCanonicalProductSector.foldedXi_zero_ne
+#print axioms Reinmann.XiCanonicalProductSector.exists_value_iff
+#print axioms Reinmann.XiCanonicalProductSector.fiber_card
+#print axioms Reinmann.XiCanonicalProductSector.value_ne_zero
+#print axioms Reinmann.XiCanonicalProductSector.conjugate_involutive
+#print axioms Reinmann.XiCanonicalProductSector.value_conjugate
+#print axioms Reinmann.XiCanonicalProductSector.stripLift_zero
+#print axioms Reinmann.XiCanonicalProductSector.stripLift_fold
+#print axioms Reinmann.XiCanonicalProductSector.katkovaSectorBridge_of_canonical_product

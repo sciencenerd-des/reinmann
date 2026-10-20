@@ -1,0 +1,90 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "lake",
+        "build",
+        "Reinmann.XiCanonicalProductSector"
+      ],
+      "returncode": 0,
+      "seconds": 1.234355,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/build.log.gz",
+      "output_sha256": "50499032b6bfe9f38e0325415cb688830481d02fad47acf369ae79fa7df7c1d4",
+      "output_bytes": 3656
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/CanonicalZeroIndex.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.520357,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/index_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/XiZeroCorrespondence.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.72403,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/correspondence_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/XiCanonicalProductSector.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.660613,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/assembly_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_canonical_zero_index/Audit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.691398,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/axioms.log",
+      "output_sha256": "76f4541c59fb7ebc2156b1802b26cad4be7660550c0bcf187580c829c20f9a15",
+      "output_bytes": 2630
+    },
+    {
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 1.331747,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/default_build.log.gz",
+      "output_sha256": "48fbe013448c61f87efb54eec50536b57fe7102d0d7c34aeb8a3b53a8e20134c",
+      "output_bytes": 1078187
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "seconds": 6.666045,
+      "log": "research/prime_spectral/verification_2026_10_20_canonical_zero_index/root_guard.log",
+      "output_sha256": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+      "output_bytes": 382
+    }
+  ]
+}

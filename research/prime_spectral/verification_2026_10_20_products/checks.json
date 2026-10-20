@@ -1,0 +1,103 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "lake",
+        "build",
+        "Reinmann.FinitePFConvolution"
+      ],
+      "returncode": 0,
+      "seconds": 1.18414,
+      "log": "research/prime_spectral/verification_2026_10_20_products/build.log",
+      "output_sha256": "18c025c43a592dd41a72a7c45e38cbeae1683a4b801a0f85211f273fe45cfbb6",
+      "output_bytes": 42
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/MatrixMinorProduct.lean"
+      ],
+      "returncode": 0,
+      "seconds": 1.843302,
+      "log": "research/prime_spectral/verification_2026_10_20_products/matrix_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/FinitePFConvolution.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.487145,
+      "log": "research/prime_spectral/verification_2026_10_20_products/convolution_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_products/Audit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.313039,
+      "log": "research/prime_spectral/verification_2026_10_20_products/axioms.log",
+      "output_sha256": "bcdcae4f98cd90e37322a170d5d3689802d0edcdc4ce0dd32bc98b674ca988ea",
+      "output_bytes": 1526
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_products/PriorBoundaryAudit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.385202,
+      "log": "research/prime_spectral/verification_2026_10_20_products/prior_boundary.log",
+      "output_sha256": "df9c02f65c366ff046126237f4f94a52ad565a8f3fa122f7b3cdaecd5e1aa4f3",
+      "output_bytes": 399
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/AnalyticPFLimit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.350479,
+      "log": "research/prime_spectral/verification_2026_10_20_products/prior_limit_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 1.18788,
+      "log": "research/prime_spectral/verification_2026_10_20_products/default_build.log.gz",
+      "output_sha256": "93caf8a4807ff7426b6cfd4cd43e24a4beffcd7ae6ae567a6319ede0f4123875",
+      "output_bytes": 1078187
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "seconds": 5.904761,
+      "log": "research/prime_spectral/verification_2026_10_20_products/root_guard.log",
+      "output_sha256": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+      "output_bytes": 382
+    }
+  ]
+}

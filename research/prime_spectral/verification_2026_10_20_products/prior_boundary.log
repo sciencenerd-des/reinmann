@@ -1,0 +1,4 @@
+'Reinmann.finitePF_of_coefficientwise_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.finitePF_of_real_polynomial_locallyUniformLimit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.foldedXi_taylor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.foldedXi_zero_re_pos' depends on axioms: [propext, Classical.choice, Quot.sound]

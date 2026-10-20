@@ -1,0 +1,6 @@
+import Reinmann.XiCenterPositive
+
+#print axioms Reinmann.finitePF_of_coefficientwise_limit
+#print axioms Reinmann.finitePF_of_real_polynomial_locallyUniformLimit
+#print axioms Reinmann.foldedXi_taylor
+#print axioms Reinmann.foldedXi_zero_re_pos

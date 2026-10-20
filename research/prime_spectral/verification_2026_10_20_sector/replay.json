@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/SplitPairMixedRows.lean"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 2.428970583016053,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/mixed_rows_fresh.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/AnalyticSplitPair.lean"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 2.4939299169927835,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/analytic_split_fresh.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/AnalyticToeplitzJacobi.lean"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 2.322873083059676,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/jacobi_fresh.log"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "Reinmann.FinitePFLimits"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 3.971303667058237,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/limit_build.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_sector/TargetAReview.lean"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 2.0883215829962865,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/target_a_axioms.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_sector/SectorLimitAudit.lean"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 2.291134041035548,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/limit_axioms.log"
+    }
+  ]
+}

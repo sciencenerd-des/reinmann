@@ -1,0 +1,32 @@
+{
+  "proof_parent_commit": "40d48033f14842c88486c257d6cfe39c496bbf66",
+  "parent_bindings_verified": 1759,
+  "Target_A_mixed_row_and_entire_extension_proved": true,
+  "new_theorem": "Reinmann.finitePF_of_tendsto",
+  "new_theorem_standard_axioms_only": true,
+  "KatkovaSectorBridge_43_proved": false,
+  "CI_closeout_status": "conditional patch prepared; no successful hosted CI asserted",
+  "height_increased": false,
+  "new_Zenodo_version_published": false,
+  "RH_proved": false,
+  "artifacts_sha256": {
+    "Reinmann/FinitePFLimits.lean": "8f3060b2194bf76d3d9cefda0fb0c28fb53da73ab14a5dabf10c15c8257e8094",
+    "experiments/prime_spectral/verify_sector_start.py": "1eb0829ec7c806b2ffc70415ed2456fa9d66bde3f5d1f776aed72987b3513537",
+    "research/prime_spectral/TARGET_B_CLOSEOUT_AND_SECTOR_2026_10_20.md": "0345ae3554275f8c2de0d1e4d6bee8cb561fec984dc64ef305bc12a83b59f19e",
+    "research/prime_spectral/verification_2026_10_19_rectangle/manifest.json": "7b3dbbd0689b1781086e428be7516bcba21d05066d9d57a84fe87b4dc69f5a63",
+    "research/prime_spectral/verification_2026_10_20_sector/SectorLimitAudit.lean": "f69291986c7b1f6d0e8450ef1983e3721841c4ef09bbac681a774b1574fcd573",
+    "research/prime_spectral/verification_2026_10_20_sector/TargetAReview.lean": "b8d6ec3dcf04876462002891e2591c8b68ca9b02c2615ed4b4fc3e7f61459b7e",
+    "research/prime_spectral/verification_2026_10_20_sector/analytic_split_fresh.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_20_sector/ci_closeout.patch": "5bda8e256c92c0d69a182643a177cf78cc850c85e85b2921a8b2c29467808696",
+    "research/prime_spectral/verification_2026_10_20_sector/ci_closeout_inputs.json": "e60230901d3165503f0e689c9bdbbe2d9174401d31fa07b158b66fb3d1287357",
+    "research/prime_spectral/verification_2026_10_20_sector/default_axiom_guard.log": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+    "research/prime_spectral/verification_2026_10_20_sector/default_build.log": "93caf8a4807ff7426b6cfd4cd43e24a4beffcd7ae6ae567a6319ede0f4123875",
+    "research/prime_spectral/verification_2026_10_20_sector/default_checks.json": "d37c261b2723814dae46efa8ccaaeb8b5096711a44d4a65c2889ae5ef12c0e47",
+    "research/prime_spectral/verification_2026_10_20_sector/jacobi_fresh.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_20_sector/limit_axioms.log": "fc5e286e0ddd40c8f0ec413f73431dad37ddaf06f9ad7e4922ed22cbbf81a9d5",
+    "research/prime_spectral/verification_2026_10_20_sector/limit_build.log": "2c6f818a01765673913fe63ddd3182fa54ab92b2ea6d7ae3a051d8d5ff59a2e5",
+    "research/prime_spectral/verification_2026_10_20_sector/mixed_rows_fresh.log": "6b87e9a671dfc441672835d3cf958b9249b5bbad8c75e08e2a62e89c028bc0c5",
+    "research/prime_spectral/verification_2026_10_20_sector/replay.json": "4e1b77cd9d76416ad7c5ee1339f8879449facfa0dc1e3e6297f6bcc4e85cff0d",
+    "research/prime_spectral/verification_2026_10_20_sector/target_a_axioms.log": "89a8129a0f5cbacb13bbcf7cd7d069a4c03e719e8127650f5e04d5b6d6aa2a8d"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "apply_only_after_successful_run": 39425081613,
+  "proof_commit": "40d48033f14842c88486c257d6cfe39c496bbf66",
+  "expected_original_sha256": {
+    "README.md": "b711bcff6a771db7fd41a12aa35023e329593abbec7a3e0e791fc3ebd926914b",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "e595edc3e3d259ba597fb28212cdcf6afac89d111e1671ca16cd0abd2977115a"
+  },
+  "status": "prepared; not applied"
+}

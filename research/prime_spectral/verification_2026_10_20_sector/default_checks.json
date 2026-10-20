@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 1.2457471250090748,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/default_build.log"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "monotonic_seconds": 5.845657000085339,
+      "log": "research/prime_spectral/verification_2026_10_20_sector/default_axiom_guard.log"
+    }
+  ]
+}

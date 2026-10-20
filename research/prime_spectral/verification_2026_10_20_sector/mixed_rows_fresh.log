@@ -1,0 +1,23 @@
+Reinmann/SplitPairMixedRows.lean:85:21: warning: unused variable `hw`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/SplitPairMixedRows.lean:102:18: warning: unused variable `hq`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Reinmann/SplitPairMixedRows.lean:136:23: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [β,̵ ̵h̵i̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/SplitPairMixedRows.lean:246:22: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [Fintype.card_f̵u̵n̵,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵option]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Reinmann/SplitPairMixedRows.lean:272:20: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

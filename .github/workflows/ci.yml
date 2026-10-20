@@ -10,6 +10,11 @@ on:
   pull_request:
   workflow_dispatch:
 
+# A newer push supersedes an older run on the same ref.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-verify:
     runs-on: ubuntu-latest
@@ -46,8 +51,11 @@ jobs:
       - name: Verify axiom-clean (0 sorry, 0 custom axioms)
         run: bash scripts/verify_axiom_clean.sh
 
-  xi-rectangle-certificate:
-    # Numerical tables are intentionally outside the default library target.
+  # The numerical rectangle certificate is outside the default library target.
+  # Shared dependencies are built once; 11 shards build four tiles each; the final
+  # job imports the shard outputs, refuses to rebuild any tile, then assembles
+  # and audits. Lake traces are content hashes, so relocated outputs stay valid.
+  xi-rectangle-deps:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -59,13 +67,6 @@ jobs:
             -o elan-init.sh
           bash elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-
-      - name: Reserve disk for numerical proof objects
-        # Only preinstalled SDKs on this disposable runner; Lean needs none of them.
-        run: |
-          df -h .
-          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc
-          df -h .
 
       - name: Cache Lean dependencies
         uses: actions/cache@v4
@@ -79,16 +80,172 @@ jobs:
       - name: Fetch cached mathlib
         run: lake exe cache get || true
 
-      - name: Build the closed rectangle certificate
-        # Keep peak memory bounded on hosted runners. Local builds may use more jobs.
-        run: python3 experiments/prime_spectral/build_xi_rectangle.py --jobs 1 --output tmp/xi-rectangle-ci
+      - name: Build shared rectangle dependencies
+        run: lake build Reinmann.RectangleModel XiRectangle.Data XiRectangle.Cover
+
+      - name: Pack shared dependencies
+        run: |
+          mkdir -p tmp
+          tar --zstd -cf tmp/deps.tar.zst -C .lake/build .
+
+      - name: Upload shared dependencies
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-rectangle-deps
+          path: tmp/deps.tar.zst
+          compression-level: 0
+          retention-days: 3
+
+  xi-rectangle-shard:
+    needs: xi-rectangle-deps
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            -o elan-init.sh
+          bash elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Cache Lean dependencies
+        uses: actions/cache@v4
+        with:
+          path: .lake/packages
+          key: rectangle-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+          restore-keys: |
+            rectangle-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Fetch cached mathlib
+        run: lake exe cache get || true
+
+      - name: Restore shared rectangle dependencies
+        uses: actions/download-artifact@v4
+        with:
+          name: xi-rectangle-deps
+          path: tmp/deps
+
+      - name: Unpack shared rectangle dependencies
+        run: |
+          mkdir -p .lake/build
+          tar --zstd -xf tmp/deps/deps.tar.zst -C .lake/build
+          rm -rf tmp/deps
+
+      - name: Build four tiles
+        run: |
+          first=$(( ${{ matrix.shard }} * 4 ))
+          tiles=$(seq -s, "$first" $(( first + 3 )))
+          echo "tiles $tiles"
+          python3 experiments/prime_spectral/build_xi_rectangle.py --jobs 2 \
+            --tiles "$tiles" --output tmp/xi-rectangle-shard
+
+      - name: Pack tile outputs
+        run: |
+          first=$(( ${{ matrix.shard }} * 4 ))
+          files=""
+          for i in $(seq "$first" $(( first + 3 ))); do
+            n=$(printf 'Tile%03d' "$i")
+            files="$files $(cd .lake/build && ls -d lib/lean/XiRectangle/$n* ir/XiRectangle/$n*)"
+          done
+          tar --zstd -cf tmp/tiles.tar.zst -C .lake/build $files
+
+      - name: Upload tile outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-rectangle-tiles-${{ matrix.shard }}
+          path: tmp/tiles.tar.zst
+          compression-level: 0
+          retention-days: 3
+
+      - name: Retain shard receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-rectangle-receipts-${{ matrix.shard }}
+          path: tmp/xi-rectangle-shard
+
+  xi-rectangle-certificate:
+    needs: xi-rectangle-shard
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - name: Reserve disk for numerical proof objects
+        # Only preinstalled SDKs on this disposable runner; Lean needs none of them.
+        run: |
+          df -h /
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /opt/hostedtoolcache/CodeQL /usr/local/share/boost /usr/share/swift
+          df -h /
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            -o elan-init.sh
+          bash elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Cache Lean dependencies
+        uses: actions/cache@v4
+        with:
+          path: .lake/packages
+          key: rectangle-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+          restore-keys: |
+            rectangle-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Fetch cached mathlib
+        run: lake exe cache get || true
+
+      - name: Restore shared rectangle dependencies
+        uses: actions/download-artifact@v4
+        with:
+          name: xi-rectangle-deps
+          path: tmp/deps
+
+      - name: Unpack shared rectangle dependencies
+        run: |
+          mkdir -p .lake/build
+          tar --zstd -xf tmp/deps/deps.tar.zst -C .lake/build
+          rm -rf tmp/deps
+
+      - name: Unpack all tile outputs
+        run: |
+          for k in $(seq 0 10); do
+            dir="tmp/tiles-$k"
+            gh run download "$GITHUB_RUN_ID" -n "xi-rectangle-tiles-$k" -D "$dir"
+            tar --zstd -xf "$dir/tiles.tar.zst" -C .lake/build
+            rm -rf "$dir"
+          done
+          df -h /
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Refuse to rebuild any tile
+        run: |
+          lake build $(for i in $(seq 0 43); do printf 'XiRectangle.Tile%03d ' "$i"; done) --no-build
+
+      - name: Assemble the closed rectangle and PF43
+        run: lake build XiRectangle Reinmann.XiFinitePFCertified
 
       - name: Audit rectangle theorem dependencies and source
         run: python3 experiments/prime_spectral/verify_xi_rectangle.py --live-audit
 
-      - name: Retain certificate build receipts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: xi-rectangle-receipts
-          path: tmp/xi-rectangle-ci
+      - name: Audit finitePF43
+        run: |
+          mkdir -p tmp
+          printf 'import Reinmann.XiFinitePFCertified\n#print axioms Reinmann.XiFinitePFCertified.finitePF43\n' > tmp/pf43.lean
+          out=$(lake env lean tmp/pf43.lean 2>&1 | tr -s ' \n' ' ')
+          echo "$out"
+          echo "$out" | grep -qF "'Reinmann.XiFinitePFCertified.finitePF43' depends on axioms: [propext, Classical.choice, Quot.sound]"

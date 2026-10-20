@@ -79,6 +79,21 @@ import Reinmann.AnalyticPFLimit
 import Reinmann.XiTaylorIdentification
 import Reinmann.TuranDeficit
 import Reinmann.WeilRankTail
+import Reinmann.CanonicalZeroIndex
+import Reinmann.FinitePFAnalyticLimits
+import Reinmann.FinitePFConvolution
+import Reinmann.FinitePFLimits
+import Reinmann.FoldedSectorGeometry
+import Reinmann.GenusZeroProductLimits
+import Reinmann.MatrixMinorProduct
+import Reinmann.PolynomialSectorPF
+import Reinmann.QuadraticPF
+import Reinmann.RealGenusZeroApproximants
+import Reinmann.XiCanonicalProductSector
+import Reinmann.XiGenusZeroSector
+import Reinmann.XiZeroCorrespondence
+import Reinmann.XiHadamardProduct
+import Lean.Util.CollectAxioms
 import Reinmann.CoupledRankEnergy
 import Reinmann.FiniteShiftChains
 import Reinmann.SupportTranslation
@@ -1820,3 +1835,36 @@ end Reinmann.AxiomAudit
 #print axioms Reinmann.RectangleModel.zeta_sound
 #print axioms Reinmann.RectangleModel.xi_sound
 #print axioms Reinmann.RectangleModel.log_scaled16_contains
+
+-- PF43 chain: every theorem constant in these modules and in Reinmann.PNTPlus.*.
+open Lean in
+run_cmd do
+  let env ← getEnv
+  let mut names : Array Name := #[]
+  for i in [:env.header.moduleNames.size] do
+    let m := env.header.moduleNames[i]!
+    if "Reinmann.PNTPlus.".isPrefixOf m.toString ||
+        m == `Reinmann.CanonicalZeroIndex ||
+        m == `Reinmann.FinitePFAnalyticLimits ||
+        m == `Reinmann.FinitePFConvolution ||
+        m == `Reinmann.FinitePFLimits ||
+        m == `Reinmann.FoldedSectorGeometry ||
+        m == `Reinmann.GenusZeroProductLimits ||
+        m == `Reinmann.MatrixMinorProduct ||
+        m == `Reinmann.PolynomialSectorPF ||
+        m == `Reinmann.QuadraticPF ||
+        m == `Reinmann.RealGenusZeroApproximants ||
+        m == `Reinmann.XiCanonicalProductSector ||
+        m == `Reinmann.XiGenusZeroSector ||
+        m == `Reinmann.XiZeroCorrespondence ||
+        m == `Reinmann.XiHadamardProduct then
+      let d := env.header.moduleData[i]!
+      for j in [:d.constNames.size] do
+        if d.constants[j]!.isTheorem then
+          names := names.push d.constNames[j]!
+  for n in names.qsort Name.lt do
+    let axioms ← collectAxioms n
+    if axioms.isEmpty then
+      logInfo m!"'{n}' does not depend on any axioms"
+    else
+      logInfo m!"'{n}' depends on axioms: {axioms.qsort Name.lt |>.map MessageData.ofConstName |>.toList}"

@@ -173,3 +173,19 @@ import Reinmann.RationalBallCover
 import Reinmann.RectangleFiniteFormulas
 import Reinmann.RectangleLogInputs
 import Reinmann.RectangleModel
+
+-- Finite-PF sector bridge and backported PNT+ Hadamard factorization (PF43 chain).
+import Reinmann.CanonicalZeroIndex
+import Reinmann.FinitePFAnalyticLimits
+import Reinmann.FinitePFConvolution
+import Reinmann.FinitePFLimits
+import Reinmann.FoldedSectorGeometry
+import Reinmann.GenusZeroProductLimits
+import Reinmann.MatrixMinorProduct
+import Reinmann.PolynomialSectorPF
+import Reinmann.QuadraticPF
+import Reinmann.RealGenusZeroApproximants
+import Reinmann.XiCanonicalProductSector
+import Reinmann.XiGenusZeroSector
+import Reinmann.XiZeroCorrespondence
+import Reinmann.XiHadamardProduct

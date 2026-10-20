@@ -1,0 +1,20 @@
+import Reinmann.XiGenusZeroSector
+
+#print axioms Reinmann.RealGenusZeroApproximants.subset_closure
+#print axioms Reinmann.RealGenusZeroApproximants.image_closure
+#print axioms Reinmann.RealGenusZeroApproximants.closure_tendsto
+#print axioms Reinmann.RealGenusZeroApproximants.realPart_coeff
+#print axioms Reinmann.RealGenusZeroApproximants.map_realPart
+#print axioms Reinmann.RealGenusZeroApproximants.complexPartial_conj
+#print axioms Reinmann.RealGenusZeroApproximants.map_realPartial
+#print axioms Reinmann.RealGenusZeroApproximants.realPartial_zero
+#print axioms Reinmann.RealGenusZeroApproximants.eval_realPartial
+#print axioms Reinmann.RealGenusZeroApproximants.realPartial_finitePF
+#print axioms Reinmann.RealGenusZeroApproximants.realPartial_locallyUniformly
+#print axioms Reinmann.RealGenusZeroApproximants.finitePF_genusZero_product
+#print axioms Reinmann.RealGenusZeroApproximants.product_ordinaryCoeff_im_zero
+#print axioms Reinmann.RealGenusZeroApproximants.finitePF_of_product_identity
+#print axioms Reinmann.FoldedSectorGeometry.arg_square_sector
+#print axioms Reinmann.FoldedSectorGeometry.arg_folded_sector
+#print axioms Reinmann.XiGenusZeroSector.finitePF_xi_of_genusZero_product
+#print axioms Reinmann.XiGenusZeroSector.katkovaSectorBridge_of_strip_indexed_product

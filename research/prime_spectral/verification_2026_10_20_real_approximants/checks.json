@@ -1,0 +1,90 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "lake",
+        "build",
+        "Reinmann.XiGenusZeroSector"
+      ],
+      "returncode": 0,
+      "seconds": 3.695204,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/build.log.gz",
+      "output_sha256": "fb306b7c798e8bf003821727b8ad2f98dfcb52c0cb3eef1c338eb02394bd3531",
+      "output_bytes": 3656
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/RealGenusZeroApproximants.lean"
+      ],
+      "returncode": 0,
+      "seconds": 11.395834,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/approximants_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/FoldedSectorGeometry.lean"
+      ],
+      "returncode": 0,
+      "seconds": 3.276243,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/geometry_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "Reinmann/XiGenusZeroSector.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.689663,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/xi_source.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0
+    },
+    {
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "research/prime_spectral/verification_2026_10_20_real_approximants/Audit.lean"
+      ],
+      "returncode": 0,
+      "seconds": 2.662321,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/axioms.log",
+      "output_sha256": "3fdcfcfc84f527b6124ce0cfd94de9a1e989d65b8c8dee9d3a3d538cbef98f44",
+      "output_bytes": 2105
+    },
+    {
+      "argv": [
+        "lake",
+        "build"
+      ],
+      "returncode": 0,
+      "seconds": 1.963255,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/default_build.log.gz",
+      "output_sha256": "93caf8a4807ff7426b6cfd4cd43e24a4beffcd7ae6ae567a6319ede0f4123875",
+      "output_bytes": 1078187
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/verify_axiom_clean.sh"
+      ],
+      "returncode": 0,
+      "seconds": 6.844684,
+      "log": "research/prime_spectral/verification_2026_10_20_real_approximants/root_guard.log",
+      "output_sha256": "785c5989511e0ce015777b0bd0b9de2ed8f37b245dcab2fe87389699b1562afc",
+      "output_bytes": 382
+    }
+  ]
+}

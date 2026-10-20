@@ -1,0 +1,28 @@
+'Reinmann.RealGenusZeroApproximants.subset_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.image_closure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.closure_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.realPart_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.map_realPart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.complexPartial_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.map_realPartial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.realPartial_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.eval_realPartial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.realPartial_finitePF' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.RealGenusZeroApproximants.realPartial_locallyUniformly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.RealGenusZeroApproximants.finitePF_genusZero_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.RealGenusZeroApproximants.product_ordinaryCoeff_im_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.RealGenusZeroApproximants.finitePF_of_product_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.FoldedSectorGeometry.arg_square_sector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.FoldedSectorGeometry.arg_folded_sector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiGenusZeroSector.finitePF_xi_of_genusZero_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiGenusZeroSector.katkovaSectorBridge_of_strip_indexed_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

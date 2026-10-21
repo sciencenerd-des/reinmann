@@ -93,6 +93,8 @@ import Reinmann.XiCanonicalProductSector
 import Reinmann.XiGenusZeroSector
 import Reinmann.XiZeroCorrespondence
 import Reinmann.XiHadamardProduct
+import Reinmann.CornerPowerSumCounterexample
+import Reinmann.FiniteHeightPFCalibration
 import Lean.Util.CollectAxioms
 import Reinmann.CoupledRankEnergy
 import Reinmann.FiniteShiftChains
@@ -1857,7 +1859,9 @@ run_cmd do
         m == `Reinmann.XiCanonicalProductSector ||
         m == `Reinmann.XiGenusZeroSector ||
         m == `Reinmann.XiZeroCorrespondence ||
-        m == `Reinmann.XiHadamardProduct then
+        m == `Reinmann.XiHadamardProduct ||
+        m == `Reinmann.CornerPowerSumCounterexample ||
+        m == `Reinmann.FiniteHeightPFCalibration then
       let d := env.header.moduleData[i]!
       for j in [:d.constNames.size] do
         if d.constants[j]!.isTheorem then

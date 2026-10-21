@@ -1,0 +1,8 @@
+{
+  "status": "only_inventoried_generated_tile_objects_removed",
+  "objects_removed": 2464,
+  "allocated_bytes_removed": 7961018368,
+  "source_files_preserved": 312,
+  "free_bytes_after": 15865356288,
+  "inventory_sha256": "5e348a45d883b89563beab707d3ffb992add7f1e4a4a36b47fd3093e1d262b0c"
+}

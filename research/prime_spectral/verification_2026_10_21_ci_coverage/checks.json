@@ -1,0 +1,51 @@
+[
+  {
+    "command": [
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "log": "default_build.log",
+    "log_sha256": "7bcfcb2f7d325bb3eed1207a71873f68c59e14d7e49c8189752e233838004008"
+  },
+  {
+    "command": [
+      "bash",
+      "scripts/verify_axiom_clean.sh"
+    ],
+    "exit_code": 0,
+    "log": "root_guard.log",
+    "log_sha256": "a7bdf3ced545a4f1663a9e6b41a14cada62414200357d3b4d696957331274470"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "Reinmann/AxiomAudit.lean"
+    ],
+    "exit_code": 0,
+    "log": "full_axiom_audit.log",
+    "log_sha256": "b16fa76c15b89d80d2258337ce9abab6adabbe5888fc1c9ff57b3a4a29f0f815"
+  },
+  {
+    "command": [
+      "python3",
+      "experiments/prime_spectral/replay_ci_coverage_predecessors.py",
+      "--output",
+      "research/prime_spectral/verification_2026_10_21_ci_coverage/predecessor_replay.json"
+    ],
+    "exit_code": 0,
+    "log": "predecessor_replay.log",
+    "log_sha256": "f34ca3abcfc9acfd6138f0afd5779ba3f973b2cff36fcbebe9911c72384709eb"
+  },
+  {
+    "command": [
+      "python3",
+      "experiments/prime_spectral/check_dh_research_gate.py"
+    ],
+    "exit_code": 0,
+    "log": "dh_gate.log",
+    "log_sha256": "a32fec7275871f1617f4986c9ec28d194be655f7b835067643b88ed571ffd1d9"
+  }
+]

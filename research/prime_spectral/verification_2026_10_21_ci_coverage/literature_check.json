@@ -1,0 +1,23 @@
+{
+  "status": "classical_literature_statement_checked_not_a_numerical_zero_certificate",
+  "reference": "E. C. Titchmarsh, The Theory of the Riemann Zeta-Function, 2nd ed., revised D. R. Heath-Brown (1986), section 10.25, pp. 282-285",
+  "source_url": "https://sites.math.rutgers.edu/~zeilberg/EM18/TitchmarshZeta.pdf",
+  "source_pdf_sha256": "ee495ba7e6b7af4722317baa79087881c16f648cb8af72843eb869c7497a03d0",
+  "source_pdf_bytes": 8240663,
+  "pdf_page_numbers": [
+    146,
+    147
+  ],
+  "visually_checked_definition_and_kappa": true,
+  "statement": "The same mod-5 DH function has infinitely many zeros with Re(s)>1.",
+  "coefficient_formula_matched_to": "experiments/prime_spectral/davenport_heilbronn_control.py",
+  "coefficient_source_sha256": "066e7beb2583b4b8da45fd60996c1c96ae1974c3acf64a3b18fbce0594d7ea25",
+  "numerical_first_height": null,
+  "explicit_zero_ball_certified": false,
+  "original_paper_DOIs": [
+    "10.1112/jlms/s1-11.3.181",
+    "10.1112/jlms/s1-11.4.307"
+  ],
+  "original_reference_check": "Titchmarsh bibliography; second-paper publisher metadata also checked.",
+  "scope": "Falsifies the global DH 7/8 half-plane analogue. Does not furnish a new RH-strength inequality or a local Lean proof of the classical DH result."
+}

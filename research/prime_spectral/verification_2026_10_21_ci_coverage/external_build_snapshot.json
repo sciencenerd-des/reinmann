@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-10-21T06:17:11.574725+00:00",
+  "progress": {
+    "status": "building_source_closure",
+    "total": 2943,
+    "built": 778,
+    "remaining": 2165,
+    "last_targets": [
+      "OAI.NumberTheory.DirichletL.Detector.LowSeparated",
+      "OAI.NumberTheory.DirichletL.Inversion.InitialQuotientGeometry",
+      "OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment",
+      "OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller"
+    ]
+  },
+  "free_bytes": 15641268224,
+  "success_receipt_present": false,
+  "scope": "Progress snapshot only, not a proof certificate."
+}

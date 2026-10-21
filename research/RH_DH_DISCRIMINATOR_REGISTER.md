@@ -41,8 +41,21 @@ analogue must be rejected. A route with no quantified arithmetic separator is
 classified as a reformulation. Missing implementations remain explicitly
 uninstantiated rather than being counted as passes.
 
-The 7/8 half-plane is a finite strengthening, not an RH-strength target. In
-particular, the DH zero at real part 0.8085 does **not** falsify a 7/8 claim.
-The height-340 atlas's right-hand zeros also do not supply such a witness.
-The obstruction to transferring the metaplectic proof to DH is its missing
-multiplicative Hecke/Mobius/Gauss-sum structure, not that particular zero.
+The 7/8 half-plane is a finite strengthening, not an RH-strength target.
+Its **global DH analogue is false**: Titchmarsh, second edition (1986),
+[§10.25, pp. 282–285](https://sites.math.rutgers.edu/~zeilberg/EM18/TitchmarshZeta.pdf),
+proves infinitely many zeros with Re(s)>1 for the same mod-5 function used
+here. The coefficient period and displayed kappa agree with
+`davenport_heilbronn_control.py`. This is classical literature evidence,
+not a newly certified zero ball; the first such height remains unknown here.
+The original Davenport–Heilbronn papers are
+[JLMS 11 (1936), 181–185](https://doi.org/10.1112/jlms/s1-11.3.181) and
+[307–312](https://doi.org/10.1112/jlms/s1-11.4.307).
+
+The zero at real part 0.8085 and the height-340 atlas do not themselves
+falsify 7/8; the separate classical theorem does. The external metaplectic
+proof uses multiplicative Hecke/Mobius/Gauss-sum structure absent for DH.
+That identifies the arithmetic obstruction to transferring its argument;
+Euler-product signs or support alone are still no positivity proof. The
+external rebuild and a compatible local PF58 integration remain separate
+obligations.

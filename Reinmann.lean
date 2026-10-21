@@ -189,3 +189,5 @@ import Reinmann.XiCanonicalProductSector
 import Reinmann.XiGenusZeroSector
 import Reinmann.XiZeroCorrespondence
 import Reinmann.XiHadamardProduct
+import Reinmann.CornerPowerSumCounterexample
+import Reinmann.FiniteHeightPFCalibration

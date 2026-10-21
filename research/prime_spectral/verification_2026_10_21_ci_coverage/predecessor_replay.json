@@ -1,0 +1,12 @@
+{
+  "status": "immutable_closeout_and_research_predecessors_replayed",
+  "historical_commit": "b7848bd",
+  "historical_files_sha256": {
+    "Reinmann.lean": "9c9628ceab716e557adf14087160a627a4065bae442ab9f87233a7f73c611f5f",
+    "Reinmann/AxiomAudit.lean": "d30ab60bac03d3a1691c86e0a7415afc6bd9b84b120b9f22ad81e66ddd4c5979",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json": "6468a2597b05175cb02efe18b1ade3d3a12ff430ad6116624d1ababe1b2e4daa",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.md": "afe0aac61f731856b460b0186ed6e4a03f964fe5e7aa381b37ee6dbfa5f2b00b"
+  },
+  "verifier_output_sha256": "f34ca3abcfc9acfd6138f0afd5779ba3f973b2cff36fcbebe9911c72384709eb",
+  "scope": "Historical receipts only. Current root/default audit is separate."
+}

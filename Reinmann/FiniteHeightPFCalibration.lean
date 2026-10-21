@@ -31,6 +31,23 @@ theorem angleBound_of_two_bands {delta T gamma : ℝ} {m : ℕ}
     exact (abs_re_sub_half_le_half hs).trans (hfar.trans
       (mul_le_mul hi htan htheta.le (hT.trans hi)))
 
+/-- A half-width 3/8 up to height 19 suffices, given the first-zero bound 14.1.
+This uses only finite-height confinement, not a global seven-eighths theorem. -/
+theorem finitePF58_of_two_bands
+    (hlow : ZetaNoLowStripZero (141 / 10))
+    (hband : LowHeightWidth (3 / 8) 19) : FinitePF XiMomentCoeff 58 := by
+  apply XiHadamardProduct.katkovaSectorBridge 58 (by norm_num)
+  apply angleBound_of_two_bands (m := 58) (gamma := 141 / 10)
+    (delta := 3 / 8) (T := 19) (by norm_num) (by norm_num) (by norm_num) hlow hband
+  · unfold pfHalfAngle
+    have := pi_gt_d2
+    norm_num
+    linarith
+  · unfold pfHalfAngle
+    have := pi_gt_d2
+    norm_num
+    linarith
+
 /-- A half-width 9/40 up to height 32 suffices, given the first-zero bound 14.1.
 The width hypothesis is an explicit remaining certificate obligation. -/
 theorem finitePF97_of_low_height_width

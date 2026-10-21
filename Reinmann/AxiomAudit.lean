@@ -95,6 +95,10 @@ import Reinmann.XiZeroCorrespondence
 import Reinmann.XiHadamardProduct
 import Reinmann.CornerPowerSumCounterexample
 import Reinmann.FiniteHeightPFCalibration
+import Reinmann.FiniteBandBounds
+import Reinmann.FiniteBandModel
+import Reinmann.FiniteBandTileRules
+import Reinmann.FiniteBandGeometry
 import Lean.Util.CollectAxioms
 import Reinmann.CoupledRankEnergy
 import Reinmann.FiniteShiftChains
@@ -1861,7 +1865,11 @@ run_cmd do
         m == `Reinmann.XiZeroCorrespondence ||
         m == `Reinmann.XiHadamardProduct ||
         m == `Reinmann.CornerPowerSumCounterexample ||
-        m == `Reinmann.FiniteHeightPFCalibration then
+        m == `Reinmann.FiniteHeightPFCalibration ||
+        m == `Reinmann.FiniteBandBounds ||
+        m == `Reinmann.FiniteBandModel ||
+        m == `Reinmann.FiniteBandTileRules ||
+        m == `Reinmann.FiniteBandGeometry then
       let d := env.header.moduleData[i]!
       for j in [:d.constNames.size] do
         if d.constants[j]!.isTheorem then

@@ -4,11 +4,13 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Biswajit Mondal
 -/
 import Reinmann.XiHadamardProduct
+import Reinmann.FiniteHeightPFCalibration
 import XiRectangle
+import XiBand58
 
 /-! Finite-order consequences for the actual ordinary Xi coefficient sequence.
-PF43 uses the proved rectangle and sector bridge. PF58 still asks for the
-external 7/8 zero-free half-plane, which is not imported into this toolchain.
+PF43 uses the low rectangle and sector bridge. PF58 uses the finite-width
+height-19 box. The separate external seven-eighths wrapper is retained.
 These fixed-rank statements do not prove the unbounded-rank criterion or RH. -/
 namespace Reinmann.XiFinitePFCertified
 
@@ -17,8 +19,17 @@ theorem finitePF43 : FinitePF XiMomentCoeff 43 :=
   XiRectangle.finitePF43 (XiHadamardProduct.katkovaSectorBridge 43 (by norm_num))
 
 /-- The sector and low-height inputs are discharged; the 7/8 input remains. -/
-theorem finitePF58 (hq : QuasiRiemannHypothesisSevenEighths) :
+theorem finitePF58_of_sevenEighths (hq : QuasiRiemannHypothesisSevenEighths) :
     FinitePF XiMomentCoeff 58 :=
   XiRectangle.finitePF58 hq (XiHadamardProduct.katkovaSectorBridge 58 (by norm_num))
+
+/-- The alternative finite-height input suffices on the existing toolchain. -/
+theorem finitePF58_of_low_height_width
+    (hband : FiniteHeightPFCalibration.LowHeightWidth (3 / 8) 19) :
+    FinitePF XiMomentCoeff 58 :=
+  FiniteHeightPFCalibration.finitePF58_of_two_bands XiRectangle.zetaNoLowStripZero hband
+
+/-- All ordered minors through rank 58, using only local Lean 4.30 certificates. -/
+theorem finitePF58 : FinitePF XiMomentCoeff 58 := XiBand58.finitePF58
 
 end Reinmann.XiFinitePFCertified

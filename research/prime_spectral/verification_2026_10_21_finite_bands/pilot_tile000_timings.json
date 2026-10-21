@@ -1,0 +1,86 @@
+{
+  "status": "complete",
+  "rank": 58,
+  "jobs": 1,
+  "Gamma_jobs": 1,
+  "wall_seconds": 235.4089712080313,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.FiniteBandModel",
+        "Reinmann.FiniteBandTileRules",
+        "XiBand58.Cover"
+      ],
+      "seconds": 2.8908762499922886,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_000.log",
+      "log_sha256": "12733bae7a9bd9ccd147e8101a7724d0a3be5614161288c97ba3b66f9418f2c9"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000Gamma"
+      ],
+      "seconds": 1.18487766594626,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_001.log",
+      "log_sha256": "35c86e6ca889ef9682338351c621ad971cbee5bf06c6255b905c748fce48ec38"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000Terms0"
+      ],
+      "seconds": 42.154882916016504,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_002.log",
+      "log_sha256": "5a699f90b614184c8db2067fbe2818057801322e78508af618e2d61e568470db"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000Terms1"
+      ],
+      "seconds": 40.598121916060336,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_003.log",
+      "log_sha256": "d23db412edd33db9dd6b6dbbd5dba38e7b10b6be0f5d65bfb71b88aee7c89cc8"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000Terms2"
+      ],
+      "seconds": 35.88797912502196,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_004.log",
+      "log_sha256": "7de16a0b07090e69b4e4690070fc3be5aa2aef48cba07852ca792eb78ff5a382"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000Terms3"
+      ],
+      "seconds": 35.633287749951705,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_005.log",
+      "log_sha256": "1610783815491a11f10fe5a3c76622d2f9d90f3ce3bd1ab5cc79a6e0fec1c28a"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000Zeta"
+      ],
+      "seconds": 56.06844320788514,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_006.log",
+      "log_sha256": "5450f56256b18833f58a00c6a7eadc9aec883bbf3d22ecaefde65ca895845c2c"
+    },
+    {
+      "targets": [
+        "XiBand58.Tile000"
+      ],
+      "seconds": 20.98341474996414,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_10_21_finite_bands/pilot_tile000/batch_007.log",
+      "log_sha256": "79c9b9bd4c71e54e4b8edfc707ed3b67a32c0db2508820eb242469f16244c3ce"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiBand58/Tile000.lean": "30b2f6fd148741cbb85159d789e2657066aac2255e468c8cbbdf0f5b07307a90"
+  }
+}

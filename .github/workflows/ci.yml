@@ -81,7 +81,7 @@ jobs:
         run: lake exe cache get || true
 
       - name: Build shared rectangle dependencies
-        run: lake build Reinmann.RectangleModel XiRectangle.Data XiRectangle.Cover
+        run: lake build Reinmann.RectangleModel XiRectangle.Data XiRectangle.Cover Reinmann.FiniteBandModel Reinmann.FiniteBandTileRules XiBand58.Cover
 
       - name: Pack shared dependencies
         run: |
@@ -171,8 +171,83 @@ jobs:
           name: xi-rectangle-receipts-${{ matrix.shard }}
           path: tmp/xi-rectangle-shard
 
+  xi-band58-shard:
+    needs: xi-rectangle-deps
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        shard: [0, 1, 2]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            -o elan-init.sh
+          bash elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Cache Lean dependencies
+        uses: actions/cache@v4
+        with:
+          path: .lake/packages
+          key: rectangle-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+          restore-keys: |
+            rectangle-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Fetch cached mathlib
+        run: lake exe cache get || true
+
+      - name: Restore shared rectangle dependencies
+        uses: actions/download-artifact@v4
+        with:
+          name: xi-rectangle-deps
+          path: tmp/deps
+
+      - name: Unpack shared rectangle dependencies
+        run: |
+          mkdir -p .lake/build
+          tar --zstd -xf tmp/deps/deps.tar.zst -C .lake/build
+          rm -rf tmp/deps
+
+      - name: Build three finite-band tiles
+        run: |
+          first=$(( ${{ matrix.shard }} * 3 ))
+          tiles=$(seq -s, "$first" $(( first + 2 )))
+          echo "tiles $tiles"
+          python3 experiments/prime_spectral/build_finite_band.py --rank 58 --jobs 2 \
+            --tiles "$tiles" --output tmp/xi-band58-shard
+
+      - name: Pack tile outputs
+        run: |
+          first=$(( ${{ matrix.shard }} * 3 ))
+          files=""
+          for i in $(seq "$first" $(( first + 2 ))); do
+            n=$(printf 'Tile%03d' "$i")
+            files="$files $(cd .lake/build && ls -d lib/lean/XiBand58/$n* ir/XiBand58/$n*)"
+          done
+          tar --zstd -cf tmp/tiles.tar.zst -C .lake/build $files
+
+      - name: Upload tile outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-band58-tiles-${{ matrix.shard }}
+          path: tmp/tiles.tar.zst
+          compression-level: 0
+          retention-days: 3
+
+      - name: Retain shard receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-band58-receipts-${{ matrix.shard }}
+          path: tmp/xi-band58-shard
+
   xi-rectangle-certificate:
-    needs: xi-rectangle-shard
+    needs: [xi-rectangle-shard, xi-band58-shard]
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -228,6 +303,12 @@ jobs:
             tar --zstd -xf "$dir/tiles.tar.zst" -C .lake/build
             rm -rf "$dir"
           done
+          for k in $(seq 0 2); do
+            dir="tmp/band58-tiles-$k"
+            gh run download "$GITHUB_RUN_ID" -n "xi-band58-tiles-$k" -D "$dir"
+            tar --zstd -xf "$dir/tiles.tar.zst" -C .lake/build
+            rm -rf "$dir"
+          done
           df -h /
         env:
           GH_TOKEN: ${{ github.token }}
@@ -235,9 +316,10 @@ jobs:
       - name: Refuse to rebuild any tile
         run: |
           lake build $(for i in $(seq 0 43); do printf 'XiRectangle.Tile%03d ' "$i"; done) --no-build
+          lake build $(for i in $(seq 0 8); do printf 'XiBand58.Tile%03d ' "$i"; done) --no-build
 
       - name: Assemble the closed rectangle and PF43
-        run: lake build XiRectangle Reinmann.XiFinitePFCertified
+        run: lake build XiRectangle Reinmann.XiFinitePFCertified XiBand58
 
       - name: Audit rectangle theorem dependencies and source
         run: python3 experiments/prime_spectral/verify_xi_rectangle.py --live-audit
@@ -249,3 +331,13 @@ jobs:
           out=$(lake env lean tmp/pf43.lean 2>&1 | tr -s ' \n' ' ')
           echo "$out"
           echo "$out" | grep -qF "'Reinmann.XiFinitePFCertified.finitePF43' depends on axioms: [propext, Classical.choice, Quot.sound]"
+
+      - name: Audit finite-band PF58 and every generated theorem
+        run: python3 experiments/prime_spectral/verify_finite_band.py --rank 58 --live-audit --output tmp/xi-band58-audit
+
+      - name: Retain finite-band audit receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-band58-audit
+          path: tmp/xi-band58-audit

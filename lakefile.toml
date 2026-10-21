@@ -21,3 +21,8 @@ name = "Reinmann"
 [[lean_lib]]
 name = "XiRectangle"
 moreLeanArgs = ["-j3"]
+
+# Optional finite-width extension to height 19; numerical tiles stay outside the root.
+[[lean_lib]]
+name = "XiBand58"
+moreLeanArgs = ["-j3"]

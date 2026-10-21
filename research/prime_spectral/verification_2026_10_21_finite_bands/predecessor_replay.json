@@ -1,0 +1,23 @@
+{
+  "status": "pre_band_immutable_chain_replayed",
+  "historical_commit": "bd12b0e0279f6d0edc5d1fa930ef5cbf34c5377b",
+  "historical_files_sha256": {
+    "Reinmann.lean": "b37e89d2d0257f601b2660434f8407929f7e00ea7ae4bb61ed86ebf92de2bc33",
+    "Reinmann/AxiomAudit.lean": "dc245bf5f925cae7af612315baa4850a140908a023621c499bc6af42ea6c040a",
+    "lakefile.toml": "60b6abfb8dda0b9c853affdaa45dfaf333c517e6f152a5762f3ba25456dd37fb",
+    ".github/workflows/ci.yml": "f879a2b4f40cd327b5789a78f3f71647bda2737a673027d3fa643c97b50dd735",
+    "Reinmann/FiniteHeightPFCalibration.lean": "575d9a50f1fc81789df7e1ca7a659a4f01e84a41164a67181d950b27b79242e2",
+    "Reinmann/XiFinitePFCertified.lean": "08cbec77891179c3a7f33b806bf889d26a24a0437b6ae9a925d8ae0f594a182e"
+  },
+  "verifiers": [
+    {
+      "script": "verify_external_seven_eighths_round.py",
+      "output_sha256": "561a215dfcfe8d617254a5dbde70c340e2b6290c5b57d5d6784f5b39bc1a6cd1"
+    },
+    {
+      "script": "verify_ci_complete_2026_10_21.py",
+      "output_sha256": "316a028fe87ffc44052252c04ca24cf04766cb2fcf7cceeb7dbee223bf144e2f"
+    }
+  ],
+  "scope": "Historical verification only; no new box proof claimed."
+}

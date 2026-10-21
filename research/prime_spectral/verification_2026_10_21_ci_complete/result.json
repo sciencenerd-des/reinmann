@@ -1,0 +1,34 @@
+{
+  "status": "all_fourteen_CI_jobs_succeeded",
+  "proof_commit": "a3ca706ff023830d0bc9890d662caa9964b015f7",
+  "proof_tree": "a7fd4f5487f90ef8b05835546fce4bcad3149d61",
+  "run_id": 39563749171,
+  "run_url": "https://github.com/sciencenerd-des/reinmann/actions/runs/39563749171",
+  "required_jobs": [
+    "build-and-verify",
+    "xi-rectangle-certificate",
+    "xi-rectangle-deps",
+    "xi-rectangle-shard (0)",
+    "xi-rectangle-shard (1)",
+    "xi-rectangle-shard (10)",
+    "xi-rectangle-shard (2)",
+    "xi-rectangle-shard (3)",
+    "xi-rectangle-shard (4)",
+    "xi-rectangle-shard (5)",
+    "xi-rectangle-shard (6)",
+    "xi-rectangle-shard (7)",
+    "xi-rectangle-shard (8)",
+    "xi-rectangle-shard (9)"
+  ],
+  "root_audit_declarations": 2619,
+  "finitePF43_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "numerical_height": "141/10",
+  "no_tile_rebuild_step_seconds": 7,
+  "external_Lean434_replay": "separate local run; not asserted as covered by this CI workflow",
+  "local_Lean430_PF58_unconditional": false,
+  "scope": "Default root including both new finite modules, all eleven numerical shards, closed rectangle and unconditional finitePF43. Historical CI evidence at the exact proof commit."
+}

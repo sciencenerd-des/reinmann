@@ -1,0 +1,32 @@
+{
+  "status": "source_preflight_verified_external_theorem_build_in_progress",
+  "timestamp_utc": "2026-10-21T05:53:35.052015+00:00",
+  "base_repository_commit": "04964c00590d9cd8a697d95186470b6c698d56b2",
+  "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "OAI_source_modules": 2924,
+  "other_source_modules": 19,
+  "Mathlib_cache_roots": 275,
+  "source_admission_scan_passed": true,
+  "scratch_roundtrip_files": 199,
+  "scratch_roundtrip_SHA256_and_mtime_verified": true,
+  "external_theorem_rebuilt": false,
+  "final_axiom_audit_completed": false,
+  "unconditional_local_PF58": false,
+  "active_attempt": "/Users/biswajitmondal/.cache/reinmann/openai-seven-eighths-1581d4c-20261021/build-attempt-5",
+  "scope": "Preflight and operational checks only. This is not a completed proof receipt. Historical publication and verification manifests unchanged.",
+  "artifacts_sha256": {
+    "research/prime_spectral/verification_2026_10_21_qrh_external_preflight/preflight.log": "ee2d7eaf547e051500514915e636e6a382bbb4b676ce078038d3cc73bf8c0cc1",
+    "research/prime_spectral/verification_2026_10_21_qrh_external_preflight/upstream_lake_manifest.json": "cf6105a25d9dca2f166b241d9191bd12c7e13305890dc9c4d0952351cccc0794",
+    "research/prime_spectral/verification_2026_10_21_qrh_external_preflight/build_inputs.json": "3186fbf87f0603e3b147b0dc3753a6911f766d0328ff692fd305a9af7c8a00f8",
+    "research/prime_spectral/verification_2026_10_21_qrh_external_preflight/build_progress_snapshot.json": "644d0e88edf17508b0893f5f10174b354c839da6c1db0db33addb67c33885a57",
+    "research/prime_spectral/verification_2026_10_21_qrh_external_preflight/scratch_no_build.log": "5e7adc821f56193bdd6ace22c05ca9a0deba54f902bba497e3eac7a46d4ba53d",
+    "research/prime_spectral/verification_2026_10_21_qrh_external_preflight/upstream_patches.json": "9e908950bd0c973dc29995c9275c7d40c4cf0f249a783bcc450025656de176b0",
+    "bridges/openai-seven-eighths/minimal_replay.py": "bd5377d6f9abaf4212d8da65aaba7871d97702cca77f97a40e43d91165e62376",
+    "bridges/openai-seven-eighths/prepare_minimal.py": "27315f997c1b9a854d19b6fab45f835c42d1d0175c03d45f9bf8d6ef2c784643",
+    "bridges/openai-seven-eighths/compact_setups.py": "45df67052c3089b2ee34e0e248fc26e1490bb480972fc8c8a30cb6089749943a",
+    "bridges/openai-seven-eighths/minimal-lakefile.lean": "38741523604016268bb8b68c3f282d14a6e5b9b5718cde94f529d85c86c3ff43",
+    "bridges/openai-seven-eighths/MINIMAL_REPLAY.md": "298897941dd45db7e68cb319bb371737ce9a180e796e5934109ad694642d948a",
+    "bridges/openai-seven-eighths/SevenEighths.lean": "f3f4c417c7c645e94ebd26ade40b9389b6136c7c8d14e62ea1459985fb66556a"
+  }
+}

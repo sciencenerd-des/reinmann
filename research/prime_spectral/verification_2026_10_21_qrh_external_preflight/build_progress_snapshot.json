@@ -1,0 +1,9 @@
+{
+  "status": "building_source_closure",
+  "total": 2943,
+  "built": 281,
+  "remaining": 2662,
+  "last_targets": [
+    "OAI.NumberTheory.DirichletL.Eisenstein.FredholmAlternative"
+  ]
+}

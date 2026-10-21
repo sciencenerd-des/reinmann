@@ -1,0 +1,16 @@
+[
+  {
+    "package": "PrimeNumberTheoremAnd",
+    "base_commit": "c39a751132c88b6e8080b74c74023fd95b3d8be0",
+    "patch_path": "patches/PrimeNumberTheoremAnd-lean4341.patch",
+    "patch_sha256": "0890432340c0025973bcfe070b634355fa366cc831595f68526e4c73c8903d82",
+    "source_url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/patches/PrimeNumberTheoremAnd-lean4341.patch"
+  },
+  {
+    "package": "rellich-kondrachov",
+    "base_commit": "70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23",
+    "patch_path": "patches/rellich-kondrachov-lean4341.patch",
+    "patch_sha256": "0c121d8517dfeadc93ef24fe2deb56beec7cb3998e2552dee8f61c780b1408c8",
+    "source_url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/patches/rellich-kondrachov-lean4341.patch"
+  }
+]

@@ -57,5 +57,6 @@ falsify 7/8; the separate classical theorem does. The external metaplectic
 proof uses multiplicative Hecke/Mobius/Gauss-sum structure absent for DH.
 That identifies the arithmetic obstruction to transferring its argument;
 Euler-product signs or support alone are still no positivity proof. The
-external rebuild and a compatible local PF58 integration remain separate
-obligations.
+external 7/8 statement has now been rebuilt and standard-axiom audited on
+Lean 4.34.1; see the [replay record](prime_spectral/EXTERNAL_SEVEN_EIGHTHS_REPLAY_2026_10_21.md).
+A compatible local Lean 4.30 PF58 integration remains a separate obligation.

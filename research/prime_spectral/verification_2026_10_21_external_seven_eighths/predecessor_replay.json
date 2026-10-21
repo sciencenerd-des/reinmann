@@ -1,0 +1,10 @@
+{
+  "status": "seven_eighths_predecessors_replayed_with_pending_register_snapshot",
+  "historical_commit": "91c034d",
+  "historical_register_sha256": {
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json": "1eb5d7cbf788ff2954942d13fa5f9d3bfe62fb6386373eccafdb92e811dc6877",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.md": "388e3723f5f5a11be6df31fbe506e669a0a4c72870016f706220d42b0138f923"
+  },
+  "verifier_output_sha256": "4625dd76794ec5a4d5e4407ecfdf4ad3ec891e1a28575805490da6fbc687a456",
+  "scope": "Historical receipt replay only. External proof packet verified separately."
+}

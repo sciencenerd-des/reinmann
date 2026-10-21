@@ -1,0 +1,25 @@
+{
+  "status": "external_seven_eighths_exact_contract_rebuilt_and_receipt_verified",
+  "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "source_modules": 2943,
+  "OAI_source_modules": 2924,
+  "headline_axioms": {
+    "OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Reinmann.zetaZeroFreeRightOf_sevenEighths": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_archive_sha256": "e32aa91d0727de691d0dcbda715169841403131ef69e089d2378bdb0ef86be66",
+  "source_archive_files": 2963,
+  "build_history_sha256": "e586cb465b21c2f23657e7a04b85c56d05385aebcab6d561b8f1bfae9362b5b3",
+  "history_files": 1003,
+  "local_Lean430_PF58_unconditional": false,
+  "scope": "External Lean 4.34.1 replay; local Lean 4.30 PF58 retains its named external input."
+}

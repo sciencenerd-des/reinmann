@@ -1,0 +1,27 @@
+{
+  "status": "external_seven_eighths_replay_round_verified",
+  "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "fresh_source_modules": 2943,
+  "OAI_source_modules": 2924,
+  "local_Lean430_PF58_unconditional": false,
+  "RH_proved": false,
+  "artifacts_sha256": {
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json": "6a6e0f94dcd387f5d6cd601ada313724ade9cd99adb946a7c8caca823d8ea3a2",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.md": "c55dcf783eec5acb88aee3b24f433df47d8922d5f7dc0a1e5817a89708d227d5",
+    "bridges/openai-seven-eighths/finalize_minimal_replay.py": "46fd5a2e454b867cd2938b95eb721bce127e0533c6f1c21de27ca177468536b4",
+    "experiments/prime_spectral/replay_seven_eighths_predecessors.py": "ebdbecea88f6c11e7fa8fc498aef976f2fa2cd8ce0f7bf33a28f569f06b7bc5f",
+    "experiments/prime_spectral/verify_external_seven_eighths_round.py": "dbf23c0ab3692cc03d3059f33bf7a2e80deeba5072d8c4148873800d3d2911e7",
+    "research/prime_spectral/EXTERNAL_SEVEN_EIGHTHS_REPLAY_2026_10_21.md": "8576d2f9c4832a10b0fddcf5abe4e0fa17df3d5233641b1533cd381de08893d9",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/build-history.tar.gz": "e586cb465b21c2f23657e7a04b85c56d05385aebcab6d561b8f1bfae9362b5b3",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/result.json": "49fbbfa26ec8c2c5cb6ae9ddebfd7967ee09def569a606f2b21bff2c8dbdb38b",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/predecessor_replay.log": "4625dd76794ec5a4d5e4407ecfdf4ad3ec891e1a28575805490da6fbc687a456",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/predecessor_replay.json": "a42eccfab5ff318f9831fdbded6a49bf6fbdb35550d86599f2d452510bd844e3",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/seven-eighths-source-1581d4c.tar.gz": "e32aa91d0727de691d0dcbda715169841403131ef69e089d2378bdb0ef86be66",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/README.md": "329c86885cb9e5e60c25f9b6f76e593f23b94f24156c42a25a42e95a18e0d616",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/build_inputs.json": "3186fbf87f0603e3b147b0dc3753a6911f766d0328ff692fd305a9af7c8a00f8",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/manifest.json": "bf4e5f9416cb14798eb2c96407396a44578fc6887c86c793410d703d1ead71a2",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/historical_91c034d/research/RH_DH_DISCRIMINATOR_REGISTER.json": "1eb5d7cbf788ff2954942d13fa5f9d3bfe62fb6386373eccafdb92e811dc6877",
+    "research/prime_spectral/verification_2026_10_21_external_seven_eighths/historical_91c034d/research/RH_DH_DISCRIMINATOR_REGISTER.md": "388e3723f5f5a11be6df31fbe506e669a0a4c72870016f706220d42b0138f923"
+  }
+}

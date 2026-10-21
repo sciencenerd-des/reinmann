@@ -1,0 +1,9 @@
+{
+  "artifacts_sha256": {
+    "build-history.tar.gz": "e586cb465b21c2f23657e7a04b85c56d05385aebcab6d561b8f1bfae9362b5b3",
+    "result.json": "49fbbfa26ec8c2c5cb6ae9ddebfd7967ee09def569a606f2b21bff2c8dbdb38b",
+    "seven-eighths-source-1581d4c.tar.gz": "e32aa91d0727de691d0dcbda715169841403131ef69e089d2378bdb0ef86be66",
+    "README.md": "329c86885cb9e5e60c25f9b6f76e593f23b94f24156c42a25a42e95a18e0d616",
+    "build_inputs.json": "3186fbf87f0603e3b147b0dc3753a6911f766d0328ff692fd305a9af7c8a00f8"
+  }
+}

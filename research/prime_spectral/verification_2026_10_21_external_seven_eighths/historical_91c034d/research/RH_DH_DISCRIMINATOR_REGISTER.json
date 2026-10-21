@@ -1,0 +1,131 @@
+{
+  "scope": "Standing research gate, not a proof or new numerical scan. Minimal DH thresholds are not asserted.",
+  "coefficient_convention": "ordinary mu_n; classical Jensen coefficients n! mu_n",
+  "window_convention": "multiplicative cutoff C; additive support length log C",
+  "routes": [
+    {
+      "id": "toeplitz_all_ranks",
+      "target": "FinitePF XiMomentCoeff r for every r",
+      "classification": "reformulation",
+      "dh_analogue": "All ordered Toeplitz minors of ordinary normalized folded DH coefficients are nonnegative.",
+      "failure": {
+        "kind": "certified_tested_witness",
+        "rank": 664,
+        "shift": 44,
+        "globally_first": false,
+        "source": "research/prime_spectral/verification_2026_10_15_second_band/forecast_assessment.json",
+        "second_band": [
+          1536,
+          1972
+        ],
+        "source_sha256": "8237b8512e0a71f38f79f7a1045becf89d27b20efce73b0c1e2e34aebd94c72a"
+      },
+      "arithmetic_property": "For zeta, -zeta_prime/zeta has nonnegative von Mangoldt coefficients supported on prime powers.",
+      "separating_inequality": null,
+      "gap": "No Euler-product-to-Schur sign inequality in the small-shift/large-rank corner is proved."
+    },
+    {
+      "id": "weil_all_windows",
+      "target": "Nonnegativity of the full Weil form on every compact support window",
+      "classification": "reformulation",
+      "dh_analogue": "The conductor-5 odd-gamma full DH Weil form, with every log-derivative coefficient and no zeta pole block.",
+      "failure": {
+        "kind": "certified_tested_witness",
+        "C": "7873/256",
+        "modes": 80,
+        "globally_first": false,
+        "source": "research/prime_spectral/verification_2026_10_12_sector/dh_original_C7873_256_N80.json",
+        "source_sha256": "c75ca8a717b01e6eaa76faa07eedd4ff3dff6742e3129d7da22e7e28fb612196"
+      },
+      "arithmetic_property": "Von Mangoldt sign and prime-power support, plus multiplicativity behind Euler-product family identities.",
+      "separating_inequality": null,
+      "gap": "An arithmetic bound for the complete Schur energy remains absent. Modified arithmetic forms have no demonstrated zero side."
+    },
+    {
+      "id": "jensen_all_degrees",
+      "target": "Hyperbolicity of every classical Jensen polynomial built from n! * XiMomentCoeff n",
+      "classification": "reformulation",
+      "dh_analogue": "The classical n! normalization of normalized folded DH coefficients, not the ordinary-coefficient diagnostic.",
+      "failure": {
+        "kind": "not_located",
+        "degree": null,
+        "shift": null,
+        "globally_first": false
+      },
+      "arithmetic_property": "A quantitative Euler-product estimate controlling the relevant Jensen or Schur functional would be required.",
+      "separating_inequality": null,
+      "gap": "The off-line zero excludes the full classical criterion; no first failing degree/shift has been certified here. No new scan is authorized by this register."
+    },
+    {
+      "id": "green_paired_budget",
+      "target": "GreenUnitMassPairedBudget, Lean-proved equivalent to RH for the actual Xi model",
+      "classification": "reformulation",
+      "dh_analogue": "Requires rebuilding the same operator domain, one fixed form, every-zero states and mass/defect identities for completed DH.",
+      "failure": {
+        "kind": "uninstantiated",
+        "degree": null,
+        "globally_first": false,
+        "source": "research/prime_spectral/verification_2026_10_12_remaining/dh_zero_and_finite_gates.json",
+        "source_sha256": "dccb47be2b796952273f9dc7b4789fa070cc51c9575fee7057c91c3d7f15cecf"
+      },
+      "arithmetic_property": "An actual Euler-product bound on the same-form relative paired residual would be required.",
+      "separating_inequality": null,
+      "gap": "The generic defect obstruction at an off-line state is known; a complete DH-domain instantiation has not been proved. Do not call it a certified DH Green-form failure."
+    },
+    {
+      "id": "same_height_phase",
+      "target": "The manuscript phase hypothesis H_theta and a missing zeta-specific implication to critical-pair exclusion",
+      "classification": "uninstantiated",
+      "dh_analogue": "Use H_prime/H on horizontal segments for the actual DH function; preserve the exact phase conventions.",
+      "failure": {
+        "kind": "uninstantiated",
+        "degree": null,
+        "globally_first": false
+      },
+      "arithmetic_property": "A zeta-specific Euler-product phase estimate, not functional-equation symmetry alone.",
+      "separating_inequality": null,
+      "gap": "The corrected manuscript does not claim a Lean equivalence H_theta iff RH. The generic exp(i*z)*z*(z-1) counterexample already defeats the proposed endpoint-to-phase-crossing implication."
+    }
+  ],
+  "shared_prerequisites": [
+    "entireness and real-type functional symmetry",
+    "genus-zero factorization and multiplicity indexing",
+    "finite-rank sector sufficiency",
+    "exact Toeplitz-Jacobi and Schur identities",
+    "generic jump-source estimates"
+  ],
+  "active_RH_strategy_with_proved_discriminator": false,
+  "finite_strengthening_controls": [
+    {
+      "id": "quasi_rh_seven_eighths",
+      "target": "ZetaZeroFreeRightOf (7/8): forall complex s, 7/8 < Re(s) implies zeta(s) != 0",
+      "classification": "finite_strengthening_external_proof_replay_pending",
+      "dh_analogue": "The same global half-plane statement for H(s)=sum a_n n^(-s), a_1=1, period (0,1,kappa,-kappa,-1), kappa=(sqrt(10-2sqrt(5))-2)/(sqrt(5)-1). These are original Dirichlet coefficients, not folded Taylor coefficients.",
+      "failure": {
+        "kind": "classical_theorem_not_a_located_numerical_witness",
+        "statement": "This mod-5 DH function has infinitely many zeros with Re(s)>1, hence its global 7/8 zero-free analogue is false.",
+        "globally_first": false,
+        "first_height": null,
+        "explicit_zero_ball": null,
+        "reference": {
+          "author": "E. C. Titchmarsh; second edition revised by D. R. Heath-Brown",
+          "title": "The Theory of the Riemann Zeta-Function",
+          "year": 1986,
+          "section": "10.25",
+          "printed_pages": "282-285",
+          "definition_page": 282,
+          "kappa_page": 283,
+          "conclusion_pages": "283-285",
+          "url": "https://sites.math.rutgers.edu/~zeilberg/EM18/TitchmarshZeta.pdf",
+          "download_sha256": "ee495ba7e6b7af4722317baa79087881c16f648cb8af72843eb869c7497a03d0"
+        },
+        "original_references": [
+          "https://doi.org/10.1112/jlms/s1-11.3.181",
+          "https://doi.org/10.1112/jlms/s1-11.4.307"
+        ]
+      },
+      "arithmetic_property": "The external proof uses multiplicative Hecke Euler products, ideal Mobius coefficients and cubic/sextic Gauss-sum identities in its metaplectic family estimates; the actual DH mixture supplies no such identities.",
+      "scope": "The height-85.7 zero and the height-340 atlas are not 7/8 counterexamples; the separate classical theorem is. No numerical witness above Re(s)=1 is certified here. This does not provide a new RH-strength inequality or a local unconditional PF58 theorem."
+    }
+  ]
+}

@@ -1,0 +1,578 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Repart}{\operatorname{Re}}
+\newcommand{\coeff}{[z^n]}
+\title[Split-pair oscillation and finite-order positivity]{Split-pair oscillation, the Toeplitz--Jacobi bridge,\\and Lean-verified finite-order positivity for xi}
+\author{Biswajit Mondal}
+\date{22 October 2026\\Unreviewed local revision, version 3 draft}
+\keywords{Toeplitz minors, total positivity, entire functions, pole asymptotics, formal verification, Lean}
+\begin{document}
+\begin{abstract}
+We formalize in Lean a pole-dominance criterion for sign oscillation of contiguous Toeplitz minors. An isolated conjugate pair of inverse zeros produces two dominant terms; finite geometric-sum bounds give both signs at arbitrarily large ranks. Repeated-pole cancellation controls analytic perturbations, and a complementary determinant identity transfers oscillation to the original ordinary Taylor coefficients. This standalone theorem retains simple selected zeros and an isolated modulus tie. Separately, a rational Taylor-model evaluator proves nonvanishing of the actual completed xi function on the full closed critical-strip rectangle through height $14.1$ and on two narrower right-hand boxes through heights $19$ and $32$. An attributed Hadamard-factorization backport, a polynomial sector theorem and a two-band angle estimate then give unconditional P\'olya-frequency nonnegativity through rank $97$ for the ordinary folded-xi coefficients; the smaller height-$19$ box also gives rank $58$. The height-$32$ evaluator inputs are proved rather than extrapolated from the low rectangle. All $34$ jobs in the pinned sharded replay pass, including public-theorem and generated-declaration axiom audits. These are formalizations of classical finite-order consequences, not a proof of the Riemann hypothesis (RH). The higher boxes allow critical-line zeros, and no external seven-eighths theorem is an input to the Lean~4.30 certificates.
+\end{abstract}
+\maketitle
+
+\section{Scope and coefficient conventions}
+The algebraic and analytic mechanisms here are classical. Aissen, Schoenberg and Whitney's work on totally positive sequences \cite{asw} provides the finite polynomial background. Edrei's proof already relates minors of a sequence to complementary minors of its reciprocal and uses pole information in total-positivity arguments \cite{edrei}. Toeplitz determinants and Schur functions have a broader classical and modern literature; see, for example, \cite{bumpdiaconis}. Our contribution is an explicit, checked assembly of the finite determinant expansion, its analytic perturbation bound, and the bridge for actual Taylor coefficients. We make no claim to a new total-positivity characterization.
+
+Let $F$ be entire, with $F(0)=1$, and write
+\[
+ F(z)=\sum_{k\ge0}\alpha_k z^k,\qquad
+ \frac1{F(z)}=\sum_{k\ge0}h_k z^k
+\]
+near zero. These are \emph{ordinary} coefficients:
+$\alpha_k=F^{(k)}(0)/k!$. They are not the classical Jensen coefficients $k!\alpha_k$.
+Set $\mu_k=(-1)^k\alpha_k$, so $\sum\mu_kz^k=F(-z)$, and extend $\mu_k=0$ for $k<0$. Define
+\[
+ T_{r,s}(\mu)=\det(\mu_{s+i-j})_{0\le i,j<r},\qquad
+ D_s(n)=\det(h_{n+i+s-1-j})_{0\le i,j<s}.
+\]
+Here $r$ is the determinant size and $s$ the shift. Throughout the oscillation statements $s\ge1$. The complementary identity proved below is
+\begin{equation}\label{eq:jacobi}
+ D_s(n)=T_{n+s-1,s}(\mu).
+\end{equation}
+Thus a fixed, small reciprocal determinant controls original minors of increasing size. In the formal code the index is $n+(s-1)$, with natural-number subtraction.
+
+The analytic theorem uses only a finite zero atlas in one closed disk. A genus-zero entire function satisfying the hypotheses is an application. The split-pair theorem does not require a general infinite canonical-product factorization. It does not allow arbitrary multiple poles or arbitrary ties at the selected modulus boundary. The separate finite-PF application below uses an actual-Xi canonical product without those genericity restrictions.
+
+\section{Finite pole sums and oscillation}
+Take distinct complex numbers $z_1,\ldots,z_m$ and nonzero residues $c_1,\ldots,c_m$. Put
+\[
+ u_k=\sum_{\ell=1}^m c_\ell z_\ell^k,\qquad
+ M_s(n)=(u_{n+i+s-1-j})_{0\le i,j<s}.
+\]
+For each subset $I$ of size $s$, put
+\[
+ Z_I=\prod_{\ell\in I}z_\ell,\qquad
+ A_I=\det\left(\sum_{\ell\in I}c_\ell z_\ell^{i+s-1-j}\right)_{i,j<s}.
+\]
+Multilinearity, followed by cancellation of repeated pole choices, gives the exact expansion
+\begin{equation}\label{eq:subset}
+ \det M_s(n)=\sum_{|I|=s} A_I Z_I^n.
+\end{equation}
+If $I=\{\ell_1,\ldots,\ell_s\}$, the coefficient is
+\begin{equation}\label{eq:leading}
+ A_I=(-1)^{s(s-1)/2}
+       \left(\prod_{j=1}^s c_{\ell_j}\right)
+       \prod_{i<j}(z_{\ell_j}-z_{\ell_i})^2.
+\end{equation}
+In particular it is nonzero. The squared Vandermonde makes this formula independent of the chosen enumeration.
+
+\begin{lemma}[Finite dominant conjugate pair]\label{lem:finite}
+Suppose conjugation permutes both the $z_\ell$ and their $c_\ell$ by the same permutation $\sigma$. Let $S$ have size $s$, let $S'=\sigma(S)\ne S$, and suppose
+\[
+ \Im Z_S\ne0,\qquad
+ |Z_I|<|Z_S|\quad (|I|=s,\ I\notin\{S,S'\}).
+\]
+If a complex sequence $E_n$ satisfies $E_n/|Z_S|^n\longrightarrow0$, then
+$\Repart(\det M_s(n)+E_n)$ has both signs for arbitrarily large $n$.
+\end{lemma}
+
+\begin{proof}
+Conjugation gives $A_{S'}Z_{S'}^n=\overline{A_SZ_S^n}$.
+After division by $|Z_S|^n$, all other terms tend to zero. The remaining expression is
+$2\Repart(A_Sw^n)$, where $w=Z_S/|Z_S|$ lies on the unit circle and is nonreal.
+Finite geometric sums bound the partial sums of $w^n$ and $w^{2n}$ independently of their length. Consequently the mean of $\Repart(A_Sw^n)$ tends to zero, while the mean of its square tends to $|A_S|^2/2>0$. These bounds force values of both signs bounded away from zero arbitrarily far out, and a term tending to zero cannot remove them. The Lean proof uses these elementary geometric-sum bounds; it needs no irrational-rotation theorem.
+\end{proof}
+
+This argument proves unbounded occurrences of both signs. It does not identify the first failing rank, or prove a finite-rank period formula.
+
+\section{Analytic-error rows}
+A naive entrywise estimate can repeat the largest pole modulus in several rows and lose the required decay. The proof instead cancels repeated poles before estimating mixed terms.
+
+Assume $s\ge1$, $|S|=s$, and numbers $d>0$, $0\le\rho<d$ satisfy
+\[
+ |z_\ell|\ge d\quad(\ell\in S),\qquad
+ |z_\ell|\le d\quad(\ell\notin S).
+\]
+Write $D=\prod_{\ell\in S}|z_\ell|$. If a distinct pole subset $I$ is missing $k$ entries, so $|I|+k=s$, then
+\begin{equation}\label{eq:ordered}
+ \left(\prod_{\ell\in I}|z_\ell|\right)d^k\le D.
+\end{equation}
+Indeed, divide every modulus by $d$: selected factors are at least one and all other factors at most one. This proves the comparison without requiring an ordering among moduli within $S$.
+
+\begin{lemma}[Mixed-row determinant bound]\label{lem:mixed}
+Suppose $|e_k|\le C\rho^k$, $|c_\ell|\le C$, $C\ge0$, and
+$B\ge1$ bounds both $\rho$ and every $|z_\ell|$. Set
+$K=CB^{2s-2}$. Then
+\[
+ \frac{\left|\det(u_{n+i+s-1-j}+e_{n+i+s-1-j})_{i,j<s}
+                   -\det M_s(n)\right|}{D^n}
+ \le (m+1)^s s!K^s\left(\frac{\rho}{d}\right)^n.
+\]
+\end{lemma}
+
+\begin{proof}
+Expand each row into its $m$ pole contributions and one error contribution. Subtracting the pure pole determinant leaves only choices with an error row. Two occurrences of the same pole give proportional rows, hence zero determinant, even if other rows are errors. For a surviving choice, \eqref{eq:ordered} bounds the product of distinct pole weights; the error rows contribute powers of $\rho$. At least one such row supplies the factor $\rho/d$, and additional error rows cannot increase it. The bounded offsets in the coefficient indices contribute at most $K$ per row. Leibniz's formula bounds the determinant by $s!$ times the product of its row weights, and there are at most $(m+1)^s$ choices.
+\end{proof}
+
+Since $\rho/d<1$, this establishes the normalized determinant limit required in Lemma~\ref{lem:finite}. It is a proved consequence of coefficient bounds, rather than an assumed determinant asymptotic.
+
+\section{Entire-function assembly}
+Let $a_1,\ldots,a_m$ be distinct nonzero simple zeros of $F$, closed under conjugation. Assume every zero in $|z|\le R$ is on this list, where $R>0$. The list may contain additional zeros outside that disk. Subtracting the actual principal parts constructs a remainder analytic on a neighborhood of the closed disk:
+\[
+ \frac1{F(z)}
+   =\sum_{\ell=1}^m\frac{1/F'(a_\ell)}{z-a_\ell}+H(z)
+\]
+away from the poles. Removable single-pole germs are patched into one analytic remainder. Local equality near zero gives the actual coefficient identity
+\[
+ h_k=\sum_{\ell=1}^m c_\ell z_\ell^k+e_k,\qquad
+ z_\ell=a_\ell^{-1},\qquad
+ c_\ell=-\frac1{a_\ell F'(a_\ell)},\qquad
+ |e_k|\le C_0R^{-k}.
+\]
+The Cauchy bound and this identity are proved in Lean. The residues are not freely chosen model data at this stage.
+
+\begin{theorem}[Isolated boundary pair]\label{thm:entire}
+Let $F$ be entire, $F(0)=1$, and
+$F(\overline z)=\overline{F(z)}$. Suppose the zero list and disk above are given.
+Let $\sigma$ be its conjugation permutation, and let $S$ have size $s$.
+Assume there are indices $p\in S$ and $q\notin S$ such that
+\[
+ \sigma(p)=q,\quad
+ \sigma(S)=(S\setminus\{p\})\cup\{q\},\quad
+ |a_p|<R,\quad
+ \Im\prod_{\ell\in S}a_\ell^{-1}\ne0.
+\]
+Assume also the boundary order and its isolated tie:
+\[
+ |a_y^{-1}|\le |a_x^{-1}|
+       \quad(x\in S,\ y\notin S),
+\]
+with equality only when $x=p$ and $y=q$.
+Then for every $M\in\N$ there are $r_-,r_+\ge M$ such that
+\[
+ T_{r_-,s}(\mu)<0,\qquad T_{r_+,s}(\mu)>0,
+ \qquad \mu_k=(-1)^kF^{(k)}(0)/k!.
+\]
+\end{theorem}
+
+\begin{proof}
+Set $d=|a_p^{-1}|$ and $\rho=R^{-1}$; then $\rho<d$.
+The boundary assumptions give the top-subset modulus conditions of Lemma~\ref{lem:mixed}. They also imply that $S$ and $\sigma(S)$ are the only size-$s$ subsets attaining the maximal product modulus. Every other subset has a strict gap, proved by the finite subset-exchange argument. Conjugation symmetry differentiates to
+$F'(\overline z)=\overline{F'(z)}$, giving the required residue symmetry. Simplicity makes every residue nonzero, and distinct zeros make the Vandermonde nonzero.
+The actual coefficient identity and Lemma~\ref{lem:mixed} give a normalized error tending to zero, so Lemma~\ref{lem:finite} applies to $D_s(n)$. Finally \eqref{eq:jacobi} transfers both signs to the original minors. Real-type symmetry makes these minors real. The Lean statement uses their real parts, avoiding a separate real-valued coefficient interface.
+\end{proof}
+
+\begin{corollary}[Finite products]
+Theorem~\ref{thm:entire} applies to
+$F(z)=\prod_{\ell=1}^m(1-z/a_\ell)$ with distinct nonzero conjugation-stable zeros, whenever the stated isolated boundary conditions hold and $R>|a_p|$ covers the needed zeros.
+\end{corollary}
+\begin{proof}
+This polynomial is entire, has constant coefficient one, has precisely the listed simple zeros, and has the stated conjugation symmetry. The analytic theorem then applies.
+\end{proof}
+This corollary is a mathematical specialization of the checked theorem; the library also contains the earlier finite pole-sum theorem. We do not claim a separate new formal instantiation of arbitrary product notation in this round.
+
+\section{The complementary determinant bridge}
+For a formal series $f$ with $f_0=1$, finite lower-triangular Toeplitz matrices satisfy
+$T_N(f)T_N(g)=I$ whenever $fg=1$; the boundary terms are exact ordinary convolution.
+A block-coordinate proof of the classical Jacobi complementary determinant identity then gives the signed complementary-minor formula. For matrix background see \cite{hornjohnson}; \cite{bapat} states the inverse-minor identity explicitly and studies extensions. It does not require either selected minor to be invertible.
+
+For the actual analytic functions here, the formal convolution is not an additional hypothesis. Leibniz's rule, with the identity
+$\binom ni i!(n-i)!=n!$, proves that ordinary Taylor series respect multiplication. The function identity $F(z)F(z)^{-1}=1$ in a neighborhood of zero therefore gives
+\[
+ \operatorname{Taylor}(F)\operatorname{Taylor}(1/F)=1.
+\]
+Applying the signed complementary identity to $f(z)=F(-z)$ gives \eqref{eq:jacobi}. The explicit rescaling cancels the determinant sign. Omitting it would give the wrong coefficient convention.
+
+\section{Checked declarations and reproducibility}
+The project uses Lean and Mathlib v4.30.0. The main declarations in this assembly are:
+\begin{center}\footnotesize
+\begin{tabular}{p{.31\textwidth}p{.61\textwidth}}
+\toprule
+Module in \texttt{Reinmann/} & Declaration or role\\
+\midrule
+\texttt{SplitPairDeterminant} & \texttt{subset\_expansion}, \texttt{coefficient\_eq\_vandermonde}\\
+\texttt{SplitPairMixedRows} & \texttt{coefficient\_determinant\_bound}\\
+\texttt{SplitPairPatchedRemainder} & Patches the removable pole germs\\
+\texttt{SplitPairCoefficientIdentity} & \texttt{actual\_reciprocal\_coefficient\_error}\\
+\texttt{AnalyticSplitPair} & \texttt{entire\_split\_pair\_of\_boundary}\\
+\texttt{AnalyticToeplitzJacobi} & \texttt{reciprocalMinor\_eq\_original},\newline \texttt{entire\_original\_both\_signs}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begingroup\raggedright
+The historical split-pair assembly snapshot is the public repository commit
+\path{7376a2336c3fe9cceaa137b247962dde3ecfc6a3}; Appendix~\ref{app:repro}
+gives its toolchain, checks and release-file bindings. The 16 declarations
+introduced by that analytic assembly are included in the snapshot's
+364-declaration axiom audit. The current finite-width source and CI pins
+are recorded separately in the appendix.
+\par\endgroup
+
+\section{Scope limits and the motivating DH instance}
+The isolated boundary hypothesis excludes general cross-boundary modulus ties and the simple-pole hypothesis excludes repeated selected zeros. These are substantive restrictions. The theorem remains separate from the repository's general PF-to-RH bridges; imposing these restrictions there would weaken their scope. No hypothesis in Theorem~\ref{thm:entire} is discharged for an unknown off-line zeta zero by this formalization.
+
+The published computational study \emph{How sensitive are finite RH criteria? Certified Davenport--Heilbronn controls} \cite{dhcontrols} motivates this formalization. Its external interval certificates locate negative bands at shift 44 for the classical Davenport--Heilbronn control. That computational instance is distinct from a Lean instantiation of Theorem~\ref{thm:entire}: the latter would need a Lean-certified zero atlas, including coverage, simplicity, conjugation and modulus separation. Such an atlas has not been formalized. No DH numerical receipt is substituted for a Lean theorem hypothesis.
+
+\section{The actual-Xi evaluator and low rectangle}
+Use the entire normalization
+\[
+ \xi(s)=\frac{s(s-1)\Lambda_0(s)+1}{2},
+\]
+where $\Lambda_0$ is Mathlib's entire pole-subtracted completion. The extra
+polynomial and constant are essential: $\Lambda_0$ itself has a different zero
+set. The formal identity with the classical completed Xi is proved separately.
+
+\begin{theorem}[Closed low rectangle]\label{thm:rectangle}
+The actual function $\xi(s)$ is nonzero for
+$0\le\Repart s\le1$ and $|\Im s|\le141/10$.
+Consequently every zeta zero in the open critical strip satisfies
+$|\Im s|\ge141/10$.
+\end{theorem}
+
+The certificate covers the quarter-rectangle
+$[1/2,1]\times[0,141/10]$ by 44 rational balls.
+Functional symmetry and conjugation give the full rectangle.
+Each ball has a degree-12 rational complex Taylor model, with proved
+coefficient error radii. Finite exponential and logarithmic enclosures,
+a shifted Gamma approximation with its analytic remainder, and an
+Euler--Maclaurin zeta approximation with its remainder supply the models.
+The pole at $s=1$ is removed in the assembled entire function, so a tile
+meeting the real edge does not assume zeta is analytic at its pole.
+All bounds concern the actual analytic functions, not only formal polynomials.
+
+For a tile centre $c$, write $a_n=\xi^{(n)}(c)/n!$. The low coefficients have
+rational enclosures and all coefficients have the proved bound $|a_n|\le M$
+with $M=1000$. For $0<r<1$, the derivative bound used by the certificate is
+\[
+ \sup_{|z-c|\le r}|\xi'(z)|\le
+ \sum_{n=0}^{d-1}(n+1)|a_{n+1}|r^n+
+ M r^d\left(\frac{r}{(1-r)^2}+\frac{d+1}{1-r}\right).
+\]
+A rational lower bound $b$ for $|\xi(c)|$, exceeding $r$ times this bound,
+proves nonvanishing on the closed ball. A finite grid coverage proof checks
+that every cell lies in some ball; convexity reduces coverage to its four
+corners. External numerical planning chooses centres and tables, but the
+Taylor-model soundness, remainders, margins and coverage are Lean propositions.
+There is no appeal to an unchecked floating-point sign or to
+\texttt{native\_decide}. The theorem names are
+\texttt{Reinmann.XiRectangle.rectangle\_nonzero} and
+\texttt{Reinmann.XiRectangle.zetaNoLowStripZero}.
+
+\section{From the actual genus-zero product to fixed-rank PF}
+Define the entire folded function $G$ by $\xi(1/2+t)=G(t^2)$, and write
+$G(z)=\sum_{n\ge0}\mu_n z^n$. These $\mu_n$ are the repository's ordinary
+\texttt{XiMomentCoeff}; they are not multiplied by $n!$.
+PNT+'s finite-order Hadamard development \cite{pntplus} supplies the analytic
+factorization machinery. The attributed backport retains 61 source files,
+14,306 original lines and their Apache-2.0 authorship notices. The new
+application proves exact normalization, identifies analytic multiplicities,
+and derives a genus-zero product on the actual folded-Xi zero index.
+
+The order-one growth estimate for $\xi$, with a fixed positive exponent loss,
+gives order at most $3/4$ for $G$. Its Hadamard exponential factor is therefore
+constant. Nonvanishing at zero identifies the constant as $G(0)>0$; inverse-zero
+norm summability and the product identity are conclusions, not hypotheses.
+Conjugation-stable real polynomial approximants retain repeated zeros. Their
+sector positivity and locally uniform convergence transport every fixed
+ordered minor to the coefficient limit. The formal polynomial sector theorem
+is Schoenberg's classical sufficient criterion \cite{schoenberg,katkova}.
+No fixed-rank reciprocal-PF transport is used.
+
+\begin{theorem}[Classical fixed-rank consequence]\label{thm:pf43}
+Every ordered Toeplitz minor of $(\mu_n)$ of size at most 43 is nonnegative,
+at every shift.
+\end{theorem}
+\begin{proof}
+A critical-strip zero $1/2+x+i\gamma$ has $|x|\le1/2$ and, by
+Theorem~\ref{thm:rectangle}, $|\gamma|\ge14.1$. Since
+$1/2\le14.1\pi/88$, its square lies outside the open sector
+$|\arg z|<43\pi/44$. Schoenberg's polynomial criterion, applied to the
+real approximants and passed to the limit, gives PF of order 43.
+\end{proof}
+The declaration is \texttt{Reinmann.XiFinitePFCertified.finitePF43}.
+It has no theorem hypotheses, proves arbitrary ordered minors, and asserts
+nonnegativity rather than strict positivity. This is a formalization of a
+classical finite-order consequence, not a new zero-free region. The older external-input application is retained as
+\texttt{finitePF58\_of\_sevenEighths}. The current declarations
+\texttt{finitePF58} and \texttt{finitePF97} instead use the finite boxes below
+and have no theorem hypotheses. The independent seven-eighths reproduction
+on Lean~4.34.1 is a separate artifact: neither its theorem nor its compiled
+objects enter the Lean~4.30 applications.
+Neither this application nor the low rectangle proves unbounded-rank PF,
+a Green-form budget, an RH-strength ladder, or RH.
+
+
+\section{Finite-width boxes and the two-band estimate}\label{sec:finitebands}
+A full zero-free rectangle is unnecessary above the first-zero height.
+For $\delta,T\ge0$, let $\mathcal W(\delta,T)$ mean that every open-critical-strip
+zeta zero $1/2+x+i\gamma$ with $|\gamma|\le T$ satisfies $|x|\le\delta$.
+This is \texttt{FiniteHeightPFCalibration.LowHeightWidth}.
+It allows zeros on the critical line.
+
+\begin{lemma}[Two-band sufficient condition]\label{lem:twobands}
+Let $m\ge1$, $\gamma_0>0$ and $T\ge0$, and put
+$\theta_m=\pi/(2(m+1))$. Suppose every open-critical-strip zero has
+$|\gamma|\ge\gamma_0$, and suppose $\mathcal W(\delta,T)$ holds. If
+\begin{equation}\label{eq:twobands}
+ \delta\le\gamma_0\theta_m,\qquad \frac12\le T\theta_m,
+\end{equation}
+then the ordinary folded-xi coefficients are PF of order $m$.
+\end{lemma}
+\begin{proof}
+For $|\gamma|\le T$, the hypotheses give
+$|x|\le\delta\le\gamma_0\theta_m\le|\gamma|\tan\theta_m$.
+For $|\gamma|>T$, the critical-strip bound gives
+$|x|\le1/2\le T\theta_m\le|\gamma|\tan\theta_m$.
+Here $0<\theta_m<\pi/2$ and $\theta_m\le\tan\theta_m$.
+Thus each folded zero $(x+i\gamma)^2$ is outside the open sector
+$|\arg z|<m\pi/(m+1)$. The actual genus-zero product and fixed-rank sector
+bridge from the preceding section give the conclusion.
+The formal angle estimate is \texttt{angleBound\_of\_two\_bands}; it is
+combined with \texttt{XiHadamardProduct.katkovaSectorBridge}.
+\end{proof}
+
+The following boxes, including their boundaries, are now certified:
+\begin{theorem}[Finite-width certificates]\label{thm:finitewidth}
+The actual $\xi$ has no zeros on either of the closed sets
+\begin{equation}\label{eq:boxes}
+ [7/8,1]\times[-19,19],\qquad [29/40,1]\times[-32,32].
+\end{equation}
+Consequently $\mathcal W(3/8,19)$ and $\mathcal W(9/40,32)$ hold.
+Every ordered Toeplitz minor of $(\mu_n)$ of size at most $58$, respectively
+$97$, is nonnegative, at every shift.
+\end{theorem}
+\begin{proof}
+The low part of each box is covered by Theorem~\ref{thm:rectangle}.
+New rational Taylor-model tiles cover the upper-right pieces in
+Table~\ref{tab:bands}; conjugation supplies negative heights.
+Reflection $s\mapsto1-s$ then confines strip zeros to the asserted half-widths.
+Apply Lemma~\ref{lem:twobands} with $\gamma_0=141/10$ and the two rows of
+the table. The rational inequalities in \eqref{eq:twobands} follow from
+proved lower bounds for $\pi$ in Mathlib. In particular,
+\[
+ \frac38\le\frac{141\pi}{1180},\quad
+ \frac12\le\frac{19\pi}{118};\qquad
+ \frac9{40}\le\frac{141\pi}{1960},\quad
+ \frac12\le\frac{32\pi}{196}.
+\]
+The PF58 core uses \texttt{pi\_gt\_d2}; the PF97 core uses
+\texttt{pi\_gt\_d4}. All tile nonvanishing and covering statements, as well
+as the numerical angle inequalities, are Lean propositions.
+\end{proof}
+
+\begin{table}[ht]
+\centering\small
+\caption{New upper-box certificates. Each row supplements the unchanged
+44 degree-12 tiles for the full low rectangle. The tile counts refer only
+to the additional upper-right box; the PF conclusions concern arbitrary
+ordered minors, not only contiguous minors.}\label{tab:bands}
+\begin{tabular}{@{}rrrrll@{}}
+\toprule
+Order $m$ & Half-width $\delta$ & Height $T$ & New tiles & Degree & Upper box\\
+\midrule
+58 & $3/8$ & 19 & 9 & 16 & $[7/8,1]\times[14.1,19]$\\
+97 & $9/40$ & 32 & 67 & 16 & $[29/40,1]\times[14.1,32]$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The numerical capstones in \texttt{Reinmann.XiFinitePFCertified} are
+\texttt{finitePF58} and \texttt{finitePF97}; neither takes a hypothesis.
+The corresponding width-only wrappers
+\path{finitePF58_of_low_height_width} and
+\path{finitePF97_of_low_height_width}
+retain the finite-width premise but supply the proved low rectangle.
+The general calibration module remains in the default root library;
+the numerical applications are optional libraries checked explicitly in CI.
+
+No full-strip zero-free assertion is made at height $19$ or $32$.
+Critical-line zeros above $14.1$ remain allowed. These finite ranks also lie
+below the classical DH PF435 sector guarantee retained in the controls study
+\cite{dhcontrols}; they are not arithmetic discriminators between zeta and DH.
+That comparison is a mathematical scope statement, not a Lean DH instantiation.
+The unbounded-rank ladder and the repository's RH-equivalent budgets remain open.
+
+\section{Proved evaluator inputs through height 32}\label{sec:height32}
+The earlier height-$14.1$ bounds are not extrapolated. The new modules
+\texttt{FiniteBandBounds}, \texttt{FiniteBandModel},
+\texttt{FiniteBandTileRules} and \texttt{FiniteBandGeometry}
+prove the inputs needed for the new boxes.
+
+\begin{lemma}[Uniform Cauchy majorant]\label{lem:majorant32}
+If $1/2\le\Repart c\le1$, $|\Im c|\le32$ and $|z-c|=1$, then
+$|\xi(z)|\le1000$. Hence $|\xi^{(n)}(c)/n!|\le1000$ for every $n\ge0$.
+\end{lemma}
+\begin{proof}
+The real-part and height assumptions give $|c|,|c-1|\le33$, and therefore
+$|z|,|z-1|\le34$. The proved Mellin norm estimate on this real-part range gives
+\[
+ |\xi(z)|\le\frac12+2|z||z-1|e^{-1}
+ \le\frac12+2\cdot34^2\cdot\frac25<1000.
+\]
+The bound $e^{-1}\le2/5$ follows from the quadratic lower bound for $e^1$.
+Cauchy's coefficient inequality on the unit circle gives the final assertion.
+The declarations are \texttt{unit\_circle\_bound} and
+\texttt{taylor\_coefficient\_bound} in \texttt{FiniteBandBounds}.
+\end{proof}
+
+The Gamma factor is $\Gamma(1+s/2)$. Its norm bound $2$ and its coefficient
+error $4\cdot10^{-14}$ on the centred unit disks have no imaginary-height
+restriction, so the existing proofs apply without changing their domains.
+The shifted approximation uses twelve recurrence factors and the proved
+Stirling remainder. In contrast, the regularized zeta factor
+$(s-1)\zeta(s)$, analytically continued with value $1$ at $s=1$, needs a new
+height-$32$ estimate. Bounding the rising products on $|s|\le34$ in the
+endpoint-$27$ Euler--Maclaurin remainder gives a coefficient error at most
+$1/5000$. This larger error budget is propagated through the rational Taylor
+model rather than replaced by the earlier low-height constant.
+
+The shifted Gamma logarithm is enclosed by scaling by $32$ and using
+$160$ terms of the proved logarithm series on $|w|\le4/5$:
+\[
+ |\log(1+w)-\operatorname{logTaylor}_{160}(w)|\le10^{-15}.
+\]
+Addition, multiplication, reciprocals, exponentials and scaling propagate
+rational centres and outward error radii. The soundness statements identify
+these enclosures with the ordinary analytic Taylor coefficients. Combined
+with Lemma~\ref{lem:majorant32}, the same derivative-tail formula and strict
+centre-versus-variation inequality used for the low rectangle certify the
+new degree-16 balls. Arb proposes the rational tables and cover; the Lean
+kernel checks the analytic bounds, arithmetic margins and complete coverage.
+
+\appendix
+\section{Reproducing the formal theorem snapshot}\label{app:repro}
+The reproducibility pin is the full Git commit
+\begin{quote}\small\ttfamily
+7376a2336c3fe9cceaa137b247962dde3ecfc6a3
+\end{quote}
+in \url{https://github.com/sciencenerd-des/reinmann}. It uses
+\texttt{leanprover/lean4:v4.30.0} and Mathlib \texttt{v4.30.0}; the exact dependency
+resolution is recorded in \texttt{lake-manifest.json}. The original release at
+\href{https://doi.org/10.5281/zenodo.23449490}{doi:10.5281/zenodo.23449490}
+preserves that source snapshot and its 364-declaration audit. This revision uses
+the later source pin below, which includes the split-pair assembly and the new
+rectangle and sector programs. Manuscript files are separately checksum-bound.
+
+From the extracted source snapshot, or from a checkout at that commit, run
+\begin{quote}\small\ttfamily\raggedright
+lake exe cache get\par
+lake build\par
+bash scripts/verify\_axiom\_clean.sh
+\end{quote}
+The full build passes. The source scan finds no unfinished proofs or project-declared
+axioms; all 364 audited declarations depend only on \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}. The public
+\href{https://github.com/sciencenerd-des/reinmann/actions/runs/39113141784}{GitHub Actions run 39113141784}
+repeats the build and axiom audit for this exact commit and completed successfully.
+Kernel checking establishes the stated propositions and their dependencies; it
+does not certify novelty, the adequacy of mathematical hypotheses, or an unproved
+numerical application.
+
+\subsection*{Rectangle and PF43 revision snapshot}
+The additional theorem-source pin is
+\begin{quote}\small\ttfamily
+150537bf1d94eced1c22db7660f9c32936372831.
+\end{quote}
+The root build imports the Hadamard and sector chain; its audit checks
+2,608 theorem rows for standard axioms only. The optional numerical library is
+built separately: \texttt{XiRectangle} and
+\texttt{Reinmann.XiFinitePFCertified}. The hosted workflow builds shared
+dependencies, 11 shards of four tiles, then assembles and audits the rectangle
+and PF43. The final assembly refuses to rebuild missing tile artifacts.
+All fourteen jobs in
+\href{https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281}{run 39470397281}
+completed successfully for that exact source commit: the main build and root
+audit, shared dependencies, eleven tile shards and final certificate assembly.
+The final job checks the rectangle's 1,700 declarations and the unconditional
+PF43 theorem separately, using only the standard foundational axioms.
+The source supplement includes every numerical tile module, the complete
+pinned proof source and dependency configuration, explicit audit inputs,
+CI receipts and SHA256 file bindings.
+
+\subsection*{Finite-width revision and evidence snapshot}
+The current theorem-source commit is
+\begin{quote}\small\ttfamily
+b4ec4a3920973faae02d4d9f3a56456886df49c9.
+\end{quote}
+It retains Lean and Mathlib v4.30.0. All $34$ jobs of
+\href{https://github.com/sciencenerd-des/reinmann/actions/runs/39733278869}{CI run 39733278869}
+pass at that exact source: the root build and guard, shared dependencies,
+eleven low-rectangle shards, three PF58 shards, seventeen PF97 shards, and
+final assembly and audits. The final job refuses to rebuild any of the
+$44+9+67$ tiles before assembling the public theorem module.
+
+The root guard covers $2{,}643$ declarations. Separate audits check
+$47{,}896$ distinct PF58 implementation theorem constants and $363{,}579$
+PF97 constants, including generated private declarations and the public
+entry points. These are implementation counts, not counts of new results.
+All axiom lists are contained in \texttt{[propext, Classical.choice, Quot.sound]}.
+The no-hypothesis types of the canonical PF58 and PF97 declarations are
+checked directly, separately from the conditional external-input wrapper.
+
+The documentation and complete CI receipt are retained at commit
+\begin{quote}\small\ttfamily
+ad30a35e93474981528c24d91ae93338ad34958f.
+\end{quote}
+No active proof or workflow file changes between these two commits.
+The packet at
+\begin{quote}\small\raggedright
+\path{research/prime_spectral/verification_2026_10_22_pf97_closeout/}
+\end{quote}
+contains the exact all-job metadata, complete raw run logs, audit sources and
+outputs, and $1{,}192$ source/configuration SHA256 bindings to the checked
+proof commit. From the receipt checkout, the existing verifier checks it:
+\begin{quote}\small\ttfamily\raggedright
+python3 experiments/prime\_spectral/capture\_finite\_band\_ci.py\ \textbackslash\par
+\hspace*{1em}--verify research/prime\_spectral/verification\_2026\_10\_22\_pf97\_closeout
+\end{quote}
+This command validates the saved receipts and hashes; it is not a fresh
+kernel rebuild. Fresh numerical builds
+are specified by the pinned workflow and bounded tile-build scripts.
+The older source pins, published PDFs and immutable verification manifests
+remain historical. This version-3 candidate is a local, unpublished revision;
+no new Zenodo version or journal submission is claimed.
+
+The author used AI assistance for proof development, implementation and manuscript
+preparation. This preprint has not completed external human peer review.
+
+\begin{thebibliography}{12}
+\bibitem{pntplus}
+M. Cipollina and contributors, Hadamard-factorization development in
+\emph{PrimeNumberTheoremAnd}, Apache-2.0 source,
+\href{https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/tree/127b50e33f6033e2147921167a117af96d9ba4ea}{commit 127b50e33f6033e2147921167a117af96d9ba4ea}, 2026.
+The repository backport preserves upstream authorship and records its adaptations.
+\bibitem{schoenberg}
+I. J. Schoenberg, On the zeros of the generating functions of multiply positive
+sequences and functions, \emph{Annals of Mathematics} \textbf{62} (1955), 447--471.
+\href{https://doi.org/10.2307/1970073}{doi:10.2307/1970073}.
+\bibitem{katkova}
+O. M. Katkova, Multiple positivity and the Riemann zeta-function,
+\emph{Computational Methods and Function Theory} \textbf{7} (2007), 13--31.
+\href{https://doi.org/10.1007/BF03321628}{doi:10.1007/BF03321628}.
+The preprint is \href{https://arxiv.org/abs/math/0505174}{arXiv:math/0505174} (2005).
+
+\bibitem{asw}
+M. Aissen, I. J. Schoenberg and A. M. Whitney,
+On the generating functions of totally positive sequences I,
+\emph{Journal d'Analyse Math\'ematique} \textbf{2} (1952), 93--103.
+\href{https://doi.org/10.1007/BF02786970}{doi:10.1007/BF02786970}.
+\bibitem{hornjohnson}
+R. A. Horn and C. R. Johnson, \emph{Matrix Analysis}, second edition,
+Cambridge University Press, 2013.
+\href{https://doi.org/10.1017/CBO9781139020411}{doi:10.1017/CBO9781139020411}.
+\bibitem{bapat}
+R. B. Bapat, Outer inverses: Jacobi type identities and nullities of submatrices,
+\emph{Linear Algebra and its Applications} \textbf{361} (2003), 107--120.
+\href{https://doi.org/10.1016/S0024-3795(02)00317-8}{doi:10.1016/S0024-3795(02)00317-8}.
+\bibitem{dhcontrols}
+B. Mondal, \emph{How sensitive are finite RH criteria? Certified Davenport--Heilbronn controls},
+unreviewed preprint, 2026.
+\href{https://doi.org/10.5281/zenodo.23401370}{doi:10.5281/zenodo.23401370}.
+\bibitem{edrei}
+A. Edrei, Proof of a conjecture of Schoenberg on the generating function of a totally positive sequence, \emph{Canadian Journal of Mathematics} \textbf{5} (1953), 86--94.
+\href{https://doi.org/10.4153/CJM-1953-010-3}{doi:10.4153/CJM-1953-010-3}.
+\bibitem{bumpdiaconis}
+D. Bump and P. Diaconis, Toeplitz minors, \emph{Journal of Combinatorial Theory, Series A} \textbf{97} (2002), 252--271.
+\href{https://doi.org/10.1006/jcta.2001.3214}{doi:10.1006/jcta.2001.3214}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,25 @@
+{
+  "status": "local_unpublished_formalization_v3_draft_validated",
+  "proof_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+  "proof_CI_run": 39733278869,
+  "proof_CI_jobs_succeeded": 34,
+  "proof_CI_packet_manifest_sha256": "99880ea6083e0aaecfbc5dbc50492e6c4cd1304b38d0443a1fb3200f4cd649bf",
+  "saved_CI_packet_reverified_this_round": true,
+  "fresh_kernel_rebuild_this_round": false,
+  "tectonic_compilation": "success_without_warnings",
+  "desktop_latex_compilation": "success",
+  "page_count": 9,
+  "abstract_source_word_count": 193,
+  "extracted_PDF_word_count": 4603,
+  "references_resolved": true,
+  "publication_performed": false,
+  "external_human_review_completed": false,
+  "active_proof_files_modified": false,
+  "historical_files_unchanged": true,
+  "paper_sha256": {
+    "paper/formal_split_pair/v3/main.pdf": "6b56d6788c689e468ecf226015d97e0f4dcd97b692259cc9a0d98795a8c51cd5",
+    "paper/formal_split_pair/v3/RELEASE_GATE.md": "f84b40ee07b4b3f09e6351c8df2b09ba79c52d7c335553016ce0a1a267fed508",
+    "paper/formal_split_pair/v3/main.tex": "4d7d81824c9b9c54e8d658980f77ccefa6ad0cf44c2e15fb827bf11ae9bd2dcb",
+    "paper/formal_split_pair/v3/CHANGES.md": "bd0366fbc41b17c1db690954176774346598477535b07d0a41c4e4f60f4155f3"
+  }
+}

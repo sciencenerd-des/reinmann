@@ -1,0 +1,55 @@
+{
+  "proof_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+  "receipt_commit": "ad30a35e93474981528c24d91ae93338ad34958f",
+  "theorem_names_checked_against_pinned_sources": {
+    "Reinmann/FiniteHeightPFCalibration.lean": [
+      "angleBound_of_two_bands",
+      "finitePF58_of_two_bands",
+      "finitePF97_of_low_height_width"
+    ],
+    "Reinmann/FiniteBandBounds.lean": [
+      "unit_circle_bound",
+      "taylor_coefficient_bound",
+      "gamma_norm_on_disk",
+      "gamma_coefficient_error_le",
+      "zeta_coefficient_error_le",
+      "log_series_error"
+    ],
+    "Reinmann/XiFinitePFCertified.lean": [
+      "finitePF43",
+      "finitePF58_of_sevenEighths",
+      "finitePF58_of_low_height_width",
+      "finitePF58",
+      "finitePF97_of_low_height_width",
+      "finitePF97"
+    ],
+    "XiBand58/Final.lean": [
+      "upper_box_nonzero",
+      "box_nonzero",
+      "lowHeightWidth",
+      "finitePF58"
+    ],
+    "XiBand97/Final.lean": [
+      "upper_box_nonzero",
+      "box_nonzero",
+      "lowHeightWidth",
+      "finitePF97"
+    ]
+  },
+  "source_sha256": {
+    "Reinmann/FiniteHeightPFCalibration.lean": "374df31c505b7ae568e682c3c1db807f19b1c8792aa2bfaf803c84c80285546d",
+    "Reinmann/FiniteBandBounds.lean": "f4d8d2a8ddf905e990cb0d87adcfd77b2c446704be0a59c3a5af6a4ab34408cf",
+    "Reinmann/XiFinitePFCertified.lean": "3f00332de4e1e9edf335e4242cb75d92e12fc2759d3109d0b1e887383c5ccfab",
+    "XiBand58/Final.lean": "cb7381c0c643c7d518e91c223624c6fa5d279750cf48b76f2579962ae18d39f7",
+    "XiBand97/Final.lean": "81b10c3a6d9b9a4beab3c0b4320a8c2bc8dc7c7d807d2481e4a84c2726df3266"
+  },
+  "historical_release_files_unchanged_sha256": {
+    "paper/formal_split_pair/main.tex": "cb43a8aa501a101d68744d79e339dd875f51d6d46539f6349586e881809f1c01",
+    "paper/formal_split_pair/main.pdf": "afd4f7274f77973c719a557490dc194d7981dca705f94c77451c7c6144a83b00",
+    "paper/formal_split_pair/RELEASE.md": "8c998b9962e51af28b8fcec0ce1db9ddc2c2acdb1c70d52a7ae7a42d9fec8c35",
+    "paper/formal_split_pair/v2/main.tex": "874365b7ae1a8f5258beb0633a9254e6cd2cafe7601aa0fd370a9b90654eca0a",
+    "paper/formal_split_pair/v2/main.pdf": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604",
+    "paper/formal_split_pair/v2/RELEASE_GATE.md": "3364d83e5c4cd1260f98f69c1a50dd0fa656ac3172815dfb26099f22bddae2dd"
+  },
+  "scope": "Name/source cross-check and saved CI receipt validation; no fresh kernel elaboration in this manuscript-only round."
+}

@@ -1,0 +1,16 @@
+{
+  "tex_sha256": "4d7d81824c9b9c54e8d658980f77ccefa6ad0cf44c2e15fb827bf11ae9bd2dcb",
+  "pdf_sha256": "6b56d6788c689e468ecf226015d97e0f4dcd97b692259cc9a0d98795a8c51cd5",
+  "pages_rendered_and_inspected": 9,
+  "render_command": "pdftoppm -r 105 -png main.pdf page",
+  "inspected_full_resolution_pages": [
+    4,
+    6,
+    7,
+    9
+  ],
+  "all_final_pages_inspected_as_contact_sheets": true,
+  "visual_findings": "No clipping, overlap, broken glyphs, table overflow or unreadable equation layout observed.",
+  "external_human_review_completed": false,
+  "publication_performed": false
+}

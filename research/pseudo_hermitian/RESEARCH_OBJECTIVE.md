@@ -81,10 +81,11 @@ the optional rectangle has its own 1,700-declaration audit.
 | Milestone | Status | Remaining boundary |
 | --- | --- | --- |
 | Target A, entire-function split-pair extension | **L, proved** (`SplitPairMixedRows`, `AnalyticSplitPair`, `AnalyticToeplitzJacobi`) | Simple selected zeros and an isolated boundary-pair modulus tie; standalone, no PF-to-RH rewiring |
-| Target B, actual-Xi low rectangle | **L, proved; CI verified** (`XiRectangle.rectangle_nonzero`, `XiRectangle.zetaNoLowStripZero`) | Closed `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`; no height-32 certificate |
+| Target B, actual-Xi low rectangle | **L, proved; CI verified** (`XiRectangle.rectangle_nonzero`, `XiRectangle.zetaNoLowStripZero`) | Closed `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`; higher finite-width boxes allow critical-line zeros |
 | Actual folded-Xi canonical product and fixed-rank sector bridge | **L, proved; CI verified** (`XiHadamardProduct`) | Attributed PNT+ Hadamard backport discharges inverse-zero summability and normalized genus-zero identity, with multiplicities retained; the angle bound is still needed at each rank |
 | Ordinary-coefficient PF43 | **L, unconditional; CI verified** (`XiFinitePFCertified.finitePF43`) | All ordered minors through rank 43 are nonnegative; no unbounded-rank or strict-positivity conclusion |
-| PF58 | **conditional** (`XiFinitePFCertified.finitePF58`) | Retains `QuasiRiemannHypothesisSevenEighths`; external statement match is not an import into Lean 4.30 |
+| PF58 | **L, unconditional; CI verified** (`XiFinitePFCertified.finitePF58`) | Width 3/8 through height 19; all 17 jobs of [run 39730502820](https://github.com/sciencenerd-des/reinmann/actions/runs/39730502820) passed at `1d97a06`; no external seven-eighths input |
+| PF97 finite-width extension | **candidate; full CI pending** (`XiBand97`) | Width 9/40 through height 32; 67 proposed tiles, complete covering geometry and one high tile checked locally |
 
 [Current product/sector scope report](../prime_spectral/PNT_HADAMARD_BACKPORT_2026_10_20.md).
 The root CI coverage now supersedes that report's dated local-only coverage

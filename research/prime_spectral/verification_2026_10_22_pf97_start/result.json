@@ -1,0 +1,14 @@
+{
+  "status": "PF97_candidate_ready_for_full_split_CI",
+  "successful_parent_PF58_commit": "1d97a061c5b983f853cf6ca861004e20bd84bf50",
+  "successful_parent_PF58_run": 39730502820,
+  "required_new_workflow_jobs": 34,
+  "PF97_tiles": 67,
+  "PF97_modules": 473,
+  "new_numerical_tiles_checked_locally": 1,
+  "full_PF97_verified": false,
+  "RH_proved": false,
+  "source_proposal_check_output_sha256": "2864e353e2328a07db70f6a8bb5499fad1f4901fee96d971b277b5d587024245",
+  "pilot_manifest_sha256": "93930ceac927d1930ed0b78347f3c4a88ae99159c1698534c7c7e611e8e6514b",
+  "default_root_and_shared_proof_sources_unchanged_from_parent": true
+}

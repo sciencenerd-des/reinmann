@@ -12,7 +12,9 @@ ROOT = Path(__file__).resolve().parents[2]
 PIN = 'bd12b0e0279f6d0edc5d1fa930ef5cbf34c5377b'
 FILES = ['Reinmann.lean', 'Reinmann/AxiomAudit.lean', 'lakefile.toml',
          '.github/workflows/ci.yml', 'Reinmann/FiniteHeightPFCalibration.lean',
-         'Reinmann/XiFinitePFCertified.lean']
+         'Reinmann/XiFinitePFCertified.lean', 'README.md',
+         'research/pseudo_hermitian/RESEARCH_OBJECTIVE.md',
+         'research/RH_DH_DISCRIMINATOR_REGISTER.json', 'research/RH_DH_DISCRIMINATOR_REGISTER.md']
 
 
 def replay(output):
@@ -24,8 +26,10 @@ def replay(output):
             target = overlay / path.name
             if path.name == 'experiments':
                 link_children(path, target, {'prime_spectral': {}})
-            elif path.name in {'Reinmann', 'research'}:
+            elif path.name == 'Reinmann':
                 link_children(path, target, {})
+            elif path.name == 'research':
+                link_children(path, target, {'pseudo_hermitian': {}})
             elif path.name == '.github':
                 link_children(path, target, {'workflows': {}})
             else:

@@ -26,3 +26,8 @@ moreLeanArgs = ["-j3"]
 [[lean_lib]]
 name = "XiBand58"
 moreLeanArgs = ["-j3"]
+
+# Optional finite-width extension to height 32.
+[[lean_lib]]
+name = "XiBand97"
+moreLeanArgs = ["-j3"]

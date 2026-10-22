@@ -1,0 +1,86 @@
+{
+  "status": "complete",
+  "rank": 97,
+  "jobs": 1,
+  "Gamma_jobs": 1,
+  "wall_seconds": 431.88459654094186,
+  "rows": [
+    {
+      "targets": [
+        "Reinmann.FiniteBandModel",
+        "Reinmann.FiniteBandTileRules",
+        "XiBand97.Cover"
+      ],
+      "seconds": 17.783500874997117,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_000.log",
+      "log_sha256": "23040bd52dbb302e3cf4f5647610d6ea7a2756a2f245a0ba1913df00969851ed"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066Gamma"
+      ],
+      "seconds": 182.15369704109617,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_001.log",
+      "log_sha256": "b7d9829858ec5fcc0741ec49354786688a9c758fe636408e7f30cb77ad2c24cb"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066Terms0"
+      ],
+      "seconds": 44.577664375072345,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_002.log",
+      "log_sha256": "99c3222c1ac7f9c2e00d8b4060df8646432959281f5abaab3f7b672efc75914e"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066Terms1"
+      ],
+      "seconds": 39.95587449998129,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_003.log",
+      "log_sha256": "065dd70f30d0f54fcd6fcb5db328c8f217178c532c634dbb9e6fd4073706264d"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066Terms2"
+      ],
+      "seconds": 33.759831042028964,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_004.log",
+      "log_sha256": "af90cfa2bd66752fcdf696c591f729feb868008d61370b68287b30310d59b555"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066Terms3"
+      ],
+      "seconds": 34.92090595897753,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_005.log",
+      "log_sha256": "e5ad96d23831b00b7b8f2f037b01689708b3270fb13aa18e52a0d6b47663cddb"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066Zeta"
+      ],
+      "seconds": 58.113678667112254,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_006.log",
+      "log_sha256": "9ae288a8a74a066b72bacea0bf84ba7d45c5765237dd5e065aa8198725b00783"
+    },
+    {
+      "targets": [
+        "XiBand97.Tile066"
+      ],
+      "seconds": 20.60955283290241,
+      "returncode": 0,
+      "log": "/Users/biswajitmondal/.cache/reinmann/pf97-pilot-tile066-20261021/batch_007.log",
+      "log_sha256": "2e5db34aa450ba35a64e83012f7cedc4c86cd09a4fd085463d24ae93cde895e2"
+    }
+  ],
+  "tiles_source_sha256": {
+    "XiBand97/Tile066.lean": "e1882150136002587204c503893ba340eabb666597364b8377444d46a24aac47"
+  }
+}

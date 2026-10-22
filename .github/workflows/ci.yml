@@ -81,7 +81,7 @@ jobs:
         run: lake exe cache get || true
 
       - name: Build shared rectangle dependencies
-        run: lake build Reinmann.RectangleModel XiRectangle.Data XiRectangle.Cover Reinmann.FiniteBandModel Reinmann.FiniteBandTileRules XiBand58.Cover
+        run: lake build Reinmann.RectangleModel XiRectangle.Data XiRectangle.Cover Reinmann.FiniteBandModel Reinmann.FiniteBandTileRules XiBand58.Cover XiBand97.Cover
 
       - name: Pack shared dependencies
         run: |
@@ -288,8 +288,90 @@ jobs:
           name: xi-band58-receipts-${{ matrix.shard }}
           path: tmp/xi-band58-shard
 
+  xi-band97-shard:
+    needs: xi-rectangle-deps
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    strategy:
+      fail-fast: true
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            -o elan-init.sh
+          bash elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Cache Lean dependencies
+        uses: actions/cache@v4
+        with:
+          path: .lake/packages
+          key: rectangle-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+          restore-keys: |
+            rectangle-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Fetch cached mathlib
+        run: lake exe cache get || true
+
+      - name: Restore shared rectangle dependencies
+        uses: actions/download-artifact@v4
+        with:
+          name: xi-rectangle-deps
+          path: tmp/deps
+
+      - name: Unpack shared rectangle dependencies
+        run: |
+          mkdir -p .lake/build
+          tar --zstd -xf tmp/deps/deps.tar.zst -C .lake/build
+          rm -rf tmp/deps
+
+      - name: Build up to four PF97 tiles
+        run: |
+          first=$(( ${{ matrix.shard }} * 4 ))
+          last=$(( first + 3 ))
+          if [ "$last" -gt 66 ]; then last=66; fi
+          tiles=$(seq -s, "$first" "$last")
+          echo "tiles $tiles"
+          python3 experiments/prime_spectral/build_finite_band.py --rank 97 --jobs 2 \
+            --tiles "$tiles" --output tmp/xi-band97-shard
+
+      - name: Pack tile outputs
+        run: |
+          first=$(( ${{ matrix.shard }} * 4 ))
+          last=$(( first + 3 ))
+          if [ "$last" -gt 66 ]; then last=66; fi
+          files=""
+          for i in $(seq "$first" "$last"); do
+            n=$(printf 'Tile%03d' "$i")
+            files="$files $(cd .lake/build && ls -d lib/lean/XiBand97/$n* ir/XiBand97/$n*)"
+          done
+          tar --zstd -cf tmp/tiles.tar.zst -C .lake/build $files
+
+      - name: Upload tile outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-band97-tiles-${{ matrix.shard }}
+          path: tmp/tiles.tar.zst
+          compression-level: 0
+          retention-days: 3
+
+      - name: Retain shard receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-band97-receipts-${{ matrix.shard }}
+          path: tmp/xi-band97-shard
+
   xi-rectangle-certificate:
-    needs: [xi-rectangle-shard, xi-band58-shard]
+    needs: [xi-rectangle-shard, xi-band58-shard, xi-band97-shard]
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -351,6 +433,12 @@ jobs:
             tar --zstd -xf "$dir/tiles.tar.zst" -C .lake/build
             rm -rf "$dir"
           done
+          for k in $(seq 0 16); do
+            dir="tmp/band97-tiles-$k"
+            gh run download "$GITHUB_RUN_ID" -n "xi-band97-tiles-$k" -D "$dir"
+            tar --zstd -xf "$dir/tiles.tar.zst" -C .lake/build
+            rm -rf "$dir"
+          done
           df -h /
         env:
           GH_TOKEN: ${{ github.token }}
@@ -359,9 +447,10 @@ jobs:
         run: |
           lake build $(for i in $(seq 0 43); do printf 'XiRectangle.Tile%03d ' "$i"; done) --no-build
           lake build $(for i in $(seq 0 8); do printf 'XiBand58.Tile%03d ' "$i"; done) --no-build
+          lake build $(for i in $(seq 0 66); do printf 'XiBand97.Tile%03d ' "$i"; done) --no-build
 
       - name: Assemble the closed rectangle and PF43
-        run: lake build XiRectangle Reinmann.XiFinitePFCertified XiBand58
+        run: lake build XiRectangle Reinmann.XiFinitePFCertified XiBand58 XiBand97
 
       - name: Audit rectangle theorem dependencies and source
         run: python3 experiments/prime_spectral/verify_xi_rectangle.py --live-audit
@@ -383,3 +472,13 @@ jobs:
         with:
           name: xi-band58-audit
           path: tmp/xi-band58-audit
+
+      - name: Audit finite-band PF97 and every generated theorem
+        run: python3 experiments/prime_spectral/verify_finite_band.py --rank 97 --live-audit --output tmp/xi-band97-audit
+
+      - name: Retain PF97 audit receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xi-band97-audit
+          path: tmp/xi-band97-audit

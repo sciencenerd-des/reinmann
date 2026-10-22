@@ -59,4 +59,12 @@ That identifies the arithmetic obstruction to transferring its argument;
 Euler-product signs or support alone are still no positivity proof. The
 external 7/8 statement has now been rebuilt and standard-axiom audited on
 Lean 4.34.1; see the [replay record](prime_spectral/EXTERNAL_SEVEN_EIGHTHS_REPLAY_2026_10_21.md).
-A compatible local Lean 4.30 PF58 integration remains a separate obligation.
+The independent [finite-width certificate](prime_spectral/PF58_CERTIFIED_2026_10_22.md)
+now proves PF58 on Lean 4.30. The global seven-eighths theorem remains a separate
+Lean 4.34.1 reproduction. Its receipt's local-PF58 flag records that earlier
+snapshot. PF97 is a finite-width candidate awaiting its full CI gate.
+
+The finite ranks 58 and 97 are below the classical DH PF435 sector guarantee
+already retained above. These controls are therefore shared finite strengthening,
+with no new arithmetic discriminator proposed. No new DH scan or first-failure
+claim accompanies these certificates.

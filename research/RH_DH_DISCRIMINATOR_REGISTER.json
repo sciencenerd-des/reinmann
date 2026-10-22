@@ -135,6 +135,35 @@
         "receipt_sha256": "49fbbfa26ec8c2c5cb6ae9ddebfd7967ee09def569a606f2b21bff2c8dbdb38b",
         "local_Lean430_PF58_unconditional": false
       }
+    },
+    {
+      "id": "finite_width_PF58",
+      "target": "FinitePF XiMomentCoeff 58; ordinary coefficients, all ordered minors and all shifts",
+      "classification": "finite_strengthening_locally_certified",
+      "finite_zero_input": "LowHeightWidth (3/8) 19 plus the proved first-zero bound 141/10",
+      "dh_analogue": "The corresponding ordinary-coefficient DH sequence is PF58; the retained classical PF435 sector guarantee already implies this finite order. This is not a Lean DH instantiation.",
+      "failure": {
+        "kind": "no_failure_expected_at_this_finite_order",
+        "globally_first": false
+      },
+      "arithmetic_property": "No new arithmetic discriminator is proposed; this is shared finite strengthening.",
+      "proof_commit": "1d97a061c5b983f853cf6ca861004e20bd84bf50",
+      "CI_run": 39730502820,
+      "CI_jobs_succeeded": 17,
+      "receipt": "research/prime_spectral/verification_2026_10_22_pf58_closeout/result.json"
+    },
+    {
+      "id": "finite_width_PF97",
+      "target": "FinitePF XiMomentCoeff 97; ordinary coefficients, all ordered minors and all shifts",
+      "classification": "finite_strengthening_candidate",
+      "finite_zero_input": "LowHeightWidth (9/40) 32 plus the proved first-zero bound 141/10",
+      "dh_analogue": "The corresponding finite DH order is likewise below the retained classical PF435 guarantee; no Lean DH instantiation is claimed.",
+      "failure": {
+        "kind": "no_failure_expected_at_this_finite_order",
+        "globally_first": false
+      },
+      "arithmetic_property": "No RH-separating inequality is proposed. The current task is a finite numerical formalization.",
+      "status": "67 proposed tiles; cover and one high tile checked locally; full CI pending"
     }
   ]
 }

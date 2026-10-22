@@ -36,10 +36,25 @@ def verify(rank, live, output):
         print(f'Checked {len(modules)} generated {library} source files; no proof claim from this check.')
         return
     output.mkdir(parents=True, exist_ok=True)
+    critical = [ROOT / name for name in [
+        'Reinmann/FiniteHeightPFCalibration.lean', 'Reinmann/XiFinitePFCertified.lean',
+        'Reinmann.lean', 'Reinmann/AxiomAudit.lean', 'lean-toolchain', 'lake-manifest.json',
+        'lakefile.toml', '.github/workflows/ci.yml',
+        'experiments/prime_spectral/verify_finite_band.py',
+        'experiments/prime_spectral/generate_finite_band_certificates.py',
+        'experiments/prime_spectral/rectangle_model.py',
+        'experiments/prime_spectral/generate_rectangle_certificates.py']]
+    provenance = modules+shared+[plan]+critical
+    proof_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    for path in provenance:
+        recorded = subprocess.check_output(['git', 'show', proof_commit+':'+str(path.relative_to(ROOT))], cwd=ROOT)
+        assert recorded == path.read_bytes(), ('Dirty proof source cannot be attributed to HEAD', path)
+    subprocess.run(['lake', 'build', library, 'Reinmann.XiFinitePFCertified', '--no-build'],
+                   cwd=ROOT, check=True)
     source = f'''import {library}
 import Reinmann.XiFinitePFCertified
 
-example : Reinmann.FinitePF Reinmann.XiMomentCoeff {rank} := Reinmann.{library}.finitePF{rank}
+example : Reinmann.FinitePF Reinmann.XiMomentCoeff {rank} := Reinmann.XiFinitePFCertified.finitePF{rank}
 
 open Lean in
 run_cmd do
@@ -63,8 +78,8 @@ run_cmd do
       logInfo m!"'{{n.toString}}' depends on axioms: {{axioms.qsort Name.lt |>.map MessageData.ofConstName |>.toList}}"
   logInfo m!"BAND_AUDIT_COUNT {{names.size}}"
 
-#print axioms Reinmann.XiFinitePFCertified.finitePF58_of_low_height_width
-#print axioms Reinmann.XiFinitePFCertified.finitePF58
+#print axioms Reinmann.XiFinitePFCertified.finitePF{rank}_of_low_height_width
+#print axioms Reinmann.XiFinitePFCertified.finitePF{rank}
 '''
     # The local file exists solely for this live kernel check, not as a proof assumption.
     tmp_root = ROOT / 'tmp'
@@ -91,10 +106,9 @@ run_cmd do
     receipt = {'status': 'actual_finite_band_kernel_audit_succeeded', 'rank': rank,
                'tiles': data['tile_count'], 'theorem_declarations_audited': count+2,
                'standard_axioms_only': True, 'finitePF_unconditional': True,
-               'RH_proved': False, 'proof_commit': subprocess.check_output(
-                   ['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+               'RH_proved': False, 'proof_commit': proof_commit,
                'source_sha256': {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
-                                  for p in modules+shared+[plan]},
+                                  for p in provenance},
                'audit_log_sha256': hashlib.sha256(result.stdout).hexdigest()}
     (output / 'result.json').write_text(json.dumps(receipt, indent=2)+'\n')
     print(f'AXIOM-CLEAN: {count+2} actual finite-band declarations; unconditional PF{rank}.')

@@ -15,3 +15,16 @@
   DH limitations, AI disclosure and the statement that RH is not proved.
 - Retain older pins and audits explicitly as historical snapshots. The published
   v1/v2 artifacts are not edited. This new revision remains local and unpublished.
+
+## Pre-release review corrections
+
+- State the Platt–Trudgian (2021) height-3·10¹² benchmark explicitly in §1
+  and derive its approximately 9.42·10¹² PF consequence in §10. These are
+  consequences of published computation, not locally certified Lean ranks.
+- Explain the printed PF44/angle-43π/44 indexing mismatch in Katkova's
+  Theorem 1 and the conservative PF43 instance formalized here.
+- Cite OpenAI's unrefereed preprint and formalization at exact commit 1581d4c,
+  and cite the separate checksum-bound replay packet at ad30a35.
+- Retain the split-pair-led title and add an explicit roadmap for the two parts.
+- Preserve the earlier local draft receipt at commit 9e09d56; the new validation
+  receipt supersedes its manuscript hashes without rewriting that manifest.

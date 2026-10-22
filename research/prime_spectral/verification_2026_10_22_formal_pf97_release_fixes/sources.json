@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-10-22",
+  "sources": [
+    {
+      "id": "platttrudgian",
+      "primary_url": "https://doi.org/10.1112/blms.12460",
+      "author_preprint": "https://arxiv.org/abs/2004.09765",
+      "verified": "Bull. Lond. Math. Soc. 53 (2021), no. 3, 792–797; rigorous RH verification to 3*10^12."
+    },
+    {
+      "id": "katkova",
+      "primary_url": "https://arxiv.org/pdf/math/0505174",
+      "verified": "Preprint pp.5–6: Theorem B uses m*pi/(m+1); Theorem 1 prints PF44 with sector 43*pi/44. The manuscript qualifies the version and uses conservative PF43."
+    },
+    {
+      "id": "openai78",
+      "primary_url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf",
+      "source_header": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "verified": "Title, OpenAI authorship, 30 September 2026 date and pinned preprint path checked; cited as unrefereed."
+    },
+    {
+      "id": "sevenreplay",
+      "primary_url": "https://github.com/sciencenerd-des/reinmann/tree/ad30a35e93474981528c24d91ae93338ad34958f/research/prime_spectral/verification_2026_10_21_external_seven_eighths",
+      "verified": "Existing packet integrity verifier passed: 5 bindings; 2943 source modules. No fresh kernel replay this round."
+    }
+  ]
+}

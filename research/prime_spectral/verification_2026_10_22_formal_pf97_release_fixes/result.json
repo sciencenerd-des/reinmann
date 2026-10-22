@@ -1,0 +1,35 @@
+{
+  "status": "local_pre_release_corrections_validated",
+  "prior_local_draft_commit": "9e09d56d45e2776422c58b4dafc513637755dfda",
+  "prior_draft_manifest_sha256": "f8ec91faa1918f24bbd2093918ae96ee64e3661aa0af4818291e17e81531ee9f",
+  "prior_immutable_receipts_unchanged": true,
+  "published_v1_v2_unchanged": true,
+  "active_Lean_or_CI_files_changed": false,
+  "compilers": {
+    "tectonic": "success_without_warnings",
+    "desktop_editor": "success"
+  },
+  "all_references_resolved": true,
+  "bibliography_entries": 12,
+  "page_count": 10,
+  "extracted_word_count": 4945,
+  "external_replay_packet_integrity_reverified": true,
+  "fresh_kernel_rebuild_this_round": false,
+  "classical_benchmark": {
+    "T": 3000000000000,
+    "zero_width_below_T": 0,
+    "two_band_order_condition": "m+1 <= pi*T",
+    "conservative_integer_order": "floor(pi*T)-1",
+    "approximate_order": "9.42e12",
+    "Lean_certificate_at_this_scale_claimed": false
+  },
+  "title_decision": "Retain split-pair-first title and section order; add explicit two-part roadmap.",
+  "pushed": false,
+  "published": false,
+  "paper_sha256": {
+    "paper/formal_split_pair/v3/main.pdf": "66d6e7c7b03be2817cb3359db2aca860f2946b016d7edd56eb3b6f3b93bfca41",
+    "paper/formal_split_pair/v3/RELEASE_GATE.md": "ff0879d2aa43bd1646c52cfd27548ee4ec3fadc59480540a894575e609396858",
+    "paper/formal_split_pair/v3/main.tex": "c972d8c52d6d17b5319bd117dd1ca26850abb3d531cd87cc9c561f3705513092",
+    "paper/formal_split_pair/v3/CHANGES.md": "41f7e9aa3d85b58c5c170559f56acdd105a91c5df14f342e20f2bac597086236"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pdf_sha256": "66d6e7c7b03be2817cb3359db2aca860f2946b016d7edd56eb3b6f3b93bfca41",
+  "tex_sha256": "c972d8c52d6d17b5319bd117dd1ca26850abb3d531cd87cc9c561f3705513092",
+  "pages_rendered_and_inspected": 10,
+  "contact_sheets_inspected": [
+    1,
+    2,
+    3
+  ],
+  "new_material_full_page_inspections": [
+    6,
+    7,
+    10
+  ],
+  "findings": "No clipping, overlap, missing glyphs or table overflow observed. Bibliography consolidated on page 10.",
+  "external_human_peer_review_completed": false,
+  "published": false
+}

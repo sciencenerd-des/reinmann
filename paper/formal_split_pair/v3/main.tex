@@ -23,6 +23,15 @@ We formalize in Lean a pole-dominance criterion for sign oscillation of contiguo
 \section{Scope and coefficient conventions}
 The algebraic and analytic mechanisms here are classical. Aissen, Schoenberg and Whitney's work on totally positive sequences \cite{asw} provides the finite polynomial background. Edrei's proof already relates minors of a sequence to complementary minors of its reciprocal and uses pole information in total-positivity arguments \cite{edrei}. Toeplitz determinants and Schur functions have a broader classical and modern literature; see, for example, \cite{bumpdiaconis}. Our contribution is an explicit, checked assembly of the finite determinant expansion, its analytic perturbation bound, and the bridge for actual Taylor coefficients. We make no claim to a new total-positivity characterization.
 
+The ranks $43$, $58$ and $97$ below measure formal coverage, not new
+mathematical information about the zeta zero set. Platt and Trudgian
+\cite{platttrudgian} rigorously verified RH through height $3\cdot10^{12}$;
+the same two-band argument already gives PF order about $9.42\cdot10^{12}$
+from that published computation (Section~\ref{sec:finitebands}). We do not
+claim a Lean certificate at that height or rank. We retain the split-pair
+assembly as the first part of the paper (Sections~2--5), followed by the
+actual-xi certificates and their finite-order consequences (Sections~8--11).
+
 Let $F$ be entire, with $F(0)=1$, and write
 \[
  F(z)=\sum_{k\ge0}\alpha_k z^k,\qquad
@@ -289,15 +298,24 @@ $1/2\le14.1\pi/88$, its square lies outside the open sector
 $|\arg z|<43\pi/44$. Schoenberg's polynomial criterion, applied to the
 real approximants and passed to the limit, gives PF of order 43.
 \end{proof}
+This low-height sector argument appears in Theorem~1 of Katkova's
+preprint version \cite{katkova}. Its displayed sector $43\pi/44$ corresponds to
+$m=43$ in that paper's Theorem~B, although Theorem~1 prints PF44. We use the
+conservative rank $43$ justified by the displayed angle; the indexing
+correction is not a new zero-location result.
+
 The declaration is \texttt{Reinmann.XiFinitePFCertified.finitePF43}.
 It has no theorem hypotheses, proves arbitrary ordered minors, and asserts
 nonnegativity rather than strict positivity. This is a formalization of a
-classical finite-order consequence, not a new zero-free region. The older external-input application is retained as
-\texttt{finitePF58\_of\_sevenEighths}. The current declarations
+classical finite-order consequence, not a new zero-free region. The older
+external-input application \texttt{finitePF58\_of\_sevenEighths} concerns
+OpenAI's unrefereed preprint \cite{openai78}. The current declarations
 \texttt{finitePF58} and \texttt{finitePF97} instead use the finite boxes below
-and have no theorem hypotheses. The independent seven-eighths reproduction
-on Lean~4.34.1 is a separate artifact: neither its theorem nor its compiled
-objects enter the Lean~4.30 applications.
+and have no theorem hypotheses. The independent Lean~4.34.1 reproduction of
+the pinned seven-eighths statement is recorded in the checksum-bound replay
+packet \cite{sevenreplay}. Neither the external theorem nor its compiled
+objects enter the Lean~4.30 applications. Kernel replay does not constitute
+refereeing of the accompanying preprint.
 Neither this application nor the low rectangle proves unbounded-rank PF,
 a Green-form budget, an RH-strength ladder, or RH.
 
@@ -330,6 +348,20 @@ bridge from the preceding section give the conclusion.
 The formal angle estimate is \texttt{angleBound\_of\_two\_bands}; it is
 combined with \texttt{XiHadamardProduct.katkovaSectorBridge}.
 \end{proof}
+
+\paragraph{Classical computational benchmark.}
+Set $T=3\cdot10^{12}$ and use Platt--Trudgian's published verification
+\cite{platttrudgian} to supply $\mathcal W(0,T)$. The first inequality in
+\eqref{eq:twobands} is then automatic, and the second is equivalent to
+$m+1\le\pi T$. Thus Lemma~\ref{lem:twobands} gives, from that external
+computational input,
+\[
+ m_{\mathrm{lit}}=\lfloor\pi(3\cdot10^{12})\rfloor-1
+     \approx9.42\cdot10^{12}.
+\]
+This is a mathematical consequence of the published computation, not a
+locally checked Lean conclusion at that scale. The much smaller orders
+below quantify the extent of the present kernel-certified computation.
 
 The following boxes, including their boundaries, are now certified:
 \begin{theorem}[Finite-width certificates]\label{thm:finitewidth}
@@ -535,7 +567,27 @@ no new Zenodo version or journal submission is claimed.
 The author used AI assistance for proof development, implementation and manuscript
 preparation. This preprint has not completed external human peer review.
 
+\clearpage
 \begin{thebibliography}{12}
+\bibitem{platttrudgian}
+D. Platt and T. Trudgian, The Riemann hypothesis is true up to $3\cdot10^{12}$,
+\emph{Bulletin of the London Mathematical Society} \textbf{53} (2021), no.~3,
+792--797. \href{https://doi.org/10.1112/blms.12460}{doi:10.1112/blms.12460}.
+\bibitem{openai78}
+\begingroup\raggedright
+OpenAI, \emph{The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane
+$\Repart s>7/8$}, unrefereed preprint, 30 September 2026.
+\href{https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf}{Pinned preprint}
+and \href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean}{Lean formalization},
+\texttt{openai/math} commit
+\path{1581d4cbdd69a0faf34b2089614fe2a814316a6a}.\par\endgroup
+\bibitem{sevenreplay}
+B. Mondal, \emph{Independent seven-eighths replay packet}, 21 October 2026,
+Lean~4.34.1, source/configuration archive, build logs, exact adapter and axiom
+reports. \href{https://github.com/sciencenerd-des/reinmann/tree/ad30a35e93474981528c24d91ae93338ad34958f/research/prime_spectral/verification_2026_10_21_external_seven_eighths}{Checksum-bound packet}
+in \texttt{reinmann} at commit \texttt{ad30a35}; reproduces the source pin
+in \cite{openai78}.
+
 \bibitem{pntplus}
 M. Cipollina and contributors, Hadamard-factorization development in
 \emph{PrimeNumberTheoremAnd}, Apache-2.0 source,

@@ -1,6 +1,6 @@
 # Version 3 candidate — local and unpublished
 
-Prepared on 22 October 2026. The nine-page `main.pdf` and editable `main.tex`
+Prepared on 22 October 2026. The ten-page `main.pdf` and editable `main.tex`
 extend the published version 2 with unconditional finite PF58 and PF97.
 This candidate has no new DOI, upload, publication, or external submission.
 The existing v1/v2 sources, PDFs and release receipts are unchanged.
@@ -19,9 +19,13 @@ The existing v1/v2 sources, PDFs and release receipts are unchanged.
   is introduced by the manuscript revision.
 - The final source compiles with Tectonic and the desktop LaTeX compiler.
   No overfull boxes, unresolved references or citation warnings remain.
-  All nine final pages were rendered and visually inspected.
-- The checksum-bound local validation and visual receipt are in
-  `research/prime_spectral/verification_2026_10_22_formal_pf97_draft/`.
+  All ten final pages were rendered and visually inspected.
+- The classical benchmark and the two seven-eighths bibliography entries were
+  checked against the primary sources and the pinned replay packet. The
+  benchmark is an inference from published computation, not a new Lean result.
+- The previous nine-page draft receipt remains historical at `9e09d56`.
+  The updated checksum-bound local validation and visual receipt are in
+  `research/prime_spectral/verification_2026_10_22_formal_pf97_release_fixes/`.
 
 ## Conditions before any future publication
 
@@ -48,7 +52,7 @@ The full critical strip is certified only through 14.1; the higher right-hand
 boxes allow critical-line zeros. The DH atlas remains external to Lean.
 The separate Lean 4.34.1 seven-eighths reproduction is not a theorem input.
 
-Nine pages; approximately 4,600 extracted words including mathematics,
+Ten pages; approximately 5,000 extracted words including mathematics,
 implementation names and references. Abstract: under 250 words.
 Suggested categories remain math.CA, cross-listed cs.LO; no submission has been
 made. Keywords: Toeplitz minors, total positivity, entire functions, certified

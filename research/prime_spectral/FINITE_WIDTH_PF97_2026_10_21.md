@@ -1,5 +1,11 @@
 # Height-32 finite-width PF97 candidate
 
+**Completed update, 22 October 2026:** the complete 34-job CI gate passed at
+`b4ec4a3`. The [certified closeout](PF97_CERTIFIED_2026_10_22.md) supersedes
+the pending status in the historical development snapshot below.
+
+---
+
 The rank-97 core remains the existing proved conditional theorem
 `FiniteHeightPFCalibration.finitePF97_of_low_height_width`:
 the first-zero bound 14.1 and `LowHeightWidth (9/40) 32` imply

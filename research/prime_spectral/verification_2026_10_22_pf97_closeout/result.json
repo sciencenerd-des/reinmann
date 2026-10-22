@@ -1,0 +1,19 @@
+{
+  "status": "complete_finite_band_CI_gate_verified",
+  "run_id": 39733278869,
+  "proof_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+  "run_url": "https://github.com/sciencenerd-des/reinmann/actions/runs/39733278869",
+  "ranks": [
+    58,
+    97
+  ],
+  "successful_jobs": 34,
+  "band_audit_counts": {
+    "58": 47896,
+    "97": 363579
+  },
+  "standard_axioms_only": true,
+  "RH_proved": false,
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "scope": "Finite-width certificates; critical-line zeros above 14.1 are allowed."
+}

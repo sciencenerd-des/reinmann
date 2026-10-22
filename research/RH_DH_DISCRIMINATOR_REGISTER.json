@@ -155,7 +155,7 @@
     {
       "id": "finite_width_PF97",
       "target": "FinitePF XiMomentCoeff 97; ordinary coefficients, all ordered minors and all shifts",
-      "classification": "finite_strengthening_candidate",
+      "classification": "finite_strengthening_locally_certified",
       "finite_zero_input": "LowHeightWidth (9/40) 32 plus the proved first-zero bound 141/10",
       "dh_analogue": "The corresponding finite DH order is likewise below the retained classical PF435 guarantee; no Lean DH instantiation is claimed.",
       "failure": {
@@ -163,7 +163,11 @@
         "globally_first": false
       },
       "arithmetic_property": "No RH-separating inequality is proposed. The current task is a finite numerical formalization.",
-      "status": "67 proposed tiles; cover and one high tile checked locally; full CI pending"
+      "status": "67 tiles, covering theorem, final assembly and standard-axiom audits passed the complete split CI",
+      "proof_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+      "CI_run": 39733278869,
+      "CI_jobs_succeeded": 34,
+      "receipt": "research/prime_spectral/verification_2026_10_22_pf97_closeout/result.json"
     }
   ]
 }

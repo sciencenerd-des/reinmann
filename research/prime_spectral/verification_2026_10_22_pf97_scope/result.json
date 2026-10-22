@@ -1,0 +1,24 @@
+{
+  "status": "PF58_PF97_proof_CI_and_documentation_closeout_verified",
+  "proof_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+  "CI_run": 39733278869,
+  "successful_jobs": 34,
+  "default_root_standard_axiom_declarations": 2643,
+  "band_implementation_declarations": {
+    "58": 47896,
+    "97": 363579
+  },
+  "active_proof_or_CI_files_changed_after_gate": [],
+  "proof_packet_manifest_sha256": "99880ea6083e0aaecfbc5dbc50492e6c4cd1304b38d0443a1fb3200f4cd649bf",
+  "historical_parent_replay_sha256": "1901350db1cf91ec6a21422379f38e233e7465e8006afaf4373f029ed33dcc05",
+  "documentation_sha256": {
+    "README.md": "a4d878c98e6fab98828556582269f798d8657e70a659e4c0794c75675d8bab7d",
+    "research/pseudo_hermitian/RESEARCH_OBJECTIVE.md": "fe03489013ecb4a2a26126a2f00a05fbff837a922b4d8eaa4b0f4c057cae4d5b",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json": "7197f41cb20801ee0369d52ebccd9d86d2c58eb0cb440adf619ec6b5347ca96f",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.md": "424a28c3ee8cf95e974ff724c26638935e41b341fac3a20885d99adcc8a25283",
+    "research/prime_spectral/FINITE_WIDTH_PF97_2026_10_21.md": "253aa2999c8f669208cda6e058383d9487dc0237ca68c089192e6cc7b3c584fb",
+    "research/prime_spectral/PF97_CERTIFIED_2026_10_22.md": "45c28191976cb73dea0d155965f5af0e9af36a706d99c00c9a20ac626ad33c9c"
+  },
+  "RH_proved": false,
+  "scope": "Finite ordinary-coefficient PF58/PF97 only; critical-line zeros above 14.1 allowed. Historical manifests and published versions unchanged. This receipt adds no kernel proof beyond its actual checked CI commit."
+}

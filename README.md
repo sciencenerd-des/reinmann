@@ -27,8 +27,9 @@ The logarithmic fit remains descriptive; forecasting is closed.
 The [actual-Xi closed-rectangle certificate](research/prime_spectral/XI_RECTANGLE_2026_10_20.md)
 now proves nonvanishing on `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`, using 44
 degree-12 tiles. The optional numerical libraries now also certify
-`[7/8,1] × [0,19]`, giving unconditional PF58 on Lean 4.30.
-See the [finite-width PF58 closeout](research/prime_spectral/PF58_CERTIFIED_2026_10_22.md).
+`[7/8,1] × [0,19]` and `[29/40,1] × [0,32]`, giving unconditional PF58
+and PF97 on Lean 4.30. See the [PF58](research/prime_spectral/PF58_CERTIFIED_2026_10_22.md)
+and [PF97 CI closeouts](research/prime_spectral/PF97_CERTIFIED_2026_10_22.md).
 The [finite-product split-pair theorem](research/prime_spectral/FORMAL_TARGET_A_2026_10_17.md)
 now derives the actual reciprocal coefficients, a nonzero leading coefficient,
 an exponential remainder and both determinant signs at unbounded ranks.
@@ -63,7 +64,7 @@ proved before they can be classified as sufficient conditions for RH.
 | Track | Manuscript (`paper/`) | Lean capstone (`Reinmann/`) | Open obligation |
 |---|---|---|---|
 | 1. Same-height fibers | `rh_same_height_fiber_framework.tex` | `riemannHypothesis_iff_noSameImaginaryPartCollision` (`RiemannSpine`), `riemannHypothesis_of_all_fiber_card_le_one` (`FiberCentroid`) | Componentwise critical exclusion remains open. The proposed phase condition (H<sub>θ</sub>) also needs a valid zeta-specific exclusion bridge; no Lean equivalence for it is claimed |
-| 2. Pólya frequency / Toeplitz and Jensen | `rh_reduction_paper.tex`, `rh_two_routes_paper.tex`, `hef_companion_paper.tex` | `riemannHypothesis_of_strictLadder` (`ToeplitzFullPF`), `riemannHypothesis_of_hpss_route` (`EffectiveAssembly`) | Strict contiguous ladder at unbounded rank remains RH-strength. PF43 and finite-width PF58 are unconditional in Lean 4.30, CI-verified at `1d97a06` ([run 39730502820](https://github.com/sciencenerd-des/reinmann/actions/runs/39730502820)). The PF97 box is a separate candidate awaiting full CI |
+| 2. Pólya frequency / Toeplitz and Jensen | `rh_reduction_paper.tex`, `rh_two_routes_paper.tex`, `hef_companion_paper.tex` | `riemannHypothesis_of_strictLadder` (`ToeplitzFullPF`), `riemannHypothesis_of_hpss_route` (`EffectiveAssembly`) | Strict contiguous ladder at unbounded rank remains RH-strength. PF43, PF58 and PF97 are unconditional in Lean 4.30, CI-verified by all 34 jobs at `b4ec4a3` ([run 39733278869](https://github.com/sciencenerd-des/reinmann/actions/runs/39733278869)); finite-width certificates, with no unbounded-rank conclusion |
 | 3. Semilocal Weil operator and controls | `weil_infinite_rank_tail_paper.tex`, `dh_controls_paper.tex` | `WeilRankTail`, `CoupledRankEnergy`, `WeilWindowHypotheses`, `WeilSchurInertia` | All-support positivity remains a classical RH criterion after genuine-form identification; Lean checks conditional assembly and a supplied cofinal family. Own full-window certificates reach C ≈ 4.9998. Liu frozen A/B replays are merged computational audits, not a new analytic proof or own window record |
 | 4. Pseudo-Hermitian / Fock-space jets | none yet; see [`research/pseudo_hermitian/RESEARCH_OBJECTIVE.md`](research/pseudo_hermitian/RESEARCH_OBJECTIVE.md) | `PseudoHermitian*`, `XiAlgebraicJet*`, `XiGreenModel` | The Green form has Lean-checked symmetry and all-zero masses; its paired residual budget is Lean-proved *equivalent* to RH (`green_paired_budget_iff_riemannHypothesis`) |
 
@@ -90,8 +91,8 @@ The [standing DH gate](research/RH_DH_DISCRIMINATOR_REGISTER.md) records retaine
   `0 ≤ Re(s) ≤ 1`, `|Im(s)| ≤ 14.1`. A closed rational cover uses 44 degree-12
   Taylor certificates, reusable Gamma/zeta remainder bounds and a zeta identity
   regularized through `s = 1`. The theorem supplies `ZetaNoLowStripZero (141/10)`
-  to `XiFinitePFCertified.finitePF43` without a theorem hypothesis. The default
-  2,608-row audit, separate 1,700-declaration rectangle audit and explicit PF43
+  to `XiFinitePFCertified.finitePF43` without a theorem hypothesis. At the original
+  proof source, the 2,608-row default audit, separate 1,700-declaration rectangle audit and explicit PF43
   check use only standard foundational axioms. All fourteen jobs passed in
   [CI run 39470397281](https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281)
   at proof source `150537b`. The actual genus-zero identity, inverse-zero

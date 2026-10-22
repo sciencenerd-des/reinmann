@@ -68,15 +68,21 @@ canonical checks). A fresh run of `green_model_axiom_audit.lean` on 17 October
 2026 audits 48 theorems, all using only `propext`, `Classical.choice` and
 `Quot.sound`.
 
-## Finite formalization matrix (21 October 2026)
+## Finite formalization matrix (22 October 2026)
 
 These auxiliary milestones do not discharge an open Green-form budget above.
 All fourteen jobs passed at proof commit
 `150537bf1d94eced1c22db7660f9c32936372831` in
 [CI run 39470397281](https://github.com/sciencenerd-des/reinmann/actions/runs/39470397281):
 main build/guard, shared dependencies, eleven tile shards, and final rectangle
-assembly with explicit PF43 axiom checking. The default guard has 2,608 rows;
-the optional rectangle has its own 1,700-declaration audit.
+assembly with explicit PF43 axiom checking. At that proof source, the default
+guard had 2,608 rows; the optional rectangle has its own 1,700-declaration audit.
+The current finite-width closeout passed all 34 jobs at `b4ec4a3` in
+[run 39733278869](https://github.com/sciencenerd-des/reinmann/actions/runs/39733278869).
+Its root guard covers 2,643 declarations; separate PF58 and PF97 audits cover
+47,896 and 363,579 distinct implementation theorem constants, respectively.
+See the [current closeout](../prime_spectral/PF97_CERTIFIED_2026_10_22.md) for
+the exact checked source, public statements and audit scope.
 
 | Milestone | Status | Remaining boundary |
 | --- | --- | --- |
@@ -85,7 +91,7 @@ the optional rectangle has its own 1,700-declaration audit.
 | Actual folded-Xi canonical product and fixed-rank sector bridge | **L, proved; CI verified** (`XiHadamardProduct`) | Attributed PNT+ Hadamard backport discharges inverse-zero summability and normalized genus-zero identity, with multiplicities retained; the angle bound is still needed at each rank |
 | Ordinary-coefficient PF43 | **L, unconditional; CI verified** (`XiFinitePFCertified.finitePF43`) | All ordered minors through rank 43 are nonnegative; no unbounded-rank or strict-positivity conclusion |
 | PF58 | **L, unconditional; CI verified** (`XiFinitePFCertified.finitePF58`) | Width 3/8 through height 19; all 17 jobs of [run 39730502820](https://github.com/sciencenerd-des/reinmann/actions/runs/39730502820) passed at `1d97a06`; no external seven-eighths input |
-| PF97 finite-width extension | **candidate; full CI pending** (`XiBand97`) | Width 9/40 through height 32; 67 proposed tiles, complete covering geometry and one high tile checked locally |
+| PF97 finite-width extension | **L, unconditional; CI verified** (`XiFinitePFCertified.finitePF97`) | Width 9/40 through height 32; all 67 tiles and final assembly checked by all 34 jobs of [run 39733278869](https://github.com/sciencenerd-des/reinmann/actions/runs/39733278869) at `b4ec4a3`; critical-line zeros allowed |
 
 [Current product/sector scope report](../prime_spectral/PNT_HADAMARD_BACKPORT_2026_10_20.md).
 The root CI coverage now supersedes that report's dated local-only coverage

@@ -62,7 +62,9 @@ Lean 4.34.1; see the [replay record](prime_spectral/EXTERNAL_SEVEN_EIGHTHS_REPLA
 The independent [finite-width certificate](prime_spectral/PF58_CERTIFIED_2026_10_22.md)
 now proves PF58 on Lean 4.30. The global seven-eighths theorem remains a separate
 Lean 4.34.1 reproduction. Its receipt's local-PF58 flag records that earlier
-snapshot. PF97 is a finite-width candidate awaiting its full CI gate.
+snapshot. The [height-32 finite-width certificate](prime_spectral/PF97_CERTIFIED_2026_10_22.md)
+now also proves unconditional PF97 on Lean 4.30, checked at `b4ec4a3` by all
+34 jobs of run 39733278869. Neither finite certificate imports the external theorem.
 
 The finite ranks 58 and 97 are below the classical DH PF435 sector guarantee
 already retained above. These controls are therefore shared finite strengthening,

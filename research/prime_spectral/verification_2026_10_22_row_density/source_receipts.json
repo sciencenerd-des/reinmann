@@ -1,0 +1,49 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+    "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "paper2.tex",
+    "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d"
+  },
+  {
+    "url": "https://arxiv.org/html/2109.07463v3",
+    "downloaded_bytes": 2792599,
+    "download_sha256": "3949e0f0ae87808d84fe02c12a3b68c5b66aa8d967d8ecb5e1605f1d985b956d",
+    "cache_not_distributed": "tmp/row-density-primary-sources/dunn_radziwill_v3.html"
+  },
+  {
+    "url": "https://arxiv.org/pdf/1112.1642",
+    "cache_not_distributed": "tmp/row-density-primary-sources/goldmakher_louvel.pdf",
+    "downloaded_bytes": 266049,
+    "download_sha256": "5cc5f03388d3996b4333f07be51f989f60779fe172f8bd24c7aa6ddad64dd304"
+  },
+  {
+    "url": "https://arxiv.org/pdf/1112.1650",
+    "cache_not_distributed": "tmp/row-density-primary-sources/blomer_goldmakher_louvel.pdf",
+    "downloaded_bytes": 533218,
+    "download_sha256": "1ab29e362c592b9f4078eb85e495ecce6a4665972e6427e7cc2ab0fb214e303b"
+  },
+  {
+    "url": "https://arxiv.org/html/1312.0568v1",
+    "cache_not_distributed": "tmp/row-density-primary-sources/broker_hoffstein_v1.html",
+    "downloaded_bytes": 701145,
+    "download_sha256": "2dabda8ba741c1d43fd3cf81ea36a8b059fa5febf98b3840fd0af487055e1b34"
+  },
+  {
+    "url": "https://arxiv.org/html/2610.17675v2",
+    "cache_not_distributed": "tmp/row-density-primary-sources/xu_sang_v2.html",
+    "downloaded_bytes": 669663,
+    "download_sha256": "75660acd47df3fc7999916018f25d5d5af1522991dc8ba37ffb8f23458ff2b57"
+  },
+  {
+    "url": "https://arxiv.org/html/2403.13151v4",
+    "cache_not_distributed": "tmp/row-density-primary-sources/dunn_cusp_v4.html",
+    "downloaded_bytes": 2230795,
+    "download_sha256": "93187ebd46e6e51860c9a05f2b74ec58b120f134159b84e7c9ed8160b45dc96b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/LICENSE",
+    "path": "OPENAI_LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  }
+]

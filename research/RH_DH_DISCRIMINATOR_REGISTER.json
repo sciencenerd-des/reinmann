@@ -85,6 +85,41 @@
       "arithmetic_property": "A zeta-specific Euler-product phase estimate, not functional-equation symmetry alone.",
       "separating_inequality": null,
       "gap": "The corrected manuscript does not claim a Lean equivalence H_theta iff RH. The generic exp(i*z)*z*(z-1) counterexample already defeats the proposed endpoint-to-phase-crossing implication."
+    },
+    {
+      "id": "short_family_mean_square_row_density",
+      "target": "Conditional row-density extraction for K=Q(sqrt(-3)): sum_{0<N(u)<=H}|sum_{(n,S)=1}mu_K(n)nu(n)rho_n(u)W(N(n)/D)|^2 << D^(1+epsilon)H, with rho_n(p^k)=1_{p does not divide n}; RH endpoint would require a valid prime-density (k=1) family and the estimate for some H=D^h, h>=1/2. Such a nontrivial character family and estimate are not supplied.",
+      "classification": "arithmetic_candidate_with_quantified_unproved_gap",
+      "coefficient_convention": "Ideal Mobius coefficients on K, ideals prime to fixed S; no ordinary/Jensen Taylor coefficients. D is ideal-norm sum length, H is family norm cutoff, Y=H^(1/k).",
+      "dh_analogue": "The DH reciprocal coefficients b=a^{-1} can be used in a smoothed cancellation statement or lifted by ideal norm. A square-root bound for every W would contradict DH zeros with Re(s)>1. The actual b is not multiplicative, even away from 2,3,5; it cannot be identified with ideal-Mobius/finite-order-Hecke coefficients. A replacement DH metaplectic family remains uninstantiated.",
+      "failure": {
+        "kind": "exact_arithmetic_coefficient_obstruction_and_classical_cancellation_obstruction",
+        "coprime_indices": [
+          7,
+          13
+        ],
+        "product_index": 91,
+        "reciprocal_multiplicativity_defect": "b_91-b_7*b_13=-1-kappa^2<0",
+        "survives_exclusion_of_primes": [
+          2,
+          3,
+          5
+        ],
+        "globally_first": false,
+        "first_failing_mean_square_scale": null,
+        "source": "research/prime_spectral/verification_2026_10_22_row_density/exact_checks.json",
+        "source_sha256": "0b20580b143d717fc9662a6c1fbeba806e11bf11315beecec5b21918dda10ba6",
+        "classical_reference": "Titchmarsh, second edition, section 10.25: infinitely many DH zeros with Re(s)>1; exact reference retained in quasi_rh_seven_eighths."
+      },
+      "arithmetic_property": "Ideal-Mobius/finite-order-Hecke multiplicativity plus the exact identity mu_K*gamma_{-1}=chi(-1)*G^{-1}*bar(alpha)*gamma_2, cubic-theta reflection and cube inversion. The DH identification fails algebraically; these properties do not by themselves prove a short-family mean square.",
+      "separating_inequality": "Unproved coefficient-specific MS(D,H) << D^(1+epsilon)H with an actually defined extraction family. Under its hypotheses sigma_k(h)=max(1/2+h(k-1)/(2k),1-h/k), global infimum k/(k+1); the h>1 infimum is 1-1/(2k). For k=1 all h>=1/2 attain 1/2, and the literal order-one residue family is principal.",
+      "gap": "The unchanged cubic substitution fails: p^3 is quadratic in the sextic family; changing to cubic twists produces bar(alpha)*gamma_2^2=bar(alpha)*G^{-1}*gamma_1, a sextic Gauss coefficient rather than the existing ordinary cubic-theta coefficient. The ordinary-theta j=2 reflection would remain cubic, losing the quadratic sieve. Sixth-cover fourth-power coefficient relations require a new index/completion/cost argument; a valid short-family range is also missing. At k=3 the existing h>1 range would yield 5/6, not 3/4.",
+      "scope": "A checked structural arithmetic separator and conditional optimization, not a proved RH-level mean square, RH strategy, new zero-free theorem or Lean result.",
+      "arithmetic_structure_obstruction_verified": true,
+      "RH_strength_mean_square_proved": false,
+      "DH_gate_status": "Exact Euler-product coefficient transfer is refuted; no replacement DH metaplectic-family estimate is instantiated.",
+      "analysis_note": "research/prime_spectral/ROW_DENSITY_AND_CUBIC_OBSTRUCTION_2026_10_22.md",
+      "review_draft": "research/prime_spectral/ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md"
     }
   ],
   "shared_prerequisites": [

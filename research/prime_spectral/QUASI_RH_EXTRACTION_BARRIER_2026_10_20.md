@@ -96,3 +96,13 @@ For finite calibration, a half-plane sigma combined with reflection bounds
 |beta-1/2| by sigma-1/2; the existing low-height and sector machinery converts
 that into one fixed PF rank. That is exactly the finite use already made of
 7/8, not a path to unbounded rank.
+
+## General row-density audit (22 October 2026)
+
+The [new source audit](ROW_DENSITY_AND_CUBIC_OBSTRUCTION_2026_10_22.md) proves
+the conditional k/(k+1) optimization and separates it from the actual h>1
+range. It also identifies why replacing sextic rows by cubic rows does not
+preserve the Mobius-to-theta identity or quadratic large-sieve step. In
+particular k=3 gives 5/6 in the old range, while 3/4 needs an additional short-
+family theorem; k=1 has all h>=1/2 as minimizers. No stopped extraction search
+is restarted by that algebra.

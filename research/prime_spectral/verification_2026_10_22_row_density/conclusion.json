@@ -1,0 +1,34 @@
+{
+  "status": "conditional_extraction_and_cubic_substitution_audit_complete",
+  "base_repository_commit": "4e1d735d20e83f5fbcf9a3f143197277a506d125",
+  "source_paper_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "unrestricted_optimum": "k/(k+1)",
+  "actual_h_gt_1_infimum": "1-1/(2*k)",
+  "cubic_h_gt_1_infimum": "5/6",
+  "cubic_optimal_short_family_H": "D^(3/4)",
+  "k1_minimizing_h": "all h>=1/2; literal order-one character family is principal",
+  "existing_sextic_cubic_row_identity_fails": true,
+  "cubic_poisson_coefficient": "mu_K*gamma_-2=bar(alpha)*gamma_2^2=bar(alpha)*G^-1*gamma_1",
+  "existing_ordinary_theta_reflection_j2_character_order": 3,
+  "new_sextic_theta_index_and_completion_cost_argument_proved": false,
+  "RH_level_mean_square_proved": false,
+  "generic_large_sieve_barrier_for_all_arithmetic_claimed": false,
+  "DH_structural_defect": "b91-b7*b13=-1-kappa^2<0",
+  "first_failing_DH_mean_square_scale": null,
+  "new_Lean_theorem": false,
+  "external_messages_sent": false,
+  "new_publication": false,
+  "stopped_scans_or_PF_boxes_restarted": false,
+  "validation": [
+    "Exact rational k=1,...,100 cross-checks with universal optimization proof in note.",
+    "Exact finite-field Jacobi sums at norms 7,13,19,31.",
+    "Exact sextic cube-row failure at column norm 7 and row norm 13.",
+    "Polynomial Dirichlet-inverse convolution through 91 and S-free DH multiplicativity defect.",
+    "Pinned source labels, downloaded-source hashes, register source binding and exact receipt replay."
+  ],
+  "limitations": [
+    "The central mean square is not independently re-proved.",
+    "The conditional cubic substitution is rejected only for the unchanged proof pipeline.",
+    "The recent sextic large-sieve preprint is not independently verified or used as an arithmetic impossibility theorem."
+  ]
+}

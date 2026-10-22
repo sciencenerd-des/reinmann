@@ -1,0 +1,167 @@
+{
+  "status": "exact_row_density_and_DH_structure_checks_passed",
+  "optimization": {
+    "table": [
+      {
+        "k": 1,
+        "smallest_minimizing_h": "1/2",
+        "unrestricted_infimum_sigma": "1/2",
+        "infimum_for_h_greater_than_1": "1/2",
+        "minimizer_unique": false
+      },
+      {
+        "k": 2,
+        "smallest_minimizing_h": "2/3",
+        "unrestricted_infimum_sigma": "2/3",
+        "infimum_for_h_greater_than_1": "3/4",
+        "minimizer_unique": true
+      },
+      {
+        "k": 3,
+        "smallest_minimizing_h": "3/4",
+        "unrestricted_infimum_sigma": "3/4",
+        "infimum_for_h_greater_than_1": "5/6",
+        "minimizer_unique": true
+      },
+      {
+        "k": 4,
+        "smallest_minimizing_h": "4/5",
+        "unrestricted_infimum_sigma": "4/5",
+        "infimum_for_h_greater_than_1": "7/8",
+        "minimizer_unique": true
+      },
+      {
+        "k": 5,
+        "smallest_minimizing_h": "5/6",
+        "unrestricted_infimum_sigma": "5/6",
+        "infimum_for_h_greater_than_1": "9/10",
+        "minimizer_unique": true
+      },
+      {
+        "k": 6,
+        "smallest_minimizing_h": "6/7",
+        "unrestricted_infimum_sigma": "6/7",
+        "infimum_for_h_greater_than_1": "11/12",
+        "minimizer_unique": true
+      }
+    ],
+    "rational_parameter_checks_k": [
+      1,
+      100
+    ],
+    "general_proof": "See note: 2 A(h)+(k-1) B(h)=k, and both lines meet at h=k/(k+1). For k=1, every h>=1/2 minimizes.",
+    "scope": "Algebra of an assumed extraction upper bound, not an arithmetic lower bound or a Lean theorem."
+  },
+  "local_arithmetic": {
+    "normalization_checks": [
+      {
+        "primary_prime": [
+          -2,
+          -3
+        ],
+        "norm": 7,
+        "omega_mod_prime": 4,
+        "exact_cubic_Jacobi_sum": [
+          2,
+          3
+        ]
+      },
+      {
+        "primary_prime": [
+          1,
+          -3
+        ],
+        "norm": 13,
+        "omega_mod_prime": 9,
+        "exact_cubic_Jacobi_sum": [
+          -1,
+          3
+        ]
+      },
+      {
+        "primary_prime": [
+          -2,
+          3
+        ],
+        "norm": 19,
+        "omega_mod_prime": 7,
+        "exact_cubic_Jacobi_sum": [
+          2,
+          -3
+        ]
+      },
+      {
+        "primary_prime": [
+          1,
+          6
+        ],
+        "norm": 31,
+        "omega_mod_prime": 5,
+        "exact_cubic_Jacobi_sum": [
+          -1,
+          -6
+        ]
+      }
+    ],
+    "exact_cubic_row_counterexample": {
+      "column_prime_norm": 7,
+      "row_prime_norm": 13,
+      "sextic_character_at_row_prime_exponent_mod_6": 5,
+      "sextic_character_at_cube_exponent_mod_6": 3,
+      "sextic_character_at_cube": -1,
+      "sextic_character_at_sixth_power": 1,
+      "cubic_character_at_cube": 1
+    },
+    "reflection_on_generic_character_cases": {
+      "1": {
+        "exponent": 3,
+        "order": 2
+      },
+      "2": {
+        "exponent": 2,
+        "order": 3
+      },
+      "3": {
+        "exponent": 1,
+        "order": 6
+      },
+      "5": {
+        "exponent": 5,
+        "order": 6
+      }
+    },
+    "scope": "Exact finite-field checks and a row-identity counterexample; not a mean-square estimate or proof of all theta identities."
+  },
+  "DH_reciprocal": {
+    "convention": "ordinary Dirichlet inverse of DH, polynomial coefficients in kappa, not Taylor coefficients",
+    "inverse_convolution_indices_checked": 91,
+    "b7": [
+      0,
+      -1
+    ],
+    "b13": [
+      0,
+      1
+    ],
+    "b91": [
+      -1,
+      0,
+      -2
+    ],
+    "b91_minus_b7_b13": [
+      -1,
+      0,
+      -1
+    ],
+    "interpretation": "-1-kappa^2 < 0 for every real kappa; witness survives exclusion of primes 2,3,5",
+    "globally_first_cancellation_or_PF_failure": false
+  },
+  "new_mean_square_proved": false,
+  "cubic_substitution_proved": false,
+  "RH_proved": false,
+  "source_sha256": {
+    "experiments/prime_spectral/verify_row_density_extraction.py": "77e69c16970e606f23de8e6b7d5e8db2dde3f5fe27f953bf75f69c3a6cb9196e",
+    "research/prime_spectral/verification_2026_10_22_row_density/paper2.tex": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+    "experiments/prime_spectral/davenport_heilbronn_control.py": "066e7beb2583b4b8da45fd60996c1c96ae1974c3acf64a3b18fbce0594d7ea25"
+  }
+}

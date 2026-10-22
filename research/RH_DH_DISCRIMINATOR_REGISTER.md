@@ -70,3 +70,38 @@ The finite ranks 58 and 97 are below the classical DH PF435 sector guarantee
 already retained above. These controls are therefore shared finite strengthening,
 with no new arithmetic discriminator proposed. No new DH scan or first-failure
 claim accompanies these certificates.
+
+## Short-family arithmetic candidate (source audit, 22 October 2026)
+
+The `short_family_mean_square_row_density` entry now has a named structural
+arithmetic separator and a quantified open estimate; see the
+[row-density/cubic audit](prime_spectral/ROW_DENSITY_AND_CUBIC_OBSTRUCTION_2026_10_22.md)
+and the [specialist review draft](prime_spectral/ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md).
+The coefficients are ideal Mobius coefficients on Q(sqrt(-3)), not Xi Taylor
+coefficients. The exact Hecke/Mobius-to-theta identity is the proposed arithmetic
+input; multiplicativity alone is no cancellation proof.
+
+For the assumed two-term extraction bound, the unrestricted optimum is
+sigma=k/(k+1) at h=k/(k+1). In the actual source range h>1, the infimum is
+1-1/(2k). Thus cubic rows would give 5/6 in the old range; 3/4 additionally
+requires the unproved H=D^(3/4) range. At k=1 every h>=1/2 minimizes; h=1/2 is
+not necessary. The literal order-one residue-character family is principal,
+so neither a new varying family nor its mean square follows from this algebra.
+
+The unchanged cubic substitution fails before a new exponent can be claimed:
+sextic p^3 rows retain a quadratic twist; switching to cubic characters leaves
+a squared cubic Gauss coefficient after Mobius-weighted Poisson, equivalently a
+sextic Gauss coefficient needing a different coefficient/index realization. The existing
+ordinary-theta reflection would also leave a cubic character, losing the
+quadratic large sieve. These are gaps in that substitution, not impossibility
+results for every metaplectic method.
+
+A DH cancellation analogue **can** be stated using its Dirichlet inverse b.
+The exact identity b_91-b_7*b_13=-1-kappa^2<0, with 7*13 coprime to 2*3*5,
+refutes its identification with the multiplicative ideal-Mobius/Hecke input.
+The verifier checks the inverse convolution through 91 with integer polynomial
+arithmetic. A square-root reciprocal-DH bound for all smooth weights would also
+contradict its classically known zeros with real part greater than 1. No first
+failing cancellation scale is located, and a replacement DH metaplectic family
+remains uninstantiated. The register's global flag for an active RH strategy
+with a **proved** separating inequality remains false.

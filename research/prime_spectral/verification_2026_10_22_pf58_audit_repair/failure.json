@@ -1,0 +1,20 @@
+{
+  "status": "audit_report_duplicate_names_gate_failed",
+  "proof_commit": "187eaaeae6b5f73eae43b9472edc0fd0aaa5154d",
+  "run_id": 39638580356,
+  "run_url": "https://github.com/sciencenerd-des/reinmann/actions/runs/39638580356",
+  "successful_jobs": 16,
+  "total_jobs": 17,
+  "assembled_PF58": true,
+  "all_reported_axioms_standard": true,
+  "raw_band_binding_count": 48228,
+  "axiom_reports_including_two_wrappers": 48230,
+  "distinct_pretty_printed_names": 47896,
+  "CI_gate_satisfied": false,
+  "repair": "Deduplicate actual Lean constant identities and print their full internal names. Keep report count, unique identity and axiom allowlist checks.",
+  "log_sha256": {
+    "Audit.lean": "427e4a9f5e7edb23ad1cd9e70b04d000ef31fc22ce5864b2058819cb6fdeca67",
+    "audit.log": "900501d183944a15260d61fa882dd6e1c9f7fb005207458753a81c5441f65442",
+    "final-job.log": "071d9a038eda795d26dcc135eef101b1bb37877536ecfc644053d6dd54a3168e"
+  }
+}

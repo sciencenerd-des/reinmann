@@ -99,6 +99,9 @@ jobs:
   xi-rectangle-shard:
     needs: xi-rectangle-deps
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
     strategy:
       fail-fast: true
       matrix:
@@ -138,6 +141,24 @@ jobs:
           tar --zstd -xf tmp/deps/deps.tar.zst -C .lake/build
           rm -rf tmp/deps
 
+      # Reuse successful tile builds; Lake validates current source traces and
+      # rebuilds any stale output. An expired cache falls back to fresh builds.
+      - name: Restore previous checked tile outputs
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: xi-rectangle-tiles-${{ matrix.shard }}
+          run-id: 39638580356
+          github-token: ${{ github.token }}
+          path: tmp/previous-tiles
+
+      - name: Unpack previous tile outputs when available
+        run: |
+          if [ -f tmp/previous-tiles/tiles.tar.zst ]; then
+            tar --zstd -xf tmp/previous-tiles/tiles.tar.zst -C .lake/build
+            rm -rf tmp/previous-tiles
+          fi
+
       - name: Build four tiles
         run: |
           first=$(( ${{ matrix.shard }} * 4 ))
@@ -174,6 +195,9 @@ jobs:
   xi-band58-shard:
     needs: xi-rectangle-deps
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
     strategy:
       fail-fast: true
       matrix:
@@ -212,6 +236,24 @@ jobs:
           mkdir -p .lake/build
           tar --zstd -xf tmp/deps/deps.tar.zst -C .lake/build
           rm -rf tmp/deps
+
+      # Reuse successful tile builds; Lake validates current source traces and
+      # rebuilds any stale output. An expired cache falls back to fresh builds.
+      - name: Restore previous checked tile outputs
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: xi-band58-tiles-${{ matrix.shard }}
+          run-id: 39638580356
+          github-token: ${{ github.token }}
+          path: tmp/previous-tiles
+
+      - name: Unpack previous tile outputs when available
+        run: |
+          if [ -f tmp/previous-tiles/tiles.tar.zst ]; then
+            tar --zstd -xf tmp/previous-tiles/tiles.tar.zst -C .lake/build
+            rm -rf tmp/previous-tiles
+          fi
 
       - name: Build three finite-band tiles
         run: |

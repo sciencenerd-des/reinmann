@@ -1,0 +1,6 @@
+{
+  "status": "deduplicated_internal_name_pilot_passed",
+  "distinct_theorems": 5352,
+  "all_axioms_standard": true,
+  "audit_log_sha256": "61dc0016833b137fce5e3f157ac44e2711c6c424a2f7a3d38064b55eeeb7c5b1"
+}

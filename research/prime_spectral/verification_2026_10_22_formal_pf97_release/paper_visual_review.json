@@ -1,0 +1,22 @@
+{
+  "kind": "release_pdf_visual_review",
+  "date": "2026-10-22",
+  "tex_sha256": "8f13c0c562b282127d142122c8d5b6beed7ef2a19d9bfd0f8430e4046286c331",
+  "pdf_sha256": "9367316473e3f107e1be3f552c1b1edeadef2e664e9b648655adc7cc56c484bf",
+  "pages_rendered_and_inspected": 10,
+  "external_human_review_completed": false,
+  "render_dpi": 100,
+  "reviewed_contact_sheets": {
+    "contact-1.png": "819525e44acb128dd4fc208392a383ba0ed709041470f058986731239886773f",
+    "contact-2.png": "511b4fb7b205671f692519892ce00d86f1d7e2f849f76de0d5ec9a105598d37d",
+    "contact-3.png": "afb4f3d3e872ffc561e03898710f6d4c88fb5e44f3077625ade5e95bd84216cd"
+  },
+  "findings": [
+    "All ten rendered pages inspected; no clipping or collisions found.",
+    "Title/date explicitly state version 3 and unreviewed status.",
+    "Classical benchmark and finite-formalization scope retained.",
+    "Both seven-eighths references are present and clearly unrefereed.",
+    "All twelve references resolved; no overfull boxes or undefined-reference/citation warnings."
+  ],
+  "build_log_gzip_sha256": "4d0b6e5a08f35f5634f95b17080f2b4e7c9c49e0f58fe5f9cc8a09aa3afe28f7"
+}

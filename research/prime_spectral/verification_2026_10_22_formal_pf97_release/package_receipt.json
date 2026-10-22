@@ -1,0 +1,31 @@
+{
+  "status": "local_release_package_verified",
+  "source_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+  "CI_run": 39733278869,
+  "archive_members": 1537,
+  "proof_source_bindings": 1192,
+  "tile_source_modules": {
+    "XiRectangle": 308,
+    "XiBand58": 63,
+    "XiBand97": 469
+  },
+  "all_archive_members_read_back_and_verified": true,
+  "files": {
+    "formal-split-pair-finite-pf.pdf": {
+      "bytes": 151545,
+      "sha256": "9367316473e3f107e1be3f552c1b1edeadef2e664e9b648655adc7cc56c484bf"
+    },
+    "formal-split-pair-finite-pf-source-b4ec4a3.tar.gz": {
+      "bytes": 24515584,
+      "sha256": "7ed393e1437efebbfe81b38e209e325a65249ef280d1dd1408ed26ea125270fe"
+    },
+    "README_RELEASE.txt": {
+      "bytes": 3128,
+      "sha256": "0c1f853c0bc54a1d60f5fbaad983e58acd56ebe29ebc596fdef3765a89103019"
+    },
+    "FORMAL_FINITE_PF_RELEASE.json": {
+      "bytes": 677,
+      "sha256": "ddd856dec9859da85229a78079b6b18a5d600fef9ccc86d29a6786c0fe4218a0"
+    }
+  }
+}

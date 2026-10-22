@@ -14,7 +14,8 @@
   Preserve ordinary-coefficient conventions, full versus contiguous PF scope,
   DH limitations, AI disclosure and the statement that RH is not proved.
 - Retain older pins and audits explicitly as historical snapshots. The published
-  v1/v2 artifacts are not edited. This new revision remains local and unpublished.
+  v1/v2 artifacts are not edited. Publication of this unreviewed revision was
+  authorized on 22 October 2026; the release receipt records its verified outcome.
 
 ## Pre-release review corrections
 

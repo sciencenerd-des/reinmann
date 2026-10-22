@@ -1,0 +1,33 @@
+{
+  "status": "formalization_v3_release_complete",
+  "verified_at_utc": "2026-10-22T11:35:21.934280+00:00",
+  "doi": "10.5281/zenodo.23561417",
+  "record_url": "https://zenodo.org/records/23561417",
+  "version": "3.0.0",
+  "conceptrecid": "23449489",
+  "proof_commit": "b4ec4a3920973faae02d4d9f3a56456886df49c9",
+  "CI_run": 39733278869,
+  "successful_CI_jobs": 34,
+  "all_four_draft_files_downloaded_and_sha256_verified": true,
+  "all_four_public_files_anonymously_downloaded_and_sha256_verified": true,
+  "all_1537_archive_members_checked": true,
+  "all_1192_pinned_proof_bindings_checked": true,
+  "all_840_numerical_tile_part_sources_included": true,
+  "record_and_DOI_resolution_HTTP_status": 200,
+  "unreviewed_preprint": true,
+  "RH_proved": false,
+  "earlier_published_versions_unchanged": true,
+  "DH_controls_record_unchanged": true,
+  "postpublication_documentation_not_claimed_as_new_proof_CI": true,
+  "publication_transport_note": "An initial requests PUT failed. The three remaining files uploaded with curl HTTP/1.1 TLS1.2 bounded to 512KiB/s; normal publisher then downloaded/checked every file, published, and anonymously downloaded/checked every public file. Release-tool source bytes match the archived copies.",
+  "owned_current_files_sha256": {
+    "README.md": "4b13067ab235ee917753d35b098614f862b0f9d8724a90c87b73b09de31af46a",
+    "paper/formal_split_pair/v3/main.tex": "8f13c0c562b282127d142122c8d5b6beed7ef2a19d9bfd0f8430e4046286c331",
+    "paper/formal_split_pair/v3/main.pdf": "9367316473e3f107e1be3f552c1b1edeadef2e664e9b648655adc7cc56c484bf",
+    "paper/formal_split_pair/v3/CHANGES.md": "d59254b6bf38314c3007a62c009f0a17ab407a827f3bfc5de347a4083ffcaf9e",
+    "paper/formal_split_pair/v3/RELEASE_GATE.md": "3973c55de23955ad1242bad2037caadc20e0125bda14df2e373b16bf9dbb7454",
+    "paper/formal_split_pair/v3/PUBLISHED.md": "db7b601d57b5a9d79c1e0029c09b89ba669d59890897356a19057adbe0690a82",
+    "experiments/prime_spectral/prepare_formal_pf97_release.py": "f537a1590a773bc66159aed4ec7774dc4f468287ddd833c7bd6ba05397a07f62",
+    "experiments/prime_spectral/publish_formal_pf97_version.py": "e6b0154c9406aaf3fe2726fedb6ec4945299fdd4d2919cf8a750e4d97d712485"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "README_RELEASE.txt",
+    "bytes": 3128,
+    "sha256": "0c1f853c0bc54a1d60f5fbaad983e58acd56ebe29ebc596fdef3765a89103019",
+    "transport": "curl HTTP/1.1 TLS1.2, bounded to 512KiB/s",
+    "server_md5_verified": true
+  },
+  {
+    "name": "formal-split-pair-finite-pf.pdf",
+    "bytes": 151545,
+    "sha256": "9367316473e3f107e1be3f552c1b1edeadef2e664e9b648655adc7cc56c484bf",
+    "transport": "curl HTTP/1.1 TLS1.2, bounded to 512KiB/s",
+    "server_md5_verified": true
+  },
+  {
+    "name": "formal-split-pair-finite-pf-source-b4ec4a3.tar.gz",
+    "bytes": 24515584,
+    "sha256": "7ed393e1437efebbfe81b38e209e325a65249ef280d1dd1408ed26ea125270fe",
+    "transport": "curl HTTP/1.1 TLS1.2, bounded to 512KiB/s",
+    "server_md5_verified": true
+  }
+]

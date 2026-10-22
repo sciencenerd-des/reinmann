@@ -1,0 +1,77 @@
+{
+  "id": 23561417,
+  "conceptrecid": "23449489",
+  "state": "unsubmitted",
+  "metadata": {
+    "title": "Split-pair oscillation, the Toeplitz\u2013Jacobi bridge, and Lean-verified finite-order positivity for xi",
+    "publication_date": "2026-10-22",
+    "description": "<p><strong>Unreviewed formalization preprint, version 3. No completed external human peer review is claimed.</strong></p><p>Lean formalizations of finite and analytic split-pair oscillation and the Toeplitz\u2013Jacobi bridge, together with an evaluator of the actual completed xi function. The full closed strip rectangle is certified through height 14.1. Finite right-hand boxes [7/8,1] through height 19 and [29/40,1] through height 32 give unconditional nonnegativity of every ordered Toeplitz minor through ranks 58 and 97 for ordinary folded-xi coefficients; PF43 is also retained. Critical-line zeros above 14.1 are allowed.</p><p>These ranks measure formal coverage, not new mathematical information about zeta zeros. Platt\u2013Trudgian (Bull. LMS 53, 2021, doi:10.1112/blms.12460) verified RH through height 3\u00b710^12; the same two-band argument already gives PF order about 9.42\u00b710^12 from that published computation. No Lean certificate at that scale is claimed. No RH proof, unbounded-rank PF, Green budget or Lean DH zero atlas is claimed.</p><p>The split-pair theorem retains its simple selected zeros and isolated boundary-pair assumptions. The separate actual-Xi product and sector application retains multiplicities and preserves attribution to the Apache-2.0 PNT+ Hadamard development. OpenAI's unrefereed seven-eighths preprint and its separate Lean 4.34.1 replay are cited but are not inputs to these Lean 4.30 finite-PF theorems.</p><p>Proof source b4ec4a3920973faae02d4d9f3a56456886df49c9, Lean/Mathlib v4.30.0. All 34 jobs of GitHub Actions run 39733278869 passed, including no-rebuild final assembly and actual public-theorem audits. The root guard covers 2643 declarations. Separate audits cover 47896 and 363579 implementation theorem constants, including private generated declarations; these are not counts of new mathematical results. Only standard foundational axioms occur in the claimed proof chain. The complete supplement contains all 840 numerical tile part modules, every pinned Lean source/configuration binding, dependency pins, upstream attribution, audit inputs, raw CI receipts and SHA256 manifests. AI assistance is disclosed.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Mondal, Biswajit",
+        "affiliation": null
+      }
+    ],
+    "keywords": [
+      "Toeplitz minors",
+      "total positivity",
+      "entire functions",
+      "certified evaluation",
+      "finite-order positivity",
+      "Lean",
+      "formal verification"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/sciencenerd-des/reinmann/tree/b4ec4a3920973faae02d4d9f3a56456886df49c9",
+        "relation": "isSupplementedBy",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.1112/blms.12460",
+        "relation": "references",
+        "resource_type": "publication-article",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.23401370",
+        "relation": "references",
+        "resource_type": "publication-preprint",
+        "scheme": "doi"
+      }
+    ],
+    "version": "3.0.0",
+    "license": "cc-by-4.0",
+    "imprint_publisher": "Zenodo",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.23561417",
+      "recid": 23561417
+    }
+  },
+  "files": [
+    {
+      "filename": "FORMAL_FINITE_PF_RELEASE.json",
+      "filesize": 677,
+      "checksum": "5e4586efccbcaac222170905a1683e79"
+    },
+    {
+      "filename": "formal-split-pair-finite-pf-source-b4ec4a3.tar.gz",
+      "filesize": 24515584,
+      "checksum": "fe0b5a13251917f862da5bd041c9b90f"
+    },
+    {
+      "filename": "README_RELEASE.txt",
+      "filesize": 3128,
+      "checksum": "bf1d0f96a9776f9a8549ed1db0f53d70"
+    },
+    {
+      "filename": "formal-split-pair-finite-pf.pdf",
+      "filesize": 151545,
+      "checksum": "be55346fc0e9af0157ce942baf7f6d53"
+    }
+  ]
+}

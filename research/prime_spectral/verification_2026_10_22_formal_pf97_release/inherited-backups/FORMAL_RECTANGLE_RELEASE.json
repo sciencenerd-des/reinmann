@@ -1,0 +1,19 @@
+{
+  "status": "local_release_files_verified_not_uploaded_or_published",
+  "source_commit": "150537bf1d94eced1c22db7660f9c32936372831",
+  "ci_run": "39470397281",
+  "files": {
+    "formal-split-pair-rectangle.pdf": {
+      "bytes": 127404,
+      "sha256": "7fd86f23c32c35db75cb8b06172c09d0909722f7a2db5691807e3a3d974b5604"
+    },
+    "formal-split-pair-rectangle-source-150537b.tar.gz": {
+      "bytes": 4941095,
+      "sha256": "75b764272ef8d96065da7cde64c43715f32b5d60a1a3a2052c2993631cf175ed"
+    },
+    "README_RELEASE.txt": {
+      "bytes": 1622,
+      "sha256": "582bf77434ca2abe79e8f29c5ce72cc733d27a8322dd2101fb67a7fc5f972a89"
+    }
+  }
+}

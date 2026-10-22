@@ -72,12 +72,17 @@ The [standing DH gate](research/RH_DH_DISCRIMINATOR_REGISTER.md) records retaine
 
 ### Latest results
 
-- **Formalization version 2 released.** The unreviewed preprint now includes the
-  actual-Xi evaluator, closed height-14.1 rectangle and unconditional PF43,
-  presented as formalizations of classical facts.
-  [DOI 10.5281/zenodo.23516924](https://doi.org/10.5281/zenodo.23516924) includes
-  the complete pinned source supplement; all public downloads were checksum-verified.
+- **Formalization version 3 released.** The unreviewed preprint includes the
+  actual-Xi evaluator, closed height-14.1 rectangle and unconditional PF43, PF58
+  and PF97, presented as formalizations of classical consequences. These ranks
+  measure formal coverage, not new mathematical knowledge; the paper states the
+  much larger Platt–Trudgian computational benchmark.
+  [DOI 10.5281/zenodo.23561417](https://doi.org/10.5281/zenodo.23561417) includes
+  the complete pinned source supplement and all 840 numerical tile part modules.
+  All four public downloads and every source-archive member were checksum-verified;
+  see the [release receipt](research/prime_spectral/verification_2026_10_22_formal_pf97_release/publication_receipt.json).
   The split-pair theorem retains its simple-zero and isolated-tie hypotheses.
+  Earlier published versions remain unchanged.
 
 - **Finite-product split-pair theorem.** Lean proves the actual reciprocal
   determinant expansion, nonzero Vandermonde coefficient, root-order gap,

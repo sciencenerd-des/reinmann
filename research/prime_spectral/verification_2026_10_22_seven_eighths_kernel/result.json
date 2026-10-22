@@ -1,0 +1,25 @@
+{
+  "checker_sha256": "cfde41cb11dde58c84e9c60c551fd104bb2fc1104ad44dca932a923120272a35",
+  "checker_source_sha256": "2d18ec111d73c536b0bdee2533556bb9548c349f386797d3d3837b1f84d55dae",
+  "compiled_data_files_bound": 22830,
+  "fresh_import_closure": true,
+  "headline_axioms": {
+    "OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Reinmann.zetaZeroFreeRightOf_sevenEighths": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "prior_build_receipt_sha256": "a66d49e75bac7be568d8cae815b02c8d039c3f20e5c8f649e195ec9bb6f28659",
+  "runner_sha256": "2ac4a368d3cd7550aa1860043c68ba1614b42cd87471ea752ca515f11f7f9cb4",
+  "scope": "Lean own-kernel replay of all declarations imported by the adapter; not a separately implemented verifier, a new theorem, or an RH proof.",
+  "status": "fresh_kernel_replay_succeeded_and_inputs_unchanged",
+  "target": "SevenEighths",
+  "toolchain": "leanprover/lean4:v4.34.1",
+  "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a"
+}

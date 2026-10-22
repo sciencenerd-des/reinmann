@@ -1,0 +1,58 @@
+[
+  {
+    "command": [
+      "lake",
+      "env",
+      "printenv",
+      "LEAN_PATH"
+    ],
+    "exit_code": 0,
+    "log": "search_path.log",
+    "seconds": 2.090749917086214,
+    "sha256": "9c10a24e55601466b72fd3c630c7e9c48a8a5d2f382ba28f90037b0c32b46c8e"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--print-prefix"
+    ],
+    "exit_code": 0,
+    "log": "sysroot.log",
+    "seconds": 0.9527737910393625,
+    "sha256": "854174c516a944f7f6ebb775c9572f8da7585eaca1961be0e10baf8dc0abeaee"
+  },
+  {
+    "command": [
+      "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "--version"
+    ],
+    "exit_code": 0,
+    "log": "toolchain.log",
+    "seconds": 0.04056029103230685,
+    "sha256": "20f42f897511ec814f7616bd9a193ae7504aa2f52fb05299eb752936eb77ca6e"
+  },
+  {
+    "command": [
+      "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.34.1/bin/leanchecker",
+      "--fresh",
+      "--verbose",
+      "SevenEighths"
+    ],
+    "exit_code": 0,
+    "log": "fresh_kernel.log",
+    "seconds": 587.3156806250336,
+    "sha256": "b5b4a3b277d85aead3156cb7e3f8ed0759853743a771a03f833898ea25ce9856"
+  },
+  {
+    "command": [
+      "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "SevenEighths.lean"
+    ],
+    "exit_code": 0,
+    "log": "axioms.log",
+    "seconds": 9.11379879200831,
+    "sha256": "82d20c5820a39453707e284df2a6ed815c96823e64d6deea6f1b222d58aa5175"
+  }
+]

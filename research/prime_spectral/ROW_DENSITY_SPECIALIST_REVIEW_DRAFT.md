@@ -17,18 +17,31 @@ k/(k+1), while the h>1 infimum is 1-1/(2k). For k=1 every h>=1/2 minimizes.
 Thus cubic rows would give 5/6 in the existing range, and 3/4 would need a
 new short-family result.
 
+The principal-row issue may be the useful lens. The standard quadratic large
+sieve restricts the squarefree rows/moduli; a square p^2 returns the original
+coefficient sum with p-divisible columns removed. The sextic theorem instead
+controls its actual Mobius-coefficient mean square with sixth-power rows
+included. Is a coefficient-specific quadratic-family bound of size
+D^(1+epsilon)H, including square rows and their coprimality zeros, available
+for H=D^(1+vartheta)? The same extraction would give exponent 3/4 as
+vartheta decreases to zero. This is not a proposed arbitrary-coefficient sieve:
+including all these principal rows invalidates that generic same-cost extension.
+The question is precisely what arithmetic cancellation can control their mass.
+
 The substantive questions are:
 
-1. Sextic Poisson uses mu_K gamma_{-1}=chi(-1)G^(-1) bar(alpha) gamma_2.
+1. Is the quadratic-family/principal-square-row estimate just described known,
+   or is there a known obstruction specific to those Mobius coefficients?
+2. Sextic Poisson uses mu_K gamma_{-1}=chi(-1)G^(-1) bar(alpha) gamma_2.
    Cubic Poisson instead gives mu_K gamma_{-2}=bar(alpha) gamma_2^2.
    Equivalently this is bar(alpha)G^(-1)gamma_1, a sextic Gauss coefficient.
    Is there an established coefficient realization with controlled completion
    and summation costs? Broeker–Hoffstein's fourth-power-index relations seem
    relevant but do not immediately give the same squarefree-index cutoff.
-2. The existing local reflection formula maps j to -j-2 modulo 6: j=1 becomes
+3. The existing local reflection formula maps j to -j-2 modulo 6: j=1 becomes
    quadratic, j=2 remains cubic. Is there an alternative realization that
    changes this conclusion without importing a GRH-dependent dispersion estimate?
-3. Do we correctly identify the second independent gap as the positive-gap
+4. Do we correctly identify the second independent gap as the positive-gap
    requirement Hcal/Sigma << D^(-vartheta), violated by H=D^(3/4) in the
    basic X=D, Hcal=D^2/H configuration?
 
@@ -42,5 +55,6 @@ Thank you,
 Biswajit Mondal
 
 Attachments if the author chooses to send: the audit note and its source/equation
-index, plus the small exact verifier and `exact_checks.json`. No recipient has
-been selected and no message has been sent by this research round.
+index, plus the small exact verifier and `exact_checks.json`. Alexander Dunn is the selected first reader, using his publicly listed Georgia
+Tech address. This file remains a request draft; the separate correspondence
+receipt records whether it was actually sent. No review or endorsement is inferred.

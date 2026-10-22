@@ -1,0 +1,11 @@
+{
+  "parent_commit": "93f3f615064ceac3eb5cdd22e75105071d717645",
+  "parent_manifest": "research/prime_spectral/verification_2026_10_22_row_density/manifest.json",
+  "parent_manifest_sha256": "b30b2e0ec053000f5bb8e0fa19bb03abf6526fafaecb1dbf6b12d75a6b65ee82",
+  "all_13_parent_bindings_verified_from_exact_git_blobs": true,
+  "parent_manifest_not_rewritten": true,
+  "historical_copies": {
+    "ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md": "06a7fea1ae596be2ef71e424cba068f368cf61a8ca501e560899d2e782bbad32",
+    "RH_DH_DISCRIMINATOR_REGISTER.json": "71ddf641013e66e9fe0621b946ad6acf9559b560902952a82e885a6fd67a3ad6"
+  }
+}

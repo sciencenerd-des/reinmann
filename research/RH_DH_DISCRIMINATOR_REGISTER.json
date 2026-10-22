@@ -119,7 +119,9 @@
       "RH_strength_mean_square_proved": false,
       "DH_gate_status": "Exact Euler-product coefficient transfer is refuted; no replacement DH metaplectic-family estimate is instantiated.",
       "analysis_note": "research/prime_spectral/ROW_DENSITY_AND_CUBIC_OBSTRUCTION_2026_10_22.md",
-      "review_draft": "research/prime_spectral/ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md"
+      "review_draft": "research/prime_spectral/ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md",
+      "development_status": "parked_pending_external_specialist_review; no further cubic analytic machinery authorized in this round",
+      "specialist_question": "A coefficient-specific metaplectic mean square including principal k-th-power rows: in particular quadratic twists with squares retained at H=D^(1+vartheta), rather than a false same-cost arbitrary-coefficient extension of the squarefree large sieve."
     }
   ],
   "shared_prerequisites": [

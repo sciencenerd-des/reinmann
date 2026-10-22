@@ -1,0 +1,27 @@
+{
+  "status": "both_sent_messages_read_back_and_checked",
+  "checks": [
+    {
+      "reviewer": "Dunn",
+      "message_id": "1a1638745d6378e2",
+      "thread_id": "1a1638745d6378e2",
+      "expected_recipient_verified": true,
+      "prepared_body_verified_as_sent_prefix": true,
+      "sent_label_verified": true,
+      "human_review_completed": false,
+      "thread_message_count": 1,
+      "matching_incoming_reply_count": 0
+    },
+    {
+      "reviewer": "Platt",
+      "message_id": "1a16384d8ae4f999",
+      "thread_id": "1a14619f2865976b",
+      "expected_recipient_verified": true,
+      "prepared_body_verified_as_sent_prefix": true,
+      "sent_label_verified": true,
+      "human_review_completed": false,
+      "thread_message_count": 2,
+      "matching_incoming_reply_count": 0
+    }
+  ]
+}

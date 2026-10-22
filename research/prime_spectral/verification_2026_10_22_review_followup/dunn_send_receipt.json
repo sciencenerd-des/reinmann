@@ -1,0 +1,15 @@
+{
+  "status": "sent",
+  "to": "alex.dunn@math.gatech.edu",
+  "subject": "Question about principal-power rows in Möbius-family mean squares",
+  "message_id": "1a1638745d6378e2",
+  "thread_id": "1a1638745d6378e2",
+  "label_ids": [
+    "SENT"
+  ],
+  "authorization": "Latest human message: Sending it is your call.",
+  "material_commit": "571d76524be2e829da763f032461dc4cb243eb85",
+  "duplicate_prevention": "After the initial per-minute quota error, a successful Sent search found zero matching messages before this send.",
+  "human_review_completed": false,
+  "endorsement_inferred": false
+}

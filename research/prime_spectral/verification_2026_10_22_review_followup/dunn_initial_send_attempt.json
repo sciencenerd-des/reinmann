@@ -1,0 +1,10 @@
+{
+  "status": "send_failed_not_claimed_delivered",
+  "http_status": 403,
+  "reason": "Gmail project-level per-minute Queries quota exceeded",
+  "retryable_reported_by_connector": false,
+  "required_before_any_retry": "Check Gmail for the result to avoid duplicate delivery.",
+  "message_id": null,
+  "human_review_completed": false,
+  "request_body_file": "dunn_review_request.html"
+}

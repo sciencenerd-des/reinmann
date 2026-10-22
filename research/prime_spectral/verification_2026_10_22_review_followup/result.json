@@ -1,0 +1,20 @@
+{
+  "status": "review_handoff_completed",
+  "verified_at_utc": "2026-10-22T12:14:55.414376+00:00",
+  "research_material_commit": "571d76524be2e829da763f032461dc4cb243eb85",
+  "research_material_commit_pushed": true,
+  "formalization_v3_already_published": true,
+  "new_Zenodo_publish_action": false,
+  "specialist_request_sent": true,
+  "Platt_followup_sent": true,
+  "both_sent_messages_read_back": true,
+  "completed_human_review": false,
+  "cubic_route_parked": true,
+  "active_RH_strategy_with_proved_discriminator": false,
+  "new_Lean_proof_or_CI_claim": false,
+  "existing_verification_manifests_rewritten": false,
+  "owned_current_inputs_sha256": {
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json": "13f1f77af8199280cb7662629dabbdcd195a5a2f35056b59f87544a60ccf0ba4",
+    "research/prime_spectral/ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md": "7307c24e81d107eede085a190b1b7954fcf2ee44a7cee96f527655a2f7f66ad6"
+  }
+}

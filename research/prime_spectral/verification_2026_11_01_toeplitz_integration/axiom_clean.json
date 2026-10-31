@@ -1,0 +1,7 @@
+{
+  "command": [
+    "bash",
+    "scripts/verify_axiom_clean.sh"
+  ],
+  "exit_code": 0
+}

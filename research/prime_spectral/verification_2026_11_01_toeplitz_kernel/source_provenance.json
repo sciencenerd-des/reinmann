@@ -1,0 +1,27 @@
+{
+  "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+  "mathlib_HEAD": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "dirty": [
+    " M research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md",
+    " M research/RH_DH_DISCRIMINATOR_REGISTER.json",
+    " M research/RH_DH_DISCRIMINATOR_REGISTER.md",
+    "?? Reinmann/ToeplitzKernel.lean",
+    "?? research/prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md",
+    "?? research/prime_spectral/verification_2026_11_01_toeplitz_kernel/"
+  ],
+  "previous_packet": "verification_2026_11_01_other_directions",
+  "earlier_non_cache_verification_files_unchanged": 1837,
+  "proof_source": "Reinmann/ToeplitzKernel.lean",
+  "proof_source_sha256": "c477714dbc5dd931d263bd29e95565ff4f9ac00d3f564d586017e35e87564fef",
+  "root_import_changed": false,
+  "dependency_pins_changed": false,
+  "source_reference": "https://arxiv.org/html/2511.23257",
+  "source_reference_scope": "Known Corollary 1.1, with nonzero vector explicit. No novelty claim.",
+  "not_run": [
+    "Full-root build",
+    "CI",
+    "Arithmetic or spectral scans",
+    "External 7/8 port",
+    "General atomic moment representation"
+  ]
+}

@@ -1,0 +1,14 @@
+Reinmann.ToeplitzKernel.root_norm_eq_one {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hpsd : T.PosSemidef)
+  (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) (hrank : T.rank = n) {p : Polynomial ℂ} (hp : p.natDegree ≤ n)
+  (hp0 : p ≠ 0) (hpk : T.mulVec (Reinmann.ToeplitzKernel.coeffVec n p) = 0) {z : ℂ} (hz : p.IsRoot z) : ‖z‖ = 1
+Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) (hrank : T.rank = n) {v : Fin (n + 1) → ℂ}
+  (hv : v ≠ 0) (hvk : T.mulVec v = 0) {z : ℂ} (hz : ((Polynomial.ofFn (n + 1)) v).IsRoot z) : ‖z‖ = 1
+Reinmann.ToeplitzKernel.natDegree_eq_of_kernel {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hpsd : T.PosSemidef)
+  (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) (hrank : T.rank = n) {p : Polynomial ℂ} (hp : p.natDegree ≤ n)
+  (hp0 : p ≠ 0) (hpk : T.mulVec (Reinmann.ToeplitzKernel.coeffVec n p) = 0) : p.natDegree = n
+Polynomial.ofFn_eq_sum_monomial.{u_1} {R : Type u_1} [Semiring R] [DecidableEq R] {n : ℕ} (v : Fin n → R) :
+  (Polynomial.ofFn n) v = ∑ i, (Polynomial.monomial ↑i) (v i)
+'Reinmann.ToeplitzKernel.root_norm_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzKernel.natDegree_eq_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]

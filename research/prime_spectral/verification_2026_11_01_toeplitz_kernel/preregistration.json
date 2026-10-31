@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-01",
+  "target": "For n>=0 and T:Matrix (Fin(n+1)) (Fin(n+1)) Complex, assume PosSemidef T, T i.succ j.succ=T i.castSucc j.castSucc for all Fin n indices, and rank T=n. For a nonzero polynomial p of degree <=n whose coefficient vector is in ker T, every root z satisfies norm z=1. Equivalently every nonzero kernel vector has its ordinary ascending-coefficient polynomial roots on the unit circle.",
+  "conventions": "Full Hermitian two-sided Toeplitz, not the one-sided Taylor Toeplitz/PF matrix. Ordinary complex coefficients p=sum v_j X^j; explicit nonzero polynomial/vector. No zeta coefficients or all-rank positivity assumption.",
+  "DH_analogue": "Identical finite linear-algebra theorem for any DH-derived matrix whenever its PSD, Toeplitz and corank-one hypotheses hold. No DH-family arithmetic claim or implementation is needed for this generic theorem; the actual RH arithmetic probe remains uninstantiated.",
+  "classification": "shared_prerequisite",
+  "separating_inequality": null,
+  "arithmetic_route_active": false,
+  "RH_claim": false,
+  "novelty_claim": false,
+  "method": "Attempt direct shift-isometry proof: divide p by X-z; equal Toeplitz energies for q and Xq, together with T(p)=0 and Hermitian symmetry, imply (1-|z|^2)Q(q)=0. Corank one plus degree strictness excludes q in the kernel. No atomic representation is assumed.",
+  "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+  "status": "preregistered; no theorem yet claimed"
+}

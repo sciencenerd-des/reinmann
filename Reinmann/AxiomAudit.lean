@@ -65,6 +65,7 @@ import Reinmann.FeketeRowGap
 import Reinmann.GrassmannSyzygy
 import Reinmann.FeketeAllOrders
 import Reinmann.ToeplitzFullPF
+import Reinmann.ToeplitzKernel
 import Reinmann.HyperbolicLimit
 import Reinmann.HermitePoulainDerivative
 import Reinmann.HermitePoulainComposition
@@ -132,6 +133,12 @@ hypotheses (`Prop`s), never as axioms, so the conditional reductions stay honest
 -/
 
 namespace Reinmann.AxiomAudit
+
+-- Shared finite Toeplitz kernel corollary; no arithmetic positivity or RH separator.
+#print axioms Reinmann.ToeplitzKernel.root_norm_eq_one
+#print axioms Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle
+#print axioms Reinmann.ToeplitzKernel.natDegree_eq_of_kernel
+#print axioms Reinmann.ToeplitzKernel.isToeplitz_of_difference
 
 -- Core reduction chain: Hilbert–Pólya witness ⟹ RH (spectral branch).
 #print axioms riemannHypothesis_of_twoBranchArchitecture

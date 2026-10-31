@@ -1,0 +1,9 @@
+import Reinmann.ToeplitzKernel
+
+#check Reinmann.ToeplitzKernel.root_norm_eq_one
+#check Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle
+#check Reinmann.ToeplitzKernel.natDegree_eq_of_kernel
+#check Polynomial.ofFn_eq_sum_monomial
+#print axioms Reinmann.ToeplitzKernel.root_norm_eq_one
+#print axioms Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle
+#print axioms Reinmann.ToeplitzKernel.natDegree_eq_of_kernel

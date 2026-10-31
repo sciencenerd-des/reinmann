@@ -26,6 +26,7 @@ import Reinmann.JensenTuranBridge
 import Reinmann.XiPlanePrincipalValue
 import Reinmann.XiTotalPositivity
 import Reinmann.XiToeplitzPositivity
+import Reinmann.ToeplitzKernel
 import Reinmann.XiMomentKernel
 import Reinmann.Order3Certificate
 import Reinmann.CrossFieldBridges

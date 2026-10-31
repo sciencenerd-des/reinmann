@@ -459,3 +459,40 @@ is corrected. The full finite CF formalization remains open after a
 targeted library/dependency check, with finite Toeplitz moment representation
 identified as the substantive missing theorem. No arithmetic RH route is
 activated; no publication, outreach or stopped scan.
+
+## Finite Toeplitz kernel theorem continuation (1 November 2026)
+
+Preregister the full finite corank-one kernel root theorem for Hermitian PSD
+Toeplitz matrices of size n+1 and rank n, with ordinary ascending complex
+coefficients and an explicitly nonzero vector/polynomial. Attempt a direct
+shift-isometry proof after division by X-z; no finite atomic representation
+is assumed. This is shared finite linear algebra, valid for DH whenever
+the same matrix hypotheses hold. It supplies no zeta-specific positivity,
+new arithmetic discriminator or active RH strategy. The actual arithmetic
+probe remains uninstantiated. Earlier sealed packets remain immutable.
+
+### Finite Toeplitz kernel outcome
+
+`Reinmann/ToeplitzKernel.lean` proves the arbitrary-size corank-one
+kernel-root corollary and full degree n on Lean 4.30. A direct shift-energy
+proof avoids assuming an atomic representation. The three headline theorems
+use only propext, Classical.choice and Quot.sound. The general finite atomic
+moment representation remains unformalized. This is shared finite linear
+algebra, not a zeta positivity theorem or arithmetic discriminator; the
+arithmetic route remains uninstantiated. See the
+[follow-up note](prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md) for exact
+statements and the new verification packet. Earlier sealed packets and
+standing arithmetic route classifications are preserved.
+
+### Toeplitz root-build and axiom-audit integration
+
+The follow-up adds `Reinmann.ToeplitzKernel` to both `Reinmann.lean` and
+`Reinmann/AxiomAudit.lean`, with four explicit axiom prints covering the
+polynomial and vector root theorems, full degree, and entry-difference
+Toeplitz convention. Project audit imports remain a subset of root imports.
+Local `lake build` and `bash scripts/verify_axiom_clean.sh` pass; the latter
+reports 2,647 audited theorem dependencies, with no sorry or custom axioms.
+This is a dirty-working-tree local receipt on HEAD 26da3df, not a remote CI
+receipt. The integration packet preserves and historically replays the
+previous standalone packet. The theorem remains a proved shared prerequisite
+valid for DH under the same matrix hypotheses; atomic representation stays open.

@@ -535,5 +535,67 @@
       "CI_jobs_succeeded": 34,
       "receipt": "research/prime_spectral/verification_2026_10_22_pf97_closeout/result.json"
     }
-  ]
+  ],
+  "toeplitz_kernel_formalization_2026_11_01": {
+    "date": "2026-11-01",
+    "target": "For n>=0 and T:Matrix (Fin(n+1)) (Fin(n+1)) Complex, assume PosSemidef T, T i.succ j.succ=T i.castSucc j.castSucc for all Fin n indices, and rank T=n. For a nonzero polynomial p of degree <=n whose coefficient vector is in ker T, every root z satisfies norm z=1. Equivalently every nonzero kernel vector has its ordinary ascending-coefficient polynomial roots on the unit circle.",
+    "conventions": "Full Hermitian two-sided Toeplitz, not the one-sided Taylor Toeplitz/PF matrix. Ordinary complex coefficients p=sum v_j X^j; explicit nonzero polynomial/vector. No zeta coefficients or all-rank positivity assumption.",
+    "DH_analogue": "Identical finite linear-algebra theorem for any DH-derived matrix whenever its PSD, Toeplitz and corank-one hypotheses hold. No DH-family arithmetic claim or implementation is needed for this generic theorem; the actual RH arithmetic probe remains uninstantiated.",
+    "classification": "shared_prerequisite",
+    "separating_inequality": null,
+    "arithmetic_route_active": false,
+    "RH_claim": false,
+    "novelty_claim": false,
+    "method": "Attempt direct shift-isometry proof: divide p by X-z; equal Toeplitz energies for q and Xq, together with T(p)=0 and Hermitian symmetry, imply (1-|z|^2)Q(q)=0. Corank one plus degree strictness excludes q in the kernel. No atomic representation is assumed.",
+    "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+    "status": "Kernel corollary and full degree formalized; root import and four AxiomAudit checks integrated; local default build and axiom-clean pass. Shared prerequisite only.",
+    "outcome": {
+      "kernel_root_corollary_formalized": true,
+      "full_degree_formalized": true,
+      "general_atomic_representation_formalized": false,
+      "arithmetic_positivity_proved": false,
+      "root_import_changed": true,
+      "Lean_version": "4.30.0",
+      "module": "Reinmann/ToeplitzKernel.lean",
+      "theorems": [
+        "Reinmann.ToeplitzKernel.root_norm_eq_one",
+        "Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle",
+        "Reinmann.ToeplitzKernel.natDegree_eq_of_kernel"
+      ],
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "assumed_atomic_representation": false,
+      "note": "research/prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md",
+      "packet": "research/prime_spectral/verification_2026_11_01_toeplitz_kernel",
+      "fresh_Lean_kernel_replay_passed": true,
+      "compiled_import_modules_bound": 5303,
+      "compiled_and_metadata_files_bound": 21210,
+      "earlier_verification_files_unchanged": 1837
+    },
+    "ci_integration": {
+      "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+      "dirty_working_tree": true,
+      "root_import_present": true,
+      "all_project_audit_imports_in_root": true,
+      "project_audit_import_count": 102,
+      "root_import_count": 176,
+      "nonproject_audit_imports_in_root_dependency_closure": [
+        "Lean.Util.CollectAxioms"
+      ],
+      "four_audited_constants": [
+        "Reinmann.ToeplitzKernel.root_norm_eq_one",
+        "Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle",
+        "Reinmann.ToeplitzKernel.natDegree_eq_of_kernel",
+        "Reinmann.ToeplitzKernel.isToeplitz_of_difference"
+      ],
+      "default_lake_build_passed": true,
+      "local_axiom_clean_passed": true,
+      "audited_theorem_reports": 2647,
+      "remote_CI_run": false,
+      "commit_created": false
+    }
+  }
 }

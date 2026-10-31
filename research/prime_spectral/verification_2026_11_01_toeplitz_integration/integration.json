@@ -1,0 +1,22 @@
+{
+  "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+  "dirty_working_tree": true,
+  "root_import_present": true,
+  "all_project_audit_imports_in_root": true,
+  "project_audit_import_count": 102,
+  "root_import_count": 176,
+  "nonproject_audit_imports_in_root_dependency_closure": [
+    "Lean.Util.CollectAxioms"
+  ],
+  "four_audited_constants": [
+    "Reinmann.ToeplitzKernel.root_norm_eq_one",
+    "Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle",
+    "Reinmann.ToeplitzKernel.natDegree_eq_of_kernel",
+    "Reinmann.ToeplitzKernel.isToeplitz_of_difference"
+  ],
+  "default_lake_build_passed": true,
+  "local_axiom_clean_passed": true,
+  "audited_theorem_reports": 2647,
+  "remote_CI_run": false,
+  "commit_created": false
+}

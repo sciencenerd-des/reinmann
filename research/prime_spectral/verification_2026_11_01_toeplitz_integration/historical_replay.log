@@ -1,0 +1,10 @@
+PASS: 25 bound files; 1654 earlier verification files unchanged; four stages, quartic and direct dual replayed
+PASS: direct pricing and DH model checks; 1669 earlier verification files unchanged; prior refined validator replayed against its historical sources
+Numerical certificate evaluation is replayed separately with --replay-dh-zero and Arb.
+PASS: closure algebra and register scope; 1710 earlier non-cache verification files unchanged; both preceding packets replayed historically
+Standard Hecke analytic theory and the full theta identity are not machine proved.
+PASS: threshold documentation and register scope; 1773 earlier non-cache verification files unchanged; three preceding packets replayed historically
+PASS: band-only refined certificate and scope; 1785 earlier non-cache verification files unchanged; four preceding packets replayed historically
+Lean build/probe results are bound receipts, not repeated by this Python validator.
+PASS: finite Toeplitz kernel theorem and shared-prerequisite scope; 1837 earlier non-cache verification files unchanged; five earlier packets replayed historically
+No general atomic moment representation, arithmetic positivity, root build or CI is claimed.

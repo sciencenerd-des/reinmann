@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/leanchecker",
+    "--fresh",
+    "--verbose",
+    "Reinmann.ToeplitzKernel"
+  ],
+  "exit_code": 0,
+  "import_modules_bound": 5303,
+  "compiled_and_metadata_files_bound": 21210,
+  "checker_sha256": "75e31792c0cc304df5f20ea64249d627686dfb1a098d5f7f6869ba80e913d2c9",
+  "checker_source_sha256": "eb5dee411837629f09c5c18d63cc833d30335a46048bc586642742e90aa65d5f",
+  "compiled_inputs_unchanged": true,
+  "scope": "Lean own-kernel fresh replay; not an independently implemented verifier."
+}

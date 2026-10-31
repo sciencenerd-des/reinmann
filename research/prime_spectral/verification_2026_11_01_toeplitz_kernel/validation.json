@@ -1,0 +1,21 @@
+{
+  "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+  "targeted_Lean_build_passed": true,
+  "headline_standard_axiom_probes": 3,
+  "fresh_Lean_own_kernel_replay_passed": true,
+  "compiled_import_modules_bound": 5303,
+  "compiled_and_metadata_files_bound_and_unchanged": 21210,
+  "historical_packets_replayed": 5,
+  "earlier_non_cache_verification_files_unchanged": 1837,
+  "DH_gate_passed": true,
+  "diff_check_passed": true,
+  "validator_exit_code": 0,
+  "kernel_root_corollary_formalized": true,
+  "full_degree_formalized": true,
+  "general_atomic_representation_formalized": false,
+  "new_arithmetic_positivity_proved": false,
+  "active_RH_route": false,
+  "full_root_build_or_CI_run": false,
+  "root_import_or_dependency_pins_changed": false,
+  "commit_created_by_this_turn": false
+}

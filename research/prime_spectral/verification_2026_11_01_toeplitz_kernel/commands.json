@@ -1,0 +1,42 @@
+[
+  {
+    "command": [
+      "lake",
+      "build",
+      "Reinmann.ToeplitzKernel"
+    ],
+    "exit_code": 0,
+    "log": "build.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "research/prime_spectral/verification_2026_11_01_toeplitz_kernel/Probe.lean"
+    ],
+    "exit_code": 0,
+    "log": "axioms.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--deps",
+      "Reinmann/ToeplitzKernel.lean"
+    ],
+    "exit_code": 0,
+    "log": "dependencies.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--version"
+    ],
+    "exit_code": 0,
+    "log": "lean_version.log"
+  }
+]

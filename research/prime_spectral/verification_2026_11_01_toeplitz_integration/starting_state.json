@@ -1,0 +1,5 @@
+{
+  "HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+  "status": " M research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md\n M research/RH_DH_DISCRIMINATOR_REGISTER.json\n M research/RH_DH_DISCRIMINATOR_REGISTER.md\n?? Reinmann/ToeplitzKernel.lean\n?? research/prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md\n?? research/prime_spectral/verification_2026_11_01_toeplitz_integration/\n?? research/prime_spectral/verification_2026_11_01_toeplitz_kernel/\n",
+  "scope": "Integrate the existing shared finite Toeplitz theorem into the root build and four explicit axiom audits; no theorem changes."
+}

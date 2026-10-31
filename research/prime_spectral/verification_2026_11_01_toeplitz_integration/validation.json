@@ -1,0 +1,18 @@
+{
+  "git_HEAD": "26da3dfbee6ccbd13e57af05f61ce7d7f640bdc6",
+  "dirty_working_tree": true,
+  "root_import_added": true,
+  "AxiomAudit_import_added": true,
+  "four_explicit_axiom_checks": true,
+  "all_project_audit_imports_in_root": true,
+  "local_default_lake_build_exit_code": 0,
+  "local_axiom_clean_exit_code": 0,
+  "audited_theorem_reports": 2647,
+  "DH_gate_passed": true,
+  "diff_check_passed": true,
+  "historical_packets_replayed": 6,
+  "earlier_verification_files_unchanged": 1862,
+  "validator_exit_code": 0,
+  "remote_CI_run": false,
+  "commit_created": false
+}

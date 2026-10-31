@@ -24,5 +24,8 @@ The target is
 `Reinmann.PNTPlus.Mathlib.NumberTheory.LSeries.RiemannZetaHadamard`.
 Its dependency closure includes the general Hadamard factorization, Jensen
 summability, divisor products and Xi growth. It does not include or import
-OpenAI's 7/8 proof. It remains outside `Reinmann.lean`'s root import; its audit
-is separate from the unchanged root audit.
+OpenAI's 7/8 proof. `Reinmann.XiHadamardProduct` imports this backport and proves the actual
+folded-Xi product; that module is imported by `Reinmann.lean`. A targeted
+Lean 4.30 build and axiom probe were refreshed on 1 November 2026; see
+`research/prime_spectral/OTHER_DIRECTIONS_2026_11_01.md`. This does not import
+the external 7/8 proof or constitute a fresh full-root build receipt.

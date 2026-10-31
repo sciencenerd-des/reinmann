@@ -1,0 +1,7 @@
+research/prime_spectral/verification_2026_11_01_other_directions/HadamardProbe.lean:3:7: error(lean.unknownIdentifier): Unknown constant `Complex.riemannXi_hadamard_factorization_no_monomial`
+Reinmann.XiHadamardProduct.foldedXi_product (z : ℂ) :
+  Reinmann.foldedXi z =
+    ↑(Reinmann.XiMomentCoeff 0) *
+      ∏' (i : Reinmann.XiCanonicalProductSector.Index), (1 - (Reinmann.XiCanonicalProductSector.value i)⁻¹ * z)
+'Reinmann.XiHadamardProduct.foldedXi_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.foldedXi_order' depends on axioms: [propext, Classical.choice, Quot.sound]

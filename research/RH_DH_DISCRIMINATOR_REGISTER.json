@@ -370,6 +370,82 @@
             "whole_method_family_closed": false
           }
         }
+      },
+      "other_directions_preregistration_2026_11_01": {
+        "scope": "Directions B/C conditional finite strengthening; D/E infrastructure/formalization feasibility. No new RH route or scan.",
+        "B_target": "Reprice H_band(4/5): original normalized ideal-Mobius inverse polynomial has mean square <= U^(1/5+4r/5+epsilon) with all original sextic/ray/excluded-prime and height conventions, only for 1099/1000<=r<=119/100. Elsewhere retain the original 5/6 amplification exponent. Use Xu-Sang averaged numerator and kappa=3/4 justified by prior 7/8; certify a rational B<B_flat if feasible. Determine a sufficient class box and recheck cutoffs and auxiliary margins exactly; no optimality or minimal band claim.",
+        "B_DH": "Replacement DH moment family is still uninstantiated. This is scalar conditional pricing, not proof of the arithmetic hypothesis or a DH discriminator.",
+        "C_target": "Read Xu-Sang 2610.17675v2 Sections 6-7, including bounded rough prime convolutions, and test whether their theorem actually covers the inverse ideal-Mobius coefficients with arbitrary squarefree composite support at length U^(1.099..1.19), the required common characters and allowed heights. A support mismatch or a circular input must be recorded rather than assumed away.",
+        "C_DH": "No improved Mobius inequality or DH metaplectic family will be claimed from prime support alone. Any genuinely new arithmetic lemma would require a fresh DH instantiation first.",
+        "D_scope": "Inspect current Lean 4.30, installed 4.34.1, vendored PNT+ modules, dependency pins and toolchain compatibility. Preserve current checkout/pins and old receipts; any migration experiment is isolated. Do not claim an upgrade or import without a successful build.",
+        "E_scope": "Check existing Mathlib support and local CF/Toeplitz plans for a precise bounded formalization target. No new spectral/RH route or assumed all-rank positivity.",
+        "separating_inequality": null,
+        "classification": "uninstantiated",
+        "computed": true,
+        "outcome": {
+          "B": {
+            "conditional_B": "34993/40000",
+            "decimal": "0.874825",
+            "length_band": [
+              "1099/1000",
+              "119/100"
+            ],
+            "class_box": {
+              "delta": [
+                "21/50",
+                "51/100"
+              ],
+              "x": [
+                "21/50",
+                "1/2"
+              ]
+            },
+            "cutoff": "min(t_alpha,119/100)",
+            "old_moment_outside_band": true,
+            "uniform_scalar_and_auxiliary_certificates": true,
+            "improves_B_flat": true,
+            "improves_older_conditional_B_0_874793": false,
+            "arithmetic_estimate_proved": false,
+            "DH_family_instantiated": false,
+            "receipt": "research/prime_spectral/verification_2026_11_01_other_directions/refined_localized_certificate.json",
+            "receipt_sha256": "db72abb89e6e5875c4b2e7f40e98443cd22c1f55c8703a25899ab9a85d2df394"
+          },
+          "C": {
+            "published_structured_prime_theorem_supplies_target_as_stated": false,
+            "gaps": [
+              "bounded rough prime support versus unrestricted squarefree Mobius coefficients",
+              "balanced Y/Y scales versus U/U^r",
+              "coefficient conversion and original height uniformity not supplied"
+            ],
+            "input_dependency": "The source imports the old inverse moment E(r)=max{1,(1+5r)/6}; it does not prove improved H_band.",
+            "target_moment_disproved": false,
+            "new_arithmetic_lemma_proved": false
+          },
+          "D": {
+            "Hadamard_backport_already_present": true,
+            "root_import_already_present": true,
+            "target_build_passed": true,
+            "Lean_version": "4.30.0",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "toolchain_upgrade_performed": false,
+            "external_seven_eighths_import_unified": false,
+            "full_root_build_or_CI_refreshed": false
+          },
+          "E": {
+            "targeted_library_search_completed": true,
+            "full_CF_formalization_completed": false,
+            "missing_component": "PSD Toeplitz finite atomic moment representation or equivalent quotient/unitary construction; no placeholder theorem added.",
+            "scope": "Shared prerequisite, no RH discriminator."
+          },
+          "note": "research/prime_spectral/OTHER_DIRECTIONS_2026_11_01.md",
+          "arithmetic_route_active": false,
+          "RH_claim": false,
+          "novelty_claim": false
+        }
       }
     }
   ],

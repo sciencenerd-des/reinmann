@@ -1,0 +1,83 @@
+{
+  "conditional_B": "34993/40000",
+  "conditional_B_decimal": "0.874825",
+  "parameters": {
+    "kappa": "3/4",
+    "b": "17/200",
+    "ell": "5021/30000"
+  },
+  "antecedent": "previous 7/8 bound licenses kappa=3/4",
+  "moment_hypothesis": "ideal-Mobius H(4/5) only on r in [1099/1000,119/100]",
+  "moment_gain": "(D/U)^(1/30)",
+  "outside": {
+    "unchanged_old_count_outside_class_box": true,
+    "delta_box": [
+      "21/50",
+      "51/100"
+    ],
+    "x_box": [
+      "21/50",
+      "1/2"
+    ],
+    "left_derivative_bound": "10016585807/632812500000",
+    "uniform_savings": {
+      "left": "10484491/121500000000",
+      "right": "6801151/486000000000",
+      "side": "73114442111429/131220000000000000"
+    }
+  },
+  "local": {
+    "count_upper_envelope": "max{R_alpha, R_short(119/100), R_old_long(1099/1000)}",
+    "chosen_cutoff": "min(t_alpha,119/100)",
+    "upper_length_band_enforced": true,
+    "new_moment_used_only_in_band": [
+      "1099/1000",
+      "119/100"
+    ],
+    "positive_discriminant_coefficients": [
+      "6745600367999/2361960000000000",
+      "72759423855719/590490000000000",
+      "75730519557853/196830000000000",
+      "2623945746493/7381125000000",
+      "5911531951/73811250000"
+    ],
+    "uniform_savings": {
+      "balanced": "6745600367999/45349632000000000",
+      "capped_short": "52145611/194400000000",
+      "old_long_below_band": "179774609/18000000000"
+    },
+    "tensor_Bernstein_bounds": {
+      "capped_short": "52145611/64800000000",
+      "old_long_below_band": "179774609/18000000000",
+      "cutoff_above_band_start": "16099/150000"
+    }
+  },
+  "strict_auxiliary_reserves": {
+    "b": "17/200",
+    "ell_lower": "7/10000",
+    "ell_upper": "979/30000",
+    "lx_support": "4129/20000",
+    "gram_geometry": "8137/60000",
+    "principal_region": "33/40000",
+    "prime_numerator": "63/20000",
+    "prime_supply_lower": "4327/4761300",
+    "prime_supply_upper": "1616/142839",
+    "numerator_geometry": "1489/24000",
+    "ly_upper": "2471/60000",
+    "small_C0": "181/8000",
+    "small_endpoint": "226483/2856780000",
+    "detector_floor": "401/250000",
+    "small_rows": "65579/3000000",
+    "conditional_slope": "29/100"
+  },
+  "row_extension": "1/10000000",
+  "retained_margin": "6703951/972000000000",
+  "improves_B_flat": true,
+  "improves_older_conditional_B_0_874793": false,
+  "optimized_or_minimal_claim": false,
+  "arithmetic_moment_proved": false,
+  "analytic_assembly_reproved": false,
+  "DH_family_instantiated": false,
+  "RH_claim": false,
+  "novelty_claim": false
+}

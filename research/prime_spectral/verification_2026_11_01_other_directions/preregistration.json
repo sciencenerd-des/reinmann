@@ -1,0 +1,12 @@
+{
+  "scope": "Directions B/C conditional finite strengthening; D/E infrastructure/formalization feasibility. No new RH route or scan.",
+  "B_target": "Reprice H_band(4/5): original normalized ideal-Mobius inverse polynomial has mean square <= U^(1/5+4r/5+epsilon) with all original sextic/ray/excluded-prime and height conventions, only for 1099/1000<=r<=119/100. Elsewhere retain the original 5/6 amplification exponent. Use Xu-Sang averaged numerator and kappa=3/4 justified by prior 7/8; certify a rational B<B_flat if feasible. Determine a sufficient class box and recheck cutoffs and auxiliary margins exactly; no optimality or minimal band claim.",
+  "B_DH": "Replacement DH moment family is still uninstantiated. This is scalar conditional pricing, not proof of the arithmetic hypothesis or a DH discriminator.",
+  "C_target": "Read Xu-Sang 2610.17675v2 Sections 6-7, including bounded rough prime convolutions, and test whether their theorem actually covers the inverse ideal-Mobius coefficients with arbitrary squarefree composite support at length U^(1.099..1.19), the required common characters and allowed heights. A support mismatch or a circular input must be recorded rather than assumed away.",
+  "C_DH": "No improved Mobius inequality or DH metaplectic family will be claimed from prime support alone. Any genuinely new arithmetic lemma would require a fresh DH instantiation first.",
+  "D_scope": "Inspect current Lean 4.30, installed 4.34.1, vendored PNT+ modules, dependency pins and toolchain compatibility. Preserve current checkout/pins and old receipts; any migration experiment is isolated. Do not claim an upgrade or import without a successful build.",
+  "E_scope": "Check existing Mathlib support and local CF/Toeplitz plans for a precise bounded formalization target. No new spectral/RH route or assumed all-rank positivity.",
+  "separating_inequality": null,
+  "classification": "uninstantiated",
+  "computed": false
+}

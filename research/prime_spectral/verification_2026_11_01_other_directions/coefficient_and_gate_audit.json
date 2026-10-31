@@ -1,0 +1,57 @@
+{
+  "B_old_pointwise_geometry_in_new_printed_gates": {
+    "b": "55363/500000",
+    "ell": "125621/750000",
+    "prime_supply_minus_21_over100": "-113543/48396300",
+    "small_delta_reserve_against_minus_1_over250": "-405562241237/116151120000000"
+  },
+  "C": {
+    "source_version": "2610.17675v2",
+    "source_archive_sha256": "7f7f2cbad8ed6c15e485b00053c5e4bac55adddf784dfa81b90ca6de58dde24c",
+    "tex_sha256": "77aca3ee3e70e409def8bca2772447b7cd0f3b14b5238c5e93167ec3fbd9ccaa",
+    "source_anchor_lines": {
+      "lem:inverse-input": [
+        1657
+      ],
+      "prop:prime-convolution": [
+        288,
+        1957
+      ],
+      "prime-convolution-moment": [
+        1972,
+        2032
+      ],
+      "kappa_6": [
+        189,
+        191,
+        209,
+        1868,
+        1943,
+        1948,
+        1976,
+        1993,
+        2038
+      ]
+    },
+    "original_inverse_input": "E(r)=max{1,(1+5r)/6}; it is an input to the zero-density/prime-moment branch, not an improved inverse output.",
+    "coefficient_restrictions": [
+      "prime coefficients with fixed smooth profiles",
+      "bounded number of independently weighted prime factors",
+      "every prime factor norm >=Y^c for fixed c>0"
+    ],
+    "scale_restriction": "Printed convolution theorem has row norm ~Y and coefficient product norm ~Y; target row U and column U^r is unbalanced.",
+    "Mobius_support_counter_observation": "For a fixed allowed prime ideal p0 outside finite S, squarefree products p0*q occur at arbitrarily large column scales. Their Mobius coefficient is nonzero but p0 is eventually smaller than Y^c for every fixed c>0; they lie outside the theorem class.",
+    "missing_transport": [
+      "rough-support decomposition with controlled losses",
+      "unbalanced conductor/length estimate",
+      "original coefficient and row-dependent-height uniformity"
+    ],
+    "printed_prime_exponent": "37/6 - 5*sqrt(6)/3",
+    "prime_exponent_decimal": "2.084183762028036503004527",
+    "illustrative_optimistic_rescaling": "Even pretending one can set Y=D while changing the row scale, normalization by D gives r*(kappa6-1), exceeding 1/5+4r/5 by more than 6683/60000 over the requested band.",
+    "rescaling_is_a_proved_transport": false,
+    "optimistic_exponent_gap_lower_bound": "6683/60000",
+    "inverse_moment_target_disproved": false,
+    "published_theorem_supplies_target_as_stated": false
+  }
+}

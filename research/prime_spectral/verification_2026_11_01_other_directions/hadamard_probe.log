@@ -1,0 +1,12 @@
+riemannXi_hadamard_factorization_no_monomial :
+  ∃ P,
+    P.degree ≤ 1 ∧
+      ∀ (z : ℂ),
+        z.riemannXi =
+          Complex.exp (Polynomial.eval z P) * Complex.Hadamard.divisorCanonicalProduct 1 Complex.riemannXi Set.univ z
+Reinmann.XiHadamardProduct.foldedXi_product (z : ℂ) :
+  Reinmann.foldedXi z =
+    ↑(Reinmann.XiMomentCoeff 0) *
+      ∏' (i : Reinmann.XiCanonicalProductSector.Index), (1 - (Reinmann.XiCanonicalProductSector.value i)⁻¹ * z)
+'Reinmann.XiHadamardProduct.foldedXi_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.XiHadamardProduct.foldedXi_order' depends on axioms: [propext, Classical.choice, Quot.sound]

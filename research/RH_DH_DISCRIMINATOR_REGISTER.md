@@ -417,3 +417,45 @@ angular GRH, possible coincidences lie only on Re(s)=7/12 and the
 near-supremum boundary case becomes beta_*=7/12. No GRH hypothesis is
 adopted, no DH metaplectic probe is instantiated, and no arithmetic route
 or whole-method closure is claimed. Earlier sealed evidence is preserved.
+
+## Other directions preregistration (1 November 2026)
+
+B: reprice the original ideal-Mobius H_band(4/5), only on
+1099/1000<=r<=119/100, in the Xu–Sang averaged-numerator system.
+Retain the original moment outside this band and kappa=3/4 supplied by
+the preceding 7/8 bound. Seek a rational conditional B<B_flat with full
+class/cutoff and auxiliary-margin certificates; no optimal/minimal target.
+C: read the exact structured-prime and bounded rough-convolution theorems
+of Xu–Sang 2610.17675v2, including coefficients, support and height
+uniformity, before applying them to the Mobius inverse polynomial. No
+new arithmetic lemma or DH replacement family is assumed; both remain
+uninstantiated. These tasks concern conditional finite strengthening.
+D/E: inspect Lean compatibility and existing CF formalization support as
+shared infrastructure, preserving the current checkout and pinned proofs.
+No stopped scan, new RH route, publication or outreach is authorized here.
+
+### Other directions outcome (1 November 2026)
+
+The [bounded B–E trials](prime_spectral/OTHER_DIRECTIONS_2026_11_01.md)
+certify a conditional B=34993/40000=0.874825 in the refined system using
+H(4/5) only on the original r-band [1.099,1.19]. The detector cutoff is
+capped at 1.19 and the old moment is retained elsewhere. All central and
+printed auxiliary scalar gates pass. This improves B-flat but is weaker
+than the earlier pointwise conditional B=0.874793; it is not an optimized
+or new arithmetic result. The changed sufficient class box is
+delta in [21/50,51/100], x in [21/50,1/2].
+
+Xu–Sang's structured-prime theorem does not supply the inverse moment as
+stated: bounded rough prime support, balanced scales and prescribed
+coefficient/height uniformity do not cover the Mobius target. The source
+uses the old inverse moment as input. No target is disproved and no new
+arithmetic lemma or DH family is produced.
+
+The Hadamard factorization motivation for a Lean upgrade is already
+satisfied by the attributed 4.30 backport and its root-imported folded-Xi
+theorem. A targeted build and standard-axiom probe pass. Pins remain 4.30;
+the external 7/8 import is still separate. The stale README/review wording
+is corrected. The full finite CF formalization remains open after a
+targeted library/dependency check, with finite Toeplitz moment representation
+identified as the substantive missing theorem. No arithmetic RH route is
+activated; no publication, outreach or stopped scan.

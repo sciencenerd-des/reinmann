@@ -166,54 +166,48 @@ records the exact scope, proof and reproducible receipt.
 6. **Prior art:** a dedicated lookup finds the same Xu–Sang direct-side
    13/15 observation in the 17 October rStation discussion. No novelty claim.
 
-### Direction B: re-price the localized H(4/5) target in the B♭ system (cheap)
+### Direction B: localized H(4/5) in the refined system (audited)
 
-Stack the 24 Oct localized amplification hypothesis (α = 4/5 only on
-1.099 ≤ r ≤ 1.19) with the Xu–Sang numerator, and certify a rational
-conditional B < B♭.
+The [B–E audit](prime_spectral/OTHER_DIRECTIONS_2026_11_01.md) certifies
+conditional B=0.874825 using the same r-band [1.099,1.19], with the old
+moment elsewhere and a capped detector cutoff. All printed auxiliary
+gates pass. It improves B-flat but does **not** beat the older conditional
+pointwise B=0.874793. The new sufficient class box is delta in
+[21/50,51/100], x in [21/50,1/2]. No optimized boundary, arithmetic estimate,
+DH moment family or publication claim. The best existing conditional
+payoff in this repo remains 0.874793.
 
-- Report how the needed r-band and the (D/U)^{1/30} gain move. Liu names this
-  input type in §2.12 but does not localize it, so a localization is useful
-  to anyone trying to prove it.
-- This is **conditional finite strengthening only**. Write it as a short
-  sensitivity note, with prior-art checks against Newton and Liu26c, if the
-  user wants a timely Zenodo item. DH status is unchanged: the replacement DH
-  moment family remains uninstantiated.
+### Direction C: structured-prime transfer (source audit completed)
 
-### Direction C: does Xu–Sang's structured-prime moment already supply the localized gain? (reading task)
+Xu–Sang 2610.17675v2 covers primes and bounded convolutions of independently
+weighted large primes. It does not as stated cover unrestricted
+squarefree Mobius coefficients at unbalanced U/U^r scales with the required
+uniformity. Its density/prime branch takes the old inverse moment as an
+input. A coefficient-sensitive conversion with controlled losses is still
+missing; no localized Mobius gain is obtained and the target is not
+refuted. This remains optional finite-strengthening work, subject to the
+DH gate before any new arithmetic lemma.
 
-Xu–Sang 2610.17675 proves a structured-prime second moment
-≪ Q^{(37−10√6)/6+ε} for sextic characters. The 24 Oct note needs a gain
-(D/U)^{1/30} for the **ideal-Möbius inverse polynomial**, which is a
-different coefficient vector.
+### Direction D: toolchain catch-up (Hadamard motivation already satisfied)
 
-- Read their normalization and decide whether the method (Gauss second moment
-  plus a column-scale comparison) adapts to Möbius coefficients of length
-  U^{1.1–1.19}.
-- If it does, the localized target becomes a provable lemma. That would be
-  the first genuinely new arithmetic estimate this repo could contribute. It
-  would still be finite strengthening. Möbius structure alone would not
-  establish a DH discriminator; its precise inequality and analogue would
-  still have to pass the research gate.
-- If it does not, record why. The likely reason is that a prime-supported
-  vector is not a Möbius vector, since Möbius has square-free composite
-  support.
+The current 4.30 checkout already contains an attributed PNT+ backport,
+used by the actual folded-Xi product theorem and imported from the root.
+The targeted Hadamard build and axiom probe pass on Lean 4.30 with only
+standard axioms. A toolchain upgrade is therefore unnecessary to obtain
+this factorization; the earlier recommendation was stale.
 
-### Direction D: Lean toolchain catch-up (infrastructure)
-
-The repo is on Lean v4.30. The external 7/8 proof is on v4.34.1, PNT+
-(Hadamard factorization, `riemannXi` of order ≤ 1) on v4.35.0, and Liu's
-forthcoming B♭ Lean will likely be on one of these.
-
-A port or upgrade would let the folded-Xi product identity use PNT+ Hadamard
-directly. It would also let PF58 import the 7/8 theorem in one toolchain
-rather than a separate replay. Shared prerequisite, no DH issue. Watch the
-root-import CI gap noted in project memory.
+The external 7/8 theorem still lives in its separate 4.34.1 development;
+its proposition is an explicit input in the main checkout. Unifying that
+proof remains a dependency-migration or port task. No upgrade, full-root
+rebuild or new CI receipt is claimed by this audit.
 
 ### Direction E: Carathéodory–Fejér in Lean (carried over, low priority)
 
-This was Direction 3 of 24 Oct. The spectral route it served is now a
-reformulation. Keep it only as a Mathlib-quality contribution.
+This was Direction 3 of 24 Oct. A targeted library check did not locate
+the full finite CF theorem; the substantive missing component is a finite
+PSD Toeplitz moment representation or equivalent quotient/unitary
+construction. No new CF theorem is formalized. The spectral route it
+served remains a reformulation; keep this as shared formal infrastructure.
 
 ### Not recommended
 

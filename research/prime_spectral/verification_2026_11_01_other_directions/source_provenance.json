@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "c67e4f90586fc055ca3abde2727d95c51b0a1b71",
+  "dirty_working_tree": true,
+  "previous_packet_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "commit_created_by_this_turn": false,
+  "HEAD_note": "An external commit c67e4f9 captured the earlier audit chain during this turn; all earlier verification bytes still match. The new B-E changes remain uncommitted.",
+  "python": "3.14.2",
+  "sympy": "1.14.0",
+  "C_source": {
+    "source_version": "2610.17675v2",
+    "source_archive_sha256": "7f7f2cbad8ed6c15e485b00053c5e4bac55adddf784dfa81b90ca6de58dde24c",
+    "tex_sha256": "77aca3ee3e70e409def8bca2772447b7cd0f3b14b5238c5e93167ec3fbd9ccaa",
+    "source_anchor_lines": {
+      "lem:inverse-input": [
+        1657
+      ],
+      "prop:prime-convolution": [
+        288,
+        1957
+      ],
+      "prime-convolution-moment": [
+        1972,
+        2032
+      ],
+      "kappa_6": [
+        189,
+        191,
+        209,
+        1868,
+        1943,
+        1948,
+        1976,
+        1993,
+        2038
+      ]
+    },
+    "original_inverse_input": "E(r)=max{1,(1+5r)/6}; it is an input to the zero-density/prime-moment branch, not an improved inverse output.",
+    "coefficient_restrictions": [
+      "prime coefficients with fixed smooth profiles",
+      "bounded number of independently weighted prime factors",
+      "every prime factor norm >=Y^c for fixed c>0"
+    ],
+    "scale_restriction": "Printed convolution theorem has row norm ~Y and coefficient product norm ~Y; target row U and column U^r is unbalanced.",
+    "Mobius_support_counter_observation": "For a fixed allowed prime ideal p0 outside finite S, squarefree products p0*q occur at arbitrarily large column scales. Their Mobius coefficient is nonzero but p0 is eventually smaller than Y^c for every fixed c>0; they lie outside the theorem class.",
+    "missing_transport": [
+      "rough-support decomposition with controlled losses",
+      "unbalanced conductor/length estimate",
+      "original coefficient and row-dependent-height uniformity"
+    ],
+    "printed_prime_exponent": "37/6 - 5*sqrt(6)/3",
+    "prime_exponent_decimal": "2.084183762028036503004527",
+    "illustrative_optimistic_rescaling": "Even pretending one can set Y=D while changing the row scale, normalization by D gives r*(kappa6-1), exceeding 1/5+4r/5 by more than 6683/60000 over the requested band.",
+    "rescaling_is_a_proved_transport": false,
+    "optimistic_exponent_gap_lower_bound": "6683/60000",
+    "inverse_moment_target_disproved": false,
+    "published_theorem_supplies_target_as_stated": false
+  },
+  "B_source": "Xu-Sang 2610.15291v2; Liu 2610.26835v2. Same versioned archive hashes as the earlier refined packet.",
+  "E_source": "https://arxiv.org/html/2511.23257, finite Toeplitz case; targeted local source search only, no full CF proof produced.",
+  "Lean": {
+    "version": "Lean (version 4.30.0, arm64-apple-darwin24.6.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
+    "installed_toolchains": [
+      "leanprover/lean4:v4.27.0",
+      "leanprover/lean4:v4.30.0",
+      "leanprover/lean4:v4.34.1"
+    ],
+    "PNT_upstream_commit": "127b50e33f6033e2147921167a117af96d9ba4ea",
+    "adapted_source_hashes_verified": 61,
+    "target": "Reinmann.XiHadamardProduct",
+    "full_root_build": false,
+    "CI_receipt": false,
+    "target_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "toolchain_and_dependency_pins_changed": false
+  }
+}

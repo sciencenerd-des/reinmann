@@ -1,0 +1,6 @@
+import Reinmann.XiHadamardProduct
+
+#check riemannXi_hadamard_factorization_no_monomial
+#check Reinmann.XiHadamardProduct.foldedXi_product
+#print axioms Reinmann.XiHadamardProduct.foldedXi_product
+#print axioms Reinmann.XiHadamardProduct.foldedXi_order

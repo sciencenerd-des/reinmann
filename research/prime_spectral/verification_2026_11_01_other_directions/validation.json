@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "c67e4f90586fc055ca3abde2727d95c51b0a1b71",
+  "dirty_working_tree": true,
+  "unit_tests": {
+    "passed": 48,
+    "failed": 0,
+    "log": "unit_tests.log"
+  },
+  "DH_gate": {
+    "passed": true,
+    "targets": 8,
+    "log": "DH_gate.log"
+  },
+  "git_diff_check": {
+    "passed": true,
+    "log": "diff_check.log"
+  },
+  "Lean_target_build": {
+    "passed": true,
+    "target": "Reinmann.XiHadamardProduct",
+    "log": "hadamard_build.log"
+  },
+  "Lean_probe": {
+    "passed": true,
+    "log": "hadamard_probe.log",
+    "initial_namespace_diagnostic": "hadamard_probe_initial.log",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "PNT_attributed_source_hashes_verified": 61,
+  "historical_packet_replays_passed": 4,
+  "earlier_non_cache_verification_files_unchanged": 1785,
+  "packet_validator_exit_code": 0,
+  "B_conditional_boundary": "34993/40000",
+  "B_improves_older_conditional_0_874793": false,
+  "new_arithmetic_estimate_proved": false,
+  "DH_family_instantiated": false,
+  "Lean_upgrade_performed": false,
+  "external_7_8_import_unified": false,
+  "full_CF_formalization_completed": false,
+  "not_run": [
+    "full-root Lean rebuild",
+    "CI",
+    "new zero/Toeplitz/Weil/Jensen/row-density scans",
+    "new arithmetic moment proof",
+    "toolchain migration"
+  ],
+  "commit_created_by_this_turn": false
+}

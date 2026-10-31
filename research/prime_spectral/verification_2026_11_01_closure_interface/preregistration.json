@@ -1,0 +1,11 @@
+{
+  "target": "Audit the two proposed existing-source closure inputs, not a new arithmetic estimate: (i) R_eta=O(Z^(C_b(1/2)-delta0)) for some delta0>0, (ii) principal correction G_eta holomorphic/nonvanishing for Re(s)>1/2.",
+  "scope": "Read the SAME Xu-Sang probe and its finite compensation, Eisenstein ideal norms, fixed finite-order eta, excluded primes S and unselected j=0,rho=1 local factors. Check printed uniform margins and exact principal specialization w=1,z=1/6; no changed probe or implicit extension of its theorem.",
+  "local_conventions": "T=q^(-s),Y=q^(-w),V=q^(-6z),R=a^2*q^4*T^6*V, a=conjugate(Lambda(p))^3*eta(p)^3. At principal residue Y=V=1/q and R=psi(p)*q^(3-6s), psi=conjugate(Lambda)^6*eta^6. Verify dependence on angular Lambda rather than dropping it.",
+  "DH_analogue": "No DH metaplectic probe exists in the repo; neither remainder nor correction claim is asserted for it. The genuine reciprocal-DH principal model and retained off-critical disk remain distinct. This is a source-interface audit, not an RH-separating lemma.",
+  "arithmetic_property": "No separator proposed. If a shifted angular Hecke L-factor appears, state its exact shift and which zero/coprimality obligation it introduces; do not infer a new bound or universal impossibility.",
+  "separating_inequality": null,
+  "classification": "uninstantiated",
+  "failure_scope": "Failure of a supplied upper majorant is not a lower bound for the actual remainder. A zero in a principal correction is not itself a target L zero or a proof that every replacement probe fails.",
+  "computed": false
+}

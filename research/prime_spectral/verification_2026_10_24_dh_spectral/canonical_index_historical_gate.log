@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_sector_start.py", line 68, in <module>
+    check(parser.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_sector_start.py", line 27, in check
+    assert n=='README.md',('Changed parent artifact',n)
+           ^^^^^^^^^^^^^^
+AssertionError: ('Changed parent artifact', '.github/workflows/ci.yml')
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_analytic_pf_limits.py", line 71, in <module>
+    check(parser.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_analytic_pf_limits.py", line 22, in check
+    subprocess.run(["python3", "experiments/prime_spectral/verify_sector_start.py"],
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'experiments/prime_spectral/verify_sector_start.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_finite_pf_products.py", line 86, in <module>
+    check(parser.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_finite_pf_products.py", line 28, in check
+    subprocess.run(["python3", "experiments/prime_spectral/verify_analytic_pf_limits.py"],
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'experiments/prime_spectral/verify_analytic_pf_limits.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_polynomial_sector_pf.py", line 78, in <module>
+    check(parser.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_polynomial_sector_pf.py", line 23, in check
+    subprocess.run(["python3", "experiments/prime_spectral/verify_finite_pf_products.py"],
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'experiments/prime_spectral/verify_finite_pf_products.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_real_genus_zero_approximants.py", line 95, in <module>
+    check(parser.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_real_genus_zero_approximants.py", line 24, in check
+    subprocess.run(["python3", "experiments/prime_spectral/verify_polynomial_sector_pf.py"],
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'experiments/prime_spectral/verify_polynomial_sector_pf.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_canonical_zero_index.py", line 96, in <module>
+    check(parser.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_canonical_zero_index.py", line 24, in check
+    subprocess.run(["python3", "experiments/prime_spectral/verify_real_genus_zero_approximants.py"],
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'experiments/prime_spectral/verify_real_genus_zero_approximants.py']' returned non-zero exit status 1.

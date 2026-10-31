@@ -1,0 +1,80 @@
+{
+  "python": "3.12.11",
+  "base_commit": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_checkout": true,
+  "commands": [
+    {
+      "name": "unit_tests",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpgR8aLJ/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/prime_spectral",
+        "-p",
+        "test_liu*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "unit_tests.log",
+      "log_sha256": "eb43a9478839c89cb2459f8f7fda64c6aff9992aa89af03dbc862b58016dd9e4"
+    },
+    {
+      "name": "DH_gate",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpgR8aLJ/bin/python",
+        "experiments/prime_spectral/check_dh_research_gate.py"
+      ],
+      "exit_code": 0,
+      "log": "DH_gate.log",
+      "log_sha256": "7d9f75510ddb1cc0cc04cc6ee018cfd43d3a8409ed658a73ea35b5c96f0b6d94"
+    },
+    {
+      "name": "retained_DH_arithmetic_replay",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpgR8aLJ/bin/python",
+        "-c",
+        "import sys,json; from pathlib import Path; sys.path.insert(0,'experiments/prime_spectral'); from verify_row_density_extraction import calculate; assert calculate()==json.loads(Path('research/prime_spectral/verification_2026_10_22_row_density/exact_checks.json').read_text()); print('Retained exact DH arithmetic receipt agrees; no new row-density analysis')"
+      ],
+      "exit_code": 0,
+      "log": "retained_DH_arithmetic_replay.log",
+      "log_sha256": "77b3f937d22927808312d51849636ca4513e87fe39f7ae5ae0fce79cf5c45361"
+    },
+    {
+      "name": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "diff_check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "prior_phase1_artifact_updates": [
+    {
+      "path": "research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_10_24.md",
+      "phase1_sha256": "45653db61755b86a4db52e807bbfe110a2a6847a11746876508c1855276a54b4",
+      "preserved_snapshot": "research/prime_spectral/verification_2026_10_24_liu_conditional/before_LITERATURE_REVIEW_AND_DIRECTIONS_2026_10_24.md"
+    },
+    {
+      "path": "research/RH_DH_DISCRIMINATOR_REGISTER.json",
+      "phase1_sha256": "f6045b47e1cdc57619c42a240f04174ca4e01de6fc658f97faf59fc03f962f6e",
+      "preserved_snapshot": "research/prime_spectral/verification_2026_10_24_liu_conditional/before_RH_DH_DISCRIMINATOR_REGISTER.json"
+    },
+    {
+      "path": "research/RH_DH_DISCRIMINATOR_REGISTER.md",
+      "phase1_sha256": "ea2eecab80639b599a5fd5eb3cf701cae76b8b8104892b4780c95e7907b09dff",
+      "preserved_snapshot": "research/prime_spectral/verification_2026_10_24_liu_conditional/before_RH_DH_DISCRIMINATOR_REGISTER.md"
+    }
+  ],
+  "prior_manifests_preserved": {
+    "research/prime_spectral/verification_2026_10_24_liu_exponents/manifest.json": "a849ea277bda1dcd6232be6627288caef08a391fbd119c163435a41fc650ee2f",
+    "research/prime_spectral/verification_2026_10_24_dh_spectral/manifest.json": "a0d58e05748ce03088f3ee9aa326bdc82b80008aefba22db012f896b5ae41471"
+  },
+  "external_Lean_rebuilt": false,
+  "analytic_moment_proved": false,
+  "historical_full_round_verifier_rerun": false
+}

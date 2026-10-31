@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_tree": true,
+  "unit_tests": {
+    "passed": 40,
+    "failed": 0,
+    "log": "unit_tests.log"
+  },
+  "DH_gate": {
+    "passed": true,
+    "targets": 8,
+    "log": "DH_gate.log"
+  },
+  "git_diff_check": {
+    "passed": true,
+    "log": "diff_check.log"
+  },
+  "fresh_DH_Arb_evaluation": {
+    "passed": true,
+    "bits": 768,
+    "source": "direct_endpoint_certificate.json"
+  },
+  "Gaussian_DH_infinite_value": {
+    "passed": true,
+    "bits": 256,
+    "terms": 91,
+    "tail_bound": "l1 inverse at sigma=3 bounded by 4/3"
+  },
+  "packet_replay": {
+    "exit_code": 0,
+    "log": "replay.log"
+  },
+  "earlier_verification_files_unchanged": 1669,
+  "prior_refined_packet": {
+    "historical_replay_passed": true,
+    "current_source_drift": [
+      "research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md",
+      "research/RH_DH_DISCRIMINATOR_REGISTER.json",
+      "research/RH_DH_DISCRIMINATOR_REGISTER.md"
+    ]
+  },
+  "actual_probe_GRH_equivalence_proved": false,
+  "actual_DH_metaplectic_probe_instantiated": false,
+  "arithmetic_strategy_started": false,
+  "whole_method_family_closed": false,
+  "not_run": [
+    "Lean build",
+    "CI",
+    "new zero searches",
+    "new row-density/Toeplitz/Weil/Jensen scans"
+  ]
+}

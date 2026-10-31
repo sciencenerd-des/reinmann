@@ -1,0 +1,3 @@
+PASS: 25 bound files; 1654 earlier verification files unchanged; four stages, quartic and direct dual replayed
+PASS: direct pricing and DH model checks; 1669 earlier verification files unchanged; prior refined validator replayed against its historical sources
+Numerical certificate evaluation is replayed separately with --replay-dh-zero and Arb.

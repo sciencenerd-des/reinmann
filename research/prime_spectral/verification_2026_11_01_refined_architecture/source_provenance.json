@@ -1,0 +1,80 @@
+{
+  "retrieved_date": "2026-11-01",
+  "sources": [
+    {
+      "version": "2610.15291v2",
+      "archive_url": "https://arxiv.org/src/2610.15291v2",
+      "html_url": "https://arxiv.org/html/2610.15291v2",
+      "archive_sha256": "7c9a47c332d982e6e986c524f36b7ce0fde9fd68746c8bf8b3796d1d03caed61",
+      "archive_bytes": 34482,
+      "tex_file": "seven_eighths_and_beyond_v7.tex",
+      "tex_sha256": "cce2cb4621a1ad32fe6babe6b7fb6755f8ecd8bfd25d1826d77c8fb4d3f47e5a",
+      "anchor_lines": {
+        "\\label{eq:signal-low}": [
+          620
+        ],
+        "\\label{eq:low-saving}": [
+          797
+        ],
+        "\\label{eq:endpoint}": [
+          1335
+        ],
+        "\\label{eq:stage-zero}": [
+          1633
+        ],
+        "\\label{eq:stage-one}": [
+          1639
+        ],
+        "\\label{eq:certificate-template}": [
+          2465
+        ],
+        "\\label{sec:probe}": [
+          581
+        ]
+      }
+    },
+    {
+      "version": "2610.26835v2",
+      "archive_url": "https://arxiv.org/src/2610.26835v2",
+      "html_url": "https://arxiv.org/html/2610.26835v2",
+      "archive_sha256": "cdb8a420f3d6aa6215265bd8d116bf6a888b532be33f509f1930efaaecca1961",
+      "archive_bytes": 200818,
+      "tex_file": "number_fields_v4.tex",
+      "tex_sha256": "d7226f4c172e163ea9e1a71d6ab016418fecd43715d9e6081e0ca819041dc3a2",
+      "anchor_lines": {
+        "\\label{eq:prev-B-low}": [
+          1007
+        ],
+        "\\label{eq:v-refined-endpoint}": [
+          10091
+        ],
+        "\\label{v:sec:refined-optimality}": [
+          11047
+        ],
+        "\\label{eq:v-refined-certificate}": [
+          12318
+        ],
+        "\\bibitem[New26]": [
+          13260
+        ]
+      }
+    }
+  ],
+  "prior_art": {
+    "url": "https://rstation.ai/r/riemann_hypothesis/posts/15",
+    "observation": "The discussion explicitly states 13/15 for the Xu-Sang direct side. Its other experiments were not replayed. No novelty claim."
+  },
+  "Newton": {
+    "doi": "10.5281/zenodo.23414581",
+    "located_in": "Liu v2 source bibliography",
+    "full_text_retrieved": false
+  },
+  "environment": {
+    "python": "3.14.2",
+    "sympy": "1.14.0",
+    "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+    "git_branch": "rh-structural-theory",
+    "dirty_working_tree": true,
+    "CI_receipt": false
+  }
+}

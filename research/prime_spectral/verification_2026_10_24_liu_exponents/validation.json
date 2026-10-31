@@ -1,0 +1,58 @@
+{
+  "python": "3.12.11",
+  "commands": [
+    {
+      "name": "unit_tests",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpuGqvIc/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/prime_spectral",
+        "-p",
+        "test_liu_exponent_system.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "unit_tests.log",
+      "log_sha256": "12711f5fe16526f97ac1b5c6c1dc7f7e37237b3a587065012aa8b3526be5dcfe"
+    },
+    {
+      "name": "DH_gate",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpuGqvIc/bin/python",
+        "experiments/prime_spectral/check_dh_research_gate.py"
+      ],
+      "exit_code": 0,
+      "log": "DH_gate.log",
+      "log_sha256": "7d9f75510ddb1cc0cc04cc6ee018cfd43d3a8409ed658a73ea35b5c96f0b6d94"
+    },
+    {
+      "name": "retained_DH_arithmetic_replay",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpuGqvIc/bin/python",
+        "-c",
+        "import sys,json; from pathlib import Path; sys.path.insert(0,'experiments/prime_spectral'); from verify_row_density_extraction import calculate; assert calculate()==json.loads(Path('research/prime_spectral/verification_2026_10_22_row_density/exact_checks.json').read_text()); print('Retained exact arithmetic receipt replay agrees; no new row-density work')"
+      ],
+      "exit_code": 0,
+      "log": "retained_DH_arithmetic_replay.log",
+      "log_sha256": "5f6cf7c46d0d68a289929ca8fa6f1e693d138c14c27c2ca0ac8e3106bc3ff110"
+    },
+    {
+      "name": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "diff_check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "Lean_build_run": false,
+  "external_Liu_Lean_rebuilt": false,
+  "analytic_estimate_proved": false,
+  "historical_full_round_verifier_rerun": false
+}

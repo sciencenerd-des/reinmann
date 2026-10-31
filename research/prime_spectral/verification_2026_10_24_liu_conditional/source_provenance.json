@@ -1,0 +1,17 @@
+{
+  "source_version": "arXiv:2610.12234v2",
+  "source_url": "https://arxiv.org/src/2610.12234v2",
+  "html_url": "https://arxiv.org/html/2610.12234v2",
+  "archive_sha256": "da1db207bb54437245c4fff75f33cfb29088f32f57e6364a6b3b955bc3372204",
+  "sections_used": [
+    "2",
+    "9.1",
+    "29",
+    "31",
+    "32",
+    "34.3"
+  ],
+  "original_analytic_estimates_reproved": false,
+  "external_Lean_rebuilt": false,
+  "novelty_claimed": false
+}

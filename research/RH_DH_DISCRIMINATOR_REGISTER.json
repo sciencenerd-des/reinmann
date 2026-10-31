@@ -122,6 +122,255 @@
       "review_draft": "research/prime_spectral/ROW_DENSITY_SPECIALIST_REVIEW_DRAFT.md",
       "development_status": "parked_pending_external_specialist_review; no further cubic analytic machinery authorized in this round",
       "specialist_question": "A coefficient-specific metaplectic mean square including principal k-th-power rows: in particular quadratic twists with squares retained at H=D^(1+vartheta), rather than a false same-cost arbitrary-coefficient extension of the squarefree large sieve."
+    },
+    {
+      "id": "weil_ground_state_transform_convergence",
+      "target": "Connes-Consani-Moscovici route: the Fourier transforms of the simple even Weil ground states xi_lambda (primes p<=lambda^2) converge, after normalization, locally uniformly on the strip |Im z|<1/2 to Xi; with the Connes-van Suijlekom real-zero theorem and Hurwitz this would give RH. The open step is the comparison xi_lambda ~ c_lambda E(h_lambda) with the prolate candidate.",
+      "classification": "reformulation",
+      "dh_analogue": "Conductor-5 odd-gamma pole-free DH Weil form using every log-derivative coefficient, and E_DH of the first odd conductor-scaled prolate mode. The real-zero theorem is shared only when the simple isolated even minimum and nonzero boundary gates hold. Finite sections now instantiated: at C=35 the certified minimum is odd at N=64 and even at N=96,128; the finite even ground at N=96,128 is nearly orthogonal to the rounded prolate candidate. No full-operator convergence statement is inferred.",
+      "failure": {
+        "kind": "finite_compression_diagnostics_with_certified_ground_spectra",
+        "C": 35,
+        "tested_modes": [
+          64,
+          96,
+          128
+        ],
+        "globally_first": false,
+        "first_full_operator_failure_window": null,
+        "source": "research/prime_spectral/verification_2026_10_24_dh_spectral/finite_C35_N96_parity_certificate.json",
+        "source_sha256": "8b17097264c2b25ff52c6f84d1a43ed6b52bad804386a2177f2eee823bb0792f",
+        "scope": "Certificate proves finite spectrum sign/parity/gap/boundary only; overlap, Fourier roots and rounded-candidate residuals are separate floating diagnostics."
+      },
+      "arithmetic_property": "None proved. Finite ground spectra and rounded-candidate comparison now separate DH numerically from the tested zeta controls, but no particular arithmetic term or zeta-specific inequality has been identified. Simple-even real-zero localization remains a shared conditional prerequisite.",
+      "separating_inequality": null,
+      "gap": "At C=35,N=96 and 128, the rounded DH candidate has overlap about 2.94e-11 and 2.49e-11 with the finite ground, despite residual/global-gap about 0.00495 and 0.00353. Second-minus-Rayleigh is negative (about -8.33e-16 and -8.59e-16), so the residual does not locate the ground state. At N=64 the finite ground is odd. Ranks and prolate/quadrature refinements remain numerical; no full-operator residual, uniform support/rank limit or named arithmetic discriminator. The proposed C~13.6 transition is not established.",
+      "scope": "Instantiated finite negative control, 24 October 2026; not an RH strategy, new zero-free theorem, full-operator counterexample or global minimal-window result.",
+      "coefficient_support_convention": "C=lambda^2; L=log(C); periodic Fourier modes on [-L/2,L/2]. DH form: all coefficients of -H'/H, conductor 5, odd gamma, no pole block. DH candidate: E_DH of first odd prolate mode with angular parameter 2*pi*C/5, Gaussian limit x*exp(-pi*x^2/5); original period-5 Dirichlet coefficients, not Taylor coefficients.",
+      "experiment_preregistration": "research/prime_spectral/DH_SPECTRAL_PREREGISTRATION_2026_10_24.md",
+      "DH_gate_status": "finite_compression_instantiated_no_proved_arithmetic_separator",
+      "analysis_note": "research/prime_spectral/DH_SPECTRAL_DIAGNOSTIC_2026_10_24.md"
+    },
+    {
+      "id": "metaplectic_bootstrap_endpoint",
+      "target": "Arithmetic improvements to the OpenAI/Liu cubic-theta comparison over Q(sqrt(-3)). The exact Liu v2 scalar endpoint has been reconstructed. A B=1/2 endpoint cannot come from changing only the character-count constraints while the full direct majorant (22.4)-(22.6) is retained: its count-free LP optimum is 13/15.",
+      "classification": "uninstantiated",
+      "coefficient_convention": "K=Q(sqrt(-3)); q_n ideal norms; mu_K coefficients for the inverse detector and coefficient 1 for the unweighted detector; fixed ray-character times sextic residue-symbol twists, zero extensions and excluded primes retained. U is the character/element norm scale; detector lengths are U^r and U^m, selected prime product U^z. No Xi Taylor/Jensen coefficients.",
+      "dh_analogue": "The global half-plane analogue for the mod-5 DH function is false at every B<1 (zeros with Re(s)>1, Titchmarsh section 10.25), and the DH reciprocal coefficients fail ideal-Mobius multiplicativity (b_91-b_7*b_13=-1-kappa^2, retained in short_family_mean_square_row_density).",
+      "failure": {
+        "kind": "classical_theorem_not_a_located_numerical_witness",
+        "degree": null,
+        "globally_first": false
+      },
+      "arithmetic_property": "Mobius-weighted second moment, sixth-power amplification and fourth moment over the Hecke/sextic character family (Liu 2610.12234, Lemmas 9.1-9.3, Prop. 18.1), plus cubic-theta reflection. These are proposed separators; multiplicativity alone is not a cancellation proof.",
+      "separating_inequality": null,
+      "gap": "New Hecke-family estimates remain unproved. Exact scalar replay reproduces 7/8, the fixed-kappa algebraic endpoint and B_new=0.874957019420098946..., with a polynomial uniform central endpoint and 29 auxiliary reserve checks. Even deleting every nonprincipal-count constraint leaves B>=13/15 in the unchanged direct majorant; the printed principal assembly additionally restricts B>=437/500. The critical raw amplitude is N^0.694291677..., below the ordinary GM improvement range. No fixed-modulus Dirichlet-character or ordinary-time large-value theorem/conjecture has been transported with all ideal-conductor/common-character costs; no numerical conditional B for that uninstantiated transport is claimed. Under the separate, unproved alpha=4/5 long inverse moment, an exact rational scalar certificate supports B=0.874793 with kappa=3/4, a uniform central margin and 30 fixed-parameter auxiliary reserves. It is not a GM transport or a new analytic zero-free theorem. The long moment cannot be replaced by an arbitrary-bounded-coefficient bound: alignment with one family member gives an obstruction for alpha<1. The 1 November refined-numerator audit confirms that the same direct-only minimum 13/15 survives the Xu-Sang/Liu high-side change; the exact optimum of a full idealized family system is not computed. This excludes the endpoint only while the direct Gram/reflection majorant and normalization are retained.",
+      "scope": "Exact rational/symbolic scalar reconstruction, sensitivity audit and count-independent architecture barrier, 24 October 2026; no novelty claim. DH family analogue of a new moment/count estimate is still uninstantiated. No new zero-free theorem, RH proof, publication or CI proof-chain claim.",
+      "proposed_estimate_under_audit": "For the SAME common-character simultaneous detector/prime-sum class B(delta,x;U,T), seek #B << U^(R_new(delta,x)+epsilon)*(1+T)^A with a bound below Liu R_kappa at its critical class. Requires coefficient/support/coprimality and height uniformity, not ordinary integer t-aspect Dirichlet-polynomial large values alone. No such new arithmetic estimate is proved.",
+      "development_status": "phase3_localized_scalar_target_certified_arithmetic_estimates_unproved",
+      "analysis_note": "research/prime_spectral/LIU_EXPONENT_SYSTEM_2026_10_24.md",
+      "count_only_RH_endpoint_status": "excluded_with_unchanged_full_direct_majorant",
+      "scalar_reconstruction": {
+        "receipt": "research/prime_spectral/verification_2026_10_24_liu_exponents/scalar_verified.json",
+        "receipt_sha256": "73d78571e1a203812f17e2cd278a2668510f438f609c3f46556984b57274e18e",
+        "source_version": "arXiv:2610.12234v2",
+        "analytic_estimates_reproved": false,
+        "external_Lean_rebuilt": false,
+        "new_arithmetic_inequality_proved": false
+      },
+      "conditional_target_under_audit": {
+        "hypothesis": "For the original ideal-Mobius inverse polynomial M_u(D), sixth-power-free q_u~U and D=U^r, replace the long mean square U^((1+5r)/6+epsilon) by U^(1/5+4r/5+epsilon) for 1<=r<=3/2, with the same ray/sextic twists, zero extensions, excluded Euler factors, admissible smooth weights and polynomial height loss. Existing short inverse and unweighted moments are unchanged.",
+        "scalar_target": "Certify a rational B below Liu v2 using kappa=3/4 justified by the prior 7/8 bound. Retain full direct majorant, endpoint uniformity, auxiliary norm ranges, strict support reserves and principal restriction B>437/500.",
+        "DH_status": "No DH moment family is implemented. The existing reciprocal nonmultiplicativity witness blocks a verbatim ideal-Mobius transfer, but does not prove the proposed improved moment or exclude every possible DH replacement.",
+        "preregistration": "research/prime_spectral/verification_2026_10_24_liu_conditional/preregistration.md",
+        "analytic_estimate_proved": false,
+        "coefficient_extension_check": "Before claiming a general large-sieve input, test arbitrary bounded squarefree-supported coefficients a_n=mu_K(n)^2*conjugate(psi_u0(n)) at a fixed family member u0. This changes the prescribed Mobius coefficients and may rule out coefficient-insensitive mean-square replacements; it is not a disproof of the fixed-Mobius target.",
+        "scalar_result": {
+          "B": "874793/1000000",
+          "kappa_from_previous_bound": "3/4",
+          "full_direct_majorant_checked": true,
+          "uniform_endpoint": "exact positive polynomial coefficients and strict rational margin",
+          "fixed_parameter_auxiliary_reserves": 30,
+          "analytic_moment_proved": false,
+          "analytic_assembly_reproved": false,
+          "DH_family_instantiated": false,
+          "arbitrary_coefficient_extension": "impossible for alpha<1 by one-character alignment; actual Mobius target is not refuted",
+          "note": "research/prime_spectral/LIU_CONDITIONAL_MOMENT_2026_10_24.md",
+          "receipt": "research/prime_spectral/verification_2026_10_24_liu_conditional/conditional_verified.json",
+          "receipt_sha256": "697a654a17ad6f78ceb75ff60983c855f2d1b464e4a58e6731aa7972a204529c"
+        }
+      },
+      "localization_target_under_audit": {
+        "target": "For fixed rational phase-2 geometry B=0.874793, identify a rigorously enclosed exceptional (delta,x) class set where the ORIGINAL alpha=5/6 count fails E<=0, then certify a localized replacement sufficient there. Required class exponent is R_req=1-[C0+(1/2+ell)*delta+ell*x*delta+sigma]/h with a strict rational sigma>0. Reduce the stronger long inverse moment to only necessary lengths and classes without assuming it elsewhere.",
+        "coefficient_support": "Same ideal-Mobius inverse coefficients, unweighted detector, common sextic/ray twists, primary generators, zero extensions, excluded primes, disjoint selected primes, smooth weights and height hypotheses as phase 2. Any localized count must hold for the simultaneous zero/prime amplitude class, not independent marginal families.",
+        "DH_analogue": "A replacement DH family remains uninstantiated; the retained reciprocal nonmultiplicativity witness excludes only the verbatim ideal-Mobius identification. No new DH estimate or separating inequality is asserted.",
+        "classification": "conditional_scalar_target_uninstantiated_arithmetic_input",
+        "arithmetic_estimate_proved": false,
+        "preregistration": "research/prime_spectral/verification_2026_10_24_liu_localized/preregistration.md",
+        "result": {
+          "conditional_scalar_B": "874793/1000000",
+          "exceptional_class_box": {
+            "delta": [
+              "1/3",
+              "47/100"
+            ],
+            "x": [
+              "21/50",
+              "1/2"
+            ]
+          },
+          "old_count_sufficient_outside": true,
+          "localized_long_inverse_moment_band": [
+            "1099/1000",
+            "119/100"
+          ],
+          "alternative_direct_class_count_gain": "1/850",
+          "alternatives_not_claimed_to_imply_one_another": true,
+          "globally_minimal_box_claimed": false,
+          "new_arithmetic_bound_proved": false,
+          "DH_family_instantiated": false,
+          "analysis_note": "research/prime_spectral/LIU_LOCALIZED_TARGET_2026_10_24.md",
+          "receipt": "research/prime_spectral/verification_2026_10_24_liu_localized/localized_verified.json",
+          "receipt_sha256": "4e9d5f77ab6ea9e2fcef61d7d828fbbf0f6007d630b9e7133b30444750982878"
+        },
+        "prime_extension_audit": "Audit the optimistic extension that applies the existing short inverse moment at enlarged range U^h with r+2z<=h, 2r+8z<=3h, then pays the same sixth-power averaging factor U^(1/6+5h/6). This is an estimate-cost model, not a proved new mixed moment; determine whether selected primes can improve its long count.",
+        "prime_extension_result": {
+          "status": "optimistic_unchanged_sixth_power_cost_extension_cannot_improve_long_count",
+          "excess_exponent_lower_bound": "(359/300)*z on the local class box",
+          "optimal_selected_prime_length_in_this_model": "0",
+          "mixed_moment_theorem_asserted": false,
+          "receipt": "research/prime_spectral/verification_2026_10_24_liu_localized/prime_extension_obstruction.json",
+          "receipt_sha256": "ab8d1ad718089bec174ab5265113e77c28b244a82255ca3b72c0e008e81f4531"
+        }
+      },
+      "architecture_floor_preregistration_2026_11_01": {
+        "trigger": "Literature update research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md: Xu-Sang arXiv:2610.15291 replace the pointwise direct numerator by an amplified first moment of the reflected numerator; Liu arXiv:2610.26835 gives the exact infimum B_flat=0.874886647039964... (quartic 133488B^4-376596B^3+384534B^2-167541B+26231) of the resulting variable-kappa system. The certified 13/15 count-free floor concerns the unchanged full direct majorant and is not known to apply to this changed numerator architecture.",
+        "question": "Exact floor B_ideal of the averaged-numerator architecture when every nonprincipal-count constraint is deleted, the amplification exponent a(r)=max{1,(1+5r)/6} is replaced by 1, and the fourth-moment/averaged-numerator exponent is set to its Lindelof-on-average value, retaining only support, reflection and length conditions.",
+        "regressions_required_before_any_claim": [
+          "Xu-Sang B1=8748867/10^7",
+          "Liu B_flat quartic root",
+          "Newton [New26] fixed-range barrier ~0.8748866496 if the source is located"
+        ],
+        "decision_rule": "B_ideal>1/2 with a rational dual certificate: method barrier, RH endpoint of this architecture excluded; constant remains finite strengthening. B_ideal=1/2: the binding idealized family input is the candidate arithmetic target and its DH family analogue must be instantiated before development.",
+        "DH_status": "Global DH half-plane analogue classically false; a method barrier needs no DH instantiation. An endpoint target must name the ideal-Mobius/Hecke-family moment as separator; the b_91-b_7*b_13=-1-kappa^2 witness is retained. No DH moment family implemented.",
+        "computed": true,
+        "analytic_estimate_proved": false,
+        "external_sources_reproved": false,
+        "relaxation_clarification_before_development": {
+          "source_observation": "Xu-Sang v2 Section 3 retains B(ell)=11/12-ell/4 and ell<=1/5; Liu 2610.26835v2 Section 14.8 explicitly retains these. The reflected numerator is on the high side, not the direct low side.",
+          "relaxation": "Drop ALL high-side, family-count, numerator-moment, principal-assembly and bootstrap-licensing constraints; retain only the direct majorant. First analyze balanced B(ell) for 0<ell<=1/5; independently allow free lx,ly,ell with the full retained Gram/reflection maximum. This is a superset of every family-input-only improvement retaining that direct majorant.",
+          "target": "Exact scalar infimum of this direct-only relaxation and a lower bound for any more constrained idealized family model; do not identify it with the exact optimum of the full idealized system.",
+          "DH_analogue": "Scalar method-barrier identity needs no DH moment family. Any subsequent proposed arithmetic separator still requires a fully instantiated DH analogue.",
+          "exclusions": "No universal impossibility for cubic theta; no new arithmetic theorem; no novelty claim; no row-density restart.",
+          "computed": false
+        },
+        "outcome": {
+          "status": "RH_endpoint_excluded_with_retained_direct_majorant",
+          "direct_only_relaxation_exact_minimum": "13/15",
+          "full_idealized_system_exact_optimum": null,
+          "scope": "All high-side/count/moment, assembly and licensing constraints deleted; retained direct Gram/reflection majorant and principal signal normalization. This relaxation contains all high-side-input-only improvements with that direct comparison. No universal cubic-theta impossibility claim.",
+          "correction": "The averaged reflected numerator modifies the high side, not the retained direct low bound. Xu-Sang Section 3 and Liu Section 14.8 retain B(ell)=11/12-ell/4 and ell<=1/5; the existing free-length direct dual also applies.",
+          "regressions": "Xu-Sang two-stage and Liu four-stage rational endpoint certificates and scalar reserves checked; critical-class elimination and quartic root isolated. Full analytic estimates and global optimality theorem not reproved. Newton full text not retrieved.",
+          "prior_art": "Same Xu-Sang 13/15 observation in https://rstation.ai/r/riemann_hypothesis/posts/15; no novelty claim.",
+          "note": "research/prime_spectral/LIU_REFINED_ARCHITECTURE_2026_11_01.md",
+          "receipt": "research/prime_spectral/verification_2026_11_01_refined_architecture/scalar_certificate.json",
+          "DH_status": "No new arithmetic inequality. A scalar barrier needs no DH family; the broader route and conditional moment targets remain uninstantiated.",
+          "new_arithmetic_estimate": false,
+          "RH_claim": false,
+          "novelty_claim": false
+        }
+      },
+      "refined_RH_endpoint_status": "excluded_with_retained_direct_majorant",
+      "direct_endpoint_preregistration_2026_11_01": {
+        "task": "Price direct-side B=1/2 targets and audit implication directions before arithmetic development",
+        "classification": "uninstantiated",
+        "actual_probe_target": "For the SAME normalized signed cubic-theta probe J_eta(Z) of Xu-Sang Section 3, seek |J_eta(Z)| <= C(eta,epsilon,windows) Z^(1/2-(4+b)/6+epsilon), for every epsilon>0, uniformly in large Z for a fixed admissible finite slot system. Family-uniform remainder margins are a SEPARATE obligation.",
+        "coefficient_support": "Eisenstein ideal norms, fixed finite-order Hecke eta, source cubic-theta cusp coefficients with their Gauss factors; unchanged finite subset compensation, disjoint annular physical prime windows, excluded primes and zero-on-nonunit character convention; lx=(1-b-ell)/2, ly=(1+b-ell)/2. No replacement by arbitrary coefficients or by the principal Mellin term.",
+        "pricing_variants": [
+          "Required cancellation exponent at fixed balanced geometry",
+          "Removing the ell cap and/or reflection penalty with positive/support length constraints retained",
+          "A principal Gaussian reciprocal-Mellin model, explicitly distinct from J_eta"
+        ],
+        "DH_actual_probe_analogue": "No DH metaplectic theta/cusp/compensated-probe construction is implemented. Its target is uninstantiated, not evidence of a discriminator. Existing reciprocal nonmultiplicativity blocks a verbatim ideal-Mobius replacement only.",
+        "DH_principal_model_analogue": "Instantiate H_DH(s)=5^(-s) sum_{r=1}^4 a_r zeta(s,r/5), (a1,a2,a3,a4)=(1,k,-k,-1), k=(sqrt(10-2sqrt(5))-2)/(sqrt(5)-1). Use reciprocal coefficients beta1=1, beta_n=-sum_{d|n,d>1}a_d beta_(n/d), not ideal Mobius coefficients. Gaussian Mellin weight exp((s-5/6)^2), correction multiplier set to 1 so no zero can be canceled. Compare with a retained certified off-critical DH disk; no scan restart or minimality claim.",
+        "arithmetic_property": "No separating arithmetic property established. Price signed cancellation beyond retained Gram/reflection Cauchy-Schwarz. Any candidate estimate must be distinguished from reciprocal continuation or a renamed GRH statement.",
+        "separating_inequality": null,
+        "decision_rule": "Universal principal-model half-plane bound is a reformulation if proved equivalent under explicitly stated inversion/growth assumptions. Actual J_eta is uninstantiated unless equivalence or a genuine DH construction is supplied; sufficient together with extra assumptions is not an equivalence. Do not close every future method from a fixed-probe calculation.",
+        "new_arithmetic_work_authorized": false,
+        "computed": true,
+        "outcome": {
+          "actual_probe_classification": "uninstantiated",
+          "principal_reciprocal_model_classification": "reformulation under explicit contour-growth hypotheses",
+          "necessary_balanced_probe_exponent": "-(1+b)/6",
+          "minimum_blanket_saving_with_retained_majorant": "11/30",
+          "primal_probe_exponents": {
+            "current": "11/60",
+            "required": "-11/60"
+          },
+          "cap_only_formal_ell": "5/3",
+          "cap_only_obstruction": "lx>ell implies ell<(1-b)/3 and B>5/6 even without reflection; positive lx alone gives B>2/3. Formal ell=5/3 has negative total detector length.",
+          "principal_model_DH_analogue": "Implemented using original period-5 coefficients and Dirichlet convolution inverse. One infinite Gaussian model value enclosed by finite sum and rigorous tail. Retained off-critical DH disk replayed at 768-bit precision with nonzero Gaussian pole; B=1/2 growth analogue false.",
+          "actual_DH_metaplectic_probe_instantiated": false,
+          "actual_probe_GRH_equivalence_proved": false,
+          "linear_probe_transfer": "Rejected: linear combination of reciprocal principal terms differs from reciprocal of DH combination. Exact rational identity recorded.",
+          "separating_inequality": null,
+          "whole_method_family_closed": false,
+          "arithmetic_work_started": false,
+          "new_arithmetic_estimate_proved": false,
+          "note": "research/prime_spectral/LIU_DIRECT_ENDPOINT_2026_11_01.md",
+          "receipt": "research/prime_spectral/verification_2026_11_01_direct_endpoint/direct_endpoint_certificate.json",
+          "receipt_sha256": "908616bd7198e6419e82bfb84c88ca109ece949c6dd1733f5bed13ec226b66e7",
+          "zero_scope": "One retained DH disk, not a first/minimal zero or new scan",
+          "RH_claim": false,
+          "novelty_claim": false
+        }
+      },
+      "closure_interface_preregistration_2026_11_01": {
+        "target": "Audit the two proposed existing-source closure inputs, not a new arithmetic estimate: (i) R_eta=O(Z^(C_b(1/2)-delta0)) for some delta0>0, (ii) principal correction G_eta holomorphic/nonvanishing for Re(s)>1/2.",
+        "scope": "Read the SAME Xu-Sang probe and its finite compensation, Eisenstein ideal norms, fixed finite-order eta, excluded primes S and unselected j=0,rho=1 local factors. Check printed uniform margins and exact principal specialization w=1,z=1/6; no changed probe or implicit extension of its theorem.",
+        "local_conventions": "T=q^(-s),Y=q^(-w),V=q^(-6z),R=a^2*q^4*T^6*V, a=conjugate(Lambda(p))^3*eta(p)^3. At principal residue Y=V=1/q and R=psi(p)*q^(3-6s), psi=conjugate(Lambda)^6*eta^6. Verify dependence on angular Lambda rather than dropping it.",
+        "DH_analogue": "No DH metaplectic probe exists in the repo; neither remainder nor correction claim is asserted for it. The genuine reciprocal-DH principal model and retained off-critical disk remain distinct. This is a source-interface audit, not an RH-separating lemma.",
+        "arithmetic_property": "No separator proposed. If a shifted angular Hecke L-factor appears, state its exact shift and which zero/coprimality obligation it introduces; do not infer a new bound or universal impossibility.",
+        "separating_inequality": null,
+        "classification": "uninstantiated",
+        "failure_scope": "Failure of a supplied upper majorant is not a lower bound for the actual remainder. A zero in a principal correction is not itself a target L zero or a proof that every replacement probe fails.",
+        "computed": true,
+        "outcome": {
+          "requested_absolute_remainder_supplied": false,
+          "actual_absolute_remainder_disproved": false,
+          "printed_margin": "rho <= (beta_star-B(ell))/50",
+          "printed_exponent_minus_C_half_lower_bound": "B(ell)-1/2+(49/50)*(beta_star-B(ell)) > 11/30 under the retained cap and contradiction hypothesis",
+          "weaker_sufficient_remainder_obligation": "A same-probe family-uniform positive saving relative to C_b(beta_star) applicable throughout the needed beta_star>1/2 range, with contour and row hypotheses justified; absolute endpoint decay is stronger than necessary.",
+          "principal_correction_factorization": "G_eta(s)=zeta_F^S(2)^(-1)*L_F^S(6s-3,conjugate(alpha)^6*eta^6)*E_eta(s)",
+          "E_eta": "Normally convergent, holomorphic, nonzero for Re(s)>1/2 after fixed small-prime cutoff; |E_p-1|<=2/9 for q>=9,sigma>=1/2.",
+          "correction_global_nonvanishing_on_half_plane": false,
+          "correction_holomorphic_on_half_plane": "Yes using standard continuation of the nontrivial angular Hecke L-function; this is only the principal residue slice.",
+          "zero_mapping": "An angular zero rho maps to (rho+3)/6. Standard Hecke analytic theory implies correction zeros right of 1/2; under angular GRH their real parts are 7/12.",
+          "analytic_theory_boundary": "Exact local and margin algebra checked; standard Hecke entire/order-one/functional-equation inputs used in the note, not machine proved. No numerical angular zero or common target zero located.",
+          "second_obligation": "Exclude cancellation of off-critical target poles by this shifted angular factor, e.g. a no-common-zero or sufficient multiplicity statement; alternatively justify a changed signal. Not proved.",
+          "GRH_implication_for_actual_probe_proved": false,
+          "DH_metaplectic_probe_instantiated": false,
+          "whole_method_family_closed": false,
+          "new_arithmetic_estimate_proved": false,
+          "note": "research/prime_spectral/LIU_CLOSURE_INTERFACE_2026_11_01.md",
+          "receipt": "research/prime_spectral/verification_2026_11_01_closure_interface/closure_interface_certificate.json",
+          "receipt_sha256": "e9e268e8c5f9c8c674fc916037aed76748c6512fc46df4c8608c000ea4da25b4",
+          "RH_claim": false,
+          "novelty_claim": false,
+          "optimistic_principal_remainder_branch": "C_b(beta_star)-h/600 exceeds C_b(1/2) by >221/600 under source beta_star>87/100,h<1; loss-free printed majorant still insufficient.",
+          "noncancellation_threshold_refinement": {
+            "possible_correction_zero_region": "1/2<Re(s)<2/3",
+            "boundary_input": "Standard zero-free line Re(u)=1 for the nonzero angular Hecke character; explicit Euler-product proof recalled in the note.",
+            "beta_star_above_two_thirds": "A near-supremum strip avoids correction zeros; only direct/remainder obligations remain within this interface.",
+            "beta_star_equal_two_thirds": "Pointwise nonvanishing on the line is not a family-uniform strip below it. An unattained supremum can still require near-supremum noncancellation or a uniform angular zero-free gap; neither is proved.",
+            "beta_star_below_two_thirds": "Near-supremum target/shifted-angular zero coincidence or multiplicity obligation remains unproved.",
+            "under_angular_GRH": "Potential coincidences only on Re(s)=7/12; near-supremum boundary case beta_star=7/12.",
+            "actual_DH_metaplectic_probe_instantiated": false,
+            "arithmetic_route_active": false,
+            "whole_method_family_closed": false
+          }
+        }
+      }
     }
   ],
   "shared_prerequisites": [
@@ -171,7 +420,11 @@
         "receipt": "research/prime_spectral/verification_2026_10_21_external_seven_eighths/result.json",
         "receipt_sha256": "49fbbfa26ec8c2c5cb6ae9ddebfd7967ee09def569a606f2b21bff2c8dbdb38b",
         "local_Lean430_PF58_unconditional": false
-      }
+      },
+      "literature_updates_2026_10_24": [
+        "B. Liu, arXiv:2610.12234 (v2 12 Oct 2026): same system re-optimized to B~0.874957019 (root of 1188x^3-2160x^2+171x+190 in (0.38858,0.38859) via B=(18x+7)/(18x+9)); Lean-formalized per abstract; not replayed here.",
+        "S. Kintali, 7 Oct 2026 author-hosted note: weaker Re(s)>47/48 using only unconditional cubic theta formulas, the quadratic Hecke large sieve and a Hecke zero-density lemma; not replayed here."
+      ]
     },
     {
       "id": "finite_width_PF58",

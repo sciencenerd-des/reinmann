@@ -1,0 +1,99 @@
+# Source lines 566-580
+566: \subsection{Arithmetic notation and coefficient classes}
+567: 
+568: Let $F=\mathbb Q(\sqrt{-3})$, let
+569: $\omega=e^{2\pi i/3}$, and put
+570: \[
+571:  \mathcal O=\mathbb Z[\omega],\qquad
+572:  \lambda=\sqrt{-3}=\omega-\omega^2=1+2\omega.
+573: \]
+574: For an element $a$ write $q_a=|a|^2=N_{F/\mathbb Q}(a)$, and for $a\ne0$
+575: write $\alpha(a)=a/|a|$.  The same notation $q_{\mathfrak a}$ denotes the norm of
+576: a nonzero ideal.  The ring $\mathcal O$ is Euclidean for this norm: a point of
+577: $\mathbb C$ is at distance at most $1/\sqrt3<1$ from the triangular lattice
+578: $\mathcal O$, which gives Euclidean division.  In particular every ideal is
+579: principal.  The six units are $\{\pm1,\pm\omega,\pm\omega^2\}$, and their
+580: images are the six units of $\mathcal O/3\mathcal O$.  Consequently every
+
+# Source lines 3857-3871
+3857: Fix a nonzero sixth-power-free row $u$ with $(u,S)=1$ and a prime
+3858: $p\notin S$.  Set
+3859: \begin{equation}\label{eq:local-parameters}
+3860:  \begin{gathered}
+3861:  Q=q_p,\qquad j=v_p(u)\in\{0,\ldots,5\},\qquad
+3862:  \rho=\chi_p(u/p^j),\qquad \omega_p=\chi_p(-1),\\
+3863:  a_p=\overline{\alpha(p)}^3\eta(p)^3,\qquad
+3864:  b_p=\overline{\alpha(p)}^2\eta(p)^2\overline{\chi_p(4)},
+3865:  \qquad b_p^3=a_p^2,\\
+3866:  V=Q^{-6z},\qquad R=a_p^2Q^{4-6x-6z},\qquad
+3867:  W_{\rm loc}=\rho Q^{-w}.
+3868:  \end{gathered}
+3869: \end{equation}
+3870: The values $\rho,a_p,b_p$ have absolute value one, and
+3871: $\omega_p\in\{1,-1\}$.  No ray-class restriction on $p$ is imposed.
+
+# Source lines 4010-4048
+4010: \begin{lemma}[The complete local identity]\label{lem:local-euler}
+4011: For every nonzero sixth-power-free $u$ with $(u,S)=1$ and every
+4012: prime $p\notin S$, the factors just defined are
+4013: \begin{equation}\label{old-eq:5.13a}
+4014: \begin{aligned}
+4015:  P_p^*&=\frac1{1-R}\left\{
+4016:  \frac{R(1-Q^{-1})-\eta(p)(Q-1)
+4017:  Q^{-x-w}V^{1_{j\le1}}}{1-V}+J_j\right\},\\
+4018:  P_p&=\frac1{1-V}+1_{j=0}\frac{W_{\rm loc}}{1-W_{\rm loc}}+P_p^*,
+4019: \end{aligned}
+4020: \end{equation}
+4021: where the six values of $J_j$ are
+4022: \[
+4023: \begin{array}{c|l}
+4024:  j&J_j\\\hline
+4025:  0&-\eta(p)\rho^{-1}Q^{-x}+W_{\rm loc}R\\
+4026:  1&\eta(p)Q^{-x-w}\\
+4027:  2&a_p\rho^{-3}Q^{3/2-3x}\\
+4028:  3&-\eta(p)b_p\rho^{-2}Q^{2-3x-w}
+4029:        +b_p^2\rho^{-4}Q^{2-4x}\\
+4030:  4&-\eta(p)a_p\rho^{-3}Q^{5/2-4x-w}\\
+4031:  5&-a_p^2Q^{3-6x}.
+4032: \end{array}
+4033: \]
+4034: Put $W=\chi_p(u)Q^{-w}$ and
+4035: $D=\eta(p)\overline{\chi_p(u)}Q^{-x}$, with the original zero
+4036: extension at $p\mid u$, and define
+4037: \begin{equation}\label{eq:local-H-definition}
+4038:  H_p=P_p\frac{(1-V)(1-W)}{1-D},\qquad
+4039:  \mathcal H_{\eta,u}=\prod_{p\notin S}H_p.
+4040: \end{equation}
+4041: Then the series in Equation~\eqref{eq:local-full-series} has the
+4042: scalar factorization
+4043: \begin{equation}\label{eq:probe-high}
+4044:  \mathcal F_{\eta,u}(x,w,z)=
+4045:  \frac{\zeta_F^S(6z)L^S(w,\chi_\bullet(u))}
+4046:  {L^S(x,\eta\overline{\chi_\bullet(u)})}
+4047:  \mathcal H_{\eta,u}(x,w,z).
+4048: \end{equation}
+
+# Source lines 5512-5533
+5512: sextic character is nontrivial \cite[Theorem 1.1]{TZ}.  By the Kummer
+5513: description in Lemma~\ref{lem:fixed-numerator-ray}, this is
+5514: $\chi_\bullet(u)$.  Therefore $u=1$ is the sole principal numerator row.
+5515: A denominator attached to a bounded unit row may be principal; its
+5516: reciprocal has a zero at one and will be kept on a global line below.
+5517: 
+5518: Define
+5519: \begin{equation}
+5520:  H_\eta(s)=\mathcal H_{\eta,1}(s,1,1/6),\qquad
+5521:  c_S=\widehat W_1(1)M(1/6)
+5522:        \left(\operatorname*{Res}_{v=1}\zeta_F^S(v)\right)^2/6.
+5523:  \label{eq:shared-principal-data}
+5524: \end{equation}
+5525: Lemma~\ref{lem:local-euler} makes $H_\eta$ holomorphic on $\Re s>7/8$.
+5526: Its uniform estimate $H_\eta=1+O(P_0^{-4/5})$ permits a choice of $P_0$
+5527: before the target, because the local bound is uniform in the target unit
+5528: phases.  Fix $P_0$ large enough that
+5529: \begin{equation}
+5530:  \sup_{\Re s>7/8}|H_\eta(s)-1|\le\frac12.
+5531:  \label{eq:shared-principal-nonvanishing}
+5532: \end{equation}
+5533: Enlarging $S$ by these primes leaves the fixed ray group $T$ unchanged,
+

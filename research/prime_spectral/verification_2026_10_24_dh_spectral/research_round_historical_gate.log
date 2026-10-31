@@ -1,0 +1,10 @@
+DH gate: 8 targets registered; retained Toeplitz/Weil witnesses agree; no active RH strategy claimed
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_research_gates_round.py", line 110, in <module>
+    check(p.parse_args().record)
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/experiments/prime_spectral/verify_research_gates_round.py", line 43, in check
+    result = subprocess.run(['python3', 'experiments/prime_spectral/replay_frozen_research_checkpoints.py',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/biswajitmondal/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'experiments/prime_spectral/replay_frozen_research_checkpoints.py', '--output', '/var/folders/lg/sjq8cys10ps3ngzh_gqn40gm0000gn/T/rh-gate-check-5li44zhv/replay.json']' returned non-zero exit status 1.

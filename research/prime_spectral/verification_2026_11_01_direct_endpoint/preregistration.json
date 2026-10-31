@@ -1,0 +1,18 @@
+{
+  "task": "Price direct-side B=1/2 targets and audit implication directions before arithmetic development",
+  "classification": "uninstantiated",
+  "actual_probe_target": "For the SAME normalized signed cubic-theta probe J_eta(Z) of Xu-Sang Section 3, seek |J_eta(Z)| <= C(eta,epsilon,windows) Z^(1/2-(4+b)/6+epsilon), for every epsilon>0, uniformly in large Z for a fixed admissible finite slot system. Family-uniform remainder margins are a SEPARATE obligation.",
+  "coefficient_support": "Eisenstein ideal norms, fixed finite-order Hecke eta, source cubic-theta cusp coefficients with their Gauss factors; unchanged finite subset compensation, disjoint annular physical prime windows, excluded primes and zero-on-nonunit character convention; lx=(1-b-ell)/2, ly=(1+b-ell)/2. No replacement by arbitrary coefficients or by the principal Mellin term.",
+  "pricing_variants": [
+    "Required cancellation exponent at fixed balanced geometry",
+    "Removing the ell cap and/or reflection penalty with positive/support length constraints retained",
+    "A principal Gaussian reciprocal-Mellin model, explicitly distinct from J_eta"
+  ],
+  "DH_actual_probe_analogue": "No DH metaplectic theta/cusp/compensated-probe construction is implemented. Its target is uninstantiated, not evidence of a discriminator. Existing reciprocal nonmultiplicativity blocks a verbatim ideal-Mobius replacement only.",
+  "DH_principal_model_analogue": "Instantiate H_DH(s)=5^(-s) sum_{r=1}^4 a_r zeta(s,r/5), (a1,a2,a3,a4)=(1,k,-k,-1), k=(sqrt(10-2sqrt(5))-2)/(sqrt(5)-1). Use reciprocal coefficients beta1=1, beta_n=-sum_{d|n,d>1}a_d beta_(n/d), not ideal Mobius coefficients. Gaussian Mellin weight exp((s-5/6)^2), correction multiplier set to 1 so no zero can be canceled. Compare with a retained certified off-critical DH disk; no scan restart or minimality claim.",
+  "arithmetic_property": "No separating arithmetic property established. Price signed cancellation beyond retained Gram/reflection Cauchy-Schwarz. Any candidate estimate must be distinguished from reciprocal continuation or a renamed GRH statement.",
+  "separating_inequality": null,
+  "decision_rule": "Universal principal-model half-plane bound is a reformulation if proved equivalent under explicitly stated inversion/growth assumptions. Actual J_eta is uninstantiated unless equivalence or a genuine DH construction is supplied; sufficient together with extra assumptions is not an equivalence. Do not close every future method from a fixed-probe calculation.",
+  "new_arithmetic_work_authorized": false,
+  "computed": false
+}

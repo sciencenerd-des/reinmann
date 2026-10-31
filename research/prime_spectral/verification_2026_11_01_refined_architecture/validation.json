@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_working_tree": true,
+  "unit_tests": {
+    "command": "python3 -m unittest discover -s experiments/prime_spectral -p 'test_liu*.py' -v",
+    "passed": 33,
+    "failed": 0,
+    "log": "unit_tests.log"
+  },
+  "DH_gate": {
+    "passed": true,
+    "targets": 8,
+    "log": "DH_gate.log"
+  },
+  "git_diff_check": {
+    "passed": true,
+    "log": "diff_check.log"
+  },
+  "offline_packet_replay": {
+    "exit_code": 0,
+    "log": "replay.log"
+  },
+  "old_verification_files_unchanged": 1654,
+  "not_run": [
+    "external analytic proof replay",
+    "global tangent-family/optimality proof replay",
+    "Lean build or toolchain upgrade",
+    "Newton full-text regression",
+    "CI"
+  ],
+  "not_claimed": [
+    "RH proof",
+    "new arithmetic estimate",
+    "novelty",
+    "exact optimum of full idealized family system"
+  ]
+}

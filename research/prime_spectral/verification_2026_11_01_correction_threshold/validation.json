@@ -1,0 +1,17 @@
+{
+  "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_tree": true,
+  "date": "2026-11-01",
+  "scope": "Documentation only: open cancellation strip and boundary-supremum qualification",
+  "DH_gate_passed": true,
+  "git_diff_check_passed": true,
+  "historical_packet_replays_passed": 3,
+  "earlier_non_cache_verification_files_unchanged": 1773,
+  "new_numerical_experiments": false,
+  "new_unit_tests_run": false,
+  "previous_test_receipt": "45 passed in the unchanged preceding closure-interface packet",
+  "analytic_inputs": "Standard Hecke continuation, Euler product and Dedekind-zeta pole; boundary nonvanishing argument recalled in the note, not machine proved",
+  "new_arithmetic_route_active": false,
+  "actual_DH_metaplectic_probe_instantiated": false,
+  "committed": false
+}

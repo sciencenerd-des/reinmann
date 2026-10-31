@@ -1,0 +1,22 @@
+{
+  "trigger": "Literature update research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md: Xu-Sang arXiv:2610.15291 replace the pointwise direct numerator by an amplified first moment of the reflected numerator; Liu arXiv:2610.26835 gives the exact infimum B_flat=0.874886647039964... (quartic 133488B^4-376596B^3+384534B^2-167541B+26231) of the resulting variable-kappa system. The certified 13/15 count-free floor concerns the unchanged full direct majorant and is not known to apply to this changed numerator architecture.",
+  "question": "Exact floor B_ideal of the averaged-numerator architecture when every nonprincipal-count constraint is deleted, the amplification exponent a(r)=max{1,(1+5r)/6} is replaced by 1, and the fourth-moment/averaged-numerator exponent is set to its Lindelof-on-average value, retaining only support, reflection and length conditions.",
+  "regressions_required_before_any_claim": [
+    "Xu-Sang B1=8748867/10^7",
+    "Liu B_flat quartic root",
+    "Newton [New26] fixed-range barrier ~0.8748866496 if the source is located"
+  ],
+  "decision_rule": "B_ideal>1/2 with a rational dual certificate: method barrier, RH endpoint of this architecture excluded; constant remains finite strengthening. B_ideal=1/2: the binding idealized family input is the candidate arithmetic target and its DH family analogue must be instantiated before development.",
+  "DH_status": "Global DH half-plane analogue classically false; a method barrier needs no DH instantiation. An endpoint target must name the ideal-Mobius/Hecke-family moment as separator; the b_91-b_7*b_13=-1-kappa^2 witness is retained. No DH moment family implemented.",
+  "computed": false,
+  "analytic_estimate_proved": false,
+  "external_sources_reproved": false,
+  "relaxation_clarification_before_development": {
+    "source_observation": "Xu-Sang v2 Section 3 retains B(ell)=11/12-ell/4 and ell<=1/5; Liu 2610.26835v2 Section 14.8 explicitly retains these. The reflected numerator is on the high side, not the direct low side.",
+    "relaxation": "Drop ALL high-side, family-count, numerator-moment, principal-assembly and bootstrap-licensing constraints; retain only the direct majorant. First analyze balanced B(ell) for 0<ell<=1/5; independently allow free lx,ly,ell with the full retained Gram/reflection maximum. This is a superset of every family-input-only improvement retaining that direct majorant.",
+    "target": "Exact scalar infimum of this direct-only relaxation and a lower bound for any more constrained idealized family model; do not identify it with the exact optimum of the full idealized system.",
+    "DH_analogue": "Scalar method-barrier identity needs no DH moment family. Any subsequent proposed arithmetic separator still requires a fully instantiated DH analogue.",
+    "exclusions": "No universal impossibility for cubic theta; no new arithmetic theorem; no novelty claim; no row-density restart.",
+    "computed": false
+  }
+}

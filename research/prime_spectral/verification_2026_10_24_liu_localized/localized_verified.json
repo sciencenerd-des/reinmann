@@ -1,0 +1,143 @@
+{
+  "scope": "Conditional scalar localization only; neither localized arithmetic alternative is proved.",
+  "B": "874793/1000000",
+  "kappa": "3/4",
+  "class_box": {
+    "delta": [
+      "1/3",
+      "47/100"
+    ],
+    "x": [
+      "21/50",
+      "1/2"
+    ]
+  },
+  "outside_box_uses_original_count": {
+    "left_decreasing_derivative_lower_bound": "9657565891/210937500000",
+    "left_boundary_Q_coefficients": [
+      "47/1620000",
+      "350557/60750000",
+      "31681/375000",
+      "125621/3796875"
+    ],
+    "right_increasing_derivative_coefficients": [
+      "45169813/675000000",
+      "541003639/1012500000",
+      "97542731/126562500",
+      "5904187/21093750"
+    ],
+    "right_boundary_Q_coefficients": [
+      "40263983/405000000000",
+      "11426821583/202500000000",
+      "8803059439/50625000000",
+      "277496789/4218750000"
+    ],
+    "shifted_discriminant_coefficients": [
+      "26082579349417979/71191406250000000000",
+      "170007174380275081/2135742187500000000",
+      "75148641437850701/256289062500000000",
+      "816379124276573/2562890625000000",
+      "8427969728231/102515625000000"
+    ],
+    "uniform_endpoint_savings": {
+      "delta_at_most_one_third": "47/8100000",
+      "delta_at_least_47_over100": "40263983/2025000000000",
+      "x_at_most_21_over50": "26082579349417979/1900795359375000000000"
+    },
+    "minimum_saving": "47/8100000",
+    "domain": {
+      "delta": [
+        "0",
+        "19/25"
+      ],
+      "x": [
+        "0",
+        "1/2"
+      ]
+    }
+  },
+  "localized_moment_option": {
+    "numerator_certificates": {
+      "old_count_at_rlo_below_R_new": {
+        "degrees": [
+          2,
+          2
+        ],
+        "coefficients": [
+          "461669/33750000",
+          "135029/20250000",
+          "287/810000",
+          "110269321/2250000000",
+          "54569593/1350000000",
+          "1758859/54000000",
+          "387779161/6250000000",
+          "40083989/750000000",
+          "1366079/30000000"
+        ],
+        "lower_bound": "287/810000"
+      },
+      "cutoff_above_rlo": {
+        "degrees": [
+          1,
+          2
+        ],
+        "coefficients": [
+          "271823/5625000",
+          "109343/3375000",
+          "2429/135000",
+          "39646261/187500000",
+          "4141889/22500000",
+          "142979/900000"
+        ],
+        "lower_bound": "2429/135000"
+      },
+      "cutoff_below_rhi": {
+        "degrees": [
+          1,
+          2
+        ],
+        "coefficients": [
+          "110437/562500",
+          "67717/337500",
+          "917/4500",
+          "33559/18750000",
+          "38891/2250000",
+          "2801/90000"
+        ],
+        "lower_bound": "33559/18750000"
+      }
+    },
+    "margin_lower_bounds": {
+      "old_count_at_rlo_below_R_new": "287/3888000",
+      "cutoff_above_rlo": "2429/648000",
+      "cutoff_below_rhi": "33559/90000000"
+    },
+    "old_long_count_increasing_slope": "109/300",
+    "new_long_count_increasing_slope": "33/100",
+    "required_long_length_band": [
+      "1099/1000",
+      "119/100"
+    ],
+    "arithmetic_moment_proved": false
+  },
+  "localized_moment_total_endpoint_saving": "2023288501/2654201520000000",
+  "alternative_direct_class_count": {
+    "additive_count_gain": "1/850",
+    "discriminant_coefficients": [
+      "2887164095903239/21068100000000000000",
+      "905547684681355021/15801075000000000000",
+      "11696584189431959423/47403225000000000000",
+      "456698783135180897/1481350781250000000",
+      "31801174722899797/370337695312500000"
+    ],
+    "uniform_endpoint_saving": "2887164095903239/562513775472000000000",
+    "local_d_slope_lower_bound": "1441/3400",
+    "at_R_old_two_thirds_new_exponent": "1697/2550",
+    "arithmetic_class_count_proved": false
+  },
+  "unchanged_auxiliary_reserve_count": 30,
+  "globally_minimal_box_claimed": false,
+  "arithmetic_estimate_proved": false,
+  "DH_family_instantiated": false,
+  "external_Lean_rebuilt": false
+}

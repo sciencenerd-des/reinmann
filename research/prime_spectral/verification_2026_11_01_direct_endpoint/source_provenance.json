@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_tree": true,
+  "CI_receipt": false,
+  "python_for_scalar_tests": "3.14.2",
+  "sympy": "1.14.0",
+  "Arb_command": "uv run --offline --with python-flint==0.8.0 --with mpmath --with sympy==1.14.0 --python 3.12 python experiments/prime_spectral/liu_direct_endpoint.py --replay-dh-zero",
+  "primary_sources": [
+    {
+      "version": "2610.15291v2",
+      "archive_url": "https://arxiv.org/src/2610.15291v2",
+      "html_url": "https://arxiv.org/html/2610.15291v2",
+      "archive_sha256": "7c9a47c332d982e6e986c524f36b7ce0fde9fd68746c8bf8b3796d1d03caed61",
+      "archive_bytes": 34482,
+      "tex_file": "seven_eighths_and_beyond_v7.tex",
+      "tex_sha256": "cce2cb4621a1ad32fe6babe6b7fb6755f8ecd8bfd25d1826d77c8fb4d3f47e5a",
+      "anchor_lines": {
+        "\\label{eq:signal-low}": [
+          620
+        ],
+        "\\label{eq:low-saving}": [
+          797
+        ],
+        "\\label{eq:endpoint}": [
+          1335
+        ],
+        "\\label{eq:stage-zero}": [
+          1633
+        ],
+        "\\label{eq:stage-one}": [
+          1639
+        ],
+        "\\label{eq:certificate-template}": [
+          2465
+        ],
+        "\\label{sec:probe}": [
+          581
+        ]
+      }
+    },
+    {
+      "version": "2610.26835v2",
+      "archive_url": "https://arxiv.org/src/2610.26835v2",
+      "html_url": "https://arxiv.org/html/2610.26835v2",
+      "archive_sha256": "cdb8a420f3d6aa6215265bd8d116bf6a888b532be33f509f1930efaaecca1961",
+      "archive_bytes": 200818,
+      "tex_file": "number_fields_v4.tex",
+      "tex_sha256": "d7226f4c172e163ea9e1a71d6ab016418fecd43715d9e6081e0ca819041dc3a2",
+      "anchor_lines": {
+        "\\label{eq:prev-B-low}": [
+          1007
+        ],
+        "\\label{eq:v-refined-endpoint}": [
+          10091
+        ],
+        "\\label{v:sec:refined-optimality}": [
+          11047
+        ],
+        "\\label{eq:v-refined-certificate}": [
+          12318
+        ],
+        "\\bibitem[New26]": [
+          13260
+        ]
+      }
+    }
+  ],
+  "retained_DH_disk": {
+    "file": "research/prime_spectral/verification_2026_10_12_remaining/dh_zero_and_finite_gates.json",
+    "sha256": "dccb47be2b796952273f9dc7b4789fa070cc51c9575fee7057c91c3d7f15cecf"
+  },
+  "previous_refined_packet_current_input_drift": [
+    "research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.md"
+  ],
+  "historical_replay": "All 25 bound inputs copied before registry update; prior validator is run in a temporary historical source tree. No old manifest changed.",
+  "claims_not_made": [
+    "actual J_eta equivalent to GRH",
+    "actual DH metaplectic probe implemented",
+    "whole method family excluded",
+    "new arithmetic estimate",
+    "novelty",
+    "RH proof"
+  ]
+}

@@ -1,0 +1,24 @@
+ M experiments/prime_spectral/check_dh_research_gate.py
+ M research/RH_DH_DISCRIMINATOR_REGISTER.json
+ M research/RH_DH_DISCRIMINATOR_REGISTER.md
+?? experiments/prime_spectral/dh_ground_state_diagnostic.py
+?? experiments/prime_spectral/dh_spectral_window_certificate.py
+?? experiments/prime_spectral/liu_conditional_moment.py
+?? experiments/prime_spectral/liu_exponent_system.py
+?? experiments/prime_spectral/liu_localized_target.py
+?? experiments/prime_spectral/test_dh_ground_state_diagnostic.py
+?? experiments/prime_spectral/test_liu_conditional_moment.py
+?? experiments/prime_spectral/test_liu_exponent_system.py
+?? experiments/prime_spectral/test_liu_localized_target.py
+?? research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_10_24.md
+?? research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_11_01.md
+?? research/prime_spectral/DH_SPECTRAL_DIAGNOSTIC_2026_10_24.md
+?? research/prime_spectral/DH_SPECTRAL_PREREGISTRATION_2026_10_24.md
+?? research/prime_spectral/LIU_CONDITIONAL_MOMENT_2026_10_24.md
+?? research/prime_spectral/LIU_EXPONENT_SYSTEM_2026_10_24.md
+?? research/prime_spectral/LIU_LOCALIZED_TARGET_2026_10_24.md
+?? research/prime_spectral/verification_2026_10_24_dh_spectral/
+?? research/prime_spectral/verification_2026_10_24_liu_conditional/
+?? research/prime_spectral/verification_2026_10_24_liu_exponents/
+?? research/prime_spectral/verification_2026_10_24_liu_localized/
+?? research/prime_spectral/verification_2026_11_01_refined_architecture/

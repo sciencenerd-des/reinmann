@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_tree": true,
+  "unit_tests": {
+    "passed": 45,
+    "failed": 0,
+    "log": "unit_tests.log"
+  },
+  "DH_gate": {
+    "passed": true,
+    "targets": 8,
+    "log": "DH_gate.log"
+  },
+  "git_diff_check": {
+    "passed": true,
+    "log": "diff_check.log"
+  },
+  "packet_replay": {
+    "exit_code": 0,
+    "log": "replay.log"
+  },
+  "previous_direct_and_refined_packets_historical_replay": true,
+  "earlier_non_cache_verification_files_unchanged": 1710,
+  "analytic_trust_boundary": "Standard angular Hecke entire/order-one/functional-equation facts and normal convergence argument used in written note; no software/Lean verification of analytic zero existence or full theta identity.",
+  "not_run": [
+    "angular zero search",
+    "target common-zero search",
+    "new DH scan",
+    "external full proof replay",
+    "Lean build",
+    "CI"
+  ],
+  "new_arithmetic_estimate_proved": false,
+  "GRH_implication_for_J_proved": false,
+  "DH_metaplectic_probe_instantiated": false,
+  "whole_method_family_closed": false
+}

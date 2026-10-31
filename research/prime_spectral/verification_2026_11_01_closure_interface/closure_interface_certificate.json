@@ -1,0 +1,46 @@
+{
+  "remainder": {
+    "printed_rho_upper_bound": "(beta_star-B(ell))/50",
+    "certified_exponent_minus_C_half_lower_bound": "B(ell)-1/2+(49/50)*(beta_star-B(ell))",
+    "lower_bound_with_retained_cap": "11/30",
+    "supplied_majorant_proves_requested_absolute_decay": false,
+    "actual_remainder_decay_disproved": false,
+    "optimistic_principal_branch": "C_b(beta_star)-h/600",
+    "optimistic_principal_branch_gap_above_C_half": ">221/600 when beta_star>87/100 and h<1",
+    "relative_remainder_could_suffice": true,
+    "missing_relative_obligation": "Extend the SAME-probe family-uniform relative saving to the needed beta_star>1/2 range, with all contour and row estimates justified; original theorem requires beta_star>B(ell)>87/100."
+  },
+  "correction": {
+    "principal_local_identity_verified": true,
+    "E_local": "1 + (-T**6*psi*q**2 + T*eta/q)/(-T*eta + 1)",
+    "H_local": "(1-q^-2)*E_local/(1-psi(p)*q^(3-6s))",
+    "angular_character": "psi_eta=conjugate(alpha)^6*eta^6; alpha(a)=a/|a|, alpha^6 generator independent",
+    "nonzero_angular_degree": "-6 (up to embedding convention), since eta has finite order",
+    "E_local_uniform_defect_bound_for_q_at_least_9": "2/9",
+    "E_normal_convergence_exponents": [
+      "3/2+epsilon",
+      "1+6*epsilon"
+    ],
+    "global_identity": "G_eta(s)=zeta_F^S(2)^(-1)*L_F^S(6s-3,psi_eta)*E_eta(s)",
+    "initial_identity_region": "Re(s)>2/3",
+    "continuation_region": "Re(s)>1/2 using standard Hecke continuation",
+    "E_product_holomorphic_nonzero_on_half_plane": true,
+    "analytic_theory_proved_by_code": false
+  },
+  "zeros": {
+    "zero_map": "rho -> (rho+3)/6",
+    "mapped_critical_line": "7/12",
+    "standard_angular_Hecke_zero_theory_used": true,
+    "interpretation": "Nontrivial angular Hecke zeros give correction zeros in Re(s)>1/2; nonvanishing on the whole half-plane is false in this printed correction system.",
+    "under_angular_GRH": "Angular critical-line zeros map to Re(s)=7/12, not 1/2.",
+    "target_L_zero_or_common_zero_located": false,
+    "correction_obligation": "No cancellation of target reciprocal poles: for example prove no common zeros of L_F^S(s,eta) and L_F^S(6s-3,psi_eta) in Re(s)>1/2, or change/re-normalize the signal with justified remainder.",
+    "numerical_angular_zero_scan_performed": false
+  },
+  "direct_probe_GRH_implication_proved": false,
+  "DH_metaplectic_probe_instantiated": false,
+  "new_arithmetic_estimate_proved": false,
+  "RH_claim": false,
+  "novelty_claim": false,
+  "whole_method_family_closed": false
+}

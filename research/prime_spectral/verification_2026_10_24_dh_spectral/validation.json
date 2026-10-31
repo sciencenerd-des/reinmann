@@ -1,0 +1,108 @@
+{
+  "base_commit": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "python": "3.12.11",
+  "versions": {
+    "python_flint": "0.8.0",
+    "mpmath": "1.4.1",
+    "scipy": "1.18.1",
+    "numpy": "2.5.4"
+  },
+  "commands": [
+    {
+      "name": "new_tests",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpvX0vhA/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/prime_spectral",
+        "-p",
+        "test_dh_ground_state_diagnostic.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "new_tests.log",
+      "log_sha256": "79e0a740a17d611f87a29a798b672cc759bba2cb02234250688fcac703a23196"
+    },
+    {
+      "name": "existing_research_controls",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpvX0vhA/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/prime_spectral",
+        "-p",
+        "test_dh_research_controls.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "existing_research_controls.log",
+      "log_sha256": "b37fcee45066de8f199bc2a90b242289e8fb2d6523138d54e0ba0fc9cadda354"
+    },
+    {
+      "name": "existing_coefficient_controls",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpvX0vhA/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/prime_spectral",
+        "-p",
+        "test_davenport_heilbronn_control.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "existing_coefficient_controls.log",
+      "log_sha256": "778bdbb9f6c63503b5102611024700362a3b95312116d3d13fad7a34e31e01be"
+    },
+    {
+      "name": "dh_register_gate",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpvX0vhA/bin/python",
+        "experiments/prime_spectral/check_dh_research_gate.py"
+      ],
+      "exit_code": 0,
+      "log": "dh_register_gate.log",
+      "log_sha256": "7d9f75510ddb1cc0cc04cc6ee018cfd43d3a8409ed658a73ea35b5c96f0b6d94"
+    },
+    {
+      "name": "canonical_index_historical_gate",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpvX0vhA/bin/python",
+        "experiments/prime_spectral/verify_canonical_zero_index.py"
+      ],
+      "exit_code": 1,
+      "log": "canonical_index_historical_gate.log",
+      "log_sha256": "f12b9389552f323f86ac2a89aa3f0f6abe99d0c33af8bd88a9005f74ab9756e0"
+    },
+    {
+      "name": "research_round_historical_gate",
+      "argv": [
+        "/Users/biswajitmondal/.cache/uv/builds-v0/.tmpvX0vhA/bin/python",
+        "experiments/prime_spectral/verify_research_gates_round.py"
+      ],
+      "exit_code": 1,
+      "log": "research_round_historical_gate.log",
+      "log_sha256": "09954fc1b09a59a10b0aa8b5904b29f6390734a55f0b5c4376003886c843fe90"
+    },
+    {
+      "name": "diff_whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "diff_whitespace.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "full_Lean_build_run": false,
+  "CI_claimed": false,
+  "preexisting_historical_failure": "verify_sector_start.py: Changed parent artifact .github/workflows/ci.yml",
+  "unchanged_failure_sources": true
+}

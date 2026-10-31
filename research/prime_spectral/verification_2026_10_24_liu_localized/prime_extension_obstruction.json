@@ -1,0 +1,12 @@
+{
+  "scope": "Exact optimistic proof-cost obstruction; no mixed moment is asserted.",
+  "required_enlarged_range": "h>=max(1,r+2z,(2r+8z)/3)",
+  "sixth_power_cost": "U^(1/6+5h/6)",
+  "normalized_large_value_gain": "U^(delta*r+2*delta*x*z)",
+  "excess_over_old_long_count_lower_bound": "(5/3-2*delta*x)*z",
+  "local_excess_per_z_lower_bound": "359/300",
+  "minimizing_selected_prime_length": "0",
+  "original_arithmetic_coefficients_retained": true,
+  "mixed_moment_theorem_proved": false,
+  "new_arithmetic_bound_proved": false
+}

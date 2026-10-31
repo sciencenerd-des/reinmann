@@ -1,0 +1,65 @@
+{
+  "status": "localized_conditional_scalar_target_verified",
+  "base_commit": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_checkout": true,
+  "not_a_CI_receipt": true,
+  "tests_passed": 26,
+  "registered_routes_checked": 8,
+  "new_arithmetic_estimate_proved": false,
+  "DH_family_instantiated": false,
+  "external_Lean_rebuilt": false,
+  "RH_proved": false,
+  "novelty_claimed": false,
+  "conditional_B": "874793/1000000",
+  "local_moment_r_band": [
+    "1099/1000",
+    "119/100"
+  ],
+  "alternative_local_direct_count_gain": "1/850",
+  "alternatives_not_claimed_to_imply_one_another": true,
+  "class_box": {
+    "delta": [
+      "1/3",
+      "47/100"
+    ],
+    "x": [
+      "21/50",
+      "1/2"
+    ]
+  },
+  "globally_minimal_box_claimed": false,
+  "selected_prime_unchanged_averaging_result": "excess >=(359/300)*z in the local class box; no improvement in this cost model",
+  "arithmetic_mixed_moment_asserted": false,
+  "primary_receipt": "research/prime_spectral/verification_2026_10_24_liu_localized/localized_verified.json",
+  "prior_manifests_modified": false,
+  "artifacts_sha256": {
+    "experiments/prime_spectral/check_dh_research_gate.py": "419118396e6e85626f388522c949563bf235ea0af961bd9b59cb0ba3513b59be",
+    "experiments/prime_spectral/liu_conditional_moment.py": "e64d88bf90f99f8ecd76f4fefa207b6b12a3396f7cf0c2e49064efa35c7fb592",
+    "experiments/prime_spectral/liu_exponent_system.py": "56a8ecbcc9c1d59240e0107883be76a9858740b835bda7f00ec01d580479060b",
+    "experiments/prime_spectral/liu_localized_target.py": "b62b1cdf47433e01f7b0a874b92e4faf138b99a4bf4ea4cd24c6c3170638de97",
+    "experiments/prime_spectral/test_liu_conditional_moment.py": "318646d8ab91f226857e1a8f466b1d894be72f61091082e1f05b27cbc5e44a24",
+    "experiments/prime_spectral/test_liu_exponent_system.py": "eac9b5d766b9f0bd6ee62cf18558ad1ac49d940bab2ea58f6b38cba1205125fb",
+    "experiments/prime_spectral/test_liu_localized_target.py": "8c66c6c8ca563a480539a0ae5f6bb3c8841a4ac207ae60d2573db1f0c5384395",
+    "research/LITERATURE_REVIEW_AND_DIRECTIONS_2026_10_24.md": "93c6bf18ec44dfdc1083b43b9d6eb84445939f19c662382fbd02d3b877bdcb63",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.json": "1c4953c7ddd8e02cbb31343db2f717a51af1101120f4e49946b545f3a951abc5",
+    "research/RH_DH_DISCRIMINATOR_REGISTER.md": "fa402cb91cd73dee2390e0ced9f6120b95b3c4c9d94a8bca61f15aa1a47de26b",
+    "research/prime_spectral/LIU_LOCALIZED_TARGET_2026_10_24.md": "648a5acbd7b1adcfac807166c848e4bff4c43cc620dfdc2b59f7e796a9ae35ad",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/DH_gate.log": "7d9f75510ddb1cc0cc04cc6ee018cfd43d3a8409ed658a73ea35b5c96f0b6d94",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/before_LITERATURE_REVIEW_AND_DIRECTIONS_2026_10_24.md": "5676ee8a6a009e97a4c3703646619d0ff39a354627127fab1e8c1906230be89a",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/before_RH_DH_DISCRIMINATOR_REGISTER.json": "fa27dc8bc1de6b7c98c8437f302d47ebceec013313d80a9f0be9d02f90f99a10",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/before_RH_DH_DISCRIMINATOR_REGISTER.md": "eb808ca908a5395eade2e5a90c1d61026d7ca3603f092c3bb1497b894abfcbed",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/check_prime_extension.py": "d8ee1aaea22573f72df762a86676927140e984c8156bb242b32bbe699ad45a50",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/diff_check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/localized_verified.json": "4e9d5f77ab6ea9e2fcef61d7d828fbbf0f6007d630b9e7133b30444750982878",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/post_audit_DH_gate.log": "7d9f75510ddb1cc0cc04cc6ee018cfd43d3a8409ed658a73ea35b5c96f0b6d94",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/post_audit_checks.json": "7e852795634f715f7d3cfc9bd2f12e1ee99f11e1e09e0292096e41f4db7fa912",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/post_audit_diff_check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/preregistration.md": "926fe27043de3da9f276d92d2bc7d3fded535743e36185122867c61413c1d39f",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/prime_extension_obstruction.json": "ab8d1ad718089bec174ab5265113e77c28b244a82255ca3b72c0e008e81f4531",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/retained_DH_arithmetic_replay.log": "77b3f937d22927808312d51849636ca4513e87fe39f7ae5ae0fce79cf5c45361",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/source_provenance.json": "74ea0009abd3482952f09da88c04bd1587d621b05d0d5e91f7af4f8e59883afb",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/unit_tests.log": "908a82a030af87ce5ff20355f567b35c870e43e210cc78eff9cff5407ec7f846",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/validate.py": "03460735bff760a2a2284c98378c171e5cbbac7918a6b7bbd96616964076628f",
+    "research/prime_spectral/verification_2026_10_24_liu_localized/validation.json": "f3c8759c9d3fbf8478c6978f9b273220155a807bcd87440cd28742becf662269"
+  }
+}

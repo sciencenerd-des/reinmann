@@ -1,0 +1,24 @@
+test_algebraic_tangency_is_below_strict_rational_certificate (test_liu_conditional_moment.ConditionalMomentTests.test_algebraic_tangency_is_below_strict_rational_certificate) ... ok
+test_certificate_and_prior_antecedent (test_liu_conditional_moment.ConditionalMomentTests.test_certificate_and_prior_antecedent) ... ok
+test_changed_long_moment_matches_independent_affine_optimizer (test_liu_conditional_moment.ConditionalMomentTests.test_changed_long_moment_matches_independent_affine_optimizer) ... ok
+test_long_moment_gain_is_uniform_in_the_declared_range (test_liu_conditional_moment.ConditionalMomentTests.test_long_moment_gain_is_uniform_in_the_declared_range) ... ok
+test_original_moment_cannot_certify_the_new_bound (test_liu_conditional_moment.ConditionalMomentTests.test_original_moment_cannot_certify_the_new_bound) ... ok
+test_rational_bound_strictly_below_published_algebraic_root (test_liu_conditional_moment.ConditionalMomentTests.test_rational_bound_strictly_below_published_algebraic_root) ... ok
+test_reject_lost_principal_or_support_range (test_liu_conditional_moment.ConditionalMomentTests.test_reject_lost_principal_or_support_range) ... ok
+test_GM_template_normalization_matches_standard_critical_case (test_liu_exponent_system.LiuExponentSystemTests.test_GM_template_normalization_matches_standard_critical_case) ... ok
+test_bootstrap_uses_previous_bound (test_liu_exponent_system.LiuExponentSystemTests.test_bootstrap_uses_previous_bound) ... ok
+test_closed_count_matches_independent_affine_minimax (test_liu_exponent_system.LiuExponentSystemTests.test_closed_count_matches_independent_affine_minimax) ... ok
+test_count_free_direct_primal_and_global_lower_bound (test_liu_exponent_system.LiuExponentSystemTests.test_count_free_direct_primal_and_global_lower_bound) ... ok
+test_cubic_root_bracket_and_reported_value (test_liu_exponent_system.LiuExponentSystemTests.test_cubic_root_bracket_and_reported_value) ... ok
+test_naive_balanced_boundary_must_keep_reflection_loss (test_liu_exponent_system.LiuExponentSystemTests.test_naive_balanced_boundary_must_keep_reflection_loss) ... ok
+test_original_lengths_and_normalization (test_liu_exponent_system.LiuExponentSystemTests.test_original_lengths_and_normalization) ... ok
+test_raw_amplitudes_not_L2_normalized_values (test_liu_exponent_system.LiuExponentSystemTests.test_raw_amplitudes_not_L2_normalized_values) ... ok
+test_reject_invalid_formal_extrapolations (test_liu_exponent_system.LiuExponentSystemTests.test_reject_invalid_formal_extrapolations) ... ok
+test_relative_nonprincipal_exponent_and_contour_cancellation (test_liu_exponent_system.LiuExponentSystemTests.test_relative_nonprincipal_exponent_and_contour_cancellation) ... ok
+test_supplied_count_is_not_an_actual_count_lower_bound (test_liu_exponent_system.LiuExponentSystemTests.test_supplied_count_is_not_an_actual_count_lower_bound) ... ok
+test_uniform_endpoint_and_LP_certificates (test_liu_exponent_system.LiuExponentSystemTests.test_uniform_endpoint_and_LP_certificates) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 8.645s
+
+OK

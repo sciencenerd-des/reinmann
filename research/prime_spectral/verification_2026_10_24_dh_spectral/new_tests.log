@@ -1,0 +1,11 @@
+test_DH_candidate_projection_refinement (test_dh_ground_state_diagnostic.DHSpectralDiagnosticTests.test_DH_candidate_projection_refinement) ... ok
+test_DH_gaussian_reflection_and_odd_gamma_convention (test_dh_ground_state_diagnostic.DHSpectralDiagnosticTests.test_DH_gaussian_reflection_and_odd_gamma_convention) ... ok
+test_constant_transform_roots (test_dh_ground_state_diagnostic.DHSpectralDiagnosticTests.test_constant_transform_roots) ... ok
+test_fourier_basis_integrals_including_removable_poles (test_dh_ground_state_diagnostic.DHSpectralDiagnosticTests.test_fourier_basis_integrals_including_removable_poles) ... ok
+test_midpoint_eigenvector_selects_lowest_not_smallest_absolute_value (test_dh_ground_state_diagnostic.DHSpectralDiagnosticTests.test_midpoint_eigenvector_selects_lowest_not_smallest_absolute_value) ... ok
+test_zeta_parity_recurrence_against_direct_integrals (test_dh_ground_state_diagnostic.DHSpectralDiagnosticTests.test_zeta_parity_recurrence_against_direct_integrals) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.962s
+
+OK

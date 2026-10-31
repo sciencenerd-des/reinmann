@@ -1,0 +1,27 @@
+{
+  "commands": [
+    {
+      "name": "post_audit_DH_gate",
+      "argv": [
+        "python3",
+        "experiments/prime_spectral/check_dh_research_gate.py"
+      ],
+      "exit_code": 0,
+      "log": "post_audit_DH_gate.log",
+      "sha256": "7d9f75510ddb1cc0cc04cc6ee018cfd43d3a8409ed658a73ea35b5c96f0b6d94"
+    },
+    {
+      "name": "post_audit_diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "post_audit_diff_check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_and_report_whitespace_passed": true,
+  "scalar_tests_not_repeated": "No scalar implementation or test changes after the passing 26-test run; only the separate proof-cost audit and notes/register changed."
+}

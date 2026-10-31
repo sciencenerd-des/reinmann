@@ -1,0 +1,6 @@
+{
+  "literature_prefix_before_this_round_append_sha256": "1ff6f2b92c963a9cb4130499dad8276b7766689e64ff63dc121017a7cbd296ae",
+  "prior_spectral_literature_binding_sha256": "d79ad9e6b3bbeb3074ef5e4b71ef531b77fd1304dfc50ca9b0a91d578aec3883",
+  "prior_spectral_literature_binding_matches": false,
+  "scope": "Retained the observed pre-append literature bytes. Older literature hash mismatch is not repaired or attributed to a cause; old immutable manifest is untouched."
+}

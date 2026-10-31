@@ -14,7 +14,8 @@ def main():
         assert r['id'] not in ids
         ids.add(r['id'])
         assert r['target'] and r['dh_analogue'] and r['arithmetic_property'] and r['gap']
-        assert r['classification'] in {'reformulation', 'uninstantiated', 'strategy'}
+        assert r['classification'] in {'reformulation', 'uninstantiated', 'strategy',
+                                       'arithmetic_candidate_with_quantified_unproved_gap'}
         f = r['failure']
         assert f['globally_first'] is False
         if 'source' in f:
@@ -32,7 +33,7 @@ def main():
     assert data['status'] == 'negative_full_form_trial' and data['C'] == f['C']
     assert any(Fraction(s['normalized_full_form']['hi']) < 0 for s in data['sectors']
                if 'normalized_full_form' in s)
-    print('DH gate: five targets registered; retained Toeplitz/Weil witnesses agree; no active RH strategy claimed')
+    print(f'DH gate: {len(ids)} targets registered; retained Toeplitz/Weil witnesses agree; no active RH strategy claimed')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,132 @@
+{
+  "scope": "Conditional scalar certificate only; no new arithmetic estimate or zero-free theorem.",
+  "hypothetical_long_inverse_moment": {
+    "alpha": "4/5",
+    "U_exponent": "1/5",
+    "D_exponent": "4/5",
+    "r_range": [
+      "1",
+      "3/2"
+    ],
+    "saving_against_original": "(D/U)^(1/30)",
+    "proved": false,
+    "DH_family_instantiated": false
+  },
+  "parameters": {
+    "alpha": "4/5",
+    "kappa": "3/4",
+    "ell": "125621/750000",
+    "b": "55363/500000",
+    "lx": "1082669/3000000",
+    "ly": "1414847/3000000",
+    "h": "161321/200000",
+    "B": "874793/1000000"
+  },
+  "prior_bound_justifying_kappa": "7/8",
+  "endpoint_domain": {
+    "delta": [
+      "0",
+      "4/5"
+    ],
+    "x": [
+      "0",
+      "1/2"
+    ]
+  },
+  "count_denominator_rounding_box": {
+    "delta": [
+      "0",
+      "19/25"
+    ],
+    "x": [
+      "0",
+      "51/100"
+    ]
+  },
+  "endpoint_polynomials_in_y": {
+    "A": [
+      "2186443/4500000",
+      "8082929/6750000",
+      "1438807/1687500",
+      "125621/421875"
+    ],
+    "B": [
+      "-12706207/33750000",
+      "-1063967/1875000",
+      "-58964/2109375"
+    ],
+    "C": [
+      "615421/8437500",
+      "282761/4218750"
+    ],
+    "discriminant_complement": [
+      "22256173511/1139062500000000",
+      "14911669021039/284765625000000",
+      "64571488637927/284765625000000",
+      "841659889733/2966308593750",
+      "117243480838/1483154296875"
+    ]
+  },
+  "uniform_endpoint_saving_lower_bound": "2023288501/2654201520000000",
+  "general_alpha_count_identities": [
+    "short_moment_crossing",
+    "short_count_at_crossing",
+    "short_count_at_cutoff",
+    "long_count_at_cutoff",
+    "cutoff_upper_margin",
+    "D_minus_P",
+    "crossing_at_three_halves",
+    "crossing_t_derivative",
+    "crossing_x_derivative",
+    "second_inverse_support_gap"
+  ],
+  "auxiliary_reserves": {
+    "kappa_minus_13_over18": "1/36",
+    "four_fifths_minus_kappa": "1/20",
+    "alpha_minus_delta_max": "1/25",
+    "b": "55363/500000",
+    "ell": "125621/750000",
+    "one_fifth_minus_ell": "24379/750000",
+    "lx_minus_b_minus_ell": "82669/1000000",
+    "ly_minus_ell": "304121/1000000",
+    "ly_minus_ell_minus_11b_over6": "30337/300000",
+    "one_minus_h": "38679/200000",
+    "five_ell_minus_h": "18521/600000",
+    "B_minus_43_over50": "14793/1000000",
+    "B_minus_437_over500": "793/1000000",
+    "seven_eighths_minus_B": "207/1000000",
+    "lowest_class_saving": "536437/75000000",
+    "small_norm_saving_with_previous_gap": "757893/10000000",
+    "intermediate_saving_at_1_over50": "63773353/300000000",
+    "intermediate_saving_at_19_over25": "13101/781250",
+    "c": "8/9",
+    "one_minus_c": "1/9",
+    "inverse_prime_support_margin": "2/185",
+    "plain_prime_support_margin": "17/135",
+    "D_margin_at_round_max": "11/300",
+    "P_margin_at_round_max": "59/7500",
+    "J_uniform_margin_over_three_fifths": "1/20",
+    "cutoff_margin_below_three_halves": "1/40",
+    "endpoint_d_slope_lower": "7/25",
+    "endpoint_d_slope_upper_margin_below_two": "24/25",
+    "intermediate_d_slope_lower": "41/75",
+    "inverse_crossing_second_support_gap": "9/37"
+  },
+  "full_direct_majorant": {
+    "reflection_k": "0",
+    "gram": "55363/6000000",
+    "L_low": "23709/125000",
+    "B_low": "874793/1000000"
+  },
+  "all_scalar_checks_passed": true,
+  "arithmetic_estimate_proved": false,
+  "analytic_assembly_reproved": false,
+  "external_Lean_rebuilt": false,
+  "critical_class_algebraic_diagnostic": {
+    "delta_display": "0.3874135010231748028838652749319363336818",
+    "ell_display": "0.1674979521181574234272326564572493127985",
+    "b_display": "0.1107258057716572052854121312819668781920",
+    "B_tangency_display": "0.8747921786371273108098585025523543384670",
+    "t_display": "1.131075950919274091118287702478186189978"
+  }
+}

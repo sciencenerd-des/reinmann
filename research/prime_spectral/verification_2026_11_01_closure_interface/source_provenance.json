@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-01",
+  "git_HEAD": "a8455dcf978424a7487048f114df3c66552d6f6a",
+  "dirty_tree": true,
+  "CI_receipt": false,
+  "python": "3.14.2",
+  "sympy": "1.14.0",
+  "OpenAI_source": {
+    "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+    "commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "provider_git_blob_sha1": "268c4e3206d460c617d3d2129742a72b831b3def",
+    "bytes": 766316,
+    "fetched_through": "connected GitHub fetch",
+    "excerpts": "openai_principal_local_source.txt",
+    "source_line_ranges": [
+      [
+        566,
+        580
+      ],
+      [
+        3857,
+        3871
+      ],
+      [
+        4010,
+        4048
+      ],
+      [
+        5512,
+        5533
+      ]
+    ]
+  },
+  "arxiv_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.15291v2",
+      "version": "2610.15291v2",
+      "tex": "seven_eighths_and_beyond_v7.tex",
+      "sha256": "cce2cb4621a1ad32fe6babe6b7fb6755f8ecd8bfd25d1826d77c8fb4d3f47e5a",
+      "anchor_lines": {
+        "gamma=": [
+          1609,
+          2732
+        ],
+        "rho=2": [
+          1619
+        ],
+        "principal region": [
+          2331
+        ],
+        "principal-remainder": [
+          1597,
+          2391,
+          2684
+        ],
+        "H-contraction": [
+          845,
+          2367
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/html/2610.26835v2",
+      "version": "2610.26835v2",
+      "tex": "number_fields_v4.tex",
+      "sha256": "d7226f4c172e163ea9e1a71d6ab016418fecd43715d9e6081e0ca819041dc3a2",
+      "anchor_lines": {
+        "v:cmp:5": [
+          8545,
+          8649,
+          8673,
+          8699,
+          8732,
+          8749,
+          8801,
+          8832,
+          8876,
+          9285,
+          9301,
+          10219
+        ],
+        "v:lem:theta-characters": [
+          1669,
+          2041,
+          2352,
+          2577,
+          3677,
+          8920,
+          11948,
+          12180
+        ]
+      }
+    }
+  ],
+  "proof_boundary": "Symbolic local and margin identities checked; normal-convergence and standard angular Hecke order-one/functional-equation arguments are written in the note, not Lean or software proof. No full theta identity replay.",
+  "prior_art_lookup": {
+    "queries": [
+      "quasi-Riemann 6s correction",
+      "Xu Sang correction zeros",
+      "H_eta 6s-3",
+      "quasi-Riemann angular principal zeros"
+    ],
+    "novelty_claim": false
+  },
+  "prior_packet_handling": "All previously bound source inputs snapshotted before shared register/review changes; two prior validators are replayed in nested historical source trees. No old manifests changed."
+}

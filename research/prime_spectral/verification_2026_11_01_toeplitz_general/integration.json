@@ -1,0 +1,7 @@
+{
+  "project_audit_imports_subset_of_root": true,
+  "project_audit_import_count": 107,
+  "root_import_count": 181,
+  "new_module_count": 3,
+  "new_explicit_axiom_prints": 5
+}

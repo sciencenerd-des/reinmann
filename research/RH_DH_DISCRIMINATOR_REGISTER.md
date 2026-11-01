@@ -520,3 +520,30 @@ audited; local default build and axiom-clean pass with 2,655 reports.
 This remains shared finite algebra, valid for DH under the same hypotheses,
 with no new arithmetic PSD estimate or RH discriminator. See the
 [atomic follow-up](prime_spectral/TOEPLITZ_ATOMIC_2026_11_01.md).
+
+## General Toeplitz representation preregistration
+
+Target exactly rank(T) distinct unit-circle atoms with positive real weights
+for every complex PSD Toeplitz matrix. First extend the corank-one theorem
+to all singular ranks by PSD extension uniqueness and induction. Then attempt
+a rank-one Toeplitz downdate for full-rank matrices. Only completed cases
+will be claimed. Coefficients and entry orientation remain unchanged. This
+is shared finite algebra valid for DH under the same hypotheses; no
+arithmetic PSD estimate, separating inequality or RH strategy is proposed.
+
+### General finite Toeplitz representation outcome
+
+`ToeplitzRepresentation.exists_atomic_representation` proves the arbitrary-rank
+positive finite atomic representation, including zero and full rank. Its
+only hypotheses are complex PSD and the original Toeplitz shift identity;
+the support has exactly rank(T) distinct unit-circle nodes and strictly
+positive real weights reproducing every entry. The singular induction uses
+PSD extension uniqueness and the full-rank case uses a positive constant
+Schur-complement downdate. No kernel vector or representation is assumed.
+
+The three modules are root-imported and five explicit axiom checks are
+integrated. Local default build and axiom-clean pass with 2,660 reports.
+This completes the generic representation target; representation uniqueness
+and arithmetic PSD estimates are not proved. It is shared finite algebra,
+valid for DH under the same matrix assumptions, not an arithmetic separator.
+See the [general representation note](prime_spectral/TOEPLITZ_GENERAL_2026_11_01.md).

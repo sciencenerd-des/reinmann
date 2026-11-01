@@ -68,6 +68,9 @@ import Reinmann.ToeplitzFullPF
 import Reinmann.ToeplitzKernel
 import Reinmann.ToeplitzSimpleRoots
 import Reinmann.ToeplitzAtomic
+import Reinmann.ToeplitzExtension
+import Reinmann.ToeplitzDowndate
+import Reinmann.ToeplitzRepresentation
 import Reinmann.HyperbolicLimit
 import Reinmann.HermitePoulainDerivative
 import Reinmann.HermitePoulainComposition
@@ -151,6 +154,13 @@ namespace Reinmann.AxiomAudit
 #print axioms Reinmann.ToeplitzAtomic.basis_weight_pos
 #print axioms Reinmann.ToeplitzAtomic.atomic_representation_of_kernel
 #print axioms Reinmann.ToeplitzAtomic.exists_atomic_representation
+
+-- General finite Toeplitz atomic representation, including singular and full rank.
+#print axioms Reinmann.ToeplitzExtension.extension_unique
+#print axioms Reinmann.ToeplitzExtension.rank_atomicMatrix_le
+#print axioms Reinmann.ToeplitzDowndate.exists_constant_downdate
+#print axioms Reinmann.ToeplitzRepresentation.exists_atomic_representation_singular
+#print axioms Reinmann.ToeplitzRepresentation.exists_atomic_representation
 
 -- Core reduction chain: Hilbert–Pólya witness ⟹ RH (spectral branch).
 #print axioms riemannHypothesis_of_twoBranchArchitecture

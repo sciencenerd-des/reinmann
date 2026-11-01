@@ -1,0 +1,12 @@
+{
+  "target": "For every complex PSD Toeplitz matrix T of size n+1, construct HasAtomicRepresentation T T.rank: exactly rank(T) distinct unit-circle nodes with strictly positive real weights reproducing every entry. First prove arbitrary singular rank <=n by induction/PSD extension uniqueness; attempt the full-rank case by a positive rank-one Toeplitz downdate. Claim only completed cases.",
+  "conventions": "Original simultaneous shift invariance, full Hermitian two-sided matrix; entries sum w(z)*conj(z^i)*z^j; finite support implies distinct nodes; zero-rank support is empty. Ordinary ascending polynomial coefficients in kernel arguments.",
+  "DH_analogue": "The identical finite linear-algebra theorem for any DH-derived matrix satisfying the same PSD and Toeplitz assumptions. No arithmetic PSD estimate or new separator.",
+  "classification": "shared_prerequisite",
+  "separating_inequality": null,
+  "arithmetic_route_active": false,
+  "RH_claim": false,
+  "novelty_claim": false,
+  "status": "preregistered before implementation",
+  "HEAD": "dd3d2ea1168f0a7840146633281c7f72c7cd977c"
+}

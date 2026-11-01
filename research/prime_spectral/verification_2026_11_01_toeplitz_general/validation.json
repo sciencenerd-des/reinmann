@@ -1,0 +1,20 @@
+{
+  "verified_base_HEAD": "dd3d2ea1168f0a7840146633281c7f72c7cd977c",
+  "dirty_working_tree": true,
+  "general_arbitrary_rank_representation_proved": true,
+  "extra_kernel_or_rank_input_required": false,
+  "arithmetic_PSD_proved": false,
+  "representation_uniqueness_proved": false,
+  "default_root_build_passed": true,
+  "axiom_clean_reports": 2660,
+  "new_explicit_axiom_checks": 5,
+  "fresh_Lean_own_kernel_replay_passed": true,
+  "kernel_modules_bound": 5558,
+  "compiled_and_metadata_files_bound": 22220,
+  "eight_historical_packets_replayed": true,
+  "earlier_verification_files_unchanged": 1911,
+  "DH_gate_passed": true,
+  "diff_check_passed": true,
+  "validator_exit_code": 0,
+  "remote_CI_run": false
+}

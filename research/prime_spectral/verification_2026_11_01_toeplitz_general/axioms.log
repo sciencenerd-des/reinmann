@@ -1,0 +1,15 @@
+Reinmann.ToeplitzAtomic.HasAtomicRepresentation {n : ℕ} (T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ) (r : ℕ) : Prop
+Reinmann.ToeplitzRepresentation.exists_atomic_representation {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) :
+  Reinmann.ToeplitzAtomic.HasAtomicRepresentation T T.rank
+Reinmann.ToeplitzDowndate.exists_constant_downdate {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hT : T.PosDef) :
+  ∃ a, 0 < a ∧ (T - Matrix.of fun x x_1 => ↑a).PosSemidef ∧ (T - Matrix.of fun x x_1 => ↑a).rank ≤ n
+'Reinmann.ToeplitzExtension.extension_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzExtension.rank_atomicMatrix_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzDowndate.exists_constant_downdate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzRepresentation.exists_atomic_representation_singular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.ToeplitzRepresentation.exists_atomic_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

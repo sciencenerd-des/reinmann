@@ -1,0 +1,8 @@
+{
+  "verified_base_HEAD": "dd3d2ea1168f0a7840146633281c7f72c7cd977c",
+  "dirty_working_tree": true,
+  "prior_corank_one_checkpoint": "dd3d2ea1168f0a7840146633281c7f72c7cd977c",
+  "earlier_verification_files_unchanged": 1911,
+  "scope": "General finite positive Toeplitz atomic representation for every rank. No arithmetic PSD estimate or uniqueness theorem claimed.",
+  "remote_CI_run": false
+}

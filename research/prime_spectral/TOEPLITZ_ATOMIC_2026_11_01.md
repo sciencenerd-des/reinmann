@@ -65,9 +65,9 @@ No numerical root computation or sampled positivity is used.
 ## Scope
 
 This completes the positive atomic representation for the corank-one
-case. The theorem for arbitrary rank r in a matrix of size n+1,
-including the full-rank case, is still unformalized here. No uniqueness
-of the representation is claimed in this follow-up.
+case. A subsequent [general-rank follow-up](TOEPLITZ_GENERAL_2026_11_01.md)
+now proves the representation for every rank, including full rank.
+No uniqueness of the representation is claimed in either follow-up.
 
 It remains shared finite linear algebra, valid for any DH-derived matrix
 satisfying the same hypotheses. It provides no zeta/DH-specific PSD

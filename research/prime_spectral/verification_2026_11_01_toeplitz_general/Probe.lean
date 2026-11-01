@@ -1,0 +1,10 @@
+import Reinmann.ToeplitzRepresentation
+
+#check Reinmann.ToeplitzAtomic.HasAtomicRepresentation
+#check Reinmann.ToeplitzRepresentation.exists_atomic_representation
+#check Reinmann.ToeplitzDowndate.exists_constant_downdate
+#print axioms Reinmann.ToeplitzExtension.extension_unique
+#print axioms Reinmann.ToeplitzExtension.rank_atomicMatrix_le
+#print axioms Reinmann.ToeplitzDowndate.exists_constant_downdate
+#print axioms Reinmann.ToeplitzRepresentation.exists_atomic_representation_singular
+#print axioms Reinmann.ToeplitzRepresentation.exists_atomic_representation

@@ -631,5 +631,39 @@
       "bound_compiled_and_metadata_files": 22214,
       "earlier_evidence_files_preserved": 1883
     }
+  },
+  "toeplitz_general_representation_2026_11_01": {
+    "target": "For every complex PSD Toeplitz matrix T of size n+1, construct HasAtomicRepresentation T T.rank: exactly rank(T) distinct unit-circle nodes with strictly positive real weights reproducing every entry. First prove arbitrary singular rank <=n by induction/PSD extension uniqueness; attempt the full-rank case by a positive rank-one Toeplitz downdate. Claim only completed cases.",
+    "conventions": "Original simultaneous shift invariance, full Hermitian two-sided matrix; entries sum w(z)*conj(z^i)*z^j; finite support implies distinct nodes; zero-rank support is empty. Ordinary ascending polynomial coefficients in kernel arguments.",
+    "DH_analogue": "The identical finite linear-algebra theorem for any DH-derived matrix satisfying the same PSD and Toeplitz assumptions. No arithmetic PSD estimate or new separator.",
+    "classification": "shared_prerequisite",
+    "separating_inequality": null,
+    "arithmetic_route_active": false,
+    "RH_claim": false,
+    "novelty_claim": false,
+    "status": "General finite positive representation proved for every rank; root/audit integration, local build, axiom-clean and fresh Lean kernel replay passed.",
+    "HEAD": "dd3d2ea1168f0a7840146633281c7f72c7cd977c",
+    "outcome": {
+      "singular_arbitrary_rank_representation_proved": true,
+      "full_rank_representation_proved": true,
+      "general_arbitrary_rank_representation_proved": true,
+      "exact_rank_atom_count": true,
+      "strictly_positive_real_weights": true,
+      "distinct_unit_circle_support": true,
+      "extra_kernel_or_rank_input_required": false,
+      "arithmetic_PSD_input_proved": false,
+      "representation_uniqueness_proved": false,
+      "root_and_audit_integrated": true,
+      "explicit_new_axiom_checks": 5,
+      "local_default_build_passed": true,
+      "local_axiom_clean_reports": 2660,
+      "remote_CI_run": false,
+      "note": "research/prime_spectral/TOEPLITZ_GENERAL_2026_11_01.md",
+      "packet": "research/prime_spectral/verification_2026_11_01_toeplitz_general",
+      "fresh_Lean_kernel_replay_passed": true,
+      "kernel_modules_bound": 5558,
+      "compiled_and_metadata_files_bound": 22220,
+      "earlier_verification_files_unchanged": 1911
+    }
   }
 }

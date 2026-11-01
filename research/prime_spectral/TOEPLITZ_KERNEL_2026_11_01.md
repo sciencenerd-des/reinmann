@@ -5,8 +5,9 @@ finite corank-one kernel-root corollary, for arbitrary matrix size, without
 assuming an atomic moment representation. This completes the kernel-root
 target from Direction E. A subsequent
 [follow-up](TOEPLITZ_ATOMIC_2026_11_01.md) proves the positive atomic
-representation in the corank-one case; arbitrary-rank representation
-remains unformalized here.
+representation in the corank-one case. The later
+[general representation](TOEPLITZ_GENERAL_2026_11_01.md) now covers arbitrary
+rank as well, under the same explicit PSD/Toeplitz premises.
 
 This is the known finite corollary stated in Connes–van Suijlekom,
 [arXiv:2511.23257, Corollary 1.1](https://arxiv.org/html/2511.23257).

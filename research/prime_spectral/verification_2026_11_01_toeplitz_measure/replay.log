@@ -1,0 +1,22 @@
+PASS: 25 bound files; 1654 earlier verification files unchanged; four stages, quartic and direct dual replayed
+PASS: direct pricing and DH model checks; 1669 earlier verification files unchanged; prior refined validator replayed against its historical sources
+Numerical certificate evaluation is replayed separately with --replay-dh-zero and Arb.
+PASS: closure algebra and register scope; 1710 earlier non-cache verification files unchanged; both preceding packets replayed historically
+Standard Hecke analytic theory and the full theta identity are not machine proved.
+PASS: threshold documentation and register scope; 1773 earlier non-cache verification files unchanged; three preceding packets replayed historically
+PASS: band-only refined certificate and scope; 1785 earlier non-cache verification files unchanged; four preceding packets replayed historically
+Lean build/probe results are bound receipts, not repeated by this Python validator.
+PASS: finite Toeplitz kernel theorem and shared-prerequisite scope; 1837 earlier non-cache verification files unchanged; five earlier packets replayed historically
+No general atomic moment representation, arithmetic positivity, root build or CI is claimed.
+PASS: root import and four axiom audits integrated; 1862 earlier verification files unchanged; six preceding packets replayed historically
+Local default build and axiom-clean receipts only; no remote CI or arithmetic separator claimed.
+PASS: simple roots and positive corank-one atomic representation; 1883 earlier verification files unchanged; seven earlier packets replayed historically
+Default root build, eight axiom checks and Lean own-kernel replay are recorded; arbitrary-rank representation and arithmetic positivity remain open.
+PASS: general-rank positive finite Toeplitz atomic representation; 1911 earlier verification files unchanged; eight earlier packets replayed historically
+Default root build, five axiom checks and Lean own-kernel replay are recorded; representation uniqueness and arithmetic positivity are not claimed.
+PASS: singular finite atomic uniqueness and full-rank counterexample; 1940 earlier verification files unchanged; nine earlier packets replayed historically
+Default root build, seven axiom checks and Lean own-kernel replay are recorded; off-support function equality, universal full-rank nonuniqueness and arithmetic positivity are not claimed.
+PASS: prescribed atoms, universal full-rank nonuniqueness and exact uniqueness criterion; 1972 earlier verification files unchanged; ten earlier packets replayed historically
+Default root build, four axiom checks and Lean own-kernel replay are recorded; off-support function equality, arbitrary-measure uniqueness and arithmetic positivity are not claimed.
+PASS: finite Borel representing measures and exact uniqueness among all finite circle measures; 2003 earlier verification files unchanged; eleven earlier packets replayed historically
+Default root build, nine axiom checks and Lean own-kernel replay are recorded; infinite moment-sequence representation and arithmetic positivity are not claimed.

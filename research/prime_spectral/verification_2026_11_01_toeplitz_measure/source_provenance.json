@@ -1,0 +1,11 @@
+{
+  "verified_base_HEAD": "dd0eb1525cd8c9a289a5915463c4e0d15b41bfe4",
+  "dirty_working_tree": true,
+  "scope": "Local source-byte-bound default build, axiom-clean, nine probes and fresh own-kernel replay; no remote CI receipt.",
+  "remote_CI_run": false,
+  "new_modules": [
+    "Reinmann/ToeplitzMeasure.lean",
+    "Reinmann/ToeplitzMeasureUniqueness.lean"
+  ],
+  "earlier_verification_files_unchanged": 2003
+}

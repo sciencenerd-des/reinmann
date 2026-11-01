@@ -74,6 +74,8 @@ import Reinmann.ToeplitzRepresentation
 import Reinmann.ToeplitzUniqueness
 import Reinmann.ToeplitzPrescribedAtom
 import Reinmann.ToeplitzFullRank
+import Reinmann.ToeplitzMeasure
+import Reinmann.ToeplitzMeasureUniqueness
 import Reinmann.HyperbolicLimit
 import Reinmann.HermitePoulainDerivative
 import Reinmann.HermitePoulainComposition
@@ -179,6 +181,17 @@ namespace Reinmann.AxiomAudit
 #print axioms Reinmann.ToeplitzPrescribedAtom.exists_representation_containing
 #print axioms Reinmann.ToeplitzFullRank.nonunique_of_full_rank
 #print axioms Reinmann.ToeplitzFullRank.unique_supported_data_iff_singular
+
+-- Finite positive Borel measures, kernel support and the exact uniqueness criterion.
+#print axioms Reinmann.ToeplitzMeasure.atomicMeasure_represents
+#print axioms Reinmann.ToeplitzMeasure.exists_representing_measure
+#print axioms Reinmann.ToeplitzMeasureUniqueness.integral_pairing
+#print axioms Reinmann.ToeplitzMeasureUniqueness.eval_zero_ae_of_kernel
+#print axioms Reinmann.ToeplitzMeasureUniqueness.ae_mem_of_card_le
+#print axioms Reinmann.ToeplitzMeasureUniqueness.measure_eq_atomic_of_card_le
+#print axioms Reinmann.ToeplitzMeasureUniqueness.exists_unique_representing_measure_singular
+#print axioms Reinmann.ToeplitzMeasureUniqueness.nonunique_representing_measure_of_full_rank
+#print axioms Reinmann.ToeplitzMeasureUniqueness.unique_representing_measure_iff_singular
 
 -- Core reduction chain: Hilbert–Pólya witness ⟹ RH (spectral branch).
 #print axioms riemannHypothesis_of_twoBranchArchitecture

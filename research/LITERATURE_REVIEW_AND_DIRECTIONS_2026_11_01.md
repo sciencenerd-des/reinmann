@@ -223,13 +223,18 @@ with an exact full-rank counterexample to unconditional support uniqueness.
 The [full-rank follow-up](prime_spectral/TOEPLITZ_FULL_RANK_2026_11_01.md)
 now proves that every full-rank case is nonunique, using representations
 containing any prescribed unit-circle node. Supported positive finite data
-are unique exactly in singular rank.
+are unique exactly in singular rank. The
+[measure follow-up](prime_spectral/TOEPLITZ_MEASURE_2026_11_01.md) now
+constructs actual finite positive Borel representing measures and proves
+the same uniqueness criterion among all finite positive unit-circle measures,
+without assuming atomicity of a competitor.
 
-All nine modules are imported by the root and AxiomAudit on Lean 4.30,
+All eleven modules are imported by the root and AxiomAudit on Lean 4.30,
 with four kernel checks, eight corank-one checks, five general-rank checks,
-seven singular-uniqueness checks and four full-rank checks. The default
-root build and local axiom-clean script pass (2,671 audited theorem reports). This supplies shared finite linear algebra, also
-valid for DH under the same hypotheses. No arithmetic positivity or RH
+seven singular-uniqueness checks, four full-rank checks and nine measure
+checks. The default root build and local axiom-clean script pass
+(2,680 audited theorem reports). This supplies shared finite linear algebra
+and measure theory, also valid for DH under the same hypotheses. No arithmetic positivity or RH
 strategy follows. Details and replay scope are in
 [the follow-up note](prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md).
 

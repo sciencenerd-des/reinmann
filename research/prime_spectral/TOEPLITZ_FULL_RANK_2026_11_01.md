@@ -81,8 +81,11 @@ supports differ. This is an exact existence proof, not a scan or a sampled
 numerical argument.
 
 Combine this with the preceding singular-case uniqueness theorem to obtain
-the exact rank criterion. The result concerns positive finite data; no
-uniqueness theorem for arbitrary measures or continuous operators is claimed.
+the exact rank criterion. This checkpoint concerns positive finite data.
+The subsequent [measure follow-up](TOEPLITZ_MEASURE_2026_11_01.md) proves
+uniqueness among all finite positive unit-circle Borel measures in singular
+rank, without assuming that a competitor is atomic. No continuous-operator
+theorem is claimed.
 
 ## Integration, evidence and research scope
 

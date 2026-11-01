@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "log": "root_build.log"
+  },
+  {
+    "command": [
+      "bash",
+      "scripts/verify_axiom_clean.sh"
+    ],
+    "exit_code": 0,
+    "log": "axiom_clean.log"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "research/prime_spectral/verification_2026_11_01_toeplitz_measure/Probe.lean"
+    ],
+    "exit_code": 0,
+    "log": "axioms.log"
+  }
+]

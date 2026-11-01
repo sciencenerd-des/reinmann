@@ -1,0 +1,6 @@
+{
+  "project_audit_imports_subset_of_root": true,
+  "project_audit_import_count": 112,
+  "root_import_count": 186,
+  "new_explicit_axiom_checks": 9
+}

@@ -1,0 +1,46 @@
+Reinmann.ToeplitzMeasure.atomicMeasure_represents {n : ℕ} (s : Finset ℂ) (w : ℂ → ℝ) (hw : ∀ z ∈ s, ‖z‖ = 1 ∧ 0 ≤ w z) :
+  Reinmann.ToeplitzMeasure.Represents (Reinmann.ToeplitzExtension.atomicMatrix n s w)
+    (Reinmann.ToeplitzMeasure.atomicMeasure s w)
+'Reinmann.ToeplitzMeasure.atomicMeasure_represents' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.ToeplitzMeasure.exists_representing_measure {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) : ∃ μ, Reinmann.ToeplitzMeasure.Represents T μ
+'Reinmann.ToeplitzMeasure.exists_representing_measure' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.integral_pairing {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  {μ : MeasureTheory.Measure ℂ} (hμ : Reinmann.ToeplitzMeasure.Represents T μ) {p q : Polynomial ℂ}
+  (hp : p.natDegree ≤ n) (hq : q.natDegree ≤ n) :
+  ∫ (z : ℂ), star (Polynomial.eval z p) * Polynomial.eval z q ∂μ = Reinmann.ToeplitzSimpleRoots.pairing T p q
+'Reinmann.ToeplitzMeasureUniqueness.integral_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.eval_zero_ae_of_kernel {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  {μ : MeasureTheory.Measure ℂ} (hμ : Reinmann.ToeplitzMeasure.Represents T μ) {q : Polynomial ℂ} (hq : q.natDegree ≤ n)
+  (hk : T.mulVec (Reinmann.ToeplitzKernel.coeffVec n q) = 0) : ∀ᵐ (z : ℂ) ∂μ, Polynomial.eval z q = 0
+'Reinmann.ToeplitzMeasureUniqueness.eval_zero_ae_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.ae_mem_of_card_le {n : ℕ} {s : Finset ℂ} {w : ℂ → ℝ} (hs : s.card ≤ n)
+  {μ : MeasureTheory.Measure ℂ}
+  (hμ : Reinmann.ToeplitzMeasure.Represents (Reinmann.ToeplitzExtension.atomicMatrix n s w) μ) : ∀ᵐ (z : ℂ) ∂μ, z ∈ s
+'Reinmann.ToeplitzMeasureUniqueness.ae_mem_of_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.measure_eq_atomic_of_card_le {n : ℕ} {s : Finset ℂ} {w : ℂ → ℝ} (hs : s.card ≤ n)
+  {μ : MeasureTheory.Measure ℂ}
+  (hμ : Reinmann.ToeplitzMeasure.Represents (Reinmann.ToeplitzExtension.atomicMatrix n s w) μ) :
+  μ = Reinmann.ToeplitzMeasure.atomicMeasure s w
+'Reinmann.ToeplitzMeasureUniqueness.measure_eq_atomic_of_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.exists_unique_representing_measure_singular {n : ℕ}
+  {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T)
+  (hrank : T.rank ≤ n) : ∃! μ, Reinmann.ToeplitzMeasure.Represents T μ
+'Reinmann.ToeplitzMeasureUniqueness.exists_unique_representing_measure_singular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.nonunique_representing_measure_of_full_rank {n : ℕ}
+  {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T)
+  (hrank : T.rank = n + 1) :
+  ∃ μ ν, Reinmann.ToeplitzMeasure.Represents T μ ∧ Reinmann.ToeplitzMeasure.Represents T ν ∧ μ ≠ ν
+'Reinmann.ToeplitzMeasureUniqueness.nonunique_representing_measure_of_full_rank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Reinmann.ToeplitzMeasureUniqueness.unique_representing_measure_iff_singular {n : ℕ}
+  {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) :
+  (∃! μ, Reinmann.ToeplitzMeasure.Represents T μ) ↔ T.rank ≤ n
+'Reinmann.ToeplitzMeasureUniqueness.unique_representing_measure_iff_singular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

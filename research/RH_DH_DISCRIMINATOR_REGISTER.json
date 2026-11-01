@@ -733,5 +733,41 @@
       "earlier_verification_files_unchanged": 1972,
       "historical_packets_replayed": 10
     }
+  },
+  "toeplitz_measure_2026_11_01": {
+    "target": "Bridge the finite unit-circle atomic representation to finite positive Borel measures on C. Prove singular PSD Toeplitz matrices have a unique representing finite unit-circle measure, every full-rank case has distinct measures, and uniqueness is equivalent to rank(T)<=n for size n+1; claim only statements actually proved.",
+    "conventions": "Positive countably additive Borel measures on C, finite total mass, norm(z)=1 almost everywhere; entry orientation T_ij=integral conj(z^i)*z^j dmu. Atomic measure is sum of ENNReal.ofReal(w(z))*dirac(z). Equality is equality of measures, with no assertion about arbitrary weight values off support.",
+    "DH_analogue": "The identical statement for any DH-derived matrix satisfying PSD and Toeplitz. No arithmetic PSD premise, actual arithmetic probe, infinite moment sequence or separator is supplied.",
+    "classification": "shared_prerequisite",
+    "separating_inequality": null,
+    "arithmetic_route_active": false,
+    "RH_claim": false,
+    "novelty_claim": false,
+    "status": "Finite Borel measure existence and exact uniqueness among all finite positive circle measures proved; root build, axiom-clean, nine probes, DH gate, fresh own-kernel replay and eleven historical replays pass.",
+    "HEAD": "dd0eb1525cd8c9a289a5915463c4e0d15b41bfe4",
+    "outcome": {
+      "finite_Borel_representing_measure_exists": true,
+      "kernel_polynomial_vanishes_ae": true,
+      "arbitrary_competitor_confined_to_reference_support": true,
+      "singleton_masses_recovered": true,
+      "singular_unique_among_all_finite_circle_measures": true,
+      "full_rank_distinct_measures": true,
+      "measure_uniqueness_iff_singular": true,
+      "competitor_assumed_atomic": false,
+      "infinite_moment_sequence_representation_proved": false,
+      "arithmetic_PSD_input_proved": false,
+      "root_and_audit_integrated": true,
+      "explicit_new_axiom_checks": 9,
+      "local_default_build_passed": true,
+      "local_axiom_clean_reports": 2680,
+      "remote_CI_run": false,
+      "note": "research/prime_spectral/TOEPLITZ_MEASURE_2026_11_01.md",
+      "packet": "research/prime_spectral/verification_2026_11_01_toeplitz_measure",
+      "fresh_own_kernel_replay_passed": true,
+      "fresh_modules_bound": 5563,
+      "fresh_compiled_and_metadata_files_bound": 22230,
+      "earlier_verification_files_unchanged": 2003,
+      "historical_packets_replayed": 11
+    }
   }
 }

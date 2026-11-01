@@ -602,3 +602,29 @@ Both modules are root/audit imported with four explicit axiom checks;
 local build and axiom-clean pass with 2,671 reports. This remains shared
 finite algebra, valid for DH under the same premises, not an RH separator.
 See the [full-rank note](prime_spectral/TOEPLITZ_FULL_RANK_2026_11_01.md).
+
+## Finite Borel measure continuation (preregistered 1 November)
+
+Target: turn the finite positive unit-circle atomic representation into a
+finite positive Borel measure on C, then prove uniqueness among all finite
+positive unit-circle Borel measures exactly in singular rank. Matrix entries
+are integral conj(z^i)*z^j; unit-circle support means norm(z)=1 almost
+everywhere. Atomic masses are ENNReal.ofReal(w(z)); measure equality does
+not compare arbitrary off-support values of weight functions.
+
+The same theorem holds for DH-derived PSD Toeplitz matrices. This is a
+shared prerequisite with no arithmetic PSD estimate, separating inequality
+or active RH route. No infinite moment sequence representation is claimed.
+Only completed statements will be reported.
+
+### Finite Borel measure outcome
+
+Both measure modules now prove existence and the exact uniqueness criterion
+among all finite positive unit-circle Borel measures. No atomicity assumption
+is imposed on a competitor: a kernel polynomial confines it to the finite
+reference support, and moment recovery fixes the singleton masses. Every
+full-rank PSD Toeplitz matrix has distinct representing measures. Root/audit
+integration passes locally with nine explicit checks and 2,680 audited
+reports. This remains shared mathematics for DH under the same premises; no
+arithmetic PSD input or infinite-sequence representation is claimed.
+See the [measure note](prime_spectral/TOEPLITZ_MEASURE_2026_11_01.md).

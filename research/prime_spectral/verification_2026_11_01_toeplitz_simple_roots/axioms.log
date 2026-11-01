@@ -1,0 +1,12 @@
+Reinmann.ToeplitzAtomic.HasAtomicRepresentation {n : ℕ} (T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ) (r : ℕ) : Prop
+Reinmann.ToeplitzAtomic.exists_atomic_representation {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) (hrank : T.rank = n) :
+  Reinmann.ToeplitzAtomic.HasAtomicRepresentation T n
+'Reinmann.ToeplitzSimpleRoots.energy_ne_zero_of_natDegree_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzSimpleRoots.energy_pos_of_natDegree_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzSimpleRoots.derivative_ne_zero_at_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzSimpleRoots.separable_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzSimpleRoots.distinct_unit_circle_roots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzAtomic.basis_weight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzAtomic.atomic_representation_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzAtomic.exists_atomic_representation' depends on axioms: [propext, Classical.choice, Quot.sound]

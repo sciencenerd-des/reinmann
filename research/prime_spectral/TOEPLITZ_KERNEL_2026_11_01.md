@@ -3,8 +3,10 @@
 The Lean module `Reinmann/ToeplitzKernel.lean` now proves the
 finite corank-one kernel-root corollary, for arbitrary matrix size, without
 assuming an atomic moment representation. This completes the kernel-root
-target from Direction E. The full finite atomic moment representation
-remains unformalized by this work.
+target from Direction E. A subsequent
+[follow-up](TOEPLITZ_ATOMIC_2026_11_01.md) proves the positive atomic
+representation in the corank-one case; arbitrary-rank representation
+remains unformalized here.
 
 This is the known finite corollary stated in Connes–van Suijlekom,
 [arXiv:2511.23257, Corollary 1.1](https://arxiv.org/html/2511.23257).

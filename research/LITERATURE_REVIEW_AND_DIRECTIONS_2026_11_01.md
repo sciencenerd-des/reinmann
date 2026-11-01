@@ -201,7 +201,7 @@ its proposition is an explicit input in the main checkout. Unifying that
 proof remains a dependency-migration or port task. No upgrade, full-root
 rebuild or new CI receipt is claimed by this audit.
 
-### Direction E: finite Toeplitz kernel corollary (formalized follow-up)
+### Direction E: corank-one Toeplitz kernel and atomic representation (formalized)
 
 The follow-up module `Reinmann/ToeplitzKernel.lean` proves the full finite
 corank-one kernel-root corollary: for a Hermitian PSD Toeplitz matrix of
@@ -209,11 +209,16 @@ size n+1 and rank n, every root of the ordinary polynomial of a nonzero
 kernel vector has modulus one. It also proves full degree n. A direct
 shift-energy argument avoids assuming a finite atomic representation;
 the earlier library search had identified one possible proof route, not
-a necessary prerequisite. The general atomic representation is still open.
+a necessary prerequisite. A further
+[Lean follow-up](prime_spectral/TOEPLITZ_ATOMIC_2026_11_01.md) now proves
+simple roots and a positive n-atom representation for the same corank-one
+case, without supplying a kernel vector as an input. Arbitrary-rank
+representation remains open.
 
-The module is imported by the root and AxiomAudit on Lean 4.30, with four
-explicit axiom checks. The default root build and local axiom-clean script
-pass (2,647 audited theorem reports). It supplies shared finite linear algebra, also
+All three modules are imported by the root and AxiomAudit on Lean 4.30,
+with four kernel checks and eight additional energy/simple-root/atomic
+checks. The default root build and local axiom-clean script pass (2,655
+audited theorem reports). This supplies shared finite linear algebra, also
 valid for DH under the same hypotheses. No arithmetic positivity or RH
 strategy follows. Details and replay scope are in
 [the follow-up note](prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md).

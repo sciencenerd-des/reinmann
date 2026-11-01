@@ -597,5 +597,39 @@
       "remote_CI_run": false,
       "commit_created": false
     }
+  },
+  "toeplitz_simple_roots_2026_11_01": {
+    "target": "For complex PSD Toeplitz T of size n+1 and rank n, prove strict positivity of the quadratic form on nonzero polynomials of degree < n, and simplicity of roots of every nonzero kernel polynomial of degree <=n. Combine with the proved unit-circle and full-degree conclusions to get n distinct unit-circle roots.",
+    "conventions": "Same full Hermitian Toeplitz shift convention, ordinary ascending polynomial coefficients, padding to n+1, explicit nonzero assumptions. No arithmetic coefficient positivity is assumed or asserted.",
+    "next_representation_target": "A positive n-atom Vandermonde representation in the corank-one case; this is a separate construction to be claimed only if actually completed. Arbitrary-rank representation remains separate.",
+    "DH_analogue": "Identical finite linear algebra for DH-derived matrices satisfying the same PSD/Toeplitz/rank hypotheses. No arithmetic separator.",
+    "classification": "shared_prerequisite",
+    "separating_inequality": null,
+    "arithmetic_route_active": false,
+    "RH_claim": false,
+    "novelty_claim": false,
+    "status": "Simple roots and positive corank-one atomic representation formalized, root/audit integrated, local checks and fresh Lean kernel replay passed.",
+    "HEAD": "0f073e0632e73a4b05602ee879ec530d0c6e0ba0",
+    "outcome": {
+      "positive_short_energy_proved": true,
+      "simple_roots_proved": true,
+      "separability_proved": true,
+      "exactly_n_distinct_unit_circle_roots_proved": true,
+      "positive_corank_one_atomic_representation_proved": true,
+      "general_arbitrary_rank_representation_proved": false,
+      "kernel_vector_input_required_by_final_theorem": false,
+      "arithmetical_PSD_input_proved": false,
+      "root_and_audit_integrated": true,
+      "explicit_axiom_checks": 8,
+      "local_default_build_passed": true,
+      "local_axiom_clean_reports": 2655,
+      "remote_CI_run": false,
+      "note": "research/prime_spectral/TOEPLITZ_ATOMIC_2026_11_01.md",
+      "packet": "research/prime_spectral/verification_2026_11_01_toeplitz_simple_roots",
+      "fresh_Lean_kernel_replay_passed": true,
+      "kernel_replay_module_count": 5555,
+      "bound_compiled_and_metadata_files": 22214,
+      "earlier_evidence_files_preserved": 1883
+    }
   }
 }

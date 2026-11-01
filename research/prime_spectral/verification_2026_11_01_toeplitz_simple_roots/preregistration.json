@@ -1,0 +1,13 @@
+{
+  "target": "For complex PSD Toeplitz T of size n+1 and rank n, prove strict positivity of the quadratic form on nonzero polynomials of degree < n, and simplicity of roots of every nonzero kernel polynomial of degree <=n. Combine with the proved unit-circle and full-degree conclusions to get n distinct unit-circle roots.",
+  "conventions": "Same full Hermitian Toeplitz shift convention, ordinary ascending polynomial coefficients, padding to n+1, explicit nonzero assumptions. No arithmetic coefficient positivity is assumed or asserted.",
+  "next_representation_target": "A positive n-atom Vandermonde representation in the corank-one case; this is a separate construction to be claimed only if actually completed. Arbitrary-rank representation remains separate.",
+  "DH_analogue": "Identical finite linear algebra for DH-derived matrices satisfying the same PSD/Toeplitz/rank hypotheses. No arithmetic separator.",
+  "classification": "shared_prerequisite",
+  "separating_inequality": null,
+  "arithmetic_route_active": false,
+  "RH_claim": false,
+  "novelty_claim": false,
+  "status": "preregistered before implementation",
+  "HEAD": "0f073e0632e73a4b05602ee879ec530d0c6e0ba0"
+}

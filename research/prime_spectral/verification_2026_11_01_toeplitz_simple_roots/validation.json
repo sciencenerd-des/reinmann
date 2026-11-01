@@ -1,0 +1,20 @@
+{
+  "verified_base_HEAD": "0f073e0632e73a4b05602ee879ec530d0c6e0ba0",
+  "dirty_working_tree": true,
+  "default_root_build_passed": true,
+  "axiom_clean_passed": true,
+  "audited_theorem_reports": 2655,
+  "explicit_new_axiom_checks": 8,
+  "fresh_Lean_own_kernel_replay_passed": true,
+  "kernel_replay_modules_bound": 5555,
+  "compiled_and_metadata_files_bound": 22214,
+  "earlier_files_unchanged": 1883,
+  "historical_packets_replayed": 7,
+  "DH_gate_passed": true,
+  "diff_check_passed": true,
+  "validator_exit_code": 0,
+  "corank_one_atomic_representation_proved": true,
+  "general_arbitrary_rank_representation_proved": false,
+  "arithmetic_positivity_proved": false,
+  "remote_CI_run": false
+}

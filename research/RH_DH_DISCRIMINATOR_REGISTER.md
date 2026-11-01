@@ -496,3 +496,27 @@ This is a dirty-working-tree local receipt on HEAD 26da3df, not a remote CI
 receipt. The integration packet preserves and historically replays the
 previous standalone packet. The theorem remains a proved shared prerequisite
 valid for DH under the same matrix hypotheses; atomic representation stays open.
+
+## Toeplitz simple-root continuation preregistration
+
+For complex PSD Toeplitz matrices of size n+1 and rank n, prove positivity
+on nonzero polynomials of degree below n and simple roots of nonzero
+kernel polynomials. Use ordinary ascending coefficients and the existing
+shift convention. This is shared finite linear algebra, valid for DH under
+the same hypotheses, with no arithmetic positivity or separating inequality.
+A positive corank-one atomic representation is a subsequent construction,
+not an assumed result; arbitrary-rank representation stays separate.
+
+### Toeplitz simple-root and corank-one atomic outcome
+
+`ToeplitzSimpleRoots` proves positive short energy, nonzero derivative at
+kernel roots, separability, and exactly n distinct unit-circle roots.
+`ToeplitzAtomic.exists_atomic_representation` constructs strictly positive
+real weights on exactly n distinct unit-circle nodes and reproduces every
+matrix entry. Its only inputs are PSD, Toeplitz shift invariance and rank n
+for size n+1; it obtains a kernel vector internally. The arbitrary-rank
+representation remains open. Both modules are root-imported and explicitly
+audited; local default build and axiom-clean pass with 2,655 reports.
+This remains shared finite algebra, valid for DH under the same hypotheses,
+with no new arithmetic PSD estimate or RH discriminator. See the
+[atomic follow-up](prime_spectral/TOEPLITZ_ATOMIC_2026_11_01.md).

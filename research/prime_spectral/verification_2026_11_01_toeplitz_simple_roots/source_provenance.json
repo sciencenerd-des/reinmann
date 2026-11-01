@@ -1,0 +1,8 @@
+{
+  "verified_base_HEAD": "0f073e0632e73a4b05602ee879ec530d0c6e0ba0",
+  "dirty_working_tree": true,
+  "completed_kernel_and_CI_checkpoint": "0f073e0632e73a4b05602ee879ec530d0c6e0ba0",
+  "immutable_previous_files_verified": 1883,
+  "scope": "Local root-integrated simple roots and positive corank-one representation; general-rank representation and arithmetic positivity remain open.",
+  "remote_CI_run": false
+}

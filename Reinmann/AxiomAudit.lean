@@ -66,6 +66,8 @@ import Reinmann.GrassmannSyzygy
 import Reinmann.FeketeAllOrders
 import Reinmann.ToeplitzFullPF
 import Reinmann.ToeplitzKernel
+import Reinmann.ToeplitzSimpleRoots
+import Reinmann.ToeplitzAtomic
 import Reinmann.HyperbolicLimit
 import Reinmann.HermitePoulainDerivative
 import Reinmann.HermitePoulainComposition
@@ -139,6 +141,16 @@ namespace Reinmann.AxiomAudit
 #print axioms Reinmann.ToeplitzKernel.kernel_polynomial_roots_unit_circle
 #print axioms Reinmann.ToeplitzKernel.natDegree_eq_of_kernel
 #print axioms Reinmann.ToeplitzKernel.isToeplitz_of_difference
+
+-- Simple roots and the positive n-atom representation, still shared finite algebra.
+#print axioms Reinmann.ToeplitzSimpleRoots.energy_ne_zero_of_natDegree_lt
+#print axioms Reinmann.ToeplitzSimpleRoots.energy_pos_of_natDegree_lt
+#print axioms Reinmann.ToeplitzSimpleRoots.derivative_ne_zero_at_root
+#print axioms Reinmann.ToeplitzSimpleRoots.separable_of_kernel
+#print axioms Reinmann.ToeplitzSimpleRoots.distinct_unit_circle_roots
+#print axioms Reinmann.ToeplitzAtomic.basis_weight_pos
+#print axioms Reinmann.ToeplitzAtomic.atomic_representation_of_kernel
+#print axioms Reinmann.ToeplitzAtomic.exists_atomic_representation
 
 -- Core reduction chain: Hilbert–Pólya witness ⟹ RH (spectral branch).
 #print axioms riemannHypothesis_of_twoBranchArchitecture

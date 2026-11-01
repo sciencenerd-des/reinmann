@@ -1,0 +1,10 @@
+{
+  "project_audit_imports_subset_of_root": true,
+  "project_audit_import_count": 104,
+  "root_import_count": 178,
+  "new_modules": [
+    "Reinmann.ToeplitzSimpleRoots",
+    "Reinmann.ToeplitzAtomic"
+  ],
+  "new_explicit_axiom_prints": 8
+}

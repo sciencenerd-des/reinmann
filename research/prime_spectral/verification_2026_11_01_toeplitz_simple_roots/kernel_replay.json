@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/leanchecker",
+    "--fresh",
+    "--verbose",
+    "Reinmann.ToeplitzAtomic"
+  ],
+  "exit_code": 0,
+  "modules_bound": 5555,
+  "compiled_and_metadata_files_bound": 22214,
+  "baseline_files_reused": 21210,
+  "added_files": 1004,
+  "checker_sha256": "75e31792c0cc304df5f20ea64249d627686dfb1a098d5f7f6869ba80e913d2c9",
+  "runner_sha256": "bc47f7adaa2a228f97b14500c91f5be5659c4916544e39b7d411093131584b6d",
+  "source_sha256": {
+    "Reinmann/ToeplitzKernel.lean": "c477714dbc5dd931d263bd29e95565ff4f9ac00d3f564d586017e35e87564fef",
+    "Reinmann/ToeplitzSimpleRoots.lean": "693961eeb789c5ce26b0f765c2f5810371c9648c1d2371fb5879157c3919157b",
+    "Reinmann/ToeplitzAtomic.lean": "d213b3a2527fcf38a0b998c6337c829666474512f347acd134ad16f0cc1bd585",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "lake-manifest.json": "a68511672a9f3196d87b941919c1a9b53a2347723ba6afe4ceaef326bbb0a961"
+  },
+  "bound_inputs_unchanged": true,
+  "scope": "Lean own-kernel fresh replay; not an independently implemented verifier."
+}

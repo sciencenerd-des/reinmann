@@ -1,0 +1,12 @@
+import Reinmann.ToeplitzAtomic
+
+#check Reinmann.ToeplitzAtomic.HasAtomicRepresentation
+#check Reinmann.ToeplitzAtomic.exists_atomic_representation
+#print axioms Reinmann.ToeplitzSimpleRoots.energy_ne_zero_of_natDegree_lt
+#print axioms Reinmann.ToeplitzSimpleRoots.energy_pos_of_natDegree_lt
+#print axioms Reinmann.ToeplitzSimpleRoots.derivative_ne_zero_at_root
+#print axioms Reinmann.ToeplitzSimpleRoots.separable_of_kernel
+#print axioms Reinmann.ToeplitzSimpleRoots.distinct_unit_circle_roots
+#print axioms Reinmann.ToeplitzAtomic.basis_weight_pos
+#print axioms Reinmann.ToeplitzAtomic.atomic_representation_of_kernel
+#print axioms Reinmann.ToeplitzAtomic.exists_atomic_representation

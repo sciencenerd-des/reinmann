@@ -1,0 +1,10 @@
+{
+  "verified_base_HEAD": "cbe9d77200617cc4ed79691bf7412addc5432976",
+  "dirty_working_tree": true,
+  "scope": "Local source-byte-bound default build, axiom-clean and own-kernel replay; no remote CI receipt.",
+  "remote_CI_run": false,
+  "new_modules": [
+    "Reinmann/ToeplitzPrescribedAtom.lean",
+    "Reinmann/ToeplitzFullRank.lean"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "target": "For every positive definite complex Toeplitz matrix T of size n+1 and every prescribed unit-circle node z, construct a positive rank-sized atomic representation containing z. Deduce that every full-rank PSD Toeplitz matrix has distinct positive rank-sized supports, and characterize uniqueness of supported positive finite data exactly by rank(T)<=n. Claim only completed statements.",
+  "conventions": "Original entry orientation T_ij=sum w(z)*conj(z^i)*z^j; finite supports give distinct nodes; positive real weights; compare weights only on support. Full-rank representations have n+1 nodes.",
+  "DH_analogue": "Identical generic finite linear algebra for DH-derived matrices satisfying the PSD/Toeplitz hypotheses. No arithmetic PSD input, scan, or separator.",
+  "classification": "shared_prerequisite",
+  "separating_inequality": null,
+  "arithmetic_route_active": false,
+  "RH_claim": false,
+  "novelty_claim": false,
+  "status": "preregistered before implementation",
+  "HEAD": "cbe9d77200617cc4ed79691bf7412addc5432976"
+}

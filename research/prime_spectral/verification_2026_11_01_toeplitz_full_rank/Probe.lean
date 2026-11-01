@@ -1,0 +1,10 @@
+import Reinmann.ToeplitzFullRank
+
+#check Reinmann.ToeplitzPrescribedAtom.exists_representation_containing
+#check Reinmann.ToeplitzFullRank.nonunique_of_full_rank
+#check Reinmann.ToeplitzFullRank.HasUniquePositiveAtomicData
+#check Reinmann.ToeplitzFullRank.unique_supported_data_iff_singular
+#print axioms Reinmann.ToeplitzPrescribedAtom.exists_node_downdate
+#print axioms Reinmann.ToeplitzPrescribedAtom.exists_representation_containing
+#print axioms Reinmann.ToeplitzFullRank.nonunique_of_full_rank
+#print axioms Reinmann.ToeplitzFullRank.unique_supported_data_iff_singular

@@ -1,0 +1,4 @@
+{
+  "preseal_attempt": "Manifest generation stopped before writing because it named lakefile.lean; the project uses lakefile.toml. A dependent validator invocation consequently found no manifest. Its log is preserved as preseal_missing_manifest.log. No Lean check failed and no previous verification evidence was changed.",
+  "correction": "Bind the existing lakefile.toml before running the sealed validator."
+}

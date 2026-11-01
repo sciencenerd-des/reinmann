@@ -74,6 +74,8 @@ This representation module alone does not assert uniqueness. The subsequent
 [uniqueness follow-up](TOEPLITZ_UNIQUENESS_2026_11_01.md) proves uniqueness of
 singular finite positive data and fixed-support weight recovery, and gives
 an explicit full-rank counterexample to unconditional support uniqueness.
+The later [full-rank follow-up](TOEPLITZ_FULL_RANK_2026_11_01.md) proves
+nonuniqueness for every full-rank case and the exact supported-data criterion.
 
 ## Research scope and validation
 

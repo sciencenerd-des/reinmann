@@ -75,9 +75,11 @@ has rank one. It has both the positive one-atom representation supported
 at +1 and the one supported at -1, each with weight one. Both nodes have
 norm one, the supports differ, and both atom counts equal the matrix rank.
 
-This is an exact formal counterexample, not a scan. No claim that **every**
-full-rank matrix has multiple representations is proved in this follow-up.
-No globally minimal-order search or empirical threshold is claimed.
+This is an exact formal counterexample, not a scan. That initial result
+alone does not prove nonuniqueness for every full-rank matrix. The later
+[full-rank follow-up](TOEPLITZ_FULL_RANK_2026_11_01.md) now proves that stronger
+statement and an exact singular/full-rank uniqueness criterion. No globally
+minimal-order search or empirical threshold is claimed.
 
 ## Build, audit and research scope
 

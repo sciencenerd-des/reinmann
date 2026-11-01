@@ -574,3 +574,31 @@ The module is root/audit imported with seven explicit axiom checks; local
 build and axiom-clean pass with 2,667 reports. This is shared finite algebra
 valid for DH under the same premises, not an arithmetic PSD estimate or RH
 discriminator. See the [uniqueness note](prime_spectral/TOEPLITZ_UNIQUENESS_2026_11_01.md).
+
+## Full-rank nonuniqueness preregistration
+
+Target positive rank-sized atomic representations containing any prescribed
+unit-circle node for positive definite Toeplitz matrices. Use this to prove
+every full-rank PSD Toeplitz matrix has distinct supports, and supported
+finite-data uniqueness holds exactly in singular rank. Preserve all existing
+entry, coefficient and support conventions. This is shared finite algebra
+valid for DH under the same hypotheses, not an arithmetic PSD estimate or
+RH discriminator. No scans or novelty claims are proposed.
+
+### Full-rank boundary outcome
+
+`ToeplitzPrescribedAtom.exists_representation_containing` gives a positive
+rank-sized representation containing any prescribed unit-circle point for
+every positive definite Toeplitz matrix. The rank-one node downdate uses
+the existing Schur-complement identities. A unit-circle point outside a
+finite reference support then gives distinct supports for every full-rank
+PSD Toeplitz matrix. `ToeplitzFullRank.unique_supported_data_iff_singular`
+proves the exact finite-data criterion: uniqueness iff rank(T)<=n for size
+n+1. This strengthens the earlier single counterexample to a pointwise
+full-rank theorem. Weight functions are compared only on support; no
+arbitrary-measure theorem or arithmetic PSD input is claimed.
+
+Both modules are root/audit imported with four explicit axiom checks;
+local build and axiom-clean pass with 2,671 reports. This remains shared
+finite algebra, valid for DH under the same premises, not an RH separator.
+See the [full-rank note](prime_spectral/TOEPLITZ_FULL_RANK_2026_11_01.md).

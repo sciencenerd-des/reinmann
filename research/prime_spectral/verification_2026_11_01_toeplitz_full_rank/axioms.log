@@ -1,0 +1,24 @@
+Reinmann.ToeplitzPrescribedAtom.exists_representation_containing {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hT : T.PosDef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) {z : ℂ} (hz : ‖z‖ = 1) :
+  ∃ s w, s.card = T.rank ∧ z ∈ s ∧ (∀ x ∈ s, ‖x‖ = 1 ∧ 0 < w x) ∧ T = Reinmann.ToeplitzExtension.atomicMatrix n s w
+Reinmann.ToeplitzFullRank.nonunique_of_full_rank {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) (hrank : T.rank = n + 1) :
+  ∃ s t w v,
+    s.card = T.rank ∧
+      t.card = T.rank ∧
+        s ≠ t ∧
+          (∀ z ∈ s, ‖z‖ = 1 ∧ 0 < w z) ∧
+            (∀ z ∈ t, ‖z‖ = 1 ∧ 0 < v z) ∧
+              T = Reinmann.ToeplitzExtension.atomicMatrix n s w ∧ T = Reinmann.ToeplitzExtension.atomicMatrix n t v
+Reinmann.ToeplitzFullRank.HasUniquePositiveAtomicData {n : ℕ} (T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ) : Prop
+Reinmann.ToeplitzFullRank.unique_supported_data_iff_singular {n : ℕ} {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ}
+  (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T) :
+  Reinmann.ToeplitzFullRank.HasUniquePositiveAtomicData T ↔ T.rank ≤ n
+'Reinmann.ToeplitzPrescribedAtom.exists_node_downdate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzPrescribedAtom.exists_representation_containing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.ToeplitzFullRank.nonunique_of_full_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzFullRank.unique_supported_data_iff_singular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

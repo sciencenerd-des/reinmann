@@ -72,6 +72,8 @@ import Reinmann.ToeplitzExtension
 import Reinmann.ToeplitzDowndate
 import Reinmann.ToeplitzRepresentation
 import Reinmann.ToeplitzUniqueness
+import Reinmann.ToeplitzPrescribedAtom
+import Reinmann.ToeplitzFullRank
 import Reinmann.HyperbolicLimit
 import Reinmann.HermitePoulainDerivative
 import Reinmann.HermitePoulainComposition
@@ -171,6 +173,12 @@ namespace Reinmann.AxiomAudit
 #print axioms Reinmann.ToeplitzUniqueness.representation_unique_singular
 #print axioms Reinmann.ToeplitzUniqueness.exists_unique_atomic_representation_singular
 #print axioms Reinmann.ToeplitzUniqueness.full_rank_counterexample
+
+-- Prescribed atoms and the exact singular/full-rank finite-data boundary.
+#print axioms Reinmann.ToeplitzPrescribedAtom.exists_node_downdate
+#print axioms Reinmann.ToeplitzPrescribedAtom.exists_representation_containing
+#print axioms Reinmann.ToeplitzFullRank.nonunique_of_full_rank
+#print axioms Reinmann.ToeplitzFullRank.unique_supported_data_iff_singular
 
 -- Core reduction chain: Hilbert–Pólya witness ⟹ RH (spectral branch).
 #print axioms riemannHypothesis_of_twoBranchArchitecture

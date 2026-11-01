@@ -700,5 +700,38 @@
       "compiled_and_metadata_files_bound": 22222,
       "earlier_verification_files_unchanged": 1940
     }
+  },
+  "toeplitz_full_rank_2026_11_01": {
+    "target": "For every positive definite complex Toeplitz matrix T of size n+1 and every prescribed unit-circle node z, construct a positive rank-sized atomic representation containing z. Deduce that every full-rank PSD Toeplitz matrix has distinct positive rank-sized supports, and characterize uniqueness of supported positive finite data exactly by rank(T)<=n. Claim only completed statements.",
+    "conventions": "Original entry orientation T_ij=sum w(z)*conj(z^i)*z^j; finite supports give distinct nodes; positive real weights; compare weights only on support. Full-rank representations have n+1 nodes.",
+    "DH_analogue": "Identical generic finite linear algebra for DH-derived matrices satisfying the PSD/Toeplitz hypotheses. No arithmetic PSD input, scan, or separator.",
+    "classification": "shared_prerequisite",
+    "separating_inequality": null,
+    "arithmetic_route_active": false,
+    "RH_claim": false,
+    "novelty_claim": false,
+    "status": "Prescribed-node representations, universal full-rank nonuniqueness and exact supported-data criterion proved; root build, axiom-clean and fresh own-kernel replay pass; ten historical packets replayed.",
+    "HEAD": "cbe9d77200617cc4ed79691bf7412addc5432976",
+    "outcome": {
+      "prescribed_unit_circle_node_representation_proved": true,
+      "every_full_rank_PSD_Toeplitz_matrix_nonunique_proved": true,
+      "two_rank_sized_distinct_supports_proved": true,
+      "supported_finite_data_unique_iff_singular_proved": true,
+      "off_support_weight_values_compared": false,
+      "arbitrary_measure_uniqueness_proved": false,
+      "arithmetic_PSD_input_proved": false,
+      "root_and_audit_integrated": true,
+      "explicit_new_axiom_checks": 4,
+      "local_default_build_passed": true,
+      "local_axiom_clean_reports": 2671,
+      "remote_CI_run": false,
+      "note": "research/prime_spectral/TOEPLITZ_FULL_RANK_2026_11_01.md",
+      "packet": "research/prime_spectral/verification_2026_11_01_toeplitz_full_rank",
+      "fresh_own_kernel_replay_passed": true,
+      "fresh_modules_bound": 5561,
+      "fresh_compiled_and_metadata_files_bound": 22226,
+      "earlier_verification_files_unchanged": 1972,
+      "historical_packets_replayed": 10
+    }
   }
 }

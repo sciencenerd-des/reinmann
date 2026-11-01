@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/biswajitmondal/.elan/toolchains/leanprover--lean4---v4.30.0/bin/leanchecker",
+    "--fresh",
+    "--verbose",
+    "Reinmann.ToeplitzUniqueness"
+  ],
+  "exit_code": 0,
+  "modules_bound": 5559,
+  "compiled_and_metadata_files_bound": 22222,
+  "baseline_files_reused": 21210,
+  "added_files": 1012,
+  "checker_sha256": "75e31792c0cc304df5f20ea64249d627686dfb1a098d5f7f6869ba80e913d2c9",
+  "runner_sha256": "f9343d71a3de166e63ff9bad1ab4bf5ad46aab82502d0151596520e6557561dc",
+  "source_sha256": {
+    "Reinmann/ToeplitzKernel.lean": "c477714dbc5dd931d263bd29e95565ff4f9ac00d3f564d586017e35e87564fef",
+    "Reinmann/ToeplitzSimpleRoots.lean": "693961eeb789c5ce26b0f765c2f5810371c9648c1d2371fb5879157c3919157b",
+    "Reinmann/ToeplitzAtomic.lean": "d213b3a2527fcf38a0b998c6337c829666474512f347acd134ad16f0cc1bd585",
+    "Reinmann/ToeplitzExtension.lean": "646ff0d69e8dea1e8e14816153cf3c13c0c567d87c279e239f3ce74409947077",
+    "Reinmann/ToeplitzDowndate.lean": "bc72180ca165b31ee3db64c7646c8334090897c4918b920535c0da403f132bd8",
+    "Reinmann/ToeplitzRepresentation.lean": "e7ea9bcbb5383a9516bece98cba2de5299829a94cce1d8d4e85dc61bd427dddd",
+    "Reinmann/ToeplitzUniqueness.lean": "317bce6a2c8ecc0a36d53865707695abc2a4df737f0ed6c0b7f870f3946ff448",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "lake-manifest.json": "a68511672a9f3196d87b941919c1a9b53a2347723ba6afe4ceaef326bbb0a961"
+  },
+  "bound_inputs_unchanged": true,
+  "scope": "Lean own-kernel fresh replay; not an independently implemented verifier."
+}

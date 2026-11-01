@@ -32,6 +32,7 @@ import Reinmann.ToeplitzAtomic
 import Reinmann.ToeplitzExtension
 import Reinmann.ToeplitzDowndate
 import Reinmann.ToeplitzRepresentation
+import Reinmann.ToeplitzUniqueness
 import Reinmann.XiMomentKernel
 import Reinmann.Order3Certificate
 import Reinmann.CrossFieldBridges

@@ -1,0 +1,7 @@
+{
+  "verified_base_HEAD": "d9c3c7961de6e77c4bd233f67d53c4054bae9a9b",
+  "dirty_working_tree": true,
+  "earlier_verification_files_unchanged": 1940,
+  "scope": "Singular finite support and supported-weight uniqueness, fixed-support recovery and an exact full-rank counterexample. No arithmetic PSD input.",
+  "remote_CI_run": false
+}

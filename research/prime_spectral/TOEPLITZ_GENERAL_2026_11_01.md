@@ -70,7 +70,10 @@ nodes in the full-rank case. This completes the arbitrary-rank theorem.
 No square-root factorization, unitary extension, spectral diagonalization,
 measure representation or arbitrary-rank representation is assumed in
 these new proofs. The Schur-complement results are Mathlib theorems.
-No uniqueness theorem for the atomic data is claimed.
+This representation module alone does not assert uniqueness. The subsequent
+[uniqueness follow-up](TOEPLITZ_UNIQUENESS_2026_11_01.md) proves uniqueness of
+singular finite positive data and fixed-support weight recovery, and gives
+an explicit full-rank counterexample to unconditional support uniqueness.
 
 ## Research scope and validation
 

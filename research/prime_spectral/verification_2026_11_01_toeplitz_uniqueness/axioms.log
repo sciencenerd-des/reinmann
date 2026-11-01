@@ -1,0 +1,31 @@
+Reinmann.ToeplitzUniqueness.exists_unique_atomic_representation_singular {n : ℕ}
+  {T : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ} (hpsd : T.PosSemidef) (htoe : Reinmann.ToeplitzKernel.IsToeplitz T)
+  (hrank : T.rank ≤ n) :
+  ∃ s w,
+    s.card = T.rank ∧
+      (∀ z ∈ s, ‖z‖ = 1 ∧ 0 < w z) ∧
+        T = Reinmann.ToeplitzExtension.atomicMatrix n s w ∧
+          ∀ (t : Finset ℂ) (v : ℂ → ℝ),
+            (∀ z ∈ t, 0 < v z) → T = Reinmann.ToeplitzExtension.atomicMatrix n t v → s = t ∧ ∀ z ∈ s, w z = v z
+Reinmann.ToeplitzUniqueness.weights_eq_on_support {n : ℕ} {s : Finset ℂ} {w v : ℂ → ℝ} (hs : s.card ≤ n + 1)
+  (heq : Reinmann.ToeplitzExtension.atomicMatrix n s w = Reinmann.ToeplitzExtension.atomicMatrix n s v) (z : ℂ) :
+  z ∈ s → w z = v z
+Reinmann.ToeplitzUniqueness.full_rank_counterexample :
+  ∃ T,
+    T.PosSemidef ∧
+      Reinmann.ToeplitzKernel.IsToeplitz T ∧
+        T.rank = 1 ∧
+          (Reinmann.ToeplitzExtension.atomicMatrix 0 {1} fun x => 1) = T ∧
+            (Reinmann.ToeplitzExtension.atomicMatrix 0 {-1} fun x => 1) = T ∧
+              {1} ≠ {-1} ∧ (∀ z ∈ {1}, ‖z‖ = 1 ∧ 0 < 1) ∧ ∀ z ∈ {-1}, ‖z‖ = 1 ∧ 0 < 1
+'Reinmann.ToeplitzUniqueness.eval_zero_of_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzUniqueness.support_eq_of_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzUniqueness.weights_eq_on_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzUniqueness.representation_unique_of_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.ToeplitzUniqueness.representation_unique_singular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Reinmann.ToeplitzUniqueness.exists_unique_atomic_representation_singular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Reinmann.ToeplitzUniqueness.full_rank_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]

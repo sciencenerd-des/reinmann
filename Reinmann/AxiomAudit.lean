@@ -71,6 +71,7 @@ import Reinmann.ToeplitzAtomic
 import Reinmann.ToeplitzExtension
 import Reinmann.ToeplitzDowndate
 import Reinmann.ToeplitzRepresentation
+import Reinmann.ToeplitzUniqueness
 import Reinmann.HyperbolicLimit
 import Reinmann.HermitePoulainDerivative
 import Reinmann.HermitePoulainComposition
@@ -161,6 +162,15 @@ namespace Reinmann.AxiomAudit
 #print axioms Reinmann.ToeplitzDowndate.exists_constant_downdate
 #print axioms Reinmann.ToeplitzRepresentation.exists_atomic_representation_singular
 #print axioms Reinmann.ToeplitzRepresentation.exists_atomic_representation
+
+-- Singular support/weight uniqueness, fixed-support recovery, and full-rank boundary.
+#print axioms Reinmann.ToeplitzUniqueness.eval_zero_of_kernel
+#print axioms Reinmann.ToeplitzUniqueness.support_eq_of_card_le
+#print axioms Reinmann.ToeplitzUniqueness.weights_eq_on_support
+#print axioms Reinmann.ToeplitzUniqueness.representation_unique_of_card_le
+#print axioms Reinmann.ToeplitzUniqueness.representation_unique_singular
+#print axioms Reinmann.ToeplitzUniqueness.exists_unique_atomic_representation_singular
+#print axioms Reinmann.ToeplitzUniqueness.full_rank_counterexample
 
 -- Core reduction chain: Hilbert–Pólya witness ⟹ RH (spectral branch).
 #print axioms riemannHypothesis_of_twoBranchArchitecture

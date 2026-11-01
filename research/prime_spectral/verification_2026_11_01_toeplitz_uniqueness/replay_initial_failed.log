@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_11_01_toeplitz_uniqueness/validate.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/Users/biswajitmondal/Developer/Maths/reinmann/research/prime_spectral/verification_2026_11_01_toeplitz_uniqueness/validate.py", line 69, in main
+    assert not re.search(r'\b(sorry|admit|axiom)\b', (ROOT/name).read_text())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

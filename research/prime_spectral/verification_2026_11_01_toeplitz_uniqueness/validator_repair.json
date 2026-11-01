@@ -1,0 +1,10 @@
+{
+  "reason": "Initial validator used a raw token regex and falsely matched the English word admit inside a Lean documentation comment.",
+  "proof_sources_changed": false,
+  "repository_comment_aware_axiom_clean_already_passed": true,
+  "repair": "Strip nested block and line comments before token checks, matching the repository axiom-clean discipline.",
+  "initial_attempt_preserved": [
+    "manifest_initial_failed.json",
+    "replay_initial_failed.log"
+  ]
+}

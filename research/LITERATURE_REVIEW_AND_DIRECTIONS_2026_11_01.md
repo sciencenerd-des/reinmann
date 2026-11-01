@@ -216,12 +216,15 @@ case, without supplying a kernel vector as an input. The
 [general representation follow-up](prime_spectral/TOEPLITZ_GENERAL_2026_11_01.md)
 now covers every rank, including zero and full rank, assuming only PSD and
 Toeplitz invariance. This formalizes the known finite representation theorem;
-no arithmetic PSD estimate or representation uniqueness is claimed.
+no arithmetic PSD estimate is claimed. The
+[uniqueness follow-up](prime_spectral/TOEPLITZ_UNIQUENESS_2026_11_01.md)
+now proves singular-case finite uniqueness and fixed-support weight recovery,
+with an exact full-rank counterexample to unconditional support uniqueness.
 
-All six modules are imported by the root and AxiomAudit on Lean 4.30,
-with four kernel checks, eight corank-one checks and five general-rank
-checks. The default root build and local axiom-clean script pass (2,660
-audited theorem reports). This supplies shared finite linear algebra, also
+All seven modules are imported by the root and AxiomAudit on Lean 4.30,
+with four kernel checks, eight corank-one checks, five general-rank checks
+and seven uniqueness checks. The default root build and local axiom-clean
+script pass (2,667 audited theorem reports). This supplies shared finite linear algebra, also
 valid for DH under the same hypotheses. No arithmetic positivity or RH
 strategy follows. Details and replay scope are in
 [the follow-up note](prime_spectral/TOEPLITZ_KERNEL_2026_11_01.md).

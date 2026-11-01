@@ -547,3 +547,30 @@ This completes the generic representation target; representation uniqueness
 and arithmetic PSD estimates are not proved. It is shared finite algebra,
 valid for DH under the same matrix assumptions, not an arithmetic separator.
 See the [general representation note](prime_spectral/TOEPLITZ_GENERAL_2026_11_01.md).
+
+## Toeplitz uniqueness preregistration
+
+Target singular-case uniqueness of the finite unit-circle support and
+strictly positive real weights on support, plus fixed-support recovery
+when the support size is at most n+1. Keep the full-rank boundary explicit
+with a one-by-one counterexample; no universal full-rank nonuniqueness
+claim without a separate proof. Coefficient, support and entry conventions
+are unchanged. This is shared finite algebra, including DH under the same
+premises, with no arithmetic PSD input or RH discriminator.
+
+### Toeplitz uniqueness outcome
+
+`ToeplitzUniqueness` proves supported-weight recovery on a fixed support
+of at most n+1 nodes. For singular PSD Toeplitz matrices it supplies the
+rank-sized representation and proves its support and supported weights
+unique against every positive finite competitor, without a bound on the
+competitor's atom count or a separate unit-circle assumption. Off-support
+function values are not compared. The exact one-by-one identity example
+has distinct positive one-atom representations at +1 and -1, so support
+uniqueness is not unconditional in full rank. No theorem of nonuniqueness
+for every full-rank matrix, or arbitrary-measure uniqueness, is claimed.
+
+The module is root/audit imported with seven explicit axiom checks; local
+build and axiom-clean pass with 2,667 reports. This is shared finite algebra
+valid for DH under the same premises, not an arithmetic PSD estimate or RH
+discriminator. See the [uniqueness note](prime_spectral/TOEPLITZ_UNIQUENESS_2026_11_01.md).

@@ -665,5 +665,40 @@
       "compiled_and_metadata_files_bound": 22220,
       "earlier_verification_files_unchanged": 1911
     }
+  },
+  "toeplitz_uniqueness_2026_11_01": {
+    "target": "For a complex Toeplitz matrix T of size n+1, prove uniqueness of positive unit-circle atomic data in the singular case rank(T)<=n: two rank-sized representations have equal finite supports and equal weights on that support. Also prove fixed-support weight recovery for support size <=n+1, and an explicit full-rank one-by-one counterexample to unconditional uniqueness. Do not claim nonuniqueness for every full-rank matrix without a separate proof.",
+    "conventions": "Same full Hermitian two-sided Toeplitz convention T_ij=sum w(z)*conj(z^i)*z^j; finite distinct-node supports, strictly positive real weights; weight functions compared only on support, or after zero extension. Ordinary ascending coefficients and degree<=n for kernel polynomials.",
+    "DH_analogue": "Identical finite linear-algebra uniqueness and counterexample statements for any DH-derived matrix satisfying the premises. No arithmetic PSD estimate or separator.",
+    "classification": "shared_prerequisite",
+    "separating_inequality": null,
+    "arithmetic_route_active": false,
+    "RH_claim": false,
+    "novelty_claim": false,
+    "status": "Singular finite uniqueness and full-rank counterexample proved; root/audit integration, local build, axiom-clean and fresh Lean kernel replay passed.",
+    "HEAD": "d9c3c7961de6e77c4bd233f67d53c4054bae9a9b",
+    "strengthening": "The competing positive finite representation needs neither an atom-count bound nor a separate unit-circle hypothesis; it is forced into the reference support.",
+    "outcome": {
+      "singular_support_and_weight_uniqueness_proved": true,
+      "finite_competitor_card_bound_required": false,
+      "fixed_support_weight_recovery_proved": true,
+      "fixed_support_card_bound": "n+1",
+      "off_support_weight_functions_compared": false,
+      "full_rank_counterexample_proved": true,
+      "every_full_rank_matrix_nonunique_proved": false,
+      "arbitrary_measure_uniqueness_proved": false,
+      "arithmetic_PSD_input_proved": false,
+      "root_and_audit_integrated": true,
+      "explicit_new_axiom_checks": 7,
+      "local_default_build_passed": true,
+      "local_axiom_clean_reports": 2667,
+      "remote_CI_run": false,
+      "note": "research/prime_spectral/TOEPLITZ_UNIQUENESS_2026_11_01.md",
+      "packet": "research/prime_spectral/verification_2026_11_01_toeplitz_uniqueness",
+      "fresh_Lean_kernel_replay_passed": true,
+      "kernel_modules_bound": 5559,
+      "compiled_and_metadata_files_bound": 22222,
+      "earlier_verification_files_unchanged": 1940
+    }
   }
 }

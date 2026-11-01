@@ -1,0 +1,12 @@
+import Reinmann.ToeplitzUniqueness
+
+#check Reinmann.ToeplitzUniqueness.exists_unique_atomic_representation_singular
+#check Reinmann.ToeplitzUniqueness.weights_eq_on_support
+#check Reinmann.ToeplitzUniqueness.full_rank_counterexample
+#print axioms Reinmann.ToeplitzUniqueness.eval_zero_of_kernel
+#print axioms Reinmann.ToeplitzUniqueness.support_eq_of_card_le
+#print axioms Reinmann.ToeplitzUniqueness.weights_eq_on_support
+#print axioms Reinmann.ToeplitzUniqueness.representation_unique_of_card_le
+#print axioms Reinmann.ToeplitzUniqueness.representation_unique_singular
+#print axioms Reinmann.ToeplitzUniqueness.exists_unique_atomic_representation_singular
+#print axioms Reinmann.ToeplitzUniqueness.full_rank_counterexample
